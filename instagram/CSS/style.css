@@ -1,0 +1,170 @@
+body{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 100%;
+    overflow: hidden;
+    border-color: #949494;
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+header{
+    position:relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 75px;
+    background-color: #ffffff;
+    border-style: solid;
+    border-color: rgba(171,168,168,0.33);
+    padding: 1px;
+}
+
+button {
+    background-size: cover;
+    position:relative;
+    border: none;
+    width: 40px;
+    height: 40px;
+}
+
+button.logo{
+    left: 150px;
+    bottom: 10px;
+    background-image: url(../image/home.png);
+    width: 200px;
+    height: 50px;
+}
+
+textarea{
+    position: relative;
+    left: 300px;
+}
+
+nav{
+    top:10px;
+    position:relative;
+    display: flex;
+    flex-direction: row;
+    left:500px;
+}
+
+button.interesting{
+    background-image: url(../image/interesting.png);
+}
+
+button.comments{
+    background-image:  url(../image/comments.png);
+}
+
+button.profile{
+    background-image:  url(../image/MyProfile.png);
+}
+
+
+
+
+main{
+    background-color: #f7f7f7;
+    width: 100%;
+    height:24100px;
+}
+
+article {
+    display: block;
+    position:relative;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 614px;
+    height: 23938px;
+    top: 60px;
+    left: 180px;
+    border-style: solid;
+    border-color: #e9e9e9;
+    padding: 1px;
+}
+
+article section{
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+}
+
+
+div.photo_profil{
+    position: relative;
+    height: 40px;
+    width: 40px;
+    content: url(../image/author_photo.png);
+    left: 15px;
+    top:15px;
+}
+
+
+div.info{
+    position:relative;
+    display: inline;
+    line-height: 2px;
+    height: 20px;
+    left: 40px;
+    top: 4px;
+
+}
+
+p.number_of_likes, p.author_name{
+    font-family: sans-serif;
+    font-weight:600;
+    font-size:0.9em;
+}
+
+p.place{
+    font-family: sans-serif;
+    font-weight:300;
+    font-size:0.7em;
+}
+
+
+div.post_image{
+    position: relative;
+    content: url(../image/photo.png);
+    width: 100%;
+    height: 767px;
+    border-style: solid;
+    border-color: rgb(188, 185, 185);
+}
+
+section.options > div{
+    position: relative;
+    height:40px;
+    width: 40px;
+}
+
+div.comment{
+    content: url(../image/send_comment.png);
+
+}
+div.likes{
+    left:4px;
+    content: url(../image/comments.png);
+}
+div.share{
+    content: url(../image/share.png);
+}
+div.saved{
+    content: url(../image/saved.png);
+    left: 450px;
+}
+section.options{
+    position: relative;
+    height: 40%;
+    width: 100%;
+}
+
+aside{
+    color: rgba(215, 212, 212, 0.33);
+}
