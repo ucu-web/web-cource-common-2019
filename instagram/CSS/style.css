@@ -1,17 +1,3 @@
-body{
-    margin: 0;
-    padding: 0;
-    position: relative;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    min-height: 100%;
-    overflow: hidden;
-    border-color: #949494;
-    max-height: 100%;
-    overflow-y: auto;
-}
 
 header{
     position:relative;
