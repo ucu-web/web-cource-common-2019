@@ -1,0 +1,28 @@
+$yellow: #f48024;
+
+.Side-navigation {
+  &__link {
+    display: block;
+    line-height: 1.8;
+    padding: 4px 4px 4px 8px;
+    font-size: 13px;
+    color: #0c0d0e;
+  }
+
+  &__link--active {
+    border-right: 3px solid $yellow;
+    background: rgba(12, 13, 14, 0.05);
+    font-weight: bold;
+  }
+
+  &__section-title {
+    text-transform: uppercase;
+    color: #6a737c;
+    margin-left: 8px;
+    margin-bottom: 4px;
+    margin-top: 16px;
+    font-size: 11px;
+    font-family: inherit;
+    font-weight: inherit;
+  }
+}
