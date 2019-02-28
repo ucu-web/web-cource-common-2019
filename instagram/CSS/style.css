@@ -1,12 +1,11 @@
-*{
-    font-family:Arial, sans-serif;
+* {
+    font-family: Arial, sans-serif;
 }
 
 footer a {
-    text-decoration:none;
+    text-decoration: none;
     color: #bfbfbf;
 }
-
 
 body {
     margin: 0;
@@ -17,7 +16,7 @@ body {
     background-color: #f6f6f6;
 }
 
-header{
+header {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -25,9 +24,11 @@ header{
     height: 75px;
     max-width: 100%;
 }
-nav{
+
+nav {
     display: flex;
-    flex-direction: row;}
+    flex-direction: row;
+}
 
 
 section {
@@ -35,104 +36,96 @@ section {
     width: 290px;
 }
 
-main{
+main {
     width: 615px;
     height: 2000px;
     margin-right: 30px;
     margin-top: 60px;
 }
 
-header, section, article{
+header, section, article {
     overflow: hidden;
     background-color: #ffffff;
     border: #e4e4e4 solid 1px;
 }
 
-footer{
+footer {
     font-size: 12px;
     color: #bbbbbb;
     margin-top: 15px;
 }
 
 
-
-
-
-
-
-
-
-img.my_profile{
-    margin:5px 15px 5px 5px;
+img.my_profile {
+    margin: 5px 15px 5px 5px;
     height: 60px;
     width: 60px;
 }
 
-img{
+img {
     height: 35px;
     width: 35px;
 }
 
-img.post{
+img.post {
     display: block;
     width: 100%;
     height: 760px;
 }
 
-section img{
+section img {
     margin: 5px;
     padding-right: 10px;
     padding-left: 10px;
 }
 
-article h2 img{
-    margin:15px;
+article h2 img {
+    margin: 15px;
 }
 
 
+p {
+    margin: 0;
+}
 
-
-
-
-
-
-p{margin: 0;}
-
-p.username, p.post_number_likes{
+p.username, p.post_number_likes {
     font-size: 14px;
     font-weight: 600;
     line-height: 18px;
     color: #262626;
 }
 
-p.post_place{
+p.post_place {
     font-weight: 400;
     font-size: small;
 }
 
-p.name{
+p.name {
     color: #bfbfbf;
     font-size: 14px;
 }
 
-p time{
+p time {
     font-size: small;
-    color: #999;}
+    color: #999;
+}
 
-p.info{
+p.info {
     font-weight: 500;
     font-size: small;
     color: #a7a7a7;
 }
 
-.wrapper_stories_content p{
+.wrapper_stories_content p {
     display: flex;
     align-items: flex-start;
 }
 
-p.footer{margin-top: 20px;}
+p.footer {
+    margin-top: 20px;
+}
 
-p.section_header{
+p.section_header {
     color: #bfbfbf;
     font-weight: 500;
     font-size: medium;
@@ -144,89 +137,89 @@ p.section_options {
     font-weight: 700;
 }
 
-p.more_comments{
+p.more_comments {
     font-size: small;
     font-weight: 700;
     color: #bfbfbf;
 }
 
 
-article aside.comments_to_post p.post_comment{
+article aside.comments_to_post p.post_comment {
     margin-bottom: 5px;
     font-size: 15px;
     font-weight: lighter;
 }
 
 
-
-
-
-button{
+button {
     background-size: cover;
     border: none;
     background-color: transparent;
 
 }
 
-header button, main button{
-    outline : none;
+header button, main button {
+    outline: none;
 }
 
-header nav button{
-    margin:15px;
+header nav button {
+    margin: 15px;
     width: 40px;
     height: 40px;
 }
 
-button.logo{
+button.logo {
     background-image: url(imagebutton/home.png);
     width: 200px;
     height: 50px;
 }
 
-button.interesting{
+button.interesting {
     background-image: url(imagebutton/interesting.png);
 }
 
-button.comments{
+button.comments {
     background-image: url(imagebutton/heart.png);
 }
 
-button.profile{
+button.profile {
     background-image: url(imagebutton/MyProfile.png);
 }
 
-button.like{
+button.like {
     background-image: url(imagebutton/heart.png);
 }
-button.comment{
+
+button.comment {
     background-image: url(imagebutton/mesagge.png);
 
 }
-button.share{
+
+button.share {
     background-image: url(imagebutton/share.png);
 }
-button.save{
+
+button.save {
     background-image: url(imagebutton/saved.png);
 }
 
-.options_to_post button{
+.options_to_post button {
     height: 40px;
     width: 40px;
 }
 
-.wrapper_recommendation_content button{
+.wrapper_recommendation_content button {
     right: 10px;
     font-weight: 600;
     color: cornflowerblue;
     margin: 10px;
 }
 
-.wrapper_stories_content button{
+.wrapper_stories_content button {
     width: 100%;
 }
 
-header textarea{
+header textarea {
     font-size: large;
     text-align: center;
     border: #e7e7e7 1px solid;
@@ -236,10 +229,10 @@ header textarea{
     height: 23px;
 }
 
-article textarea{
+article textarea {
     width: 510px;
     height: 40px;
-    border:none;
+    border: none;
     border-top: #e7e7e7 1px solid;
 
 }
@@ -258,49 +251,23 @@ article textarea::-webkit-input-placeholder {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-article a{
+article a {
     margin-right: 5px;
 }
 
-article a.link_to_profile{
+article a.link_to_profile {
     color: cornflowerblue;
 }
 
-article p.post_comment a{
-    text-decoration:none;
+article p.post_comment a {
+    text-decoration: none;
     color: #272727;
     font-weight: 600;
-    font-size:15px;
+    font-size: 15px;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.wrapper{
+.wrapper {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -308,40 +275,40 @@ article p.post_comment a{
 
 }
 
-.wrapper_sidebar{
+.wrapper_sidebar {
     margin-top: 60px;
     height: 490px;
     width: 290px
 }
 
-.link_to_my_profile{
+.link_to_my_profile {
     display: flex;
     flex-direction: row;
     height: 60px;
 }
 
-.link_to_profile, .wrapper_recommendation{
+.link_to_profile, .wrapper_recommendation {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.recommendations{
+.recommendations {
     height: 200px;
 }
 
-.wrapper_text_link_to_profile{
+.wrapper_text_link_to_profile {
     max-width: 500px;
-    display : flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.wrapper_recommendation_content .link_to_profile{
+.wrapper_recommendation_content .link_to_profile {
     display: flex;
 }
 
-.options_to_post{
+.options_to_post {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -350,7 +317,7 @@ article p.post_comment a{
 
 }
 
-.wrapper_post_additional_info > *{
+.wrapper_post_additional_info > * {
     margin-top: 10px;
 }
 
@@ -360,12 +327,12 @@ article p.post_comment a{
 }
 
 
-div.wrapper_stories_content, div.wrapper_recommendation_content{
+div.wrapper_stories_content, div.wrapper_recommendation_content {
     overflow: scroll;
     max-height: 180px;
 }
 
-.wrapper_section_header{
+.wrapper_section_header {
     padding: 15px 15px 0 15px;
     display: flex;
     flex-direction: row;
@@ -375,27 +342,27 @@ div.wrapper_stories_content, div.wrapper_recommendation_content{
 }
 
 
-article h2{
+article h2 {
     margin: 0;
 }
 
 
-article .wrapper_post_comment{
+article .wrapper_post_comment {
     display: block;
 }
 
-article .wrapper_post_comment .username{
+article .wrapper_post_comment .username {
     margin-right: 10px;
-    float:left;
+    float: left;
 }
 
 
-article .wrapper_post_additional_info{
+article .wrapper_post_additional_info {
     padding-left: 20px;
     padding-right: 20px;
 }
 
-article .wrapper_post_some_options{
+article .wrapper_post_some_options {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -403,30 +370,29 @@ article .wrapper_post_some_options{
 }
 
 
-
-article{
-    margin: 0 0  60px 0;
+article {
+    margin: 0 0 60px 0;
 }
 
 
-section h2{
+section h2 {
     margin: 0;
 }
 
 
-article section{
+article section {
     margin: 0;
-    border:none;
+    border: none;
 }
 
 
-section.recommendations .link_to_profile{
+section.recommendations .link_to_profile {
     justify-content: space-between;
     margin-bottom: 5px;
 }
 
 
-section.insta_stories{
+section.insta_stories {
     height: 220px;
     display: flex;
     flex-direction: column;
