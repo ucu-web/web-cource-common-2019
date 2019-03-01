@@ -9,12 +9,12 @@
     text-indent: -9999em;
 }
 
-.search-bar {
+.Search-form {
     padding-left: 12px;
     align-self: center;
 }
 
-.input-field {
+.Search-form__input-field {
     width: 100%;
     max-width: 720px;
     min-width: 200px;
@@ -27,7 +27,7 @@
     font-size: 13px;
 }
 
-.input-field:focus {
+.Search-form__input-field:focus {
     border-color: #66bfff;
     box-shadow: 0 0 0 4px rgba(0, 149, 255, 0.15);
 }

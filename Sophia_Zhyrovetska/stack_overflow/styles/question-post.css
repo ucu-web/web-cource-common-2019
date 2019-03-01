@@ -1,14 +1,14 @@
 .questions-list {
-    border-top: 1px solid #d6d9dc;
+  border-top: 1px solid #d6d9dc;
 }
 
 .question-post {
-    padding: 12px 8px 12px 8px;
-    display: flex;
-    border-bottom: 1px solid #eff0f1;
+  padding: 12px 8px 12px 8px;
+  display: flex;
+  border-bottom: 1px solid #eff0f1;
 }
 
 .bottom-notice {
-    line-height: 1.4;
-    margin: 60px 10px 16px 24px;
+  line-height: 1.4;
+  margin: 60px 10px 16px 24px;
 }

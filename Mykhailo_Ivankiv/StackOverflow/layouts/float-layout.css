@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-.top-bar{
+.Layout__header{
     height: 50px;
     position:fixed;
     background-color: #eb2f06;
@@ -18,7 +18,7 @@ body .wrapper{
     margin: 50px auto 0;
 }
 
-.side-nav{
+.Layout__navigation{
     width: 164px;
     height: 200px;
     background-color: #b8e994;

@@ -1,0 +1,32 @@
+.Layout {
+  display: grid;
+  grid-template-columns: auto 164px minmax(auto, 775px) 300px auto;
+  grid-template-rows: 50px auto 300px;
+}
+
+.Layout__header {
+  grid-area: 1/1/2/6;
+  position: sticky;
+  top: 0;
+    z-index: 1;
+}
+
+.Layout__navigation {
+  grid-column-start: 2;
+  padding-top: 24px;
+}
+
+.Layout__main-block {
+  max-width: 1100px;
+  min-width: 400px;
+  padding: 24px 24px 24px 0;
+  border-left: 1px solid #d6d9dc;
+}
+
+.Layout__sidebar {
+  padding-top: 24px;
+}
+
+.Layout__footer {
+  grid-area: 3/1/4/6;
+}
