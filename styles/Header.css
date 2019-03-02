@@ -1,0 +1,20 @@
+.Header {
+  padding: 0 1em;
+  line-height: 1.5;
+  display: flex;
+}
+.Header__logo {
+  display: inline-block;
+  align-self: center;
+}
+.Header__logo-inverted {
+  filter: invert(100%);
+}
+.Header__search {
+  margin-left: 12px;
+  display: inline-block;
+  height: 30px;
+  padding: 0.2em 0;
+  background-color: hsla(0, 0%, 100%, 0.125);
+}
+/*# sourceMappingURL=Header.css.map */
