@@ -1,4 +1,4 @@
-.teams {
+.Teams-notice {
   display: flex;
   overflow: hidden;
   position: relative;
@@ -9,40 +9,47 @@
   margin: 18px 6px 6px;
 }
 
-.teams .simple-text {
+.Teams-notice__title {
+  font-weight: bold;
+  font-size: 13px;
+  color: #0c0d0e;
+}
+
+.Teams-notice__text {
   font-size: 12px;
   color: #3b4045;
   margin-top: 0.2em;
 }
 
-.teams .s-btn {
-  border-color: #0095ff;
-  box-shadow: 0 0 0 0 rgba(0, 149, 255, 0);
-  color: #07c;
+.Teams-notice__button {
   text-align: center;
   margin-top: 12px;
+  color: #07c;
+  border: 1px solid #0095ff;
+  padding: 0.8em 0.8em;
+  border-radius: 0.3em;
 }
 
-.teams .s-btn:hover {
+.Teams-notice__button:hover {
   color: #005999;
   background-color: rgba(0, 119, 204, 0.05);
   border-color: #0095ff;
 }
 
-.teams .s-btn:focus {
+.Teams-notice__button:focus {
   color: #003b66;
   background-color: rgba(0, 119, 204, 0);
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5),
     0 0 0 4px rgba(0, 149, 255, 0.1);
 }
 
-.teams .s-btn:active {
+.Teams-notice__button:active {
   color: #005999;
   background-color: rgba(0, 119, 204, 0.15);
   border-color: #07c;
 }
 
-.teams .teams-svg {
+.Teams-notice .Teams-notice__image {
   right: -6px;
   top: 4px;
   position: absolute;

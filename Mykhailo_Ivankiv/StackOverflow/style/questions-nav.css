@@ -1,4 +1,4 @@
-.question-nav {
+.Questions-type-navigation__ask-question {
     display: flex;
 }
 
@@ -11,7 +11,7 @@
     color: #0C0D0E;
 }
 
-.ask-question .ask-button {
+.ask-question .Questions-type-navigation__button {
     background-color: #0095ff;
     box-shadow: inset 0 1px 0 0 rgba(102, 191, 255, 0.75), 0 0 0 0 rgba(0, 149, 255, 0);
     color: #FFF;
@@ -20,31 +20,31 @@
     white-space: nowrap;
 }
 
-.ask-button:hover {
+.Questions-type-navigation__button:hover {
     background-color: #007ed9;
 }
 
-.ask-button:focus {
+.Questions-type-navigation__button:focus {
     box-shadow: inset 0 1px 0 0 rgba(102, 191, 255, 0.5), 0 0 0 4px rgba(0, 149, 255, 0.15);
 }
 
-.ask-button:active {
+.Questions-type-navigation__button:active {
     background-color: #0068b3;
     box-shadow: inset 0 2px 8px 0 rgba(0, 89, 153, 0.8);
     border-color: #005999;
 }
 
-.question-nav.navbar {
+.Questions-type-navigation__ask-question.navbar {
     justify-content: flex-end;
     margin: .3em 0 1em;
 }
 
-.question-nav.navbar .btn-group {
+.Questions-type-navigation__ask-question.navbar .btn-group {
     display: flex;
     margin-top: 1.2em;
 }
 
-.nav-btn {
+.Select-type-buttons-group__button {
     border-radius: 0;
     border-color: #adb3b9;
     box-shadow: 0 0 0 0 rgba(145, 153, 161, 0);
@@ -53,11 +53,11 @@
     padding-bottom: .6em;
 }
 
-.nav-btn:focus, #current-chapter:focus {
+.Select-type-buttons-group__button:focus, #current-chapter:focus {
     box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5), 0 0 0 4px rgba(145, 153, 161, 0.1);
 }
 
-.nav-btn:active {
+.Select-type-buttons-group__button:active {
     background-color: rgba(177, 192, 206, 0.15);
     border-color: #9199a1;
 }

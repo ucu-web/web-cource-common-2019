@@ -8,13 +8,15 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="styles/Layout.css" />
-      <link rel="stylesheet" href="styles/Header.css" />
-      <link rel="stylesheet" href="styles/Profile-navigation.css" />
+    <link rel="stylesheet" href="styles/Header.css" />
+    <link rel="stylesheet" href="styles/Profile-navigation.css" />
+    <link rel="stylesheet" href="styles/Search_form.css" />
+    <link rel="stylesheet" href="styles/Site-chapter-navigation.css" />
+    <link rel="stylesheet" href="styles/Teams-notice.css" />
+    <link rel="stylesheet" href="styles/Select-questions-type.css" />
+    <link rel="stylesheet" href="styles/Questions-types-navigation.css" />
 
     <link rel="stylesheet" href="styles/common.css" />
-    <link rel="stylesheet" href="styles/side-nav.css" />
-    <link rel="stylesheet" href="styles/teams.css" />
-    <link rel="stylesheet" href="styles/questions-nav.css" />
     <link rel="stylesheet" href="styles/question-post.css" />
     <link rel="stylesheet" href="styles/question-summary.css" />
     <link rel="stylesheet" href="styles/question-reaction.css" />
@@ -23,7 +25,6 @@
     <link rel="stylesheet" href="styles/hot-network-questions.css" />
     <link rel="stylesheet" href="styles/footer.css" />
     <link rel="stylesheet" href="styles/favicons.css" />
-      <link rel="stylesheet" href="styles/Search_form.css">
 
     <title>Document</title>
   </head>
@@ -55,7 +56,11 @@
               alt="Sophia Zhyrovetska profile photo"
               aria-label="Your profile photo"
             />
-            <span class="Profile-navigation__reputation-score" title="your reputation: 1">1</span>
+            <span
+              class="Profile-navigation__reputation-score"
+              title="your reputation: 1"
+              >1</span
+            >
             <span class="Profile-navigation__budge-circle">●</span>
             <span class="Profile-navigation__budge-count">1</span>
           </a>
@@ -138,12 +143,19 @@
         </nav>
       </header>
 
-      <nav class="Layout__navigation">
-        <div class="sticky-nav">
-          <a href="#" class="current-page bold-heading">Home</a>
-          <nav>
-            <h4 id="nav-header">Public</h4>
-            <a href="#" class="nav-link link-with-icon">
+      <section class="Layout__navigation">
+        <div class="Layout__sticky-navigation">
+          <nav class="Site-chapter-navigation">
+            <a
+              href="#"
+              class="Site-chapter-navigation__link Site-chapter-navigation__link--home Site-chapter-navigation__link--current"
+              >Home</a
+            >
+            <h4 class="Site-chapter-navigation__section-title">Public</h4>
+            <a
+              href="#"
+              class="Site-chapter-navigation__link Site-chapter-navigation__link--with-icon"
+            >
               <svg
                 class="svg-icon iconGlobe"
                 width="18"
@@ -154,24 +166,21 @@
                   d="M9 1a8 8 0 1 0 0 16A8 8 0 0 0 9 1zM8 15.32a6.4 6.4 0 0 1-5.23-7.75L7 11.68v.8c0 .88.12 1.32 1 1.32v1.52zm5.72-2c-.2-.66-1-1.32-1.72-1.32h-1v-2c0-.44-.56-1-1-1H6V7h1c.44 0 1-.56 1-1V5h2c.88 0 1.4-.72 1.4-1.6v-.33a6.4 6.4 0 0 1 2.32 10.24z"
                 ></path>
               </svg>
-              <span class="link-name">Stack Overflow</span></a
+              Stack Overflow</a
             >
-            <a class="nav-link" href="#">Tags</a>
-            <a class="nav-link" href="#">Users</a>
-            <a class="nav-link" href="#">Jobs</a>
+            <a class="Site-chapter-navigation__link" href="#">Tags</a>
+            <a class="Site-chapter-navigation__link" href="#">Users</a>
+            <a class="Site-chapter-navigation__link" href="#">Jobs</a>
           </nav>
 
-          <div class="teams">
-            <h4 class="bold-heading">Teams</h4>
-            <span class="simple-text">Q&A for work </span>
-            <a href="#" class="s-btn">Learn More</a>
-            <div class="teams-svg">
-              <svg
-                width="53"
-                height="49"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+          <div class="Teams-notice">
+            <h4 class="Teams-notice__title">Teams</h4>
+            <span class="Teams-notice__text">Q&A for work </span>
+            <a href="#" class="Primary-button Teams-notice__button"
+              >Learn More</a
+            >
+            <div class="Teams-notice__image">
+              <svg width="53" height="49" fill="none">
                 <path
                   d="M49 11l.2 31H18.9L9 49v-7H4V8h31"
                   fill="#CCEAFF"
@@ -208,54 +217,60 @@
             </div>
           </div>
         </div>
-      </nav>
+      </section>
 
       <main class="Layout__main-block">
-        <div class="question-nav">
-          <h1 class="question-nav-cell heading">Top Questions</h1>
-          <div class="question-nav-cell ask-question" role="button">
-            <a class="s-btn ask-button" href="#">Ask Question</a>
+        <section class="Questions-types-navigation">
+          <div class="Questions-types-navigation__wrapper">
+            <h1 class="Questions-types-navigation__title">Top Questions</h1>
+            <div class="Questions-types-navigation__wrapper" role="button">
+              <a
+                class="Primary-button Questions-types-navigation__ask-button"
+                href="#"
+                >Ask Question</a
+              >
+            </div>
           </div>
-        </div>
 
-        <nav class="question-nav navbar">
-          <div class="btn-group">
-            <a
-              href="#"
-              id="current-chapter"
-              class="s-btn nav-btn"
-              title="Questions that may be of interest to you based on your history and tag preference"
-              >Interesting</a
+          <div class="Questions-types-navigation__wrapper">
+            <nav
+              class="Select-questions-type Questions-types-navigation__select-type"
             >
-            <a
-              href="#"
-              class="s-btn nav-btn"
-              title="Questions with an active body"
-            >
-              <span class="indicator">310</span>
-              Featured</a
-            >
-            <a
-              href="#"
-              class="s-btn nav-btn"
-              title="Questions with the most views, answers, and votes over the last few days"
-              >Hot</a
-            >
-            <a
-              href="#"
-              class="s-btn nav-btn"
-              title="Questions with the most views, answers, and votes this week"
-              >Week</a
-            >
-            <a
-              href="#"
-              id="rightmost-btn"
-              class="s-btn nav-btn"
-              title="Questions with the most views, answers, and votes this month"
-              >Month</a
-            >
+              <a
+                href="#"
+                class="Primary-button Select-questions-type__button Select-questions-type__button--leftmost Select-questions-type__button--current"
+                title="Questions that may be of interest to you based on your history and tag preference"
+                >Interesting</a
+              >
+              <a
+                href="#"
+                class="Primary-button Select-questions-type__button"
+                title="Questions with an active body"
+              >
+                <span class="Select-questions-type__indicator">310</span>
+                Featured</a
+              >
+              <a
+                href="#"
+                class="Primary-button Select-questions-type__button"
+                title="Questions with the most views, answers, and votes over the last few days"
+                >Hot</a
+              >
+              <a
+                href="#"
+                class="Primary-button Select-questions-type__button"
+                title="Questions with the most views, answers, and votes this week"
+                >Week</a
+              >
+              <a
+                href="#"
+                class="Primary-button Select-questions-type__button Select-questions-type__button--rightmost"
+                title="Questions with the most views, answers, and votes this month"
+                >Month</a
+              >
+            </nav>
           </div>
-        </nav>
+        </section>
 
         <section class="questions-list">
           <article class="question-post">

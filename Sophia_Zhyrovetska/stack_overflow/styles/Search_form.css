@@ -1,17 +1,17 @@
-.Search-form__input-field{
-    width: 100%;
-    max-width: 720px;
-    min-width: 200px;
-    padding: 0.6em 0.6em;
-    border: 1px solid #bbc0c4;
-    border-radius: 3px;
-    line-height: 1.1;
-    font-family: inherit;
-    color: #848d95;
-    font-size: 13px;
+.Search-form__input-field {
+  width: 100%;
+  max-width: 720px;
+  min-width: 200px;
+  padding: 0.6em 0.6em;
+  border: 1px solid #bbc0c4;
+  border-radius: 3px;
+  line-height: 1.1;
+  font-family: inherit;
+  color: #848d95;
+  font-size: 13px;
 }
 
 .Search-form__input-field:focus {
-    border-color: #66bfff;
-    box-shadow: 0 0 0 4px rgba(0, 149, 255, 0.15);
+  border-color: #66bfff;
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, 0.15);
 }
