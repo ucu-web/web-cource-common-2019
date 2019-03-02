@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Новости сайта</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/find-filter.css">
+    <link rel="stylesheet" href="styles/news.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<header>
+    <div id="banner">
+        <div class="container">
+            <nav aria-label="Profile navigation" id="profile-nav" class="container">
+                <a aria-label="profile" href="#">
+                    <span>Midren</span>
+                    <span>профиль</span>
+                </a>
+                <a aria-label="notifications" href="#" class="fa fa-bell-o"></a>
+                <a aria-label="messages" href="#" class="fa fa-envelope-o"></a>
+                <a aria-label="sign-out" href="#" class="fa fa-sign-out">
+                    <span>выйти</span>
+                </a>
+            </nav>
+        </div>
+    </div>
+    <div id="top-line">
+        <div id="nav_logo" class="container">
+            <a href="" aria-label="Yummy anime" id="logo"></a>
+            <nav aria-label="Main navigation" id="main-nav">
+                <a href="#">Главная</a>
+                <a href="#">Новости</a>
+                <a href="#">Каталог</a>
+                <a href="#">ТОП-100</a>
+                <a href="#">Случайное</a>
+                <a href="#">Сообщество</a>
+                <a href="#">Видео</a>
+                <a href="#">Помощь</a>
+            </nav>
+        </div>
+    </div>
+</header>
+<main class="container">
+    <section id="main-finder">
+        <form action="/find_anime">
+            <input id="find_anime" type="text" placeholder="Найти аниме по названию">
+            <button aria-label="search"></button>
+        </form>
+    </section>
+
+    <section id="news">
+        <h3>Новости аниме и сайта</h3>
+        <div>
+            <a class="button">все</a>
+            <a class="button">новости сайта</a>
+            <a class="button">новости аниме</a>
+            <a class="button">статьи</a>
+        </div>
+        <ul>
+            <li>
+                <article class="article">
+                    <h4><a href="#">Эволюция аниме - А оно нам надо?</a></h4>
+                    <time datetime="16-02-2019">16 Фев 2019</time>
+                    <p>
+                        В четверг "Production I.G" и "Netflix" уведомили о творческом объединении в целях
+                        производства первой рукописной анимации в исходном разрешении 4К и поддержкой технологии
+                        расширенного динамического диапазона "HDR". Данная разработка будет распространяться исключител
+                        ...
+                    </p>
+                </article>
+                <article class="anime_news">
+                    <h4><a href="#">Волчице и пряностям" в VR - быть!</a></h4>
+                    <time datetime="16-02-2019">16 Янв 2019</time>
+                    <p>К тому же, довольно скоро.</p>
+                </article>
+            </li>
+        </ul>
+        <ul class="page-navigation">
+            <li><a href="#">«</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li>...</li>
+            <li><a href="#">26</a></li>
+            <li><a href="#">27</a></li>
+            <li><a href="#">»</a></li>
+        </ul>
+    </section>
+
+    <section id="find-filter">
+        <h2>ФИЛЬТР АНИМЕ</h2>
+        <form action="find_filtered_anime">
+            <ul id="filter-list">
+                <li>
+                    <label class="filter-cell">
+                        <span>Выбрать жанры</span>
+                        <input placeholder="По каким жанрам искать">
+                    </label>
+                </li>
+                <li>
+                    <label class="filter-cell">
+                        <span>Тип аниме</span>
+                        <input placeholder="Какой тип аниме искать">
+                    </label>
+                </li>
+                <li>
+                    <label class="filter-cell">
+                        <span>Статус аниме</span>
+                        <select name="status">
+                            <option value="don't_count">Не учитывать</option>
+                            <option value="finished">Вышел</option>
+                            <option value="ongoing">Онгоинг</option>
+                            <option value="announce">Анонс</option>
+                        </select>
+                    </label>
+                </li>
+                <li>
+                    <label class="filter-cell">
+                        <span>Количество серий</span>
+                        <input class="interval" placeholder="от">
+                        <input class="interval" placeholder="до">
+                    </label>
+                </li>
+                <li>
+                    <label class="filter-cell">
+                        <span>Год</span>
+                        <input class="interval" placeholder="от">
+                        <input class="interval" placeholder="до">
+                    </label>
+                </li>
+                <li>
+                    <label class="filter-cell">
+                        <span>Вид перевода</span>
+                        <input placeholder="Какой вид перевода вам интересен">
+                    </label>
+                </li>
+                <li>
+                    <label class="filter-cell">
+                        <span>Возрастной рейтинг</span>
+                        <select name="age">
+                            <option value="g"> G (для всех возрастов)</option>
+                            <option value="pg"> PG (для детей)</option>
+                            <option value="pg-13"> PG-13 (от 13 лет)</option>
+                        </select>
+                    </label>
+                </li>
+                <li>
+                    <label class="filter-cell">
+                        <span>Сортировать по</span>
+                        <select name="sorting">
+                            <option value="rate"> Рейтингу</option>
+                            <option value="alpa"> Алфавиту(А-Я)</option>
+                        </select>
+                    </label>
+                </li>
+                <li>
+                    <label class="filter-cell">
+                        <input aria-label="with video" type="checkbox" id="with-video">
+                        Только с видео
+                    </label>
+                </li>
+            </ul>
+            <footer>
+                <button class="button">Искать</button>
+            </footer>
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <p>Все видео на сайте предоставлены только для ознакомления и не предполагают скачивание.</p>
+        <p>
+            <span>Тех поддержка: <span class="address">all.yummy.anime@gmail.com</span></span>
+            <span>Не пишите на почту сайта через ВК, ответы до ВК не доходят!</span>
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>

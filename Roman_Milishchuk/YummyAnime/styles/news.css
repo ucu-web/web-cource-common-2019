@@ -1,0 +1,89 @@
+
+#news {
+    float: left;
+    width: 74%;
+    background: white;
+    padding: 1rem;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#news > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#news > div > a {
+    width: 100%;
+    text-transform: uppercase;
+    margin: 5px 5px 20px 5px;
+}
+
+#news h3 {
+    text-align: left;
+    font-weight: 400;
+    margin: 0 0 1rem;
+    font-size: 1.5rem;
+}
+
+#news ul {
+    list-style-type: none;
+}
+
+
+#news article {
+    position: relative;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+#news article h4 {
+    display: inline-block;
+    padding-right: 100px;
+    margin: 0 0 10px;
+    font-weight: 400;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: black;
+}
+
+#news article h4::before {
+    margin-right: 1rem;
+    padding: 3px 7px;
+    font-size: 12px;
+    line-height: 1;
+    color: #fff;
+    border-radius: 10px;
+}
+
+#news .article h4::before {
+    content: "статья";
+    background-color: #9954d8;
+}
+
+#news .anime_news h4::before {
+    content: "новости аниме";
+    background-color: #3cce7b;
+}
+
+#news article time {
+    font-style: italic;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#news article p {
+    text-align: left;
+}
+
+#news ul.page-navigation li {
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+#find-filter {
+    float: right;
+    width: 23%;
+}
