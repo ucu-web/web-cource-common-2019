@@ -19,7 +19,7 @@
     background-color: #eff0f1;
 }
 
-.Profile-navigation__link .reputation-score {
+.Profile-navigation__link .Question-post__author-reputation-score {
     padding-left: 0.7em;
     font-weight: bold;
     font-size: 0.75em;
