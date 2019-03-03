@@ -1,31 +1,31 @@
-.hot-network-questions {
+.Hot-network-questions {
     margin-bottom: 1.5em;
     display: flex;
     flex-direction: column;
 }
 
-.hot-network-questions .heading {
+.Hot-network-questions .Featured-tags-block__title {
     font-weight: normal;
     color: #242729;
     font-size: 1.2em;
 
 }
 
-.hot-network-questions h4 {
+.Hot-network-questions h4 {
     margin-bottom: 1.4em;
 }
 
-.hot-network-questions .link {
+.Hot-network-questions .Hot-network-questions__question {
     display: flex;
     text-decoration: none;
     margin-bottom: 0.7em;
 }
 
-.ordinary-link.hot-question {
+.ordinary-link.Hot-network-questions__question-link {
     font-size: 0.75em;
     flex: 13;
 }
 
-.hot-network-questions .favicon {
+.Hot-network-questions .favicon {
     flex: 1;
 }

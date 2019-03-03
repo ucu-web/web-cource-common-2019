@@ -2,7 +2,7 @@
     display: flex;
 }
 
-.question-nav-cell.heading {
+.question-nav-cell.Featured-tags-block__title {
     flex: 1 auto;
     font-family: inherit;
     font-weight: normal;

@@ -21,7 +21,7 @@
   flex: 1 0 auto;
 }
 
-.Layout__footer .heading {
+.Layout__footer .Featured-tags-block__title {
   color: #bbc0c4;
   padding: 0.3em 0;
   line-height: 1.3;
@@ -33,20 +33,20 @@
   word-wrap: normal;
 }
 
-.Layout__footer .heading:hover,
-.Layout__footer .heading:active {
+.Layout__footer .Featured-tags-block__title:hover,
+.Layout__footer .Featured-tags-block__title:active {
   color: #f2f3f3;
 }
 
-.Layout__footer .link {
+.Layout__footer .Hot-network-questions__question {
   font-size: 13px;
   color: #848d95;
   padding: 4px 0;
   line-height: 1.3;
 }
 
-.Layout__footer .link:hover,
-.Layout__footer .link:active,
+.Layout__footer .Hot-network-questions__question:hover,
+.Layout__footer .Hot-network-questions__question:active,
 .soc-link:hover,
 .soc-link:active {
   color: #bbc0c4;

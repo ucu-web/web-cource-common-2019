@@ -1,11 +1,11 @@
-.sidebar-widget {
+.Featured-tags-block {
     border: 1px solid #d6d9dc;
     border-radius: 3px;
     box-shadow: 0 2px 8px rgba(59, 64, 69, 0.1);
     margin-bottom: 1em;
 }
 
-.sidebar-widget header {
+.Featured-tags-block header {
     display: flex;
     padding: 0.8em 1em;
     background: #fafafb;
@@ -15,32 +15,32 @@
     border-bottom: 1px solid #e4e6e8;
 }
 
-.sidebar-widget .Community-bulletin__icon {
+.Featured-tags-block .Community-bulletin__icon {
     margin-right: 0.3em;
     display: flex;
 }
 
-.sidebar-widget .heading {
+.Featured-tags-block .Featured-tags-block__title {
     flex: 1 auto;
     font-size: 1em;
     font-weight: normal;
     margin-bottom: 0;
 }
 
-.sidebar-widget .edit {
+.Featured-tags-block .Featured-tags-block__edit {
     color: #6a737c;
 }
 
-.sidebar-widget .svg-icon {
+.Featured-tags-block .svg-icon {
     fill: #6a737c;
 }
 
-.sidebar-widget-content {
+.Featured-tags-block__content {
     display: flex;
     flex-wrap: wrap;
     padding: 1.3em .9em;
 }
 
-.sidebar-widget .Tag {
+.Featured-tags-block .Tag {
     margin: .1em .5em .8em 0;
 }

@@ -19,10 +19,12 @@
     <link rel="stylesheet" href="styles/Question-reaction-counter.css" />
       <link rel="stylesheet" href="styles/Aside-panel.css">
       <link rel="stylesheet" href="styles/Community-bulletin.css" />
+    <link rel="stylesheet" href="styles/Featured-tags-block.css" />
+    <link rel="stylesheet" href="styles/Hot-network-questions.css" />
 
     <link rel="stylesheet" href="styles/common.css" />
-    <link rel="stylesheet" href="styles/sidebar-widget.css" />
-    <link rel="stylesheet" href="styles/hot-network-questions.css" />
+
+
     <link rel="stylesheet" href="styles/footer.css" />
     <link rel="stylesheet" href="styles/favicons.css" />
 
@@ -1620,7 +1622,7 @@
       </main>
 
       <aside class="Aside-panel Layout__aside">
-        <section class="Community-bulletin Aside-panel__community-bulletin">
+        <section class="Community-bulletin Aside-panel__item">
           <h4 class="Community-bulletin__title">Blog</h4>
           <div class="Community-bulletin__content">
             <a href="#" class="Community-bulletin__icon">
@@ -1655,12 +1657,12 @@
               <span class="Community-bulletin__icon" title="Vote score (upvotes - downvotes)" aria-label="Vote score (upvotes - downvotes)"
                 >31</span
               >
-              <a href="#" class="ordinary-link Community-bulletin__link hot-link"
+              <a href="#" class="ordinary-link Community-bulletin__link Community-bulletin__link--hot"
                 >Technology I am using has a small community</a
               >
             </div>
             <div class="Community-bulletin__content">
-              <span class="Community-bulletin__icon" title="Vote score (upvotes - downvotes)"
+              <span class="Community-bulletin__icon" title="Vote score (upvotes - downvotes)" aria-label="Vote score (upvotes - downvotes)"
                 >37</span
               >
               <a href="#" class="ordinary-link Community-bulletin__link Community-bulletin__link--hot">
@@ -1670,9 +1672,9 @@
           </div>
         </section>
 
-        <section class="sidebar-widget">
-          <header>
-            <span class="icon">
+        <section class="Featured-tags-block Aside-panel__item">
+          <header class="Featured-tags-block__header">
+            <span class="Featured-tags-block__icon">
               <svg
                 aria-hidden="true"
                 class="svg-icon iconEye"
@@ -1685,48 +1687,48 @@
                 ></path>
               </svg>
             </span>
-            <h3 class="heading">Watched Tags</h3>
-            <a href="#" class="edit">edit</a>
+            <h3 class="Featured-tags-block__title">Watched Tags</h3>
+            <a href="#" class="Featured-tags-block__edit">edit</a>
           </header>
-          <div class="sidebar-widget-content">
+          <div class="Featured-tags-block__content">
             <a
               href="#"
-              class="Tag"
+              class="Tag Featured-tags-block__tag"
               title="show questions tagged 'c++'"
               rel="tag"
               >c++</a
             >
             <a
               href="#"
-              class="Tag"
+              class="Tag Featured-tags-block__tag"
               title="show questions tagged 'css3'"
               rel="tag"
               >css3</a
             >
             <a
               href="#"
-              class="Tag"
+              class="Tag Featured-tags-block__tag"
               title="show questions tagged 'html5'"
               rel="tag"
               >html5</a
             >
             <a
               href="#"
-              class="Tag"
+              class="Tag Featured-tags-block__tag"
               title="show questions tagged 'java'"
               rel="tag"
               >java</a
             >
             <a
               href="#"
-              class="Tag"
+              class="Tag Featured-tags-block__tag"
               title="show questions tagged 'javascript'"
               rel="tag"
               >javascript</a
             >
             <a
               href="#"
-              class="Tag"
+              class="Tag Featured-tags-block__tag"
               title="show questions tagged 'python'"
               rel="tag"
               >python</a
@@ -1734,9 +1736,9 @@
           </div>
         </section>
 
-        <section class="sidebar-widget">
-          <header>
-            <span class="icon">
+        <section class="Featured-tags-block Aside-panel__item">
+          <header class="Featured-tags-block__header">
+            <span class="Featured-tags-block__icon">
               <svg
                 aria-hidden="true"
                 class="svg-icon iconNotInterested"
@@ -1749,13 +1751,13 @@
                 ></path>
               </svg>
             </span>
-            <h3 class="heading">Ignored Tags</h3>
-            <a href="#" class="edit">edit</a>
+            <h3 class="Featured-tags-block__title">Ignored Tags</h3>
+            <a href="#" class="Featured-tags-block__edit">edit</a>
           </header>
-          <div class="sidebar-widget-content">
+          <div class="Featured-tags-block__content">
             <a
               href="#"
-              class="Tag"
+              class="Tag Featured-tags-block__tag"
               title="show questions tagged 'delphi'"
               rel="tag"
               >delphi</a
@@ -1763,96 +1765,96 @@
           </div>
         </section>
 
-        <section class="hot-network-questions">
-          <h4><a href="#" class="heading">Hot Network Questions</a></h4>
+        <section class="Hot-network-questions Aside-panel__item">
+          <h4 class="Hot-network-questions__title"><a href="#" class="Hot-network-questions__title-link">Hot Network Questions</a></h4>
           <ul>
-            <li class="link">
+            <li class="Hot-network-questions__question">
               <div
                 class="favicon favicon-workplace"
                 title="The Workplace Stack Exchange"
               ></div>
-              <a href="#" class="ordinary-link hot-question"
+              <a href="#" class="ordinary-link Hot-network-questions__question-link"
                 >What are differences between VBoxVGA, VMSVGA and VBoxSVGA in
                 VirtualBox?</a
               >
             </li>
-            <li class="link">
+            <li class="Hot-network-questions__question">
               <div class="favicon favicon-stats" title="Cross Validated"></div>
-              <a href="#" class="ordinary-link hot-question"
+              <a href="#" class="ordinary-link Hot-network-questions__question-link"
                 >How, in practice, can I hire more diversely?</a
               >
             </li>
-            <li class="link">
+            <li class="Hot-network-questions__question">
               <div
                 class="favicon favicon-codegolf"
                 title="Programming Puzzles &amp; Code Golf Stack Exchange"
               ></div>
-              <a href="#" class="ordinary-link hot-question"
+              <a href="#" class="ordinary-link Hot-network-questions__question-link"
                 >Covering a Skyline with brush strokes</a
               >
             </li>
-            <li class="link">
+            <li class="Hot-network-questions__question">
               <div
                 class="favicon favicon-rpg"
                 title="Role-playing Games Stack Exchange"
               ></div>
-              <a href="#" class="ordinary-link hot-question"
+              <a href="#" class="ordinary-link Hot-network-questions__question-link"
                 >Does reducing a character's max HP with a spell also reduce the
                 "negative HP" threshold needed to cause instant death?</a
               >
             </li>
-            <li class="link">
+            <li class="Hot-network-questions__question">
               <div
                 class="favicon favicon-worldbuilding"
                 title="Worldbuilding Stack Exchange"
               ></div>
-              <a href="#" class="ordinary-link hot-question"
+              <a href="#" class="ordinary-link Hot-network-questions__question-link"
                 >Russian Dolls - How do they reproduce?</a
               >
             </li>
-            <li class="link">
+            <li class="Hot-network-questions__question">
               <div
                 class="favicon favicon-latin"
                 title="Latin Language Stack Exchange"
               ></div>
-              <a href="#" class="ordinary-link hot-question"
+              <a href="#" class="ordinary-link Hot-network-questions__question-link"
                 >How to pronounce 'que' and 'angeli'?</a
               >
             </li>
-            <li class="link">
+            <li class="Hot-network-questions__question">
               <div
                 class="favicon favicon-workplace"
                 title="The Workplace Stack Exchange"
               ></div>
-              <a href="#" class="ordinary-link hot-question"
+              <a href="#" class="ordinary-link Hot-network-questions__question-link"
                 >Am I responsible for finding my own replacement?</a
               >
             </li>
-            <li class="link">
+            <li class="Hot-network-questions__question">
               <div
                 class="favicon favicon-stackoverflow"
                 title="Stack Overflow"
               ></div>
-              <a href="#" class="ordinary-link hot-question"
+              <a href="#" class="ordinary-link Hot-network-questions__question-link"
                 >Error "custom keyword definition is invalid: data.errors should
                 be boolean"</a
               >
             </li>
-            <li class="link">
+            <li class="Hot-network-questions__question">
               <div
                 class="favicon favicon-lifehacks"
                 title="Lifehacks Stack Exchange"
               ></div>
-              <a href="#" class="ordinary-link hot-question"
+              <a href="#" class="ordinary-link Hot-network-questions__question-link"
                 >How do you remember which shirt you wore on the previous date?
               </a>
             </li>
-            <li class="link">
+            <li class="Hot-network-questions__question">
               <div
                 class="favicon favicon-apple"
                 title="Mathematica Stack Exchange"
               ></div>
-              <a href="#" class="ordinary-link hot-question"
+              <a href="#" class="ordinary-link Hot-network-questions__question-link"
                 >How do I apply something like the double slash notation but not
                 at the end of line?
               </a>
