@@ -1,0 +1,38 @@
+.Footer {
+    width: 40px;
+    display: block;
+    position: fixed;
+    bottom: 0;
+    right: 37px;
+    z-index: 99;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 0;
+}
+
+.Footer__button__svg {
+    width: 1vw;
+    height: 1vw;
+    fill: #333;
+    padding: .75vw;
+}
+
+.Footer__button {
+    font-size: 11px;
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 2px 0 0 rgba(0, 0, 0, .1), 0 0 0 1px rgba(0, 0, 0, .04);
+    margin: 0 0 5px 20px;
+    padding: 1px;
+}
+
+.Footer__button__privacy {
+    font-size: 11px;
+    width: 30px;
+    text-decoration: none;
+    font-weight: lighter;
+    border-radius: 8px;
+    color: #333;
+    background-color: #fff;
+    padding: 0 5px;
+}

@@ -1,0 +1,46 @@
+.Post {
+    border-radius: 15px;
+}
+
+.Post:hover {
+    background-color: #efefef;
+}
+
+.Post:hover .Form__in_post, .Post:hover .Link__container {
+    display: flex;
+
+}
+
+.Post__image_container {
+    filter: none;
+    -webkit-filter: brightness(100%);
+    max-width: 93%;
+    padding-left: 9px;
+    padding-top: 7px;
+
+}
+
+
+.Post__image {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.Post__image_container:hover .Post__image {
+    filter: none;
+    -webkit-filter: brightness(85%);
+}
+
+.Post__title {
+    padding-left: 1em;
+
+}
+
+
+.Post__title_container {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    min-height: 2.5em;
+    align-items: center;
+}
