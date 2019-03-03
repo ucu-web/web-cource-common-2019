@@ -27,7 +27,7 @@ body .wrapper{
     top: 50px;
 }
 
-.content{
+.Community-bulletin__content{
     background-color: #55E6C1;
     width: calc(100% - 164px);
     display: flex;
@@ -40,7 +40,7 @@ body .wrapper{
     height: 2000px;
 }
 
-.Layout__sidebar{
+.Layout__aside{
     background-color: #9AECDB;
     width: 300px;
     height: 2000px;

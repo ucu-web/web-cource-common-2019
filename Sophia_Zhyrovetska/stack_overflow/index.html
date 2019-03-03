@@ -17,9 +17,10 @@
     <link rel="stylesheet" href="styles/Questions-types-navigation.css" />
     <link rel="stylesheet" href="styles/Question-post.css" />
     <link rel="stylesheet" href="styles/Question-reaction-counter.css" />
+      <link rel="stylesheet" href="styles/Aside-panel.css">
+      <link rel="stylesheet" href="styles/Community-bulletin.css" />
 
     <link rel="stylesheet" href="styles/common.css" />
-    <link rel="stylesheet" href="styles/community-news.css" />
     <link rel="stylesheet" href="styles/sidebar-widget.css" />
     <link rel="stylesheet" href="styles/hot-network-questions.css" />
     <link rel="stylesheet" href="styles/footer.css" />
@@ -1618,53 +1619,51 @@
         </p>
       </main>
 
-      <aside class="Layout__sidebar">
-        <section class="community-news">
-          <h4 class="title">Blog</h4>
-          <div class="content">
-            <a href="#" class="icon">
-              <div
+      <aside class="Aside-panel Layout__aside">
+        <section class="Community-bulletin Aside-panel__community-bulletin">
+          <h4 class="Community-bulletin__title">Blog</h4>
+          <div class="Community-bulletin__content">
+            <a href="#" class="Community-bulletin__icon">
+              <div aria-label="Meta Stack Exchange"
                 class="favicon favicon-stackoverflowmeta"
-                title="Meta Stack Exchange"
               ></div>
             </a>
             <a
               href="#"
-              class="ordinary-link news-link"
-              title="How the 2019 Stack Overflow Developer Survey Came to Be (And Your Last Chance to Take it!)"
+              class="ordinary-link Community-bulletin__link"
               >How the 2019 Stack Overflow Developer Survey Came to Be (And Your
               Last Chance…</a
             >
           </div>
 
-          <h4 class="title">Featured on Meta</h4>
-          <div class="content">
-            <a href="#" class="icon">
+          <h4 class="Community-bulletin__title">Featured on Meta</h4>
+          <div class="Community-bulletin__content">
+            <a href="#" class="Community-bulletin__icon">
               <div
+                      aria-label="Meta Stack Exchange"
                 class="favicon favicon-stackoverflowmeta"
-                title="Meta Stack Exchange"
               ></div>
             </a>
-            <a href="#" class="ordinary-link news-link"
+            <a href="#" class="ordinary-link Community-bulletin__link"
               >Take the 2019 Developer Survey</a
             >
           </div>
 
-          <h4 class="title">Hot meta posts</h4>
-          <div class="content" id="hot">
-            <div class="content">
-              <span class="icon" title="Vote score (upvotes - downvotes)"
+          <h4 class="Community-bulletin__title">Hot meta posts</h4>
+          <div class="Community-bulletin__conten Community-bulletin__content--column-direction">
+            <div class="Community-bulletin__content">
+              <span class="Community-bulletin__icon" title="Vote score (upvotes - downvotes)" aria-label="Vote score (upvotes - downvotes)"
                 >31</span
               >
-              <a href="#" class="ordinary-link news-link hot-link"
+              <a href="#" class="ordinary-link Community-bulletin__link hot-link"
                 >Technology I am using has a small community</a
               >
             </div>
-            <div class="content">
-              <span class="icon" title="Vote score (upvotes - downvotes)"
+            <div class="Community-bulletin__content">
+              <span class="Community-bulletin__icon" title="Vote score (upvotes - downvotes)"
                 >37</span
               >
-              <a href="#" class="ordinary-link news-link hot-link">
+              <a href="#" class="ordinary-link Community-bulletin__link Community-bulletin__link--hot">
                 Wrong encoding of name in mail notification</a
               >
             </div>

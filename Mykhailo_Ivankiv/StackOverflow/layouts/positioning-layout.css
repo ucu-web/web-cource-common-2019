@@ -27,7 +27,7 @@ body .wrapper{
     top: 50px;
 }
 
-.content{
+.Community-bulletin__content{
     position: absolute;
     top: 0;
     left: 164px;
@@ -43,7 +43,7 @@ body .wrapper{
     height: 2000px;
     background-color: lightcoral;
 }
-.Layout__sidebar{
+.Layout__aside{
     height: 2000px;
     background-color: #9AECDB;
     width: 300px;
