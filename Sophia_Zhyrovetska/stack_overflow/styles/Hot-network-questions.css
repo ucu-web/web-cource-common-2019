@@ -7,7 +7,7 @@
   margin-bottom: 1.4em;
 }
 
-.Hot-network-questions__title-link{
+.Hot-network-questions__title-link {
   font-weight: normal;
   color: #242729;
   font-size: 1.2em;
@@ -24,6 +24,6 @@
   flex: 13;
 }
 
-.Hot-network-questions .favicon {
+.Hot-network-questions .Favicon {
   flex: 1;
 }

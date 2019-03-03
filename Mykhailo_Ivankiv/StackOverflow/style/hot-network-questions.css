@@ -21,11 +21,11 @@
     margin-bottom: 0.7em;
 }
 
-.ordinary-link.Hot-network-questions__question-link {
+.Ordinary-link.Hot-network-questions__question-link {
     font-size: 0.75em;
     flex: 13;
 }
 
-.Hot-network-questions .favicon {
+.Hot-network-questions .Favicon {
     flex: 1;
 }

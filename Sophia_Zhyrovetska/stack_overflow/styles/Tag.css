@@ -1,0 +1,16 @@
+.Tag {
+  font-size: 12px;
+  color: #39739d;
+  background-color: #e1ecf4;
+  padding: 0.4em 0.5em;
+  line-height: 1;
+  border: 1px solid #e1ecf4;
+  border-radius: 3px;
+}
+
+.Tag:hover,
+.Tag:active {
+  color: #33658a;
+  background-color: #cee0ed;
+  border-color: #cee0ed;
+}

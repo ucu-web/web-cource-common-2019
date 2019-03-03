@@ -53,14 +53,14 @@
   background-color: rgba(239, 240, 241, 0.75);
 }
 
-.Layout__site-footer .container {
+.Layout__site-footer .Footer__container {
   max-width: 1264px;
   margin: 0 auto;
   padding: 2em 1em 1em 1em;
   display: flex;
 }
 
-.Layout__site-footer .site-logo {
+.Layout__site-footer .Footer__site-logo {
   flex: 0 0 64px;
   margin-top: -10px;
 }

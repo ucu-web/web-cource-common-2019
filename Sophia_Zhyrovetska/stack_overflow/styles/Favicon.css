@@ -1,4 +1,4 @@
-.favicon {
+.Favicon {
   width: 1em;
   height: 1em;
   background-color: transparent;
@@ -6,42 +6,42 @@
   background-image: url("../images/favicons-sprite16.png?v=80e7547eada6");
 }
 
-.favicon.favicon-stackexchangemeta {
+Favicon--stackexchangemeta {
   background-position: 0 -5868px;
 }
 
-.favicon-stackoverflowmeta {
+.Favicon--stackoverflowmeta {
   background-position: 0 -5904px;
 }
 
-.favicon-workplace {
+.Favicon--workplace {
   background-position: 0 -6642px;
 }
 
-.favicon-codegolf {
+.Favicon--codegolf {
   background-position: 0 -1116px;
 }
 
-.favicon-rpg {
+.Favicon--rpg {
   background-position: 0 -5148px;
 }
 
-.favicon-worldbuilding {
+.Favicon--worldbuilding {
   background-position: 0 -6678px;
 }
 
-.favicon-latin {
+.Favicon--latin {
   background-position: 0 -3564px;
 }
 
-.favicon-stackoverflow {
+.Favicon--stackoverflow {
   background-position: 0 -5886px;
 }
 
-.favicon-lifehacks {
+.Favicon--lifehacks {
   background-position: 0 -3636px;
 }
 
-.favicon-apple {
+.Favicon--apple {
   background-position: 0 -216px;
 }

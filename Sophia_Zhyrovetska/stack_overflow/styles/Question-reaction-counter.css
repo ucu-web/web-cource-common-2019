@@ -1,11 +1,10 @@
-.Question-reaction-counter{
+.Question-reaction-counter {
   height: 38px;
   max-width: 50px;
   font-size: 11px;
   padding: 7px 6px;
   text-align: center;
   color: #848d95;
-
 }
 
 .Question-reaction-counter--votes {
@@ -24,7 +23,7 @@
   border-color: rgba(69, 161, 99, 0.5);
 }
 
-.Question-reaction-counter--answers--has-accepted-answer{
+.Question-reaction-counter--answers--has-accepted-answer {
   color: #ffffff;
   background-color: #5fba7d;
 }
@@ -41,6 +40,6 @@
   display: block;
 }
 
-.Question-reaction-counter__number--warm-style{
+.Question-reaction-counter__number--warm-style {
   color: #9b764f;
 }

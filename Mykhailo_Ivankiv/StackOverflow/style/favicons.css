@@ -1,4 +1,4 @@
-.favicon {
+.Favicon {
     width: 1em;
     height: 1em;
     background-color: transparent;
@@ -6,7 +6,7 @@
     background-image: url('../images/favicons-sprite16.png?v=80e7547eada6');
 }
 
-.favicon.favicon-stackexchangemeta {
+.Favicon.favicon-stackexchangemeta {
     background-position: 0 -5868px;
 }
 

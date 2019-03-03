@@ -7,6 +7,7 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="styles/common.css" />
     <link rel="stylesheet" href="styles/Layout.css" />
     <link rel="stylesheet" href="styles/Header.css" />
     <link rel="stylesheet" href="styles/Profile-navigation.css" />
@@ -17,16 +18,14 @@
     <link rel="stylesheet" href="styles/Questions-types-navigation.css" />
     <link rel="stylesheet" href="styles/Question-post.css" />
     <link rel="stylesheet" href="styles/Question-reaction-counter.css" />
-      <link rel="stylesheet" href="styles/Aside-panel.css">
-      <link rel="stylesheet" href="styles/Community-bulletin.css" />
+    <link rel="stylesheet" href="styles/Bottom-notice.css" />
+    <link rel="stylesheet" href="styles/Aside-panel.css" />
+    <link rel="stylesheet" href="styles/Community-bulletin.css" />
     <link rel="stylesheet" href="styles/Featured-tags-block.css" />
     <link rel="stylesheet" href="styles/Hot-network-questions.css" />
-
-    <link rel="stylesheet" href="styles/common.css" />
-
-
-    <link rel="stylesheet" href="styles/footer.css" />
-    <link rel="stylesheet" href="styles/favicons.css" />
+    <link rel="stylesheet" href="styles/Footer.css" />
+    <link rel="stylesheet" href="styles/Favicon.css" />
+    <link rel="stylesheet" href="styles/Tag.css" />
 
     <title>Document</title>
   </head>
@@ -75,7 +74,7 @@
           >
             <svg
               aria-hidden="true"
-              class="svg-icon iconInbox"
+              class="iconInbox"
               width="20"
               height="18"
               viewBox="0 0 20 18"
@@ -94,7 +93,7 @@
           >
             <svg
               aria-hidden="true"
-              class="svg-icon iconAchievements"
+              class="iconAchievements"
               width="18"
               height="18"
               viewBox="0 0 18 18"
@@ -113,7 +112,7 @@
           >
             <svg
               aria-hidden="true"
-              class="svg-icon iconHelp"
+              class="iconHelp"
               width="18"
               height="18"
               viewBox="0 0 18 18"
@@ -132,7 +131,7 @@
           >
             <svg
               aria-hidden="true"
-              class="svg-icon iconStackExchange"
+              class="iconStackExchange"
               width="18"
               height="18"
               viewBox="0 0 18 18"
@@ -159,7 +158,7 @@
               class="Site-chapter-navigation__link Site-chapter-navigation__link--with-icon"
             >
               <svg
-                class="svg-icon iconGlobe"
+                class="Site-chapter-navigation__icon_globe"
                 width="18"
                 height="18"
                 viewBox="0 0 18 18"
@@ -278,7 +277,7 @@
           <article class="Question-post">
             <section class="Question-post__summary">
               <h3>
-                <a href="#" class="ordinary-link Question-post__title"
+                <a href="#" class="Ordinary-link Question-post__title"
                   >Using the OR and NOT Operator together in Python</a
                 >
               </h3>
@@ -292,7 +291,7 @@
                   >asked
                   <time datetime="2019-02-10T12:41">46 secs ago</time>
                 </a>
-                <a href="#" rel="author" class="ordinary-link">Kaya Toast</a>
+                <a href="#" rel="author" class="Ordinary-link">Kaya Toast</a>
                 <span
                   class="Question-post__author-reputation-score"
                   title="reputation score"
@@ -305,19 +304,27 @@
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--votes"
               >
-                <span class="Question-reaction-counter__number" title="0 votes">0</span>
+                <span class="Question-reaction-counter__number" title="0 votes"
+                  >0</span
+                >
                 <span>votes</span>
               </div>
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--answers Question-reaction-counter--answers--has-no-answer"
               >
-                <span class="Question-reaction-counter__number" title="0 answers">0</span>
+                <span
+                  class="Question-reaction-counter__number"
+                  title="0 answers"
+                  >0</span
+                >
                 <span>answers</span>
               </div>
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--views"
               >
-                <span class="Question-reaction-counter__number" title="6 views">6</span>
+                <span class="Question-reaction-counter__number" title="6 views"
+                  >6</span
+                >
                 <span>views</span>
               </div>
             </section>
@@ -326,7 +333,7 @@
           <article class="Question-post Question-post--tagged-interesting">
             <section class="Question-post__summary">
               <h3>
-                <a href="#" class="ordinary-link Question-post__title"
+                <a href="#" class="Ordinary-link Question-post__title"
                   >Printing arrays created in a class</a
                 >
               </h3>
@@ -338,7 +345,7 @@
                   >asked
                   <time datetime="2019-02-10T12:20">20 mins ago</time>
                 </a>
-                <a href="#" rel="author" class="ordinary-link">Martin</a>
+                <a href="#" rel="author" class="Ordinary-link">Martin</a>
                 <span
                   class="Question-post__author-reputation-score"
                   title="reputation score"
@@ -351,19 +358,27 @@
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--votes"
               >
-                <span class="Question-reaction-counter__number" title="0 votes">0</span>
+                <span class="Question-reaction-counter__number" title="0 votes"
+                  >0</span
+                >
                 <span>votes</span>
               </div>
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--answers Question-reaction-counter--answers--has-no-answer"
               >
-                <span class="Question-reaction-counter__number" title="0 answers">0</span>
+                <span
+                  class="Question-reaction-counter__number"
+                  title="0 answers"
+                  >0</span
+                >
                 <span>answers</span>
               </div>
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--views"
               >
-                <span class="Question-reaction-counter__number" title="14 views">14</span>
+                <span class="Question-reaction-counter__number" title="14 views"
+                  >14</span
+                >
                 <span>views</span>
               </div>
             </section>
@@ -372,7 +387,7 @@
           <article class="Question-post Question-post--tagged-interesting">
             <section class="Question-post__summary">
               <h3>
-                <a href="#" class="ordinary-link Question-post__title"
+                <a href="#" class="Ordinary-link Question-post__title"
                   >Import Constants in Vuex Store</a
                 >
               </h3>
@@ -387,7 +402,7 @@
                   >answered
                   <time datetime="2019-02-10T12:15">25 mins ago</time>
                 </a>
-                <a href="#" rel="author" class="ordinary-link">wolverine</a>
+                <a href="#" rel="author" class="Ordinary-link">wolverine</a>
                 <span
                   class="Question-post__author-reputation-score"
                   title="reputation score"
@@ -400,19 +415,25 @@
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--votes"
               >
-                <span class="Question-reaction-counter__number" title="0 votes">0</span>
+                <span class="Question-reaction-counter__number" title="0 votes"
+                  >0</span
+                >
                 <span>votes</span>
               </div>
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--answers Question-reaction-counter--answers--has-answer"
               >
-                <span class="Question-reaction-counter__number" title="1 answer">1</span>
+                <span class="Question-reaction-counter__number" title="1 answer"
+                  >1</span
+                >
                 <span>answer</span>
               </div>
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--views"
               >
-                <span class="Question-reaction-counter__number" title="20 views">20</span>
+                <span class="Question-reaction-counter__number" title="20 views"
+                  >20</span
+                >
                 <span>views</span>
               </div>
             </section>
@@ -421,7 +442,7 @@
           <article class="Question-post">
             <section class="Question-post__summary">
               <h3>
-                <a href="#" class="ordinary-link Question-post__title"
+                <a href="#" class="Ordinary-link Question-post__title"
                   >How to send a chart using pandas in python?</a
                 >
               </h3>
@@ -436,7 +457,7 @@
                   >asked
                   <time datetime="2019-02-10T11:53">40 mins ago</time>
                 </a>
-                <a href="#" rel="author" class="ordinary-link">Ian Turton</a>
+                <a href="#" rel="author" class="Ordinary-link">Ian Turton</a>
                 <span
                   class="Question-post__author-reputation-score"
                   title="reputation score"
@@ -449,20 +470,28 @@
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--votes"
               >
-                <span class="Question-reaction-counter__number" title="0 votes">0</span>
+                <span class="Question-reaction-counter__number" title="0 votes"
+                  >0</span
+                >
                 <span>votes</span>
               </div>
 
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--answers Question-reaction-counter--answers--has-no-answer"
               >
-                <span class="Question-reaction-counter__number" title="0 answers">0</span>
+                <span
+                  class="Question-reaction-counter__number"
+                  title="0 answers"
+                  >0</span
+                >
                 <span>answers</span>
               </div>
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--views"
               >
-                <span class="Question-reaction-counter__number" title="2 views">2</span>
+                <span class="Question-reaction-counter__number" title="2 views"
+                  >2</span
+                >
                 <span>views</span>
               </div>
             </section>
@@ -471,7 +500,7 @@
           <article class="Question-post">
             <section class="Question-post__summary">
               <h3>
-                <a href="#" class="ordinary-link Question-post__title"
+                <a href="#" class="Ordinary-link Question-post__title"
                   >Laravel visual page builder package</a
                 >
               </h3>
@@ -484,7 +513,7 @@
                   >answered
                   <time datetime="2019-02-10T12:05">32 mins ago</time>
                 </a>
-                <a href="#" rel="author" class="ordinary-link">Minhaj Hasan</a>
+                <a href="#" rel="author" class="Ordinary-link">Minhaj Hasan</a>
                 <span
                   class="Question-post__author-reputation-score"
                   title="reputation score"
@@ -497,21 +526,33 @@
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--votes"
               >
-                <span class="Question-reaction-counter__number" title="5 votes">5</span>
+                <span class="Question-reaction-counter__number" title="5 votes"
+                  >5</span
+                >
                 <span>votes</span>
               </div>
 
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--answers Question-reaction-counter--answers--has-accepted-answer"
               >
-                <span class="Question-reaction-counter__number" title="2 answers">2</span>
+                <span
+                  class="Question-reaction-counter__number"
+                  title="2 answers"
+                  >2</span
+                >
                 <span>answers</span>
               </div>
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--views"
               >
-                <span class="Question-reaction-counter__number Question-reaction-counter__number--warm-style" title="2113 views">2k</span>
-                <span class="Question-reaction-counter__number--warm-style">views</span>
+                <span
+                  class="Question-reaction-counter__number Question-reaction-counter__number--warm-style"
+                  title="2113 views"
+                  >2k</span
+                >
+                <span class="Question-reaction-counter__number--warm-style"
+                  >views</span
+                >
               </div>
             </section>
           </article>
@@ -519,7 +560,7 @@
           <article class="Question-post">
             <section class="Question-post__summary">
               <h3>
-                <a href="#" class="ordinary-link Question-post__title"
+                <a href="#" class="Ordinary-link Question-post__title"
                   >Using the OR and NOT Operator together in Python</a
                 >
               </h3>
@@ -533,7 +574,7 @@
                   >asked
                   <time datetime="2019-02-10T12:41">46 secs ago</time>
                 </a>
-                <a href="#" rel="author" class="ordinary-link">Kaya Toast</a>
+                <a href="#" rel="author" class="Ordinary-link">Kaya Toast</a>
                 <span
                   class="Question-post__author-reputation-score"
                   title="reputation score"
@@ -546,20 +587,28 @@
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--votes"
               >
-                <span class="Question-reaction-counter__number" title="0 votes">0</span>
+                <span class="Question-reaction-counter__number" title="0 votes"
+                  >0</span
+                >
                 <span>votes</span>
               </div>
 
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--answers Question-reaction-counter--answers--has-no-answer"
               >
-                <span class="Question-reaction-counter__number" title="0 answers">0</span>
+                <span
+                  class="Question-reaction-counter__number"
+                  title="0 answers"
+                  >0</span
+                >
                 <span>answers</span>
               </div>
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--views"
               >
-                <span class="Question-reaction-counter__number" title="6 views">6</span>
+                <span class="Question-reaction-counter__number" title="6 views"
+                  >6</span
+                >
                 <span>views</span>
               </div>
             </section>
@@ -568,7 +617,7 @@
           <article class="Question-post">
             <section class="Question-post__summary">
               <h3>
-                <a href="#" class="ordinary-link Question-post__title"
+                <a href="#" class="Ordinary-link Question-post__title"
                   >Using the OR and NOT Operator together in Python</a
                 >
               </h3>
@@ -582,7 +631,7 @@
                   >asked
                   <time datetime="2019-02-10T12:41">46 secs ago</time>
                 </a>
-                <a href="#" rel="author" class="ordinary-link">Kaya Toast</a>
+                <a href="#" rel="author" class="Ordinary-link">Kaya Toast</a>
                 <span
                   class="Question-post__author-reputation-score"
                   title="reputation score"
@@ -595,20 +644,28 @@
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--votes"
               >
-                <span class="Question-reaction-counter__number" title="0 votes">0</span>
+                <span class="Question-reaction-counter__number" title="0 votes"
+                  >0</span
+                >
                 <span>votes</span>
               </div>
 
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--answers Question-reaction-counter--answers--has-no-answer"
               >
-                <span class="Question-reaction-counter__number" title="0 answers">0</span>
+                <span
+                  class="Question-reaction-counter__number"
+                  title="0 answers"
+                  >0</span
+                >
                 <span>answers</span>
               </div>
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--views"
               >
-                <span class="Question-reaction-counter__number" title="6 views">6</span>
+                <span class="Question-reaction-counter__number" title="6 views"
+                  >6</span
+                >
                 <span>views</span>
               </div>
             </section>
@@ -617,7 +674,7 @@
           <article class="Question-post Question-post--tagged-interesting">
             <section class="Question-post__summary">
               <h3>
-                <a href="#" class="ordinary-link Question-post__title"
+                <a href="#" class="Ordinary-link Question-post__title"
                   >Using the OR and NOT Operator together in Python</a
                 >
               </h3>
@@ -631,7 +688,7 @@
                   >asked
                   <time datetime="2019-02-10T12:41">46 secs ago</time>
                 </a>
-                <a href="#" rel="author" class="ordinary-link">Kaya Toast</a>
+                <a href="#" rel="author" class="Ordinary-link">Kaya Toast</a>
                 <span
                   class="Question-post__author-reputation-score"
                   title="reputation score"
@@ -644,20 +701,28 @@
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--votes"
               >
-                <span class="Question-reaction-counter__number" title="0 votes">0</span>
+                <span class="Question-reaction-counter__number" title="0 votes"
+                  >0</span
+                >
                 <span>votes</span>
               </div>
 
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--answers Question-reaction-counter--answers--has-no-answer"
               >
-                <span class="Question-reaction-counter__number" title="0 answers">0</span>
+                <span
+                  class="Question-reaction-counter__number"
+                  title="0 answers"
+                  >0</span
+                >
                 <span>answers</span>
               </div>
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--views"
               >
-                <span class="Question-reaction-counter__number" title="6 views">6</span>
+                <span class="Question-reaction-counter__number" title="6 views"
+                  >6</span
+                >
                 <span>views</span>
               </div>
             </section>
@@ -666,7 +731,7 @@
           <article class="Question-post">
             <section class="Question-post__summary">
               <h3>
-                <a href="#" class="ordinary-link Question-post__title"
+                <a href="#" class="Ordinary-link Question-post__title"
                   >Using the OR and NOT Operator together in Python</a
                 >
               </h3>
@@ -680,7 +745,7 @@
                   >asked
                   <time datetime="2019-02-10T12:41">46 secs ago</time>
                 </a>
-                <a href="#" rel="author" class="ordinary-link">Kaya Toast</a>
+                <a href="#" rel="author" class="Ordinary-link">Kaya Toast</a>
                 <span
                   class="Question-post__author-reputation-score"
                   title="reputation score"
@@ -693,20 +758,28 @@
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--votes"
               >
-                <span class="Question-reaction-counter__number" title="0 votes">0</span>
+                <span class="Question-reaction-counter__number" title="0 votes"
+                  >0</span
+                >
                 <span>votes</span>
               </div>
 
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--answers Question-reaction-counter--answers--has-no-answer"
               >
-                <span class="Question-reaction-counter__number" title="0 answers">0</span>
+                <span
+                  class="Question-reaction-counter__number"
+                  title="0 answers"
+                  >0</span
+                >
                 <span>answers</span>
               </div>
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--views"
               >
-                <span class="Question-reaction-counter__number" title="6 views">6</span>
+                <span class="Question-reaction-counter__number" title="6 views"
+                  >6</span
+                >
                 <span>views</span>
               </div>
             </section>
@@ -715,7 +788,7 @@
           <article class="Question-post">
             <section class="Question-post__summary">
               <h3>
-                <a href="#" class="ordinary-link Question-post__title"
+                <a href="#" class="Ordinary-link Question-post__title"
                   >Using the OR and NOT Operator together in Python</a
                 >
               </h3>
@@ -729,7 +802,7 @@
                   >asked
                   <time datetime="2019-02-10T12:41">46 secs ago</time>
                 </a>
-                <a href="#" rel="author" class="ordinary-link">Kaya Toast</a>
+                <a href="#" rel="author" class="Ordinary-link">Kaya Toast</a>
                 <span
                   class="Question-post__author-reputation-score"
                   title="reputation score"
@@ -742,20 +815,28 @@
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--votes"
               >
-                <span class="Question-reaction-counter__number" title="0 votes">0</span>
+                <span class="Question-reaction-counter__number" title="0 votes"
+                  >0</span
+                >
                 <span>votes</span>
               </div>
 
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--answers Question-reaction-counter--answers--has-no-answer"
               >
-                <span class="Question-reaction-counter__number" title="0 answers">0</span>
+                <span
+                  class="Question-reaction-counter__number"
+                  title="0 answers"
+                  >0</span
+                >
                 <span>answers</span>
               </div>
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--views"
               >
-                <span class="Question-reaction-counter__number" title="6 views">6</span>
+                <span class="Question-reaction-counter__number" title="6 views"
+                  >6</span
+                >
                 <span>views</span>
               </div>
             </section>
@@ -764,7 +845,7 @@
           <article class="Question-post Question-post--tagged-interesting">
             <section class="Question-post__summary">
               <h3>
-                <a href="#" class="ordinary-link Question-post__title"
+                <a href="#" class="Ordinary-link Question-post__title"
                   >Using the OR and NOT Operator together in Python</a
                 >
               </h3>
@@ -778,7 +859,7 @@
                   >asked
                   <time datetime="2019-02-10T12:41">46 secs ago</time>
                 </a>
-                <a href="#" rel="author" class="ordinary-link">Kaya Toast</a>
+                <a href="#" rel="author" class="Ordinary-link">Kaya Toast</a>
                 <span
                   class="Question-post__author-reputation-score"
                   title="reputation score"
@@ -791,20 +872,28 @@
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--votes"
               >
-                <span class="Question-reaction-counter__number" title="0 votes">0</span>
+                <span class="Question-reaction-counter__number" title="0 votes"
+                  >0</span
+                >
                 <span>votes</span>
               </div>
 
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--answers Question-reaction-counter--answers--has-no-answer"
               >
-                <span class="Question-reaction-counter__number" title="0 answers">0</span>
+                <span
+                  class="Question-reaction-counter__number"
+                  title="0 answers"
+                  >0</span
+                >
                 <span>answers</span>
               </div>
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--views"
               >
-                <span class="Question-reaction-counter__number" title="6 views">6</span>
+                <span class="Question-reaction-counter__number" title="6 views"
+                  >6</span
+                >
                 <span>views</span>
               </div>
             </section>
@@ -813,7 +902,7 @@
           <article class="Question-post Question-post--tagged-interesting">
             <section class="Question-post__summary">
               <h3>
-                <a href="#" class="ordinary-link Question-post__title"
+                <a href="#" class="Ordinary-link Question-post__title"
                   >Using the OR and NOT Operator together in Python</a
                 >
               </h3>
@@ -827,7 +916,7 @@
                   >asked
                   <time datetime="2019-02-10T12:41">46 secs ago</time>
                 </a>
-                <a href="#" rel="author" class="ordinary-link">Kaya Toast</a>
+                <a href="#" rel="author" class="Ordinary-link">Kaya Toast</a>
                 <span
                   class="Question-post__author-reputation-score"
                   title="reputation score"
@@ -840,20 +929,28 @@
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--votes"
               >
-                <span class="Question-reaction-counter__number" title="0 votes">0</span>
+                <span class="Question-reaction-counter__number" title="0 votes"
+                  >0</span
+                >
                 <span>votes</span>
               </div>
 
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--answers Question-reaction-counter--answers--has-no-answer"
               >
-                <span class="Question-reaction-counter__number" title="0 answers">0</span>
+                <span
+                  class="Question-reaction-counter__number"
+                  title="0 answers"
+                  >0</span
+                >
                 <span>answers</span>
               </div>
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--views"
               >
-                <span class="Question-reaction-counter__number" title="6 views">6</span>
+                <span class="Question-reaction-counter__number" title="6 views"
+                  >6</span
+                >
                 <span>views</span>
               </div>
             </section>
@@ -862,7 +959,7 @@
           <article class="Question-post">
             <section class="Question-post__summary">
               <h3>
-                <a href="#" class="ordinary-link Question-post__title"
+                <a href="#" class="Ordinary-link Question-post__title"
                   >Using the OR and NOT Operator together in Python</a
                 >
               </h3>
@@ -876,7 +973,7 @@
                   >asked
                   <time datetime="2019-02-10T12:41">46 secs ago</time>
                 </a>
-                <a href="#" rel="author" class="ordinary-link">Kaya Toast</a>
+                <a href="#" rel="author" class="Ordinary-link">Kaya Toast</a>
                 <span
                   class="Question-post__author-reputation-score"
                   title="reputation score"
@@ -889,20 +986,28 @@
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--votes"
               >
-                <span class="Question-reaction-counter__number" title="0 votes">0</span>
+                <span class="Question-reaction-counter__number" title="0 votes"
+                  >0</span
+                >
                 <span>votes</span>
               </div>
 
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--answers Question-reaction-counter--answers--has-no-answer"
               >
-                <span class="Question-reaction-counter__number" title="0 answers">0</span>
+                <span
+                  class="Question-reaction-counter__number"
+                  title="0 answers"
+                  >0</span
+                >
                 <span>answers</span>
               </div>
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--views"
               >
-                <span class="Question-reaction-counter__number" title="6 views">6</span>
+                <span class="Question-reaction-counter__number" title="6 views"
+                  >6</span
+                >
                 <span>views</span>
               </div>
             </section>
@@ -911,7 +1016,7 @@
           <article class="Question-post">
             <section class="Question-post__summary">
               <h3>
-                <a href="#" class="ordinary-link Question-post__title"
+                <a href="#" class="Ordinary-link Question-post__title"
                   >Using the OR and NOT Operator together in Python</a
                 >
               </h3>
@@ -925,7 +1030,7 @@
                   >asked
                   <time datetime="2019-02-10T12:41">46 secs ago</time>
                 </a>
-                <a href="#" rel="author" class="ordinary-link">Kaya Toast</a>
+                <a href="#" rel="author" class="Ordinary-link">Kaya Toast</a>
                 <span
                   class="Question-post__author-reputation-score"
                   title="reputation score"
@@ -938,20 +1043,28 @@
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--votes"
               >
-                <span class="Question-reaction-counter__number" title="0 votes">0</span>
+                <span class="Question-reaction-counter__number" title="0 votes"
+                  >0</span
+                >
                 <span>votes</span>
               </div>
 
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--answers Question-reaction-counter--answers--has-no-answer"
               >
-                <span class="Question-reaction-counter__number" title="0 answers">0</span>
+                <span
+                  class="Question-reaction-counter__number"
+                  title="0 answers"
+                  >0</span
+                >
                 <span>answers</span>
               </div>
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--views"
               >
-                <span class="Question-reaction-counter__number" title="6 views">6</span>
+                <span class="Question-reaction-counter__number" title="6 views"
+                  >6</span
+                >
                 <span>views</span>
               </div>
             </section>
@@ -960,7 +1073,7 @@
           <article class="Question-post">
             <section class="Question-post__summary">
               <h3>
-                <a href="#" class="ordinary-link Question-post__title"
+                <a href="#" class="Ordinary-link Question-post__title"
                   >Using the OR and NOT Operator together in Python</a
                 >
               </h3>
@@ -974,7 +1087,7 @@
                   >asked
                   <time datetime="2019-02-10T12:41">46 secs ago</time>
                 </a>
-                <a href="#" rel="author" class="ordinary-link">Kaya Toast</a>
+                <a href="#" rel="author" class="Ordinary-link">Kaya Toast</a>
                 <span
                   class="Question-post__author-reputation-score"
                   title="reputation score"
@@ -987,20 +1100,28 @@
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--votes"
               >
-                <span class="Question-reaction-counter__number" title="0 votes">0</span>
+                <span class="Question-reaction-counter__number" title="0 votes"
+                  >0</span
+                >
                 <span>votes</span>
               </div>
 
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--answers Question-reaction-counter--answers--has-no-answer"
               >
-                <span class="Question-reaction-counter__number" title="0 answers">0</span>
+                <span
+                  class="Question-reaction-counter__number"
+                  title="0 answers"
+                  >0</span
+                >
                 <span>answers</span>
               </div>
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--views"
               >
-                <span class="Question-reaction-counter__number" title="6 views">6</span>
+                <span class="Question-reaction-counter__number" title="6 views"
+                  >6</span
+                >
                 <span>views</span>
               </div>
             </section>
@@ -1009,7 +1130,7 @@
           <article class="Question-post">
             <section class="Question-post__summary">
               <h3>
-                <a href="#" class="ordinary-link Question-post__title"
+                <a href="#" class="Ordinary-link Question-post__title"
                   >Using the OR and NOT Operator together in Python</a
                 >
               </h3>
@@ -1023,7 +1144,7 @@
                   >asked
                   <time datetime="2019-02-10T12:41">46 secs ago</time>
                 </a>
-                <a href="#" rel="author" class="ordinary-link">Kaya Toast</a>
+                <a href="#" rel="author" class="Ordinary-link">Kaya Toast</a>
                 <span
                   class="Question-post__author-reputation-score"
                   title="reputation score"
@@ -1036,20 +1157,28 @@
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--votes"
               >
-                <span class="Question-reaction-counter__number" title="0 votes">0</span>
+                <span class="Question-reaction-counter__number" title="0 votes"
+                  >0</span
+                >
                 <span>votes</span>
               </div>
 
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--answers Question-reaction-counter--answers--has-no-answer"
               >
-                <span class="Question-reaction-counter__number" title="0 answers">0</span>
+                <span
+                  class="Question-reaction-counter__number"
+                  title="0 answers"
+                  >0</span
+                >
                 <span>answers</span>
               </div>
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--views"
               >
-                <span class="Question-reaction-counter__number" title="6 views">6</span>
+                <span class="Question-reaction-counter__number" title="6 views"
+                  >6</span
+                >
                 <span>views</span>
               </div>
             </section>
@@ -1058,7 +1187,7 @@
           <article class="Question-post">
             <section class="Question-post__summary">
               <h3>
-                <a href="#" class="ordinary-link Question-post__title"
+                <a href="#" class="Ordinary-link Question-post__title"
                   >Using the OR and NOT Operator together in Python</a
                 >
               </h3>
@@ -1072,7 +1201,7 @@
                   >asked
                   <time datetime="2019-02-10T12:41">46 secs ago</time>
                 </a>
-                <a href="#" rel="author" class="ordinary-link">Kaya Toast</a>
+                <a href="#" rel="author" class="Ordinary-link">Kaya Toast</a>
                 <span
                   class="Question-post__author-reputation-score"
                   title="reputation score"
@@ -1085,20 +1214,28 @@
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--votes"
               >
-                <span class="Question-reaction-counter__number" title="0 votes">0</span>
+                <span class="Question-reaction-counter__number" title="0 votes"
+                  >0</span
+                >
                 <span>votes</span>
               </div>
 
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--answers Question-reaction-counter--answers--has-no-answer"
               >
-                <span class="Question-reaction-counter__number" title="0 answers">0</span>
+                <span
+                  class="Question-reaction-counter__number"
+                  title="0 answers"
+                  >0</span
+                >
                 <span>answers</span>
               </div>
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--views"
               >
-                <span class="Question-reaction-counter__number" title="6 views">6</span>
+                <span class="Question-reaction-counter__number" title="6 views"
+                  >6</span
+                >
                 <span>views</span>
               </div>
             </section>
@@ -1107,7 +1244,7 @@
           <article class="Question-post">
             <section class="Question-post__summary">
               <h3>
-                <a href="#" class="ordinary-link Question-post__title"
+                <a href="#" class="Ordinary-link Question-post__title"
                   >Using the OR and NOT Operator together in Python</a
                 >
               </h3>
@@ -1121,7 +1258,7 @@
                   >asked
                   <time datetime="2019-02-10T12:41">46 secs ago</time>
                 </a>
-                <a href="#" rel="author" class="ordinary-link">Kaya Toast</a>
+                <a href="#" rel="author" class="Ordinary-link">Kaya Toast</a>
                 <span
                   class="Question-post__author-reputation-score"
                   title="reputation score"
@@ -1134,20 +1271,28 @@
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--votes"
               >
-                <span class="Question-reaction-counter__number" title="0 votes">0</span>
+                <span class="Question-reaction-counter__number" title="0 votes"
+                  >0</span
+                >
                 <span>votes</span>
               </div>
 
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--answers Question-reaction-counter--answers--has-accepted-answer"
               >
-                <span class="Question-reaction-counter__number" title="3 answers">3</span>
+                <span
+                  class="Question-reaction-counter__number"
+                  title="3 answers"
+                  >3</span
+                >
                 <span>answers</span>
               </div>
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--views"
               >
-                <span class="Question-reaction-counter__number" title="6 views">6</span>
+                <span class="Question-reaction-counter__number" title="6 views"
+                  >6</span
+                >
                 <span>views</span>
               </div>
             </section>
@@ -1156,7 +1301,7 @@
           <article class="Question-post Question-post--tagged-interesting">
             <section class="Question-post__summary">
               <h3>
-                <a href="#" class="ordinary-link Question-post__title"
+                <a href="#" class="Ordinary-link Question-post__title"
                   >Printing arrays created in a class</a
                 >
               </h3>
@@ -1168,7 +1313,7 @@
                   >asked
                   <time datetime="2019-02-10T12:20">20 mins ago</time>
                 </a>
-                <a href="#" rel="author" class="ordinary-link">Martin</a>
+                <a href="#" rel="author" class="Ordinary-link">Martin</a>
                 <span
                   class="Question-post__author-reputation-score"
                   title="reputation score"
@@ -1181,19 +1326,27 @@
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--votes"
               >
-                <span class="Question-reaction-counter__number" title="0 votes">0</span>
+                <span class="Question-reaction-counter__number" title="0 votes"
+                  >0</span
+                >
                 <span>votes</span>
               </div>
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--answers Question-reaction-counter--answers--has-no-answer"
               >
-                <span class="Question-reaction-counter__number" title="0 answers">0</span>
+                <span
+                  class="Question-reaction-counter__number"
+                  title="0 answers"
+                  >0</span
+                >
                 <span>answers</span>
               </div>
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--views"
               >
-                <span class="Question-reaction-counter__number" title="14 views">14</span>
+                <span class="Question-reaction-counter__number" title="14 views"
+                  >14</span
+                >
                 <span>views</span>
               </div>
             </section>
@@ -1202,7 +1355,7 @@
           <article class="Question-post">
             <section class="Question-post__summary">
               <h3>
-                <a href="#" class="ordinary-link Question-post__title"
+                <a href="#" class="Ordinary-link Question-post__title"
                   >Printing arrays created in a class</a
                 >
               </h3>
@@ -1214,7 +1367,7 @@
                   >asked
                   <time datetime="2019-02-10T12:20">20 mins ago</time>
                 </a>
-                <a href="#" rel="author" class="ordinary-link">Martin</a>
+                <a href="#" rel="author" class="Ordinary-link">Martin</a>
                 <span
                   class="Question-post__author-reputation-score"
                   title="reputation score"
@@ -1227,19 +1380,27 @@
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--votes"
               >
-                <span class="Question-reaction-counter__number" title="0 votes">0</span>
+                <span class="Question-reaction-counter__number" title="0 votes"
+                  >0</span
+                >
                 <span>votes</span>
               </div>
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--answers Question-reaction-counter--answers--has-no-answer"
               >
-                <span class="Question-reaction-counter__number" title="0 answers">0</span>
+                <span
+                  class="Question-reaction-counter__number"
+                  title="0 answers"
+                  >0</span
+                >
                 <span>answers</span>
               </div>
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--views"
               >
-                <span class="Question-reaction-counter__number" title="14 views">14</span>
+                <span class="Question-reaction-counter__number" title="14 views"
+                  >14</span
+                >
                 <span>views</span>
               </div>
             </section>
@@ -1248,7 +1409,7 @@
           <article class="Question-post">
             <section class="Question-post__summary">
               <h3>
-                <a href="#" class="ordinary-link Question-post__title"
+                <a href="#" class="Ordinary-link Question-post__title"
                   >Printing arrays created in a class</a
                 >
               </h3>
@@ -1260,7 +1421,7 @@
                   >asked
                   <time datetime="2019-02-10T12:20">20 mins ago</time>
                 </a>
-                <a href="#" rel="author" class="ordinary-link">Martin</a>
+                <a href="#" rel="author" class="Ordinary-link">Martin</a>
                 <span
                   class="Question-post__author-reputation-score"
                   title="reputation score"
@@ -1273,20 +1434,32 @@
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--votes"
               >
-                <span class="Question-reaction-counter__number" title="0 votes">0</span>
+                <span class="Question-reaction-counter__number" title="0 votes"
+                  >0</span
+                >
                 <span>votes</span>
               </div>
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--answers Question-reaction-counter--answers--has-no-answer"
               >
-                <span class="Question-reaction-counter__number" title="0 answers">0</span>
+                <span
+                  class="Question-reaction-counter__number"
+                  title="0 answers"
+                  >0</span
+                >
                 <span>answers</span>
               </div>
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--views"
               >
-                <span class="Question-reaction-counter__number Question-reaction-counter__number--warm-style" title="1k views">1k</span>
-                <span class="Question-reaction-counter__number--warm-style">views</span>
+                <span
+                  class="Question-reaction-counter__number Question-reaction-counter__number--warm-style"
+                  title="1k views"
+                  >1k</span
+                >
+                <span class="Question-reaction-counter__number--warm-style"
+                  >views</span
+                >
               </div>
             </section>
           </article>
@@ -1294,7 +1467,7 @@
           <article class="Question-post">
             <section class="Question-post__summary">
               <h3>
-                <a href="#" class="ordinary-link Question-post__title"
+                <a href="#" class="Ordinary-link Question-post__title"
                   >Printing arrays created in a class</a
                 >
               </h3>
@@ -1306,7 +1479,7 @@
                   >asked
                   <time datetime="2019-02-10T12:20">20 mins ago</time>
                 </a>
-                <a href="#" rel="author" class="ordinary-link">Martin</a>
+                <a href="#" rel="author" class="Ordinary-link">Martin</a>
                 <span
                   class="Question-post__author-reputation-score"
                   title="reputation score"
@@ -1319,19 +1492,27 @@
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--votes"
               >
-                <span class="Question-reaction-counter__number" title="0 votes">0</span>
+                <span class="Question-reaction-counter__number" title="0 votes"
+                  >0</span
+                >
                 <span>votes</span>
               </div>
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--answers Question-reaction-counter--answers--has-no-answer"
               >
-                <span class="Question-reaction-counter__number" title="0 answers">0</span>
+                <span
+                  class="Question-reaction-counter__number"
+                  title="0 answers"
+                  >0</span
+                >
                 <span>answers</span>
               </div>
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--views"
               >
-                <span class="Question-reaction-counter__number" title="14 views">14</span>
+                <span class="Question-reaction-counter__number" title="14 views"
+                  >14</span
+                >
                 <span>views</span>
               </div>
             </section>
@@ -1340,7 +1521,7 @@
           <article class="Question-post">
             <section class="Question-post__summary">
               <h3>
-                <a href="#" class="ordinary-link Question-post__title"
+                <a href="#" class="Ordinary-link Question-post__title"
                   >Printing arrays created in a class</a
                 >
               </h3>
@@ -1352,7 +1533,7 @@
                   >asked
                   <time datetime="2019-02-10T12:20">20 mins ago</time>
                 </a>
-                <a href="#" rel="author" class="ordinary-link">Martin</a>
+                <a href="#" rel="author" class="Ordinary-link">Martin</a>
                 <span
                   class="Question-post__author-reputation-score"
                   title="reputation score"
@@ -1365,19 +1546,27 @@
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--votes"
               >
-                <span class="Question-reaction-counter__number" title="0 votes">0</span>
+                <span class="Question-reaction-counter__number" title="0 votes"
+                  >0</span
+                >
                 <span>votes</span>
               </div>
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--answers Question-reaction-counter--answers--has-no-answer"
               >
-                <span class="Question-reaction-counter__number" title="0 answers">0</span>
+                <span
+                  class="Question-reaction-counter__number"
+                  title="0 answers"
+                  >0</span
+                >
                 <span>answers</span>
               </div>
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--views"
               >
-                <span class="Question-reaction-counter__number" title="14 views">14</span>
+                <span class="Question-reaction-counter__number" title="14 views"
+                  >14</span
+                >
                 <span>views</span>
               </div>
             </section>
@@ -1386,7 +1575,7 @@
           <article class="Question-post">
             <section class="Question-post__summary">
               <h3>
-                <a href="#" class="ordinary-link Question-post__title"
+                <a href="#" class="Ordinary-link Question-post__title"
                   >Printing arrays created in a class</a
                 >
               </h3>
@@ -1398,7 +1587,7 @@
                   >asked
                   <time datetime="2019-02-10T12:20">20 mins ago</time>
                 </a>
-                <a href="#" rel="author" class="ordinary-link">Martin</a>
+                <a href="#" rel="author" class="Ordinary-link">Martin</a>
                 <span
                   class="Question-post__author-reputation-score"
                   title="reputation score"
@@ -1411,19 +1600,27 @@
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--votes"
               >
-                <span class="Question-reaction-counter__number" title="0 votes">0</span>
+                <span class="Question-reaction-counter__number" title="0 votes"
+                  >0</span
+                >
                 <span>votes</span>
               </div>
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--answers Question-reaction-counter--answers--has-no-answer"
               >
-                <span class="Question-reaction-counter__number" title="0 answers">0</span>
+                <span
+                  class="Question-reaction-counter__number"
+                  title="0 answers"
+                  >0</span
+                >
                 <span>answers</span>
               </div>
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--views"
               >
-                <span class="Question-reaction-counter__number" title="14 views">14</span>
+                <span class="Question-reaction-counter__number" title="14 views"
+                  >14</span
+                >
                 <span>views</span>
               </div>
             </section>
@@ -1432,7 +1629,7 @@
           <article class="Question-post">
             <section class="Question-post__summary">
               <h3>
-                <a href="#" class="ordinary-link Question-post__title"
+                <a href="#" class="Ordinary-link Question-post__title"
                   >Printing arrays created in a class</a
                 >
               </h3>
@@ -1444,7 +1641,7 @@
                   >asked
                   <time datetime="2019-02-10T12:20">20 mins ago</time>
                 </a>
-                <a href="#" rel="author" class="ordinary-link">Martin</a>
+                <a href="#" rel="author" class="Ordinary-link">Martin</a>
                 <span
                   class="Question-post__author-reputation-score"
                   title="reputation score"
@@ -1457,19 +1654,27 @@
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--votes"
               >
-                <span class="Question-reaction-counter__number" title="0 votes">0</span>
+                <span class="Question-reaction-counter__number" title="0 votes"
+                  >0</span
+                >
                 <span>votes</span>
               </div>
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--answers Question-reaction-counter--answers--has-no-answer"
               >
-                <span class="Question-reaction-counter__number" title="0 answers">0</span>
+                <span
+                  class="Question-reaction-counter__number"
+                  title="0 answers"
+                  >0</span
+                >
                 <span>answers</span>
               </div>
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--views"
               >
-                <span class="Question-reaction-counter__number" title="14 views">14</span>
+                <span class="Question-reaction-counter__number" title="14 views"
+                  >14</span
+                >
                 <span>views</span>
               </div>
             </section>
@@ -1478,7 +1683,7 @@
           <article class="Question-post">
             <section class="Question-post__summary">
               <h3>
-                <a href="#" class="ordinary-link Question-post__title"
+                <a href="#" class="Ordinary-link Question-post__title"
                   >Printing arrays created in a class</a
                 >
               </h3>
@@ -1490,7 +1695,7 @@
                   >asked
                   <time datetime="2019-02-10T12:20">20 mins ago</time>
                 </a>
-                <a href="#" rel="author" class="ordinary-link">Martin</a>
+                <a href="#" rel="author" class="Ordinary-link">Martin</a>
                 <span
                   class="Question-post__author-reputation-score"
                   title="reputation score"
@@ -1503,19 +1708,27 @@
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--votes"
               >
-                <span class="Question-reaction-counter__number" title="0 votes">0</span>
+                <span class="Question-reaction-counter__number" title="0 votes"
+                  >0</span
+                >
                 <span>votes</span>
               </div>
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--answers Question-reaction-counter--answers--has-no-answer"
               >
-                <span class="Question-reaction-counter__number" title="0 answers">0</span>
+                <span
+                  class="Question-reaction-counter__number"
+                  title="0 answers"
+                  >0</span
+                >
                 <span>answers</span>
               </div>
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--views"
               >
-                <span class="Question-reaction-counter__number" title="14 views">14</span>
+                <span class="Question-reaction-counter__number" title="14 views"
+                  >14</span
+                >
                 <span>views</span>
               </div>
             </section>
@@ -1524,7 +1737,7 @@
           <article class="Question-post">
             <section class="Question-post__summary">
               <h3>
-                <a href="#" class="ordinary-link Question-post__title"
+                <a href="#" class="Ordinary-link Question-post__title"
                   >Printing arrays created in a class</a
                 >
               </h3>
@@ -1536,7 +1749,7 @@
                   >asked
                   <time datetime="2019-02-10T12:20">20 mins ago</time>
                 </a>
-                <a href="#" rel="author" class="ordinary-link">Martin</a>
+                <a href="#" rel="author" class="Ordinary-link">Martin</a>
                 <span
                   class="Question-post__author-reputation-score"
                   title="reputation score"
@@ -1549,19 +1762,25 @@
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--votes"
               >
-                <span class="Question-reaction-counter__number" title="0 votes">0</span>
+                <span class="Question-reaction-counter__number" title="0 votes"
+                  >0</span
+                >
                 <span>votes</span>
               </div>
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--answers Question-reaction-counter--answers--has-answer"
               >
-                <span class="Question-reaction-counter__number" title="1 answer">1</span>
+                <span class="Question-reaction-counter__number" title="1 answer"
+                  >1</span
+                >
                 <span>answer</span>
               </div>
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--views"
               >
-                <span class="Question-reaction-counter__number" title="14 views">14</span>
+                <span class="Question-reaction-counter__number" title="14 views"
+                  >14</span
+                >
                 <span>views</span>
               </div>
             </section>
@@ -1570,7 +1789,7 @@
           <article class="Question-post Question-post--tagged-interesting">
             <section class="Question-post__summary">
               <h3>
-                <a href="#" class="ordinary-link Question-post__title"
+                <a href="#" class="Ordinary-link Question-post__title"
                   >Printing arrays created in a class</a
                 >
               </h3>
@@ -1582,7 +1801,7 @@
                   >asked
                   <time datetime="2019-02-10T12:20">20 mins ago</time>
                 </a>
-                <a href="#" rel="author" class="ordinary-link">Martin</a>
+                <a href="#" rel="author" class="Ordinary-link">Martin</a>
                 <span
                   class="Question-post__author-reputation-score"
                   title="reputation score"
@@ -1595,29 +1814,37 @@
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--votes"
               >
-                <span class="Question-reaction-counter__number" title="0 votes">0</span>
+                <span class="Question-reaction-counter__number" title="0 votes"
+                  >0</span
+                >
                 <span>votes</span>
               </div>
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--answers Question-reaction-counter--answers--has-no-answer"
               >
-                <span class="Question-reaction-counter__number" title="0 answers">0</span>
+                <span
+                  class="Question-reaction-counter__number"
+                  title="0 answers"
+                  >0</span
+                >
                 <span>answers</span>
               </div>
               <div
                 class="Question-post__counter Question-reaction-counter Question-reaction-counter--views"
               >
-                <span class="Question-reaction-counter__number" title="14 views">14</span>
+                <span class="Question-reaction-counter__number" title="14 views"
+                  >14</span
+                >
                 <span>views</span>
               </div>
             </section>
           </article>
         </section>
-        <p class="bottom-notice">
+        <p class="Bottom-notice">
           Looking for more? Browse the
-          <a href="#" class="ordinary-link">complete list of questions</a>, or
-          <a href="#" class="ordinary-link">popular tags</a>. Help us answer
-          <a href="#" class="ordinary-link">unanswered questions</a>.
+          <a href="#" class="Ordinary-link">complete list of questions</a>, or
+          <a href="#" class="Ordinary-link">popular tags</a>. Help us answer
+          <a href="#" class="Ordinary-link">unanswered questions</a>.
         </p>
       </main>
 
@@ -1626,13 +1853,12 @@
           <h4 class="Community-bulletin__title">Blog</h4>
           <div class="Community-bulletin__content">
             <a href="#" class="Community-bulletin__icon">
-              <div aria-label="Meta Stack Exchange"
-                class="favicon favicon-stackoverflowmeta"
+              <div
+                aria-label="Meta Stack Exchange"
+                class="Favicon Favicon--stackoverflowmeta"
               ></div>
             </a>
-            <a
-              href="#"
-              class="ordinary-link Community-bulletin__link"
+            <a href="#" class="Ordinary-link Community-bulletin__link"
               >How the 2019 Stack Overflow Developer Survey Came to Be (And Your
               Last Chance…</a
             >
@@ -1642,30 +1868,43 @@
           <div class="Community-bulletin__content">
             <a href="#" class="Community-bulletin__icon">
               <div
-                      aria-label="Meta Stack Exchange"
-                class="favicon favicon-stackoverflowmeta"
+                aria-label="Meta Stack Exchange"
+                class="Favicon Favicon--stackoverflowmeta"
               ></div>
             </a>
-            <a href="#" class="ordinary-link Community-bulletin__link"
+            <a href="#" class="Ordinary-link Community-bulletin__link"
               >Take the 2019 Developer Survey</a
             >
           </div>
 
           <h4 class="Community-bulletin__title">Hot meta posts</h4>
-          <div class="Community-bulletin__conten Community-bulletin__content--column-direction">
+          <div
+            class="Community-bulletin__content Community-bulletin__content--column-direction"
+          >
             <div class="Community-bulletin__content">
-              <span class="Community-bulletin__icon" title="Vote score (upvotes - downvotes)" aria-label="Vote score (upvotes - downvotes)"
+              <span
+                class="Community-bulletin__icon"
+                title="Vote score (upvotes - downvotes)"
+                aria-label="Vote score (upvotes - downvotes)"
                 >31</span
               >
-              <a href="#" class="ordinary-link Community-bulletin__link Community-bulletin__link--hot"
+              <a
+                href="#"
+                class="Ordinary-link Community-bulletin__link Community-bulletin__link--hot"
                 >Technology I am using has a small community</a
               >
             </div>
             <div class="Community-bulletin__content">
-              <span class="Community-bulletin__icon" title="Vote score (upvotes - downvotes)" aria-label="Vote score (upvotes - downvotes)"
+              <span
+                class="Community-bulletin__icon"
+                title="Vote score (upvotes - downvotes)"
+                aria-label="Vote score (upvotes - downvotes)"
                 >37</span
               >
-              <a href="#" class="ordinary-link Community-bulletin__link Community-bulletin__link--hot">
+              <a
+                href="#"
+                class="Ordinary-link Community-bulletin__link Community-bulletin__link--hot"
+              >
                 Wrong encoding of name in mail notification</a
               >
             </div>
@@ -1677,7 +1916,7 @@
             <span class="Featured-tags-block__icon">
               <svg
                 aria-hidden="true"
-                class="svg-icon iconEye"
+                class="iconEye"
                 width="18"
                 height="18"
                 viewBox="0 0 18 18"
@@ -1741,7 +1980,7 @@
             <span class="Featured-tags-block__icon">
               <svg
                 aria-hidden="true"
-                class="svg-icon iconNotInterested"
+                class="iconNotInterested"
                 width="18"
                 height="18"
                 viewBox="0 0 18 18"
@@ -1766,95 +2005,119 @@
         </section>
 
         <section class="Hot-network-questions Aside-panel__item">
-          <h4 class="Hot-network-questions__title"><a href="#" class="Hot-network-questions__title-link">Hot Network Questions</a></h4>
+          <h4 class="Hot-network-questions__title">
+            <a href="#" class="Hot-network-questions__title-link"
+              >Hot Network Questions</a
+            >
+          </h4>
           <ul>
             <li class="Hot-network-questions__question">
               <div
-                class="favicon favicon-workplace"
+                class="Favicon Favicon--workplace"
                 title="The Workplace Stack Exchange"
               ></div>
-              <a href="#" class="ordinary-link Hot-network-questions__question-link"
+              <a
+                href="#"
+                class="Ordinary-link Hot-network-questions__question-link"
                 >What are differences between VBoxVGA, VMSVGA and VBoxSVGA in
                 VirtualBox?</a
               >
             </li>
             <li class="Hot-network-questions__question">
-              <div class="favicon favicon-stats" title="Cross Validated"></div>
-              <a href="#" class="ordinary-link Hot-network-questions__question-link"
+              <div class="Favicon Favicon--stats" title="Cross Validated"></div>
+              <a
+                href="#"
+                class="Ordinary-link Hot-network-questions__question-link"
                 >How, in practice, can I hire more diversely?</a
               >
             </li>
             <li class="Hot-network-questions__question">
               <div
-                class="favicon favicon-codegolf"
+                class="Favicon Favicon--codegolf"
                 title="Programming Puzzles &amp; Code Golf Stack Exchange"
               ></div>
-              <a href="#" class="ordinary-link Hot-network-questions__question-link"
+              <a
+                href="#"
+                class="Ordinary-link Hot-network-questions__question-link"
                 >Covering a Skyline with brush strokes</a
               >
             </li>
             <li class="Hot-network-questions__question">
               <div
-                class="favicon favicon-rpg"
+                class="Favicon Favicon--rpg"
                 title="Role-playing Games Stack Exchange"
               ></div>
-              <a href="#" class="ordinary-link Hot-network-questions__question-link"
+              <a
+                href="#"
+                class="Ordinary-link Hot-network-questions__question-link"
                 >Does reducing a character's max HP with a spell also reduce the
                 "negative HP" threshold needed to cause instant death?</a
               >
             </li>
             <li class="Hot-network-questions__question">
               <div
-                class="favicon favicon-worldbuilding"
+                class="Favicon Favicon--worldbuilding"
                 title="Worldbuilding Stack Exchange"
               ></div>
-              <a href="#" class="ordinary-link Hot-network-questions__question-link"
+              <a
+                href="#"
+                class="Ordinary-link Hot-network-questions__question-link"
                 >Russian Dolls - How do they reproduce?</a
               >
             </li>
             <li class="Hot-network-questions__question">
               <div
-                class="favicon favicon-latin"
+                class="Favicon Favicon--latin"
                 title="Latin Language Stack Exchange"
               ></div>
-              <a href="#" class="ordinary-link Hot-network-questions__question-link"
+              <a
+                href="#"
+                class="Ordinary-link Hot-network-questions__question-link"
                 >How to pronounce 'que' and 'angeli'?</a
               >
             </li>
             <li class="Hot-network-questions__question">
               <div
-                class="favicon favicon-workplace"
+                class="Favicon Favicon--workplace"
                 title="The Workplace Stack Exchange"
               ></div>
-              <a href="#" class="ordinary-link Hot-network-questions__question-link"
+              <a
+                href="#"
+                class="Ordinary-link Hot-network-questions__question-link"
                 >Am I responsible for finding my own replacement?</a
               >
             </li>
             <li class="Hot-network-questions__question">
               <div
-                class="favicon favicon-stackoverflow"
+                class="Favicon Favicon--stackoverflow"
                 title="Stack Overflow"
               ></div>
-              <a href="#" class="ordinary-link Hot-network-questions__question-link"
+              <a
+                href="#"
+                class="Ordinary-link Hot-network-questions__question-link"
                 >Error "custom keyword definition is invalid: data.errors should
                 be boolean"</a
               >
             </li>
             <li class="Hot-network-questions__question">
               <div
-                class="favicon favicon-lifehacks"
+                class="Favicon Favicon--lifehacks"
                 title="Lifehacks Stack Exchange"
               ></div>
-              <a href="#" class="ordinary-link Hot-network-questions__question-link"
+              <a
+                href="#"
+                class="Ordinary-link Hot-network-questions__question-link"
                 >How do you remember which shirt you wore on the previous date?
               </a>
             </li>
             <li class="Hot-network-questions__question">
               <div
-                class="favicon favicon-apple"
+                class="Favicon Favicon--apple"
                 title="Mathematica Stack Exchange"
               ></div>
-              <a href="#" class="ordinary-link Hot-network-questions__question-link"
+              <a
+                href="#"
+                class="Ordinary-link Hot-network-questions__question-link"
                 >How do I apply something like the double slash notation but not
                 at the end of line?
               </a>
@@ -1863,72 +2126,100 @@
         </section>
       </aside>
 
-      <footer class="Layout__footer">
-        <div class="container">
-          <a href="#" class="site-logo">
-            <svg
-              aria-hidden="true"
-              class="svg-icon native iconLogoGlyphMd"
-              width="32"
-              height="37"
-              viewBox="0 0 32 37"
-            >
-              <g>
-                <path fill="#BCBBBB" d="M26 33v-9h4v13H0V24h4v9z"></path>
-                <path
-                  d="M23.1 25.99l.68-2.95-16.1-3.35L7 23l16.1 2.99zM9.1 15.2l15 7 1.4-3-15-7-1.4 3zm4.2-7.4L26 18.4l2.1-2.5L15.4 5.3l-2.1 2.5zM21.5 0l-2.7 2 9.9 13.3 2.7-2L21.5 0zM7 30h16v-3H7v3z"
-                  fill="#F48024"
-                ></path>
-              </g>
+      <footer class="Layout__footer Footer">
+        <div class="Footer__container">
+          <a href="#" class="Footer__site-logo">
+            <svg aria-hidden="true" width="32" height="37" viewBox="0 0 32 37">
+              <path fill="#BCBBBB" d="M26 33v-9h4v13H0V24h4v9z"></path>
+              <path
+                d="M23.1 25.99l.68-2.95-16.1-3.35L7 23l16.1 2.99zM9.1 15.2l15 7 1.4-3-15-7-1.4 3zm4.2-7.4L26 18.4l2.1-2.5L15.4 5.3l-2.1 2.5zM21.5 0l-2.7 2 9.9 13.3 2.7-2L21.5 0zM7 30h16v-3H7v3z"
+                fill="#F48024"
+              ></path>
             </svg>
           </a>
-          <nav class="footer-col">
-            <h4><a href="#" class="heading">Stack Overflow</a></h4>
-            <a href="#" class="link">Questions</a>
-            <a href="#" class="link">Jobs</a>
-            <a href="#" class="link">Developer Jobs Directory</a>
-            <a href="#" class="link">Salary Calculator</a>
-            <a href="#" class="link">Help</a>
-            <a href="#" class="link">Mobile</a>
-            <a href="#" class="link">Disable Responsiveness</a>
+          <nav class="Footer__column">
+            <h4><a href="#" class="Footer__title">Stack Overflow</a></h4>
+            <a href="#" class="Footer__link Footer__link--navigation"
+              >Questions</a
+            >
+            <a href="#" class="Footer__link Footer__link--navigation">Jobs</a>
+            <a href="#" class="Footer__link Footer__link--navigation"
+              >Developer Jobs Directory</a
+            >
+            <a href="#" class="Footer__link Footer__link--navigation"
+              >Salary Calculator</a
+            >
+            <a href="#" class="Footer__link Footer__link--navigation">Help</a>
+            <a href="#" class="Footer__link Footer__link--navigation">Mobile</a>
+            <a href="#" class="Footer__link Footer__link--navigation"
+              >Disable Responsiveness</a
+            >
           </nav>
-          <nav class="footer-col">
-            <h4><a href="#" class="heading">Products</a></h4>
-            <a href="#" class="link">Teams</a>
-            <a href="#" class="link">Talent</a>
-            <a href="#" class="link">Engagement</a>
-            <a href="#" class="link">Enterprise</a>
+          <nav class="Footer__column">
+            <h4><a href="#" class="Footer__title">Products</a></h4>
+            <a href="#" class="Footer__link Footer__link--navigation">Teams</a>
+            <a href="#" class="Footer__link Footer__link--navigation">Talent</a>
+            <a href="#" class="Footer__link Footer__link--navigation"
+              >Engagement</a
+            >
+            <a href="#" class="Footer__link Footer__link--navigation"
+              >Enterprise</a
+            >
           </nav>
-          <nav class="footer-col">
-            <h4><a href="#" class="heading">Company</a></h4>
-            <a href="#" class="link">About</a>
-            <a href="#" class="link">Press</a>
-            <a href="#" class="link">Work Here</a>
-            <a href="#" class="link">Legal</a>
-            <a href="#" class="link">Privacy Policy</a>
-            <a href="#" class="link">Contact Us</a>
+          <nav class="Footer__column">
+            <h4><a href="#" class="Footer__title">Company</a></h4>
+            <a href="#" class="Footer__link Footer__link--navigation">About</a>
+            <a href="#" class="Footer__link Footer__link--navigation">Press</a>
+            <a href="#" class="Footer__link Footer__link--navigation"
+              >Work Here</a
+            >
+            <a href="#" class="Footer__link Footer__link--navigation">Legal</a>
+            <a href="#" class="Footer__link Footer__link--navigation"
+              >Privacy Policy</a
+            >
+            <a href="#" class="Footer__link Footer__link--navigation"
+              >Contact Us</a
+            >
           </nav>
-          <nav class="footer-col" id="rightmost-col">
-            <h4><a href="#" class="heading">Stack Exchange Network</a></h4>
-            <a href="#" class="link">Technology</a>
-            <a href="#" class="link">Life/Arts</a>
-            <a href="#" class="link">Culture/Recreation</a>
-            <a href="#" class="link">Science</a>
-            <a href="#" class="link">Other</a>
+          <nav class="Footer__column Footer__column--rightmost">
+            <h4>
+              <a href="#" class="Footer__title">Stack Exchange Network</a>
+            </h4>
+            <a href="#" class="Footer__link Footer__link--navigation"
+              >Technology</a
+            >
+            <a href="#" class="Footer__link Footer__link--navigation"
+              >Life/Arts</a
+            >
+            <a href="#" class="Footer__link Footer__link--navigation"
+              >Culture/Recreation</a
+            >
+            <a href="#" class="Footer__link Footer__link--navigation"
+              >Science</a
+            >
+            <a href="#" class="Footer__link Footer__link--navigation">Other</a>
           </nav>
-          <div class="copyright">
-            <div class="social-networks">
-              <a href="#" class="soc-link">Blog</a>
-              <a href="#" class="soc-link">Facebook</a>
-              <a href="#" class="soc-link">Twitter</a>
-              <a href="#" class="soc-link">LinkedIn</a>
+          <div class="Footer__copyright">
+            <div class="Footer__social-networks">
+              <a href="#" class="Footer__link Footer__link--social-network"
+                >Blog</a
+              >
+              <a href="#" class="Footer__link Footer__link--social-network"
+                >Facebook</a
+              >
+              <a href="#" class="Footer__link Footer__link--social-network"
+                >Twitter</a
+              >
+              <a href="#" class="Footer__link Footer__link--social-network"
+                >LinkedIn</a
+              >
             </div>
-            <p>
+            <p class="Footer__license-info">
               site design / logo © 2019 Stack Exchange Inc; user contributions
               licensed under
-              <a href="#" class="license-link" rel="license"> cc by-sa 3.0</a>
+              <a href="#" class="Footer__link" rel="license"> cc by-sa 3.0</a>
               with
-              <a href="#" class="license-link" rel="license"
+              <a href="#" class="Footer__link" rel="license"
                 >attribution required</a
               >
               rev&nbsp;2019.2.7.32836

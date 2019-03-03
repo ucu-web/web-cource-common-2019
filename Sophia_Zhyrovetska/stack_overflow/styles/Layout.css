@@ -19,6 +19,7 @@
 .Layout__sticky-navigation {
   position: sticky;
   top: 74px;
+  margin: 0 0 12px 0;
 }
 
 .Layout__main-block {

@@ -31,11 +31,11 @@ a {
 .Question-post--tagged-interesting {
   background-color: #fffbec;
 }
-.ordinary-link {
+.Ordinary-link {
   color: #0077cc;
 }
-.ordinary-link:hover,
-.ordinary-link:active {
+.Ordinary-link:hover,
+.Ordinary-link:active {
   color: #3af;
 }
 /*# sourceMappingURL=common.css.map */

@@ -22,6 +22,12 @@
   padding: 8px 6px 8px 8px;
 }
 
+.Site-chapter-navigation__icon_globe {
+  margin-top: 2px;
+  margin-right: 4px;
+  fill: #848d95;
+}
+
 .Site-chapter-navigation__link:hover,
 .Site-chapter-navigation__link:focus,
 .Site-chapter-navigation__link:active {
