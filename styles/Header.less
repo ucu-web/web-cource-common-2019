@@ -2,7 +2,7 @@
   padding: 0 1em;
   line-height: 1.5;
   display: flex;
-  /*align-self: center;*/
+  align-items: center;
   &__logo{
     display: inline-block;
     align-self: center;
@@ -13,17 +13,22 @@
   }
   &__search{
     width: 300px;
-    display: flex;
-    align-items: center;
   }
   &__navigation__places{
     list-style: none;
     padding-left: 0.5em;
+    margin: 0;
+    display: flex;
+    align-content: center;
   }
   &__navigation__place{
     display: inline-block;
     font-weight: 600;
     color: hsla(0,0%,100%,.7);
   }
-
+  &__link{
+    text-decoration: none;
+    padding: 0 0.5rem;
+    color: white;
+  }
 }

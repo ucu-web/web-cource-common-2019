@@ -2,7 +2,7 @@
   padding: 0 1em;
   line-height: 1.5;
   display: flex;
-  /*align-self: center;*/
+  align-items: center;
 }
 .Header__logo {
   display: inline-block;
@@ -14,16 +14,22 @@
 }
 .Header__search {
   width: 300px;
-  display: flex;
-  align-items: center;
 }
 .Header__navigation__places {
   list-style: none;
   padding-left: 0.5em;
+  margin: 0;
+  display: flex;
+  align-content: center;
 }
 .Header__navigation__place {
   display: inline-block;
   font-weight: 600;
   color: hsla(0, 0%, 100%, 0.7);
+}
+.Header__link {
+  text-decoration: none;
+  padding: 0 0.5rem;
+  color: white;
 }
 /*# sourceMappingURL=Header.css.map */
