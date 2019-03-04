@@ -5,26 +5,28 @@
     <title>Title</title>
     <link href="styles/Repository.css" rel="stylesheet">
     <link href="styles/Layout.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles/Repository-navigation.css">
-    <link rel="stylesheet" href="styles/Header.css">
-    <link rel="stylesheet" href="styles/Search.css">
+    <link href="styles/Repository-navigation.css" rel="stylesheet">
+    <link href="styles/Header.css" rel="stylesheet">
+    <link href="styles/Search.css" rel="stylesheet">
+    <link href="styles/Repository-title.css" rel="stylesheet">
+    <link href="styles/Repository-data.css" rel="stylesheet">
 </head>
 <body class="Layout">
 <header class="Layout__header">
     <div class="Header">
-        <a href="#" class="Header__logo Header__logo-inverted"><img src="icons/github-dark.svg"></a>
+        <a class="Header__logo Header__logo-inverted" href="#"><img src="icons/github-dark.svg"></a>
         <div class="Header__search">
             <form class="Search">
-                <input type="text" placeholder="Search or jump to..." class="Search__field">
-                <img src="icons/search-key-slash.svg" class="Search__slash-icon">
+                <input class="Search__field" placeholder="Search or jump to..." type="text">
+                <img class="Search__slash-icon" src="icons/search-key-slash.svg">
             </form>
         </div>
         <nav class="Header__navigation">
-            <ul class="Header__navigation__places">
-                <li class="Header__navigation__place"><a href="#" class="Header__link">Pull requests</a></li>
-                <li class="Header__navigation__place"><a href="#" class="Header__link">Issues</a></li>
-                <li class="Header__navigation__place"><a href="#" class="Header__link">Marketplace</a></li>
-                <li class="Header__navigation__place"><a href="#" class="Header__link">Explore</a></li>
+            <ul class="Header__navigation_places">
+                <li class="Header__navigation_place"><a class="Header__link" href="#">Pull requests</a></li>
+                <li class="Header__navigation_place"><a class="Header__link" href="#">Issues</a></li>
+                <li class="Header__navigation_place"><a class="Header__link" href="#">Marketplace</a></li>
+                <li class="Header__navigation_place"><a class="Header__link" href="#">Explore</a></li>
             </ul>
         </nav>
         <div class="Header__controls">
@@ -35,14 +37,63 @@
     <div class="Repository">
         <nav class="Repository__header">
             <div class="Repository-navigation">
-                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad cumque distinctio eos esse fuga
-                    fugiat, fugit laboriosam minus mollitia perferendis quasi quisquam reprehenderit sapiente. Beatae
-                    distinctio dolore dolorum eveniet iste.
-                </div>
-                <div>Aliquam at consectetur dolores fugiat laborum molestiae perferendis quam reprehenderit similique.
-                    Aliquid autem cum, deleniti dignissimos dolore dolorum itaque iusto laborum laudantium magnam
-                    perferendis, possimus quibusdam saepe vel voluptate voluptates!
-                </div>
+                <section class="Repository-navigation__data">
+                    <h1 class="Repository-title">
+                        <a class="Repository-title__user-link" href="#">
+                            facebook
+                        </a>
+                        /
+                        <a class="Repository-title__repository-link" href="#">
+                            react
+                        </a>
+                    </h1>
+                    <div class="Repository-data">
+                        <button class="Repository-data__action">
+
+                        </button>
+                        <a class="Repository-data__count" href="#">
+
+                        </a>
+                    </div>
+                    <div class="Repository-data">
+                        <button class="Repository-data__action">
+
+                        </button>
+                        <a class="Repository-data__count" href="#">
+
+                        </a>
+                    </div>
+                    <div class="Repository-data">
+                        <button class="Repository-data__action">
+
+                        </button>
+                        <a class="Repository-data__count" href="#">
+
+                        </a>
+                    </div>
+                </section>
+                <section class="Repository-navigation__sections">
+                    <ul class="Repository-navigation__section">
+                        <li class="Repository-navigation__entry"><a class="Repository-navigation__section-link"
+                                                                    href="#"><img
+                                alt="Code" src="icons/code.svg">Code</a></li>
+                        <li class="Repository-navigation__entry"><a class="Repository-navigation__section-link"
+                                                                    href="#"><img
+                                alt="Issues" src="icons/issue.svg">Issues</a></li>
+                        <li class="Repository-navigation__entry"><a class="Repository-navigation__section-link"
+                                                                    href="#"><img
+                                alt="Pull requests" src="icons/pulls.svg">Pull requests</a></li>
+                        <li class="Repository-navigation__entry"><a class="Repository-navigation__section-link"
+                                                                    href="#"><img
+                                alt="Projects" src="icons/project.svg">Projects</a></li>
+                        <li class="Repository-navigation__entry"><a class="Repository-navigation__section-link"
+                                                                    href="#"><img
+                                alt="Wiki" src="icons/book2.svg">Wiki</a></li>
+                        <li class="Repository-navigation__entry"><a class="Repository-navigation__section-link"
+                                                                    href="#"><img
+                                alt="Insights" src="icons/stats.svg">Insights</a></li>
+                    </ul>
+                </section>
             </div>
         </nav>
         <section class="Repository__description">

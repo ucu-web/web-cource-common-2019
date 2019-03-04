@@ -15,21 +15,20 @@
 .Header__search {
   width: 300px;
 }
-.Header__navigation__places {
+.Header__navigation_places {
   list-style: none;
   padding-left: 0.5em;
   margin: 0;
   display: flex;
   align-content: center;
 }
-.Header__navigation__place {
+.Header__navigation_place {
   display: inline-block;
-  font-weight: 600;
-  color: hsla(0, 0%, 100%, 0.7);
 }
 .Header__link {
   text-decoration: none;
   padding: 0 0.5rem;
   color: white;
+  font-weight: 600;
 }
 /*# sourceMappingURL=Header.css.map */
