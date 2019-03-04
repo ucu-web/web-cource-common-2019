@@ -6,13 +6,14 @@
   flex-direction: column;
   border: 1px solid #e4e6e8;
   border-radius: 3px;
-  margin: 18px 6px 6px;
+  margin: 18px 6px 6px 0;
 }
 
 .Teams-notice__title {
   font-weight: bold;
   font-size: 13px;
   color: #0c0d0e;
+  margin: 0;
 }
 
 .Teams-notice__text {
@@ -22,31 +23,7 @@
 }
 
 .Teams-notice__button {
-  text-align: center;
   margin-top: 12px;
-  color: #07c;
-  border: 1px solid #0095ff;
-  padding: 0.8em 0.8em;
-  border-radius: 0.3em;
-}
-
-.Teams-notice__button:hover {
-  color: #005999;
-  background-color: rgba(0, 119, 204, 0.05);
-  border-color: #0095ff;
-}
-
-.Teams-notice__button:focus {
-  color: #003b66;
-  background-color: rgba(0, 119, 204, 0);
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5),
-    0 0 0 4px rgba(0, 149, 255, 0.1);
-}
-
-.Teams-notice__button:active {
-  color: #005999;
-  background-color: rgba(0, 119, 204, 0.15);
-  border-color: #07c;
 }
 
 .Teams-notice .Teams-notice__image {

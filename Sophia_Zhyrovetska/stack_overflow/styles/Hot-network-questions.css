@@ -13,6 +13,11 @@
   font-size: 1.2em;
 }
 
+.Hot-network-questions__list{
+  margin: 0;
+  padding: 0;
+}
+
 .Hot-network-questions__question {
   display: flex;
   text-decoration: none;

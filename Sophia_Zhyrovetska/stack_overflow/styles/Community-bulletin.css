@@ -23,7 +23,7 @@
   color: #9c988b;
   text-transform: uppercase;
   border-bottom: 1px solid #d6d9dc;
-  margin-bottom: 0.9em;
+  margin: 0 0 0.9em 0;
   padding-bottom: 0.6em;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .Community-bulletin__link {
-  margin-bottom: 1.2em;
+  margin: 0 0 1.2em 0;
   flex: 7.5;
 }
 

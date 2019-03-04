@@ -3,7 +3,11 @@
 }
 
 .Select-questions-type__button {
-  border-radius: 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.1;
+  cursor: pointer;
+  white-space: nowrap;
   border: 1px solid #adb3b9;
   box-shadow: 0 0 0 0 rgba(145, 153, 161, 0);
   color: #6a737c;
@@ -11,7 +15,7 @@
 }
 
 .Select-questions-type__button--leftmost {
-  border-radius: 0.3em 0 0.3em;
+  border-radius: 0.3em 0 0 0.3em;
 }
 
 .Select-questions-type__button--rightmost {
@@ -19,7 +23,6 @@
 }
 
 .Select-questions-type__button--current {
-  border-radius: 0.3em 0 0 0.3em;
   border-color: #76808a;
   color: #3b4045;
   background-color: rgba(174, 192, 209, 0.25);
