@@ -12,13 +12,20 @@
 <body class="Layout">
 <header class="Layout__header">
     <div class="Header">
-        <a href="#" class="Header__logo-inverted"><img src="icons/github-dark.svg"></a>
+        <a href="#" class="Header__logo Header__logo-inverted"><img src="icons/github-dark.svg"></a>
         <div class="Header__search">
             <form class="Search">
-                <input type="text" placeholder="Search or jump to...">
+                <input type="text" placeholder="Search or jump to..." class="Search__field">
+                <img src="icons/search-key-slash.svg" class="Search__slash-icon">
             </form>
         </div>
         <nav class="Header__navigation">
+            <ul class="Header__navigation__places">
+                <li class="Header__navigation__place">Pull requests</li>
+                <li class="Header__navigation__place">Issues</li>
+                <li class="Header__navigation__place">Marketplace</li>
+                <li class="Header__navigation__place">Explore</li>
+            </ul>
         </nav>
         <div class="Header__controls">
         </div>

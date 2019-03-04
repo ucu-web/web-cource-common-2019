@@ -2,19 +2,28 @@
   padding: 0 1em;
   line-height: 1.5;
   display: flex;
+  /*align-self: center;*/
 }
 .Header__logo {
   display: inline-block;
   align-self: center;
+  margin-right: 1em;
 }
 .Header__logo-inverted {
   filter: invert(100%);
 }
 .Header__search {
-  margin-left: 12px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+}
+.Header__navigation__places {
+  list-style: none;
+  padding-left: 0.5em;
+}
+.Header__navigation__place {
   display: inline-block;
-  height: 30px;
-  padding: 0.2em 0;
-  background-color: hsla(0, 0%, 100%, 0.125);
+  font-weight: 600;
+  color: hsla(0, 0%, 100%, 0.7);
 }
 /*# sourceMappingURL=Header.css.map */
