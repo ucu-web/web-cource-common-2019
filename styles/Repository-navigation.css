@@ -2,4 +2,13 @@
   width: 980px;
   margin: 0 auto;
 }
+.Repository-navigation__data {
+  display: flex;
+  align-items: center;
+  flex: 1 auto;
+  justify-content: space-between;
+}
+.Repository-navigation__stats {
+  display: flex;
+}
 /*# sourceMappingURL=Repository-navigation.css.map */
