@@ -1,21 +1,20 @@
 .Question-reaction-counter {
-  height: 38px;
-  max-width: 50px;
-  font-size: 11px;
-  padding: 7px 6px;
+  height: 3.46em;
+  max-width: 4.55em;
+  font-size: 0.69em;
+  padding: 0.64em 0.55em;
   text-align: center;
   color: #848d95;
 }
 
 .Question-reaction-counter--votes {
-  min-width: 38px;
+  min-width: 3.46em;
 }
 
 .Question-reaction-counter--answers {
-  min-width: 44px;
+  min-width: 4em;
   border: 1px solid transparent;
   border-radius: 3px;
-  padding-bottom: 6px;
 }
 
 .Question-reaction-counter--answers--has-answer {
@@ -29,14 +28,14 @@
 }
 
 .Question-reaction-counter--views {
-  min-width: 40px;
-  margin-right: 7px;
+  min-width: 3.64em;
+  margin: 0 .64em 0 0;
 }
 
 .Question-reaction-counter__number {
-  font-size: 17px;
+  font-size: 1.55em;
   font-weight: 300;
-  margin-bottom: 4px;
+  margin: 0 0 .24em 0;
   display: block;
 }
 

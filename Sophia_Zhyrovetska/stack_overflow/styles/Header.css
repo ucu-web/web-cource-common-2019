@@ -20,7 +20,7 @@
 }
 
 .Header__search-form {
-  padding-left: 12px;
+  padding: 0 0 0 .75em;
   align-self: center;
 }
 

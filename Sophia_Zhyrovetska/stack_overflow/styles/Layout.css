@@ -13,24 +13,24 @@
 
 .Layout__navigation {
   grid-column-start: 2;
-  padding-top: 24px;
+  padding: 1.5em 0 0 0;
 }
 
 .Layout__sticky-navigation {
   position: sticky;
-  top: 74px;
-  margin: 0 0 12px 0;
+  top: 4.625em;
+  margin: 0 0 .75em 0;
 }
 
 .Layout__main-block {
   max-width: 1100px;
   min-width: 450px;
-  padding: 24px 24px 24px 0;
+  padding: 1.5em 1.5em 1.5em 0;
   border-left: 1px solid #d6d9dc;
 }
 
 .Layout__aside {
-  padding-top: 24px;
+  padding: 1.5em 0 0 0;
 }
 
 .Layout__footer {

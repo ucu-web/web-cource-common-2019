@@ -1,13 +1,13 @@
 .Site-chapter-navigation__link {
-  font-size: 13px;
+  font-size: 0.8em;
   color: #535a60;
   line-height: 1.8;
   display: block;
-  padding: 4px 4px 4px 30px;
+  padding: .25em .25em .25em 1.88em;
 }
 
 .Site-chapter-navigation__link--home {
-  padding: 4px 4px 4px 8px;
+  padding: .25em .25em .25em .5em;
 }
 
 .Site-chapter-navigation__link--current {
@@ -19,12 +19,12 @@
 
 .Site-chapter-navigation__link--with-icon {
   display: flex;
-  padding: 8px 6px 8px 8px;
+  align-items: center;
+  padding: .5em 0.38em .5em .5em;
 }
 
 .Site-chapter-navigation__icon_globe {
-  margin-top: 2px;
-  margin-right: 4px;
+  margin: 0 .25em 0 0;
   fill: #848d95;
 }
 
@@ -36,7 +36,7 @@
 .Site-chapter-navigation__section-title {
   text-transform: uppercase;
   color: #6a737c;
-  margin: 16px 0 4px 8px;
-  font-size: 11px;
+  margin: 1.45em 0 .725em 0.36em;
+  font-size: 0.69em;
   font-weight: inherit;
 }

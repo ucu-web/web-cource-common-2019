@@ -7,7 +7,7 @@
   fill: #848d95;
   display: flex;
   align-items: center;
-  padding: 0 10px;
+  padding: 0 .6em;
   height: 100%;
 }
 
@@ -18,7 +18,7 @@
 }
 
 .Profile-navigation__reputation-score {
-  padding-left: 0.7em;
+  padding: 0 0 0 .7em;
   font-weight: bold;
   font-size: 0.75em;
   color: #535a60;
@@ -26,17 +26,17 @@
 
 .Profile-navigation__budge-circle {
   color: #d0a278;
-  font-size: 13px;
-  margin-left: 0.5em;
+  font-size: 0.81em;
+  margin: 0 0 0 .5em;
 }
 
 .Profile-navigation__budge-count {
-  font-size: 12px;
+  font-size: 0.75em;
   color: #d0a278;
 }
 
 .Profile-navigation__image {
-  width: 24px;
-  height: 24px;
+  width: 1.5em;
+  height: 1.5em;
   border-radius: 3px;
 }

@@ -10,8 +10,8 @@
 }
 
 .Footer__site-logo {
-  flex: 0 0 64px;
-  margin-top: -10px;
+  flex: 0 0 4em;
+  margin: -0.63em 0 0 0;
 }
 
 .Footer__column {
@@ -28,7 +28,7 @@
   display: inline-block;
   text-transform: uppercase;
   font-size: 0.8em;
-  margin-bottom: 0.6em;
+  margin: 0 0 .6em 0;
   max-width: 196px;
   word-wrap: normal;
 }
@@ -43,12 +43,12 @@
 }
 
 .Footer__link--social-network {
-  font-size: 0.7em;
-  padding-right: 10px;
+  font-size: 0.69em;
+  padding: 0 .91em 0 0;
 }
 .Footer__link--navigation {
-  font-size: 13px;
-  padding: 4px 0;
+  font-size: 0.81em;
+  padding: 0.31em 0;
   line-height: 1.3;
 }
 

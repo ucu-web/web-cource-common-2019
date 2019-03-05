@@ -15,7 +15,7 @@
 }
 
 .Featured-tags-block__icon {
-  margin-right: 0.3em;
+  margin: 0 .3em 0 0;
   display: flex;
   fill: #6a737c;
 }
@@ -37,5 +37,5 @@
 }
 
 .Featured-tags-block__tag {
-  margin: 0.1em 0.5em 0.8em 0;
+  margin: .1em .5em .8em 0;
 }

@@ -2,28 +2,28 @@
   display: flex;
   overflow: hidden;
   position: relative;
-  padding: 16px;
+  padding: 1em;
   flex-direction: column;
   border: 1px solid #e4e6e8;
   border-radius: 3px;
-  margin: 18px 6px 6px 0;
+  margin: 1.13em .38em .38em 0;
 }
 
 .Teams-notice__title {
   font-weight: bold;
-  font-size: 13px;
+  font-size: 0.81em;
   color: #0c0d0e;
   margin: 0;
 }
 
 .Teams-notice__text {
-  font-size: 12px;
+  font-size: 0.75em;
   color: #3b4045;
-  margin-top: 0.2em;
+  margin: .2em 0 0 0;
 }
 
 .Teams-notice__button {
-  margin-top: 12px;
+  margin: .8em 0 0 0;
 }
 
 .Teams-notice .Teams-notice__image {
