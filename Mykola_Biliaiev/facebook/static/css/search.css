@@ -1,0 +1,19 @@
+.search {
+    line-height: 20px;
+    display: flex;
+}
+
+.search__input {
+    width: 450px;
+    line-height: 24px;
+    border-radius: 3px 0 0 3px;
+    border: none;
+    padding: 0 5px;
+
+}
+
+.search__button {
+    border: none;
+    border-radius: 0 3px 3px 0;
+    padding: 0 5px ;
+}

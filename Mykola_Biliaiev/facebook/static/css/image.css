@@ -1,0 +1,32 @@
+.image {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+.image--big{
+    width: 48px;
+    height: 48px;
+}
+.image--medium{
+    width: 40px;
+    height: 40px;
+}
+.image--sm-x{
+    width: 32px;
+    height: 32px;
+}
+.image--abs {
+    left: -28px;
+    top: -4px;
+    position: absolute;
+}
+.image--story{
+    width: 48px;
+    height: 48px;
+    left: -1px;
+    top: -1px;
+    padding: 2px;
+    background-color: #fff;
+    z-index: 1;
+    position: absolute;
+}
