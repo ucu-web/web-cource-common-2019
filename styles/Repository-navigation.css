@@ -11,4 +11,34 @@
 .Repository-navigation__stats {
   display: flex;
 }
+.Repository-navigation__section {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
+.Repository-navigation__entry {
+  padding: 0.5rem 1rem 0.5rem;
+}
+.Repository-navigation__entry--chosen {
+  border-top: 3px solid #e36209;
+  border-left: 1px solid #e1e4e8;
+  border-right: 1px solid #e1e4e8;
+  background-color: #fff;
+  border-bottom: 1px solid #ffffff;
+}
+.Repository-navigation__section-link {
+  text-decoration: none;
+  color: #586069;
+}
+.Repository-navigation__section-link--chosen {
+  color: #24292e;
+}
+.Repository-navigation__icon {
+  margin-right: 0.15rem;
+  filter: invert(50%);
+}
+.Repository-navigation__icon--chosen {
+  filter: invert(0%);
+}
 /*# sourceMappingURL=Repository-navigation.css.map */
