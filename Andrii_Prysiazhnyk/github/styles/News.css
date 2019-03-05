@@ -1,0 +1,39 @@
+.News__post-info-link {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+.News__post-info-link:hover {
+  color: #0366d6;
+}
+
+.News--underscored {
+  border-bottom: 1px solid #D2D6D7;
+}
+
+.News {
+  display: flex;
+  padding: 16px 0;
+  margin: 0 16px;
+}
+.News__user-link {
+  margin-right: 16px;
+}
+.News__user-photo {
+  width: 32px;
+  height: 32px;
+  border-radius: 3px;
+}
+.News__content {
+  width: 100%;
+}
+.News__post-info {
+  margin-top: 5px;
+}
+.News__post-time {
+  font-size: 12px;
+  color: #6a737d;
+}
+
+/*# sourceMappingURL=News.css.map */
