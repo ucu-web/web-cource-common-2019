@@ -25,4 +25,8 @@
   font-size: 0.86em;
   background-color: #f1f8ff;
 }
+.Repository__commits {
+  width: 980px;
+  margin: auto;
+}
 /*# sourceMappingURL=Repository.css.map */
