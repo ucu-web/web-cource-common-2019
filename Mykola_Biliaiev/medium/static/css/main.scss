@@ -56,6 +56,7 @@ a {
 }
 
 .nav-bar {
+  text-decoration: none;
   position: -webkit-sticky;
   position: sticky;
   max-width: 1032px;
@@ -67,17 +68,19 @@ a {
   display: flex;
   background-color: #fff;
   &__item {
+    &--active {
+      color: #000 !important;
+    }
     margin-right: 24px;
-  }
-  &__item a:hover {
-    color: black;
 
-  }
-  &__item a {
     font-weight: 400;
     font-size: 15px;
     color: rgba(0, 0, 0, .54);
   }
+  &__item:hover {
+    color: #000;
+  }
+
 }
 
 //news-hot-top
@@ -103,8 +106,8 @@ a {
     float: right;
     display: flex;
     align-items: center;
-    color: #03a87c ;
-    fill: #03a87c ;
+    color: #03a87c;
+    fill: #03a87c;
 
   }
 }
@@ -125,9 +128,22 @@ a {
 
     display: block;
   }
-
+  &__article-info{
+    padding-bottom: 15px;
+  }
+  &__headline {
+    font-family: medium-content-sans-serif-font, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif !important;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -.42px;
+    padding-bottom: 5px;
+  }
+  &__subtext {
+    color: rgba(0,0,0,.54);
+    font-weight: 400;
+  }
   &--small {
-    max-width: 324px;
+    max-width: 300px;
     margin-right: 0 !important;
   }
 }
@@ -184,6 +200,10 @@ a {
     display: flex;
     justify-content: space-between;
   }
+  &__svg {
+    fill: rgba(0, 0, 0, .54);
+    cursor: pointer;
+  }
   &__img {
     background-image: url("../img/apple-img.jpeg");
     background-size: cover;
@@ -221,13 +241,35 @@ a {
   }
 }
 
-
 //
 
-aside{
+aside {
   padding: 30px;
 
-  .aside-single{
+  .aside-single {
     margin-bottom: 30px;
   }
+}
+
+//article-header
+
+.article-header {
+  &__about {
+    color: rgba(0, 0, 0, .54);
+    font-weight: 400;
+    font-size: 15px;
+    font-family: medium-content-sans-serif-font, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  }
+  &__headline {
+    font-family: medium-content-sans-serif-font, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+  }
+  &__quote {
+    font-family: medium-content-sans-serif-font, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, .54);
+  }
+
 }

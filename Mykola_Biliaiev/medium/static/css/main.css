@@ -53,6 +53,7 @@ a {
 }
 
 .nav-bar {
+  text-decoration: none;
   position: -webkit-sticky;
   position: sticky;
   max-width: 1032px;
@@ -66,14 +67,15 @@ a {
 }
 .nav-bar__item {
   margin-right: 24px;
-}
-.nav-bar__item a:hover {
-  color: black;
-}
-.nav-bar__item a {
   font-weight: 400;
   font-size: 15px;
   color: rgba(0, 0, 0, 0.54);
+}
+.nav-bar__item--active {
+  color: #000 !important;
+}
+.nav-bar__item:hover {
+  color: #000;
 }
 
 .news-hot-top__wrapper {
@@ -113,8 +115,22 @@ a {
   width: 100%;
   display: block;
 }
+.hot-news-single__article-info {
+  padding-bottom: 15px;
+}
+.hot-news-single__headline {
+  font-family: medium-content-sans-serif-font, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif !important;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.42px;
+  padding-bottom: 5px;
+}
+.hot-news-single__subtext {
+  color: rgba(0, 0, 0, 0.54);
+  font-weight: 400;
+}
 .hot-news-single--small {
-  max-width: 324px;
+  max-width: 300px;
   margin-right: 0 !important;
 }
 
@@ -169,6 +185,10 @@ a {
   display: flex;
   justify-content: space-between;
 }
+.inf-content__svg {
+  fill: rgba(0, 0, 0, 0.54);
+  cursor: pointer;
+}
 .inf-content__img {
   background-image: url("../img/apple-img.jpeg");
   background-size: cover;
@@ -204,6 +224,24 @@ aside {
 }
 aside .aside-single {
   margin-bottom: 30px;
+}
+
+.article-header__about {
+  color: rgba(0, 0, 0, 0.54);
+  font-weight: 400;
+  font-size: 15px;
+  font-family: medium-content-sans-serif-font, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+}
+.article-header__headline {
+  font-family: medium-content-sans-serif-font, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+}
+.article-header__quote {
+  font-family: medium-content-sans-serif-font, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.54);
 }
 
 /*# sourceMappingURL=main.css.map */
