@@ -1,42 +1,37 @@
-.Profile_navigation {
+.Profile-navigation {
   display: flex;
   justify-content: flex-end;
 }
-
 .Profile-navigation__link {
   fill: #848d95;
   display: flex;
   align-items: center;
-  padding: 0 .6em;
+  padding: 0 0.6em;
   height: 100%;
 }
-
 .Profile-navigation__link:hover,
 .Profile-navigation__link:active {
   fill: #3b4045;
   background-color: #eff0f1;
 }
-
 .Profile-navigation__reputation-score {
-  padding: 0 0 0 .7em;
+  padding: 0 0 0 0.7em;
   font-weight: bold;
   font-size: 0.75em;
   color: #535a60;
 }
-
 .Profile-navigation__budge-circle {
   color: #d0a278;
   font-size: 0.81em;
-  margin: 0 0 0 .5em;
+  margin: 0 0 0 0.5em;
 }
-
 .Profile-navigation__budge-count {
   font-size: 0.75em;
   color: #d0a278;
 }
-
 .Profile-navigation__image {
   width: 1.5em;
   height: 1.5em;
   border-radius: 3px;
 }
+/*# sourceMappingURL=Profile-navigation.css.map */

@@ -1,11 +1,9 @@
 .Questions-types-navigation {
   border-bottom: 1px solid #d6d9dc;
 }
-
 .Questions-types-navigation__wrapper {
   display: flex;
 }
-
 .Questions-types-navigation__title {
   flex: 1 auto;
   font-family: inherit;
@@ -15,7 +13,7 @@
   color: #242729;
   margin: 0;
 }
-
 .Questions-types-navigation__select-type {
   margin: 1.5em 0 1em auto;
 }
+/*# sourceMappingURL=Questions-types-navigation.css.map */

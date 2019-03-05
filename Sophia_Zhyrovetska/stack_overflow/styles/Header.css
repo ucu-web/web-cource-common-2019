@@ -5,7 +5,6 @@
   display: grid;
   grid-template-columns: auto 164px minmax(auto, 775px) 300px auto;
 }
-
 .Header__logo {
   grid-column-start: 2;
   width: 164px;
@@ -14,16 +13,14 @@
   background-position: 7px -479px;
   text-indent: -9999em;
 }
-
 .Header__logo:hover {
   background-color: rgba(239, 240, 241, 0.75);
 }
-
 .Header__search-form {
-  padding: 0 0 0 .75em;
+  padding: 0 0 0 0.75em;
   align-self: center;
 }
-
 .Header__navigation {
   grid-column-end: 5;
 }
+/*# sourceMappingURL=Header.css.map */

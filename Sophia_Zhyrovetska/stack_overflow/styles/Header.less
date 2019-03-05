@@ -1,0 +1,29 @@
+.Header {
+  background-color: #fafafb;
+  box-shadow: 0 1px 0 rgba(12, 13, 14, 0.1), 0 1px 6px rgba(59, 64, 69, 0.1);
+  border-top: 3px solid #f48024;
+  display: grid;
+  grid-template-columns: auto 164px minmax(auto, 775px) 300px auto;
+
+  &__logo {
+    grid-column-start: 2;
+    width: 164px;
+    height: 50px;
+    background-image: url("../images/sprites.svg?v=e5e58ae7df45");
+    background-position: 7px -479px;
+    text-indent: -9999em;
+
+    &:hover {
+      background-color: rgba(239, 240, 241, 0.75);
+    }
+  }
+
+  &__search-form {
+    padding: 0 0 0 0.75em;
+    align-self: center;
+  }
+
+  &__navigation {
+    grid-column-end: 5;
+  }
+}

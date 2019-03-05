@@ -1,0 +1,44 @@
+.Question-reaction-counter {
+  height: 3.46em;
+  max-width: 4.55em;
+  font-size: 0.69em;
+  padding: 0.64em 0.55em;
+  text-align: center;
+  color: #848d95;
+
+  &--votes {
+    min-width: 3.46em;
+  }
+
+  &--answers {
+    min-width: 4em;
+    border: 1px solid transparent;
+    border-radius: 3px;
+
+    &--has-answer {
+      color: #45a163;
+      border-color: rgba(69, 161, 99, 0.5);
+    }
+
+    &--has-accepted-answer {
+      color: #ffffff;
+      background-color: #5fba7d;
+    }
+  }
+
+  &--views {
+    min-width: 3.64em;
+    margin: 0 0.64em 0 0;
+  }
+
+  &__number {
+    font-size: 1.55em;
+    font-weight: 300;
+    margin: 0 0 0.24em 0;
+    display: block;
+
+    &--warm-style {
+      color: #9b764f;
+    }
+  }
+}
