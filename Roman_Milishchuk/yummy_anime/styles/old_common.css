@@ -21,28 +21,6 @@ h2 {
 }
 
 
-#main-finder input {
-    box-sizing: border-box;
-    width: 100%;
-    border: 1px solid #acadad;
-    padding: 15px 20px;
-    background: white;
-    font-weight: 300;
-    font-style: italic;
-    font-size: 0.9rem;
-    height: 50px;
-}
-
-#main-finder button {
-    background: url(../img/sprite.png) -25px -24px no-repeat;
-    position: absolute;
-    top: 11px;
-    right: 10px;
-    width: 24px;
-    height: 24px;
-    border: 0;
-}
-
 body > footer {
     background: #333;
     color: white;

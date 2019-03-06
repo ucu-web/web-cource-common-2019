@@ -1,0 +1,46 @@
+.news-table {
+  text-align: left;
+}
+.news-table__section-header {
+  background: url("../../img/snowflakes.jpg");
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  right: 15px;
+  top: 12px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  border-bottom: 3px solid #f66;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+.news-table__poster {
+  width: 33px;
+}
+.news-table__publication-date {
+  padding: 5px 3px;
+  border-right: 1px solid #ddd;
+  width: 60px;
+}
+.news-table__col:last-of-type {
+  width: 100%;
+}
+.news-table__title {
+  padding-left: 10px;
+  display: inline;
+}
+.news-table__table {
+  border-collapse: collapse;
+}
+.news-table__item {
+  border-bottom: 1px solid #e3e3e3;
+}
+.news-table__item:nth-child(odd) {
+  background: white;
+}
+.news-table__item:nth-child(even) {
+  background-color: #f5f5f5;
+}
+/*# sourceMappingURL=news-table.css.map */

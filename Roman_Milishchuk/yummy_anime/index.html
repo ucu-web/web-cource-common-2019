@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Смотреть аниме онлайн в хорошем качестве</title>
     <link rel="stylesheet" href="styles/main-header/main-header.css">
+    <link rel="stylesheet" href="styles/main-search/main-search.css">
+    <link rel="stylesheet" href="styles/ongoing-gallery/ongoing-gallery.css">
+    <link rel="stylesheet" href="styles/news-table/news-table.css">
     <link rel="stylesheet" href="styles/common.css">
 
     <!--<link rel="stylesheet" href="styles/old/index-grid.css">-->
@@ -48,159 +51,177 @@
 </header>
 
 <main class="container">
-    <section id="main-finder">
+    <section class="main-search">
         <form action="/find_anime">
-            <input id="find_anime" type="text" placeholder="Найти аниме по названию">
-            <button aria-label="search"></button>
+            <input class="main-search__anime-name" type="text" placeholder="Найти аниме по названию">
+            <button aria-label="search" class="main-search__search-button"></button>
         </form>
     </section>
 
-    <section id="ongoing_gallery">
-        <h2>АНИМЕ ЗИМНЕГО СЕЗОНА</h2>
-        <ul id="anime-slides">
-            <li>
+    <section class="ongoing-gallery">
+        <h2 class="ongoing-gallery__section-header">АНИМЕ ЗИМНЕГО СЕЗОНА</h2>
+        <ul class="ongoing-gallery__anime-slides">
+            <li class="anime-slides__item">
                 <a href="#">
-                    <figure>
-                        <img src="img/domekano.jpg">
-                        <figcaption>Домекано</figcaption>
+                    <figure class="anime-slides__anime-slide">
+                        <img class="anime-slides__poster" src="img/domekano.jpg">
+                        <figcaption class="anime-slides__anime-name">Домекано</figcaption>
                     </figure>
                 </a>
             </li>
-            <li>
+            <li class="anime-slides__item">
                 <a href="#">
-                    <figure>
-                        <img src="img/domekano.jpg">
-                        <figcaption>Домекано</figcaption>
+                    <figure class="anime-slides__anime-slide">
+                        <img class="anime-slides__poster" src="img/domekano.jpg">
+                        <figcaption class="anime-slides__anime-name">Домекано</figcaption>
                     </figure>
                 </a>
             </li>
-            <li>
+            <li class="anime-slides__item">
                 <a href="#">
-                    <figure>
-                        <img src="img/domekano.jpg">
-                        <figcaption>Домекано</figcaption>
+                    <figure class="anime-slides__anime-slide">
+                        <img class="anime-slides__poster" src="img/domekano.jpg">
+                        <figcaption class="anime-slides__anime-name">Домекано</figcaption>
                     </figure>
                 </a>
             </li>
-            <li>
+            <li class="anime-slides__item">
                 <a href="#">
-                    <figure>
-                        <img src="img/domekano.jpg">
-                        <figcaption>Домекано</figcaption>
+                    <figure class="anime-slides__anime-slide">
+                        <img class="anime-slides__poster" src="img/domekano.jpg">
+                        <figcaption class="anime-slides__anime-name">Домекано</figcaption>
                     </figure>
                 </a>
             </li>
-            <li>
+            <li class="anime-slides__item">
                 <a href="#">
-                    <figure>
-                        <img src="img/domekano.jpg">
-                        <figcaption>Домекано</figcaption>
+                    <figure class="anime-slides__anime-slide">
+                        <img class="anime-slides__poster" src="img/domekano.jpg">
+                        <figcaption class="anime-slides__anime-name">Домекано</figcaption>
                     </figure>
                 </a>
             </li>
-            <li>
+            <li class="anime-slides__item">
                 <a href="#">
-                    <figure>
-                        <img src="img/domekano.jpg">
-                        <figcaption>Домекано</figcaption>
+                    <figure class="anime-slides__anime-slide">
+                        <img class="anime-slides__poster" src="img/domekano.jpg">
+                        <figcaption class="anime-slides__anime-name">Домекано</figcaption>
                     </figure>
                 </a>
             </li>
-            <li>
+            <li class="anime-slides__item">
                 <a href="#">
-                    <figure>
-                        <img src="img/domekano.jpg">
-                        <figcaption>Домекано</figcaption>
+                    <figure class="anime-slides__anime-slide">
+                        <img class="anime-slides__poster" src="img/domekano.jpg">
+                        <figcaption class="anime-slides__anime-name">Домекано</figcaption>
                     </figure>
                 </a>
             </li>
         </ul>
     </section>
 
-    <section id="anime_updates">
-        <h2>ОБНОВЛЕНИЯ АНИМЕ</h2>
-        <table class="table">
-            <tr>
+    <section class="news-table">
+        <h2 class="news-table__section-header">ОБНОВЛЕНИЯ АНИМЕ</h2>
+        <table class="news-table__table">
+            <tr class="news-table__item">
                 <td>
-                    <time datetime="10-02-2019">10 Фев</time>
+                    <time datetime="10-02-2019" class="news-table__publication-date">10 Фев</time>
                 </td>
                 <td>
-                    <img src="img/poster_2.jpg">
+                    <img class="news-table__poster" src="img/poster_2.jpg">
                 </td>
-                <td>
-                    <h4>Бугипоп никогда не смеётся</h4>
+                <td class="news-table__new">
+                    <h4 class="news-table__title">Бугипоп никогда не смеётся</h4>
                     <span> - Добавлена 7-я серия с озвучкой Akari GROUP </span>
                 </td>
             </tr>
-            <tr>
+            <tr class="news-table__item">
                 <td>
-                    <time datetime="10-02-2019">10 Фев</time>
+                    <time datetime="10-02-2019" class="news-table__publication-date">10 Фев</time>
                 </td>
                 <td>
-                    <img src="img/poster_2.jpg">
+                    <img class="news-table__poster" src="img/poster_2.jpg">
                 </td>
-                <td>
-                    <h4>Бугипоп никогда не смеётся</h4>
+                <td class="news-table__new">
+                    <h4 class="news-table__title">Бугипоп никогда не смеётся</h4>
                     <span> - Добавлена 7-я серия с озвучкой Akari GROUP </span>
                 </td>
             </tr>
-            <tr>
+            <tr class="news-table__item">
                 <td>
-                    <time datetime="10-02-2019">10 Фев</time>
+                    <time datetime="10-02-2019" class="news-table__publication-date">10 Фев</time>
                 </td>
                 <td>
-                    <img src="img/poster_2.jpg">
+                    <img class="news-table__poster" src="img/poster_2.jpg">
                 </td>
-                <td>
-                    <h4>Бугипоп никогда не смеётся</h4>
+                <td class="news-table__new">
+                    <h4 class="news-table__title">Бугипоп никогда не смеётся</h4>
                     <span> - Добавлена 7-я серия с озвучкой Akari GROUP </span>
                 </td>
             </tr>
-            <tr>
+            <tr class="news-table__item">
                 <td>
-                    <time datetime="10-02-2019">10 Фев</time>
+                    <time datetime="10-02-2019" class="news-table__publication-date">10 Фев</time>
                 </td>
                 <td>
-                    <img src="img/poster_2.jpg">
+                    <img class="news-table__poster" src="img/poster_2.jpg">
                 </td>
-                <td>
-                    <h4>Бугипоп никогда не смеётся</h4>
+                <td class="news-table__new">
+                    <h4 class="news-table__title">Бугипоп никогда не смеётся</h4>
+                    <span> - Добавлена 7-я серия с озвучкой Akari GROUP </span>
+                </td>
+            </tr>
+            <tr class="news-table__item">
+                <td class="news-table__col">
+                    <time datetime="10-02-2019" class="news-table__publication-date">10 Фев</time>
+                </td>
+                <td class="news-table__col">
+                    <img class="news-table__poster" src="img/poster_2.jpg">
+                </td>
+                <td class="news-table__col">
+                    <h4 class="news-table__title">Бугипоп никогда не смеётся</h4>
                     <span> - Добавлена 7-я серия с озвучкой Akari GROUP </span>
                 </td>
             </tr>
         </table>
     </section>
-    <section id="news-summary">
-        <h2>НОВОСТИ</h2>
-        <table class="table" id="news-table">
-            <tr>
+    <section class="news-table">
+        <h2 class="news-table__section-header">НОВОСТИ</h2>
+        <table class="news-table__table">
+            <tr class="news-table__item">
                 <td>
-                    <time datetime="03-02-2019">3 Фев</time>
+                    <time datetime="03-02-2019" class="news-table__publication-date">3 Фев</time>
                 </td>
-                <td><h4>Итагаки Син - о ноющих ранах аниме-индустрии</h4></td>
+                <td class="news-table__col"><h4>Итагаки Син - о ноющих ранах аниме-индустрии</h4></td>
             </tr>
-            <tr>
+            <tr class="news-table__item">
                 <td>
-                    <time datetime="03-02-2019">3 Фев</time>
+                    <time datetime="03-02-2019" class="news-table__publication-date">3 Фев</time>
                 </td>
-                <td><h4>Итагаки Син - о ноющих ранах аниме-индустрии</h4></td>
+                <td class="news-table__col"><h4>Итагаки Син - о ноющих ранах аниме-индустрии</h4></td>
             </tr>
-            <tr>
+            <tr class="news-table__item">
                 <td>
-                    <time datetime="03-02-2019">3 Фев</time>
+                    <time datetime="03-02-2019" class="news-table__publication-date">3 Фев</time>
                 </td>
-                <td><h4>Итагаки Син - о ноющих ранах аниме-индустрии</h4></td>
+                <td class="news-table__col"><h4>Итагаки Син - о ноющих ранах аниме-индустрии</h4></td>
             </tr>
-            <tr>
+            <tr class="news-table__item">
                 <td>
-                    <time datetime="03-02-2019">3 Фев</time>
+                    <time datetime="03-02-2019" class="news-table__publication-date">3 Фев</time>
                 </td>
-                <td><h4>Итагаки Син - о ноющих ранах аниме-индустрии</h4></td>
+                <td class="news-table__col"><h4>Итагаки Син - о ноющих ранах аниме-индустрии</h4></td>
+            </tr>
+            <tr class="news-table__item">
+                <td>
+                    <time datetime="03-02-2019" class="news-table__publication-date">3 Фев</time>
+                </td>
+                <td class="news-table__col"><h4>Итагаки Син - о ноющих ранах аниме-индустрии</h4></td>
             </tr>
         </table>
     </section>
 
-    <section id="last_videos">
+    <section class="last_videos">
         <h2>Последнее в видеоблогах </h2>
         <ul id="videos">
             <li>
@@ -270,7 +291,7 @@
         </ul>
     </section>
 
-    <section id="new-on-site">
+    <section class="new-on-site">
         <h2>НОВОЕ НА САЙТЕ</h2>
         <div id="new-anime-list">
             <article class="anime">
@@ -435,7 +456,7 @@
             <button class="button"> Показать еще 14</button>
         </div>
     </section>
-    <section id="find-filter">
+    <section class="find-filter">
         <h2>ФИЛЬТР АНИМЕ</h2>
         <form action="find_filtered_anime">
             <ul id="filter-list">
@@ -514,7 +535,7 @@
         </form>
     </section>
 
-    <aside id="ads">
+    <aside class="ads">
 
     </aside>
 </main>
