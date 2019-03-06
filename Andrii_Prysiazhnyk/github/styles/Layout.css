@@ -1,6 +1,5 @@
 .Layout {
   display: flex;
-  height: 1000px;
 }
 .Layout__navigation {
   max-width: 350px;

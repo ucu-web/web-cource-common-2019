@@ -27,20 +27,24 @@
     fill: #24292e;
   }
 
+  &__star-span {
+    font-weight: 600;
+    font-size: $small-font;
+  }
+
   &__name {
-    padding-right: 60px;
-    font-size: 16px;
+    font-size: $big-font;
     margin: 4px 0;
   }
 
   &__information {
-    color: #6a737d;
+    color: $grey-color;
     margin: 4px 0;
   }
 
   &__creation-time {
-    font-size: 12px;
-    color: #6a737d;
+    font-size: $small-font;
+    color: $grey-color;
   }
 
   &__link {

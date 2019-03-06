@@ -5,13 +5,15 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/body-styles.css">
     <link rel="stylesheet" href="styles/Header.css">
     <link rel="stylesheet" href="styles/General-navigation.css">
     <link rel="stylesheet" href="styles/Profile-navigation.css">
     <link rel="stylesheet" href="styles/Layout.css">
     <link rel="stylesheet" href="styles/News.css">
     <link rel="stylesheet" href="styles/Project.css">
+    <link rel="stylesheet" href="styles/Sidebar.css">
+    <link rel="stylesheet" href="styles/Repository-block.css">
     <title>Document</title>
 </head>
 <body>
@@ -91,7 +93,7 @@
                                 <svg class="Project__star-icon" version="1.1">
                                     <path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path>
                                 </svg>
-                                <span class="Project__">Star</span>
+                                <span class="Project__star-span">Star</span>
                             </button>
                         </form>
                         <h4 class="Project__name">
@@ -106,9 +108,168 @@
                     </div>
                 </div>
             </article>
+            <article class="News News--underscored">
+                <a class="News__user-link" href="#">
+                    <img class="News__user-photo" alt="User's photo" src="images/user.jpg">
+                </a>
+                <div class="News__content">
+                    <p class="News__post-info">
+                        <a class="News__post-info-link" href="#">olekscode</a> created a repository
+                        <a class="News__post-info-link" href="#">olekscode/NgramModel</a>
+                        <time class="News__post-time" datetime="12-01-2019">on 12 Jan</time>
+                    </p>
+                    <div class="Project">
+                        <form class="Project__star-form">
+                            <button class="Project__star-button" type="button">
+                                <svg class="Project__star-icon" version="1.1">
+                                    <path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path>
+                                </svg>
+                                <span class="Project__star-span">Star</span>
+                            </button>
+                        </form>
+                        <h4 class="Project__name">
+                            <a class="Project__link" href="#">olekscode/NgramModel</a>
+                        </h4>
+                        <p class="Project__information">
+                            Ngram language model implemented in Pharo
+                        </p>
+                        <footer>
+                            <time class="Project__creation-time" datetime="21-01-2019">Updated Jan 21</time>
+                        </footer>
+                    </div>
+                </div>
+            </article>
+            <article class="News News--underscored">
+                <a class="News__user-link" href="#">
+                    <img class="News__user-photo" alt="User's photo" src="images/user.jpg">
+                </a>
+                <div class="News__content">
+                    <p class="News__post-info">
+                        <a class="News__post-info-link" href="#">olekscode</a> created a repository
+                        <a class="News__post-info-link" href="#">olekscode/CodeTokenizer</a>
+                        <time class="News__post-time" datetime="10-01-2019">on 10 Jan</time>
+                    </p>
+                    <div class="Project">
+                        <form class="Project__star-form">
+                            <button class="Project__star-button" type="button">
+                                <svg class="Project__star-icon" version="1.1">
+                                    <path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path>
+                                </svg>
+                                <span class="Project__star-span">Star</span>
+                            </button>
+                        </form>
+                        <h4 class="Project__name">
+                            <a class="Project__link" href="#">olekscode/CodeTokenizer</a>
+                        </h4>
+                        <p class="Project__information">
+                            Source code and identifier name tokenizer for Pharo
+                        </p>
+                        <footer>
+                            <time class="Project__creation-time" datetime="11-01-2019">Updated Jan 11</time>
+                        </footer>
+                    </div>
+                </div>
+            </article>
+            <article class="News News--underscored">
+                <a class="News__user-link" href="#">
+                    <img class="News__user-photo" alt="User's photo" src="images/user.jpg">
+                </a>
+                <div class="News__content">
+                    <p class="News__post-info">
+                        <a class="News__post-info-link" href="#">olekscode</a> created a repository
+                        <a class="News__post-info-link" href="#">PolyMathOrg/project-proposals</a>
+                        <time class="News__post-time" datetime="27-12-2018">on 27 Dec 2018</time>
+                    </p>
+                    <div class="Project">
+                        <form class="Project__star-form">
+                            <button class="Project__star-button" type="button">
+                                <svg class="Project__star-icon" version="1.1">
+                                    <path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path>
+                                </svg>
+                                <span class="Project__star-span">Star</span>
+                            </button>
+                        </form>
+                        <h4 class="Project__name">
+                            <a class="Project__link" href="#">PolyMathOrg/project-proposals</a>
+                        </h4>
+                        <p class="Project__information">
+                            Project proposals and idea list for PolyMath community
+                        </p>
+                        <footer>
+                            <time class="Project__creation-time" datetime="27-12-2018">Updated Dec 27</time>
+                        </footer>
+                    </div>
+                </div>
+            </article>
         </main>
         <aside class="Layout__sidebar">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias, aliquam, culpa esse excepturi illo maiores nobis non quod ratione, reiciendis saepe unde? Magnam magni, placeat recusandae voluptate voluptatibus voluptatum?
+            <div class="Sidebar">
+                <h4 class="Sidebar__title">Discover repositories</h4>
+                <div class="Sidebar__block">
+                    <div class="Repository-block">
+                        <h5 class="Repository-block__title">
+                            <a class="Repository-block__title-link" href="#">prettier/prettie</a>
+                        </h5>
+                        <p class="Repository-block__description">
+                            Prettier is an opinionated code formatter.
+                        </p>
+                        <footer>
+                            <span class="Repository-block__language Repository-block__language--circle Repository-block__language--orange-circle">
+                                Go
+                            </span>
+                            <span class="Repository-block__subscribers">
+                                <svg class="Repository-block__star-icon" version="1.1">
+                                    <path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path>
+                                </svg>
+                                959
+                            </span>
+                        </footer>
+                    </div>
+                </div>
+                <div class="Sidebar__block">
+                    <div class="Repository-block">
+                        <h5 class="Repository-block__title">
+                            <a class="Repository-block__title-link" href="#">symfony/symfony</a>
+                        </h5>
+                        <p class="Repository-block__description">
+                            The Symfony PHP framework
+                        </p>
+                        <footer>
+                            <span class="Repository-block__language Repository-block__language--circle Repository-block__language--blue-circle">
+                                CSS
+                            </span>
+                            <span class="Repository-block__subscribers">
+                                <svg class="Repository-block__star-icon" version="1.1">
+                                    <path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path>
+                                </svg>
+                                131k
+                            </span>
+                        </footer>
+                    </div>
+                </div>
+                <div class="Sidebar__block">
+                    <div class="Repository-block">
+                        <h5 class="Repository-block__title">
+                            <a class="Repository-block__title-link" href="#">tesseract-ocr/tesseract</a>
+                        </h5>
+                        <p class="Repository-block__description">
+                            Tesseract Open Source OCR Engine (main repository)
+                        </p>
+                        <footer>
+                            <span class="Repository-block__language Repository-block__language--circle Repository-block__language--yellow-circle">
+                                Go
+                            </span>
+                            <span class="Repository-block__subscribers">
+                                <svg class="Repository-block__star-icon" version="1.1">
+                                    <path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path>
+                                </svg>
+                                14.7k
+                            </span>
+                        </footer>
+                    </div>
+                </div>
+                <a class="Sidebar__footer-link" href="#">Go to explore</a>
+            </div>
         </aside>
     </div>
 </body>

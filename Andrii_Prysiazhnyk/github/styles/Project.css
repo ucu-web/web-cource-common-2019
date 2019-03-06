@@ -32,8 +32,11 @@
   height: 16px;
   fill: #24292e;
 }
+.Project__star-span {
+  font-weight: 600;
+  font-size: 12px;
+}
 .Project__name {
-  padding-right: 60px;
   font-size: 16px;
   margin: 4px 0;
 }

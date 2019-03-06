@@ -1,3 +1,9 @@
+$small-font: 12px;
+$medium-font: 14px;
+$big-font: 16px;
+$grey-color: #6a737d;
+$blue-color: #0366d6;
+
 %basic-link {
   text-decoration: none;
   color: black;
@@ -5,7 +11,7 @@
 }
 
 %basic-link-hover {
-  color: #0366d6;
+  color: $blue-color;
 }
 
 %underscored {
