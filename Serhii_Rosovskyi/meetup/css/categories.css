@@ -1,0 +1,24 @@
+.categories__particular-category {
+    width: 269px;
+    height: 207px;
+    display: inline-block;
+}
+
+.categories__particular-category img {
+    width: 253px;
+    height: 160px;
+    border-radius: 6px;
+    margin-bottom: 5px;
+}
+
+.categories__title {
+    font-size: 24px;
+    line-height: 1.1;
+    color: #2e3e48;
+}
+
+.categories__particular-category label {
+    color: #2e3e48;
+    font-weight: 600;
+}
+

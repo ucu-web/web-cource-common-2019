@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/Layout.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/top-bar.css">
+    <link rel="stylesheet" href="css/join-meetup.css">
+    <link rel="stylesheet" href="css/useful-tags.css">
+    <link rel="stylesheet" href="css/near-popular-places.css">
+    <link rel="stylesheet" href="css/categories.css">
+    <link rel="stylesheet" href="css/how-meetup-works.css">
+    <link rel="stylesheet" href="css/download-app.css">
+    <link rel="stylesheet" href="css/bottom-menu.css">
+    <link rel="stylesheet" href="css/politics.css">
+</head>
+<body>
+<div class="Layout">
+    <header class="Layout__top-bar">
+        <a href="#" class="top-bar__logo"><img src="https://secure.meetup.com/s/img/0/logo/svg/logo--script.svg"
+                                               height="44" width="123"></a>
+        <div class="top-bar__sign-in-up">
+            <a href="#"><span class="top-bar__create-group">Создать группу</span></a>
+            <a href="#">Войти</a>
+            <a href="#">Зарегистрироваться</a>
+        </div>
+    </header>
+
+    <section class="Layout__join-meetup">
+        <video autoplay muted loop class="join-meetup__video">
+            <source src="img/videoplayback.mp4">
+        </video>
+        <div class="join-meetup__data">
+            <h1 class="join-meetup__title">Перед вами открыт весь мир</h1>
+            <h2 class="join-meetup_additional-info">Вступайте в группы, чтобы знакомиться с людьми, пробовать новое и
+            заниматься тем, что вы любите.</h2>
+            <div class="block">
+                <a href="#" class="join-meetup__join-button">Присоединайтесь к Meetup</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="Layout__useful-tags">
+        <div class="useful-tags__top">
+            <a href="#" class="useful-tags__tag">Присоединяйтесь к движению</a>
+            <a href="#" class="useful-tags__tag">Учитесь готовить</a>
+            <a href="#" class="useful-tags__tag">Готовьтесь к марафону</a>
+            <a href="#" class="useful-tags__tag">Создавайте мобильные приложения</a>
+        </div>
+        <div class="useful-tags__bottom">
+            <a href="#" class="useful-tags__tag">Путешествуйте по горам</a>
+            <a href="#" class="useful-tags__tag">Практикуйтесь в иностранных языках</a>
+        </div>
+    </section>
+
+    <section class="Layout__near-popular-places">
+        <div class="wrapper">
+            <div class="near-popular-places__top-text">
+                <h1 class="near-popular-places__title">Популярные мероприятия поблизости</h1>
+                <a href="#" class="near-popular-places__show-all">Показать все</a>
+            </div>
+            <section class="near-popular-places__all-event">
+                <article class="all-events__particular-event">
+                    <img src="https://secure.meetupstatic.com/photo_api/event/rx1100x800/dt24a601xbdb202/sgf35e163ed2/467158538.jpeg">
+                    <div class="particular-event__date">
+                        <time>
+                            <span class="date__day">7</span><br>
+                            <span class="date__month">МАРТ</span>
+                        </time>
+                    </div>
+                    <a href="#" class="particular-event__info">
+                        <h3>четверг, 07 марта, 19:30</h3>
+                        <h2>Speed-Meeting at Jeffrey's</h2>
+                    </a>
+                </article>
+                <article class="all-events__particular-event">
+                    <img src="https://secure.meetupstatic.com/photo_api/event/rx1100x800/dt000ddfxff646a/sgc348cff06b/445267299.jpeg">
+                    <div class="particular-event__date">
+                        <time>
+                            <span class="date__day">7</span><br>
+                            <span class="date__month">МАРТ</span>
+                        </time>
+                    </div>
+                    <a href="#" class="particular-event__info">
+                        <h3>четверг, 07 марта, 20:00</h3>
+                        <h2>Couchsurfing's THIRSTDAY!</h2>
+                    </a>
+                </article>
+                <article class="all-events__particular-event">
+                    <img src="https://secure.meetupstatic.com/photo_api/event/rx1100x800/dt000ddfxff646a/sgc348cff06b/448085522.jpeg">
+                    <div class="particular-event__date">
+                        <time>
+                            <span class="date__day">7</span><br>
+                            <span class="date__month">МАРТ</span>
+                        </time>
+                    </div>
+                    <a href="#" class="particular-event__info">
+                        <h3>четверг, 07 марта, 21:30</h3>
+                        <h2>LIVE Music @ Mendeleev Bar</h2>
+                        <div class="particular-event__organizer">
+                            <div class="organizer__image">
+
+                            </div>
+                            <p>Организовано Evgeny Z.</p>
+                            <p>От <strong>Open Source Networking U..</strong></p>
+                        </div>
+                    </a>
+                </article>
+            </section>
+        </div>
+    </section>
+
+    <section class="Layout__categories">
+        <div class="wrapper">
+            <h2 class="categories__title">Изучать по категориям</h2>
+            <article class="categories__particular-category">
+                <img src="https://secure.meetupstatic.com/photos/event/2/e/a/7/600_450131943.jpeg">
+                <label>Активный отдых и приключения</label>
+            </article>
+            <article class="categories__particular-category">
+                <img src="https://secure.meetupstatic.com/photos/event/2/e/a/d/600_450131949.jpeg">
+                <label>Технологии</label>
+            </article>
+            <article class="categories__particular-category">
+                <img src="https://secure.meetupstatic.com/photos/event/2/e/9/c/600_450131932.jpeg">
+                <label>Семья</label>
+            </article>
+            <article class="categories__particular-category">
+                <img src="https://secure.meetupstatic.com/photos/event/2/e/a/e/600_450131950.jpeg">
+                <label>Здоровье и благополучие</label>
+            </article>
+
+            <article class="categories__particular-category">
+                <img src="https://secure.meetupstatic.com/photos/event/2/e/a/c/600_450131948.jpeg">
+                <label>Спорт и фитнес</label>
+            </article>
+            <article class="categories__particular-category">
+                <img src="https://secure.meetupstatic.com/photos/event/2/e/9/b/600_450131931.jpeg">
+                <label>Обучение</label>
+            </article>
+            <article class="categories__particular-category">
+                <img src="https://secure.meetupstatic.com/photos/event/2/e/a/a/600_450131946.jpeg">
+                <label>Фотография</label>
+            </article>
+            <article class="categories__particular-category">
+                <img src="https://secure.meetupstatic.com/photos/event/2/e/a/1/600_450131937.jpeg">
+                <label>Еда и напитки</label>
+            </article>
+
+            <article class="categories__particular-category">
+                <img src="https://secure.meetupstatic.com/photos/event/2/e/a/f/600_450131951.jpeg">
+                <label>Писательство</label>
+            </article>
+            <article class="categories__particular-category">
+                <img src="https://secure.meetupstatic.com/photos/event/2/e/a/3/600_450131939.jpeg">
+                <label>Язык и культура</label>
+            </article>
+            <article class="categories__particular-category">
+                <img src="https://secure.meetupstatic.com/photos/event/2/e/a/6/600_450131942.jpeg">
+                <label>Музыка</label>
+            </article>
+            <article class="categories__particular-category">
+                <img src="https://secure.meetupstatic.com/photos/event/2/e/a/5/600_450131941.jpeg">
+                <label>Движения</label>
+            </article>
+
+            <article class="categories__particular-category">
+                <img src="https://secure.meetupstatic.com/photos/event/2/e/a/4/600_450131940.jpeg">
+                <label>ЛГБТК</label>
+            </article>
+            <article class="categories__particular-category">
+                <img src="https://secure.meetupstatic.com/photos/event/4/8/3/f/600_450858495.jpeg">
+                <label>Фильмы</label>
+            </article>
+            <article class="categories__particular-category">
+                <img src="https://secure.meetupstatic.com/photos/event/2/e/a/2/600_450131938.jpeg">
+                <label>Научная фантастика и игры</label>
+            </article>
+            <article class="categories__particular-category">
+                <img src="https://secure.meetupstatic.com/photos/event/2/e/9/5/600_450131925.jpeg">
+                <label>Верования</label>
+            </article>
+
+            <article class="categories__particular-category">
+                <img src="https://secure.meetupstatic.com/photos/event/2/e/8/8/600_450131912.jpeg">
+                <label>Искусство</label>
+            </article>
+            <article class="categories__particular-category">
+                <img src="https://secure.meetupstatic.com/photos/event/2/e/9/6/600_450131926.jpeg">
+                <label>Книжные клубы</label>
+            </article>
+            <article class="categories__particular-category">
+                <img src="https://secure.meetupstatic.com/photos/event/2/e/9/a/600_450131930.jpeg">
+                <label>Танцы</label>
+            </article>
+            <article class="categories__particular-category">
+                <img src="https://secure.meetupstatic.com/photos/event/2/e/a/9/600_450131945.jpeg">
+                <label>Домашние любимцы</label>
+            </article>
+
+            <article class="categories__particular-category">
+                <img src="https://secure.meetupstatic.com/photos/event/2/e/9/9/600_450131929.jpeg">
+                <label>Хобби и ремёсла</label>
+            </article>
+            <article class="categories__particular-category">
+                <img src="https://secure.meetupstatic.com/photos/event/2/e/9/e/600_450131934.jpeg">
+                <label>Мода и красота</label>
+            </article>
+            <article class="categories__particular-category">
+                <img src="https://secure.meetupstatic.com/photos/event/2/e/a/b/600_450131947.jpeg">
+                <label>Социальные вопросы</label>
+            </article>
+            <article class="categories__particular-category">
+                <img src="https://secure.meetupstatic.com/photos/event/2/e/9/7/600_450131927.jpeg">
+                <label>Карьера и бизнес</label>
+            </article>
+        </div>
+    </section>
+
+    <section class="Layout__how-meetup-works">
+        <div class="wrapper">
+            <h1 class="how-meetup-works__title">Как работает Meetup</h1>
+            <div class="how-meetup-works__groups">
+                <article class="how-meetup-works__group">
+                    <h3 class="group__title">Находите группы</h3>
+                    <p class="group__info">Узнайте, кто проводит мероприятия, посвященные вашим любимым темам.</p>
+                    <a href="#" class="group__connect-to-meetup">Присоединяйтесь к Meetup</a>
+                </article>
+                <article class="how-meetup-works__group">
+                    <h3 class="group__title">Создайте группу</h3>
+                    <p class="group__info">Создав собственную группу, вы сможете приглашать людей из многомиллионного
+                    сообщества.</p>
+                    <a href="#" class="group__connect-to-meetup">Приступить</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="Layout__download-app">
+        <div class="wrapper">
+            <div class="download-app__text-part">
+                <h1 class="download-app__title">Скачать приложение</h1>
+                <a href="#" class="download-app__read-more">Подробнее</a>
+                <a href="#" class="download-app__online-stores"><img src="https://www.meetup.com/mu_static/ru-RU/download_ru.b85d892d.png"></a>
+                <a href="#" class="download-app__online-stores"><img src="https://www.meetup.com/mu_static/ru-RU/download_ru.cf6dad40.png" alt=""></a>
+            </div>
+            <div class="download-app__image">
+                <img src="https://www.meetup.com/mu_static/ru-RU/app_download.1a368bb6.png" alt="Phone app">
+            </div>
+        </div>
+    </section>
+
+    <footer class="Layout__bottom-menu">
+        <div class="wrapper">
+            <div class="bottom-menu__create-group">
+                <a href="#">Создать группу</a>
+            </div>
+            <div class="create-group__navigation-menu">
+                <ul class="navigation-menu__main-list">
+                    <li>
+                        <ul class="main-list__pre-list">
+                            <li><span class="main-list__title">Ваша учетная запись</span></li>
+                            <li><a href="#">Зарегистрироваться</a></li>
+                            <li><a href="#">Войти</a></li>
+                            <li><a href="#">Помощь</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <ul class="main-list__pre-list">
+                            <li><span class="main-list__title">Найти</span></li>
+                            <li><a href="#">Группы</a></li>
+                            <li><a href="#">Темы</a></li>
+                            <li><a href="#">Города</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <ul class="main-list__pre-list">
+                            <li><span class="main-list__title">Meetup</span></li>
+                            <li><a href="#">Информация</a></li>
+                            <li><a href="#">Meetup Pro</a></li>
+                            <li><a href="#">Карьера</a></li>
+                            <li><a href="#">Приложения</a></li>
+                            <li><a href="#">API</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <ul class="main-list__pre-list">
+                            <li><span class="main-list__title">Подписаться</span></li>
+                            <ul class="pre-list__messangers-list">
+                                <li><a href="#"><svg viewBox="0 0 24 24" class="messangers-list__icon" width="100%" height="100%"><title>external-facebookboxed</title><path d="M19.778 2H4.222C3 2 2 3 2 4.222v15.556C2 21 3 22 4.222 22H12v-7.778H9.778v-2.75H12V9.194c0-2.404 1.347-4.093 4.184-4.093l2.004.002v2.895h-1.33c-1.105 0-1.525.829-1.525 1.598v1.877h2.854l-.631 2.75h-2.223V22h4.445A2.228 2.228 0 0 0 22 19.778V4.222C22 3 21 2 19.778 2z" fill-rule="nonzero"></path></svg></a></li>
+                                <li><a href="#"><svg viewBox="0 0 24 24" class="messangers-list__icon" width="100%" height="100%"><title>external-twitter</title><path d="M19.952 7.983c.009.173.012.349.012.522C19.964 13.845 15.837 20 8.29 20c-2.318 0-4.474-.669-6.29-1.816.322.038.648.057.978.057a8.318 8.318 0 0 0 5.096-1.728c-1.795-.034-3.311-1.2-3.833-2.805a4.258 4.258 0 0 0 1.854-.07c-1.878-.372-3.292-2.004-3.292-3.962v-.05a4.143 4.143 0 0 0 1.859.506 4.023 4.023 0 0 1-1.826-3.364c0-.74.202-1.434.556-2.03a11.709 11.709 0 0 0 8.458 4.22 4.02 4.02 0 0 1-.105-.92C11.745 5.807 13.58 4 15.847 4c1.18 0 2.246.489 2.995 1.274a8.343 8.343 0 0 0 2.606-.98 4.066 4.066 0 0 1-1.805 2.235A8.309 8.309 0 0 0 22 5.893a8.216 8.216 0 0 1-2.048 2.09z" fill-rule="nonzero"></path></svg></a></li>
+                                <li><a href="#"><svg viewBox="0 0 24 24" class="messangers-list__icon" width="100%" height="100%"><title>external-youtube</title><path d="M12 4C2.172 4 2 4.874 2 11.7c0 6.826.172 7.7 10 7.7s10-.874 10-7.7C22 4.874 21.828 4 12 4zm3.205 8.034l-4.49 2.096c-.393.182-.715-.022-.715-.456V9.726c0-.433.322-.638.715-.456l4.49 2.096c.393.184.393.484 0 .668z" fill-rule="nonzero"></path></svg></a></li>
+                                <li><a href="#"><svg viewBox="0 0 24 24" class="messangers-list__icon" width="100%" height="100%"><title>external-instagram</title><path d="M20.151 16.046c-.043.978-.207 1.509-.344 1.86-.182.468-.398.801-.75 1.151a3.08 3.08 0 0 1-1.15.75c-.353.138-.884.301-1.86.346-1.056.047-1.373.057-4.047.057-2.675 0-2.991-.01-4.047-.057-.977-.045-1.507-.208-1.86-.346a3.076 3.076 0 0 1-1.151-.75 3.102 3.102 0 0 1-.75-1.15c-.137-.352-.3-.883-.344-1.86-.049-1.057-.059-1.372-.059-4.046 0-2.675.01-2.992.059-4.048.045-.977.207-1.507.345-1.86.181-.468.399-.8.749-1.15.35-.352.684-.568 1.152-.75.352-.137.882-.3 1.859-.345C9.009 3.8 9.326 3.79 12 3.79c2.674 0 2.99.01 4.046.058.977.045 1.508.208 1.861.344.467.183.8.4 1.15.75.352.35.568.683.75 1.152.137.352.3.882.344 1.859.05 1.056.058 1.373.058 4.048 0 2.674-.009 2.989-.058 4.045m1.788-8.169c-.047-1.065-.217-1.792-.465-2.427a4.894 4.894 0 0 0-1.153-1.771 4.894 4.894 0 0 0-1.77-1.153c-.637-.248-1.365-.417-2.428-.465C15.057 2.012 14.716 2 12 2s-3.056.011-4.123.06c-1.064.048-1.79.217-2.428.465a4.894 4.894 0 0 0-1.77 1.153 4.883 4.883 0 0 0-1.154 1.77c-.247.636-.416 1.363-.465 2.428C2.011 8.944 2 9.284 2 12.001c0 2.715.011 3.055.06 4.123.049 1.063.218 1.79.465 2.427a4.89 4.89 0 0 0 1.154 1.77 4.908 4.908 0 0 0 1.77 1.154c.637.248 1.364.417 2.428.465 1.067.049 1.407.06 4.123.06s3.057-.011 4.123-.06c1.063-.048 1.79-.217 2.427-.465a4.908 4.908 0 0 0 1.771-1.154 4.901 4.901 0 0 0 1.153-1.77c.248-.637.418-1.364.465-2.427.05-1.068.061-1.408.061-4.123 0-2.717-.011-3.057-.06-4.124m-3.413-1.206a1.198 1.198 0 1 1-2.397-.001 1.198 1.198 0 0 1 2.397.001M12 15.342a3.342 3.342 0 1 1 0-6.684 3.342 3.342 0 0 1 0 6.684m0-8.474a5.132 5.132 0 1 0 0 10.264 5.132 5.132 0 0 0 0-10.264" fill-rule="evenodd"></path></svg></a></li>
+                                <li><a href="#"><svg viewBox="0 0 24 24" class="messangers-list__icon" width="100%" height="100%"><title>external-medium</title><path d="M8.667 20.328c0 .421-.227.672-.549.672a.845.845 0 0 1-.374-.098l-5.19-2.606c-.305-.153-.554-.559-.554-.9V4.619c0-.337.181-.537.439-.537.092 0 .193.026.3.079l.181.091.003.001 5.719 2.872c.01.005.017.014.025.022v13.181zm5.993-15.44l.349-.568a.69.69 0 0 1 .878-.252l6.033 3.03h.001l.006.003c.004.002.004.007.008.01.03.022.043.063.022.096l-6.008 9.806-.613 1.001-3.98-7.73 3.304-5.396zM9.62 15.148v-6.16l4.277 8.308-3.847-1.932-.43-.216zM22 20.328c0 .396-.237.621-.585.621-.155 0-.334-.045-.523-.14l-.86-.432-3.846-1.932L22 8.956v11.372z" fill-rule="nonzero"></path></svg></a></li>
+                            </ul>
+                            <li>
+                                <div class="selectWrapper">
+                                    <select name="languagePicker" id="languagePicker" class="select--reset" aria-invalid="false">
+                                        <option value="en-US">English</option><option value="de-DE">Deutsch</option>
+                                        <option value="en-AU">English (Australia)</option><option value="es">Español</option>
+                                        <option value="es-ES">Español (España)</option><option value="fr-FR">Français</option>
+                                        <option value="it-IT">Italiano</option><option value="ja-JP">日本語</option>
+                                        <option value="ko-KR">한국어</option><option value="nl-NL">Nederlands</option>
+                                        <option value="pt-BR">Português</option><option value="pl-PL">Polski</option>
+                                        <option selected="" value="ru-RU">Русский</option><option value="th-TH">ไทย</option>
+                                        <option value="tr-TR">Türkçe</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#" class="download-app__online-stores"><img src="https://www.meetup.com/mu_static/ru-RU/download_ru.b85d892d.png"></a>
+                                <a href="#" class="download-app__online-stores"><img src="https://www.meetup.com/mu_static/ru-RU/download_ru.cf6dad40.png" alt=""></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <aside class="Layout__politics">
+        <div class="wrapper">
+            <ul class="politics__company">
+                <li class="company__name-year">© Meetup 2019</li>
+                <li data-separator="·">Meetup находится в полной собственности дочерней компании WeWork Companies Inc.</li>
+            </ul>
+
+            <ul class="politics__user">
+                <li><a href="#" class="user__after">Пользовательское соглашение</a></li>
+                <li><a href="#" class="user__after">Политика конфиденциальности</a></li>
+                <li><a href="#">Политика в отношении файлов cookie</a></li>
+            </ul>
+        </div>
+    </aside>
+</div>
+</body>
+</html>

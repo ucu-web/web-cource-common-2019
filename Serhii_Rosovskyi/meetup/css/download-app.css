@@ -1,0 +1,45 @@
+.download-app__image {
+    width: 230px;
+    height: 300px;
+    display: inline-block;
+}
+
+.download-app__image img {
+    width: 230px;
+    height: 300px;
+}
+
+.download-app__text-part {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 100px;
+}
+
+.download-app__image {
+    padding-right: 100px;
+}
+
+.download-app__title {
+    font-weight: 600;
+    font-size: 32px;
+    color: #2e3e48;
+    margin: 0;
+}
+
+.download-app__read-more {
+    font-weight: 500;
+    color: #00a2c7;
+    text-align: left;
+    text-decoration: none;
+    display: block;
+}
+
+.download-app__online-stores {
+    margin-top: 40px;
+    display: inline-block;
+}
+
+.download-app__online-stores img {
+    width: 160px;
+    height: 48px;
+}

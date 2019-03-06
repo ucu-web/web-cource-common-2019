@@ -1,0 +1,89 @@
+.Layout {
+    display: grid;
+    grid-template-rows: 85px 460px 121px 466px 1522px 351px 320px 492px 108px;
+}
+
+.Layout__top-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border-bottom: 1px solid lightgrey;
+}
+
+.Layout__join-meetup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 460px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.Layout__useful-tags {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(46,62,72,.12);
+}
+
+.Layout__near-popular-places {
+    height: 466px;
+}
+
+.Layout__near-popular-places .wrapper {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.Layout__categories {
+    padding: 80px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.Layout__how-meetup-works {
+    background: #0f1721;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.Layout__download-app {
+    background: #fff;
+}
+
+
+.Layout__download-app .wrapper {
+    max-width: 1060px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Layout__bottom-menu {
+    background: #353e48;
+}
+
+.Layout__bottom-menu .wrapper {
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Layout__politics {
+    background: #2f363f;
+}
+
+.Layout__politics .wrapper {
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+}

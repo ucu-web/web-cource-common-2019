@@ -1,0 +1,83 @@
+.bottom-menu__create-group {
+    height: 104px;
+    padding: 10px 0;
+    border-bottom: 1px solid hsla(0,0%,100%,.2);
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.bottom-menu__create-group a {
+    text-decoration: underline;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.45;
+}
+
+.bottom-menu__create-group a:hover {
+    text-decoration: none;
+}
+
+.navigation-menu__main-list {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation-menu__main-list ul {
+    list-style: none;
+}
+
+.navigation-menu__main-list > li {
+    vertical-align: top;
+    display: inline-block;
+}
+
+.main-list__pre-list {
+    padding-left: 0;
+    padding-right: 20px;
+    line-height: 3;
+}
+
+.main-list__title {
+    font-weight: 500;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+.main-list__pre-list a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: hsla(0,0%,100%,.7);
+}
+
+.pre-list__messangers-list {
+    padding-left: 0;
+}
+
+.pre-list__messangers-list li {
+    display: inline-block;
+    padding-right: 40px;
+}
+
+.messangers-list__icon {
+    width: 24px;
+    height: 24px;
+}
+
+.select--reset {
+    background: #0f1721;
+    border-color: hsla(0,0%,100%,.2);
+    color: #fff;
+    width: 100%!important;
+    padding-right: 40px;
+    height: 55px;
+    font-size: 16px;
+}
+
+footer .download-app__online-stores {
+    margin-top: 40px;
+}

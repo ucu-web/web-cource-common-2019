@@ -1,0 +1,32 @@
+.join-meetup__video {
+    position: absolute;
+    margin: 0 auto;
+    bottom: -300px;
+    width: 100%;
+}
+
+.join-meetup__data {
+    z-index: 10;
+}
+
+.join-meetup__title {
+    color: #fff;
+    font-size: 42px;
+    margin: 0;
+}
+
+.join-meetup_additional-info {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.join-meetup__join-button {
+    text-decoration: none;
+    color: white;
+    background: #f13a59;
+    padding: .75em 7em;
+    font-weight: 500;
+    border-radius: 4px;
+    margin-top: 36px;
+}

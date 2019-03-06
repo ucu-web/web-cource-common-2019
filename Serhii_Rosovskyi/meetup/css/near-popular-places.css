@@ -1,0 +1,93 @@
+.near-popular-places__top-text {
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.near-popular-places__title {
+    font-size: 24px;
+    line-height: 1.1;
+    color: #2e3e48;
+}
+
+.near-popular-places__show-all {
+    color: #00a2c7;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.near-popular-places__all-event {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.all-events__particular-event {
+    position: relative;
+    overflow: hidden;
+    width: 330px;
+    height: 354px;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+}
+
+.particular-event__date {
+    min-height: 36px;
+    min-width: 36px;
+    padding: 8px;
+    text-align: center;
+    background: #f6f7f8;
+    border-radius: 8px;
+    border: 1px solid rgba(46,62,72,.12);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.date__day {
+    color: red;
+    font-weight: 700;
+    font-size: 20px;
+    display: inline;
+}
+
+.date__month {
+    color: rgba(46,62,72,.6);
+    font-weight: 500;
+    text-transform: uppercase;
+    display: inline;
+    font-size: 12px;
+}
+
+.all-events__particular-event img {
+    height: 175px;
+    width: 330px;
+}
+
+.all-events__particular-event a {
+    text-decoration: none;
+}
+
+.all-events__particular-event h3 {
+    color: rgba(46,62,72,.6);
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.all-events__particular-event h2 {
+    height: 2.9em;
+    margin-top: 16px;
+    font-size: 20px;
+    color: #2e3e48;
+    font-weight: 600;
+}
+
+.particular-event__organizer {
+    height: 45px;
+    width: 45px;
+    background: url("https://secure.meetupstatic.com/photos/member/9/6/f/a/thumb_260918650.jpeg");
+    border-radius: 25px;
+}

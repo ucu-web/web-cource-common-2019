@@ -1,0 +1,26 @@
+.Layout__politics ul {
+    list-style: none;
+    padding: 0;
+}
+
+.Layout__politics li {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1.6;
+    color: hsla(0,0%,100%,0.7);
+}
+
+.company__name-year::after {
+    margin: 7px;
+    content: "·";
+}
+
+.politics__user a {
+    text-decoration: none;
+    color: hsla(0,0%,100%,0.7);
+}
+
+.user__after::after {
+    margin: 7px;
+    content: "·";
+}
