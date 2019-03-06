@@ -1,0 +1,80 @@
+h2 {
+    background: url("../img/snowflakes.jpg");
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    right: 15px;
+    top: 12px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    border-bottom: 3px solid #f66;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.hidden {
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+
+#main-finder input {
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #acadad;
+    padding: 15px 20px;
+    background: white;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 0.9rem;
+    height: 50px;
+}
+
+#main-finder button {
+    background: url(../img/sprite.png) -25px -24px no-repeat;
+    position: absolute;
+    top: 11px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    border: 0;
+}
+
+body > footer {
+    background: #333;
+    color: white;
+    width: 100%;
+    clear: both;
+    margin: 0;
+    height: auto;
+    padding: 10px 0;
+}
+
+body > footer p > span {
+    display: block;
+}
+
+body > footer p {
+    text-align: left;
+    margin: 0;
+    padding-bottom: 14px;
+}
+
+.address {
+    color: #3cce7b
+}
+
+.button {
+    background-color: #3cce7b;
+    padding: 6px 15px 7px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    border: none;
+    margin: 0 auto;
+}
+
+

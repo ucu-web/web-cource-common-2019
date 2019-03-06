@@ -1,0 +1,32 @@
+main.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "main-finder main-finder main-finder main-finder " "ongoing ongoing ongoing ongoing " "updates updates news news" "last-videos last-videos last-videos last-videos " "new-anime new-anime new-anime filter" "footer footer footer footer";
+  grid-column-gap: 20px;
+}
+#main-finder {
+  grid-area: main-finder;
+}
+#ongoing_gallery {
+  grid-area: ongoing;
+}
+#anime_updates {
+  grid-area: updates;
+}
+#news-summary {
+  grid-area: news;
+}
+#last_videos {
+  grid-area: last-videos;
+}
+#new-on-site {
+  grid-area: new-anime;
+}
+#find-filter {
+  grid-area: filter;
+}
+body > footer {
+  grid-area: footer;
+}
+/*# sourceMappingURL=Layout.css.map */

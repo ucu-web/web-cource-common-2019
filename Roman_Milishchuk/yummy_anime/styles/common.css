@@ -1,0 +1,33 @@
+body {
+    background: #e2e2e2;
+    font-size: 14px;
+    font-family: "open sans", "sans-serif";
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    text-align: center;
+}
+
+a.fa {
+    font-size: 24px;
+}
+
+.container {
+    max-width: 1300px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.container:after {
+    clear: both;
+    content: "";
+    visibility: hidden;
+    display: block;
+}
