@@ -1,0 +1,47 @@
+@import "./variables.scss";
+
+.social-menu {
+  position: absolute;
+  bottom: 0;
+  width: 256px;
+
+  display: flex;
+  flex-direction: column;
+
+  &__nav {
+    height: 32px;
+    border-top: 1px solid #e5e5e5;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  &__nav-button {
+    cursor: pointer;
+
+    width: 21px;
+    height: 21px;
+    margin: 6px 8px 10px;
+
+    opacity: .54;
+    background-color: #0000;
+    border: none;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__nav-button-hangouts-contacts {
+    background-image: url("../images/icons/contacts.png");
+  }
+  &__nav-button-hangouts-conversations {
+    background-image: url("../images/icons/hangouts.png");
+    background-position-y: -154px;
+    background-position-x: -5px;
+  }
+  &__nav-button-phone-calls {
+    background-image: url("../images/icons/hangouts.png");
+    background-position-y: -390px;
+  }
+}

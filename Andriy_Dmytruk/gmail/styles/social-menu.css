@@ -1,0 +1,48 @@
+:root {
+  --opaque: #0000;
+  --white-default: white;
+  --black-default: black;
+  --black: #202124;
+  --black-light: #3c4043;
+  --grey-dark: #5f6368;
+  --grey: #e5e5e5;
+  --grey-light: #e8eaed;
+  --grey-extra-light: #f7f7f7;
+  --black-default-opaque: rgba(0, 0, 0, 0.54);
+  --black-opaque: #2021240f;
+  --grey-opaque: #3332;
+  --red-light: #fce8e6;
+  --red: #d93025;
+  --blue: #1a73e8;
+  --green: #1e8e3e; }
+
+.social-menu {
+  position: absolute;
+  bottom: 0;
+  width: 256px;
+  display: flex;
+  flex-direction: column; }
+  .social-menu__nav {
+    height: 32px;
+    border-top: 1px solid #e5e5e5;
+    display: flex;
+    justify-content: center; }
+  .social-menu__nav-button {
+    cursor: pointer;
+    width: 21px;
+    height: 21px;
+    margin: 6px 8px 10px;
+    opacity: .54;
+    background-color: #0000;
+    border: none; }
+    .social-menu__nav-button:hover {
+      opacity: 1; }
+  .social-menu__nav-button-hangouts-contacts {
+    background-image: url("../images/icons/contacts.png"); }
+  .social-menu__nav-button-hangouts-conversations {
+    background-image: url("../images/icons/hangouts.png");
+    background-position-y: -154px;
+    background-position-x: -5px; }
+  .social-menu__nav-button-phone-calls {
+    background-image: url("../images/icons/hangouts.png");
+    background-position-y: -390px; }

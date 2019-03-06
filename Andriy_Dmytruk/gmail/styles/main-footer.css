@@ -1,0 +1,20 @@
+.main-footer {
+  margin: 16px;
+  color: #5f6368;
+  font-size: 12px;
+  line-height: 20px;
+  display: flex;
+  justify-content: space-between; }
+  .main-footer__item {
+    text-align: center; }
+    .main-footer__item_first {
+      text-align: left; }
+    .main-footer__item_last {
+      text-align: right; }
+  .main-footer__text {
+    margin: 0; }
+  .main-footer__link {
+    color: inherit;
+    text-decoration: none; }
+    .main-footer__link:hover {
+      text-decoration: underline; }

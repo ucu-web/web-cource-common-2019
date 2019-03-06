@@ -1,0 +1,55 @@
+@import url(variables.css);
+.letter-navigation {
+  height: 56px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eceff1;
+  display: flex;
+  flex-direction: row; }
+  .letter-navigation__item {
+    box-sizing: border-box;
+    width: calc(1/3 * 100%);
+    min-width: 160px;
+    max-width: 252px;
+    padding: 18px 16px 0 52px;
+    background-size: 20px;
+    background-position: 16px 18px;
+    background-repeat: no-repeat;
+    font-size: .875rem;
+    font-family: 'Google Sans',Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    line-height: 20px;
+    cursor: pointer; }
+    .letter-navigation__item:hover {
+      background-color: #2021240f; }
+    .letter-navigation__item::after {
+      display: block;
+      content: "";
+      margin-top: 14px;
+      margin-left: -44px;
+      width: calc(100% + 52px);
+      height: 3px;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      background-color: #0000; }
+  .letter-navigation__primary {
+    background-image: url("../images/icons/inbox.png"); }
+  .letter-navigation__social {
+    background-image: url("../images/icons/social.png"); }
+  .letter-navigation__promotions {
+    background-image: url("../images/icons/promotions.png"); }
+  .letter-navigation__radio {
+    display: none; }
+    .letter-navigation__radio:checked + .letter-navigation__primary {
+      background-image: url("../images/icons/inbox-selected.png");
+      color: #d93025; }
+    .letter-navigation__radio:checked + .letter-navigation__social {
+      background-image: url("../images/icons/social-selected.png");
+      color: #1a73e8; }
+    .letter-navigation__radio:checked + .letter-navigation__promotions {
+      background-image: url("../images/icons/promotions-selected.png");
+      color: #1e8e3e; }
+    .letter-navigation__radio:checked + .letter-navigation__primary::after {
+      background-color: #d93025; }
+    .letter-navigation__radio:checked + .letter-navigation__social::after {
+      background-color: #1a73e8; }
+    .letter-navigation__radio:checked + .letter-navigation__promotions::after {
+      background-color: #1e8e3e; }

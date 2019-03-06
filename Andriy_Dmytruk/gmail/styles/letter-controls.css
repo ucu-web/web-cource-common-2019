@@ -1,0 +1,184 @@
+:root {
+  --opaque: #0000;
+  --white-default: white;
+  --black-default: black;
+  --black: #202124;
+  --black-light: #3c4043;
+  --grey-dark: #5f6368;
+  --grey: #e5e5e5;
+  --grey-light: #e8eaed;
+  --grey-extra-light: #f7f7f7;
+  --black-default-opaque: rgba(0, 0, 0, 0.54);
+  --black-opaque: #2021240f;
+  --grey-opaque: #3332;
+  --red-light: #fce8e6;
+  --red: #d93025;
+  --blue: #1a73e8;
+  --green: #1e8e3e; }
+
+:root {
+  --opaque: #0000;
+  --white-default: white;
+  --black-default: black;
+  --black: #202124;
+  --black-light: #3c4043;
+  --grey-dark: #5f6368;
+  --grey: #e5e5e5;
+  --grey-light: #e8eaed;
+  --grey-extra-light: #f7f7f7;
+  --black-default-opaque: rgba(0, 0, 0, 0.54);
+  --black-opaque: #2021240f;
+  --grey-opaque: #3332;
+  --red-light: #fce8e6;
+  --red: #d93025;
+  --blue: #1a73e8;
+  --green: #1e8e3e; }
+
+@font-face {
+  font-family: "Google Sans";
+  src: url("../fonts/google-sans.woff2") format("woff2"); }
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: bold;
+  src: url("../fonts/roboto-bold.woff2") format("woff2"); }
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  src: url("../fonts/roboto-light.woff2") format("woff2"); }
+
+/* body is a flex containing everything except for header */
+body {
+  margin: 0;
+  font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+  overflow: hidden;
+  color: var(--black);
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  /* header height */
+  padding-top: 64px;
+  display: flex;
+  flex-direction: row; }
+
+/* Button styles */
+.round-button, .letter-controls__round-button {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  border: none;
+  background: none;
+  opacity: .54;
+  padding: 0; }
+  .round-button::after, .letter-controls__round-button::after {
+    position: absolute;
+    display: block;
+    content: "";
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    padding: 0;
+    background-color: #3332;
+    transition-property: top, left, padding;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms; }
+  .round-button:hover, .letter-controls__round-button:hover {
+    /* .round:hover::after should be changed to change the size of pop-up */ }
+    .round-button:hover::after, .letter-controls__round-button:hover::after {
+      left: -7px;
+      top: -7px;
+      padding: calc(50% + 7px); }
+  .round-button:disabled, .letter-controls__round-button:disabled {
+    opacity: .27 !important;
+    cursor: default; }
+    .round-button:disabled::after, .letter-controls__round-button:disabled::after {
+      padding: 0 !important; }
+
+.letter-controls {
+  margin-right: 16px;
+  width: calc(100% - 16px);
+  height: 48px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  align-items: center;
+  padding: 0 4px 0 16px; }
+  .letter-controls__round-button {
+    width: 20px;
+    height: 20px;
+    margin: 12px 10px 11px;
+    background-size: 20px; }
+    .letter-controls__round-button:hover {
+      opacity: 1; }
+      .letter-controls__round-button:hover::after {
+        opacity: .54;
+        top: -10px;
+        left: -10px;
+        padding: calc(50% + 10px); }
+  .letter-controls__checkbox {
+    display: none; }
+    .letter-controls__checkbox + .letter-controls__square-button {
+      background-image: url("../images/icons/checkbox_empty.png"); }
+    .letter-controls__checkbox:checked + .letter-controls__square-button {
+      background-image: url("../images/icons/checkbox_checked.png"); }
+  .letter-controls__square-button {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    border: none;
+    padding: 0;
+    height: 20px;
+    min-width: 20px;
+    opacity: .54;
+    background-size: 20px 20px;
+    background: none no-repeat; }
+    .letter-controls__square-button::after {
+      position: absolute;
+      display: block;
+      content: "";
+      top: 50%;
+      left: 50%;
+      padding: 0;
+      border-radius: 4px;
+      background-color: #3332;
+      opacity: .54;
+      transition-property: left, top, padding;
+      transition-duration: 150ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+    .letter-controls__square-button:hover {
+      opacity: 1; }
+      .letter-controls__square-button:hover::after {
+        left: -4px;
+        top: -8px;
+        padding: 18px calc(50% + 4px); }
+  .letter-controls__narrow-button:hover::after {
+    left: -2px;
+    padding: 18px calc(50% + 2px); }
+  .letter-controls__text-container {
+    opacity: 1;
+    color: #5f6368;
+    margin: 0 4px; }
+  .letter-controls__selection-container {
+    margin-right: 10px;
+    display: flex;
+    align-items: center; }
+  .letter-controls__select-custom {
+    background-image: url("../images/icons/dropdown.png"); }
+  .letter-controls__refresh {
+    background-image: url("../images/icons/refresh.png"); }
+  .letter-controls__options {
+    background-image: url("../images/icons/options.png"); }
+  .letter-controls__splitter {
+    flex-grow: 1; }
+  .letter-controls__newer {
+    background-image: url("../images/icons/arrow-left.png"); }
+  .letter-controls__older {
+    background-image: url("../images/icons/arrow-right.png"); }
+  .letter-controls__settings {
+    background-image: url("../images/icons/settings.png");
+    margin-right: 12px;
+    margin-left: 22px; }
+  .letter-controls__input-tools-select {
+    background-image: url("../images/icons/dropdown.png"); }

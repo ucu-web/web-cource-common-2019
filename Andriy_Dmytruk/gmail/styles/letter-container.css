@@ -1,0 +1,4 @@
+@import url(variables.css);
+.letter-container__table {
+  width: 100%;
+  border-collapse: collapse; }

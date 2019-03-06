@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> Inbox </title>
+	<meta charset="UTF-8">
+  	<meta name="description" content="Gmail is a Google service for sending emails.">
+  	<meta name="keywords" content="Gmail,mail,email,letter,send,inbox">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link type="text/css" rel="stylesheet" href="styles/body.css">
+	<link type="text/css" rel="stylesheet" href="styles/common.css">
+	<link type="text/css" rel="stylesheet" href="styles/main-header.css">
+	<link type="text/css" rel="stylesheet" href="styles/inbox-controls.css">
+	<link type="text/css" rel="stylesheet" href="styles/social-menu.css">
+	<link type="text/css" rel="stylesheet" href="styles/letter-controls.css">
+	<link type="text/css" rel="stylesheet" href="styles/letter-container.css">
+	<link type="text/css" rel="stylesheet" href="styles/letter-navigation.css">
+	<link type="text/css" rel="stylesheet" href="styles/letter.css">
+	<link type="text/css" rel="stylesheet" href="styles/services-nav.css">
+	<link type="text/css" rel="stylesheet" href="styles/main-footer.css">
+</head>
+<body class="body">
+	<!-- The topbar -->
+	<header class="main-header">
+		<button class="main-header__round-button main-header__show-menu"></button>
+		<a class="main-header__logo" href="/" aria-label="Gmail logo">
+			<img src="images/logo.png" alt="logo">
+		</a>
+
+		<form class="main-header__search-container" action="/search" method="get">
+			<button class="main-header__search-submit main-header__round-button" aria-label="Search"></button>
+
+			<input class="main-header__search-input" type="text" name="q" placeholder="Search mail">
+
+			<button class="main-header__search-clear main-header__round-button" aria-label="Clear search"></button>
+			<button class="main-header__search-options main-header__round-button" aria-label="Show search options"></button>
+		</form>
+
+		<div class="main-header__menu">
+			<button class="main-header__google-apps main-header__round-button" aria-label="Google apps"> </button>
+			<button class="main-header__notifications main-header__round-button" aria-label="Notifications"> </button>
+
+			<button class="main-header__account main-header__round-button" aria-label="Account">
+				<img class="main-header__account-image" alt="Account image" src="images/account-image.jpg">
+			</button>
+		</div>
+	</header>
+
+	<!-- The bar on the left -->
+	<aside class="inbox-controls">
+		<!-- compose new button -->
+		<button class="inbox-controls__compose-new"> Compose </button>
+
+		<!-- list of navigation items -->
+		<form class="inbox-controls__navigation">
+			<button class="inbox-controls__letters-type inbox-controls__letters-type-inbox selected unread"> Inbox </button>
+			<button class="inbox-controls__letters-type inbox-controls__letters-type-starred"> Starred </button>
+			<button class="inbox-controls__letters-type inbox-controls__letters-type-snoozed"> Snoozed </button>
+			<button class="inbox-controls__letters-type inbox-controls__letters-type-sent"> Sent </button>
+			<button class="inbox-controls__letters-type inbox-controls__letters-type-drafts unread"> Drafts </button>
+
+			<button class="inbox-controls__letters-type inbox-controls__letters-type-more"> More </button>
+		</form>
+	</aside>
+
+	<aside class="social-menu">
+		<!-- the block at the bottom of the sidebar -->
+		<div class="social-menu__nav">
+			<button class="social-menu__nav-button social-menu__nav-button-hangouts-contacts" aria-label="Hangouts contacts" role="tab"> </button>
+			<button class="social-menu__nav-button social-menu__nav-button-hangouts-conversations" aria-label="Hangouts conversations" role="tab"> </button>
+			<button class="social-menu__nav-button social-menu__nav-button-phone-calls" aria-label="Phone calls" role="tab"> </button>
+		</div>
+	</aside>
+
+	<section class="body__central-section">
+		<div class="letter-controls">
+			<div class="letter-controls__selection-container">
+				<input class="letter-controls__checkbox" id="letter-controls__select-all" type="checkbox">
+				<label class="letter-controls__square-button letter-controls__select-all" for="letter-controls__select-all" aria-label="Select all"></label>
+				<button class="letter-controls__square-button letter-controls__narrow-button letter-controls__select-custom" aria-label="Custom select"> </button>
+			</div>
+
+			<button class="letter-controls__round-button letter-controls__refresh" aria-label="Refresh"></button>
+			<button class="letter-controls__round-button letter-controls__options" aria-label="Options"></button>
+
+			<div class="letter-controls__splitter"> </div>
+
+			<button class="letter-controls__square-button text-container"> 1-50 of 994 </button>
+			<button class="letter-controls__round-button letter-controls__newer" aria-label="Newer" disabled></button>
+			<button class="letter-controls__round-button letter-controls__older" aria-label="Older"></button>
+
+			<button class="letter-controls__square-button letter-controls__text-container letter-controls__input-tools" aria-label="Input tools on/off (Ctrl-Shift-K)"> En </button>
+			<button class="letter-controls__square-button letter-controls__narrow-button letter-controls__input-tools-select" aria-label="Select input tool"></button>
+
+			<button class="letter-controls__round-button letter-controls__settings" aria-label="Settings"></button>
+		</div>
+
+		<main class="letter-container">
+			<!-- The bar on the top with links to different letter-lists -->
+			<nav class="letter-navigation">
+				<input class="letter-navigation__radio" id="letter-navigation__primary" name="letter-navigation" type="radio" checked role="tab">
+				<label class="letter-navigation__item letter-navigation__primary" for="letter-navigation__primary"> Primary </label>
+
+				<input class="letter-navigation__radio" id="letter-navigation__social" name="letter-navigation" type="radio" role="tab">
+				<label class="letter-navigation__item letter-navigation__social" for="letter-navigation__social"> Social </label>
+
+				<input class="letter-navigation__radio" id="letter-navigation__promotions" name="letter-navigation" type="radio" role="tab">
+				<label class="letter-navigation__item letter-navigation__promotions" for="letter-navigation__promotions"> Promotions </label>
+			</nav>
+
+			<!-- Letters -->
+			<table class="letter-container__table">
+				<tr class="letter" data-id="12345">
+					<td class="letter__select-col">
+						<input class="letter__checkbox" id="letter__select__12345" type="checkbox">
+						<label class="letter__round-button letter__select" for="letter__select__12345" aria-label="select"> </label>
+					</td>
+					<td class="letter__favourite-col">
+						<input class="letter__checkbox" id="letter__favourite__12345" type="checkbox">
+						<label class="letter__round-button letter__favourite" for="letter__favourite__12345" aria-label="favourite"> </label>
+					</td>
+
+					<td class="letter__title-col"> Bitbucket </td>
+					<td class="letter__details-col"> Welcome to Bitbucket! - Get started with your teammates doing some stuff. </td>
+					<td class="letter__time-col"> <time datetime="2019-12-2 17:13"> 17:13 </time> </td>
+				</tr>
+
+				<tr class="letter unread" data-id="12346">
+					<td class="letter__select-col">
+						<input class="letter__checkbox" id="letter__select__12346" type="checkbox">
+						<label class="letter__round-button letter__select" for="letter__select__12346" aria-label="select"> </label>
+					</td>
+					<td class="letter__favourite-col">
+						<input class="letter__checkbox" id="letter__favourite__12346" type="checkbox">
+						<label class="letter__round-button letter__favourite" for="letter__favourite__12346" aria-label="favourite"> </label>
+					</td>
+
+					<td class="letter__title-col"> Facebook </td>
+					<td class="letter__details-col"> We sent you some more trash. </td>
+					<td class="letter__time-col"> <time datetime="2019-12-2 17:13"> 17:13 </time> </td>
+				</tr>
+
+				<tr class="letter" data-id="12347">
+					<td class="letter__select-col">
+						<input class="letter__checkbox" id="letter__select__12347" type="checkbox">
+						<label class="letter__round-button letter__select" for="letter__select__12347" aria-label="select"> </label>
+					</td>
+					<td class="letter__favourite-col">
+						<input class="letter__checkbox" id="letter__favourite__12347" type="checkbox">
+						<label class="letter__round-button letter__favourite" for="letter__favourite__12347" aria-label="favourite"> </label>
+					</td>
+
+					<td class="letter__title-col"> Elon Musk </td>
+					<td class="letter__details-col"> Well, hi there. </td>
+					<td class="letter__time-col"> <time datetime="2019-12-2 17:13"> 17:13 </time> </td>
+				</tr>
+
+				<tr class="letter" data-id="12348">
+					<td class="letter__select-col">
+						<input class="letter__checkbox" id="letter__select__12348" type="checkbox">
+						<label class="letter__round-button letter__select" for="letter__select__12348" aria-label="select"> </label>
+					</td>
+					<td class="letter__favourite-col">
+						<input class="letter__checkbox" id="letter__favourite__12348" type="checkbox">
+						<label class="letter__round-button letter__favourite" for="letter__favourite__12348" aria-label="favourite"> </label>
+					</td>
+
+					<td class="letter__title-col"> Firebase </td>
+					<td class="letter__details-col"> You have successfully done nothing. </td>
+					<td class="letter__time-col"> <time datetime="2019-12-2 17:13"> 17:13 </time> </td>
+				</tr>
+			</table>
+
+			<!-- The information at the bottom of the letters list -->
+			<footer class="main-footer">
+				<div class="main-footer__item main-footer__item_first">
+					<p class="main-footer__text"> 8.42 GB (56%) of 15 GB used </p>
+					<a class="main-footer__link" href=""> Manage </a>
+				</div>
+
+				<div class="main-footer__item">
+					<a class="main-footer__link" href=""> Terms </a> <span> • </span>
+					<a class="main-footer__link" href=""> Privacy </a> <span> • </span>
+					<a class="main-footer__link" href=""> Programme Policies </a>
+				</div>
+
+				<div class="main-footer__item main-footer__item_last">
+					<p class="main-footer__text"> Last account activity: 24 minutes ago </p>
+					<a class="main-footer__link" href=""> Details </a>
+				</div>
+			</footer>
+		</main>
+	</section>
+
+	<!-- The sidebar on the right with links to google services -->
+	<nav class="services-nav">
+		<a class="services-nav__round-button services-nav__calendar" href="" aria-label="Calendar"></a>
+		<a class="services-nav__round-button services-nav__keep" href="" aria-label="Keep"></a>
+		<a class="services-nav__round-button services-nav__tasks" href="" aria-label="Tasks"></a>
+
+		<hr class="services-nav__line">
+
+		<button class="services-nav__round-button services-nav__get" aria-label="Get add-ons"></button>
+	</nav>
+</body>
+</html>

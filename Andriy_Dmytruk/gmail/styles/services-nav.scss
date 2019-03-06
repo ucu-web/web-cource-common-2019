@@ -1,0 +1,39 @@
+@import "./variables.scss";
+@import "./common.scss";
+
+.services-nav {
+  box-sizing: border-box;
+  border-left: 1px solid #dadce0;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 56px;
+
+  &__round-button {
+    @extend .round-button;
+
+    width: 20px;
+    height: 20px;
+    margin: 18px;
+    background-size: 20px;
+    opacity: 1;
+
+    &:hover::after {
+      left: -10px; top: -10px;
+      padding: calc(50% + 10px);
+    }
+  }
+
+  &__calendar { background-image: url("../images/icons/calendar.png"); }
+  &__keep { background-image: url("../images/icons/keep.png"); }
+  &__tasks { background-image: url("../images/icons/tasks.png"); }
+  &__get { background-image: url("../images/icons/plus.png"); }
+
+  &__line {
+    width: 20px;
+    margin: 16px 18px;
+    border: none;
+    border-top: 1px solid #dadce0;
+  }
+}
