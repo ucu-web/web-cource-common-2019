@@ -29,4 +29,17 @@
   width: 980px;
   margin: auto;
 }
+.Repository__readme {
+  width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.Repository__footer {
+  width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2.5rem;
+  padding: 2.5rem 0 0.5rem 0;
+  border-top: #e1e4e8 1px solid;
+}
 /*# sourceMappingURL=Repository.css.map */

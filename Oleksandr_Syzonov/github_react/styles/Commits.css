@@ -10,11 +10,17 @@
   border-bottom: #f1e05a 8px solid;
 }
 .Commits__commit {
+  flex-grow: 1;
   padding: 0.625rem 0;
   text-align: center;
   color: #586069;
 }
 .Commits__icon {
   margin-right: 0.15rem;
+  vertical-align: text-bottom;
+}
+.Commits__number {
+  font-weight: 600;
+  color: #24292e;
 }
 /*# sourceMappingURL=Commits.css.map */

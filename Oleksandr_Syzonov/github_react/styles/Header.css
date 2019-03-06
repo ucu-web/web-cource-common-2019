@@ -4,14 +4,6 @@
   display: flex;
   align-items: center;
 }
-.Header__logo {
-  display: inline-block;
-  align-self: center;
-  margin-right: 1em;
-}
-.Header__logo-inverted {
-  filter: invert(100%);
-}
 .Header__search {
   width: 300px;
 }

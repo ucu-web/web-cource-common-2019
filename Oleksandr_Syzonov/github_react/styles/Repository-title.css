@@ -11,5 +11,9 @@
   text-decoration: none;
   color: #0366d6;
   font-size: 18px;
+  font-weight: 600;
+}
+.Repository-title__icon {
+  filter: invert(70%);
 }
 /*# sourceMappingURL=Repository-title.css.map */

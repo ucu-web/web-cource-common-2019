@@ -37,6 +37,7 @@
 .Repository-navigation__icon {
   margin-right: 0.15rem;
   filter: invert(50%);
+  vertical-align: text-bottom;
 }
 .Repository-navigation__icon--chosen {
   filter: invert(0%);

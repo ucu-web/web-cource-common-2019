@@ -11,16 +11,20 @@
     <link href="styles/Repository-title.css" rel="stylesheet">
     <link href="styles/Repository-data.css" rel="stylesheet">
     <link href="styles/Description-link.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles/File.css">
-    <link rel="stylesheet" href="styles/Commits.css">
-    <link rel="stylesheet" href="styles/Dropdown.css">
-    <link rel="stylesheet" href="styles/Actions.css">
-    <link rel="stylesheet" href="styles/Commit-tease.css">
+    <link href="styles/File.css" rel="stylesheet">
+    <link href="styles/Commits.css" rel="stylesheet">
+    <link href="styles/Dropdown.css" rel="stylesheet">
+    <link href="styles/Actions.css" rel="stylesheet">
+    <link href="styles/Commit-tease.css" rel="stylesheet">
+    <link href="styles/Readme.css" rel="stylesheet">
+    <link href="styles/Counter.css" rel="stylesheet">
+    <link href="styles/Footer.css" rel="stylesheet">
+    <link href="styles/Logo.css" rel="stylesheet">
 </head>
 <body class="Layout">
 <header class="Layout__header">
     <div class="Header">
-        <a class="Header__logo Header__logo-inverted" href="#"><img src="icons/github-dark.svg"></a>
+        <a class="Logo Logo--inverted" href="#"><img src="icons/github-dark.svg"></a>
         <div class="Header__search">
             <form class="Search">
                 <input class="Search__field" placeholder="Search or jump to..." type="text">
@@ -45,7 +49,7 @@
             <div class="Repository-navigation">
                 <section class="Repository-navigation__data">
                     <h1 class="Repository-title">
-                        <img src="icons/book.svg">
+                        <img class="Repository-title__icon" src="icons/book.svg">
                         <a class="Repository-title__user-link" href="#">
                             facebook
                         </a>
@@ -90,14 +94,16 @@
                                 src="icons/code.svg"> Code</a></li>
                         <li class="Repository-navigation__entry"><a class="Repository-navigation__section-link"
                                                                     href="#"><img
-                                alt="Issues" class="Repository-navigation__icon" src="icons/issue.svg"> Issues</a></li>
+                                alt="Issues" class="Repository-navigation__icon" src="icons/issue.svg"> Issues<span
+                                class="Counter">418</span></a></li>
                         <li class="Repository-navigation__entry"><a class="Repository-navigation__section-link"
                                                                     href="#"><img
-                                alt="Pull requests" class="Repository-navigation__icon" src="icons/pulls.svg"> Pull
-                            requests</a></li>
+                                alt="Pull requests" class="Repository-navigation__icon" src="icons/pulls.svg">Pull
+                            requests <span class="Counter">153</span></a></li>
                         <li class="Repository-navigation__entry"><a class="Repository-navigation__section-link"
                                                                     href="#"><img
-                                alt="Projects" class="Repository-navigation__icon" src="icons/project.svg"> Projects</a>
+                                alt="Projects" class="Repository-navigation__icon" src="icons/project.svg"> Projects</a><span
+                                class="Counter">0</span>
                         </li>
                         <li class="Repository-navigation__entry"><a class="Repository-navigation__section-link"
                                                                     href="#"><img
@@ -126,31 +132,48 @@
         </section>
         <section class="Repository__commits">
             <ul class="Commits">
-                <li class="Commits__commit"><img src="icons/book.svg" alt="" class="Commits__icon">3872 contributors</li>
-                <li class="Commits__commit"><img src="icons/book.svg" alt="" class="Commits__icon">3872 contributors</li>
-                <li class="Commits__commit"><img src="icons/book.svg" alt="" class="Commits__icon">3872 contributors</li>
-                <li class="Commits__commit"><img src="icons/book.svg" alt="" class="Commits__icon">3872 contributors</li>
-                <li class="Commits__commit"><img src="icons/book.svg" alt="" class="Commits__icon">3872 contributors</li>
+                <li class="Commits__commit"><img alt="" class="Commits__icon" src="icons/book.svg">
+                    <span class="Commits__number">
+                        10,711
+                    </span> commits
+                </li>
+                <li class="Commits__commit"><img alt="" class="Commits__icon" src="icons/book.svg"><span
+                        class="Commits__number">
+                        34
+                    </span> branches
+                </li>
+                <li class="Commits__commit"><img alt="" class="Commits__icon" src="icons/book.svg"><span
+                        class="Commits__number">
+                       112
+                    </span> releases
+                </li>
+                <li class="Commits__commit"><img alt="" class="Commits__icon" src="icons/book.svg"><span
+                        class="Commits__number">
+                        1,285
+                    </span> contributors
+                </li>
+                <li class="Commits__commit"><img alt="" class="Commits__icon" src="icons/book.svg"> MIT
+                </li>
             </ul>
         </section>
         <section class="Actions">
             <div class="Actions__actions-group">
-            <button class="Actions__branch">Branch:  master
-                <span class="Dropdown">
+                <button class="Actions__branch">Branch: master
+                    <span class="Dropdown">
                     
                 </span>
-            </button>
-            <a href="" class="Actions__pull-request">
-                New pull request
-            </a>
+                </button>
+                <a class="Actions__pull-request" href="">
+                    New pull request
+                </a>
             </div>
             <div class="Actions__actions-group">
-                <a href="#" class="Actions__link">
-                    Create new file</a><a href="#" class="Actions__link">
-                    Upload files
-                </a><a href="#" class="Actions__link">
-                    Find file
-                </a>
+                <a class="Actions__link" href="#">
+                    Create new file</a><a class="Actions__link" href="#">
+                Upload files
+            </a><a class="Actions__link" href="#">
+                Find file
+            </a>
                 <button class="Actions__branch Actions__branch--green">
                     Clone or download
                     <span class="Dropdown">
@@ -159,45 +182,222 @@
                 </button>
             </div>
         </section>
-        <div class = "Commit-tease">
+        <div class="Commit-tease">
             <div class="Commit-tease__left-data">
-                <img src="https://avatars3.githubusercontent.com/u/29597?s=60&v=40" class="Commit-tease__avatar">
+                <img class="Commit-tease__avatar" src="icons/avatar.jpeg">
                 <div class="Commit-tease__author-changes">
                     <h5 class="Commit-tease__nickname">
-                        <a href="#" class="Commit-tease__account-link">bvaughn</a>
+                        <a class="Commit-tease__account-link" href="#">bvaughn</a>
                     </h5>
-                    <a href="#" class="Commit-tease__changelog">    16.8.4 and changelog</a>
+                    <a class="Commit-tease__changelog" href="#"> 16.8.4 and changelog</a>
                 </div>
             </div>
             <div class="Commit-tease__latest-commit">
                 Latest commit
-                <a href="" class="Commit-tease__nickname-link">a9aa24e</a>
+                <a class="Commit-tease__nickname-link" href="">a9aa24e</a>
                 <time class="Commit-tease__time-edited">11 hours ago</time>
             </div>
         </div>
         <section class="Repository__files">
             <article class="File">
                 <img alt="" class="File__icon" src="icons/directory.svg">
-                <h4 class="File__filename"><a href="#" class="File__link">.circleci</a></h4>
+                <h4 class="File__filename"><a class="File__link" href="#">.circleci</a></h4>
                 <p class="File__description"> Publish a local release (canary or stable) to NPM (#14260) </p>
                 <time class="File__edited">3 years ago</time>
             </article>
             <article class="File">
                 <img alt="" class="File__icon" src="icons/directory.svg">
-                <h4 class="File__filename"><a href="#" class="File__link">.circleci</a></h4>
+                <h4 class="File__filename"><a class="File__link" href="#">.circleci</a></h4>
                 <p class="File__description"> Publish a local release (canary or stable) to NPM (#14260) </p>
                 <time class="File__edited">3 years ago</time>
             </article>
             <article class="File">
                 <img alt="" class="File__icon" src="icons/directory.svg">
-                <h4 class="File__filename"><a href="#" class="File__link">.circleci</a></h4>
+                <h4 class="File__filename"><a class="File__link" href="#">.circleci</a></h4>
+                <p class="File__description"> Publish a local release (canary or stable) to NPM (#14260) </p>
+                <time class="File__edited">3 years ago</time>
+            </article>
+            <article class="File">
+                <img alt="" class="File__icon" src="icons/file.svg">
+                <h4 class="File__filename"><a class="File__link" href="#">.circleci</a></h4>
+                <p class="File__description"> Publish a local release (canary or stable) to NPM (#14260) </p>
+                <time class="File__edited">3 years ago</time>
+            </article>
+            <article class="File">
+                <img alt="" class="File__icon" src="icons/file.svg">
+                <h4 class="File__filename"><a class="File__link" href="#">.circleci</a></h4>
+                <p class="File__description"> Publish a local release (canary or stable) to NPM (#14260) </p>
+                <time class="File__edited">3 years ago</time>
+            </article>
+            <article class="File">
+                <img alt="" class="File__icon" src="icons/file.svg">
+                <h4 class="File__filename"><a class="File__link" href="#">.circleci</a></h4>
+                <p class="File__description"> Publish a local release (canary or stable) to NPM (#14260) </p>
+                <time class="File__edited">3 years ago</time>
+            </article>
+            <article class="File">
+                <img alt="" class="File__icon" src="icons/file.svg">
+                <h4 class="File__filename"><a class="File__link" href="#">.circleci</a></h4>
+                <p class="File__description"> Publish a local release (canary or stable) to NPM (#14260) </p>
+                <time class="File__edited">3 years ago</time>
+            </article>
+            <article class="File">
+                <img alt="" class="File__icon" src="icons/file.svg">
+                <h4 class="File__filename"><a class="File__link" href="#">.circleci</a></h4>
+                <p class="File__description"> Publish a local release (canary or stable) to NPM (#14260) </p>
+                <time class="File__edited">3 years ago</time>
+            </article>
+            <article class="File">
+                <img alt="" class="File__icon" src="icons/file.svg">
+                <h4 class="File__filename"><a class="File__link" href="#">.circleci</a></h4>
+                <p class="File__description"> Publish a local release (canary or stable) to NPM (#14260) </p>
+                <time class="File__edited">3 years ago</time>
+            </article>
+            <article class="File">
+                <img alt="" class="File__icon" src="icons/file.svg">
+                <h4 class="File__filename"><a class="File__link" href="#">.circleci</a></h4>
+                <p class="File__description"> Publish a local release (canary or stable) to NPM (#14260) </p>
+                <time class="File__edited">3 years ago</time>
+            </article>
+            <article class="File">
+                <img alt="" class="File__icon" src="icons/file.svg">
+                <h4 class="File__filename"><a class="File__link" href="#">.circleci</a></h4>
+                <p class="File__description"> Publish a local release (canary or stable) to NPM (#14260) </p>
+                <time class="File__edited">3 years ago</time>
+            </article>
+            <article class="File">
+                <img alt="" class="File__icon" src="icons/file.svg">
+                <h4 class="File__filename"><a class="File__link" href="#">.circleci</a></h4>
+                <p class="File__description"> Publish a local release (canary or stable) to NPM (#14260) </p>
+                <time class="File__edited">3 years ago</time>
+            </article>
+            <article class="File">
+                <img alt="" class="File__icon" src="icons/file.svg">
+                <h4 class="File__filename"><a class="File__link" href="#">.circleci</a></h4>
+                <p class="File__description"> Publish a local release (canary or stable) to NPM (#14260) </p>
+                <time class="File__edited">3 years ago</time>
+            </article>
+            <article class="File">
+                <img alt="" class="File__icon" src="icons/file.svg">
+                <h4 class="File__filename"><a class="File__link" href="#">.circleci</a></h4>
+                <p class="File__description"> Publish a local release (canary or stable) to NPM (#14260) </p>
+                <time class="File__edited">3 years ago</time>
+            </article>
+            <article class="File">
+                <img alt="" class="File__icon" src="icons/file.svg">
+                <h4 class="File__filename"><a class="File__link" href="#">.circleci</a></h4>
+                <p class="File__description"> Publish a local release (canary or stable) to NPM (#14260) </p>
+                <time class="File__edited">3 years ago</time>
+            </article>
+            <article class="File">
+                <img alt="" class="File__icon" src="icons/file.svg">
+                <h4 class="File__filename"><a class="File__link" href="#">.circleci</a></h4>
+                <p class="File__description"> Publish a local release (canary or stable) to NPM (#14260) </p>
+                <time class="File__edited">3 years ago</time>
+            </article>
+            <article class="File">
+                <img alt="" class="File__icon" src="icons/file.svg">
+                <h4 class="File__filename"><a class="File__link" href="#">.circleci</a></h4>
+                <p class="File__description"> Publish a local release (canary or stable) to NPM (#14260) </p>
+                <time class="File__edited">3 years ago</time>
+            </article>
+            <article class="File">
+                <img alt="" class="File__icon" src="icons/file.svg">
+                <h4 class="File__filename"><a class="File__link" href="#">.circleci</a></h4>
+                <p class="File__description"> Publish a local release (canary or stable) to NPM (#14260) </p>
+                <time class="File__edited">3 years ago</time>
+            </article>
+            <article class="File">
+                <img alt="" class="File__icon" src="icons/file.svg">
+                <h4 class="File__filename"><a class="File__link" href="#">.circleci</a></h4>
+                <p class="File__description"> Publish a local release (canary or stable) to NPM (#14260) </p>
+                <time class="File__edited">3 years ago</time>
+            </article>
+            <article class="File">
+                <img alt="" class="File__icon" src="icons/file.svg">
+                <h4 class="File__filename"><a class="File__link" href="#">.circleci</a></h4>
+                <p class="File__description"> Publish a local release (canary or stable) to NPM (#14260) </p>
+                <time class="File__edited">3 years ago</time>
+            </article>
+            <article class="File">
+                <img alt="" class="File__icon" src="icons/file.svg">
+                <h4 class="File__filename"><a class="File__link" href="#">.circleci</a></h4>
                 <p class="File__description"> Publish a local release (canary or stable) to NPM (#14260) </p>
                 <time class="File__edited">3 years ago</time>
             </article>
         </section>
         <section class="Repository__readme">
+            <div class="Readme">
+                <header class="Readme__header">
+                    <img class="Readme__icon" src="icons/opened_book.svg">
+                    README.md
+                </header>
+                <article class="Readme__description">
+                    <h1 class="Readme__h1">
+                        React
+                    </h1>
+                    <p class="Readme__paragraph">
+                        The main purpose of this repository is to continue to evolve React core, making it faster and
+                        easier to use. Development of React happens in the open on GitHub, and we are grateful to the
+                        community for contributing bugfixes and improvements. Read below to learn how you can take part
+                        in improving React.
+                    </p>
+                    <h1 class="Readme__h1">
+                        React
+                    </h1>
+                    <p class="Readme__paragraph">
+                        The main purpose of this repository is to continue to evolve React core, making it faster and
+                        easier to use. Development of React happens in the open on GitHub, and we are grateful to the
+                        community for contributing bugfixes and improvements. Read below to learn how you can take part
+                        in improving React.
+                    </p>
+                    <h1 class="Readme__h1">
+                        React
+                    </h1>
+                    <p class="Readme__paragraph">
+                        The main purpose of this repository is to continue to evolve React core, making it faster and
+                        easier to use. Development of React happens in the open on GitHub, and we are grateful to the
+                        community for contributing bugfixes and improvements. Read below to learn how you can take part
+                        in improving React.
+                    </p>
+                    <h1 class="Readme__h1">
+                        React
+                    </h1>
+                    <p class="Readme__paragraph">
+                        The main purpose of this repository is to continue to evolve React core, making it faster and
+                        easier to use. Development of React happens in the open on GitHub, and we are grateful to the
+                        community for contributing bugfixes and improvements. Read below to learn how you can take part
+                        in improving React.
+                    </p>
+                    <h1 class="Readme__h1">
+                        React
+                    </h1>
+                    <p class="Readme__paragraph">
+                        The main purpose of this repository is to continue to evolve React core, making it faster and
+                        easier to use. Development of React happens in the open on GitHub, and we are grateful to the
+                        community for contributing bugfixes and improvements. Read below to learn how you can take part
+                        in improving React.
+                    </p>
+                    <h1 class="Readme__h1">
+                        React
+                    </h1>
+                    <p class="Readme__paragraph">
+                        The main purpose of this repository is to continue to evolve React core, making it faster and
+                        easier to use. Development of React happens in the open on GitHub, and we are grateful to the
+                        community for contributing bugfixes and improvements. Read below to learn how you can take part
+                        in improving React.
+                    </p>
+                </article>
+            </div>
         </section>
         <footer class="Repository__footer">
+            <div class="Footer">
+                <div class="Footer__left">
+                </div>
+                <a class="Logo Logo--grey Logo--small" href="#"><img src="icons/github-dark.svg"></a>
+                <div class="Footer__right">
+                </div>
+            </div>
         </footer>
     </div>
 </main>

@@ -1,0 +1,16 @@
+.Logo {
+  display: inline-block;
+  align-self: center;
+  margin-right: 1em;
+}
+.Logo--inverted {
+  filter: invert(100%);
+}
+.Logo--grey {
+  filter: invert(60%);
+}
+.Logo--small {
+  height: 1em;
+  width: 1em;
+}
+/*# sourceMappingURL=Logo.css.map */
