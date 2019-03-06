@@ -1,6 +1,6 @@
 .Layout {
   display: grid;
-  grid-template-columns: auto 164px minmax(auto, 775px) 300px auto;
+  grid-template-columns: auto 164px minmax(auto, 776px) 300px auto;
   grid-template-rows: 50px auto 300px;
 }
 .Layout__header {
@@ -11,21 +11,20 @@
 }
 .Layout__navigation {
   grid-column-start: 2;
-  padding: 1.5em 0 0 0;
+  padding: 24px 0 0 0;
 }
 .Layout__sticky-navigation {
   position: sticky;
-  top: 4.625em;
+  top: 74px;
   margin: 0 0 0.75em 0;
 }
 .Layout__main-block {
-  max-width: 1100px;
   min-width: 450px;
-  padding: 1.5em 1.5em 1.5em 0;
+  padding: 24px 24px 24px 0;
   border-left: 1px solid #d6d9dc;
 }
 .Layout__aside {
-  padding: 1.5em 0 0 0;
+  padding: 24px 0 0 0;
 }
 .Layout__footer {
   grid-area: 3/1/4/6;

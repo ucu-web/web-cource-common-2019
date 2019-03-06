@@ -1,3 +1,5 @@
+@import "variables";
+
 .Profile-navigation {
   display: flex;
   justify-content: flex-end;
@@ -19,18 +21,18 @@
   &__reputation-score {
     padding: 0 0 0 0.7em;
     font-weight: bold;
-    font-size: 0.75em;
+    font-size: @font-size--small;
     color: #535a60;
   }
 
   &__budge-circle {
     color: #d0a278;
-    font-size: 0.81em;
+    font-size: @font-size--main;
     margin: 0 0 0 0.5em;
   }
 
   &__budge-count {
-    font-size: 0.75em;
+    font-size: @font-size--small;
     color: #d0a278;
   }
 
