@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5.2</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>HTML 5.2</h1>
+            <h2>W3C Recommendation, <time datetime="14-12-2017">14 December 2017</time></h2>
+
+            <nav class="bradcrump">
+                <a href="#">Table of contents</a>
+                <a href="#">2 Common infrastracture</a>
+            </nav>
+
+            <h3>Table of contents</h3>
+            <nav>
+                <ol>
+
+                    <li><a href="#">Introduction</a></li>
+                    <li><a href="#">Background</a></li>
+                    <li><a href="#">Audience</a></li>
+                    <li><a href="#">Scope</a></li>
+                    <li><a href="#">History</a></li>
+                    <li>
+                        <a href="#">Design notes</a>
+
+                        <ol>
+                            <li><a href="#">Serializability of script execution</a></li>
+                            <li><a href="#">Compliance with other specifications</a></li>
+                            <li><a href="#">Extensibility</a></li>
+                        </ol>
+
+                    </li>
+
+                </ol>
+            </nav>
+        </header>
+        <section>
+            <ol>
+                <li><h2>Introduction</h2></li>
+                <ol>
+                    <li><h3>Background</h3></li>
+
+                    <em>This section is non-normative.</em>
+                    <p>
+                        HTML is the World Wide Web’s core markup language. Originally, HTML was primarily designed as a language<br> for semantically describing scientific documents. Its general design, however, has enabled it to be adapted, over<br> the subsequent years, to describe a number of other types of documents and even applications.
+                    </p>
+
+                    <li><h3>Audience</h3></li>
+
+                    <em>This section is non-normative.</em>
+                    <p>
+                        This specification is intended for authors of documents and scripts that use the features defined in this specifica-<br>tion, ...
+                    </p>
+
+                    <li><h3>Scope</h3></li>
+
+                    <em>This section is non-normative.</em>
+                    <p>
+                        This specification is limited to providing a semantic-level markup language and associated semantic-level script-<br>ing APIs for authoring accessible pages on the Web ranging from static documents to dynamic applications.
+                    </p>
+
+                    <li><h3>History</h3></li>
+
+                    <em>This section is non-normative.</em>
+                    <p>
+                        For its first five years (1990-1995), HTML went through a number of revisions and experienced a number of ex-<br></br>tensions, primarily hosted first at CERN, and then at the IETF.
+                    </p>
+
+                    <li><h3>Design notes</h3></li>
+
+                    <em>This section is non-normative.</em>
+                    <p>
+                        It must be admitted that many aspects of HTML appear at first glance to be nonsensical and inconsistent.
+                    </p>
+                    <ol>
+                        <li><h4>Serializability of script execution</h4></li>
+
+                        <em>This section is non-normative.</em>
+                        <p>
+                            To avoid exposing Web authors to the complexities of multithreading, the HTML and DOM APIs are designed<br> such that no script can ever detect the simultaneous execution of other scripts. Even with workers, the intent is<br> that the behavior of implementations can be thought of as completely serializing the execution of all<br> scripts in all browsing contexts.
+                        </p>
+
+                        <li><h4>Compliance with other specifications</h4></li>
+                        <em>This section is non-normative.</em>
+                        <p>
+                            This specification interacts with and relies on a wide variety of other specifications. In certain circumstances, un-<br>fortunately, conflicting needs have led to this specification violating the requirements of these other specifica-<br>tions. Whenever this has occurred, the transgressions have each been noted as a <b>"willful violation"</b>, and the<br> reason for the violation has been noted.
+                        </p>
+
+                        <li><h4>Extensibility</h4></li>
+
+                        <em>This section is non-normative.</em>
+                        <p>
+                            HTML has a wide array of extensibility mechanisms that can be used for adding semantics in a safe manner:
+                        </p>
+                        <ul style="list-style-type:disc;">
+                            <li><p>Authors can use the class attribute to extend elements, effectively creating their own elements, while using<br> the most applicable existing "real" HTML element, so that browsers and other tools that don’t know of the<br> extension can still support it somewhat well. This is the tack used by microformats, for example.</p></li>
+                            <li><p>Authors can include data for inline client-side scripts or server-side site-wide scripts to process using the<br> data-*="" attributes. These are guaranteed to never be touched by browsers, and allow scripts to include<br> data on HTML elements that scripts can then look for and process.
+                            <li><p>Authors can use the meta name="" content="" mechanism to include page-wide metadata by registering<br> extensions to the predefined set of metadata names.</p></li></p></li>
+                            <li><p>Authors can use the rel="" mechanism to annotate links with specific meanings by registering extensions<br> to the predefined set of link types. This is also used by microformats.</p></li>
+                        </ul>
+                    </ol>
+
+                    <li><h3>HTML vs XML Syntax</h3></li>
+
+                    <em>This section is non-normative.</em>
+                    <p>This specification defines an abstract language for describing documents and applications, and some APIs for<br> interacting with in-memory representations of resources that use this language.</p>
+
+                    <li><h3>Structure of this specification</h3></li>
+
+                    <em>This section is non-normative.</em>
+                    <p>This specification is divided into the following major sections:</p>
+                    <ol>
+                        <li><h4><a href="#">Introduction</a></h4></li>
+                        <p>Non-normative materials providing a context for the HTML specification.</p>
+
+                        <li><h4><a href="#">Common infrastructure</a></h4></li>
+                        <p>The conformance classes, algorithms, definitions, and the common underpinnings of the rest of the<br> specification.</p>
+
+                        <li><h4><a href="#">Semantics, structure, and APIs of HTML documents</a></h4></li>
+                        <p>Documents are built from elements. These elements form a tree using the DOM. This section defines the<br> features of this DOM, as well as introducing the features common to all elements, and the concepts used in defining<br> elements.</p>
+
+                        <li><h4><a href="#">The elements of HTML</a></h4></li>
+                        <p>Each element has a predefined meaning, which is explained in this section. Rules for authors on how to use<br> the element, along with user agent requirements for how to handle each element, are also given. This in-<br>cludes large signature features of HTML such as video playback and subtitles, form controls and form sub-<br>mission, and a 2D graphics API known as the HTML canvas.</p>
+
+                        <li><h4><a href="#">User interaction</a></h4></li>
+                        <p>HTML documents can provide a number of mechanisms for users to interact with and modify content, which<br> are described in this section, such as how focus works, and drag-and-drop.</p>
+                    </ol>
+                    <br>
+                    <ol>
+                        <li><h4>How to read this specification</h4></li>
+                        <p>
+                            This specification should be read like all other specifications. First, it should be read cover-to-cover, multiple<br> times. Then, it should be read backwards at least once. Then it should be read by picking random sections from<br> the contents list and following all the cross-references.
+                        </p>
+
+                        <div>
+                            <h4>EXAMPLE 1</h4>
+                            <p>For example, "the <code>foo</code> attribute’s value must be a <a href="#">"valid integer"</a> is a requirement on producers, as it lays out<br> the allowed values; in contrast, the requirement "the <code>foo</code> attribute’s value must be parsed using the <a href="#">rules for<br> parsing integers"</a> is a requirement on consumers, as it describes how to process the content.</p>
+                        </div>
+
+                        <b>Requirements on producers have no bearing whatsoever on consumers.</b>
+
+                        <div>
+                            <h4>EXAMPLE 2</h4>
+                            <p>Continuing the above example, a requirement stating that a particular attribute’s value is constrained to being<br> a valid integer emphatically does not imply anything about the requirements on consumers. It might be that<br> the consumers are in fact required to treat the attribute as an opaque string, completely unaffected by<br> whether the value conforms to the requirements or not. It might be (as in the previous example) that the con-<br>sumers are required to parse the value using specific rules that define how invalid (non-numeric in this case)<br> values are to be processed.</p>
+                        </div>
+                    </ol>
+
+                    <li><h3>A quick introduction to HTML</h3></li>
+
+                    <em>This section is non-normative.</em>
+                    <p>A basic HTML document looks like this:</p>
+                    <pre>
+                        <span><!DOCTYPE html></span>
+                        <span><</span>
+                        <span>html</span>
+                        <span>></span>
+                    </pre>
+                </ol>
+            </ol>
+        </section>
+    </main>
+</body>
+</html>

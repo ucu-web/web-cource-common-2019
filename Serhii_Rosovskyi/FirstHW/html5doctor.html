@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Doctor</title>
+    <link rel="stylesheet" href="../style/html5doctor.css">
+</head>
+<body>
+
+    <aside class="left-sidebar">
+        <p>CATEGORY</p>
+        <a href="#">Accessibility</a><br>
+        <a href="#">Elements</a>
+    </aside>
+
+    <main>
+        <header>
+            <nav>
+                <a href="#">About</a> | <a href="#">RSS</a> |
+                <a href="#">Comments RSS</a> | <a href="#">Doctor Network</a>
+            </nav>
+
+            <div class="logo">
+                <h1>html5 Doctor</h1>
+                <h2><i>Helping you implement HTML5 today</i></h2>
+            </div>
+
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Article Archive</a>
+                <a href="#">Element Index</a>
+                <a href="#">Resources</a>
+            </nav>
+
+            <input type="text" size="30">
+            <button>Search</button>
+        </header>
+
+        <h2>Computer says NO to HTML5<br> document outline</h2>
+        <h4><i>Thursday, June 9th, 2016 by <a href="#">Steve Faulkner</a>.</i></h4>
+
+        <h3>What a brilliant idea!</h3>
+        <br>
+        
+        <img src="../img/shit.png" width="130" height="130" alt="shit">
+        <img src="../img/pewdiepie.jpeg" width="130" height="130" alt="shit">
+
+        <p>
+            For the longest time HTML5 specified, and advised developers, that it<br> no longer mattered what the number (1 to 6) was in a <a href="#">heading element</a><br> (when used in conjunction with <a href="#">sectioning elements</a>). What mattered<br> was the nesting level of the H1-h6 in sectioning elements, just like the<br> <a href="#">XHTML promised land</a>, but better as it recycled current heading<br> elements. This concept was embraced by many a web standards<br> afficianado and has been spread far and wide by web standards<br> evangelists, in speeches, articles and books.
+        </p>
+
+        <h4>How the outline should work: using nested <code>section</code> and <code>h1</code> elements</h4>
+        <pre><span class="tag">&lt;body&gt;</span><span class="pln"><br>&nbsp;</span><span class="tag">&lt;h1&gt;</span><span class="pln">top level heading (parent sectioning element is body)</span><span class="tag">&lt;/h1&gt;</span><span class="pln"><br>&nbsp;</span><span class="tag">&lt;section&gt;</span><span class="pln"><br>&nbsp;</span><span class="tag">&lt;h1&gt;</span><span class="pln">2nd level heading (nested within one sectioning element)</span><span class="tag">&lt;/h1&gt;</span><span class="pln"> <br>&nbsp; </span><span class="tag">&lt;section&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;h1&gt;</span><span class="pln">3rd level heading (nested within 2 sectioning elements)</span><span class="tag">&lt;/h1&gt;</span><span class="pln"> <br>&nbsp; </span><span class="tag">&lt;/section&gt;</span><span class="pln"> <br>&nbsp;</span><span class="tag">&lt;/section&gt;</span><span class="pln"><br></span><span class="tag">&lt;/body&gt;</span></pre>
+
+        <h4>document outline:</h4>
+        <pre><span class="pln"> </span><span class="pun">→</span><span class="pln"> top level heading<br>&nbsp;</span><span class="pun">→</span><span class="pln"> </span><span class="pun">→</span><span class="pln"> </span><span class="lit">2nd</span><span class="pln"> level heading<br>&nbsp;</span><span class="pun">→</span><span class="pln"> </span><span class="pun">→</span><span class="pln"> </span><span class="pun">→</span><span class="pln"> </span><span class="lit">3rd</span><span class="pln"> level heading</span></pre>
+
+        <h3>Trouble in outline nerdvana</h3>
+        <h4>Document outline semantics exposed by browsers and<br> assistive technology:</h4>
+        <pre><span class="pun">→</span><span class="pln"> top level heading<br></span><span class="pun">→</span><span class="pln"> top level heading<br></span><span class="pun">→</span><span class="pln"> top level heading</span></pre>
+
+        <p>
+            Brilliant as it is, this idea as specified has not been taken up by <a href="#">user<br> agents</a>. So after 7 years or more we have a concept without<br> interoperable implementations (super sad face).
+        </p>
+        <br>
+        <p>
+            For the last few years, the HTML5 specification has included <a href="#">a<br> warning</a> about the lack of implementations and has suggested that the<br> document outline algorithm not be relied upon to convey heading<br> semantics to users. Recently this has been taken a step further. Now<br> the HTML 5.1 specification  requires developers to use h1-h6 to<br> convey document structure. The simple reason for this change is that<br> the HTML5 document outline is not implemented and <a href="#">despite efforts</a><br> to get it implemented, the general response from user agent<br> developers has not been enthusiastic. You can read the updated advice<br> and requirements in the <a href="#">HTML 5.1 specification</a>
+        </p>
+        <h4>Comments or questions? Bring ’em on!</h4>
+        <p><strong>PS:</strong>If you find any bugs in the <a href="#">HTML 5.1 spec</a> you can <a href="#">open an issue</a><br> or send a <a href="#">pull request</a>.</p>
+
+        <h3>Update 21/06/16 – Heading-level outline view</h3>
+        <p>
+            You can now check the <b>heading-level outline</b> of a page using the<br> <a href="#">W3C HTML checker</a> or the<a href="#">W3C markup validation service</a>(same<br> output different UI) with thanks to <a href="#">Mike[TM]Smith</a>. It is provided<br> alongside the structural outline, so you can compare semantic reality <br>and theory.
+        </p>
+
+        <img src="../img/heading.png">
+        <p>
+            Example of heading-level outline and<br> structural outline displayed by the Nu<br> HTML Checker
+        </p>
+
+        <section class="author">
+            <hr>
+
+            <img src="../img/strangeMan.jpeg" align="middle">
+            <p>
+                This article was written by <a href="#">Steve Faulkner</a>. An Australian living in London,<br> works for The Paciello Group, a well-known web accessibility consultancy, and<br> is a co-editor of the HTML5 spec at W3C
+            </p>
+
+            <hr>
+        </section>
+    </main>
+    <aside class="right-sidebar">
+        <h3>ELEMENT INDEX</h3>
+        <img src="../img/element-index.png">
+
+        <hr width="30%" align="left">
+        <h3>SPONSORS</h3>
+
+        <hr width="30%" align="left">
+        <h3>MORE HTML5 DOCTOR</h3>
+
+        <ul>
+            <li><a href="#">Articles</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Authors</a></li>
+        </ul>
+
+        <div id="articles">
+            <ul>
+                <li><a href="#">Computer says NO to HTML5 document<br> outline</a></li>
+                <li><a href="#">The woes of data input</a></li>
+                <li><a href="#">HTML Developers</a></li>
+            </ul>
+        </div>
+
+        <div id="categories">
+            <ul>
+                <li><a href="#">Accessibility</a></li>
+                <li><a href="#">Attributes</a></li>
+                <li><a href="#">Boilerplates</a></li>
+            </ul>
+        </div>
+
+        <div id="authors">
+            <ul>
+                <li><a href="#">Alex Gibson</a></li>
+                <li><a href="#">Bruce Lawson</a></li>
+                <li><a href="#">Gennyd Bowles</a></li>
+            </ul>
+        </div>
+
+        <hr width="30%" align="left">
+        <h3>SUBMIT YOUR SITE TO THE GALLERY</h3>
+        <img src="../img/the-gallery.png">
+
+        <hr width="30%" align="left">
+        <h3><a href="#">BEGINNING HTML5 & CSS3</a></h3>
+
+        <img src="../img/web-evolved.jpg" align="left" height="200" width="130">
+        <p>
+            The Web Evolved: A<br> new book on HTML5<br> & CSS3 by Richard<br> Clark, Oli Studholme<br>, Christopher Murphy<br> and Divya Manian.
+        </p>
+
+        <button> Buy it now </button>
+    </aside>
+
+</body>
+</html>
