@@ -1,0 +1,273 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: #10171e;
+}
+
+html, body {
+    font-size: 14px;
+    height: 100%;
+}
+
+input, button{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+}
+
+h2, h3, span{
+    margin: 0;
+    align-items: center;
+    color: white;
+}
+
+h3 > span{
+    font-weight: normal;
+}
+
+span{
+    color: #8697a4;
+}
+
+svg, a > svg {
+    height: 1.75rem;
+}
+
+button > svg {
+    height: 1.25rem;
+}
+
+svg path, circle{
+    fill: #1da1f2;
+}
+
+input::placeholder{
+    font-weight: bold;
+    color: #7c8d99;
+}
+
+.feed-header > svg{
+    height: 1.5rem;
+}
+
+#main\ header{
+    background-color: #1c2938;
+    position: sticky;
+    top: 0;
+}
+
+.header-wrapper{
+    display: flex;
+    height: 53px;
+    margin: auto;
+    width: 100%;
+    max-width: 1000px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#svg{
+    padding-left: 10px;
+    width: 30px;
+    height: 19px;
+}
+
+.pagenav {
+    display: flex;
+    align-content: stretch;
+    min-width: 360px;
+}
+
+.pagenav > a{
+    display: flex;
+    width: 90px;
+    align-items: center;
+    justify-content: center;
+}
+
+.search{
+    display: flex;
+    width: 397px;
+    height: 33px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: #10171e;
+    border-radius: 24px;
+    justify-content: start;
+    align-items: center;
+}
+
+.in-search{
+    padding: 10px;
+}
+
+#profile {
+    display: flex;
+    width: 183px;
+    height: 33px;
+    align-items: center;
+
+}
+
+#profile:hover{
+    background: aqua;
+    opacity: 25%;
+    border-radius: 24px;
+}
+
+.avatar{
+    border-radius: 100px;
+    width: 33px;
+    height: 33px;
+}
+
+#main\ content{
+    display: flex;
+    width: 1000px;
+    min-height: 100%;
+    margin: 10px auto auto;
+    justify-content: space-around;
+}
+
+#feed {
+    max-width: 600px;
+    width: 100%;
+    background-color: #15202b;
+}
+
+.aside-wrapper{
+    display: flex;
+    flex-direction: column;
+    top: 63px;
+    width: 360px;
+}
+
+#propositions {
+    display: flex;
+    flex-direction: column;
+    background-color: #15202b;
+    margin-bottom: 15px;
+    min-height: 20rem;
+}
+
+#relevant {
+    display: flex;
+    flex-direction: column;
+    min-height: 20rem;
+    width: 360px;
+    background-color: #15202b;
+}
+
+#propositions > *, #relevant > *, #feed > * {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(56, 68, 77);
+    padding: 15px 10px 15px 10px;
+}
+
+#relevant > * {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(56, 68, 77);
+    padding: 15px 10px 15px 10px;
+}
+
+.unknown{
+    width: 41.25px;
+    height: 41.25px;
+}
+
+.people{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.read-button{
+    float: right;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: #1c90d8;
+    border: 1px solid #1c90d8;
+    border-radius: 24px;
+    padding: 5px 15px 5px 15px;
+    margin-left: 20px;
+}
+
+.additional-info{
+    border-bottom-width: 0;
+    color: #1a91da;
+}
+
+.actual-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.actual-tag{
+    display: flex;
+    flex-direction: column;
+}
+
+.actual-tag span:nth-child(3){
+    font-size: 110%;
+}
+
+#feed{
+    display: flex;
+    flex-direction: column;
+}
+
+.feed-header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #1c2938;
+}
+
+.tweet{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.tweet > img{
+    height: 35px;
+}
+
+.post > img {
+    height: 43px;
+    border-radius: 100px;
+}
+
+.post > *{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.my-tweet{
+    width: 416px;
+}
+
+.post-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.post{
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-text{
+    font-weight: 400;
+    color: white;
+}
+
+.post-image{
+    width: 100%;
+    border-radius: 24px;
+    border: 1px solid dimgrey;
+}
