@@ -1,0 +1,92 @@
+footer {
+    max-height: 230px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+footer > .container > ul > li {
+    display: inline-block;
+}
+
+footer > .container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.title-footer {
+    color: #738f93;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    font-size: 0.632em;
+    text-decoration: none;
+    margin-bottom: 30px;
+}
+
+.title-footer:hover {
+    outline: none;
+    color: #39424e;
+}
+
+.menu-title-footer {
+    margin-right: 5px;
+    padding: 0;
+}
+
+.menu-title-footer > li {
+    margin-bottom: 10px;
+}
+
+.menu-title-footer > li > a {
+    color: #576871;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.832em;
+    text-decoration: none;
+}
+
+.menu-title-footer > li > a:hover {
+    color: #32c766;
+}
+
+.footer-icons > li {
+    display: inline-block;
+    background-size: 20px 15px;
+    margin-right: -20px;
+}
+
+.footer-icons::after {
+    display: block;
+    content: "© HackerRank";
+    font-size: 1.077rem;
+    color: #576871;
+}
+
+footer > .container > ul > li {
+    vertical-align: top;
+    margin-right: 80px;
+}
+
+.products-li > h3 {
+    margin-bottom: 20px;
+}
+
+.linkedin-icon {
+    background: url("../../img/linkedin.png") no-repeat;
+}
+
+.twitter-icon {
+    background: url("../../img/share_twitter.png") no-repeat;
+}
+
+.facebook-icon {
+    background: url("../../img/share_twitter.png") no-repeat;
+}
+
+.podcast-icon {
+    background: url("../../img/podcast.png") no-repeat;
+}
+
+.footer-icons a {
+    color: transparent;
+}

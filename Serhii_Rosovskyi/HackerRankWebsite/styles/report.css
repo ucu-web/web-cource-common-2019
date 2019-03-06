@@ -1,0 +1,59 @@
+.report {
+    min-height: 240px;
+    background-color: #0D141E;
+    background-image: url("../../img/devskills.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    position: relative;
+}
+
+.report .container {
+    position: absolute;
+    top: 40%;
+    left: 39%;
+    transform: translate(-50%, -36%);
+    max-width: 1145px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.report h2 {
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 36px;
+    font-family: "Source Code Pro", monospace;;
+}
+
+.report span {
+    color: #32c766;
+}
+
+.report p {
+    color: #ffffff;
+    line-height: 3em;
+    letter-spacing: 0.1em;
+    font-weight: 200;
+}
+
+.report-button {
+    background: #1ba94c;
+    text-decoration: none;
+    padding: 0.917em 2em;
+    color: #ffffff;
+    line-height: 3em;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(27, 169, 76, 1);
+}
+
+.report-button:hover {
+    box-shadow: 0 1px 3px rgba(27, 169, 76, 1);
+}
+
+.report-text {
+    line-height: 3em;
+    color: #ffffff;
+}

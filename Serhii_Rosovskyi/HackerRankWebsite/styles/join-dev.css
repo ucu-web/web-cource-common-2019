@@ -1,0 +1,58 @@
+.join-developers {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-height: 366px;
+}
+
+.join-developers h2 {
+    line-height: 50px;
+    font-size: 35px;
+    color: #576871;
+    font-weight: 200;
+}
+
+.sign-up-and-code {
+    margin-top: 27px;
+    text-decoration: none;
+    color: #fff;
+    background: #1ba94c;
+    padding-left: 1.628em;
+    padding-right: 1.628em;
+    line-height: 3em;
+    box-shadow: 0 4px 12px rgba(27, 169, 76, 1);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+
+.sign-up-and-code:hover {
+    box-shadow: 0 3px 8px rgba(27, 169, 76, 1);
+}
+
+.hiring-talent {
+    margin-top: 50px;
+    color: #576871;
+    font-size: 0.892em;
+    font-weight: 200;
+}
+
+.hiring-talent a {
+    color: #39424e;
+}
+
+.join-developers strong {
+    color: #39424e;
+    font-weight: 700;
+}
+
+.sponsors-images {
+    min-height: 166px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}

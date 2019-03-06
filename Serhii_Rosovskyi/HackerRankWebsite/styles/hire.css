@@ -1,0 +1,68 @@
+.hire .container {
+    margin-top: 3%;
+    min-height: 355px;
+}
+
+.hire {
+    height: 355px;
+}
+
+.code {
+    float: left;
+}
+
+.hire h4 {
+    font-size: 12px;
+    text-align: left;
+    letter-spacing: 1.5px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: #738f93;
+    margin-bottom: 20px;
+}
+
+.hire p {
+    font-size: 1.3em;
+    color: #738f93;
+    font-weight: 200;
+    margin-bottom: 40px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+}
+
+.hire h3 {
+    margin-bottom: 20px;
+}
+
+.hired {
+    color: #39424e;
+    font-size: 1.4em;
+    font-family: 'Source Code Pro', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.talent {
+    float: left;
+    margin-left: 270px;
+}
+
+.hire-button {
+    padding: 1em 2em;
+    font-family: 'Source Code Pro', sans-serif;
+    color: #1ba94c;
+    text-decoration: none;
+    margin-bottom: 40px;
+    border: 1px solid #1ba94c;
+}
+
+.hire-button:hover {
+    border: 1px solid #32B87B;
+    color: #32B87B;
+}
+
+.hire-button-text {
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    font-size: 16px;
+}

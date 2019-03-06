@@ -1,0 +1,25 @@
+.top-bar {
+    background: #f3f7f7;
+    height: 44px;
+}
+
+.top-bar .container {
+    max-width: 1145px;
+    margin: auto;
+    min-height: 100%;
+    display: flex;
+}
+
+.top-text {
+    margin: auto 0;
+}
+
+.top-text p {
+    font-size: 0.8em;
+    padding-left: 2px;
+}
+
+.top-text a {
+    color: #1ba94c;
+    text-decoration: none;
+}

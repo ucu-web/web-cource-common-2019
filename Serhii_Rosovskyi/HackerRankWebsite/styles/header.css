@@ -1,0 +1,41 @@
+header {
+    min-height: 130px;
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    padding-left: 45px;
+    padding-right: 45px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #39424e;
+    font-weight: 200;
+    font-size: 15px;
+    padding: 0.867em 0.633em;
+}
+
+.main-navigation-right {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: auto;
+    order: 2;
+    margin-right: 2px;
+}
+
+.main-navigation-right a {
+    color: #738f93;
+    font-weight: 200;
+    padding-right: 1.548em;
+    padding-left: 1.548em;
+    line-height: 2.1em;
+    font-size: 0.878em;
+    text-decoration: none;
+}
+
+.border-sign-up {
+    border: 1px solid #738f93;
+}
