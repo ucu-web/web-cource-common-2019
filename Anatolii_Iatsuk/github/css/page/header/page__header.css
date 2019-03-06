@@ -1,0 +1,6 @@
+.page__header {
+    grid-area: header;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    height: 38px;
+}

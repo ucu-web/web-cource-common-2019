@@ -1,0 +1,11 @@
+.page {
+    background-color: #f6f8fa;
+    height: 100%;
+    display: grid;
+    grid-template-areas: 'header header header ' 'left middle right';
+    grid-template-rows: 62px auto;
+    grid-template-columns: 25% 50% 25%;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+    margin: 0;
+    padding: 0;
+}

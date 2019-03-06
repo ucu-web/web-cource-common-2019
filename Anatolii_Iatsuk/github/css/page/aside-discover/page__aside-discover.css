@@ -1,0 +1,6 @@
+.page__aside-discover {
+    padding-top: 32px;
+    grid-area: right;
+    padding-left: 16px;
+    padding-right: 16px;
+}

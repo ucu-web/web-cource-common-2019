@@ -1,0 +1,6 @@
+.page__main-content {
+    padding-top: 16px;
+    grid-area: middle;
+    padding-left: 16px;
+    padding-right: 16px;
+}

@@ -1,0 +1,9 @@
+.main-nav__link {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.main-nav__link:hover {
+    color: gray;
+}

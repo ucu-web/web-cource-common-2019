@@ -1,0 +1,14 @@
+.page__repositories-nav{
+    grid-area: left;
+}
+
+.page__repositories-nav-sticky{
+    overflow: hidden;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 32px;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+

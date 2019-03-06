@@ -1,0 +1,24 @@
+.main-nav__search {
+    margin: 0 8px;
+    border-radius: 3px;
+    height: 30px;
+    background-color: hsla(0, 0%, 100%, .125);
+}
+
+.search-form {
+    height: 100%;
+    position: relative;
+}
+
+.search-image {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.search-input {
+    height: 100%;
+    background: none;
+    border: none;
+    color: white;
+}

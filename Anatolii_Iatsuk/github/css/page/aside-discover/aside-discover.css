@@ -1,0 +1,14 @@
+.aside-discover {
+    background-color: #f6f8fa;
+}
+
+.aside-discover__list {
+    list-style: none;
+}
+
+.aside-discover__item {
+    width: 100%;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e1e4e8
+}
