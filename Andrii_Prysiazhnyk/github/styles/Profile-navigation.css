@@ -11,16 +11,19 @@
   margin-left: 12px;
 }
 
+.Profile-navigation__details--right-webkit summary::-webkit-details-marker {
+  float: right;
+  transform: rotate(90deg);
+  margin-left: 8px;
+  font-size: 12px;
+  width: 5px;
+}
+
 .Profile-navigation__details {
   color: white;
 }
 .Profile-navigation__details--right-webkit summary::-webkit-details-marker {
-  float: right;
-  transform: rotate(90deg);
   margin-top: 7px;
-  margin-left: 8px;
-  font-size: 12px;
-  width: 5px;
 }
 .Profile-navigation__additional-info-icon, .Profile-navigation__notifications-icon {
   width: 14px;

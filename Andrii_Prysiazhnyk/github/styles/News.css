@@ -13,9 +13,12 @@
 }
 
 .News {
-  display: flex;
   padding: 16px 0;
   margin: 0 16px;
+}
+
+.News {
+  display: flex;
 }
 .News__user-link {
   margin-right: 16px;

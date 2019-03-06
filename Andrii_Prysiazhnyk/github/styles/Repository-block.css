@@ -8,6 +8,10 @@
   color: #0366d6;
 }
 
+.Repository-block--underscored {
+  border-bottom: 1px solid #D2D6D7;
+}
+
 .Repository-block {
   padding: 8px 0;
 }
@@ -23,8 +27,6 @@
   margin-left: 8px;
   width: 14px;
   height: 16px;
-}
-.Repository-block__star-icon {
   vertical-align: bottom;
 }
 .Repository-block__language--circle::before {

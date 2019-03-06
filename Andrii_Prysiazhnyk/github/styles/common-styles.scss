@@ -17,3 +17,16 @@ $blue-color: #0366d6;
 %underscored {
   border-bottom: 1px solid #D2D6D7;
 }
+
+%main-block {
+  padding: 16px 0;
+  margin: 0 16px;
+}
+
+%right-webkit {
+  float: right;
+  transform: rotate(90deg);
+  margin-left: 8px;
+  font-size: 12px;
+  width: 5px;
+}

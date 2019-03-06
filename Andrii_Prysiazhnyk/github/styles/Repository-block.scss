@@ -3,6 +3,10 @@
 .Repository-block {
   padding: 8px 0;
 
+  &--underscored {
+    @extend %underscored;
+  }
+
   &__title, &__description {
     margin: 4px 0;
   }
@@ -25,9 +29,6 @@
     margin-left: 8px;
     width: 14px;
     height: 16px;
-  }
-
-  &__star-icon {
     vertical-align: bottom;
   }
 

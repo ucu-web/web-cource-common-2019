@@ -2,8 +2,7 @@
 
 .News {
   display: flex;
-  padding: 16px 0;
-  margin: 0 16px;
+  @extend %main-block;
 
   &__user-link {
     margin-right: 16px;
