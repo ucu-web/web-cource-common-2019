@@ -1,0 +1,32 @@
+.Repository__header {
+  background-color: #fafbfc;
+  border-bottom: 1px solid #e1e4e8;
+}
+.Repository__description {
+  width: 980px;
+  margin: 0 auto;
+}
+.Repository__description-text {
+  font-size: 1rem;
+  color: #24292e;
+}
+.Repository__tags {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+.Repository__tag {
+  margin: 0 0.5em 0.5em 0;
+}
+.Repository__tag-link {
+  text-decoration: none;
+  padding: 0.3em 0.9em;
+  color: #0366d6;
+  font-size: 0.86em;
+  background-color: #f1f8ff;
+}
+.Repository__commits {
+  width: 980px;
+  margin: auto;
+}
+/*# sourceMappingURL=Repository.css.map */
