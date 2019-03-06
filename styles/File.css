@@ -27,9 +27,11 @@
 }
 .File__icon {
   padding-left: 0.65rem;
+  filter: invert(55%);
 }
 .File__link {
   text-decoration: none;
   color: #0366d6;
+  font-weight: 400;
 }
 /*# sourceMappingURL=File.css.map */

@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="styles/File.css">
     <link rel="stylesheet" href="styles/Commits.css">
     <link rel="stylesheet" href="styles/Dropdown.css">
+    <link rel="stylesheet" href="styles/Actions.css">
+    <link rel="stylesheet" href="styles/Commit-tease.css">
 </head>
 <body class="Layout">
 <header class="Layout__header">
@@ -132,7 +134,8 @@
             </ul>
         </section>
         <section class="Actions">
-            <button class="Actions__branch">Branch: master
+            <div class="Actions__actions-group">
+            <button class="Actions__branch">Branch:  master
                 <span class="Dropdown">
                     
                 </span>
@@ -140,21 +143,34 @@
             <a href="" class="Actions__pull-request">
                 New pull request
             </a>
+            </div>
             <div class="Actions__actions-group">
                 <a href="#" class="Actions__link">
-                    Create new file
-                </a>
-                <a href="#" class="Actions__link">
+                    Create new file</a><a href="#" class="Actions__link">
                     Upload files
-                </a>                      
-                <a href="#" class="Actions__link">
+                </a><a href="#" class="Actions__link">
                     Find file
                 </a>
-                <button class="Actions__action">
-                    
+                <button class="Actions__branch Actions__branch--green">
+                    Clone or download
+                    <span class="Dropdown">
+                        
+                    </span>
                 </button>
             </div>
         </section>
+        <div class = "Commit-tease">
+            <img src="https://avatars3.githubusercontent.com/u/29597?s=60&v=40" class="Commit-tease__avatar">
+            <h5 class="Commit-tease__nickname">
+                <a href="#" class="Commit-tease__account-link"></a>
+            </h5>
+            <a href="#" class="Commit-tease__changelog"></a>
+            <div class="Commit-tease__latest-commit">
+                Latest commit
+                <a href="" class="Commit-tease__nickname-link"></a>
+                <time class="Commit-tease__time-edited"></time>
+            </div>
+        </div>
         <section class="Repository__files">
             <article class="File">
                 <img alt="" class="File__icon" src="icons/directory.svg">
