@@ -1,7 +1,7 @@
 .Actions {
   display: flex;
   align-items: center;
-  width: 980px;
+  max-width: 980px;
   margin: auto;
   justify-content: space-between;
 }

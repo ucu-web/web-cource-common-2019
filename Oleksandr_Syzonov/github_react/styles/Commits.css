@@ -1,7 +1,7 @@
 .Commits {
   list-style: none;
   display: flex;
-  width: 980px;
+  max-width: 980px;
   margin: auto auto 18px auto;
   justify-content: space-around;
   padding: 0;
