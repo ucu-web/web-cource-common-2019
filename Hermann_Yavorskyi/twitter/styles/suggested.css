@@ -1,31 +1,31 @@
-.Suggested__single-recommendation {
+.suggested__single-recommendation {
   margin-top: 10px;
   padding-bottom: 8px;
   border-bottom: 1px solid #e6ecf0;
 }
 
-.Suggested__profile-link {
+.suggested__profile-link {
   cursor: pointer;
   text-decoration: none;
 }
 
-.Suggested__profile-link:hover .Suggested__nickname {
+.suggested__profile-link:hover .suggested__nickname {
   text-decoration: underline;
   color: #1da1f2;
 }
 
-.Suggested__avatar {
+.suggested__avatar {
   float: left;
   height: 48px;
   width: 48px;
 }
 
-.Suggested__username,
-.Suggested__Follow {
+.suggested__username,
+.suggested__follow {
   margin-left: 10px;
 }
 
-.Suggested__username {
+.suggested__username {
   color: black;
   font-size: 14px;
   display: inline-block;
@@ -35,7 +35,7 @@
   white-space: nowrap;
 }
 
-.Suggested__Follow {
+.suggested__follow {
   font-size: 12px;
   text-align: center;
   min-height: 26px;
@@ -49,10 +49,10 @@
   background-color: #ffffff;
 }
 
-.Suggested__Follow:hover {
+.suggested__follow:hover {
   background-color: #e8f5fd;
 }
-.Suggested__cross-sign {
+.suggested__cross-sign {
   border: none;
   background-color: #ffffff;
   padding: 0;
@@ -62,7 +62,7 @@
   overflow: hidden;
   line-height: 10px;
 }
-.Suggested__cross-icon {
+.suggested__cross-icon {
   fill: #ccd6dd;
   padding: 0;
   margin: 0;

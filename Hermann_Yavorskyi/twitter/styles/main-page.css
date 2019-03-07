@@ -1,11 +1,11 @@
-.Main-page__Left-aside-wrapper,
-.Main-page__Right-aside-wrapper {
+.main-page__left-aside-wrapper,
+.main-page__right-aside-wrapper {
   margin: 0;
   width: 290px;
   display: flex;
   flex-direction: column;
 }
-.Main-page__News-feed {
+.main-page__news-feed {
   display: flex;
   flex-direction: column;
   width: 590px;

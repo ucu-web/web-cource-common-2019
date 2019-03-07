@@ -1,12 +1,12 @@
-.Site-navigation {
+.site-navigation {
   display: flex;
   height: 46px;
   align-items: center;
   font-size: 13px;
 }
 
-.Site-navigation__link,
-.Site-navigation__button {
+.site-navigation__link,
+.site-navigation__button {
   color: #66757f;
   fill: #66757f;
   box-sizing: border-box;
@@ -19,33 +19,33 @@
   padding: 0 14px 0 4px;
 }
 
-.Site-navigation__button {
+.site-navigation__button {
   margin: 0 auto;
   display: flex;
   align-items: center;
   border: none;
   width: 115px;
 }
-.Site-navigation__link {
+.site-navigation__link {
   display: flex;
   align-items: center;
   border-bottom: 2px solid #ffffff;
 }
 
-.Site-navigation__link_wider {
+.site-navigation__link_wider {
   width: 132px;
 }
 
-.Site-navigation__link_active,
-.Site-navigation__link:focus,
-.Site-navigation__button:focus,
-.Site-navigation__link:hover,
-.Site-navigation__button:hover {
+.site-navigation__link_active,
+.site-navigation__link:focus,
+.site-navigation__button:focus,
+.site-navigation__link:hover,
+.site-navigation__button:hover {
   border-bottom: 2px solid #1c94e0;
   fill: #1c94e0;
   color: #1da1f2;
 }
-.Site-navigation__icon {
+.site-navigation__icon {
   height: 23px;
   width: 23px;
   margin-left: 10px;

@@ -1,4 +1,4 @@
-.Layout__header {
+.layout__header {
   background: #ffffff;
   position: sticky;
   top: 0;
@@ -7,7 +7,7 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
   z-index: 10;
 }
-.Layout__Main-page {
+.layout__main-page {
   max-width: 1218px;
   display: flex;
   justify-content: center;

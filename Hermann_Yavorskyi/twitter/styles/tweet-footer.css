@@ -12,7 +12,7 @@
   color: #1da1f2;
 }
 
-.retweet:hover {
+.tweet-footer__retweet:hover {
   color: #17bf63;
 }
 
@@ -22,10 +22,10 @@
   color: #657786;
 }
 
-.meassage {
+.tweet-footer__message {
   font-size: 14px;
 }
 
-.like:hover {
+.tweet-footer__like:hover {
   color: #e0245e;
 }

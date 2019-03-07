@@ -1,0 +1,26 @@
+.search-form__input {
+  background: #f5f8fa;
+  border-radius: 21px;
+  border: 1px solid #e6ecf0;
+  box-sizing: border-box;
+  font-size: 12px;
+  width: 221px;
+  height: 32px;
+  padding: 8px 32px 8px 12px;
+  cursor: text;
+}
+
+.search-form__button {
+  margin: 0;
+  padding: 0;
+  background: #f5f8fa;
+  border: none;
+  position: relative;
+  right: 30px;
+  top: 4px;
+}
+
+.search-form__icon {
+  height: 19px;
+  width: 26px;
+}
