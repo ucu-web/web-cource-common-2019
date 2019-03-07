@@ -1,0 +1,64 @@
+.Aside {
+    display: flex;
+    flex-direction: column;
+    top: 63px;
+    width: 360px;
+}
+
+.Aside__propositions {
+    display: flex;
+    flex-direction: column;
+    background-color: #15202b;
+    margin-bottom: 15px;
+    min-height: 20rem;
+}
+
+.additional-info {
+    border-bottom-width: 0;
+    color: #1a91da;
+}
+
+.Aside__relevant {
+    display: flex;
+    flex-direction: column;
+    min-height: 20rem;
+    width: 360px;
+    background-color: #15202b;
+}
+
+.Aside__relevant .actual-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Aside__relevant .actual-tag {
+    display: flex;
+    flex-direction: column;
+}
+
+.Aside__relevant .actual-tag span:nth-child(3) {
+    font-size: 110%;
+}
+
+.people {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.people .read-button {
+    float: right;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: #1c90d8;
+    border: 1px solid #1c90d8;
+    border-radius: 24px;
+    padding: 5px 15px 5px 15px;
+    margin-left: 20px;
+}
+
+.unknown {
+    width: 41.25px;
+    height: 41.25px;
+}
