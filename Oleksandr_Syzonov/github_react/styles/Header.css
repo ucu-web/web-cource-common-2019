@@ -3,9 +3,18 @@
   line-height: 1.5;
   display: flex;
   align-items: center;
+  flex-shrink: 1;
+}
+.Header__menu {
+  display: flex;
+  justify-content: space-between;
+  flex: 1 1 auto;
 }
 .Header__search {
   width: 300px;
+}
+.Header__search ::placeholder {
+  color: hsla(0, 0%, 100%, 0.75);
 }
 .Header__navigation_places {
   list-style: none;
@@ -22,5 +31,22 @@
   padding: 0 0.5rem;
   color: white;
   font-weight: 600;
+}
+.Header__user-button-icon {
+  height: 1.25rem;
+  width: auto;
+}
+.Header__user-button-icon--inverted {
+  filter: invert(100%);
+}
+.Header__user-button {
+  background: transparent;
+  border: 0;
+}
+.Header__notifications-icon {
+  filter: invert(70%);
+}
+.Header__navigation-search {
+  display: flex;
 }
 /*# sourceMappingURL=Header.css.map */

@@ -1,1 +1,1 @@
-{"version":3,"sources":["Logo.less"],"names":[],"mappings":"AAAA;EACI,qBAAA;EACA,kBAAA;EACA,iBAAA;;AACA,KAAC;EACC,QAAQ,YAAR;;AAEJ,KAAC;EACC,QAAQ,WAAR;;AAEF,KAAC;EACC,WAAA;EACA,UAAA","file":"Logo.css"}
+{"version":3,"sources":["Logo.less"],"names":[],"mappings":"AAAA;EACE,qBAAA;EACA,kBAAA;EACA,iBAAA;EACA,gBAAA;EACA,2BAAA;;AAEA,KAAC;EACC,WAAA;EACA,YAAA;;AAGF,KAAC;EACC,QAAQ,YAAR;;AAGF,KAAC;EACC,QAAQ,WAAR;;AAGF,KAAC;EACC,YAAA;EACA,WAAA","file":"Logo.css"}

@@ -18,6 +18,7 @@
 .Commits__icon {
   margin-right: 0.15rem;
   vertical-align: text-bottom;
+  filter: invert(50%);
 }
 .Commits__number {
   font-weight: 600;

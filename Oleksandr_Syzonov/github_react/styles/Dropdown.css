@@ -10,4 +10,7 @@
 .Dropdown--white {
   color: #ffffff;
 }
+.Dropdown--normal {
+  vertical-align: 3px;
+}
 /*# sourceMappingURL=Dropdown.css.map */

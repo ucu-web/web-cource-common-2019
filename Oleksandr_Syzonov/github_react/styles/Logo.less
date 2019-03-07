@@ -1,15 +1,25 @@
-.Logo{
-    display: inline-block;
-    align-self: center;
-    margin-right: 1em;
-    &--inverted{
-      filter: invert(100%);
-    }
-  &--grey{
+.Logo {
+  display: inline-block;
+  align-self: center;
+  margin-right: 1em;
+  overflow: hidden;
+  vertical-align: text-bottom;
+
+  &__image {
+    width: 100%;
+    height: 100%;
+  }
+
+  &--inverted {
+    filter: invert(100%);
+  }
+
+  &--grey {
     filter: invert(60%);
   }
-  &--small{
-    height: 1em;
-    width: 1em;
+
+  &--small {
+    height: 100%;
+    width: auto;
   }
 }

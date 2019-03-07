@@ -24,24 +24,40 @@
 <body class="Layout">
 <header class="Layout__header">
     <div class="Header">
-        <a class="Logo Logo--inverted" href="#"><img src="icons/github-dark.svg"></a>
-        <div class="Header__search">
-            <form class="Search">
-                <input class="Search__field" placeholder="Search or jump to..." type="text">
-                <img class="Search__slash-icon" src="icons/search-key-slash.svg">
-            </form>
+        <a class="Logo Logo--inverted" href="#"><img src="icons/github-dark.svg" class="Logo__image"></a>
+        <div class="Header__menu">
+            <div class="Header__navigation-search">
+                <div class="Header__search">
+                    <form class="Search">
+                        <input class="Search__field" placeholder="Search or jump to..." type="text">
+                        <img class="Search__slash-icon" src="icons/search-key-slash.svg">
+                    </form>
+                </div>
+                <nav class="Header__navigation">
+                    <ul class="Header__navigation_places">
+                        <li class="Header__navigation_place"><a class="Header__link" href="#">Pull requests</a></li>
+                        <li class="Header__navigation_place"><a class="Header__link" href="#">Issues</a></li>
+                        <li class="Header__navigation_place"><a class="Header__link" href="#">Marketplace</a></li>
+                        <li class="Header__navigation_place"><a class="Header__link" href="#">Explore</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="Header__controls">
+                <a href="#" class="Header__notifications">
+                    <img src="icons/bell-icon.svg" alt="" class="Header__notifications-icon">
+                </a>
+                <button class="Header__user-button">
+                    <img src="icons/plus.svg" alt="" class="Header__user-button-icon Header__user-button-icon--inverted">
+                    <span class="Dropdown Dropdown--white Dropdown--normal"></span>
+                </button>
+                <button class="Header__user-button">
+                    <img src="icons/user.png" alt="" class="Header__user-button-icon">
+                    <span class="Dropdown Dropdown--white Dropdown--normal"></span>
+                </button>
+            </div>
         </div>
-        <nav class="Header__navigation">
-            <ul class="Header__navigation_places">
-                <li class="Header__navigation_place"><a class="Header__link" href="#">Pull requests</a></li>
-                <li class="Header__navigation_place"><a class="Header__link" href="#">Issues</a></li>
-                <li class="Header__navigation_place"><a class="Header__link" href="#">Marketplace</a></li>
-                <li class="Header__navigation_place"><a class="Header__link" href="#">Explore</a></li>
-            </ul>
-        </nav>
-        <div class="Header__controls">
         </div>
-    </div>
+
 </header>
 <main class="Layout__main">
     <div class="Repository">
@@ -61,7 +77,9 @@
                     <div class="Repository-navigation__stats">
                         <div class="Repository-data">
                             <button class="Repository-data__action">
+                                <img src="icons/eye.svg" class="Repository-data__icon">
                                 Watch
+                                <span class="Dropdown"></span>
                             </button>
                             <a class="Repository-data__count" href="#">
                                 6,642
@@ -132,27 +150,27 @@
         </section>
         <section class="Repository__commits">
             <ul class="Commits">
-                <li class="Commits__commit"><img alt="" class="Commits__icon" src="icons/book.svg">
+                <li class="Commits__commit"><img alt="" class="Commits__icon" src="icons/commit.svg">
                     <span class="Commits__number">
                         10,711
                     </span> commits
                 </li>
-                <li class="Commits__commit"><img alt="" class="Commits__icon" src="icons/book.svg"><span
+                <li class="Commits__commit"><img alt="" class="Commits__icon" src="icons/branch.svg"><span
                         class="Commits__number">
                         34
                     </span> branches
                 </li>
-                <li class="Commits__commit"><img alt="" class="Commits__icon" src="icons/book.svg"><span
+                <li class="Commits__commit"><img alt="" class="Commits__icon" src="icons/release.svg"><span
                         class="Commits__number">
                        112
                     </span> releases
                 </li>
-                <li class="Commits__commit"><img alt="" class="Commits__icon" src="icons/book.svg"><span
+                <li class="Commits__commit"><img alt="" class="Commits__icon" src="icons/contributors.svg"><span
                         class="Commits__number">
                         1,285
                     </span> contributors
                 </li>
-                <li class="Commits__commit"><img alt="" class="Commits__icon" src="icons/book.svg"> MIT
+                <li class="Commits__commit"><img alt="" class="Commits__icon" src="icons/license.svg"> MIT
                 </li>
             </ul>
         </section>
@@ -392,10 +410,24 @@
         </section>
         <footer class="Repository__footer">
             <div class="Footer">
-                <div class="Footer__left">
+                <div class="Footer__block">
+                    © 2019 GitHub, Inc.
+                    <nav class="Footer__navigation">
+                        <a href="#" class="Footer__place">Terms</a>
+                        <a href="#" class="Footer__place">Terms</a>
+                        <a href="#" class="Footer__place">Terms</a>
+                        <a href="#" class="Footer__place">Terms</a>
+                        <a href="#" class="Footer__place">Terms</a>
+                    </nav>
                 </div>
                 <a class="Logo Logo--grey Logo--small" href="#"><img src="icons/github-dark.svg"></a>
-                <div class="Footer__right">
+                <div class="Footer__block">
+                    <a href="#" class="Footer__place">Terms</a>
+                    <a href="#" class="Footer__place">Terms</a>
+                    <a href="#" class="Footer__place">Terms</a>
+                    <a href="#" class="Footer__place">Terms</a>
+                    <a href="#" class="Footer__place">Terms</a>
+                    <a href="#" class="Footer__place">Terms</a>
                 </div>
             </div>
         </footer>

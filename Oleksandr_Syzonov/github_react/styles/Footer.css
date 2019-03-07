@@ -1,0 +1,20 @@
+.Footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #6a737d;
+  line-height: 1.5;
+}
+.Footer__block {
+  display: flex;
+}
+.Footer__footer-navigation {
+  display: flex;
+  justify-content: space-between;
+}
+.Footer__place {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: #0366d6;
+}
+/*# sourceMappingURL=Footer.css.map */

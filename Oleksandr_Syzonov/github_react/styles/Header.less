@@ -3,8 +3,17 @@
   line-height: 1.5;
   display: flex;
   align-items: center;
+  flex-shrink: 1;
+  &__menu{
+    display: flex;
+    justify-content: space-between;
+    flex: 1 1 auto;
+  }
   &__search{
     width: 300px;
+    ::placeholder{
+      color: hsla(0,0%,100%,.75);
+    }
   }
   &__navigation_places{
     list-style: none;
@@ -21,5 +30,22 @@
     padding: 0 0.5rem;
     color: white;
     font-weight: 600;
+  }
+  &__user-button-icon{
+    height: 1.25rem;
+    width: auto;
+    &--inverted{
+      filter: invert(100%);
+    }
+  }
+  &__user-button{
+    background: transparent;
+    border: 0;
+  }
+  &__notifications-icon{
+    filter: invert(70%);
+  }
+  &__navigation-search{
+    display: flex;
   }
 }
