@@ -1,0 +1,24 @@
+.tweet-header__nickname {
+  font-weight: bold;
+}
+
+.tweet-header__tag {
+  color: #657786;
+}
+
+.tweet-header__tag:after {
+  content: "\00B7";
+  margin: 0 4px;
+}
+
+.tweet-header__time {
+  color: #657786;
+}
+
+.tweet-header__nickname_verified:after,
+.fa-check-circle {
+  padding-left: 2px;
+  margin-right: 5px;
+  color: #1da1f2;
+  font-size: 0.7em;
+}

@@ -1,0 +1,73 @@
+.Global-actions {
+  display: flex;
+  align-items: center;
+}
+
+.Global-actions__search-form {
+  display: flex;
+  align-items: center;
+  max-width: 236px;
+}
+
+.search-form__input {
+  background: #f5f8fa;
+  border-radius: 21px;
+  border: 1px solid #e6ecf0;
+  box-sizing: border-box;
+  font-size: 12px;
+  width: 221px;
+  height: 32px;
+  padding: 8px 32px 8px 12px;
+  cursor: text;
+}
+
+.search-form__button {
+  margin: 0;
+  padding: 0;
+  background: #f5f8fa;
+  border: none;
+  position: relative;
+  right: 30px;
+  top: 4px;
+}
+
+.search-form__icon {
+  height: 19px;
+  width: 26px;
+}
+
+.Global-actions__profile-button {
+  padding: 0;
+  border-radius: 100%;
+  border: none;
+  overflow: hidden;
+  width: 32px;
+  height: 32px;
+}
+
+.profile-button__avatar {
+  width: 32px;
+  height: 32px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.Global-actions__tweet {
+  width: 74px;
+  height: 34px;
+  margin-left: 16px;
+  background-color: #4ab3f4;
+  border-radius: 100px;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  padding: 6px 16px;
+  color: #ffffff;
+}
+
+.Global-actions__tweet:hover,
+.Global-actions__tweet:focus {
+  background-color: #1da1f2;
+}

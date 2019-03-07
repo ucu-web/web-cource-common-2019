@@ -1,0 +1,31 @@
+.tweet-footer__button {
+  padding: 0;
+  font-size: 12px;
+  border: none;
+  background: #ffffff;
+  margin-right: auto;
+  font-weight: bold;
+  color: #657786;
+}
+
+.tweet-footer__button:hover {
+  color: #1da1f2;
+}
+
+.retweet:hover {
+  color: #17bf63;
+}
+
+.tweet-footer__icon {
+  font-size: 14px;
+  margin-right: 8px;
+  color: #657786;
+}
+
+.meassage {
+  font-size: 14px;
+}
+
+.like:hover {
+  color: #e0245e;
+}

@@ -1,0 +1,16 @@
+.News-feed__tweet-form {
+  border: 1px solid #e6ecf0;
+  font-size: 14px;
+  padding: 10px 12px;
+  background: #e8f5fd;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.News-feed__Tweet {
+  padding: 9px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #e6ecf0;
+}

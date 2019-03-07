@@ -1,0 +1,15 @@
+.Main-page__Left-aside-wrapper,
+.Main-page__Right-aside-wrapper {
+  margin: 0;
+  width: 290px;
+  display: flex;
+  flex-direction: column;
+}
+.Main-page__News-feed {
+  display: flex;
+  flex-direction: column;
+  width: 590px;
+  height: 100%;
+  background: #ffffff;
+  margin: 10px 10px 0 10px;
+}
