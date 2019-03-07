@@ -1,13 +1,13 @@
-body {
-    padding: 0;
-    margin: 0;
-    background: #10171e;
-}
+/*body {*/
+    /*padding: 0;*/
+    /*margin: 0;*/
+    /*background: #10171e;*/
+/*}*/
 
-html, body {
-    font-size: 14px;
-    height: 100%;
-}
+/*html{*/
+    /*font-size: 14px;*/
+    /*height: 100%;*/
+/*}*/
 
 input, button{
     padding: 0;
@@ -50,12 +50,6 @@ input::placeholder{
 
 .feed-header > svg{
     height: 1.5rem;
-}
-
-#main\ header{
-    background-color: #1c2938;
-    position: sticky;
-    top: 0;
 }
 
 .header-wrapper{

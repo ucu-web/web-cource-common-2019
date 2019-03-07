@@ -1,63 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Twitter</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Twitter_1</title>
+    <link rel="stylesheet" href="Layout.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="common.css">
 </head>
 <body>
-<header id="main header">
-    <div class="header-wrapper">
-        <nav class="pagenav">
-            <a href="">
-                <svg viewBox="0 0 24 24">
-                    <g>
-                        <path d="M22.58 7.35L12.475 1.897a1 1 0 0 0-.95 0L1.425 7.35A1.002 1.002 0 0 0 1.9 9.231c.16 0 .324-.038.475-.12l.734-.396 1.59 11.25c.216 1.214 1.31 2.062 2.66 2.062h9.282c1.35 0 2.444-.848 2.662-2.088l1.588-11.225.737.398a1 1 0 0 0 .95-1.759zM12 15.435a3.25 3.25 0 1 1 0-6.5 3.25 3.25 0 0 1 0 6.5z"></path>
-                    </g>
-                </svg>
-            </a>
-            <a href="">
-                <svg viewBox="0 0 24 24">
-                    <g>
-                        <path d="M21 7.337h-3.93l.372-4.272a.751.751 0 0 0-.682-.812.752.752 0 0 0-.812.683l-.383 4.4h-6.32l.37-4.27a.75.75 0 0 0-.68-.813.751.751 0 0 0-.813.683l-.382 4.4H3.782a.75.75 0 0 0 0 1.5H7.61l-.55 6.327H3a.75.75 0 0 0 0 1.5h3.93l-.372 4.272a.751.751 0 0 0 .682.812l.066.003a.75.75 0 0 0 .746-.686l.383-4.4h6.32l-.37 4.27a.751.751 0 0 0 .682.813l.066.003a.75.75 0 0 0 .746-.686l.382-4.4h3.957c.413 0 .75-.337.75-.75s-.337-.75-.75-.75H16.39l.55-6.327H21a.75.75 0 0 0 0-1.5zm-6.115 7.826h-6.32l.55-6.326h6.32l-.55 6.326z"></path>
-                    </g>
-                </svg>
-            </a>
-            <a href="">
-                <svg viewBox="0 0 24 24">
-                    <g>
-                        <path d="M21.697 16.468c-.02-.016-2.14-1.64-2.103-6.03.02-2.532-.812-4.782-2.347-6.335C15.872 2.71 14.01 1.94 12.005 1.93h-.013c-2.004.01-3.866.78-5.242 2.174-1.534 1.553-2.368 3.802-2.346 6.334.037 4.33-2.02 5.967-2.102 6.03a.75.75 0 0 0 .447 1.353h4.92c.102 2.31 1.997 4.16 4.33 4.16s4.226-1.85 4.327-4.16h4.922c.322 0 .61-.206.71-.514a.747.747 0 0 0-.263-.838zM12 20.478a2.84 2.84 0 0 1-2.828-2.658h5.656c-.1 1.48-1.323 2.66-2.828 2.66zM4.38 16.32c.74-1.132 1.548-3.028 1.524-5.896-.018-2.16.644-3.982 1.913-5.267C8.91 4.05 10.397 3.437 12 3.43c1.603.008 3.087.62 4.18 1.728 1.27 1.285 1.933 3.106 1.915 5.267-.024 2.868.785 4.765 1.525 5.896H4.38z"></path>
-                    </g>
-                </svg>
-            </a>
+<div class="Layout">
+    <header class="Layout__top-bar" >
+        <div class="header-wrapper">
+            <nav class="pagenav">
+                <a href="">
+                    <svg viewBox="0 0 24 24">
+                        <g>
+                            <path d="M22.58 7.35L12.475 1.897a1 1 0 0 0-.95 0L1.425 7.35A1.002 1.002 0 0 0 1.9 9.231c.16 0 .324-.038.475-.12l.734-.396 1.59 11.25c.216 1.214 1.31 2.062 2.66 2.062h9.282c1.35 0 2.444-.848 2.662-2.088l1.588-11.225.737.398a1 1 0 0 0 .95-1.759zM12 15.435a3.25 3.25 0 1 1 0-6.5 3.25 3.25 0 0 1 0 6.5z"></path>
+                        </g>
+                    </svg>
+                </a>
+                <a href="">
+                    <svg viewBox="0 0 24 24">
+                        <g>
+                            <path d="M21 7.337h-3.93l.372-4.272a.751.751 0 0 0-.682-.812.752.752 0 0 0-.812.683l-.383 4.4h-6.32l.37-4.27a.75.75 0 0 0-.68-.813.751.751 0 0 0-.813.683l-.382 4.4H3.782a.75.75 0 0 0 0 1.5H7.61l-.55 6.327H3a.75.75 0 0 0 0 1.5h3.93l-.372 4.272a.751.751 0 0 0 .682.812l.066.003a.75.75 0 0 0 .746-.686l.383-4.4h6.32l-.37 4.27a.751.751 0 0 0 .682.813l.066.003a.75.75 0 0 0 .746-.686l.382-4.4h3.957c.413 0 .75-.337.75-.75s-.337-.75-.75-.75H16.39l.55-6.327H21a.75.75 0 0 0 0-1.5zm-6.115 7.826h-6.32l.55-6.326h6.32l-.55 6.326z"></path>
+                        </g>
+                    </svg>
+                </a>
+                <a href="">
+                    <svg viewBox="0 0 24 24">
+                        <g>
+                            <path d="M21.697 16.468c-.02-.016-2.14-1.64-2.103-6.03.02-2.532-.812-4.782-2.347-6.335C15.872 2.71 14.01 1.94 12.005 1.93h-.013c-2.004.01-3.866.78-5.242 2.174-1.534 1.553-2.368 3.802-2.346 6.334.037 4.33-2.02 5.967-2.102 6.03a.75.75 0 0 0 .447 1.353h4.92c.102 2.31 1.997 4.16 4.33 4.16s4.226-1.85 4.327-4.16h4.922c.322 0 .61-.206.71-.514a.747.747 0 0 0-.263-.838zM12 20.478a2.84 2.84 0 0 1-2.828-2.658h5.656c-.1 1.48-1.323 2.66-2.828 2.66zM4.38 16.32c.74-1.132 1.548-3.028 1.524-5.896-.018-2.16.644-3.982 1.913-5.267C8.91 4.05 10.397 3.437 12 3.43c1.603.008 3.087.62 4.18 1.728 1.27 1.285 1.933 3.106 1.915 5.267-.024 2.868.785 4.765 1.525 5.896H4.38z"></path>
+                        </g>
+                    </svg>
+                </a>
 
-            <a href="">
+                <a href="">
+                    <svg viewBox="0 0 24 24">
+                        <g>
+                            <path d="M19.25 3.018H4.75A2.753 2.753 0 0 0 2 5.77v12.495a2.754 2.754 0 0 0 2.75 2.753h14.5A2.754 2.754 0 0 0 22 18.265V5.77a2.753 2.753 0 0 0-2.75-2.752zm-14.5 1.5h14.5c.69 0 1.25.56 1.25 1.25v.714l-8.05 5.367a.81.81 0 0 1-.9-.002L3.5 6.482v-.714c0-.69.56-1.25 1.25-1.25zm14.5 14.998H4.75c-.69 0-1.25-.56-1.25-1.25V8.24l7.24 4.83a2.265 2.265 0 0 0 2.52.001l7.24-4.83v10.022c0 .69-.56 1.25-1.25 1.25z"></path>
+                        </g>
+                    </svg>
+                </a>
+            </nav>
+            <form class="search" action="">
+                <img id="svg" src="icons/mag_glass.svg" alt="mag glass">
+                <input class="in-search" type="text" placeholder="Поиск в твитере">
+            </form>
+            <button id="profile">
+                <img class="avatar" src="https://pbs.twimg.com/profile_images/703249592465420288/7tVLy8yw_bigger.jpg"
+                     alt="avatar of user">
+                <h2 style="padding-left: 10px">Юрий Елисеев</h2>
                 <svg viewBox="0 0 24 24">
                     <g>
-                        <path d="M19.25 3.018H4.75A2.753 2.753 0 0 0 2 5.77v12.495a2.754 2.754 0 0 0 2.75 2.753h14.5A2.754 2.754 0 0 0 22 18.265V5.77a2.753 2.753 0 0 0-2.75-2.752zm-14.5 1.5h14.5c.69 0 1.25.56 1.25 1.25v.714l-8.05 5.367a.81.81 0 0 1-.9-.002L3.5 6.482v-.714c0-.69.56-1.25 1.25-1.25zm14.5 14.998H4.75c-.69 0-1.25-.56-1.25-1.25V8.24l7.24 4.83a2.265 2.265 0 0 0 2.52.001l7.24-4.83v10.022c0 .69-.56 1.25-1.25 1.25z"></path>
+                        <path d="M20.207 8.147a1 1 0 0 0-1.414 0L12 14.94 5.207 8.147a1 1 0 0 0-1.414 1.414l7.5 7.5a.996.996 0 0 0 1.414.001l7.5-7.5a1 1 0 0 0 0-1.413z"></path>
                     </g>
                 </svg>
-            </a>
-        </nav>
-        <form class="search" action="">
-            <img id="svg" src="icons/mag_glass.svg" alt="mag glass">
-            <input class="in-search" type="text" placeholder="Поиск в твитере">
-        </form>
-        <button id="profile">
-            <img class="avatar" src="https://pbs.twimg.com/profile_images/703249592465420288/7tVLy8yw_bigger.jpg"
-                 alt="avatar of user">
-            <h2 style="padding-left: 10px">Юрий Елисеев</h2>
-            <svg viewBox="0 0 24 24">
-                <g>
-                    <path d="M20.207 8.147a1 1 0 0 0-1.414 0L12 14.94 5.207 8.147a1 1 0 0 0-1.414 1.414l7.5 7.5a.996.996 0 0 0 1.414.001l7.5-7.5a1 1 0 0 0 0-1.413z"></path>
-                </g>
-            </svg>
-        </button>
-    </div>
-</header>
-
-<main id="main content">
-    <section id="feed">
+            </button>
+        </div>
+    </header>
+    <main class="Layout__feed" id="feed">
         <header class="feed-header">
             <h2>Главная</h2>
             <svg viewBox="0 0 24 24">
@@ -67,8 +71,7 @@
             </svg>
         </header>
         <div class="tweet">
-            <img class="avatar" src="https://pbs.twimg.com/profile_images/703249592465420288/7tVLy8yw_bigger.jpg"
-                 alt="avatar of user">
+            <img class="avatar" src="https://pbs.twimg.com/profile_images/703249592465420288/7tVLy8yw_bigger.jpg" alt="avatar of user">
             <form action="tweet" class="search my-tweet">
                 <input class="in-search" type="text" placeholder="Что происходит ?">
             </form>
@@ -95,26 +98,22 @@
         </div>
 
         <article class="post">
-            <img src="https://pbs.twimg.com/profile_images/869600580213366785/dAv_8w2j_reasonably_small.jpg"
-                 alt="avatar of profile">
+            <img src="https://pbs.twimg.com/profile_images/869600580213366785/dAv_8w2j_reasonably_small.jpg" alt="avatar of profile">
             <article>
                 <div class="post-header">
                     <h3>Hromadske.UA<span>@HromadskeUA</span></h3>
                 </div>
-                <span class="post-text">Холодницький пояснив, як закриватимуть справи проти чиновників через рішення КС <a
-                        href="https://www.pravda.com.ua/news/2019/02/28/7207944/">pravda.com.ua/news/2019/02/2…</a></span>
-                <img class="post-image" src="https://pbs.twimg.com/media/D0e7JZ-X4AAIbUI?format=jpg&name=small" alt="">
+                <span class="post-text">Холодницький пояснив, як закриватимуть справи проти чиновників через рішення КС <a href="https://www.pravda.com.ua/news/2019/02/28/7207944/">pravda.com.ua/news/2019/02/2…</a></span>
+                <img class="post-image" src="https://pbs.twimg.com/media/D0e7JZ-X4AAIbUI?format=jpg&amp;name=small" alt="">
             </article>
         </article>
-    </section>
-
-    <div class="aside-wrapper">
+    </main>
+    <aside class="Layout__aside aside-wrapper">
         <aside id="propositions">
             <h2>Кого читать</h2>
             <article class="people">
                 <div class="people">
-                    <img class="avatar unknown"
-                         src="https://pbs.twimg.com/profile_images/1074981896646344704/af87r5pT_x96.png" alt="">
+                    <img class="avatar unknown" src="https://pbs.twimg.com/profile_images/1074981896646344704/af87r5pT_x96.png" alt="">
                     <div>
                         <h3>Pavel Djundik</h3>
                         <span>@Djundik22</span>
@@ -125,8 +124,7 @@
 
             <article class="people">
                 <div class="people">
-                    <img class="avatar unknown"
-                         src="https://pbs.twimg.com/profile_images/1074981896646344704/af87r5pT_x96.png" alt="">
+                    <img class="avatar unknown" src="https://pbs.twimg.com/profile_images/1074981896646344704/af87r5pT_x96.png" alt="">
                     <div>
                         <h3>Pavel Djundik</h3>
                         <span>@Djundik22</span>
@@ -137,8 +135,7 @@
 
             <article class="people">
                 <div class="people">
-                    <img class="avatar unknown"
-                         src="https://pbs.twimg.com/profile_images/1074981896646344704/af87r5pT_x96.png" alt="">
+                    <img class="avatar unknown" src="https://pbs.twimg.com/profile_images/1074981896646344704/af87r5pT_x96.png" alt="">
                     <div>
                         <h3>Pavel Djundik</h3>
                         <span>@Djundik22</span>
@@ -180,7 +177,7 @@
             </article>
             <span class="additional-info">Показать еще</span>
         </div>
-    </div>
-</main>
+    </aside>
+</div>
 </body>
 </html>
