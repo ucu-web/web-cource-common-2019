@@ -1,0 +1,38 @@
+@import "common-styles";
+
+.Subscribing {
+  font-size: $small-font;
+  @extend %main-block;
+  color: #586069;
+
+  &__icon-light {
+    fill: #586069;
+    width: 12px;
+    height: 16px;
+  }
+
+  &__network-icon {
+    fill: #586069;
+    width: 10px;
+    height: 16px;
+  }
+
+  &__line-part, &__link, &__icon-light, &__network-icon {
+    vertical-align: middle;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #0366d6;
+  }
+
+  &__news {
+    text-decoration: none;
+    color: #586069;
+  }
+
+  &__link:hover, &__news:hover {
+    text-decoration: underline;
+    color: #0366d6;
+  }
+}

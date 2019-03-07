@@ -1,0 +1,43 @@
+.Footer {
+  padding: 16px 0;
+  margin: 0 16px;
+}
+
+.Footer {
+  font-size: 12px;
+  color: #6a737d;
+}
+.Footer__github-icon {
+  width: 24px;
+  height: 24px;
+  fill: #c6cbd1;
+}
+.Footer__github-link {
+  color: #6a737d;
+  text-decoration: none;
+  margin-right: 32px;
+}
+.Footer__github-link-text, .Footer__github-icon {
+  vertical-align: middle;
+}
+.Footer__navigation, .Footer__links {
+  display: inline-block;
+}
+.Footer__links {
+  vertical-align: top;
+  list-style-type: none;
+  margin-top: 0;
+}
+.Footer__list-element {
+  margin-bottom: 4px;
+}
+.Footer__nav-link {
+  text-decoration: none;
+  color: #586069;
+}
+.Footer__nav-link:hover {
+  color: #0366d6;
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=Footer.css.map */

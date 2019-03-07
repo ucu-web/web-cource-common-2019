@@ -1,0 +1,38 @@
+.General-navigation__list-of-options {
+  display: inline-block;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.General-navigation__list-element {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 12px;
+}
+
+.General-navigation__search-form {
+  display: inline-block;
+  vertical-align: middle;
+}
+.General-navigation__search-input {
+  width: 300px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.125);
+  border: none;
+  border-radius: 3px;
+  padding-left: 7px;
+}
+.General-navigation__search-input::placeholder {
+  color: #9a9899;
+}
+.General-navigation__link {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+.General-navigation__link:hover {
+  color: #A4A4A4;
+}
+
+/*# sourceMappingURL=General-navigation.css.map */

@@ -1,0 +1,52 @@
+.Project__link {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+.Project__link:hover {
+  color: #0366d6;
+}
+
+.Project {
+  background: white;
+  border: 1px solid #D2D6D7;
+  border-radius: 3px;
+  padding: 16px;
+}
+.Project__star-form {
+  float: right;
+}
+.Project__star-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 26px;
+  width: 60px;
+  background-color: #eff3f6;
+  border-radius: 3px;
+  border: 1px solid rgba(34, 34, 34, 0.25);
+}
+.Project__star-icon {
+  width: 14px;
+  height: 16px;
+  fill: #24292e;
+}
+.Project__star-span {
+  font-weight: 600;
+  font-size: 12px;
+}
+.Project__name {
+  font-size: 16px;
+  margin: 4px 0;
+}
+.Project__information {
+  color: #6a737d;
+  margin: 4px 0;
+}
+.Project__creation-time {
+  font-size: 12px;
+  color: #6a737d;
+}
+
+/*# sourceMappingURL=Project.css.map */
