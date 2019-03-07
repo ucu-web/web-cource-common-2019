@@ -4,7 +4,9 @@ body {
     background: #10171e;
 }
 
-html, body{
+
+html, body {
     font-size: 14px;
     height: 100%;
+    font-family: "Helvetica Neue", monospace;
 }

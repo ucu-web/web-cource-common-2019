@@ -5,9 +5,10 @@
     grid-column-gap: 20px;
     grid-template-rows: 53px auto;
     grid-template-columns: auto 600px 360px auto;
+    height: 100%;
 }
 
-.Layout__top-bar{
+.Layout__top-bar {
     top: 0;
     position: sticky;
     grid-column-start: 1;
@@ -15,16 +16,17 @@
     grid-row-start: 1;
     grid-row-end: 2;
     background-color: #1c2938;
+    justify-self: stretch;
 }
 
-.Layout__feed{
+.Layout__feed {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 2;
     justify-self: center;
 }
 
-.Layout__aside{
+.Layout__aside {
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 2;
