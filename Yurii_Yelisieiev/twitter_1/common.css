@@ -10,3 +10,42 @@ html, body {
     height: 100%;
     font-family: "Helvetica Neue", monospace;
 }
+
+input, button {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+}
+
+h2, h3, span {
+    margin: 0;
+    align-items: center;
+    color: white;
+}
+
+h3 > span {
+    font-weight: normal;
+}
+
+span {
+    color: #8697a4;
+}
+
+svg, a > svg {
+    height: 1.75rem;
+}
+
+button > svg {
+    height: 1.25rem;
+}
+
+svg path, circle {
+    fill: #1da1f2;
+}
+
+input::placeholder {
+    font-weight: bold;
+    color: #7c8d99;
+}

@@ -1,0 +1,64 @@
+.Header {
+    display: flex;
+    height: 53px;
+    margin: auto;
+    width: 100%;
+    max-width: 1000px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Header__page-nav {
+    display: flex;
+    align-content: stretch;
+    min-width: 360px;
+}
+
+.Header__page-nav .nav-ref {
+    display: flex;
+    width: 90px;
+    align-items: center;
+    justify-content: center;
+}
+
+.Header__search {
+    display: flex;
+    width: 397px;
+    height: 33px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: #10171e;
+    border-radius: 24px;
+    justify-content: start;
+    align-items: center;
+}
+
+.Header__search .Search_Svg {
+    padding-left: 10px;
+    width: 30px;
+    height: 19px;
+}
+
+/*Probably need to make some general class for the next selector*/
+.Header__search_in-search {
+    padding: 10px;
+}
+
+.Header__profile {
+    display: flex;
+    width: 183px;
+    height: 33px;
+    align-items: center;
+}
+
+.Header__profile:hover {
+    background: aqua;
+    opacity: 25%;
+    border-radius: 24px;
+}
+
+.avatar {
+    border-radius: 100px;
+    width: 33px;
+    height: 33px;
+}
