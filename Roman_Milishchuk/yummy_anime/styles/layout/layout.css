@@ -4,29 +4,30 @@ main.container {
   grid-template-rows: auto;
   grid-template-areas: "main-finder main-finder main-finder main-finder " "ongoing ongoing ongoing ongoing " "updates updates news news" "last-videos last-videos last-videos last-videos " "new-anime new-anime new-anime filter" "footer footer footer footer";
   grid-column-gap: 20px;
+  grid-row-gap: 10px;
 }
-#main-finder {
+.main-search {
   grid-area: main-finder;
 }
-#ongoing_gallery {
+.ongoing-gallery {
   grid-area: ongoing;
 }
-#anime_updates {
+.anime_updates {
   grid-area: updates;
 }
-#news-summary {
+.news-summary {
   grid-area: news;
 }
-#last_videos {
+.last_videos {
   grid-area: last-videos;
 }
-#new-on-site {
+.new-on-site {
   grid-area: new-anime;
 }
-#find-filter {
+.search-filter {
   grid-area: filter;
 }
-body > footer {
+.main-footer {
   grid-area: footer;
 }
-/*# sourceMappingURL=Layout.css.map */
+/*# sourceMappingURL=layout.css.map */

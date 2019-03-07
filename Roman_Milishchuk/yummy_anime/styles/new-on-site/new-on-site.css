@@ -1,0 +1,88 @@
+.new-on-site__section-header {
+  background: url("../../img/snowflakes.jpg");
+  color: white;
+  text-transform: uppercase;
+  right: 15px;
+  top: 12px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  border-bottom: 3px solid #f66;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 400;
+  font-size: 0.9rem;
+  text-align: left;
+  padding-left: 10px;
+}
+.new-on-site__anime-list {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  list-style-type: none;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin: 0;
+}
+.anime-list__anime-block {
+  display: inline-block;
+  flex-grow: 1;
+  background: white;
+  margin-bottom: 20px;
+  text-align: left;
+  padding-right: 20px;
+}
+.anime-list__anime-block:nth-of-type(odd) {
+  margin-right: 20px;
+}
+.anime-block__poster {
+  float: left;
+  margin-right: 10px;
+  width: 170px;
+  min-height: 240px;
+}
+.anime-block__title {
+  padding: 10px 10px 0 0;
+}
+.anime-block__rate {
+  color: #f2b800;
+  font-size: 25px;
+  border: none;
+  background-color: transparent;
+}
+.anime-block__rating {
+  border: 0;
+  margin: 0;
+  background-color: #f2b800;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 3px;
+  padding: 0 5px;
+}
+.anime-block__general-info {
+  padding: 10px 10px 0 0;
+}
+.anime-block_text-bold {
+  font-weight: 600;
+}
+.anime-block__history-info {
+  display: block;
+  margin: 10px 0;
+}
+.anime-block__anime-name {
+  font-weight: 400;
+  text-align: left;
+}
+.anime-block_text-thin {
+  font-weight: 200;
+}
+.anime-block__button {
+  background-color: #3cce7b;
+  padding: 6px 15px 7px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  border: none;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=new-on-site.css.map */

@@ -1,3 +1,6 @@
+.main-header {
+  margin-bottom: 20px;
+}
 .main-header__banner {
   background-position: top center;
   background-image: url("../../img/banner.jpg");

@@ -1,0 +1,55 @@
+.search-filter__section-header {
+  background: url("../../img/snowflakes.jpg");
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  right: 15px;
+  top: 12px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  border-bottom: 3px solid #f66;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+.search-filter__filter-list {
+  list-style-type: none;
+  padding: 15px;
+  margin: 0;
+}
+.search-filter__form {
+  background-color: white;
+  text-align: left;
+}
+.search-filter__button {
+  width: 100%;
+  font-size: 16px;
+  padding: 9px 0;
+  background-color: #3cce7b;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+.search-filter__footer {
+  border-top: 1px solid #e2e2e2;
+  padding: 15px;
+}
+.filter-list__filter-cell {
+  display: block;
+  margin-bottom: 10px;
+}
+.filter-list__filter-name {
+  display: block;
+}
+.filter-list__filter {
+  display: inline-block;
+  height: 33px;
+  box-sizing: border-box;
+  width: 100%;
+}
+.filter-list_width-half {
+  width: 49%;
+}
+/*# sourceMappingURL=search-filter.css.map */

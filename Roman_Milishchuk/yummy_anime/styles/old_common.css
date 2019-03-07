@@ -21,30 +21,6 @@ h2 {
 }
 
 
-body > footer {
-    background: #333;
-    color: white;
-    width: 100%;
-    clear: both;
-    margin: 0;
-    height: auto;
-    padding: 10px 0;
-}
-
-body > footer p > span {
-    display: block;
-}
-
-body > footer p {
-    text-align: left;
-    margin: 0;
-    padding-bottom: 14px;
-}
-
-.address {
-    color: #3cce7b
-}
-
 .button {
     background-color: #3cce7b;
     padding: 6px 15px 7px;

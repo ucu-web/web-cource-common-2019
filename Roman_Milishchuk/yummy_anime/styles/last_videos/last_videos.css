@@ -1,0 +1,64 @@
+.last_videos__section-header {
+  background: url("../../img/snowflakes.jpg");
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  right: 15px;
+  top: 12px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  border-bottom: 3px solid #f66;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+.last_videos__videos {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+.last_videos__video {
+  width: 427px;
+  margin-right: 5px;
+}
+.last_videos__video:last-of-type {
+  margin-right: 0;
+}
+.last_videos__preview {
+  margin: 0;
+}
+.video_text-white {
+  color: white;
+}
+.video_text-pink {
+  color: #f66;
+}
+.video__nickname {
+  font-weight: 600;
+  color: #3bc476;
+}
+.video__title {
+  background: #333333;
+  border-bottom: 1px solid #e2e2e2;
+  padding: 5px 10px;
+  text-align: left;
+}
+.video__general-info {
+  display: flex;
+  background: #333333;
+  padding: 5px 10px;
+  text-align: left;
+  color: white;
+  justify-content: space-between;
+}
+.video__poster {
+  max-width: 100%;
+}
+#videos li:last-of-type .video {
+  margin-right: 0;
+}
+/*# sourceMappingURL=last_videos.css.map */
