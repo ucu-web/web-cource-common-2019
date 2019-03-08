@@ -1,0 +1,52 @@
+.site-navigation {
+  display: flex;
+  height: 46px;
+  align-items: center;
+  font-size: 13px;
+
+  &__link,
+  &__button {
+    color: #66757f;
+    fill: #66757f;
+    box-sizing: border-box;
+    margin: 0;
+    height: 46px;
+    width: 90px;
+    background: #ffffff;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 0 14px 0 4px;
+  }
+
+  &__button {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    border: none;
+    width: 115px;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #ffffff;
+    &_wider {
+      width: 132px;
+    }
+  }
+
+  &__link_active,
+  &__link:focus,
+  &__button:focus,
+  &__link:hover,
+  &__button:hover {
+    border-bottom: 2px solid #1c94e0;
+    fill: #1c94e0;
+    color: #1da1f2;
+  }
+  &__icon {
+    height: 23px;
+    width: 23px;
+    margin-left: 10px;
+    margin-right: 3px;
+  }
+}

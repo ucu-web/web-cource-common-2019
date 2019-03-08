@@ -1,0 +1,53 @@
+.trends {
+  &__header,
+  &__change-link {
+    display: inline-block;
+    margin: 0 0 10px;
+  }
+
+  &__change-link:before {
+    content: "\00B7";
+    color: black;
+    padding-right: 5px;
+  }
+
+  &__change-link {
+    color: #47acf7;
+    font-size: 12px;
+  }
+
+  &__change-link:hover {
+    text-decoration: underline;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__link {
+    display: block;
+  }
+
+  &__list-item {
+    margin-bottom: 10px;
+  }
+
+  &__link-name {
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    color: #55a1f2;
+  }
+
+  &__link-tweets {
+    line-height: 16px;
+    font-size: 12px;
+    color: #657786;
+  }
+
+  &__list-item:hover &__link-name {
+    text-decoration: underline;
+  }
+}
