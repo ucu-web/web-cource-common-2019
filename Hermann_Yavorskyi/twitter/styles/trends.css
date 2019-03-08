@@ -1,0 +1,43 @@
+.trends__header,
+.trends__change-link {
+  display: inline-block;
+  margin: 0 0 10px;
+}
+.trends__change-link:before {
+  content: "\00B7";
+  color: black;
+  padding-right: 5px;
+}
+.trends__change-link {
+  color: #47acf7;
+  font-size: 12px;
+}
+.trends__change-link:hover {
+  text-decoration: underline;
+}
+.trends__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.trends__link {
+  display: block;
+}
+.trends__list-item {
+  margin-bottom: 10px;
+}
+.trends__link-name {
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+  color: #55a1f2;
+}
+.trends__link-tweets {
+  line-height: 16px;
+  font-size: 12px;
+  color: #657786;
+}
+.trends__list-item:hover .trends__link-name {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=trends.css.map */

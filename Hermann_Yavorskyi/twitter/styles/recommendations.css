@@ -1,0 +1,36 @@
+.recommendations__recommendations-header {
+  height: 22px;
+  font-size: 15px;
+  align-items: center;
+  flex-direction: row;
+  border: 0;
+  line-height: 22px;
+}
+.recommendations__follow {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #e6ecf0;
+}
+.recommendations__other-contacts {
+  border-bottom: 1px solid #e6ecf0;
+  cursor: pointer;
+  margin-bottom: 12px;
+  padding: 15px 5px;
+}
+.recommendations__connect-other {
+  line-height: 12px;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #47acf7;
+  background: #ffffff;
+  border: none;
+  font-size: 12px;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+.recommendations__connect-other:hover {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=recommendations.css.map */

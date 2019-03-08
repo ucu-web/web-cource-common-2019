@@ -1,0 +1,65 @@
+.suggested__single-recommendation {
+  margin-top: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e6ecf0;
+}
+.suggested__profile-link {
+  cursor: pointer;
+  text-decoration: none;
+}
+.suggested__profile-link:hover .suggested__nickname {
+  text-decoration: underline;
+  color: #1da1f2;
+}
+.suggested__avatar {
+  float: left;
+  height: 48px;
+  width: 48px;
+}
+.suggested__username,
+.suggested__follow {
+  margin-left: 10px;
+}
+.suggested__username {
+  color: black;
+  font-size: 14px;
+  display: inline-block;
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.suggested__follow {
+  font-size: 12px;
+  text-align: center;
+  min-height: 26px;
+  font-family: inherit;
+  font-weight: bold;
+  color: #1da1f2;
+  border-radius: 100px;
+  margin-top: 4px;
+  min-width: 89px;
+  border: 1px solid #1da1f2;
+  background-color: #ffffff;
+}
+.suggested__follow:hover {
+  background-color: #e8f5fd;
+}
+.suggested__cross-sign {
+  border: none;
+  background-color: #ffffff;
+  padding: 0;
+  float: right;
+  width: 10px;
+  height: 10px;
+  overflow: hidden;
+  line-height: 10px;
+}
+.suggested__cross-icon {
+  fill: #ccd6dd;
+  padding: 0;
+  margin: 0;
+  width: 10px;
+  height: 10px;
+}
+/*# sourceMappingURL=suggested.css.map */

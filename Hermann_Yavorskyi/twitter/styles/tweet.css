@@ -1,0 +1,57 @@
+.tweet__avatar {
+  float: left;
+  margin-top: 3px;
+  width: 48px;
+  height: 48px;
+}
+.tweet__content {
+  margin-left: 58px;
+}
+.tweet__tweet-header {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.tweet__tweet-header:hover .tweet-header__nickname {
+  text-decoration: underline;
+  color: #1da1f2;
+}
+.tweet__text {
+  word-wrap: break-word;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0 0 10px;
+}
+.tweet__link {
+  color: #1da1f2;
+}
+.tweet__link:hover {
+  text-decoration: underline;
+}
+.tweet__single-img,
+.tweet__gallery {
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.tweet__main-img {
+  margin-right: 1px;
+  height: 380px;
+  width: 380px;
+  float: left;
+}
+.tweet__side-img {
+  float: left;
+  width: 126px;
+  height: 125px;
+  margin-bottom: 1px;
+}
+.tweet__tweet-footer {
+  display: flex;
+  width: 290px;
+  height: 31px;
+  align-items: flex-end;
+}
+/*# sourceMappingURL=tweet.css.map */

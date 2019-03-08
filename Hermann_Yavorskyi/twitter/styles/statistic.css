@@ -1,0 +1,21 @@
+.statistic__following,
+.statistic__tweets {
+  display: block;
+  height: 37px;
+  width: 121px;
+}
+.statistic__name {
+  font-size: 12px;
+  display: block;
+  color: #657786;
+}
+.statistic__following:hover .statistic__name,
+.statistic__tweets:hover .statistic__name {
+  color: #1da1f2;
+}
+.statistic__info {
+  padding-top: 3px;
+  font-size: 18px;
+  color: #1da1f2;
+}
+/*# sourceMappingURL=statistic.css.map */

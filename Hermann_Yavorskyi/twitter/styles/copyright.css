@@ -1,0 +1,19 @@
+.copyright {
+  margin: 0;
+  line-height: 18px;
+  padding: 15px;
+  border: 1px solid #e6ecf0;
+  list-style: none;
+  font-size: 12px;
+  overflow: hidden;
+}
+.copyright__list-item {
+  color: #657786;
+  margin-right: 8px;
+  float: left;
+}
+.copyright__list-link:hover {
+  color: #47acf7;
+  text-decoration: underline;
+}
+/*# sourceMappingURL=copyright.css.map */
