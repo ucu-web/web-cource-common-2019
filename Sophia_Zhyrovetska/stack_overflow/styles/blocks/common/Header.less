@@ -1,13 +1,15 @@
+@import "../../variables";
 .Header {
   background-color: #fafafb;
   box-shadow: 0 1px 0 rgba(12, 13, 14, 0.1), 0 1px 6px rgba(59, 64, 69, 0.1);
   border-top: 3px solid #f48024;
   display: grid;
-  grid-template-columns: inherit;
+  grid-template-columns: auto @navigation-width minmax(auto, @main-block-width) @aside-width auto;
+  height: @header-height;
 
   &__logo {
     grid-column-start: 2;
-    background-image: url("../images/sprites.svg?v=e5e58ae7df45");
+    background-image: url("../../../images/sprites.svg?v=e5e58ae7df45");
     background-position: 7px -479px;
     text-indent: -9999em;
 

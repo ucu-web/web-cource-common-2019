@@ -1,0 +1,36 @@
+@import "../../variables";
+
+@main-block-width: @max-content-width - @navigation-width - @padding;
+
+.Layout {
+  display: grid;
+  grid-template-columns: auto @navigation-width @main-block-width auto;
+  grid-template-rows: @header-height auto @footer-height;
+
+  &__header {
+    grid-area: ~"1/1/2/5";
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
+  &__navigation {
+    grid-column-start: 2;
+    padding: @padding 0 0 0;
+  }
+
+  &__sticky-navigation {
+    position: sticky;
+    top: @header-height + @padding;
+    margin: 0 0 0.75em 0;
+  }
+
+  &__main-block {
+    padding: @padding @padding @padding 0;
+    border-left: 1px solid #d6d9dc;
+  }
+
+  &__footer {
+    grid-area: ~"3/1/4/5";
+  }
+}
