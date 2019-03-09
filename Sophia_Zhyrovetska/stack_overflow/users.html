@@ -21,6 +21,9 @@
     <link rel="stylesheet" href="styles/blocks/common/Primary-button.css" />
 
     <link rel="stylesheet" href="styles/blocks/users/Layout.css" />
+      <link rel="stylesheet" href="styles/blocks/users/Filter_users.css">
+      <link rel="stylesheet" href="styles/blocks/users/Time-tabs.css">
+
     <title>Users</title>
   </head>
   <body>
@@ -201,53 +204,55 @@
       <main class="Layout__main-block">
         <section class="Filter-users">
           <h1 class="Filter-users__title">Users</h1>
-          <form
-            class="Search-form Filter-users__search-form"
-            action="/search"
-            method="get"
-            aria-label="Search form"
-          >
-            <input
-              class="Search-form__input-field"
-              type="text"
-              name="q"
-              placeholder="Search..."
-            />
-          </form>
+          <div class="Filter-users__wrapper">
+            <form
+              class="Search-form Filter-users__search-form"
+              action="/search"
+              method="get"
+              aria-label="Search form"
+            >
+              <input
+                class="Search-form__input-field"
+                type="text"
+                name="q"
+                placeholder="Search..."
+              />
+            </form>
 
-          <nav class="Button-group Filter-users__button-group">
-            <a
-              href="#"
-              class="Button-group__button Button-group__button--leftmost Button-group__button--current"
-              title="Users with the highest reputation scores"
-              >reputation</a
-            >
+            <nav class="Button-group Filter-users__button-group">
+              <a
+                href="#"
+                class="Button-group__button Button-group__button--leftmost Button-group__button--current"
+                title="Users with the highest reputation scores"
+                >reputation</a
+              >
 
-            <a
-              href="#"
-              class="Button-group__button"
-              title="Users who joined in the last 30 days"
-              >new users</a
-            >
-            <a
-              href="#"
-              class="Button-group__button"
-              title="Users who voted more than 10 times"
-              >voters</a
-            >
-            <a
-              href="#"
-              class="Button-group__button"
-              title="Users who edited at least 5 posts"
-              >editors</a
-            >
-            <a
-              href="#"
-              class="Button-group__button Button-group__button--rightmost"
-              title="Our current community moderators"
-              >moderators</a
-            >
-          </nav>
+              <a
+                href="#"
+                class="Button-group__button"
+                title="Users who joined in the last 30 days"
+                >new users</a
+              >
+              <a
+                href="#"
+                class="Button-group__button"
+                title="Users who voted more than 10 times"
+                >voters</a
+              >
+              <a
+                href="#"
+                class="Button-group__button"
+                title="Users who edited at least 5 posts"
+                >editors</a
+              >
+              <a
+                href="#"
+                class="Button-group__button Button-group__button--rightmost"
+                title="Our current community moderators"
+                >moderators</a
+              >
+            </nav>
+          </div>
 
           <div class="Time-tabs Filter_users__time-tabs">
             <a href="#" class="Time-tabs__tab" title="2000-01-01 to today">
