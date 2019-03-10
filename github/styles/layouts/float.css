@@ -1,0 +1,23 @@
+header {
+    height: 60px;
+    background-color: #24292e;
+}
+
+main {
+    max-width: 980px;
+    margin: auto;
+}
+
+aside {
+    width: 230px;
+    height: 200px;
+    background-color: #e74c3c;
+    float: left;
+}
+
+article {
+    width: 730px;
+    height: 300px;
+    background-color: #2980b9;
+    float: right;
+}

@@ -1,0 +1,26 @@
+header {
+    height: 60px;
+    background-color: #24292e;
+}
+
+main {
+    max-width: 980px;
+    margin: auto;
+    font-size: 0;
+}
+
+aside {
+    width: 230px;
+    background-color: #e74c3c;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+    font-size: 1rem;
+}
+
+article {
+    width: 730px;
+    background-color: #2980b9;
+    display: inline-block;
+    font-size: 1rem;
+}

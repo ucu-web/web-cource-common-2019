@@ -1,0 +1,22 @@
+header {
+    height: 60px;
+    background-color: #24292e;
+}
+
+main {
+    max-width: 980px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 230px 730px;
+    column-gap: 20px;
+}
+
+aside {
+    width: 230px;
+    background-color: #e74c3c;
+}
+
+article {
+    width: 730px;
+    background-color: #2980b9;
+}
