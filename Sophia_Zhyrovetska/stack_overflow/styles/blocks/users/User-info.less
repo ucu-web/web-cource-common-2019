@@ -1,0 +1,48 @@
+@import "../../variables";
+
+.User-info{
+  padding: 5px 6px 7px 7px;
+  color: #6a737c;
+
+  &__avatar{
+    width: 48px;
+    height: 48px;
+    float: left;
+    box-shadow: 2px 2px 4px rgba(12,13,14,0.5);
+  }
+
+  &__details{
+    margin: 0 0 0 9px;
+    width: calc(100% - 64px);
+    line-height: 1.1;
+    float: left;
+    word-wrap: break-word;
+  }
+
+  &__name{
+    font-size: 14px;
+  }
+
+  &__location{
+    font-size: @font-size--small;
+    margin: 2px 0;
+    display: block;
+  }
+
+  &__reputation-score{
+    font-weight: bold;
+    font-size:  @font-size--small;
+    line-height: 1;
+    margin: 0 0 4px 0;
+  }
+
+  &__tags{
+    clear: both;
+    font-size: @font-size--small;
+    padding: 3px 0 0 57px;
+  }
+
+  &__tag{
+    color: #848d95;
+  }
+}

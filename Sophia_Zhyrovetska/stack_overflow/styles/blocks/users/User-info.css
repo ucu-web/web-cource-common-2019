@@ -1,0 +1,40 @@
+.User-info {
+  padding: 5px 6px 7px 7px;
+  color: #6a737c;
+}
+.User-info__avatar {
+  width: 48px;
+  height: 48px;
+  float: left;
+  box-shadow: 2px 2px 4px rgba(12, 13, 14, 0.5);
+}
+.User-info__details {
+  margin: 0 0 0 9px;
+  width: calc(100% - 64px);
+  line-height: 1.1;
+  float: left;
+  word-wrap: break-word;
+}
+.User-info__name {
+  font-size: 14px;
+}
+.User-info__location {
+  font-size: 0.75em;
+  margin: 2px 0;
+  display: block;
+}
+.User-info__reputation-score {
+  font-weight: bold;
+  font-size: 0.75em;
+  line-height: 1;
+  margin: 0 0 4px 0;
+}
+.User-info__tags {
+  clear: both;
+  font-size: 0.75em;
+  padding: 3px 0 0 57px;
+}
+.User-info__tag {
+  color: #848d95;
+}
+/*# sourceMappingURL=User-info.css.map */
