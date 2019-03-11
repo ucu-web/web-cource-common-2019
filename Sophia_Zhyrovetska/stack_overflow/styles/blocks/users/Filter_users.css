@@ -15,4 +15,7 @@
 .Filter-users__button-group {
   margin: 0 0 0 auto;
 }
+.Filter-users__search-form {
+  width: 140px;
+}
 /*# sourceMappingURL=Filter_users.css.map */

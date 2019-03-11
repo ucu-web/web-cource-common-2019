@@ -21,17 +21,19 @@
     <link rel="stylesheet" href="styles/blocks/common/Primary-button.css" />
 
     <link rel="stylesheet" href="styles/blocks/users/Layout.css" />
+    <link rel="stylesheet" href="styles/blocks/users/Main-block.css" />
       <link rel="stylesheet" href="styles/blocks/users/Filter_users.css">
       <link rel="stylesheet" href="styles/blocks/users/Time-tabs.css">
     <link rel="stylesheet" href="styles/blocks/users/Users-list.css">
     <link rel="stylesheet" href="styles/blocks/users/User-info.css">
+    <link rel="stylesheet" href="styles/blocks/users/Pagination.css">
 
     <title>Users</title>
   </head>
   <body>
     <div class="Layout">
       <header class="Header Layout__header">
-        <a href="#" class="Header__logo">Stack Overflow</a>
+        <a href="index.html" class="Header__logo">Stack Overflow</a>
 
         <form
           class="Search-form Header__search-form"
@@ -129,8 +131,8 @@
         <div class="Layout__sticky-navigation">
           <nav class="Site-chapter-navigation">
             <a
-              href="#"
-              class="Site-chapter-navigation__link Site-chapter-navigation__link--home Site-chapter-navigation__link--current"
+              href="index.html"
+              class="Site-chapter-navigation__link Site-chapter-navigation__link--home"
               >Home</a
             >
             <h4 class="Site-chapter-navigation__section-title">Public</h4>
@@ -151,7 +153,7 @@
               Stack Overflow</a
             >
             <a class="Site-chapter-navigation__link" href="#">Tags</a>
-            <a class="Site-chapter-navigation__link" href="#">Users</a>
+            <a class="Site-chapter-navigation__link Site-chapter-navigation__link--current" href="#">Users</a>
             <a class="Site-chapter-navigation__link" href="#">Jobs</a>
           </nav>
 
@@ -203,7 +205,7 @@
         </div>
       </section>
 
-      <main class="Layout__main-block">
+      <main class="Main-block Layout__main-block">
         <section class="Filter-users">
           <h1 class="Filter-users__title">Users</h1>
           <div class="Filter-users__wrapper">
@@ -1018,7 +1020,7 @@
 
         </section>
 
-        <a href="https://stackexchange.com/leagues/week/stackoverflow"
+        <a href="https://stackexchange.com/leagues/week/stackoverflow" class="Ordinary-link Main-block__reputation-leagues"
           >weekly / monthly / quarterly reputation leagues</a
         >
 
@@ -1043,6 +1045,9 @@
           <span class="Pagination__dots">…</span>
           <a href="#" title="go to page 270962" aria-label="go to page 270962">
             <span class="Pagination__button">270962</span>
+          </a>
+          <a href="#" title="go to next page" aria-label="go to next page">
+            <span class="Pagination__button">next</span>
           </a>
         </div>
       </main>
