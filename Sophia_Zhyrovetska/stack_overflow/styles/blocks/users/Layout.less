@@ -4,7 +4,7 @@
 
 .Layout {
   display: grid;
-  grid-template-columns: auto @navigation-width @main-block-width auto;
+  grid-template-columns: auto @navigation-width minmax(auto, @main-block-width) auto;
   grid-template-rows: @header-height auto @footer-height;
 
   &__header {
@@ -24,7 +24,7 @@
     top: @header-height + @padding;
     margin: 0 0 0.75em 0;
   }
-  
+
   &__footer {
     grid-area: ~"3/1/4/5";
   }

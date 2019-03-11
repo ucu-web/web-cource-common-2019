@@ -1,5 +1,5 @@
 .Filter-users {
-  padding: 0 0 60px 0;
+  padding: 0 0 3.75em 0;
 }
 .Filter-users__title {
   font-size: 1.69em;
@@ -16,6 +16,6 @@
   margin: 0 0 0 auto;
 }
 .Filter-users__search-form {
-  width: 140px;
+  width: 8.75em;
 }
 /*# sourceMappingURL=Filter_users.css.map */

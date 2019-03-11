@@ -3,8 +3,8 @@
 }
 .Time-tabs__tab {
   display: block;
-  margin: 0 0 0 2px;
-  padding: 8px;
+  margin: 0 0 0 0.17em;
+  padding: 0.67em;
   border-bottom: 1px solid transparent;
   color: #6a737c;
   font-size: 0.75em;

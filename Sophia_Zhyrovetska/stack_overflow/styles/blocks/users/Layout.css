@@ -1,6 +1,6 @@
 .Layout {
   display: grid;
-  grid-template-columns: auto 164px 1076px auto;
+  grid-template-columns: auto 164px minmax(auto, 1076px) auto;
   grid-template-rows: 50px auto 300px;
 }
 .Layout__header {
