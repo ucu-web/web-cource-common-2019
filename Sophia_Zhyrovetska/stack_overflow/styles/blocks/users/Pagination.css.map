@@ -1,1 +1,1 @@
-{"version":3,"sources":["Pagination.less"],"names":[],"mappings":"AAEA;EACE,gBAAA;EACA,YAAA;;AAEA,WAAC;EACC,qBAAA;EACA,sBAAA;EACA,iBAAA;EACA,cAAA;EACA,yBAAA;EACA,kBAAA;;AAGF,WAAC;EACC,WAAA;EACA,yBAAA;EACA,yBAAA","file":"Pagination.css"}
+{"version":3,"sources":["Pagination.less"],"names":[],"mappings":"AAIE,WAAC;EACC,qBAAA;EACA,sBAAA;EACA,iBAAA;EACA,cAAA;EACA,yBAAA;EACA,kBAAA;;AAEA,WARD,QAQE;AAAY,WARd,QAQe;EACZ,WAAA;EACA,yBAAA;EACA,yBAAA","file":"Pagination.css"}

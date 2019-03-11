@@ -37,4 +37,10 @@
 .User-info__tag {
   color: #848d95;
 }
+.User-info__tag:hover {
+  text-decoration: underline;
+}
+.User-info:hover {
+  background-color: #f4f8fb;
+}
 /*# sourceMappingURL=User-info.css.map */
