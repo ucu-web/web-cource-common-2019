@@ -1,17 +1,18 @@
 .recommendations-header__topic,
-.recommendations-header__refresh {
+.recommendations-header__action {
   display: inline;
   padding: 0;
   margin: 0;
   border: none;
   background: #ffffff;
 }
-.recommendations-header__refresh,
-.recommendations-header__view-all {
+.recommendations-header__link {
   color: #1da1f2;
 }
-.recommendations-header__refresh:before,
-.recommendations-header__view-all:before {
+.recommendations-header__action:hover .recommendations-header__link {
+  text-decoration: underline #1da1f2;
+}
+.recommendations-header__action:before {
   content: "\00B7";
   color: black;
   padding-right: 0;
