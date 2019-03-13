@@ -1,0 +1,66 @@
+@logo-height: 130px;
+
+.course {
+  position: relative;
+  height: 400px - @logo-height;
+  width: 270px;
+  padding-top: @logo-height;
+  background-image: url(../images/machine-learning-logo.png);
+  background-size: 100% @logo-height;
+  background-repeat: no-repeat;
+  box-shadow: 0 1px 6px rgba(31, 31, 31, 0.12), 0 1px 4px rgba(31, 31, 31, 0.12);
+
+  &__course-info {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 50px);
+    margin-top: 50px;
+    padding: 0.75rem 1.5rem;
+  }
+
+  &__name {
+    margin-bottom: 0.5rem;
+    line-height: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: normal;
+  }
+
+  &__provider {
+    line-height: 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: hsla(0, 0%, 47%, .75);
+  }
+
+  &__type {
+    margin: auto 0 0.5rem 0;
+    text-transform: uppercase;
+    line-height: 1.125rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    font-family: 'OpenSans-Bold', Arial, sans-serif;
+    color: hsla(0,0%,47%,.75);
+  }
+
+  @provider-logo-size: 55px;
+  @provider-logo-padding: 0.5rem;
+  &__provider-logo{
+    position: absolute;
+    top: calc(@logo-height - @provider-logo-padding - @provider-logo-size / 2);
+    height: @provider-logo-size;
+    width: @provider-logo-size;
+    padding: @provider-logo-padding;
+    border: 1px solid #E1E1E1;
+    border-radius: 3px;
+    background-color: white;
+    background-image: url(../images/stanford_small_logo.png);
+    background-position: center;
+    background-size: @provider-logo-size @provider-logo-size;
+    background-repeat: no-repeat;
+  }
+
+  &:hover{
+    box-shadow: 0 3px 10px rgba(31, 31, 31, 0.16), 0 3px 10px rgba(31, 31, 31, 0.23)
+  }
+}
