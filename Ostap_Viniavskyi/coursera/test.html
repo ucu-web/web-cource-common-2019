@@ -7,16 +7,53 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link type="text/css" rel="stylesheet" href="styles/course.css">
+  <link type="text/css" rel="stylesheet" href="styles/carousel.css">
   <link type="text/css" rel="stylesheet" href="styles/common.css">
 </head>
 <body>
-<article class="course">
-  <div class="course__course-info">
-    <h3 class="course__name">Machine Learning</h3>
-    <span class="course__provider">Stanford University</span>
-    <h4 class="course__type">Course</h4>
-    <span class="course__provider-logo"></span>
+<section class="carousel">
+  <h2 class="carousel__header">Trending courses in Math and Logic</h2>
+  <button class="carousel__swap-button carousel__swap-button_left"></button>
+  <div class="carousel__courses-wrapper">
+    <article class="course carousel__course">
+      <a class="course__course-info">
+        <h3 class="course__name">Machine Learning</h3>
+        <span class="course__provider">Stanford University</span>
+        <h4 class="course__type">Course</h4>
+        <span class="course__provider-logo"></span>
+      </a>
+    </article>
+    <article class="course carousel__course">
+      <a class="course__course-info">
+        <h3 class="course__name">Machine Learning</h3>
+        <span class="course__provider">Stanford University</span>
+        <h4 class="course__type">Course</h4>
+        <span class="course__provider-logo"></span>
+      </a>
+    </article>
+    <article class="course carousel__course">
+      <a class="course__course-info">
+        <h3 class="course__name">Machine Learning</h3>
+        <span class="course__provider">Stanford University</span>
+        <h4 class="course__type">Course</h4>
+        <span class="course__provider-logo"></span>
+      </a>
+    </article>
+    <article class="course carousel__course">
+      <a class="course__course-info">
+        <h3 class="course__name">Machine Learning</h3>
+        <span class="course__provider">Stanford University</span>
+        <h4 class="course__type">Course</h4>
+        <span class="course__provider-logo"></span>
+      </a>
+    </article>
   </div>
-</article>
+  <button class="carousel__swap-button carousel__swap-button_right"></button>
+  <nav class="carousel__navigation">
+    <button class="carousel__navigation-button carousel__navigation-button_active"></button>
+    <button class="carousel__navigation-button"></button>
+    <button class="carousel__navigation-button"></button>
+  </nav>
+</section>
 </body>
 </html>
