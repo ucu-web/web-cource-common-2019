@@ -1,0 +1,56 @@
+.carousel {
+  display: grid;
+  grid-template-columns: 40px auto 40px;
+  grid-template-rows: auto;
+  grid-template-areas: ". header ." "larrow  courses rarrow" ". buttons .";
+  grid-row-gap: 20px;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+.carousel__header {
+  grid-area: header;
+  line-height: 2rem;
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #4a4a4a;
+}
+.carousel__courses-wrapper {
+  grid-area: courses;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.carousel__swap-button {
+  height: 40px;
+  align-self: center;
+  background-color: transparent;
+  background-size: 40px 40px;
+  background-position: center;
+}
+.carousel__swap-button_left {
+  grid-area: larrow;
+  background-image: url("../images/left-arrow.svg");
+}
+.carousel__swap-button_right {
+  grid-area: rarrow;
+  background-image: url("../images/right-arrow.svg");
+}
+.carousel__navigation {
+  grid-area: buttons;
+  justify-self: center;
+}
+.carousel__navigation-button {
+  height: 12px;
+  width: 12px;
+  margin: 0 6px;
+  padding: 0;
+  border: 1px solid #9b9b9b;
+  border-radius: 100%;
+  background: inherit;
+}
+.carousel__navigation-button_active {
+  height: 8px;
+  width: 8px;
+  background: #9b9b9b;
+}
+/*# sourceMappingURL=carousel.css.map */
