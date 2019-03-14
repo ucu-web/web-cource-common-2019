@@ -31,7 +31,7 @@
 }
 .account__statistic {
   font-weight: bold;
-  margin: 12px 0 0 16px;
+  margin: 12px 0 16px 16px;
   display: flex;
 }
 .account__profile-avatar {
