@@ -1,0 +1,10 @@
+Have you used or implemented media queries or mobile specific layouts/CSS?
+Media query is a CSS technique introduced in CSS3.
+@media give the opportunity to make rules for different device 
+For example @media print { ... } for printers.
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Can you explain the difference between coding a web site to be responsive versus using a mobile-first strategy?
+The first is realized by compression, the second variant is stretched.
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+What does * { box-sizing: border-box; } do? What are its advantages?
+It will changes the calculating the size of box. 
