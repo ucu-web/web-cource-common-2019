@@ -47,6 +47,7 @@
   }
 
   @nav-button-size: 12px;
+
   &__navigation-button {
     height: @nav-button-size;
     width: @nav-button-size;
@@ -55,11 +56,11 @@
     border: 1px solid #9b9b9b;
     border-radius: 100%;
     background: inherit;
-  }
 
-  &__navigation-button_active{
-    height: @nav-button-size * 2 / 3;
-    width: @nav-button-size * 2 / 3;
-    background: #9b9b9b;
+    &_active {
+      height: @nav-button-size * 2 / 3;
+      width: @nav-button-size * 2 / 3;
+      background: #9b9b9b;
+    }
   }
 }
