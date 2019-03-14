@@ -1,0 +1,42 @@
+.Header__menu{
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0px 0px;
+    height: 36px;
+    width: 72px;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.Header__menu-btn{
+    background-color: rgb(26, 26, 27);
+    color: rgb(215, 218, 220);
+    line-height: 34px;
+    padding-left: 40px;
+    padding-right: 56px;
+    text-align: left;
+    width: 100%;
+    height: 100%;
+}
+
+.Header__menu-btn strong {
+    display: none;
+}
+
+.Header__menu-icon{
+    height: 22px;
+    left: 10px;
+    margin-top: -11px;
+    position: absolute;
+    top: 50%;
+    width: 22px;
+}
+
+@media (min-width: 995px) {
+    .Header__menu-btn strong {
+        display: inline;
+    }
+    .Header__menu {
+        width: 270px;
+    }
+}

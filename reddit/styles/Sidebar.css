@@ -1,0 +1,24 @@
+.Sidebar > *{
+    overflow-wrap: break-word;
+    background-color: rgb(26, 26, 27);
+    color: rgb(215, 218, 220);
+    fill: rgb(215, 218, 220);
+    border-radius: 5px 5px 4px 4px;
+    overflow: visible;
+    margin-bottom: 16px;
+}
+
+@media (max-width: 960px) {
+    .Sidebar {
+        display: none;
+    }
+}
+
+.Sidebar-text{
+    font-family: "Noto Sans", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    margin-top: 8px;
+    overflow-wrap: break-word;
+}

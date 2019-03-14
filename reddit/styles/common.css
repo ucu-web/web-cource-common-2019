@@ -1,0 +1,23 @@
+.small-dark-gray-text{
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 12px;
+    text-transform: uppercase;
+    color: rgb(129, 131, 132);
+    margin-top: 1px;
+}
+
+.dark-gray-fill{
+    fill: rgb(129, 131, 132);
+    width: 18px;
+    height: 18px;
+}
+
+.light-gray-fill{
+    fill: rgb(215, 218, 220);
+}
+
+.blue-fill{
+    fill: #0079d3;
+}

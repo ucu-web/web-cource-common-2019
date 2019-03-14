@@ -1,0 +1,24 @@
+.Footer{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    text-transform: capitalize;
+}
+
+.Footer__links{
+    margin-bottom: 16px;
+    padding: 12px;
+}
+
+.Footer__links_section a{
+    display: block;
+}
+
+.Footer__policies{
+    text-align: center;
+    padding-bottom: 12px;
+}
+
+.Footer__policies a{
+    margin: 0 4px;
+}

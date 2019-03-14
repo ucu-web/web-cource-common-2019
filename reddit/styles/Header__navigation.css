@@ -1,0 +1,64 @@
+.Header__navigation-icon{
+    height: 16px;
+    line-height: 14px;
+    padding: 8px;
+    width: 16px;
+}
+
+.Header__navigation-additional{
+    display: none;
+    border-left: 1px solid rgb(52, 53, 54);
+}
+
+.Header__navigation-additional-btn-avatar{
+    margin-right: 5px;
+    max-height: 24px;
+    max-width: 24px;
+    border-radius: 4px;
+}
+.Header__navigation-additional-btn-text{
+    margin-left: 8px;
+    text-align: left;
+    display: none;
+}
+
+.Header__navigation-additional-btn-text > *{
+    display: block;
+}
+
+.Header__navigation-additional-icons{
+    display: none;
+}
+
+@media (min-width: 1210px) {
+    .Header__navigation-additional-btn-text {
+        display: block;
+    }
+    .Header__navigation-additional-btn {
+        width: 175px;
+    }
+}
+@media (min-width: 600px) {
+    .Header__navigation-additional-icons {
+        display: block;
+    }
+}
+
+.Header__navigation-profile-nick{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    color: rgb(215, 218, 220);
+}
+
+.Header__navigation-karma-amount{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    color: rgb(168, 170, 171);
+}
+
+.Header__navigation-karma-icon{
+    width: 12px;
+    height: 12px;
+}

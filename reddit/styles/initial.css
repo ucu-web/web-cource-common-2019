@@ -1,0 +1,42 @@
+body{
+    background-color: #030303;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    /*font-family: IBMPlexSans, Arial, sans-serif;*/
+    font-family: BentonSans, sans-serif;
+    vertical-align: baseline;
+}
+
+button{
+    background: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    padding: initial;
+}
+
+svg{
+    height: inherit;
+    width: inherit;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+}
+
+span{
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+}
