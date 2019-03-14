@@ -1,0 +1,8 @@
+1. Box-sizing: border-box
+Коли ми використовуємо для блоку значення width, heihgt, то в цьому значенні враховується значення полів, бордеру та падінгу, але не margin.
+2. Have you used or implemented media queries or mobile specific layouts/CSS?
+Так.
+
+3. Can you explain the difference between coding a web site to be responsive versus using a mobile-first strategy?
+Responsive - це коли ми починаємо верстку нашого сайту, базуючись на великому розміру екрану, а далі адаптивно це верстаємо для менших екранів.
+Mobile-first - весь дизайн базується на забезпечинні досвіді юзера, який використовує телефн. 
