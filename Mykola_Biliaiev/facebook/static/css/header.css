@@ -1,0 +1,16 @@
+.header-main {
+    background-color: #4769ad;
+    height: 42px;
+    width: 100%;
+    z-index: 4;
+
+}
+
+.header-main__wrapper {
+    height: inherit;
+    padding-right: 205px;
+    width: 1012px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
