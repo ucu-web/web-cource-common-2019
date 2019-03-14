@@ -1,0 +1,3 @@
+1)What does * { box-sizing: border-box; } do? What are its advantages? Означає що в розміри даного блоку входять падінги і бордер. НЕдоліки: потрібно постійно це враховувати, розмір буде мінятись якщо ,допустимо, дати більший падінг.
+2)Have you used or implemented media queries or mobile specific layouts/CSS? Ні.
+3)Can you explain the difference between coding a web site to be responsive versus using a mobile-first strategy? Респонсів - коли розробляється для різних розширень екрану, mobile-first - коли спочатку розробляється мобільна версія, де є основний контент і невисокі вимоги до продуктивності.
