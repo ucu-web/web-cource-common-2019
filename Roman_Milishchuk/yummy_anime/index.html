@@ -22,7 +22,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body class="layout">
 <header class="main-header">
     <div class="main-header__banner">
         <div class="container">
@@ -55,16 +55,15 @@
         </div>
     </div>
 </header>
-
-<main class="main container">
-    <section class="main-search">
+<main class="layout__content container">
+    <section class="content__main-search">
         <form action="/find_anime">
             <input class="main-search__anime-name" type="text" placeholder="Найти аниме по названию">
             <button aria-label="search" class="main-search__search-button"></button>
         </form>
     </section>
 
-    <section class="ongoing-gallery">
+    <section class="content__ongoing-gallery">
         <h2 class="ongoing-gallery__section-header">АНИМЕ ЗИМНЕГО СЕЗОНА</h2>
         <ul class="ongoing-gallery__anime-slides">
             <li class="anime-slides__item">
@@ -126,7 +125,7 @@
         </ul>
     </section>
 
-    <section class="anime_updates news-table">
+    <section class="content__anime_updates news-table">
         <h2 class="news-table__section-header">ОБНОВЛЕНИЯ АНИМЕ</h2>
         <table class="news-table__table">
             <tr class="news-table__item">
@@ -191,7 +190,7 @@
             </tr>
         </table>
     </section>
-    <section class="news-summary news-table">
+    <section class="content__news-summary news-table">
         <h2 class="news-table__section-header">НОВОСТИ</h2>
         <table class="news-table__table">
             <tr class="news-table__item">
@@ -227,7 +226,7 @@
         </table>
     </section>
 
-    <section class="last_videos">
+    <section class="content__last_videos">
         <h2 class="last_videos__section-header">Последнее в видеоблогах </h2>
         <div class="last_videos__videos">
             <article class="last_videos__video">
@@ -290,7 +289,7 @@
         </div>
     </section>
 
-    <section class="new-on-site">
+    <section class="content__new-on-site">
         <h2 class="new-on-site__section-header">НОВОЕ НА САЙТЕ</h2>
         <div class="new-on-site__anime-list">
             <article class="anime-list__anime-block">
@@ -395,7 +394,7 @@
             <button class="anime-block__button"> Показать еще 14</button>
         </div>
     </section>
-    <section class="search-filter">
+    <section class="content__search-filter">
         <h2 class="search-filter__section-header">ФИЛЬТР АНИМЕ</h2>
         <form action="find_filtered_anime" class="search-filter__form">
             <ul class="search-filter__filter-list">
@@ -473,7 +472,6 @@
             </footer>
         </form>
     </section>
-
 </main>
 <footer class="main-footer">
     <div class="container">
@@ -486,6 +484,5 @@
         </p>
     </div>
 </footer>
-
 </body>
 </html>

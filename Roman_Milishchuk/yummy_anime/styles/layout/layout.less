@@ -1,41 +1,49 @@
-main.container {
+.layout__content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "main-finder main-finder main-finder main-finder " "ongoing ongoing ongoing ongoing " "updates updates news news" "last-videos last-videos last-videos last-videos " "new-anime new-anime new-anime filter" "footer footer footer footer";
+    grid-template-areas: "main-header main-header main-header main-header" "main-finder main-finder main-finder main-finder " "ongoing ongoing ongoing ongoing " "updates updates news news" "last-videos last-videos last-videos last-videos " "new-anime new-anime new-anime filter" "footer footer footer footer";
     grid-column-gap: 20px;
+    grid-row-gap: 20px;
 }
 
-.main-search {
-    grid-area: main-finder;
-}
+.content {
+    &__main-header {
+        grid-area: main-header;
+    }
 
-.ongoing_gallery {
-    grid-area: ongoing;
-}
+    &__main-search {
+        position: relative;
+        grid-area: main-finder;
+    }
 
-.anime_updates {
-    grid-area: updates;
-}
+    &__ongoing-gallery {
+        grid-area: ongoing;
+    }
 
-.news-summary {
-    grid-area: news;
-}
+    &__anime_updates {
+        grid-area: updates;
+    }
 
-.last_videos {
-    grid-area: last-videos;
-}
+    &__news-summary {
+        grid-area: news;
+    }
 
-.new-on-site {
-    grid-area: new-anime;
-}
+    &__last_videos {
+        grid-area: last-videos;
+    }
 
-.search-filter {
-    grid-area: filter;
-}
+    &__new-on-site {
+        grid-area: new-anime;
+    }
 
-.main-footer {
-    grid-area: footer;
-}
+    &__search-filter {
+        grid-area: filter;
+    }
 
+    &__main-footer {
+        grid-area: footer;
+    }
+
+}
 
