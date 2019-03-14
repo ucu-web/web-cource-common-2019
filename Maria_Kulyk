@@ -1,5 +1,5 @@
 What does * { box-sizing: border-box; } do? What are its advantages?
-box-sizing:border-box changes algorithm of  counting box-size. it includes margins,
+box-sizing:border-box changes algorithm of  counting box-size. it includes
 borders, paddings and size of content in contrast to default sizing by content size
 
 Can you explain the difference between coding a web site to be responsive versus using a mobile-first strategy?
