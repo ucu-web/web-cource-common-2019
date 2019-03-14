@@ -11,11 +11,16 @@
 .tweet-header__time {
   color: #657786;
 }
-.tweet-header__nickname_verified:after, .fa-check-circle {
+.tweet-header__nickname_verified:after {
   padding-left: 2px;
   margin-right: 5px;
   color: #1da1f2;
   font-size: 0.7em;
 }
-
+.fa-check-circle {
+  padding-left: 2px;
+  margin-right: 5px;
+  color: #1da1f2;
+  font-size: 0.7em;
+}
 /*# sourceMappingURL=tweet-header.css.map */

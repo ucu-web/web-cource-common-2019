@@ -5,13 +5,14 @@
   margin-top: 10px;
 }
 .left-aside-wrapper__account {
+  position: relative;
   border-top: none;
   display: flex;
   flex-direction: column;
-  height: 209px;
+  max-height: 209px;
 }
 .left-aside-wrapper__trends {
-  height: 482px;
+  max-height: 482px;
   padding: 15px;
 }
 /*# sourceMappingURL=left-aside-wrapper.css.map */
