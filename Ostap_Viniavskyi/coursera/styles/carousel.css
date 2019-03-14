@@ -18,7 +18,7 @@
   grid-area: courses;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .carousel__swap-button {
   height: 40px;
