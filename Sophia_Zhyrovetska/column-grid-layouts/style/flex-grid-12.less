@@ -10,15 +10,11 @@
   width: @grid-width;
   margin: 0 auto;
 
-
-  &__row:after {
-    content: "";
-    clear: both;
-    display: block;
+  &__row{
+    display: flex;
   }
 
   &__cell {
-    float: left;
 
     .generate-columns(@grid-columns-number; @cell-width; @cell-margin; @i:1)
       when
