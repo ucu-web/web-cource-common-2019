@@ -8,8 +8,8 @@
 }
 .Pagination__button--selected,
 .Pagination__button:hover {
-  color: #FFF;
-  background-color: #F48024;
+  color: #fff;
+  background-color: #f48024;
   border-color: transparent;
 }
 /*# sourceMappingURL=Pagination.css.map */

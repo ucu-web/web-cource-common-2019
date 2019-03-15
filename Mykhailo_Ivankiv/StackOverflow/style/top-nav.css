@@ -1,44 +1,45 @@
 .Profile_navigation {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
-    justify-content: flex-end;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: flex-end;
 }
 
 .Profile_navigation .Profile-navigation__link {
-    fill: #848d95;
-    display: flex;
-    align-items: center;
-    padding: 0 10px;
-    height: 100%;
+  fill: #848d95;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  height: 100%;
 }
 
-.Profile_navigation .Profile-navigation__link:hover, .Profile_navigation .Profile-navigation__link:active {
-    fill: #3b4045;
-    background-color: #eff0f1;
+.Profile_navigation .Profile-navigation__link:hover,
+.Profile_navigation .Profile-navigation__link:active {
+  fill: #3b4045;
+  background-color: #eff0f1;
 }
 
 .Profile-navigation__link .Question-post__author-reputation-score {
-    padding-left: 0.7em;
-    font-weight: bold;
-    font-size: 0.75em;
-    color: #535a60;
+  padding-left: 0.7em;
+  font-weight: bold;
+  font-size: 0.75em;
+  color: #535a60;
 }
 
 .Profile-navigation__link .budge-circle {
-    color: #d0a278;
-    font-size: 13px;
-    margin-left: 0.5em;
+  color: #d0a278;
+  font-size: 13px;
+  margin-left: 0.5em;
 }
 
 .Profile-navigation__link .budge-count {
-    font-size: 12px;
-    color: #d0a278;
+  font-size: 12px;
+  color: #d0a278;
 }
 
 .profile-img {
-    width: 24px;
-    height: 24px;
-    border-radius: 3px;
+  width: 24px;
+  height: 24px;
+  border-radius: 3px;
 }

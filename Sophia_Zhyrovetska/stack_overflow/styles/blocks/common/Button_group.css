@@ -25,10 +25,12 @@
   box-shadow: 0 0 0 0 rgba(145, 153, 161, 0);
 }
 .Button-group__button--current:focus {
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5), 0 0 0 4px rgba(145, 153, 161, 0.1);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5),
+    0 0 0 4px rgba(145, 153, 161, 0.1);
 }
 .Button-group__button:focus {
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5), 0 0 0 4px rgba(145, 153, 161, 0.1);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5),
+    0 0 0 4px rgba(145, 153, 161, 0.1);
 }
 .Button-group__button:active {
   background-color: rgba(177, 192, 206, 0.15);
