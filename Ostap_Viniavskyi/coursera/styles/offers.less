@@ -1,0 +1,80 @@
+@offer-size: 160px;
+@offers-number: 5;
+.offers {
+  display: grid;
+  grid-template-rows: [header-start] 2rem [list-start] auto;
+  grid-auto-flow: column;
+  grid-row-gap: 20px;
+  max-width: 1150px;
+  margin: 0 auto; // TODO: delete this row
+
+  &__header {
+    grid-column: offer-start / description-end;
+  }
+
+  &__list {
+    grid-column: offer-start / description-end;
+    display: grid;
+    grid-template-columns: [offer-start] @offer-size [offer-end description-start] auto [description-end];
+    align-items: center;
+    grid-row-gap: 1px;
+  }
+
+  &__offer-box{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    background-color: #fff;
+  }
+
+  &__title {
+    padding: 25px 30px;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #525252;
+    background-color: #fff;
+    &_centered {
+      padding: 25px 0;
+    }
+  }
+
+  &__offer {
+    display: inline-block;
+    margin: 0 4px;
+    padding: 0.1875rem 1.125rem;
+    border-radius: 4px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: white;
+    //background-color: ;
+
+    &_blue {
+      background-image: linear-gradient(90deg, #4fc1e9, #4a89dc);
+    }
+
+    &_violet {
+      background-image: linear-gradient(90deg, #5d9cec, #967adc);
+    }
+
+    &_green {
+      background-image: linear-gradient(90deg, #48cfad, #3bafda);
+    }
+
+    &_pink {
+      background-image: linear-gradient(90deg, #ac92ec, #d770ad);
+    }
+
+    &_orange {
+      background-image: linear-gradient(90deg, #fc6e51, #f6bb42);
+    }
+  }
+
+  &__description {
+    padding: 15px;
+    background-color: #fff;
+  }
+}
