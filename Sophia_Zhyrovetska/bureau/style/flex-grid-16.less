@@ -1,0 +1,48 @@
+@grid-columns-number: 16;
+@grid-width: 1344px;
+@cell-width: 66px;
+@cell-margin: (
+  (@grid-width - (@cell-width * @grid-columns-number)) / @grid-columns-number
+);
+
+.Grid {
+  width: @grid-width;
+  margin: 0 auto;
+
+  &__row {
+    display: flex;
+  }
+
+  &__cell {
+    .generate-columns(@grid-columns-number; @cell-width; @cell-margin; @i:1)
+      when
+      (@i <= @grid-columns-number) {
+      .generate-columns(
+        @grid-columns-number; @cell-width; @cell-margin; (@i + 1)
+      );
+      &_@{i} {
+        width: @cell-width * @i + (@cell-margin * (@i - 1));
+        margin: 0 @cell-margin / 2;
+      }
+    }
+    .generate-columns(@grid-columns-number; @cell-width; @cell-margin;);
+
+    .generate-push(@grid-columns-number; @cell-width; @cell-margin; @i:1)
+      when
+      (@i < @grid-columns-number) {
+      .generate-push(@grid-columns-number; @cell-width; @cell-margin; (@i + 1));
+      &_push-@{i} {
+        margin-left: @cell-width * @i + (@cell-margin * (@i - 1)) + @cell-margin;
+      }
+    }
+    .generate-push(@grid-columns-number; @cell-width; @cell-margin;);
+
+    &_alpha {
+      margin-left: 0;
+    }
+
+    &_omega {
+      margin-right: 0;
+    }
+  }
+}
