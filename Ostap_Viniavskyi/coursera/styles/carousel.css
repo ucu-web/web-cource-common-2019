@@ -1,7 +1,6 @@
 .carousel {
   display: grid;
   grid-template-columns: 40px auto 40px;
-  grid-template-rows: auto;
   grid-template-areas: ". header ." "larrow  courses rarrow" ". buttons .";
   grid-row-gap: 20px;
   max-width: 1250px;
@@ -9,10 +8,6 @@
 }
 .carousel__header {
   grid-area: header;
-  line-height: 2rem;
-  font-size: 1.6rem;
-  font-weight: 300;
-  color: #4a4a4a;
 }
 .carousel__courses-wrapper {
   grid-area: courses;
