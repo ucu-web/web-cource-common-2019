@@ -1,6 +1,6 @@
-@grid-columns-number: 16;
-@grid-width: 1344px;
-@cell-width: 66px;
+@grid-columns-number: 12;
+@grid-width: 960px;
+@cell-width: 70px;
 @cell-margin: (
   (@grid-width - (@cell-width * @grid-columns-number))/ (@grid-columns-number -
         1)
@@ -9,25 +9,27 @@
 .Grid {
   width: @grid-width;
   margin: 0 auto;
+  background-color: #007ed9;
 
   &__row{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(@grid-columns-number, @grid-width);
+    grid-column-gap: @cell-margin;
   }
 
   &__cell {
-
-    .generate-columns(@grid-columns-number; @cell-width; @cell-margin; @i:1)
+    background-color: #003b66;
+    .generate-columns(@grid-columns-number; @i:1)
     when
     (@i <= @grid-columns-number) {
       .generate-columns(
-              @grid-columns-number; @cell-width; @cell-margin; (@i + 1)
+              @grid-columns-number; (@i + 1)
       );
       &_@{i} {
-        width: @cell-width * @i + (@cell-margin * (@i - 1));
-        margin: 0 @cell-margin / 2;
+        grid-column-end: @i * 2;
       }
     }
-    .generate-columns(@grid-columns-number; @cell-width; @cell-margin;);
+    .generate-columns(@grid-columns-number; @cell-width);
 
     .generate-push(@grid-columns-number; @cell-width; @cell-margin; @i:1)
     when

@@ -1,0 +1,9 @@
+.Navigation__link {
+  display: inline-block;
+  margin-right: 18px;
+  font-size: 14px;
+}
+.Navigation__link:hover {
+  color: #e20016;
+}
+/*# sourceMappingURL=Navigation.css.map */

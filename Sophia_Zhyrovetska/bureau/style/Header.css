@@ -1,0 +1,21 @@
+.Header {
+  display: flex;
+}
+.Header__logo {
+  padding: 1px;
+}
+.Header__navigation {
+  flex: 1;
+  margin-top: -8px;
+  margin-left: 10px;
+}
+.Header__user-icon {
+  width: 32px;
+  height: 30px;
+}
+.Header__announce {
+  position: absolute;
+  top: 20px;
+  left: calc(6% + 476px);
+}
+/*# sourceMappingURL=Header.css.map */

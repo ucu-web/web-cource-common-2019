@@ -1,0 +1,21 @@
+.Selections-caption {
+  color: #e20016;
+  font-weight: lighter;
+}
+.Selections-caption__text {
+  font-size: 14px;
+}
+.Selections-caption__number {
+  display: inline-block;
+  padding: 0 2px;
+  margin-left: 4px;
+  min-width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  line-height: 15px;
+  text-align: center;
+  font-size: 11px;
+  color: #fff;
+  background: #e20016;
+}
+/*# sourceMappingURL=Selections-caption.css.map */
