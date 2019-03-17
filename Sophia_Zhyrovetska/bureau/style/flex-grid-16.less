@@ -1,9 +1,12 @@
+@import "variables";
+
 @grid-columns-number: 16;
 @grid-width: 1344px;
 @cell-width: 66px;
-@cell-margin: (
+@cell-padding: (
   (@grid-width - (@cell-width * @grid-columns-number)) / @grid-columns-number
 );
+@border-width: 1px;
 
 .Grid {
   width: @grid-width;
@@ -16,35 +19,37 @@
 
   &__cell {
 
-    .generate-columns(@grid-columns-number; @cell-width; @cell-margin; @i:1)
+    .generate-columns(@grid-columns-number; @cell-width; @cell-padding; @i:1)
       when
       (@i <= @grid-columns-number) {
       .generate-columns(
-        @grid-columns-number; @cell-width; @cell-margin; (@i + 1)
+        @grid-columns-number; @cell-width; @cell-padding; (@i + 1)
       );
       &_@{i} {
-        width: @cell-width * @i + (@cell-margin * (@i - 1));
-        margin: 0 @cell-margin / 2;
+        width: @cell-width * @i + (@cell-padding * (@i - 1));
+        padding: 0 @cell-padding / 2;
       }
     }
-    .generate-columns(@grid-columns-number; @cell-width; @cell-margin;);
+    .generate-columns(@grid-columns-number; @cell-width; @cell-padding;);
 
-    .generate-push(@grid-columns-number; @cell-width; @cell-margin; @i:1)
+    .generate-push(@grid-columns-number; @cell-width; @cell-padding; @i:1)
       when
       (@i < @grid-columns-number) {
-      .generate-push(@grid-columns-number; @cell-width; @cell-margin; (@i + 1));
+      .generate-push(@grid-columns-number; @cell-width; @cell-padding; (@i + 1));
       &_push-@{i} {
-        margin-left: @cell-width * @i + (@cell-margin * (@i - 1)) + @cell-margin;
+        padding-left: @cell-width * @i + (@cell-padding * (@i - 1)) + @cell-padding;
       }
     }
-    .generate-push(@grid-columns-number; @cell-width; @cell-margin;);
+    .generate-push(@grid-columns-number; @cell-width; @cell-padding;);
 
-    &_alpha {
-      margin-left: 0;
-    }
+    &_ribbed{
+      border-top: @border-width solid @text-underline-color;
+      border-right: @border-width solid @text-underline-color;
+      padding-right: @cell-padding/2 - @border-width;
 
-    &_omega {
-      margin-right: 0;
+      &--rightmost{
+        border-right: none;
+      }
     }
   }
 }
