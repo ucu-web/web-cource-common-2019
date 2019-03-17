@@ -1,0 +1,20 @@
+.Button {
+  display: inline-block;
+  cursor: pointer;
+  padding: 0 18px;
+  height: 38px;
+  border-radius: 3px;
+  font-size: 17px;
+  line-height: 38px;
+  text-align: center;
+  white-space: nowrap;
+  color: #ffffff;
+  text-decoration: none;
+}
+.Button--blue {
+  background-color: #004f83;
+}
+.Button--orange {
+  background-color: #fc5620;
+}
+/*# sourceMappingURL=Button.css.map */
