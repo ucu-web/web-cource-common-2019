@@ -1,0 +1,90 @@
+.Grid {
+  width: 1300px;
+  margin: 0 auto;
+  background: gold;
+}
+.Grid__row {
+  display: flex;
+  align-items: flex-start;
+}
+.Grid__cell {
+  margin: 0 31.8181818182px;
+  background: #2980b9;
+}
+.Grid__cell--1 {
+  width: 50px;
+}
+.Grid__cell--2 {
+  width: 163.6363636364px;
+}
+.Grid__cell--3 {
+  width: 277.2727272727px;
+}
+.Grid__cell--4 {
+  width: 390.9090909091px;
+}
+.Grid__cell--5 {
+  width: 504.5454545455px;
+}
+.Grid__cell--6 {
+  width: 618.1818181818px;
+}
+.Grid__cell--7 {
+  width: 731.8181818182px;
+}
+.Grid__cell--8 {
+  width: 845.4545454545px;
+}
+.Grid__cell--9 {
+  width: 959.0909090909px;
+}
+.Grid__cell--10 {
+  width: 1072.7272727273px;
+}
+.Grid__cell--11 {
+  width: 1186.3636363636px;
+}
+.Grid__cell--12 {
+  width: 1300px;
+}
+.Grid__cell--push-1 {
+  margin-left: 113.6363636364px;
+}
+.Grid__cell--push-2 {
+  margin-left: 227.2727272727px;
+}
+.Grid__cell--push-3 {
+  margin-left: 340.9090909091px;
+}
+.Grid__cell--push-4 {
+  margin-left: 454.5454545455px;
+}
+.Grid__cell--push-5 {
+  margin-left: 568.1818181818px;
+}
+.Grid__cell--push-6 {
+  margin-left: 681.8181818182px;
+}
+.Grid__cell--push-7 {
+  margin-left: 795.4545454545px;
+}
+.Grid__cell--push-8 {
+  margin-left: 909.0909090909px;
+}
+.Grid__cell--push-9 {
+  margin-left: 1022.7272727273px;
+}
+.Grid__cell--push-10 {
+  margin-left: 1136.3636363636px;
+}
+.Grid__cell--push-11 {
+  margin-left: 1250px;
+}
+.Grid__cell--alpha {
+  margin-left: 0;
+}
+.Grid__cell--omega {
+  margin-right: 0;
+}
+
+/*# sourceMappingURL=flex-grid.css.map */
