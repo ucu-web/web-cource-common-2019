@@ -1,7 +1,6 @@
 .Grid {
   width: 1300px;
   margin: 0 auto;
-  background: gold;
 }
 .Grid__row {
   font-size: 0;
@@ -10,7 +9,6 @@
   display: inline-block;
   vertical-align: top;
   margin: 0 31.8181818182px;
-  background: #2980b9;
   font-size: 1rem;
 }
 .Grid__cell--1 {
@@ -89,4 +87,4 @@
   margin-right: 0;
 }
 
-/*# sourceMappingURL=inline_block-grid.css.map */
+/*# sourceMappingURL=flow-column-grid-layout.css.map */

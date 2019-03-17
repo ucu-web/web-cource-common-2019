@@ -1,0 +1,28 @@
+$grid-columns-number: 12;
+$grid-width: 960px;
+$cell-width: 50px;
+$cell-margin: (($grid-width - ($cell-width * $grid-columns-number)) / ($grid-columns-number - 1));
+
+.Grid {
+  width: $grid-width;
+  margin: 0 auto;
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat($grid-columns-number, $cell-width);
+    grid-column-gap: $cell-margin;
+  }
+
+  &__cell {
+
+    @for $i from 1 through $grid-columns-number {
+      @for $j from $i + 1 through $grid-columns-number + 1 {
+        &_#{$i}_#{$j} {
+          grid-column-start: $i;
+          grid-column-end: $j;
+        }
+      }
+    }
+
+  }
+}

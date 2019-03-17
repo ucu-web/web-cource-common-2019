@@ -1,7 +1,6 @@
 .Grid {
   width: 1300px;
   margin: 0 auto;
-  background: gold;
 }
 .Grid__row {
   display: flex;
@@ -9,7 +8,6 @@
 }
 .Grid__cell {
   margin: 0 31.8181818182px;
-  background: #2980b9;
 }
 .Grid__cell--1 {
   width: 50px;
@@ -87,4 +85,4 @@
   margin-right: 0;
 }
 
-/*# sourceMappingURL=flex-grid.css.map */
+/*# sourceMappingURL=flex-column-grid-layout.css.map */

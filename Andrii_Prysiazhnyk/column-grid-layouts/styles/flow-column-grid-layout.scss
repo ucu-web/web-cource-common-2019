@@ -6,7 +6,6 @@ $cell-margin: (($grid-width - ($cell-width * $grid-columns-number)) / ($grid-col
 .Grid {
   width: $grid-width;
   margin: 0 auto;
-  background: gold;
 
   &__row {
     font-size: 0;
@@ -16,7 +15,6 @@ $cell-margin: (($grid-width - ($cell-width * $grid-columns-number)) / ($grid-col
     display: inline-block;
     vertical-align: top;
     margin: 0 $cell-margin / 2;
-    background: #2980b9;
     font-size: 1rem;
 
     @for $i from 1 through $grid-columns-number {

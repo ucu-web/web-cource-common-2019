@@ -6,18 +6,14 @@ $cell-margin: (($grid-width - ($cell-width * $grid-columns-number)) / ($grid-col
 .Grid {
   width: $grid-width;
   margin: 0 auto;
-  background: gold;
 
-  &__row:after {
-    content: "";
-    clear: both;
-    display: block;
+  &__row {
+    display: flex;
+    align-items: flex-start;
   }
 
   &__cell {
-    float: left;
     margin: 0 $cell-margin / 2;
-    background: #2980b9;
 
     @for $i from 1 through $grid-columns-number {
       &--#{$i} { width: $cell-width * $i + ($cell-margin * ($i - 1));}

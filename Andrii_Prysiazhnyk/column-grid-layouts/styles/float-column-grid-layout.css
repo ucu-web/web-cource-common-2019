@@ -1,7 +1,6 @@
 .Grid {
   width: 1300px;
   margin: 0 auto;
-  background: gold;
 }
 .Grid__row:after {
   content: "";
@@ -11,7 +10,6 @@
 .Grid__cell {
   float: left;
   margin: 0 31.8181818182px;
-  background: #2980b9;
 }
 .Grid__cell--1 {
   width: 50px;
@@ -89,4 +87,4 @@
   margin-right: 0;
 }
 
-/*# sourceMappingURL=float-grid.css.map */
+/*# sourceMappingURL=float-column-grid-layout.css.map */
