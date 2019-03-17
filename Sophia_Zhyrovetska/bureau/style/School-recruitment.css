@@ -1,0 +1,41 @@
+.School-recruitment__logos {
+  display: flex;
+  align-items: center;
+}
+.School-recruitment__logo {
+  margin-right: 10px;
+}
+.School-recruitment__logo--designers {
+  margin-top: -17px;
+  width: 54px;
+  height: 62px;
+}
+.School-recruitment__logo--editors {
+  width: 43px;
+  height: 46px;
+}
+.School-recruitment__logo--managers {
+  width: 44px;
+  height: 45px;
+  margin-right: 0;
+}
+.School-recruitment__title {
+  font-size: 60px;
+  color: #e20016;
+  font-weight: lighter;
+  margin: 0;
+}
+.School-recruitment__school-start {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+.School-recruitment__preparatory-courses {
+  font-size: 21px;
+  margin: 18px 0 4px 0;
+}
+.School-recruitment__disabled {
+  font-size: 15px;
+  opacity: 0.14;
+}
+/*# sourceMappingURL=School-recruitment.css.map */

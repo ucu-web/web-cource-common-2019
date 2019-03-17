@@ -1,0 +1,19 @@
+.Course-sign-up__title {
+  font-size: 38px;
+  font-weight: lighter;
+  width: 14.74em;
+  margin: 18px 0 15px 0;
+}
+.Course-sign-up__button {
+  margin-right: 11px;
+}
+.Course-sign-up__link {
+  display: block;
+  width: 9.33em;
+}
+.Course-sign-up__wrapper {
+  display: flex;
+  align-items: center;
+  padding-bottom: 35px;
+}
+/*# sourceMappingURL=Course-sign-up.css.map */

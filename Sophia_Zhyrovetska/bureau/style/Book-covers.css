@@ -1,0 +1,29 @@
+.Book-covers {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 22px;
+}
+.Book-covers__cover {
+  margin: 50px 18px 0 0;
+}
+.Book-covers__cover--rightmost {
+  margin: 50px 0 0 0;
+}
+.Book-covers__cover-image {
+  width: 207px;
+  height: 293px;
+  margin-bottom: 10px;
+}
+.Book-covers__cover-image--wide {
+  width: 433px;
+}
+.Book-covers__figcaption {
+  font-size: 15px;
+}
+.Book-covers__figcaption--bold {
+  font-weight: bold;
+}
+.Book-covers__figcaption--centered {
+  text-align: center;
+}
+/*# sourceMappingURL=Book-covers.css.map */

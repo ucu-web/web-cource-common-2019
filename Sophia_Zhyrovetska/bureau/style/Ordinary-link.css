@@ -1,0 +1,15 @@
+.Ordinary-link {
+  background-image: linear-gradient(180deg, rgba(6, 85, 128, 0.1) 0, rgba(6, 85, 128, 0.1));
+  color: #065580;
+  background-position: 0 100%;
+  background-size: 1px 1px;
+  background-repeat: repeat-x;
+  text-decoration: none;
+  font-weight: lighter;
+  font-size: 15px;
+}
+.Ordinary-link:hover {
+  color: #e20016;
+  background-image: linear-gradient(180deg, #e20016 0, #e20016);
+}
+/*# sourceMappingURL=Ordinary-link.css.map */
