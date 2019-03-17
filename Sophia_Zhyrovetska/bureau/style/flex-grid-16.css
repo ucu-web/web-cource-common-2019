@@ -4,6 +4,7 @@
 }
 .Grid__row {
   display: flex;
+  flex-wrap: wrap;
 }
 .Grid__cell_16 {
   width: 1326px;

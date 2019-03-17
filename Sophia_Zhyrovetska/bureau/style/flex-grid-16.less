@@ -11,9 +11,11 @@
 
   &__row {
     display: flex;
+    flex-wrap: wrap;
   }
 
   &__cell {
+
     .generate-columns(@grid-columns-number; @cell-width; @cell-margin; @i:1)
       when
       (@i <= @grid-columns-number) {

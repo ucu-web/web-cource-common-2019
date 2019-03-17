@@ -13,6 +13,7 @@
 .Header__user-icon {
   width: 32px;
   height: 30px;
+  margin-right: 9px;
 }
 .Header__announce {
   position: absolute;
