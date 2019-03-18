@@ -1,0 +1,195 @@
+main {
+    padding-top: 65px;
+    height: 100%;
+    width: 614px;
+    margin-left: 154px;
+    max-width: 935px;
+}
+
+.post {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    padding-top: 10px;
+    background-color: white;
+    margin-top: 65px;
+}
+
+.post-header {
+    margin-bottom: 10px;
+}
+
+.nickname-image {
+    width: 30px;
+    height: 30px;
+    margin-top: 4px;
+    margin-left: 15px;
+    border-radius: 50%;
+    float: left;
+}
+
+.nickname {
+    color: #262626;
+    font-weight: 600;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.location {
+    color: #262626;
+    font-size: 12px;
+    padding-left: 10px;
+}
+
+.post-photo {
+    max-width: 613px;
+    max-height: 763px;
+}
+
+.under-image {
+    flex-direction: row;
+    margin-left: 5px;
+}
+
+.btn-like, .btn-comment, .btn-share, .btn-save {
+    font-size: 20px;
+    border: 0px solid #8a8a8a;
+    background-color: transparent;
+    text-decoration: none;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.btn-save {
+    float: right;
+    margin-right: 10px;
+}
+
+.author-comment {
+    color: #003c76;
+}
+
+.liked-main-photos1, .liked-main-photos2 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-bottom: -4px;
+}
+
+.liked-main-photos1 {
+    order: 1;
+    border: 1px solid white;
+}
+
+.liked-main-photos2 {
+    order: 0;
+    margin-right: -9px;
+}
+
+.likes {
+    margin-left: 15px;
+}
+
+.liked-people {
+    font-weight: 600;
+}
+
+.comments {
+    padding-bottom: 4px;
+    margin-left: 8px;
+}
+
+ul {
+    margin-bottom: -2.5px;
+}
+
+.comments-nickname {
+    color: #262626;
+    font-weight: 600;
+}
+
+.each-comment {
+    list-style: none;
+    padding-bottom: 6px;
+    width: 100%;
+    margin-top: -5px;
+    padding-top: 5px;
+    margin-right: -3px;
+    padding-right: 2px;
+    margin-left: -33px;
+}
+
+.more-comments {
+    color: #999;
+    font-weight: 500;
+    border: 0;
+    background: 0 0;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: -8px;
+}
+
+.comment-author {
+    color: #262626;
+    font-weight: 600;
+}
+
+.heart-like {
+    width: 15px;
+    height: 15px;
+    float: right;
+    margin-right: -20px;
+}
+
+.showing-time {
+    color: #999;
+    font-size: 10px;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+}
+
+.showing-time {
+    margin-left: 7px;
+}
+
+hr {
+    border: 1px solid #efefef;;
+    margin-left: 15px;
+    margin-right: 17px;
+}
+
+.add-comment {
+    margin-left: 10px;
+}
+
+.place-for-comment {
+    margin-left: 7px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+textarea {
+    background: 0 0;
+    resize: none;
+    border: 0px solid white;
+    height: 19px;
+    width: 87%;
+    max-height: 80px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+
+textarea::placeholder {
+    font-size: 14px;
+    color: #999;
+}
+
+.more-div {
+    float: right;
+    margin-top: -20px;
+    margin-right: 17px;
+    align-items: center;
+}
+
+.more-img {
+    height: 18px;
+    width: 18px;
+}

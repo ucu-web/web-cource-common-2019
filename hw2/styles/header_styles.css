@@ -1,0 +1,61 @@
+.main-header {
+    background-color: white;
+    height: 77px;
+    border-bottom: 1px solid rgba(0,0,0,.0975);
+    position: fixed;
+    width: 100%;
+}
+
+nav {
+    padding-top: 20px;
+    padding-left: 145px;
+}
+
+#logo {
+    height: 28px;
+    width: 28px;
+    margin-top: 8px;
+    border-right: 1px solid black;
+    padding-right: 12px;
+    float: left;
+}
+
+#insta-name {
+    font-family: 'Grand Hotel', cursive;
+    font-size: 29px;
+    padding-left: 17px;
+}
+
+#header-input {
+    border-radius: 3px;
+    border: 1px solid #dbdbdb;
+    width: 212px;
+    height: 25px;
+    margin-left: 225px;
+    background-color: #fbfbfb;
+}
+
+#header-input::placeholder {
+    text-align: center;
+    font-size: 16px;
+    font-family: "Segoe UI", cursive;
+    color: #999;
+}
+
+#header-input:focus::placeholder {
+    text-align: left;
+}
+
+.compass {
+    margin-left: 242px;
+}
+
+.compass, .heart, .user {
+    height: 24px;
+    width: 24px;
+    font-weight: normal;
+}
+
+.heart, .user {
+    margin-left: 25px;
+}
