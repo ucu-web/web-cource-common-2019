@@ -1,0 +1,21 @@
+$column_width: 70px
+$num_columns: 16
+$margin: 9px
+$grid_width: ($column_width * $num_columns) + 2 * $margin * $num_columns
+
+.Layout
+  background-color: #2ecc71
+  width: $grid_width
+  margin: 0 auto
+
+@for $i from 1 to $num_columns
+  .Column_#{$i}
+    background-color: cadetblue
+    width: $column_width * $i + 2 * $margin * ($i - 1)
+    overflow: hidden
+    margin: $margin
+    display: inline-block
+    @for $j from 1 to $num_columns - 1
+      &__push_#{$j}
+        margin-left: $margin * (1+ 2 * $j) + $j * $column_width
+
