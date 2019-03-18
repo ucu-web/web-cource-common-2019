@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.Header {
+  padding-top: 7px;
+  font-size: 16px;
+}
+.Header__logo {
+  text-decoration: none;
+}
+.Header__logo-svg {
+  width: 140px;
+  height: 30px;
+}
+.Header__navigation {
+  display: inline-block;
+}
+.Header__navigation-link {
+  margin-right: 16px;
+  text-decoration: none;
+  color: #000;
+}
+.Header__navigation-link:hover {
+  color: #e20016;
+}
+.Header__navigation, .Header__logo {
+  vertical-align: top;
+}
+.Header__user-icon {
+  float: right;
+}
+.Header__user-icon:hover {
+  fill: #e20016;
+}
+.Header__user-icon-svg {
+  width: 32px;
+  height: 30px;
+}
+
+/*# sourceMappingURL=Header.css.map */

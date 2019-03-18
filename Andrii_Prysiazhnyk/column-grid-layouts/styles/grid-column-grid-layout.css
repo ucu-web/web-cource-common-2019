@@ -1,11 +1,11 @@
 .Grid {
-  width: 960px;
+  width: 1350px;
   margin: 0 auto;
 }
 .Grid__row {
   display: grid;
-  grid-template-columns: repeat(12, 50px);
-  grid-column-gap: 32.7272727273px;
+  grid-template-columns: repeat(16, 70px);
+  grid-column-gap: 15.3333333333px;
 }
 .Grid__cell_1_2 {
   grid-column-start: 1;
@@ -55,6 +55,22 @@
   grid-column-start: 1;
   grid-column-end: 13;
 }
+.Grid__cell_1_14 {
+  grid-column-start: 1;
+  grid-column-end: 14;
+}
+.Grid__cell_1_15 {
+  grid-column-start: 1;
+  grid-column-end: 15;
+}
+.Grid__cell_1_16 {
+  grid-column-start: 1;
+  grid-column-end: 16;
+}
+.Grid__cell_1_17 {
+  grid-column-start: 1;
+  grid-column-end: 17;
+}
 .Grid__cell_2_3 {
   grid-column-start: 2;
   grid-column-end: 3;
@@ -99,6 +115,22 @@
   grid-column-start: 2;
   grid-column-end: 13;
 }
+.Grid__cell_2_14 {
+  grid-column-start: 2;
+  grid-column-end: 14;
+}
+.Grid__cell_2_15 {
+  grid-column-start: 2;
+  grid-column-end: 15;
+}
+.Grid__cell_2_16 {
+  grid-column-start: 2;
+  grid-column-end: 16;
+}
+.Grid__cell_2_17 {
+  grid-column-start: 2;
+  grid-column-end: 17;
+}
 .Grid__cell_3_4 {
   grid-column-start: 3;
   grid-column-end: 4;
@@ -139,6 +171,22 @@
   grid-column-start: 3;
   grid-column-end: 13;
 }
+.Grid__cell_3_14 {
+  grid-column-start: 3;
+  grid-column-end: 14;
+}
+.Grid__cell_3_15 {
+  grid-column-start: 3;
+  grid-column-end: 15;
+}
+.Grid__cell_3_16 {
+  grid-column-start: 3;
+  grid-column-end: 16;
+}
+.Grid__cell_3_17 {
+  grid-column-start: 3;
+  grid-column-end: 17;
+}
 .Grid__cell_4_5 {
   grid-column-start: 4;
   grid-column-end: 5;
@@ -175,6 +223,22 @@
   grid-column-start: 4;
   grid-column-end: 13;
 }
+.Grid__cell_4_14 {
+  grid-column-start: 4;
+  grid-column-end: 14;
+}
+.Grid__cell_4_15 {
+  grid-column-start: 4;
+  grid-column-end: 15;
+}
+.Grid__cell_4_16 {
+  grid-column-start: 4;
+  grid-column-end: 16;
+}
+.Grid__cell_4_17 {
+  grid-column-start: 4;
+  grid-column-end: 17;
+}
 .Grid__cell_5_6 {
   grid-column-start: 5;
   grid-column-end: 6;
@@ -207,6 +271,22 @@
   grid-column-start: 5;
   grid-column-end: 13;
 }
+.Grid__cell_5_14 {
+  grid-column-start: 5;
+  grid-column-end: 14;
+}
+.Grid__cell_5_15 {
+  grid-column-start: 5;
+  grid-column-end: 15;
+}
+.Grid__cell_5_16 {
+  grid-column-start: 5;
+  grid-column-end: 16;
+}
+.Grid__cell_5_17 {
+  grid-column-start: 5;
+  grid-column-end: 17;
+}
 .Grid__cell_6_7 {
   grid-column-start: 6;
   grid-column-end: 7;
@@ -235,6 +315,22 @@
   grid-column-start: 6;
   grid-column-end: 13;
 }
+.Grid__cell_6_14 {
+  grid-column-start: 6;
+  grid-column-end: 14;
+}
+.Grid__cell_6_15 {
+  grid-column-start: 6;
+  grid-column-end: 15;
+}
+.Grid__cell_6_16 {
+  grid-column-start: 6;
+  grid-column-end: 16;
+}
+.Grid__cell_6_17 {
+  grid-column-start: 6;
+  grid-column-end: 17;
+}
 .Grid__cell_7_8 {
   grid-column-start: 7;
   grid-column-end: 8;
@@ -259,6 +355,22 @@
   grid-column-start: 7;
   grid-column-end: 13;
 }
+.Grid__cell_7_14 {
+  grid-column-start: 7;
+  grid-column-end: 14;
+}
+.Grid__cell_7_15 {
+  grid-column-start: 7;
+  grid-column-end: 15;
+}
+.Grid__cell_7_16 {
+  grid-column-start: 7;
+  grid-column-end: 16;
+}
+.Grid__cell_7_17 {
+  grid-column-start: 7;
+  grid-column-end: 17;
+}
 .Grid__cell_8_9 {
   grid-column-start: 8;
   grid-column-end: 9;
@@ -279,6 +391,22 @@
   grid-column-start: 8;
   grid-column-end: 13;
 }
+.Grid__cell_8_14 {
+  grid-column-start: 8;
+  grid-column-end: 14;
+}
+.Grid__cell_8_15 {
+  grid-column-start: 8;
+  grid-column-end: 15;
+}
+.Grid__cell_8_16 {
+  grid-column-start: 8;
+  grid-column-end: 16;
+}
+.Grid__cell_8_17 {
+  grid-column-start: 8;
+  grid-column-end: 17;
+}
 .Grid__cell_9_10 {
   grid-column-start: 9;
   grid-column-end: 10;
@@ -295,6 +423,22 @@
   grid-column-start: 9;
   grid-column-end: 13;
 }
+.Grid__cell_9_14 {
+  grid-column-start: 9;
+  grid-column-end: 14;
+}
+.Grid__cell_9_15 {
+  grid-column-start: 9;
+  grid-column-end: 15;
+}
+.Grid__cell_9_16 {
+  grid-column-start: 9;
+  grid-column-end: 16;
+}
+.Grid__cell_9_17 {
+  grid-column-start: 9;
+  grid-column-end: 17;
+}
 .Grid__cell_10_11 {
   grid-column-start: 10;
   grid-column-end: 11;
@@ -307,6 +451,22 @@
   grid-column-start: 10;
   grid-column-end: 13;
 }
+.Grid__cell_10_14 {
+  grid-column-start: 10;
+  grid-column-end: 14;
+}
+.Grid__cell_10_15 {
+  grid-column-start: 10;
+  grid-column-end: 15;
+}
+.Grid__cell_10_16 {
+  grid-column-start: 10;
+  grid-column-end: 16;
+}
+.Grid__cell_10_17 {
+  grid-column-start: 10;
+  grid-column-end: 17;
+}
 .Grid__cell_11_12 {
   grid-column-start: 11;
   grid-column-end: 12;
@@ -315,9 +475,81 @@
   grid-column-start: 11;
   grid-column-end: 13;
 }
+.Grid__cell_11_14 {
+  grid-column-start: 11;
+  grid-column-end: 14;
+}
+.Grid__cell_11_15 {
+  grid-column-start: 11;
+  grid-column-end: 15;
+}
+.Grid__cell_11_16 {
+  grid-column-start: 11;
+  grid-column-end: 16;
+}
+.Grid__cell_11_17 {
+  grid-column-start: 11;
+  grid-column-end: 17;
+}
 .Grid__cell_12_13 {
   grid-column-start: 12;
   grid-column-end: 13;
+}
+.Grid__cell_12_14 {
+  grid-column-start: 12;
+  grid-column-end: 14;
+}
+.Grid__cell_12_15 {
+  grid-column-start: 12;
+  grid-column-end: 15;
+}
+.Grid__cell_12_16 {
+  grid-column-start: 12;
+  grid-column-end: 16;
+}
+.Grid__cell_12_17 {
+  grid-column-start: 12;
+  grid-column-end: 17;
+}
+.Grid__cell_13_14 {
+  grid-column-start: 13;
+  grid-column-end: 14;
+}
+.Grid__cell_13_15 {
+  grid-column-start: 13;
+  grid-column-end: 15;
+}
+.Grid__cell_13_16 {
+  grid-column-start: 13;
+  grid-column-end: 16;
+}
+.Grid__cell_13_17 {
+  grid-column-start: 13;
+  grid-column-end: 17;
+}
+.Grid__cell_14_15 {
+  grid-column-start: 14;
+  grid-column-end: 15;
+}
+.Grid__cell_14_16 {
+  grid-column-start: 14;
+  grid-column-end: 16;
+}
+.Grid__cell_14_17 {
+  grid-column-start: 14;
+  grid-column-end: 17;
+}
+.Grid__cell_15_16 {
+  grid-column-start: 15;
+  grid-column-end: 16;
+}
+.Grid__cell_15_17 {
+  grid-column-start: 15;
+  grid-column-end: 17;
+}
+.Grid__cell_16_17 {
+  grid-column-start: 16;
+  grid-column-end: 17;
 }
 
 /*# sourceMappingURL=grid-column-grid-layout.css.map */

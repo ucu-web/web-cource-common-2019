@@ -1,0 +1,46 @@
+@import "common";
+
+.Header {
+  padding-top: 7px;
+  font-size: 16px;
+
+  &__logo {
+    text-decoration: none;
+  }
+
+  &__logo-svg {
+    width: 140px;
+    height: 30px;
+  }
+
+  &__navigation {
+    display: inline-block;
+  }
+
+  &__navigation-link {
+    margin-right: 16px;
+    text-decoration: none;
+    color: $text-color;
+  }
+
+  &__navigation-link:hover {
+    color: $hover-color;
+  }
+
+  &__navigation, &__logo {
+    vertical-align: top;
+  }
+
+  &__user-icon {
+    float: right;
+  }
+
+  &__user-icon:hover {
+    fill: $hover-color;
+  }
+
+  &__user-icon-svg {
+    width: 32px;
+    height: 30px;
+  }
+}
