@@ -1,0 +1,33 @@
+@user-photo-size: 150px;
+
+.feedback {
+  max-width: 1150px;
+  background: white;
+  overflow: hidden;
+  margin: 50px auto; // TODO: delete this row
+
+  &__user-photo {
+    float: left;
+    height: @user-photo-size;
+    width: @user-photo-size;
+    margin: 50px;
+    border-radius: 100%;
+  }
+
+  &__quote{
+    margin: 3rem 2rem 1rem 0;
+    line-height: 2rem;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: #4a4a4a;
+  }
+
+  &__caption{
+    margin-right: 2rem;
+    text-align: right;
+    font-style: italic;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: #4a4a4a;
+  }
+}

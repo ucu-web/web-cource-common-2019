@@ -1,0 +1,29 @@
+.feedback {
+  max-width: 1150px;
+  background: white;
+  overflow: hidden;
+  margin: 50px auto;
+}
+.feedback__user-photo {
+  float: left;
+  height: 150px;
+  width: 150px;
+  margin: 50px;
+  border-radius: 100%;
+}
+.feedback__quote {
+  margin: 3rem 2rem 1rem 0;
+  line-height: 2rem;
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #4a4a4a;
+}
+.feedback__caption {
+  margin-right: 2rem;
+  text-align: right;
+  font-style: italic;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #4a4a4a;
+}
+/*# sourceMappingURL=feedback.css.map */
