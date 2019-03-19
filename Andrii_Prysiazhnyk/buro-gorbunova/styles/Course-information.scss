@@ -1,0 +1,46 @@
+@import "common";
+
+.Course {
+
+  &__title {
+    font-size: 40px;
+    margin: 10px 0;
+  }
+
+  &__sign-up, &__information {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__sign-up {
+    line-height: 36px;
+    color: #fff;
+    padding: 0 18px;
+    height: 36px;
+    border: none;
+    border-radius: 3px;
+    text-align: center;
+
+    &--orange {
+      background: orangered;
+    }
+
+    &--blue {
+      background: #0366d6;
+    }
+  }
+
+  &__date {
+    margin: 0;
+  }
+
+  &__link {
+    font-size: 16px;
+    text-decoration: none;
+    color: $link-color;
+  }
+
+  &__link:hover {
+    color: $key-color;
+  }
+}

@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.Course__title {
+  font-size: 40px;
+  margin: 10px 0;
+}
+.Course__sign-up, .Course__information {
+  display: inline-block;
+  vertical-align: middle;
+}
+.Course__sign-up {
+  line-height: 36px;
+  color: #fff;
+  padding: 0 18px;
+  height: 36px;
+  border: none;
+  border-radius: 3px;
+  text-align: center;
+}
+.Course__sign-up--orange {
+  background: orangered;
+}
+.Course__sign-up--blue {
+  background: #0366d6;
+}
+.Course__date {
+  margin: 0;
+}
+.Course__link {
+  font-size: 16px;
+  text-decoration: none;
+  color: #065580;
+}
+.Course__link:hover {
+  color: #e20016;
+}
+
+/*# sourceMappingURL=Course-information.css.map */

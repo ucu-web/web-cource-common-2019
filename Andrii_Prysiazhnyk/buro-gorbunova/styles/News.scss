@@ -1,0 +1,31 @@
+@import "common";
+
+.News {
+  padding: 30px 0;
+
+  &--font-big {
+    font-size: 40px;
+  }
+
+  &__message, &__title {
+    margin: 5px 0;
+  }
+
+  &__footer {
+    font-size: 15px;
+  }
+
+  &__link {
+    color: $link-color;
+    display: block;
+    text-decoration: none;
+  }
+
+  &__link:hover {
+    color: $key-color;
+  }
+
+  &__image {
+    height: 252px;
+  }
+}

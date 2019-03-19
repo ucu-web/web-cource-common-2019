@@ -24,7 +24,7 @@
   }
 
   &__navigation-link:hover {
-    color: $hover-color;
+    color: $key-color;
   }
 
   &__navigation, &__logo {
@@ -36,7 +36,7 @@
   }
 
   &__user-icon:hover {
-    fill: $hover-color;
+    fill: $key-color;
   }
 
   &__user-icon-svg {

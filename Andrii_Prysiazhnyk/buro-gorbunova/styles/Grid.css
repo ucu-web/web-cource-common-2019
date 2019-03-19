@@ -15,6 +15,9 @@
 .Grid__row--bottom-medium-distance {
   margin-bottom: 72px;
 }
+.Grid__row--top-underscore {
+  border-top: 1.5px solid #DCDCDC;
+}
 .Grid__cell {
   margin: 0 7.6666666667px;
 }
@@ -116,6 +119,9 @@
 }
 .Grid__cell--omega {
   margin-right: 0;
+}
+.Grid__cell--right-underscore {
+  border-right: 1px solid #DCDCDC;
 }
 
 /*# sourceMappingURL=Grid.css.map */

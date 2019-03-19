@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.Advertisement__title {
+  font-size: 70px;
+  color: #e20016;
+  margin-bottom: 0;
+  margin-top: 18px;
+}
+.Advertisement__title-svg {
+  fill: #e20016;
+  width: 54px;
+}
+.Advertisement__message {
+  margin-top: 0;
+}
+.Advertisement__message-main-part {
+  font-weight: 700;
+}
+.Advertisement__link {
+  color: #065580;
+  text-decoration: none;
+}
+.Advertisement__link:hover {
+  color: #e20016;
+}
+
+/*# sourceMappingURL=Advertisement.css.map */

@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.News {
+  padding: 30px 0;
+}
+.News--font-big {
+  font-size: 40px;
+}
+.News__message, .News__title {
+  margin: 5px 0;
+}
+.News__footer {
+  font-size: 15px;
+}
+.News__link {
+  color: #065580;
+  display: block;
+  text-decoration: none;
+}
+.News__link:hover {
+  color: #e20016;
+}
+.News__image {
+  height: 252px;
+}
+
+/*# sourceMappingURL=News.css.map */

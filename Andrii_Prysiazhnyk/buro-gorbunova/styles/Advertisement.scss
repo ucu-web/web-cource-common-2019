@@ -1,0 +1,33 @@
+@import "common";
+
+.Advertisement{
+
+  &__title {
+    font-size: 70px;
+    color: $key-color;
+    margin-bottom: 0;
+    margin-top: 18px;
+  }
+
+  &__title-svg {
+    fill: $key-color;
+    width: 54px;
+  }
+
+  &__message {
+    margin-top: 0;
+  }
+
+  &__message-main-part {
+    font-weight: 700;
+  }
+
+  &__link {
+    color: $link-color;
+    text-decoration: none;
+  }
+
+  &__link:hover {
+    color: $key-color;
+  }
+}

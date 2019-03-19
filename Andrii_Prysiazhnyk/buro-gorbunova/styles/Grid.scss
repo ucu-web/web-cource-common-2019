@@ -22,6 +22,10 @@ $cell-margin: (($grid-width - ($cell-width * $grid-columns-number)) / ($grid-col
     &--bottom-medium-distance {
       margin-bottom: 72px;
     }
+
+    &--top-underscore {
+      border-top: 1.5px solid #DCDCDC;
+    }
   }
 
   &__cell {
@@ -37,5 +41,7 @@ $cell-margin: (($grid-width - ($cell-width * $grid-columns-number)) / ($grid-col
 
     &--alpha {margin-left: 0;}
     &--omega {margin-right: 0;}
+
+    &--right-underscore {border-right: 1px solid #DCDCDC;}
   }
 }
