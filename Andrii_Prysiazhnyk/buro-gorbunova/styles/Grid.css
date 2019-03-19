@@ -1,0 +1,121 @@
+.Grid {
+  width: 1350px;
+  margin: 0 auto;
+}
+.Grid__row {
+  display: flex;
+  align-items: flex-start;
+}
+.Grid__row--top-medium-distance {
+  margin-top: 72px;
+}
+.Grid__row--top-small-distance {
+  margin-top: 18px;
+}
+.Grid__row--bottom-medium-distance {
+  margin-bottom: 72px;
+}
+.Grid__cell {
+  margin: 0 7.6666666667px;
+}
+.Grid__cell--1 {
+  width: 70px;
+}
+.Grid__cell--2 {
+  width: 155.3333333333px;
+}
+.Grid__cell--3 {
+  width: 240.6666666667px;
+}
+.Grid__cell--4 {
+  width: 326px;
+}
+.Grid__cell--5 {
+  width: 411.3333333333px;
+}
+.Grid__cell--6 {
+  width: 496.6666666667px;
+}
+.Grid__cell--7 {
+  width: 582px;
+}
+.Grid__cell--8 {
+  width: 667.3333333333px;
+}
+.Grid__cell--9 {
+  width: 752.6666666667px;
+}
+.Grid__cell--10 {
+  width: 838px;
+}
+.Grid__cell--11 {
+  width: 923.3333333333px;
+}
+.Grid__cell--12 {
+  width: 1008.6666666667px;
+}
+.Grid__cell--13 {
+  width: 1094px;
+}
+.Grid__cell--14 {
+  width: 1179.3333333333px;
+}
+.Grid__cell--15 {
+  width: 1264.6666666667px;
+}
+.Grid__cell--16 {
+  width: 1350px;
+}
+.Grid__cell--push-1 {
+  margin-left: 85.3333333333px;
+}
+.Grid__cell--push-2 {
+  margin-left: 170.6666666667px;
+}
+.Grid__cell--push-3 {
+  margin-left: 256px;
+}
+.Grid__cell--push-4 {
+  margin-left: 341.3333333333px;
+}
+.Grid__cell--push-5 {
+  margin-left: 426.6666666667px;
+}
+.Grid__cell--push-6 {
+  margin-left: 512px;
+}
+.Grid__cell--push-7 {
+  margin-left: 597.3333333333px;
+}
+.Grid__cell--push-8 {
+  margin-left: 682.6666666667px;
+}
+.Grid__cell--push-9 {
+  margin-left: 768px;
+}
+.Grid__cell--push-10 {
+  margin-left: 853.3333333333px;
+}
+.Grid__cell--push-11 {
+  margin-left: 938.6666666667px;
+}
+.Grid__cell--push-12 {
+  margin-left: 1024px;
+}
+.Grid__cell--push-13 {
+  margin-left: 1109.3333333333px;
+}
+.Grid__cell--push-14 {
+  margin-left: 1194.6666666667px;
+}
+.Grid__cell--push-15 {
+  margin-left: 1280px;
+}
+.Grid__cell--alpha {
+  margin-left: 0;
+}
+.Grid__cell--omega {
+  margin-right: 0;
+}
+
+/*# sourceMappingURL=Grid.css.map */

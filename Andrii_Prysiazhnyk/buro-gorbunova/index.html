@@ -6,8 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles/common.css">
-    <link rel="stylesheet" href="../column-grid-layouts/styles/flex-column-grid-layout.css">
+    <link rel="stylesheet" href="styles/Grid.css">
     <link rel="stylesheet" href="styles/Header.css">
+    <link rel="stylesheet" href="styles/Photo.css">
+    <link rel="stylesheet" href="styles/Figure.css">
     <title>Document</title>
 </head>
 <style>
@@ -38,12 +40,110 @@
                 </svg>
             </a>
         </header>
-        <div class="Grid__row">
+        <div class="Grid__row Grid__row--top-medium-distance Grid__row--bottom-medium-distance">
             <div class="Grid__cell Grid__cell--8 Grid__cell--alpha">
-                <img src="https://imgproxy.bureau.ru/1emF-FHVmt0EryR6LXiuMJa3v-1jX1xwuNZBoxEfZ-8/fit/645/648/no/0/aHR0cHM6Ly9idXJlYXUucnUvcHJvamVjdHMvaGFuZHMvZmlsZXMvaGFuZHMtNDMwLnBuZz92PTE1NTExMDg3NzkwNDk.png">
+                <figure class="Figure Figure--blue-background">
+                    <a href="#">
+                        <img alt="Сервис «Руки»" class="Figure__image" src="https://imgproxy.bureau.ru/1emF-FHVmt0EryR6LXiuMJa3v-1jX1xwuNZBoxEfZ-8/fit/645/648/no/0/aHR0cHM6Ly9idXJlYXUucnUvcHJvamVjdHMvaGFuZHMvZmlsZXMvaGFuZHMtNDMwLnBuZz92PTE1NTExMDg3NzkwNDk.png">
+                    </a>
+                </figure>
             </div>
             <div class="Grid__cell Grid__cell--8 Grid__cell--omega">
-                <img src="https://imgproxy.bureau.ru/lrEgLQ2FLARWRCs-1ljg3qWhRbBmx-vzL6RHp1cBCcA/fit/860/866/no/0/aHR0cHM6Ly9idXJlYXUucnUvcHJvamVjdHMvZmZmLXN0aWNrZXJzL2ZpbGVzL3N0XzJfNDMweDQzMi5wbmc_dj0xNTUxMTI2NDU0MDcz.png">
+                <figure class="Figure Figure--dark-green-background">
+                    <a href="#">
+                        <img alt="Управление проектами" class="Figure__image" src="https://imgproxy.bureau.ru/lrEgLQ2FLARWRCs-1ljg3qWhRbBmx-vzL6RHp1cBCcA/fit/860/866/no/0/aHR0cHM6Ly9idXJlYXUucnUvcHJvamVjdHMvZmZmLXN0aWNrZXJzL2ZpbGVzL3N0XzJfNDMweDQzMi5wbmc_dj0xNTUxMTI2NDU0MDcz.png">
+                    </a>
+                </figure>
+            </div>
+        </div>
+        <div class="Grid__row">
+            <div class="Grid__cell Grid__cell--7 Grid__cell--alpha">
+                Lorem ipsum dolor sit amet, consectetur.
+            </div>
+            <div class="Grid__cell Grid__cell--4 Grid__cell--push-4">
+                Lorem ipsum dolor sit.
+            </div>
+        </div>
+        <div class="Grid__row Grid__row--top-medium-distance Grid__row--bottom-medium-distance">
+            <div class="Grid__cell Grid__cell--8 Grid__cell--alpha">
+                <figure class="Figure Figure--blue-background">
+                    <a href="#">
+                        <img alt="Название и логотип" class="Figure__image" src="https://imgproxy.bureau.ru/nBcWiEU8GH1AnchktKcpxVMA_79v-302wPw4fwfaLNk/fit/860/864/no/0/aHR0cHM6Ly9idXJlYXUucnUvcHJvamVjdHMvaGFuZHMtaWRlbnRpdHkvZmlsZXMvcnVraS1sb2dvXzQzMHg0MzIuanBnP3Y9MTU0ODY2Nzg0NDcyNw.jpg">
+                    </a>
+                </figure>
+            </div>
+            <div class="Grid__cell Grid__cell--8 Grid__cell--omega">
+                <figure class="Figure Figure--blue-background">
+                    <a href="#">
+                        <img alt="Приложение сервиса" class="Figure__image Figure__image--move-top" src="https://imgproxy.bureau.ru/g4G9uY0TgFMc-7Szq20D4UzJOQ2yXjMWQwTC5AKl2do/fit/860/925/no/0/aHR0cHM6Ly9idXJlYXUucnUvcHJvamVjdHMvaGFuZHMtaXBob25lL2ZpbGVzL3J1a2ktYXBwLTQzMHg0MzItMS5wbmc_dj0xNTQ3ODM3Mzk0ODk3.png">
+                    </a>
+                </figure>
+            </div>
+        </div>
+        <div class="Grid__row Grid__row--top-medium-distance Grid__row--bottom-medium-distance">
+            <div class="Grid__cell Grid__cell--8 Grid__cell--alpha">
+                <figure class="Figure">
+                    <a href="#">
+                        <img alt="Высшая школа главбуха" class="Figure__image" src="https://bureau.ru/projects/glavbukh-school-2/files/glavbukh-school2-430.png?v=1549609722388">
+                    </a>
+                </figure>
+            </div>
+            <div class="Grid__cell Grid__cell--8 Grid__cell--omega">
+                <figure class="Figure Figure--grey--background">
+                    <a href="#">
+                        <img alt="Дипломи высшей школи главбуха" class="Figure__image Figure__image--move-top" src="https://imgproxy.bureau.ru/dZ8sAF69B0ESOa5NtNNYdHSRg7vYR6AhWZOlPNOYzMo/fit/645/750/no/0/aHR0cHM6Ly9idXJlYXUucnUvcHJvamVjdHMvZ2xhdmJ1a2gtc2Nob29sLWRpcGxvbWFzL2ZpbGVzL2dsYXZidWtoLWRpcGxvbWEtNDMwLXNtLnBuZz92PTE1NDk1NTE5NjU2NTQ.png">
+                    </a>
+                </figure>
+            </div>
+        </div>
+        <div class="Grid__row">
+            <div class="Grid__cell Grid__cell--16 Grid__cell--alpha Grid__cell--omega">
+                <figure class="Figure Figure--sea-background">
+                    <a href="#">
+                        <img alt="Сайт Олимпиада" class="Figure__image Figure__image--move-top-right" src="https://imgproxy.bureau.ru/kw2Ej5vJuodA9HJBBn4JWXCjPDTDgAEnqdJLi-EZWzg/fit/1337/701/no/0/aHR0cHM6Ly9idXJlYXUucnUvcHJvamVjdHMvb2xpbXBpYWRhL2ZpbGVzL29saW1waWFkYS1zaXRlXzFfODgweDQzMi5wbmc_dj0xNTQzNDA2NzA4MjIx.png">
+                    </a>
+                </figure>
+            </div>
+        </div>
+        <div class="Grid__row Grid__row--bottom-medium-distance Grid__row--top-small-distance">
+            <div class="Grid__cell Grid__cell--8 Grid__cell--alpha">
+                <figure class="Figure">
+                    <a href="#">
+                        <img alt="Логотип Олимпиади" class="Figure__image" src="https://imgproxy.bureau.ru/w4SiDB4GgxLeNZd4hBlWiwwPwrAJprQqk9TE0QLc59w/fit/860/864/no/0/aHR0cHM6Ly9idXJlYXUucnUvcHJvamVjdHMvb2xpbXBpYWRhLWxvZ28vZmlsZXMvb2xpbXBpYWRhLWxvZ29fNDMweDQzMi5wbmc_dj0xNTQzNDA1MTA0NjEw.png">
+                    </a>
+                </figure>
+            </div>
+            <div class="Grid__cell Grid__cell--8 Grid__cell--omega">
+                <figure class="Figure">
+                    <a href="#">
+                        <img alt="Шрифт Олимпиади" class="Figure__image" src="https://imgproxy.bureau.ru/y4PC6slHO_Oprk9hB7LokDXisTaNax3zdr8dXqI8j-w/fit/860/864/no/0/aHR0cHM6Ly9idXJlYXUucnUvcHJvamVjdHMvb2xpbXBpYWRhLWZvbnQvZmlsZXMvb2xpbXBpYWRhLWZvbnRfNDMweDQzMi5wbmc_dj0xNTQzNDA3NjAyNzAy.png">
+                    </a>
+                </figure>
+            </div>
+        </div>
+        <div class="Grid__row">
+            <div class="Grid__cell Grid__cell--16 Grid__cell--alpha Grid__cell--omega">
+                <figure class="Figure Figure--bureau-background">
+                    <a href="#">
+                        <img alt="Сайт Олимпиада" class="Figure__image Figure__image--move-top-right" src="https://imgproxy.bureau.ru/SuAYYOeuZ3aK8WaNO1k4TNoCD-RhMqNxFRMqlphO40I/fit/1516/757/no/0/aHR0cHM6Ly9idXJlYXUucnUvcHJvamVjdHMvYm9va3MtbWFuaWZlc3RvL2ZpbGVzL21hbmlmZXN0by04ODB4NDMyLnBuZz92PTE1MzUzOTA3NDM5MzA.png">
+                    </a>
+                </figure>
+            </div>
+        </div>
+        <div class="Grid__row Grid__row--bottom-medium-distance Grid__row--top-small-distance">
+            <div class="Grid__cell Grid__cell--8 Grid__cell--alpha">
+                <figure class="Figure">
+                    <a href="#">
+                        <img alt="Логотип Олимпиади" class="Figure__image" src="https://imgproxy.bureau.ru/-rnsGR8zyZX8DyVnhEzP3WOyT4aFVT7ne_JNI5VvSxU/fit/860/864/no/0/aHR0cHM6Ly9idXJlYXUucnUvZmlsZXMvc292aWV0LXVwZGF0ZWQtc3F1YXJlLnBuZz92PTE1NDc2NDA5NzI3NDM.png">
+                    </a>
+                </figure>
+            </div>
+            <div class="Grid__cell Grid__cell--8 Grid__cell--omega">
+                <figure class="Figure">
+                    <a href="#">
+                        <img alt="Шрифт Олимпиади" class="Figure__image" src="https://bureau.ru/projects/book-howtowritethat/files/430x432_01.png?v=1543074266624">
+                    </a>
+                </figure>
             </div>
         </div>
     </div>

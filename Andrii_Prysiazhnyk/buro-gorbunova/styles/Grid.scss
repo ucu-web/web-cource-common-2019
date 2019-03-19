@@ -1,0 +1,41 @@
+$grid-columns-number: 16;
+$grid-width: 1350px;
+$cell-width: 70px;
+$cell-margin: (($grid-width - ($cell-width * $grid-columns-number)) / ($grid-columns-number - 1));
+
+.Grid {
+  width: $grid-width;
+  margin: 0 auto;
+
+  &__row {
+    display: flex;
+    align-items: flex-start;
+
+    &--top-medium-distance {
+      margin-top: 72px;
+    }
+
+    &--top-small-distance {
+      margin-top: 18px;
+    }
+
+    &--bottom-medium-distance {
+      margin-bottom: 72px;
+    }
+  }
+
+  &__cell {
+    margin: 0 $cell-margin / 2;
+
+    @for $i from 1 through $grid-columns-number {
+      &--#{$i} { width: $cell-width * $i + ($cell-margin * ($i - 1));}
+    }
+
+    @for $i from 1 through $grid-columns-number - 1  {
+      &--push-#{$i} { margin-left: $cell-width * $i + ($cell-margin * ($i - 1)) +  $cell-margin ; }
+    }
+
+    &--alpha {margin-left: 0;}
+    &--omega {margin-right: 0;}
+  }
+}

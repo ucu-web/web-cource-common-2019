@@ -1,0 +1,40 @@
+.Figure {
+  margin: 0;
+  width: 100%;
+  height: 667px;
+
+  &__image {
+    width: 100%;
+
+    &--move-top {
+      position: relative;
+      bottom: 50px;
+    }
+
+    &--move-top-right {
+      position: relative;
+      bottom: 20px;
+      left: 25px;
+    }
+  }
+
+  &--blue-background {
+    background: url("https://imgproxy.bureau.ru/5YUCOFz8O8QRRStpcAZn3ndPY4KSlBnW-sWdTHV6jDs/fit/860/864/no/0/aHR0cHM6Ly9idXJlYXUucnUvcHJvamVjdHMvaGFuZHMtaXBob25lL2ZpbGVzL3J1a2ktYXBwLTQzMHg0MzItMC5qcGc_dj0xNTQ3NzI2MTY3NTIx.jpg");
+  }
+
+  &--dark-green-background {
+    background: url("https://imgproxy.bureau.ru/CxsPmlxnH9GZWZooSuGLxhExjaUiBYsH3t1MEr2Nmxs/fit/860/864/no/0/aHR0cHM6Ly9idXJlYXUucnUvcHJvamVjdHMvZmZmLXN0aWNrZXJzL2ZpbGVzL2JnXzNfNDMweDQzMi5wbmc_dj0xNTUxMTI2MjI0MDQ3.png");
+  }
+
+  &--sea-background {
+    background: url("https://imgproxy.bureau.ru/6CcrtAioaieaju9zXxel2ClcCP_vwOapL-luzHscwKg/fit/1320/648/no/0/aHR0cHM6Ly9idXJlYXUucnUvcHJvamVjdHMvb2xpbXBpYWRhL2ZpbGVzL29saW1waWFkYS1zaXRlXzBfODgweDQzMi5wbmc_dj0xNTQzNDA2NzA5NjY1.png");
+  }
+
+  &--bureau-background {
+    background: url("https://imgproxy.bureau.ru/HTxBUch7khaUWb7bMVl_wFa6PXuwDhm4q2BDxtotxt4/fit/1500/736/no/0/aHR0cHM6Ly9idXJlYXUucnUvcHJvamVjdHMvYm9va3MtbWFuaWZlc3RvL2ZpbGVzL21hbmlmZXN0by04ODB4NDMyLWZvbi5qcGc_dj0xNTM1NTU3ODc4Mzcy.jpg");
+  }
+
+  &--grey--background {
+    background-color: gray;
+  }
+}
