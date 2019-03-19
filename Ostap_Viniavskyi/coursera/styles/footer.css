@@ -1,0 +1,41 @@
+.footer {
+  display: flex;
+  justify-content: space-around;
+  height: 20rem;
+  padding: 1rem 15% 0 15%;
+  font-size: 1.0625rem;
+  background: white;
+}
+.footer__logos {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2px 0;
+}
+.footer__motto {
+  margin: 1rem 0;
+}
+.footer__apps-link {
+  float: left;
+  margin-top: 1em;
+  margin-right: 0.5em;
+}
+.footer__navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2px 0;
+}
+.footer__navigation-header {
+  margin: 0 0 0 0.1em;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.footer__navigation-link {
+  padding: 0.4rem 0;
+  color: #757598;
+  text-decoration: none;
+}
+/*# sourceMappingURL=footer.css.map */
