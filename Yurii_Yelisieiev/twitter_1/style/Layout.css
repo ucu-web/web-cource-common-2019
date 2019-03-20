@@ -17,6 +17,7 @@
     grid-row-end: 2;
     background-color: #1c2938;
     justify-self: stretch;
+    width: 100%;
 }
 
 .Layout__feed {
