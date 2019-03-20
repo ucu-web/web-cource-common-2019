@@ -4,43 +4,90 @@
   background: gold; }
   .Grid__row {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between; }
   .Grid__cell_1 {
-    flex-basis: 70px;
+    display: flex;
+    width: 70px;
+    align-self: flex-start;
+    justify-content: space-between;
+    flex-flow: row wrap;
     background: #2980b9; }
   .Grid__cell_2 {
-    flex-basis: 150.9090909091px;
+    display: flex;
+    width: 150.9090909091px;
+    align-self: flex-start;
+    justify-content: space-between;
+    flex-flow: row wrap;
     background: #2980b9; }
   .Grid__cell_3 {
-    flex-basis: 231.8181818182px;
+    display: flex;
+    width: 231.8181818182px;
+    align-self: flex-start;
+    justify-content: space-between;
+    flex-flow: row wrap;
     background: #2980b9; }
   .Grid__cell_4 {
-    flex-basis: 312.7272727273px;
+    display: flex;
+    width: 312.7272727273px;
+    align-self: flex-start;
+    justify-content: space-between;
+    flex-flow: row wrap;
     background: #2980b9; }
   .Grid__cell_5 {
-    flex-basis: 393.6363636364px;
+    display: flex;
+    width: 393.6363636364px;
+    align-self: flex-start;
+    justify-content: space-between;
+    flex-flow: row wrap;
     background: #2980b9; }
   .Grid__cell_6 {
-    flex-basis: 474.5454545455px;
+    display: flex;
+    width: 474.5454545455px;
+    align-self: flex-start;
+    justify-content: space-between;
+    flex-flow: row wrap;
     background: #2980b9; }
   .Grid__cell_7 {
-    flex-basis: 555.4545454545px;
+    display: flex;
+    width: 555.4545454545px;
+    align-self: flex-start;
+    justify-content: space-between;
+    flex-flow: row wrap;
     background: #2980b9; }
   .Grid__cell_8 {
-    flex-basis: 636.3636363636px;
+    display: flex;
+    width: 636.3636363636px;
+    align-self: flex-start;
+    justify-content: space-between;
+    flex-flow: row wrap;
     background: #2980b9; }
   .Grid__cell_9 {
-    flex-basis: 717.2727272727px;
+    display: flex;
+    width: 717.2727272727px;
+    align-self: flex-start;
+    justify-content: space-between;
+    flex-flow: row wrap;
     background: #2980b9; }
   .Grid__cell_10 {
-    flex-basis: 798.1818181818px;
+    display: flex;
+    width: 798.1818181818px;
+    align-self: flex-start;
+    justify-content: space-between;
+    flex-flow: row wrap;
     background: #2980b9; }
   .Grid__cell_11 {
-    flex-basis: 879.0909090909px;
+    display: flex;
+    width: 879.0909090909px;
+    align-self: flex-start;
+    justify-content: space-between;
+    flex-flow: row wrap;
     background: #2980b9; }
   .Grid__cell_12 {
-    flex-basis: 960px;
+    display: flex;
+    width: 960px;
+    align-self: flex-start;
+    justify-content: space-between;
+    flex-flow: row wrap;
     background: #2980b9; }
   .Grid__cell_push-1 {
     margin-left: 80.9090909091px; }
@@ -64,7 +111,5 @@
     margin-left: 809.0909090909px; }
   .Grid__cell_push-11 {
     margin-left: 890px; }
-  .Grid__cell_parent {
-    display: flex; }
 
 /*# sourceMappingURL=flex-grid-12.css.map */
