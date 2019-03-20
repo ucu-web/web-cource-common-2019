@@ -14,6 +14,10 @@
     padding: 0 8px;
 }
 
+.sign-in-ip__sign:hover {
+    color: #00a2c7;
+}
+
 .top-bar__create-group {
     color: #00a2c7 !important;
     font-weight: 600 !important;

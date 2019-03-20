@@ -1,0 +1,30 @@
+.courses__soon {
+  svg {
+    height: 55px;
+    width: 55px;
+    margin-right: 5px;
+    float: left;
+  }
+}
+
+.soon {
+  &__set {
+    height: 72px;
+    display: flex;
+    align-items: center;
+
+    &__title {
+      font-size: 60px;
+      line-height: 0;
+    }
+  }
+
+  &__school {
+    display: flex;
+    align-items: center;
+
+    h3 {
+      line-height: 0;
+    }
+  }
+}

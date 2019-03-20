@@ -1,0 +1,28 @@
+.top-bar__navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.top-bar__navigation a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    height: 44px;
+    padding: 0 14px;
+    color: #66757f;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.top-bar__logo {
+    color: #1da1f2;
+}
+
+.top-bar__twits-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

@@ -1,0 +1,30 @@
+.Layout__top-bar {
+
+  height: 30px;
+  margin-bottom: 70px;
+
+  * {
+    float: left;
+  }
+}
+
+.top-bar {
+
+  &__menu a {
+    text-decoration: none;
+    padding: 0 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+  }
+
+  &__menu a:hover {
+    color: rgb(226, 0, 22);
+  }
+
+  &__profile-icon {
+    height: 32px;
+    width: 32px;
+    float: right;
+  }
+}

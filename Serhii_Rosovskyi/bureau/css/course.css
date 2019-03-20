@@ -1,0 +1,25 @@
+.courses__soon svg {
+  height: 55px;
+  width: 55px;
+  margin-right: 5px;
+  float: left;
+}
+
+.soon__set {
+  height: 72px;
+  display: flex;
+  align-items: center;
+}
+.soon__set__title {
+  font-size: 60px;
+  line-height: 0;
+}
+.soon__school {
+  display: flex;
+  align-items: center;
+}
+.soon__school h3 {
+  line-height: 0;
+}
+
+/*# sourceMappingURL=course.css.map */

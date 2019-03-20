@@ -1,0 +1,39 @@
+.Layout__top-bar {
+    border-bottom: 1px solid black;
+    background: #fff;
+}
+
+.Layout__top-bar .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.Layout__main-content {
+    padding-top: 8px;
+    display: grid;
+    grid-gap: 12px;
+    grid-template-columns: 290px 590px 290px;
+}
+
+.Layout__twits {
+    background: red;
+}
+
+.Layout__profile {
+    display: grid;
+    grid-template-rows: 214px 481px;
+    grid-gap: 12px;
+}
+
+.Layout__additional-info {
+    display: grid;
+    grid-template-rows: 337px 261px 122px;
+    grid-gap: 12px;
+}
+
+.Layout__additional-info > * {
+    background: #fff;
+}

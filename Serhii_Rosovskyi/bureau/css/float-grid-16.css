@@ -1,0 +1,130 @@
+.Grid {
+  width: 1270px;
+  margin: 0 auto;
+  padding-top: 8px;
+}
+.Grid__row:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.Grid__cell {
+  float: left;
+}
+.Grid__cell_1 {
+  width: 65px;
+  margin: 0 7.6666666667px;
+}
+.Grid__cell_2 {
+  width: 145.3333333333px;
+  margin: 0 7.6666666667px;
+}
+.Grid__cell_3 {
+  width: 225.6666666667px;
+  margin: 0 7.6666666667px;
+}
+.Grid__cell_4 {
+  width: 306px;
+  margin: 0 7.6666666667px;
+}
+.Grid__cell_5 {
+  width: 386.3333333333px;
+  margin: 0 7.6666666667px;
+}
+.Grid__cell_6 {
+  width: 466.6666666667px;
+  margin: 0 7.6666666667px;
+}
+.Grid__cell_7 {
+  width: 547px;
+  margin: 0 7.6666666667px;
+}
+.Grid__cell_8 {
+  width: 627.3333333333px;
+  margin: 0 7.6666666667px;
+}
+.Grid__cell_9 {
+  width: 707.6666666667px;
+  margin: 0 7.6666666667px;
+}
+.Grid__cell_10 {
+  width: 788px;
+  margin: 0 7.6666666667px;
+}
+.Grid__cell_11 {
+  width: 868.3333333333px;
+  margin: 0 7.6666666667px;
+}
+.Grid__cell_12 {
+  width: 948.6666666667px;
+  margin: 0 7.6666666667px;
+}
+.Grid__cell_13 {
+  width: 1029px;
+  margin: 0 7.6666666667px;
+}
+.Grid__cell_14 {
+  width: 1109.3333333333px;
+  margin: 0 7.6666666667px;
+}
+.Grid__cell_15 {
+  width: 1189.6666666667px;
+  margin: 0 7.6666666667px;
+}
+.Grid__cell_16 {
+  width: 1270px;
+  margin: 0 7.6666666667px;
+}
+.Grid__cell_push-1 {
+  margin-left: 80.3333333333px;
+}
+.Grid__cell_push-2 {
+  margin-left: 160.6666666667px;
+}
+.Grid__cell_push-3 {
+  margin-left: 241px;
+}
+.Grid__cell_push-4 {
+  margin-left: 321.3333333333px;
+}
+.Grid__cell_push-5 {
+  margin-left: 401.6666666667px;
+}
+.Grid__cell_push-6 {
+  margin-left: 482px;
+}
+.Grid__cell_push-7 {
+  margin-left: 562.3333333333px;
+}
+.Grid__cell_push-8 {
+  margin-left: 642.6666666667px;
+}
+.Grid__cell_push-9 {
+  margin-left: 723px;
+}
+.Grid__cell_push-10 {
+  margin-left: 803.3333333333px;
+}
+.Grid__cell_push-11 {
+  margin-left: 883.6666666667px;
+}
+.Grid__cell_push-12 {
+  margin-left: 964px;
+}
+.Grid__cell_push-13 {
+  margin-left: 1044.3333333333px;
+}
+.Grid__cell_push-14 {
+  margin-left: 1124.6666666667px;
+}
+.Grid__cell_push-15 {
+  margin-left: 1205px;
+}
+.Grid__cell_alpha {
+  margin-left: 0;
+}
+.Grid__cell_omega {
+  margin-right: 0;
+}
+
+/*# sourceMappingURL=float-grid-16.css.map */

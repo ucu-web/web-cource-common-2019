@@ -30,3 +30,7 @@
     border-radius: 4px;
     margin-top: 36px;
 }
+
+.join-meetup__join-button:hover {
+    background: #c63d2d;
+}

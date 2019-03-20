@@ -13,3 +13,7 @@
 .useful-tags__bottom {
     margin-top: 25px;
 }
+
+.useful-tags__tag:hover {
+    background: #f6f7f8;
+}

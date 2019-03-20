@@ -17,6 +17,10 @@
     font-weight: 500;
 }
 
+.near-popular-places__show-all:hover {
+    text-decoration: underline;
+}
+
 .near-popular-places__all-event {
     display: flex;
     flex-direction: row;

@@ -1,0 +1,39 @@
+{
+  "_from": "edgeicons",
+  "_id": "edgeicons@1.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-/WPcwVoFGS3kXs9woMBnFxuHdw23BldUBaUbOBoOFtMHhILgZl0Id7njRgn1GTYLyvvJfEkm2CS0HjWyAZdJ1A==",
+  "_location": "/edgeicons",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "edgeicons",
+    "name": "edgeicons",
+    "escapedName": "edgeicons",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/edgeicons/-/edgeicons-1.0.0.tgz",
+  "_shasum": "225708cd08e7204ede287eafd0318637c4dca166",
+  "_spec": "edgeicons",
+  "_where": "/Volumes/Transcend/UCU/2year/2 sem/Web/web-cource-common-2019/Serhii_Rosovskyi/twitter",
+  "author": {
+    "name": "Yousef M. El-Gohary"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "",
+  "license": "ISC",
+  "main": "index.js",
+  "name": "edgeicons",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}
