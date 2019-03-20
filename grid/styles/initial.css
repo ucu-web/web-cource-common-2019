@@ -1,0 +1,16 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.wrapper{
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+}

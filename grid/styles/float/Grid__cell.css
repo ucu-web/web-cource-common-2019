@@ -1,0 +1,49 @@
+[class*='Grid__cell_'] {
+    display: inline;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.Grid__row:before, .Grid__row:after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+.Grid__cell_1{width: calc(100% / 12 * 1 - 20px);}
+.Grid__cell_2{width: calc(100% / 12 * 2 - 20px);}
+.Grid__cell_3{width: calc(100% / 12 * 3 - 20px);}
+.Grid__cell_4{width: calc(100% / 12 * 4 - 20px);}
+.Grid__cell_5{width: calc(100% / 12 * 5 - 20px);}
+.Grid__cell_6{width: calc(100% / 12 * 6 - 20px);}
+.Grid__cell_7{width: calc(100% / 12 * 7 - 20px);}
+.Grid__cell_8{width: calc(100% / 12 * 8 - 20px);}
+.Grid__cell_9{width: calc(100% / 12 * 9 - 20px);}
+.Grid__cell_10{width: calc(100% / 12 * 10 - 20px);}
+.Grid__cell_11{width: calc(100% / 12 * 11 - 20px);}
+.Grid__cell_12{width: calc(100% / 12 * 12 - 20px);}
+
+.Grid__push_1{margin-left: calc(100% / 12 * 1 + 20px * 1);}
+.Grid__push_2{margin-left: calc(100% / 12 * 2 + 20px * 2);}
+.Grid__push_3{margin-left: calc(100% / 12 * 3 + 20px * 3);}
+.Grid__push_4{margin-left: calc(100% / 12 * 4 + 20px * 4);}
+.Grid__push_5{margin-left: calc(100% / 12 * 5 + 20px * 5);}
+.Grid__push_6{margin-left: calc(100% / 12 * 6 + 20px * 6);}
+.Grid__push_7{margin-left: calc(100% / 12 * 7 + 20px * 7);}
+.Grid__push_8{margin-left: calc(100% / 12 * 8 + 20px * 8);}
+.Grid__push_9{margin-left: calc(100% / 12 * 9 + 20px * 9);}
+.Grid__push_10{margin-left: calc(100% / 12 * 10 + 20px * 10);}
+.Grid__push_11{margin-left: calc(100% / 12 * 11 + 20px * 11);}
+
+.Grid__pull_1{margin-left: calc(-100% / 12 * 1 - 20px * 1);}
+.Grid__pull_2{margin-left: calc(-100% / 12 * 2 - 20px * 2);}
+.Grid__pull_3{margin-left: calc(-100% / 12 * 3 - 20px * 3);}
+.Grid__pull_4{margin-left: calc(-100% / 12 * 4 - 20px * 4);}
+.Grid__pull_5{margin-left: calc(-100% / 12 * 5 - 20px * 5);}
+.Grid__pull_6{margin-left: calc(-100% / 12 * 6 - 20px * 6);}
+.Grid__pull_7{margin-left: calc(-100% / 12 * 7 - 20px * 7);}
+.Grid__pull_8{margin-left: calc(-100% / 12 * 8 - 20px * 8);}
+.Grid__pull_9{margin-left: calc(-100% / 12 * 9 - 20px * 9);}
+.Grid__pull_10{margin-left: calc(-100% / 12 * 10 - 20px * 10);}
+.Grid__pull_11{margin-left: calc(-100% / 12 * 11 - 20px * 11);}

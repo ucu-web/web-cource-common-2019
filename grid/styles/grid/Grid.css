@@ -1,0 +1,7 @@
+.Grid{
+    display: grid;
+    grid-template-columns:
+            minmax(20px, 1fr) repeat(12, minmax(0, 100px)) minmax(20px, 1fr);
+    grid-column-gap: 20px;
+
+}
