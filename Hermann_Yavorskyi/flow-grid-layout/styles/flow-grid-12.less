@@ -1,0 +1,153 @@
+@grid-columns-number: 12;
+@grid-width: 960px;
+@cell-width: 70px;
+@cell-margin: (
+  (@grid-width - (@cell-width * @grid-columns-number))/ (@grid-columns-number -
+        1)
+);
+
+.Grid {
+  font-size: 0;
+  width: @grid-width;
+  margin: 0 auto;
+  background: gold;
+
+  &__row:after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+
+  &__cell {
+    font-size: 1rem;
+    display: inline-block;
+    vertical-align: top;
+
+    &_parent {
+      font-size: 0;
+    }
+    &_1 {
+      width: @cell-width * 1 + (@cell-margin * (1 - 1));
+      margin: 0 @cell-margin / 2;
+      background: #2980b9;
+    }
+
+    &_2 {
+      width: @cell-width * 2 + (@cell-margin * (2 - 1));
+      margin: 0 @cell-margin / 2;
+      background: #2980b9;
+    }
+
+    &_3 {
+      width: @cell-width * 3 + (@cell-margin * (3 - 1));
+      margin: 0 @cell-margin / 2;
+      background: #2980b9;
+    }
+
+    &_4 {
+      width: @cell-width * 4 + (@cell-margin * (4 - 1));
+      margin: 0 @cell-margin / 2;
+      background: #2980b9;
+    }
+
+    &_5 {
+      width: @cell-width * 5 + (@cell-margin * (5 - 1));
+      margin: 0 @cell-margin / 2;
+      background: #2980b9;
+    }
+
+    &_6 {
+      width: @cell-width * 6 + (@cell-margin * (6 - 1));
+      margin: 0 @cell-margin / 2;
+      background: #2980b9;
+    }
+
+    &_7 {
+      width: @cell-width * 7 + (@cell-margin * (7 - 1));
+      margin: 0 @cell-margin / 2;
+      background: #2980b9;
+    }
+
+    &_8 {
+      width: @cell-width * 8 + (@cell-margin * (8 - 1));
+      margin: 0 @cell-margin / 2;
+      background: #2980b9;
+    }
+
+    &_9 {
+      width: @cell-width * 9 + (@cell-margin * (9 - 1));
+      margin: 0 @cell-margin / 2;
+      background: #2980b9;
+    }
+
+    &_10 {
+      width: @cell-width * 10 + (@cell-margin * (10 - 1));
+      margin: 0 @cell-margin / 2;
+      background: #2980b9;
+    }
+
+    &_11 {
+      width: @cell-width * 11 + (@cell-margin * (11 - 1));
+      margin: 0 @cell-margin / 2;
+      background: #2980b9;
+    }
+
+    &_12 {
+      width: @cell-width * 12+ (@cell-margin * (12 - 1));
+      margin: 0 @cell-margin / 2;
+      background: #2980b9;
+    }
+
+    &_push-1 {
+      margin-left: @cell-width * 1 + (@cell-margin * (1 - 1)) + @cell-margin;
+    }
+
+    &_push-2 {
+      margin-left: @cell-width * 2 + (@cell-margin * (2 - 1)) + @cell-margin;
+    }
+
+    &_push-3 {
+      margin-left: @cell-width * 3 + (@cell-margin * (3 - 1)) + @cell-margin;
+    }
+
+    &_push-4 {
+      margin-left: @cell-width * 4 + (@cell-margin * (4 - 1)) + @cell-margin;
+    }
+
+    &_push-5 {
+      margin-left: @cell-width * 5 + (@cell-margin * (5 - 1)) + @cell-margin;
+    }
+
+    &_push-6 {
+      margin-left: @cell-width * 6 + (@cell-margin * (6 - 1)) + @cell-margin;
+    }
+
+    &_push-7 {
+      margin-left: @cell-width * 7 + (@cell-margin * (7 - 1)) + @cell-margin;
+    }
+
+    &_push-8 {
+      margin-left: @cell-width * 8 + (@cell-margin * (8 - 1)) + @cell-margin;
+    }
+
+    &_push-9 {
+      margin-left: @cell-width * 9 + (@cell-margin * (9 - 1)) + @cell-margin;
+    }
+
+    &_push-10 {
+      margin-left: @cell-width * 10 + (@cell-margin * (10 - 1)) + @cell-margin;
+    }
+
+    &_push-11 {
+      margin-left: @cell-width * 11 + (@cell-margin * (11 - 1)) + @cell-margin;
+    }
+
+    &_alpha {
+      margin-left: 0;
+    }
+
+    &_omega {
+      margin-right: 0;
+    }
+  }
+}
