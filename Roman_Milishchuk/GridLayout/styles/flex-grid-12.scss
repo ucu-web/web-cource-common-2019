@@ -1,0 +1,35 @@
+$grid-columns-number: 12;
+$grid-width: 960px;
+$cell-width: 70px;
+$cell-margin: (($grid-width - ($cell-width * $grid-columns-number))/ ($grid-columns-number - 1));
+
+.Grid {
+  width: $grid-width;
+  margin: 0 auto;
+  background: gold;
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__cell {
+    @for $i from 1 through $grid-columns-number {
+      &_#{$i} {
+        flex-basis: $cell-width * $i + ($cell-margin * ($i - 1));
+        background: #2980b9;
+      }
+    }
+
+    @for $i from 1 through $grid-columns-number - 1 {
+      &_push-#{$i} {
+        margin-left: $cell-width * $i + ($cell-margin * ($i - 1)) +  $cell-margin;
+      }
+    }
+
+    &_parent {
+      display: flex;
+    }
+  }
+}
