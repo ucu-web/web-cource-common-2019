@@ -1,0 +1,164 @@
+.Grid {
+  width: 960px;
+  margin: 0 auto;
+  background: gold;
+}
+.Grid__row {
+  display: flex;
+  flex-direction: row;
+}
+.Grid__row:after {
+  content: "";
+  clear: both;
+}
+.Grid__cell {
+  flex-direction: row;
+  flex-flow: row wrap;
+  align-self: flex-start;
+  flex-direction: row;
+  flex-flow: row wrap;
+  align-self: flex-start;
+  flex-direction: row;
+  flex-flow: row wrap;
+  align-self: flex-start;
+  flex-direction: row;
+  flex-flow: row wrap;
+  align-self: flex-start;
+  flex-direction: row;
+  flex-flow: row wrap;
+  align-self: flex-start;
+  flex-direction: row;
+  flex-flow: row wrap;
+  align-self: flex-start;
+  flex-direction: row;
+  flex-flow: row wrap;
+  align-self: flex-start;
+  flex-direction: row;
+  flex-flow: row wrap;
+  align-self: flex-start;
+  flex-direction: row;
+  flex-flow: row wrap;
+  align-self: flex-start;
+  flex-direction: row;
+  flex-flow: row wrap;
+  align-self: flex-start;
+  flex-direction: row;
+  flex-flow: row wrap;
+  align-self: flex-start;
+  flex-direction: row;
+  flex-flow: row wrap;
+  align-self: flex-start;
+}
+.Grid__cell_1 {
+  width: 70px;
+  display: flex;
+  margin: 0 5.4545454545px;
+  background: #2980b9;
+}
+.Grid__cell_2 {
+  width: 150.9090909091px;
+  display: flex;
+  margin: 0 5.4545454545px;
+  background: #2980b9;
+}
+.Grid__cell_3 {
+  width: 231.8181818182px;
+  display: flex;
+  margin: 0 5.4545454545px;
+  background: #2980b9;
+}
+.Grid__cell_4 {
+  width: 312.7272727273px;
+  display: flex;
+  margin: 0 5.4545454545px;
+  background: #2980b9;
+}
+.Grid__cell_5 {
+  width: 393.6363636364px;
+  display: flex;
+  margin: 0 5.4545454545px;
+  background: #2980b9;
+}
+.Grid__cell_6 {
+  width: 474.5454545455px;
+  display: flex;
+  margin: 0 5.4545454545px;
+  background: #2980b9;
+}
+.Grid__cell_7 {
+  width: 555.4545454545px;
+  display: flex;
+  margin: 0 5.4545454545px;
+  background: #2980b9;
+}
+.Grid__cell_8 {
+  width: 636.3636363636px;
+  display: flex;
+  margin: 0 5.4545454545px;
+  background: #2980b9;
+}
+.Grid__cell_9 {
+  width: 717.2727272727px;
+  display: flex;
+  margin: 0 5.4545454545px;
+  background: #2980b9;
+}
+.Grid__cell_10 {
+  width: 798.1818181818px;
+  display: flex;
+  margin: 0 5.4545454545px;
+  background: #2980b9;
+}
+.Grid__cell_11 {
+  width: 879.0909090909px;
+  display: flex;
+  margin: 0 5.4545454545px;
+  background: #2980b9;
+}
+.Grid__cell_12 {
+  width: 960px;
+  display: flex;
+  margin: 0 5.4545454545px;
+  background: #2980b9;
+}
+.Grid__cell_push-1 {
+  margin-left: 80.9090909091px;
+}
+.Grid__cell_push-2 {
+  margin-left: 161.8181818182px;
+}
+.Grid__cell_push-3 {
+  margin-left: 242.7272727273px;
+}
+.Grid__cell_push-4 {
+  margin-left: 323.6363636364px;
+}
+.Grid__cell_push-5 {
+  margin-left: 404.5454545455px;
+}
+.Grid__cell_push-6 {
+  margin-left: 485.4545454545px;
+}
+.Grid__cell_push-7 {
+  margin-left: 566.3636363636px;
+}
+.Grid__cell_push-8 {
+  margin-left: 647.2727272727px;
+}
+.Grid__cell_push-9 {
+  margin-left: 728.1818181818px;
+}
+.Grid__cell_push-10 {
+  margin-left: 809.0909090909px;
+}
+.Grid__cell_push-11 {
+  margin-left: 890px;
+}
+.Grid__cell_alpha {
+  margin-left: 0;
+}
+.Grid__cell_omega {
+  margin-right: 0;
+}
+
+/*# sourceMappingURL=flex-grid-12.css.map */

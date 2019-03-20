@@ -1,0 +1,34 @@
+$grid-columns-number: 12;
+$grid-width: 960px;
+$cell-width: 70px;
+$cell-margin: (($grid-width - ($cell-width * $grid-columns-number))/ ($grid-columns-number - 1));
+
+.Grid {
+  width: $grid-width;
+  margin: 0 auto;
+  background: gold;
+
+  &__row {
+    display: flex;
+  }
+  &__row:after {
+    content: "";
+    clear: both;
+  }
+  &__cell {
+    @for $i from 1 through $grid-columns-number {
+      &_#{$i} { width: $cell-width * $i + ($cell-margin * ($i - 1));
+        display: flex;
+        margin: 0 $cell-margin/2;
+        background: #2980b9;}
+        flex-direction: row;
+        flex-flow: row wrap;
+        align-self: flex-start;
+    }
+    @for $i from 1 through $grid-columns-number - 1  {
+      &_push-#{$i} { margin-left: $cell-width * $i + ($cell-margin * ($i - 1)) +  $cell-margin ; }
+    }
+    &_alpha {margin-left: 0;}
+    &_omega {margin-right: 0;}
+  }
+}
