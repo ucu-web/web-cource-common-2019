@@ -1,0 +1,113 @@
+.Grid {
+  width: 960px;
+  margin: 0 auto;
+  background: gold;
+}
+.Grid__row {
+  display: flex;
+  align-items: flex-start;
+}
+.Grid__cell {
+  display: flex;
+  flex-wrap: wrap;
+}
+.Grid__cell_1 {
+  width: 70px;
+  margin: 0 5.45454545px;
+  background: #2980b9;
+}
+.Grid__cell_2 {
+  width: 150.90909091px;
+  margin: 0 5.45454545px;
+  background: #2980b9;
+}
+.Grid__cell_3 {
+  width: 231.81818182px;
+  margin: 0 5.45454545px;
+  background: #2980b9;
+}
+.Grid__cell_4 {
+  width: 312.72727273px;
+  margin: 0 5.45454545px;
+  background: #2980b9;
+}
+.Grid__cell_5 {
+  width: 393.63636364px;
+  margin: 0 5.45454545px;
+  background: #2980b9;
+}
+.Grid__cell_6 {
+  width: 474.54545455px;
+  margin: 0 5.45454545px;
+  background: #2980b9;
+}
+.Grid__cell_7 {
+  width: 555.45454545px;
+  margin: 0 5.45454545px;
+  background: #2980b9;
+}
+.Grid__cell_8 {
+  width: 636.36363636px;
+  margin: 0 5.45454545px;
+  background: #2980b9;
+}
+.Grid__cell_9 {
+  width: 717.27272727px;
+  margin: 0 5.45454545px;
+  background: #2980b9;
+}
+.Grid__cell_10 {
+  width: 798.18181818px;
+  margin: 0 5.45454545px;
+  background: #2980b9;
+}
+.Grid__cell_11 {
+  width: 879.09090909px;
+  margin: 0 5.45454545px;
+  background: #2980b9;
+}
+.Grid__cell_12 {
+  width: 960px;
+  margin: 0 5.45454545px;
+  background: #2980b9;
+}
+.Grid__cell_push-1 {
+  margin-left: 80.90909091px;
+}
+.Grid__cell_push-2 {
+  margin-left: 161.81818182px;
+}
+.Grid__cell_push-3 {
+  margin-left: 242.72727273px;
+}
+.Grid__cell_push-4 {
+  margin-left: 323.63636364px;
+}
+.Grid__cell_push-5 {
+  margin-left: 404.54545455px;
+}
+.Grid__cell_push-6 {
+  margin-left: 485.45454545px;
+}
+.Grid__cell_push-7 {
+  margin-left: 566.36363636px;
+}
+.Grid__cell_push-8 {
+  margin-left: 647.27272727px;
+}
+.Grid__cell_push-9 {
+  margin-left: 728.18181818px;
+}
+.Grid__cell_push-10 {
+  margin-left: 809.09090909px;
+}
+.Grid__cell_push-11 {
+  margin-left: 890px;
+}
+.Grid__cell_alpha {
+  margin-left: 0;
+}
+.Grid__cell_omega {
+  margin-right: 0;
+}
+/*# sourceMappingURL=flex-grid-12.css.map */
