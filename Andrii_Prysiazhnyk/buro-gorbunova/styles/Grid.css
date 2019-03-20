@@ -12,9 +12,6 @@
 .Grid__row--top-small-distance {
   margin-top: 18px;
 }
-.Grid__row--bottom-medium-distance {
-  margin-bottom: 72px;
-}
 .Grid__row--top-underscore {
   border-top: 1.5px solid #DCDCDC;
 }

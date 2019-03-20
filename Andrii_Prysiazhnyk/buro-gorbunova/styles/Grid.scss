@@ -19,10 +19,6 @@ $cell-margin: (($grid-width - ($cell-width * $grid-columns-number)) / ($grid-col
       margin-top: 18px;
     }
 
-    &--bottom-medium-distance {
-      margin-bottom: 72px;
-    }
-
     &--top-underscore {
       border-top: 1.5px solid #DCDCDC;
     }

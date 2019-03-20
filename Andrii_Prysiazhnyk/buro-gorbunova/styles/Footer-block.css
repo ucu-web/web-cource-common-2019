@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.Footer-block {
+  font-size: 15px;
+}
+.Footer-block__link, .Footer-block__text {
+  display: block;
+}
+.Footer-block__link {
+  color: #e20016;
+  text-decoration: none;
+}
+.Footer-block__link:hover {
+  text-decoration: underline;
+}
+.Footer-block__text--up, .Footer-block__link--up {
+  margin-bottom: 10px;
+}
+.Footer-block__svg {
+  fill: #28a745;
+}
+
+/*# sourceMappingURL=Footer-block.css.map */

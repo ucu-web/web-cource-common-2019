@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.Font-description__logo, .Font-description__font-name, .Font-description__text, .Font-description__title {
+  margin: 5px 0;
+}
+.Font-description__logo {
+  font-size: 120px;
+}
+.Font-description__font-name, .Font-description__example-name {
+  font-size: 32px;
+}
+.Font-description__text {
+  font-size: 16px;
+  margin-bottom: 35px;
+}
+.Font-description__link {
+  color: #065580;
+  font-size: 16px;
+  text-decoration: none;
+}
+.Font-description__link--bold {
+  font-weight: 600;
+}
+.Font-description__link:hover {
+  color: #e20016;
+}
+.Font-description__example-name {
+  font-weight: 500;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+/*# sourceMappingURL=Font-description.css.map */

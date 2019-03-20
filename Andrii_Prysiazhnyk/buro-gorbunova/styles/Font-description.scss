@@ -1,0 +1,41 @@
+@import "common";
+
+.Font-description {
+
+  &__logo, &__font-name, &__text, &__title {
+    margin: 5px 0;
+  }
+
+  &__logo {
+    font-size: 120px;
+  }
+
+  &__font-name, &__example-name {
+    font-size: 32px;
+  }
+
+  &__text{
+    font-size: 16px;
+    margin-bottom: 35px;
+  }
+
+  &__link {
+    color: $link-color;
+    font-size: 16px;
+    text-decoration: none;
+
+    &--bold {
+      font-weight: 600;
+    }
+  }
+
+  &__link:hover {
+    color: $key-color;
+  }
+
+  &__example-name {
+    font-weight: 500;
+    margin-bottom: 0;
+    margin-top: 8px;
+  }
+}
