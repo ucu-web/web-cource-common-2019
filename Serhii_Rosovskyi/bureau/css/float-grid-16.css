@@ -1,5 +1,5 @@
 .Grid {
-  width: 1270px;
+  width: 88%;
   margin: 0 auto;
   padding-top: 8px;
 }
@@ -12,113 +12,113 @@
   float: left;
 }
 .Grid__cell_1 {
-  width: 65px;
-  margin: 0 7.6666666667px;
+  width: 5.118%;
+  margin: 0 0.6036745%;
 }
 .Grid__cell_2 {
-  width: 145.3333333333px;
-  margin: 0 7.6666666667px;
+  width: 11.443349%;
+  margin: 0 0.6036745%;
 }
 .Grid__cell_3 {
-  width: 225.6666666667px;
-  margin: 0 7.6666666667px;
+  width: 17.768698%;
+  margin: 0 0.6036745%;
 }
 .Grid__cell_4 {
-  width: 306px;
-  margin: 0 7.6666666667px;
+  width: 24.094047%;
+  margin: 0 0.6036745%;
 }
 .Grid__cell_5 {
-  width: 386.3333333333px;
-  margin: 0 7.6666666667px;
+  width: 30.419396%;
+  margin: 0 0.6036745%;
 }
 .Grid__cell_6 {
-  width: 466.6666666667px;
-  margin: 0 7.6666666667px;
+  width: 36.744745%;
+  margin: 0 0.6036745%;
 }
 .Grid__cell_7 {
-  width: 547px;
-  margin: 0 7.6666666667px;
+  width: 43.070094%;
+  margin: 0 0.6036745%;
 }
 .Grid__cell_8 {
-  width: 627.3333333333px;
-  margin: 0 7.6666666667px;
+  width: 49.395443%;
+  margin: 0 0.6036745%;
 }
 .Grid__cell_9 {
-  width: 707.6666666667px;
-  margin: 0 7.6666666667px;
+  width: 55.720792%;
+  margin: 0 0.6036745%;
 }
 .Grid__cell_10 {
-  width: 788px;
-  margin: 0 7.6666666667px;
+  width: 62.046141%;
+  margin: 0 0.6036745%;
 }
 .Grid__cell_11 {
-  width: 868.3333333333px;
-  margin: 0 7.6666666667px;
+  width: 68.37149%;
+  margin: 0 0.6036745%;
 }
 .Grid__cell_12 {
-  width: 948.6666666667px;
-  margin: 0 7.6666666667px;
+  width: 74.696839%;
+  margin: 0 0.6036745%;
 }
 .Grid__cell_13 {
-  width: 1029px;
-  margin: 0 7.6666666667px;
+  width: 81.022188%;
+  margin: 0 0.6036745%;
 }
 .Grid__cell_14 {
-  width: 1109.3333333333px;
-  margin: 0 7.6666666667px;
+  width: 87.347537%;
+  margin: 0 0.6036745%;
 }
 .Grid__cell_15 {
-  width: 1189.6666666667px;
-  margin: 0 7.6666666667px;
+  width: 93.672886%;
+  margin: 0 0.6036745%;
 }
 .Grid__cell_16 {
-  width: 1270px;
-  margin: 0 7.6666666667px;
+  width: 99.998235%;
+  margin: 0 0.6036745%;
 }
 .Grid__cell_push-1 {
-  margin-left: 80.3333333333px;
+  margin-left: 6.325349%;
 }
 .Grid__cell_push-2 {
-  margin-left: 160.6666666667px;
+  margin-left: 12.650698%;
 }
 .Grid__cell_push-3 {
-  margin-left: 241px;
+  margin-left: 18.976047%;
 }
 .Grid__cell_push-4 {
-  margin-left: 321.3333333333px;
+  margin-left: 25.301396%;
 }
 .Grid__cell_push-5 {
-  margin-left: 401.6666666667px;
+  margin-left: 31.626745%;
 }
 .Grid__cell_push-6 {
-  margin-left: 482px;
+  margin-left: 37.952094%;
 }
 .Grid__cell_push-7 {
-  margin-left: 562.3333333333px;
+  margin-left: 44.277443%;
 }
 .Grid__cell_push-8 {
-  margin-left: 642.6666666667px;
+  margin-left: 50.602792%;
 }
 .Grid__cell_push-9 {
-  margin-left: 723px;
+  margin-left: 56.928141%;
 }
 .Grid__cell_push-10 {
-  margin-left: 803.3333333333px;
+  margin-left: 63.25349%;
 }
 .Grid__cell_push-11 {
-  margin-left: 883.6666666667px;
+  margin-left: 69.578839%;
 }
 .Grid__cell_push-12 {
-  margin-left: 964px;
+  margin-left: 75.904188%;
 }
 .Grid__cell_push-13 {
-  margin-left: 1044.3333333333px;
+  margin-left: 82.229537%;
 }
 .Grid__cell_push-14 {
-  margin-left: 1124.6666666667px;
+  margin-left: 88.554886%;
 }
 .Grid__cell_push-15 {
-  margin-left: 1205px;
+  margin-left: 94.880235%;
 }
 .Grid__cell_alpha {
   margin-left: 0;

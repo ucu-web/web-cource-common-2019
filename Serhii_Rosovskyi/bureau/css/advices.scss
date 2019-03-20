@@ -1,0 +1,17 @@
+.co-work {
+  &__image img {
+    width: 100%;
+  }
+
+  &__coffee {
+    text-align: center;
+  }
+
+  &__live-advices {
+    background: #000;
+  }
+}
+
+.co-work__coffee > * {
+  text-align: center;
+}

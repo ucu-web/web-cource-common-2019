@@ -1,0 +1,15 @@
+.co-work__image img {
+  width: 100%;
+}
+.co-work__coffee {
+  text-align: center;
+}
+.co-work__live-advices {
+  background: #000;
+}
+
+.co-work__coffee > * {
+  text-align: center;
+}
+
+/*# sourceMappingURL=advices.css.map */

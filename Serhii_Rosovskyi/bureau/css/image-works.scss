@@ -1,0 +1,35 @@
+.image-work {
+
+  &__image {
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__my-works {
+    padding-left: 18px;
+  }
+
+}
+
+
+.image {
+  &__foreground-flex {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+}
+
+.st0 {
+  fill: #e20016;
+}
+
+.icon__strange-icon {
+  width: 15%;
+  height: 15%;
+
+}

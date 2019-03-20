@@ -1,0 +1,15 @@
+.Layout__drill-phone img {
+  width: 98%;
+  height: 98%;
+}
+.Layout__drill-phone .drill-phone__phone {
+  position: relative;
+}
+.Layout__drill-phone .drill-phone__phone a {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+}
+
+/*# sourceMappingURL=drill-phone.css.map */

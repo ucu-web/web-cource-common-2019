@@ -1,0 +1,18 @@
+.Layout__drill-phone {
+  img {
+    width: 98%;
+    height: 98%;
+  }
+
+  .drill-phone__phone {
+    position: relative;
+  }
+
+  .drill-phone__phone a {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+  }
+
+}

@@ -10,4 +10,31 @@
     margin-bottom: 70px;
   }
 
+  &__courses {
+    margin-bottom: 20px;
+  }
+
+  &__modules {
+    margin-bottom: 100px;
+  }
+
+  &__image-works {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 30px;
+  }
+
+  &__information {
+    margin-bottom: 70px;
+  }
+
+  &__drill-phone {
+    margin-bottom: 55px;
+  }
+
+  &__advices {
+    margin-bottom: 50px;
+  }
+
 }

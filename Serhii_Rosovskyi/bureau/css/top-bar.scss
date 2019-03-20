@@ -28,3 +28,16 @@
     float: right;
   }
 }
+
+.top-bar {
+  &__top-navigation a {
+    text-decoration: none;
+    font: 14px Bureausans, Arial, sans-serif;
+    color: #000;
+    margin-right: 18px;
+  }
+
+  &__top-navigation a:hover {
+    color: rgb(226, 0, 22);
+  }
+}
