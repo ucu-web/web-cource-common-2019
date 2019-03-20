@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  font-family: Bureausans, Arial, sans-serif; }
+
+a {
+  cursor: pointer; }
+
+.Header {
+  margin-top: 7px;
+  display: flex;
+  flex-direction: row; }
+  .Header__nav {
+    margin-left: 20px; }
+  .Header__link {
+    font-size: 16px;
+    padding: 0 4px;
+    color: black;
+    text-decoration: none; }
+    .Header__link:hover {
+      color: #e20016; }
+  .Header__profile {
+    margin-left: auto;
+    height: 32px; }
+
+.Top {
+  margin-top: 40px; }
+  .Top__image {
+    width: 100%; }
+
+.Courses {
+  margin-top: 30px; }
+  .Courses__title {
+    margin: 0;
+    font-size: 70px;
+    line-height: 72px;
+    color: #e20016; }
+  .Courses__date {
+    line-height: 27px;
+    color: black;
+    font-size: 18px;
+    font-weight: 700; }
+  .Courses__for {
+    font-weight: lighter;
+    line-height: 27px;
+    font-size: 18px;
+    color: #065580; }
+  .Courses__link {
+    text-decoration: underline;
+    color: #065580;
+    line-height: 27px;
+    font-size: 18px; }
+    .Courses__link:hover {
+      color: #e20016; }
+  .Courses__price {
+    color: black;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 10px 0; }
+
+.Image-section {
+  margin-top: 50px; }
+  .Image-section__image {
+    height: 500px; }
+
+.Daily-chosen {
+  margin-top: 30px; }
+  .Daily-chosen__post-title {
+    color: black;
+    font-size: 24px;
+    line-height: 27px;
+    margin: 0; }
+  .Daily-chosen__post-image {
+    width: 100%; }
+  .Daily-chosen__post-description {
+    margin: 0;
+    color: black; }
+  .Daily-chosen__post-link {
+    margin: 0;
+    color: #065580; }
+    .Daily-chosen__post-link:hover {
+      color: #e20016; }

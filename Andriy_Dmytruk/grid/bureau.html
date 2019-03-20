@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Бюро </title>
+
+    <!--
+    <link as="font" crossorigin="crossorigin" href="https://fonts.bureau.ru/1.15/bureausans-regular.woff2" rel="preload" type="font/woff2">    
+    <link as="font" crossorigin="crossorigin" href="https://fonts.bureau.ru/1.15/bureausans-light.woff2" rel="preload" type="font/woff2">    
+    <link as="font" crossorigin="crossorigin" href="https://fonts.bureau.ru/1.15/bureausans-bold.woff2" rel="preload" type="font/woff2">    
+    <link as="font" crossorigin="crossorigin" href="https://fonts.bureau.ru/1.15/bureausans-regular_italic.woff2" rel="preload" type="font/woff2">    
+    <link as="font" crossorigin="crossorigin" href="https://fonts.bureau.ru/1.15/bureauserif-regular.woff2" rel="preload" type="font/woff2">    
+    <link as="font" crossorigin="crossorigin" href="https://fonts.bureau.ru/1.15/bureauserif-italic.woff2" rel="preload" type="font/woff2">    
+    <link as="font" crossorigin="crossorigin" href="https://fonts.bureau.ru/1.15/bureauserif-swash.woff2" rel="preload" type="font/woff2">    
+    <link as="font" crossorigin="crossorigin" href="https://fonts.bureau.ru/1.15/bureausans-bold_swash.woff2" rel="preload" type="font/woff2">    
+    <link as="font" crossorigin="crossorigin" href="https://fonts.bureau.ru/1.15/voltaire-normal.woff2" rel="preload" type="font/woff2">    
+    <link as="font" crossorigin="crossorigin" href="https://fonts.bureau.ru/1.15/icons.woff2" rel="preload" type="font/woff2">
+    -->
+        
+    <link href="my-grid-flex.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body class="Grid">
+    <div class="Grid__row">
+        <header class="Grid__cell_12 Grid__cell_last Header">
+            <img class="Header__logo" src="./images/logo.svg" alt="logo">
+
+            <nav class="Header__nav">
+                <a class="Header__link" href=""> Новости </a>
+                <a class="Header__link" href=""> Проекты </a>
+                <a class="Header__link" href=""> Книги </a>
+                <a class="Header__link" href=""> Школа </a>
+                <a class="Header__link" href=""> Курсы </a>
+                <a class="Header__link" href=""> Советы </a>
+                <a class="Header__link" href=""> Ковор </a>
+                <a class="Header__link" href=""> кафе </a>
+                <a class="Header__link" href=""> О компании </a>
+            </nav>
+
+            <img class="Header__profile" src="./images/profile.svg" alt="profile">
+        </header>
+    </div>
+
+    <section class="Top Grid__row">
+        <a class="Grid__cell_6">
+            <img class="Top__image" alt="girl" src="https://imgproxy.bureau.ru/JdSMCWC-1nhN4xJod7ezst0bSzGYm0GDclILbh0molM/fit/645/648/no/0/aHR0cHM6Ly9idXJlYXUucnUvcHJvamVjdHMvaGFuZHMtZWxlbWVudHMvZmlsZXMvaGFuZHMtNDMwLmpwZz92PTE1NTMwMTYzMDY4NDc.jpg">
+        </a>
+        <a class="Grid__cell_6 Grid__cell_last">
+            <img class="Top__image" alt="boxes" src="https://imgproxy.bureau.ru/1emF-FHVmt0EryR6LXiuMJa3v-1jX1xwuNZBoxEfZ-8/fit/645/648/no/0/aHR0cHM6Ly9idXJlYXUucnUvcHJvamVjdHMvaGFuZHMvZmlsZXMvaGFuZHMtNDMwLnBuZz92PTE1NTExMDg3NzkwNDk.png">
+        </a>
+    </section>
+
+    <section class="Courses Grid__row">
+        <div class="Grid__cell_9">
+            <h2 class="Courses__title"> Скоро набор </h2>
+            <span class="Courses__date"> Школа бюро с 26 августа: </span>
+            <span class="Courses__for">
+                <a class="Courses__link"> дизайнерам </a> <span> • </span>
+                <a class="Courses__link"> редакторам </a> <span> • </span>
+                <a class="Courses__link"> руководителям </a>
+            </span>
+        </div>
+        <div class="Grid__cell_3 Grid__cell_last">
+            <p class="Courses__price"> Подготовительние курси </p>
+            <a class="Courses__link"> Записатся за 5500 </a>
+        </div>
+    </section>
+
+    <section class="Daily-chosen Grid__row">
+        <article class="Daily-chosen__post Grid__cell_3">
+            <h2 class="Daily-chosen__post-title"> Иконка дня </h2>
+            <img alt="ролли" class="Daily-chosen__post-image" src="https://imgproxy.bureau.ru/2r35ysxroL_hzcOcXRRGhxA34jSNSIWQVAWa1HOTlDQ/fit/640/640/no/0/aHR0cHM6Ly9idXJlYXUucnUvaWNvbm9mdGhlZGF5L2ZpbGVzLzQ2MC3QoNC-0LvQu9GLLmpwZz92PTE1NTMwNjgxOTA5NDM.jpg">
+            <p class="Daily-chosen__post-description"> Ролли </p>
+            <a class="Daily-chosen__post-link"> Телеграм сергея чикина </a>
+        </article>
+        <article class="Daily-chosen__post Grid__cell_3">
+            <h2 class="Daily-chosen__post-title"> Часи </h2>
+            <img alt="ролли" class="Daily-chosen__post-image" src="https://bureau.ru/screenshotoftheday/files/99-Часы_с_расписанием_звонков.png?v=1553078274173">
+            <p class="Daily-chosen__post-description"> Часи </p>
+            <a class="Daily-chosen__post-link"> Навигация по заданию </a>
+        </article>
+        <article class="Daily-chosen__post Grid__cell_3">
+            <h2 class="Daily-chosen__post-title"> Техноведро </h2>
+            <p class="Daily-chosen__post-description"> Модульная система </p>
+            <a class="Daily-chosen__post-link"> Разказ </a>
+        </article>
+        <article class="Daily-chosen__post Grid__cell_3">
+            <h2 class="Daily-chosen__post-title"> Интерфейс </h2>
+            <p class="Daily-chosen__post-description"> Выбор из четы­рех дей­ствий с раз­ным при­о­ри­те­том </p>
+            <a class="Daily-chosen__post-link"> Совет Бирмана </a>
+        </article>
+
+    </section>
+
+    <section class="Image-section Grid__row">
+        <img class="Grid__cell_12 Grid__cell_last Image-section__image" alt="what" src="https://imgproxy.bureau.ru/Gre41Vcxqg4n0KvqDwFLU7PP2C9SYxsDB-oL54AC1BI/fit/1320/648/no/0/aHR0cHM6Ly9idXJlYXUucnUvcHJvamVjdHMvZmZmLXN0aWNrZXJzL2ZpbGVzL2JnXzNfODgweDQzMi5wbmc_dj0xNTUxMTI2MjIxOTk5.png">
+    </section>
+
+</body>
+</html>

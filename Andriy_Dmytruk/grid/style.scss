@@ -1,0 +1,127 @@
+$text-color: black;
+$text-important-color: rgb(226, 0, 22);
+$link-color: rgb(6, 85, 128);
+$link-important-color: rgb(226, 0, 22);
+
+body {
+  margin: 0;
+
+  font-family: Bureausans, Arial, sans-serif;
+}
+
+a {
+  cursor: pointer;
+}
+
+.Header {
+  margin-top: 7px;
+
+  display: flex;
+  flex-direction: row;
+
+  &__nav {
+    margin-left: 20px;
+  }
+
+  &__link {
+    font-size: 16px;
+    padding: 0 4px;
+    color: $text-color;
+    text-decoration: none;
+
+    &:hover {
+      color: $link-important-color;
+    }
+  }
+
+  &__profile {
+    margin-left: auto;
+    height: 32px;
+  }
+}
+
+.Top {
+  margin-top: 40px;
+  &__image {
+    width: 100%;
+  }
+}
+
+.Courses {
+  margin-top: 30px;
+
+  &__title {
+    margin: 0;
+    font-size: 70px;
+    line-height: 72px;
+    color: $text-important-color;
+  }
+
+  &__date {
+    line-height: 27px;
+    color: $text-color;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  
+  &__for {
+    font-weight: lighter;
+    line-height: 27px;
+    font-size: 18px;
+    color: $link-color;
+  }
+
+  &__link {
+    text-decoration: underline;
+    color: $link-color;
+    line-height: 27px;
+    font-size: 18px;
+
+    &:hover {
+      color: $link-important-color;
+    }
+  }
+
+  &__price {
+    color: $text-color;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 10px 0;
+  }
+}
+
+.Image-section {
+  margin-top: 50px;
+
+  &__image {
+    height: 500px;
+  }
+}
+
+.Daily-chosen {
+  margin-top: 30px;
+
+  &__post {
+
+  }
+  &__post-title {
+    color: $text-color;
+    font-size: 24px;
+    line-height: 27px;
+    margin: 0;
+  }
+  &__post-image {
+    width: 100%;
+  }
+  &__post-description {
+    margin: 0;
+    color: $text-color;
+  }
+  &__post-link {
+    margin: 0;
+    color: $link-color;
+    &:hover {
+      color: $link-important-color;
+    }
+  }
+}

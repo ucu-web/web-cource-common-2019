@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> HTML 5.2 </title>
+	<meta charset="UTF-8">
+  	<meta name="description" content="The World Wide Web Consortium (W3C) is an international community where Member organizations, a full-time staff, and the public work together to develop Web standards.">
+  	<meta name="keywords" content="HTML,HTML5,W3C,Standards">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div id="sidebar-controls">
+		<li> Jump to table of contents </li>
+		<li> Pop out sidebar </li>
+		<li> Collapse sidebar </li>
+	</div>
+
+	<header>
+		<h1> HTML 5.2 </h1>
+		<h2> W3C Recommendation <time datetime="14-08-2017"> 14-08-2017 </time> </h2>
+		<a href="#"> <img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"> </a>
+	</header>
+
+	<nav>
+		<dl>
+			<dt> This version: </dt>
+			<dd> <a href="https://www.w3.org/TR/2017/REC-html52-20171214/"> https://www.w3.org/TR/2017/REC-html52-20171214/ </a> </dd>
+
+			<dt> Latest published version: </dt>
+			<dd> <a href="https://www.w3.org/TR/html/"> https://www.w3.org/TR/html/ </a> </dd>
+
+			<dt> Latest published version of HTML: </dt>
+			<dd> <a href="https://www.w3.org/TR/html/"> </a> https://www.w3.org/TR/html/ </dd>
+
+			<dt>Previous version:</dt>
+			<dd> <a href="https://www.w3.org/TR/2017/PR-html52-20171102/"> https://www.w3.org/TR/2017/PR-html52-20171102/ </a> </dd>
+			<dt> Editor's Draft: </dt>
+			<dd> <a href="https://w3c.github.io/html/">https://w3c.github.io/html/</a> </dd>
+			<dt> Editors: </dt>
+			<dd> <a href="mailto:sfaulkner@paciellogroup.com"> Steve Faulkner </a> (<span>The Paciello Group</span>)</dd>
+			<dd> <a href="mailto:arronei@microsoft.com"> Arron Eicholz </a> (<span>Microsoft</span>)</dd>
+			<dd> <a href="mailto:travil@microsoft.com"> Travis Leithead </a> (<span>Microsoft</span>)</dd>
+			<dt> Others: </dt>
+			<dd> <a href="single-page.html">Single page version</a></dd>
+		</dl>
+
+			<p class="errata"><a href="https://github.com/w3c/html/labels/errata"> <strong>Errata</strong> </a> for this document are recorded as Github issues.</p>
+			<p class="translation"> The English version of this specification is the only normative version. Non-normative <a href=""> translations </a> may also be available. </p>
+			<p class="copyright"> <a href=""> Copyright </a> © 2017 <a href=""> W3C® </a> (
+				<a href="">MIT</a>, 
+				<a href="">ERCIM</a>, 
+				<a href="">Keio</a>, 
+				<a href="">Beihang</a>). 
+				W3C 
+				<a href="">liability</a>, 
+				<a href="">trademark</a> and 
+				<a href="">document use</a> rules apply. </p>
+
+			<hr class="header-horizontal-line">
+	</nav>
+
+	<main>
+		<h1> Abstract </h1>
+		<p> This specification defines the 5th major version, second minor revision of the core language of the World Wide Web: the Hypertext Markup Language (HTML). In this version, new features continue to be introduced to help Web application authors, new elements continue to be introduced based on research into prevailing authoring practices, and special attention continues to be given to defining clear conformance criteria for user agents in an effort to improve interoperability.  </p>
+
+		<h1> Status of this document </h1>
+		<p> <em> This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium"> W3C </abbr> publications and the latest revision of this technical report can be found in the <a href=""> <abbr title="World Wide Web Consortium">W3C </abbr> technical reports index </a> at https://www.w3.org/TR.</em> </p>
+
+		<p> This document was published by the <a href=""> Web Platform Working Group</a> as a W3C Recommendation for HTML 5.2 that would obsolete the <a href="">HTML 5.1 Recommendation</a>. </p>
+
+		<p> All interested parties are invited to provide implementation and bug reports and other comments through the Working Group's <a href="">Issue tracker</a>. These will generally be considered in the development of HTML 5.3. </p>
+
+		<p> The <a href="">implementation report</a> produced for this version demonstrates that in almost every case changes are matched by interoperable implementation. </p>
+
+		<p>This document has been reviewed by <abbr title="World Wide Web Consortium">W3C </abbr> Members, by software developers, and by other <abbr title="World Wide Web Consortium">W3C </abbr> groups and interested parties, and is endorsed by the Director as a <abbr title="World Wide Web Consortium">W3C </abbr> Recommendation. It is a stable document and may be used as reference material or cited from another document. <abbr title="World Wide Web Consortium">W3C </abbr>'s role in making the Recommendation is to draw attention to the specification and to promote its widespread deployment. This enhances the functionality and interoperability of the Web. </p>
+
+		<p>This document was produced by a group operating under the <a href="">W3C Patent Policy</a>. W3C maintains a <a href="">public list of any patent disclosures</a> made in connection with the deliverables of the group; that page also includes instructions for disclosing a patent. An individual who has actual knowledge of a patent which the individual believes contains <a href="">Essential Claim(s)</a> must disclose the information in accordance with <a href="">section 6 of the W3C Patent Policy</a>. </p>
+
+		<p> This document is governed by the 1 March 2017 <a href=""><abbr title="World Wide Web Consortium">W3C </abbr> Process Document</a>. </p>
+	</main>
+
+	<nav id="table-of-contents">
+		<h1> Table of contents </h1>
+
+		<ol>
+			<li> 
+				<a> Introduction </a>
+				<ol> 
+					<li> <a> Background </a> </li>
+					<li> <a> Audience </a> </li>
+					<li> <a> Scope </a> </li>
+					<li> <a> History </a> </li>
+					<li> 
+						<a> Design notes</a>
+						<ol>
+							<li> <a> Serializability of scirpt execution </a> </li>
+							<li> <a> Compliance with other specifications </a> </li> 
+							<li> <a> Extensibility </a> </li>
+						</ol>
+					</li>
+					<li> <a> HTML vx XML Syntax </a> </li>
+					<li> 
+						<a> Structure of this specification </a>
+						<ol>
+							<li> <a> How to read this spcification </a> </li>
+							<li> <a> Typographic conventions </a> </li>
+						</ol>
+					</li>
+				</ol>
+			</li>
+
+			<li> 
+				<a> Common infrastructure </a>
+				<ol> 
+					<li> 
+						<a> Terminology </a>
+						<ol> 
+							<li> <a> Resources </a> </li>
+							<li> <a> XML Compatibility </a> </li>
+							<li> <a> DOM Trees </a> </li>
+						</ol>
+					</li>
+				</ol>
+			</li>
+
+			<li>
+				<a> Semantics, structure, and APIs of HTML documents </a>
+				<ol> 
+					<li> <a> Documents </a> </li>
+					<li> <a> Audience </a> </li>
+					<li> <a> Scope </a> </li>
+					<li> <a> History </a> </li>
+					<li> 
+						<a> Design notes</a>
+						<ol>
+							<li> <a> Serializability of scirpt execution </a> </li>
+							<li> <a> Compliance with other specifications </a> </li> 
+							<li> <a> Extensibility </a> </li>
+						</ol>
+					</li>
+					<li> <a> HTML vx XML Syntax </a> </li>
+					<li> 
+						<a> Structure of this specification </a>
+						<ol>
+							<li> <a> How to read this spcification </a> </li>
+							<li> <a> Typographic conventions </a> </li>
+						</ol>
+					</li>
+				</ol>
+			</li>
+	</nav>
+	
+</body>
+</html>

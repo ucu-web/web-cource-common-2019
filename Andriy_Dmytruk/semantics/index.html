@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> Inbox </title>
+	<meta charset="UTF-8">
+  	<meta name="description" content="Gmail is a Google service for sending emails.">
+  	<meta name="keywords" content="Gmail,mail,email,letter,send,inbox">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link type="text/css" rel="stylesheet" href="style.css">
+	<link type="text/css" rel="stylesheet" href="header.css">
+	<link type="text/css" rel="stylesheet" href="main.css">
+</head>
+<body>
+	<!-- The topbar -->
+	<header>
+		<button id="show-menu" class="round"></button>
+		<a id="logo" href="/" aria-label="Gmail logo">
+			<img src="images/logo.png" alt="logo">
+		</a>
+
+		<form id="header-search" action="/search" method="get">
+			<button id="header-search-submit" class="round" aria-label="Search"></button>
+
+			<input type="text" name="q" placeholder="Search mail">
+
+			<button id="header-search-clear" class="round" aria-label="Clear search"></button>
+			<button id="header-search-options" class="round" aria-label="Show search options"></button>
+		</form>
+
+		<div id="header-menu">
+			<button id="header-google-apps" class="round" aria-label="Google apps"> </button>
+			<button id="header-notifications" class="round" aria-label="Notifications"> </button>
+
+			<button id="header-account" aria-label="Account" class="round">
+				<img alt="Account image" src="images/account-image.jpg">
+			</button>
+		</div>
+	</header>
+
+	<!-- The bar on the left -->
+	<aside id="sidebar">
+		<!-- compose new button -->
+		<button id="compose-new"> Compose </button>
+
+		<!-- list of navigation items -->
+		<form id="inbox-navigation">
+			<input id="letters-type-inbox" type="radio" name="letters-type" checked>
+			<label for="letters-type-inbox" class="unread"> Inbox </label>
+
+			<input id="letters-type-starred" type="radio" name="letters-type">
+			<label for="letters-type-starred"> Starred </label>
+
+			<input id="letters-type-snoozed" type="radio" name="letters-type">
+			<label for="letters-type-snoozed"> Snoozed </label>
+
+			<input id="letters-type-sent" type="radio" name="letters-type">
+			<label for="letters-type-sent"> Sent </label>
+
+			<input id="letters-type-drafts" type="radio" name="letters-type">
+			<label for="letters-type-drafts" class="unread"> Drafts </label>
+
+			<button id="letters-type-more"> More </button>
+		</form>
+
+		<!-- the block at the bottom of the sidebar -->
+		<div id="sidebar-social">
+			<div id="sidebar-social-nav">
+				<button id="sidebar-social-hangouts-contacts" aria-label="Hangouts contacts" role="tab"> </button>
+				<button id="sidebar-social-hangouts-conversations" aria-label="Hangouts conversations" role="tab"> </button>
+				<button id="sidebar-social-phone-calls" aria-label="Phone calls" role="tab"> </button>
+			</div>
+		</div>
+	</aside>
+
+	<section id="letters-container">
+		<div id="letters-controls">
+			<div id="letters-selection-container">
+				<input id="letters-select-all" type="checkbox">
+				<label for="letters-select-all" aria-label="Select all" class="squared"></label>
+				<button id="letters-select-custom" aria-label="Custom select" class="squared narrow"> </button>
+			</div>
+
+			<button id="letters-refresh" class="round" aria-label="Refresh"></button>
+			<button id="letters-options" class="round" aria-label="Options"></button>
+
+			<div id="letters-split"> </div>
+
+			<button class="squared text-container"> 1-50 of 994 </button>
+			<button id="letters-newer" class="round" aria-label="Newer" disabled></button>
+			<button id="letters-older" class="round" aria-label="Older"></button>
+
+			<button id="letters-input-tools" class="squared text-container" aria-label="Input tools on/off (Ctrl-Shift-K)"> En </button>
+			<button id="letters-input-tools-select" class="squared narrow" aria-label="Select input tool"></button>
+
+			<button id="letters-settings" class="round" aria-label="Settings"></button>
+		</div>
+
+		<main>
+			<!-- The bar on the top with links to different letter-lists -->
+			<nav id="letters-nav">
+				<input id="letters-nav-primary" name="letters-nav" type="radio" checked role="tab">
+				<label for="letters-nav-primary" class="nav-item selected"> Primary </label>
+
+				<input id="letters-nav-social" name="letters-nav" type="radio" role="tab">
+				<label for="letters-nav-social" class="nav-item"> Social </label>
+
+				<input id="letters-nav-promotions" name="letters-nav" type="radio" role="tab">
+				<label for="letters-nav-promotions" class="nav-item"> Promotions </label>
+			</nav>
+
+			<!-- Letters -->
+			<table id="letters-table">
+				<tr class="letter">
+					<td class="select" id="12345">
+						<input id="12345-select" type="checkbox">
+						<label for="12345-select" class="round letter-select" aria-label="select"> </label>
+					</td>
+					<td class="favourite">
+						<input id="12345-favourite" type="checkbox">
+						<label for="12345-favourite" class="round letter-favourite" aria-label="favourite"> </label>
+					</td>
+
+					<td class="title"> Bitbucket </td>
+					<td class="details"> Welcome to Bitbucket! - Get started with your teammates doing some stuff. </td>
+					<td class="time"> <time datetime="2019-12-2 17:13"> 17:13 </time> </td>
+				</tr>
+
+				<tr class="letter unread" id="12346">
+					<td class="select">
+						<input id="12346-select" type="checkbox">
+						<label for="12346-select" class="round letter-select" aria-label="select"> </label>
+					</td>
+					<td class="favourite">
+						<input id="12346-favourite" type="checkbox">
+						<label for="12346-favourite" class="round letter-favourite" aria-label="favourite"> </label>
+					</td>
+
+					<td class="title"> Bitbucket </td>
+					<td class="details"> Welcome to Bitbucket! - Get started with your teammates doing some stuff. </td>
+					<td class="time"> <time datetime="2019-12-2 17:13"> 17:13 </time> </td>
+				</tr>
+
+				<tr class="letter" id="12347">
+					<td class="select">
+						<input id="12347-select" type="checkbox">
+						<label for="12347-select" class="round letter-select" aria-label="select"> </label>
+					</td>
+					<td class="favourite">
+						<input id="12347-favourite" type="checkbox">
+						<label for="12347-favourite" class="round letter-favourite" aria-label="favourite"> </label>
+					</td>
+
+					<td class="title"> Bitbucket </td>
+					<td class="details"> Welcome to Bitbucket! - Get started with your teammates doing some stuff. </td>
+					<td class="time"> <time datetime="2019-12-2 17:13"> 17:13 </time> </td>
+				</tr>
+
+				<tr class="letter" id="12348">
+					<td class="select">
+						<input id="12348-select" type="checkbox">
+						<label for="12348-select" class="round letter-select" aria-label="select"> </label>
+					</td>
+					<td class="favourite">
+						<input id="12348-favourite" type="checkbox">
+						<label for="12348-favourite" class="round letter-favourite" aria-label="favourite"> </label>
+					</td>
+
+					<td class="title"> Bitbucket </td>
+					<td class="details"> Welcome to Bitbucket! - Get started with your teammates doing some stuff. </td>
+					<td class="time"> <time datetime="2019-12-2 17:13"> 17:13 </time> </td>
+				</tr>
+			</table>
+
+			<!-- The information at the bottom of the letters list -->
+			<footer>
+				<div class="footer-item">
+					<p> 8.42 GB (56%) of 15 GB used </p>
+					<a href=""> Manage </a>
+				</div>
+
+				<div class="footer-item">
+					<a href=""> Terms </a> <span> • </span>
+					<a href=""> Privacy </a> <span> • </span>
+					<a href=""> Programme Policies </a>
+				</div>
+
+				<div class="footer-item">
+					<p> Last account activity: 24 minutes ago </p>
+					<a href=""> Details </a>
+				</div>
+			</footer>
+		</main>
+	</section>
+
+	<!-- The sidebar on the right with links to google services -->
+	<nav id="services-nav">
+		<a id="service-calendar" href="" class="round" aria-label="Calendar"></a>
+		<a id="service-keep" href="" class="round" aria-label="Keep"></a>
+		<a id="service-tasks" href="" class="round" aria-label="Tasks"></a>
+
+		<hr>
+
+		<button id="services-get" class="round" aria-label="Get add-ons"></button>
+	</nav>
+</body>
+</html>

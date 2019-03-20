@@ -1,0 +1,40 @@
+$grid-columns-number: 12;
+$grid-width: 960px;
+$cell-spacing: 10px;
+
+$cell-width: ($grid-width - $cell-spacing * ($grid-columns-number - 1)) / $grid-columns-number;
+
+
+.Grid {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  &__row {
+    width: $grid-width;
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__cell {
+    @for $index from 1 through $grid-columns-number {
+      &_#{$index} {
+        display: block;
+        width: $cell-width * $index + $cell-spacing * ($index - 1);
+        margin-right: $cell-spacing;
+      }
+    }
+
+    @for $index from 1 through $grid-columns-number - 1 {
+      &_skip_#{$index} {
+        margin-left: $cell-width * $index + $cell-spacing * ($index - 1);
+      }
+    }
+
+    &_last {
+      margin-right: 0;
+    }
+  }
+}

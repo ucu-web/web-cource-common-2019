@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Facebook </title>
+	<meta name="description" content="Facebook is a social networking website.">
+  	<meta name="keywords" content="facebook,social,messages">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+	font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+	margin: 0;
+	background-color: #e9ebee;
+}
+
+header {
+	height: 42px;
+	background-color: #4267b2;
+    border-bottom: 1px solid #29487d;
+    color: #fff;
+}
+
+.center {
+	width: 1012px;
+	height: 100%;
+	float: left;
+
+	display: flex;
+    flex-direction: row;
+}
+.center::before {
+	content: "";
+	display: block;
+	min-width: 0;
+	width: calc(50vw - 506px);
+	height: 100%;
+	float: left;
+}
+
+header h1 {
+	margin: 0;
+	margin-top: 9px;
+}
+
+#search-field {
+	background-color: #fff;
+    border: 1px solid #3b5998;
+    border-radius: 3px;
+    box-sizing: border-box;
+    height: 26px;
+
+    margin: 8px;
+    max-width: 448px;
+
+    overflow: hidden;
+    padding-left: 5px;
+    margin-right: 48px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+}
+#search-field>input[type="text"] {
+	border: none;
+    font-family: inherit;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    width: calc(100% - 48px);
+}
+#search-field>button {
+	margin: 0px;
+	height: 100%;
+	padding: 3px 16px;
+	border: none;
+	background-color: #f5f6f7;
+}
+
+img.large {
+	height: 24px;
+}
+img.medium {
+	height:  16px;
+}
+
+#header-nav {
+	float: right;
+}
+#header-nav ul {
+	list-style-type: none;
+	height: 28px;
+	margin-top: 7px;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+#header-nav li {
+	
+}
+#header-nav li a {
+	text-decoration-line: none;
+	color: #FFF;
+	font-weight: bold;
+}
+
+</style>
+</head>
+<body>
+	<header>
+		<div class="center">
+			<h1 id="logo" arial-label="Facebook">
+				<a href="/"> 
+					<img class="large" src="https://iconsplace.com/wp-content/uploads/_icons/ffffff/256/png/facebook-icon-18-256.png" alt="Facebook-logo"> 
+				</a>
+			</h1>
+
+			<form id="search-field" method="GET" action="/search" aria-label="search field">
+				<input type="text" placeholder="Search" title="q">
+				<button id="search-field-button" aria-label="search">
+					<img src="http://assets.stickpng.com/thumbs/585e4ae1cb11b227491c3393.png" class="medium" alt="Search"> 
+				</button>
+			</form>
+
+			<nav id="header-nav"> 
+				<ul>
+					<li>
+						<a href="">
+							<img class="medium round" src="">
+							Andriy
+						</a>
+					</li>
+
+					<li> <a href=""> Home </a> </li>
+					<li> <a href=""> Create </a> </li>
+
+					<li> 
+						<a href=""> <img src="" class="medium" alt="Friends"> </a>
+					</li>
+					<li>
+						<a href=""> <img src="" class="medium" alt="Messages"> </a>
+					</li>
+					<li>
+						<a href=""> <img src="" class="medium active" alt="Notifications"> </a>
+					</li>
+
+					<li>
+						<a href=""> <img src="" class="medium" alt="Help"> </a>
+					</li>
+					<li>
+						<a href=""> <img src="" class="medium" alt="More"> </a>
+					</li>
+				</ul> 
+			</nav>
+		</div>
+	</header>
+
+	<div class="main-container">
+		<div class="center">
+			<nav class="left-sidebar">
+				<ul class="nav-group">
+					<li>
+						<a href="" class="nav-item" aria-label="User profile">
+							<img src="" class="small round">
+							Andriy Dmytruk
+						</a>
+					</li>
+				</ul>
+
+				<ul class="nav-group">
+					<li>
+						<a href="" class="nav-item" aria-label="News feed">
+							<img src="" class="small" alt="News Feed">
+							News Feed
+						</a>
+					</li>
+
+					<li>
+						<a href="" class="nav-item">
+							<img src="" class="small" alt="Messeger">
+							Messeger
+						</a>
+					</li>
+
+					<li>
+						<a href="" class="nav-item">
+							<img src="" class="small" alt="Watch">
+							Watch
+						</a>
+					</li>
+				</ul>
+
+				<h2> Shortcuts </h2>
+				<ul class="nav-group">
+					<li>
+						<a href="" class="nav-item">
+							<img src="" class="small" alt="Some Website">
+							Some Website
+						</a>
+					</li>
+				</ul>
+
+				<h2> Explore </h2>
+				<ul class="nav-group">
+					<li>
+						<a class="nav-item">
+							<img src="" class="small" alt="Groups">
+							Groups
+						</a>
+					</li>
+				</ul>
+			</nav>
+
+			<main role="main">
+				<form class="main-item" id="create-post">
+					<legend> <h1> Create post </h1> </legend>
+					<div class="content">
+						<div class="horizontal-container large">
+							<img class="large round">
+							<p> What's on your mind, Andriy? </p>
+						</div>
+						<hr> 
+						<div class="horizontal-container">
+							<button class="rounded"> 
+								<img class="small"> 
+								Photo/Video
+							</button>
+							<button class="rounded">
+								<img class="small">
+								Tag friends
+							</button>
+						</div>
+					</div>
+				</form>
+
+				<article class="post">
+					<div class="horizontal-container">
+						<a href="" rel="author"> 
+							<img src="" class="large round">
+						</a>
+						<div class="author">
+							<a href="" rel="author"> Ivan Ivanovich </a>
+							<time datetime="12-01-2019"> </time>
+						</div>
+					</div>
+
+					<div class="post-content">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p>
+					</div>
+
+					<aside class="post-feedback">
+						<img src="" class="small">
+						<span> You and 300 others </span>
+					</aside>
+
+					<hr>
+
+					<aside class="post-user-feedback">
+						<button class="feedback-button">
+							<img src="" class="medium">
+							Like
+						</button>
+
+						<button class="feedback-button">
+							<img src="" class="medium">
+							Comment
+						</button>
+
+						<button class="feedback-button">
+							<img src="" class="medium">
+							<p> Share </p>
+						</button>
+					</aside>
+				</article>
+			</main>
+
+			<aside id="right-sidebar">
+				<div class="container" id="language-select">
+					<ul id="language-container">
+						<li> <a href=""> English (UK) </a> </li>
+						<li> <a href=""> English (US) </a> </li>
+						<li> <a href=""> Українська </a> </li>
+						<li> <a href=""> Русский </a> </li>
+					</ul>
+
+					<button id="language-add"> 
+						<img src="" class="medium">
+					</button> 
+				</div>
+
+				<footer class="container">
+					<ul id="footer-links">
+						<li> <a href=""> Privacy </a> </li>
+						<li> <a href=""> Terms  </a> </li>
+						<li> <a href=""> Advertising </a> </li>
+						<li> <a href=""> AdChoices </a> </li>
+						<li> <a href=""> Cookies </a> </li>
+						<li> <a href=""> More </a> </li>
+					</ul>
+					<b> Facebook © 2019 </b>
+				</footer>
+			</aside>
+		</div>
+
+		<aside id="friends-list">
+			<ul>
+				<li class="friend">
+					<a href="">
+						<img src="" class="medium round">
+						<p class="title"> Friend 1 </p>
+						<div class="status"> </div>
+					</a>
+				</li>
+
+				<li class="friend">
+					<a href="">
+						<img src="" class="medium round">
+						<p class="title"> Friend 2 </p>
+						<div class="status"> </div>
+					</a>
+				</li>
+			</ul>
+
+			<form id="friends-search">
+				<img src="" class="small">
+				<input type="text" placeholder="Search">
+
+				<button class="friends-search-button" data-alt="Options">
+					<img src="" class="small">
+				</button>
+				<button class="friends-search-button" data-alt="New message">
+					<img src="" class="small">
+				</button>
+				<button class="friends-search-button" data-alt="Create new group">
+					<img src="" class="small">
+				</button>
+			</form>
+		</aside>
+	</div>
+</body>
+</html>
