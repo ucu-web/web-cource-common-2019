@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    height: 53px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.header__wrapper {
+    max-width: 980px;
+    height: 100%;
+    padding: 0 10px;
+    margin: auto;
+    font-size: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content {
+    max-width: 980px;
+    padding: 0 10px;
+    margin: 10px auto 0;
+    height: 1000px;
+    display: flex;
+    justify-content: space-between;
+    background-color: tomato;
+}
+
+.news-feed {
+    width: 600px;
+    height: 100px;
+    background-color: aquamarine;
+}
+
+.secondary-content {
+    width: 360px;
+    height: 200px;
+    background-color: brown;
+}

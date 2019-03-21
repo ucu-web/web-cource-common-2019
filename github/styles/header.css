@@ -10,10 +10,12 @@ header {
     align-items: center;
 }
 
+.header__wrapper
+
 .header__wrapper h1 {
     content: "";
     width: 32px;
     height: 32px;
-    background: url("../img/GitHubIcon.svg");
+    background: url("../images/GitHubIcon.svg");
     margin: 0;
 }

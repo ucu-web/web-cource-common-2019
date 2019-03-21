@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home / Twitter</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/nav-menu.css">
+    <link rel="stylesheet" href="styles/search-form.css">
+    <link rel="stylesheet" href="styles/profile-button.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__wrapper">
+            <nav class="nav-menu">
+                <a class="nav-menu__item--active" href="" aria-label="Home">
+                    <img class="nav-menu__image" src="/images/home-active.svg" alt="">
+                </a>
+                <a class="nav-menu__item" href="" aria-label="Explore">
+                    <img class="nav-menu__image" src="/images/grid.svg" alt="">
+                </a>
+                <a class="nav-menu__item" href="" aria-label="Notifications">
+                    <img class="nav-menu__image" src="/images/bell.svg" alt="">
+                </a>
+                <a class="nav-menu__item" href="" aria-label="Messages">
+                    <img class="nav-menu__image" src="/images/message.svg" alt="">
+                </a>
+            </nav>
+            <form action="/search" class="search-form">
+                <img class="search-form__image" src="/images/search.svg" alt="">
+                <input type="text" placeholder="Search Twitter" class="search-form__field">
+            </form>
+            <button class="profile-button">
+                <img class="profile-button__avatar" src="/images/avatar.jpg" alt="">
+                <h2 class="profile-button__title">Vitaliy Vorobyov</h2>
+                <img class="profile-button__icon" src="/images/dropdown.svg" alt="">
+            </button>
+        </div>
+    </header>
+    <main class="content">
+        <article class="news-feed">
+            <header class="news-feed__header">
+                <h2 class="news-feed__title">Home</h2>
+                <button></button>
+            </header>
+            <div class="news-feed__tweets">
+                
+            </div>
+        </article>
+        <aside class="secondary-content">
+            
+        </aside>
+    </main>
+</body>
+</html>
