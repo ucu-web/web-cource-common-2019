@@ -1,0 +1,18 @@
+.course__logo {
+  vertical-align: middle;
+  height: 43px;
+}
+.course__logo_color-red {
+  color: #e20016;
+  fill: #e20016;
+}
+.course__logo_big-size {
+  height: 54px;
+}
+.course__general-info {
+  font-size: 70px;
+}
+.course__announce-label_bold {
+  font-weight: 700;
+}
+/*# sourceMappingURL=course.css.map */
