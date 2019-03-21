@@ -158,7 +158,9 @@ const partition = (arr, low, high) => {
 
 // Random Quicksort
 
-const randomQuicksort = (arr) => {
+const randomQuicksort = () => {
+
+
 
 };
 
@@ -221,7 +223,8 @@ let arrSelectionSort   = [...arr];
 let arrCountingSort    = [...arr];
 let arrRadixSort       = [...arr];
 
-console.log(arr);
+console.log("Start Array: ", arr);
+console.log("\n");
 
 bubbleSort(arrBubbleSort);
 // mergeSort(arrMergeSort);
