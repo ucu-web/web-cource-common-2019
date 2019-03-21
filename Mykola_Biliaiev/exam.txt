@@ -1,8 +1,0 @@
-What does * { box-sizing: border-box; } do? What are its advantages?
-За умовчуванням: падінг та бордера впливають на ширину блоку, проте якщо поставити border-box;, ці значення входитиму у розміра блоку, це дуже корисно, якщо у нас є чітка ширина, і ми не хочемо мучитись з зменшенням збільшення ширини чи висоти блоку
-
-Have you used or implemented media queries or mobile specific layouts/CSS?
-Так, із їх допомогою можна вказати чітко на якому розмірі екрану, які слід виконувати проперті в css
-Can you explain the difference between coding a web site to be responsive versus using a mobile-first strategy?
-Респонсів сайт мусить підтримуватись на всіх екранах без примусового вказання всіх деталей стилів для кожного девайсу,
-mobile-first в свою чергу ж, заставляє писати media queries для кожного екрану і треба іти від меншого до більшого (телефон,планшет, пк ..,)
