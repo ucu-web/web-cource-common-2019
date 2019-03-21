@@ -24,18 +24,18 @@
         background: #2980b9;
         grid-column-end: span @count;
         align-self: start;
-        &_parent{
+        &_parent {
           display: grid;
-          grid-template-columns: repeat(@count,1fr);
-          grid-column-gap:@cell-margin;
+          grid-template-columns: repeat(@count, 1fr);
+          grid-column-gap: @cell-margin;
         }
       }
     }
     .cells(12);
-    .pushes(@ind) when (@ind >0) {
-      .pushes((@ind - 1));
-      &_push-@{ind} {
-        grid-column-start: @ind+1;
+    .pushes(@count) when (@count >0) {
+      .pushes((@count - 1));
+      &_push-@{count} {
+        grid-column-start: @count+1;
       }
     }
     .pushes(11);
