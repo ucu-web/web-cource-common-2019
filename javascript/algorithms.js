@@ -158,9 +158,51 @@ const partition = (arr, low, high) => {
 
 // Random Quicksort
 
-const randomQuicksort = () => {
+const randomQuicksort = (arr) => {
 
+    let low = 0;
+    let high = arr.length - 1;
 
+    randomQuicksortMain(arr, low, high);
+
+};
+
+const randomQuicksortMain = (arr, low, high) => {
+
+    if (low < high) {
+        let pi = randomizedPartition(arr, low, high);
+
+        randomQuicksortMain(arr, low, pi-1);
+        randomQuicksortMain(arr, pi+1, high);
+    }
+
+};
+
+const randomizedPartition = (arr, low , high) => {
+
+    let randomIndex = Math.floor(Math.random()*(high-low+1)+low);
+
+    let temp = arr[randomIndex];
+    arr[randomIndex] = arr[high];
+    arr[high] = temp;
+
+    let pivot = arr[high];
+    let i = low - 1;
+
+    for (let j = low; j < high; j++) {
+        if (arr[j] <= pivot) {
+            i++;
+            let temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+    }
+
+    temp = arr[i+1];
+    arr[i+1] = arr[high];
+    arr[high] = temp;
+
+    return i+1;
 
 };
 
