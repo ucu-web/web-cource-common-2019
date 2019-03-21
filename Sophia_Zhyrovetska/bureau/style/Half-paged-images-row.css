@@ -4,6 +4,9 @@
 .Half-paged-images-row__image {
   width: 100%;
 }
+.Half-paged-images-row__image--bigger {
+  width: 105%;
+}
 .Half-paged-images-row__image--inside {
   position: absolute;
   top: -9.8%;

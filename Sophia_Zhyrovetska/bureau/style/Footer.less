@@ -1,0 +1,50 @@
+@import "variables";
+
+.Footer {
+  &__column {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+  }
+
+  &__title {
+    margin: 0 0 20px 0;
+    font-weight: normal;
+  }
+
+  &__link {
+    width: 45%;
+  }
+  &__icons {
+    display: flex;
+    margin-top: 38px;
+  }
+  &__social-network {
+    width: 31px;
+    height: 31px;
+    margin-right: 9px;
+    &--text {
+      fill: white;
+    }
+  }
+
+  &__language {
+    width: 31px;
+    height: 28px;
+    display: flex;
+    margin-left: 9px;
+    color: @key-color;
+    border-bottom: 3px solid transparent;
+
+    &--active {
+      color: @text-color;
+      border-bottom: 3px solid @text-color;
+    }
+  }
+
+  &__language-text {
+    text-transform: uppercase;
+    font-size: 26px;
+    margin-top: -4px;
+  }
+}

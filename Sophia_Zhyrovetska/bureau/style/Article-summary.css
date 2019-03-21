@@ -1,12 +1,19 @@
 .Article-summary {
-  font-size: 21px;
+  font-size: 19px;
 }
 .Article-summary__title {
   margin: 27px 0 11px 0;
 }
+.Article-summary__title--important {
+  font-size: 36px;
+  width: 13.97em;
+}
 .Article-summary__text {
   font-weight: lighter;
   margin: -6px 0 0 0;
+}
+.Article-summary__text--important {
+  font-size: 36px;
 }
 .Article-summary__figure {
   margin: 0;
@@ -15,7 +22,16 @@
   width: 252px;
   height: 252px;
 }
+.Article-summary__image--wide {
+  width: 320px;
+  height: 188px;
+}
 .Article-summary__figcaption {
   font-size: 15px;
+}
+.Article-summary__link--footer {
+  display: block;
+  width: 16em;
+  margin-top: 12.38rem;
 }
 /*# sourceMappingURL=Article-summary.css.map */

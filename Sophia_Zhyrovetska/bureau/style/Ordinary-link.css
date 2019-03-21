@@ -8,6 +8,10 @@
   font-weight: lighter;
   font-size: 15px;
 }
+.Ordinary-link--key-color {
+  color: #e20016;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.07) 0, rgba(0, 0, 0, 0.07));
+}
 .Ordinary-link:hover {
   color: #e20016;
   background-image: linear-gradient(180deg, #e20016 0, #e20016);

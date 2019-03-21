@@ -1,12 +1,21 @@
 .Article-summary {
-  font-size: 21px;
+  font-size: 19px;
 
   &__title {
     margin: 27px 0 11px 0;
+
+    &--important {
+      font-size: 36px;
+      width: 13.97em;
+    }
   }
-  &__text{
+  &__text {
     font-weight: lighter;
     margin: -6px 0 0 0;
+
+    &--important {
+      font-size: 36px;
+    }
   }
   &__figure {
     margin: 0;
@@ -14,8 +23,21 @@
   &__image {
     width: 252px;
     height: 252px;
+
+    &--wide {
+      width: 320px;
+      height: 188px;
+    }
   }
   &__figcaption {
     font-size: 15px;
+  }
+
+  &__link {
+    &--footer {
+      display: block;
+      width: 16em;
+      margin-top: 12.38rem;
+    }
   }
 }

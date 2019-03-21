@@ -1,0 +1,42 @@
+.Footer__column {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+}
+.Footer__title {
+  margin: 0 0 20px 0;
+  font-weight: normal;
+}
+.Footer__link {
+  width: 45%;
+}
+.Footer__icons {
+  display: flex;
+  margin-top: 38px;
+}
+.Footer__social-network {
+  width: 31px;
+  height: 31px;
+  margin-right: 9px;
+}
+.Footer__social-network--text {
+  fill: white;
+}
+.Footer__language {
+  width: 31px;
+  height: 28px;
+  display: flex;
+  margin-left: 9px;
+  color: #e20016;
+  border-bottom: 3px solid transparent;
+}
+.Footer__language--active {
+  color: #000;
+  border-bottom: 3px solid #000;
+}
+.Footer__language-text {
+  text-transform: uppercase;
+  font-size: 26px;
+  margin-top: -4px;
+}
+/*# sourceMappingURL=Footer.css.map */

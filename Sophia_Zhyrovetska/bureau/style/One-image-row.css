@@ -1,0 +1,19 @@
+.One-image-row__image-container {
+  position: relative;
+}
+.One-image-row__image {
+  width: 100%;
+}
+.One-image-row__image--inside {
+  position: absolute;
+  top: -3%;
+  bottom: 0;
+  left: 1%;
+  right: 0;
+}
+.One-image-row__image--inside--overflowed {
+  width: 104%;
+  top: -5%;
+  left: 0;
+}
+/*# sourceMappingURL=One-image-row.css.map */
