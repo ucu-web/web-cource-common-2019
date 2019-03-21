@@ -1,0 +1,51 @@
+@grid-columns-number: 12;
+@grid-width: 960px;
+@cell-width: 70px;
+@cell-margin: (
+  (@grid-width - (@cell-width * @grid-columns-number))/ (@grid-columns-number -
+        1)
+);
+
+.Grid {
+  width: @grid-width;
+  margin: 0 auto;
+  background: gold;
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(@grid-columns-number, 1fr);
+    grid-column-gap: @cell-margin;
+  }
+
+  &__cell {
+    .cells(@count) when (@count > 0) {
+      .cells((@count - 1));
+      &_@{count} {
+        background: #2980b9;
+        grid-column-end: span @count;
+        align-self: start;
+        &_parent{
+          display: grid;
+          grid-template-columns: repeat(@count,1fr);
+          grid-column-gap:@cell-margin;
+        }
+      }
+    }
+    .cells(12);
+    .pushes(@ind) when (@ind >0) {
+      .pushes((@ind - 1));
+      &_push-@{ind} {
+        grid-column-start: @ind+1;
+      }
+    }
+    .pushes(11);
+
+    &_alpha {
+      margin-left: 0;
+    }
+
+    &_omega {
+      margin-right: 0;
+    }
+  }
+}
