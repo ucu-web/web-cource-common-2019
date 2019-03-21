@@ -52,8 +52,8 @@ const merge = (arr, leftIndex, middleIndex, rightIndex) => {
     let n1 = middleIndex - leftIndex + 1;
     let n2 = rightIndex - middleIndex;
 
-    let left = new arr(n1);
-    let right = new arr(n2);
+    let left = new Array(n1);
+    let right = new Array(n2);
 
     for (let i = 0; i < n1; i++) {
         left[i] = arr[leftIndex + i];
@@ -210,6 +210,27 @@ const randomizedPartition = (arr, low , high) => {
 
 const heapsort = (arr) => {
 
+    let heapSize = arr.length;
+
+    for (let i = Math.floor(heapSize / 2); i > 0 ; i--) {
+        heapify(arr, i);
+    }
+
+    for (let i = arr.length; i > 1 ; i--) {
+        let temp = arr[1];
+        arr[1] = arr[i];
+        arr[i] = temp;
+
+        heapSize = heapSize - 1;
+        heapify(arr, 1);
+    }
+
+};
+
+const heapify = (arr, i) => {
+
+
+
 };
 
 // Shell Sort
@@ -243,6 +264,28 @@ const selectionSort = (arr) => {
 // Counting Sort
 
 const countingSort = (arr) => {
+
+    let k = Math.max(...arr);
+    let n = arr.length;
+    let c = new Array(k);
+    let b = new Array(n-1);
+
+    for (let i = 0; i < k; i++) {
+        c[i] = 0;
+    }
+
+    for (let i = 0; i < n; i++) {
+        c[arr[i]] = c[arr[i]] + 1
+    }
+
+    for (let i = 0; i < k; i++) {
+        c[i] = c[i] + c[i-1]
+    }
+
+    for (let i = n-1; i > 0; i--) {
+        b[c[arr[i]] - 1] = arr[i];
+        c[arr[i]] = c[arr[i]] - 1;
+    }
 
 };
 
@@ -280,7 +323,7 @@ countingSort(arrCountingSort);
 radixSort(arrRadixSort);
 
 console.log("Bubble Sort: ", arrBubbleSort);
-console.log("Merge Sort: ", arrMergeSort);
+// console.log("Merge Sort: ", arrMergeSort);
 console.log("Insertion Sort: ", arrInsertionSort);
 console.log("Quicksort: ", arrQuicksort);
 console.log("Random Quicksort: ", arrRandomQuicksort);
