@@ -37,7 +37,7 @@ const mergeSort = (arr) => {
 const mergeSortMain = (arr, leftIndex, rightIndex) => {
 
     if (leftIndex < rightIndex) {
-        let middleIndex = Math.floor(leftIndex + (rightIndex - 1) / 2);
+        let middleIndex = Math.floor((leftIndex + rightIndex) / 2);
 
         mergeSortMain(arr, leftIndex, middleIndex);
         mergeSortMain(arr, middleIndex + 1, rightIndex);
@@ -210,32 +210,77 @@ const randomizedPartition = (arr, low , high) => {
 
 const heapsort = (arr) => {
 
-    let heapSize = arr.length;
+    let n = arr.length;
 
-    for (let i = Math.floor(heapSize / 2); i > 0 ; i--) {
-        heapify(arr, i);
+    for (let i = n; i > -1; i--) {
+        heapify(arr, n, i);
     }
 
-    for (let i = arr.length; i > 1 ; i--) {
-        let temp = arr[1];
-        arr[1] = arr[i];
-        arr[i] = temp;
+    for (let i = n - 1; i > 0; i--) {
+        let temp = arr[i];
+        arr[i] = arr[0];
+        arr[0] = temp;
 
-        heapSize = heapSize - 1;
-        heapify(arr, 1);
+        heapify(arr, i, 0);
     }
 
 };
 
-const heapify = (arr, i) => {
+const heapify = (arr, n, i) => {
 
+    let largest = i;
+    let left = 2 * i + 1;
+    let right = 2 * i + 2;
 
+    if (left < n && arr[i] < arr[left]) {
+        largest = left
+    }
+
+    if (right < n && arr[largest] < arr[right]) {
+        largest = right;
+    }
+
+    if (largest !== i) {
+        let temp = arr[i];
+        arr[i] = arr[largest];
+        arr[largest] = temp;
+
+        heapify(arr, n, largest);
+    }
 
 };
 
 // Shell Sort
 
 const shellSort = (arr) => {
+
+    let interval = 0;
+
+    while (interval < arr.length / 3) {
+        interval = interval * 3 + 1;
+    }
+
+    while (interval > 0) {
+        for (let i = interval; i < arr.length; i++) {
+            let valueToInsert = arr[i];
+            let inner = i;
+
+            while (inner > interval - 1 && arr[inner - interval] > valueToInsert) {
+                arr[inner] = arr[inner - interval];
+                inner = inner - interval;
+            }
+
+            if (arr[inner - interval] < valueToInsert && inner > interval - 1) {
+            }
+
+            if (arr[inner - interval] === valueToInsert && inner > interval - 1) {
+            }
+
+            arr[inner] = valueToInsert;
+        }
+
+        interval = Math.floor((interval - 1) / 3);
+    }
 
 };
 
@@ -265,26 +310,27 @@ const selectionSort = (arr) => {
 
 const countingSort = (arr) => {
 
-    let k = Math.max(...arr);
-    let n = arr.length;
-    let c = new Array(k);
-    let b = new Array(n-1);
+    let max = Math.max(...arr);
+    let min = Math.min(...arr);
 
-    for (let i = 0; i < k; i++) {
-        c[i] = 0;
+    let count = [];
+
+    for (let i = min; i <= max; i++) {
+        count[i] = 0;
     }
 
-    for (let i = 0; i < n; i++) {
-        c[arr[i]] = c[arr[i]] + 1
+    for (let i = 0; i < arr.length; i++) {
+        count[arr[i]] += 1;
     }
 
-    for (let i = 0; i < k; i++) {
-        c[i] = c[i] + c[i-1]
-    }
+    let j = 0;
 
-    for (let i = n-1; i > 0; i--) {
-        b[c[arr[i]] - 1] = arr[i];
-        c[arr[i]] = c[arr[i]] - 1;
+    for (let i = min; i <= max; i++) {
+        while (count[i] > 0) {
+            arr[j] = i;
+            j++;
+            count[i]--;
+        }
     }
 
 };
@@ -293,9 +339,11 @@ const countingSort = (arr) => {
 
 const radixSort = (arr) => {
 
+
+
 };
 
-let arr = [1, 5, 8, 2, 3, 4, 7, 6, 9, 0];
+let arr = [1, 5, 8, 2, 3, 4, 7, 6, 9, 0, 45, 2, 6, 8, 45, 21];
 
 let arrBubbleSort      = [...arr];
 let arrMergeSort       = [...arr];
@@ -311,24 +359,24 @@ let arrRadixSort       = [...arr];
 console.log("Start Array: ", arr);
 console.log("\n");
 
-bubbleSort(arrBubbleSort);
+// bubbleSort(arrBubbleSort);
 // mergeSort(arrMergeSort);
-insertionSort(arrInsertionSort);
-quickSort(arrQuicksort);
-randomQuicksort(arrRandomQuicksort);
-heapsort(arrHeapsort);
-shellSort(arrShellSort);
-selectionSort(arrSelectionSort);
-countingSort(arrCountingSort);
+// insertionSort(arrInsertionSort);
+// quickSort(arrQuicksort);
+// randomQuicksort(arrRandomQuicksort);
+// heapsort(arrHeapsort);
+// shellSort(arrShellSort);
+// selectionSort(arrSelectionSort);
+// countingSort(arrCountingSort);
 radixSort(arrRadixSort);
 
-console.log("Bubble Sort: ", arrBubbleSort);
+// console.log("Bubble Sort: ", arrBubbleSort);
 // console.log("Merge Sort: ", arrMergeSort);
-console.log("Insertion Sort: ", arrInsertionSort);
-console.log("Quicksort: ", arrQuicksort);
-console.log("Random Quicksort: ", arrRandomQuicksort);
-console.log("Heapsort: ", arrHeapsort);
-console.log("Shell Sort: ", arrShellSort);
-console.log("Selection Sort: ", arrSelectionSort);
-console.log("Counting Sort: ", arrCountingSort);
+// console.log("Insertion Sort: ", arrInsertionSort);
+// console.log("Quicksort: ", arrQuicksort);
+// console.log("Random Quicksort: ", arrRandomQuicksort);
+// console.log("Heapsort: ", arrHeapsort);
+// console.log("Shell Sort: ", arrShellSort);
+// console.log("Selection Sort: ", arrSelectionSort);
+// console.log("Counting Sort: ", arrCountingSort);
 console.log("Radix Sort: ", arrRadixSort);
