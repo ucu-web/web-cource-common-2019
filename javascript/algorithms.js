@@ -335,11 +335,34 @@ const countingSort = (arr) => {
 
 };
 
-// Radix Sort
+// TODO: Radix Sort
 
 const radixSort = (arr) => {
 
 
+
+};
+
+// Binary Search
+
+const binarySearch = (arr, item) => {
+
+    let low = 0;
+    let high = arr.length - 1;
+
+    while (low <= high) {
+        let mid = Math.floor((low + high) / 2);
+
+        if (arr[mid] > item) {
+            high = mid - 1;
+        } else if (arr[mid] < item) {
+            low = mid + 1;
+        } else {
+            return mid;
+        }
+    }
+
+    return null;
 
 };
 
@@ -359,24 +382,26 @@ let arrRadixSort       = [...arr];
 console.log("Start Array: ", arr);
 console.log("\n");
 
-// bubbleSort(arrBubbleSort);
-// mergeSort(arrMergeSort);
-// insertionSort(arrInsertionSort);
-// quickSort(arrQuicksort);
-// randomQuicksort(arrRandomQuicksort);
-// heapsort(arrHeapsort);
-// shellSort(arrShellSort);
-// selectionSort(arrSelectionSort);
-// countingSort(arrCountingSort);
+bubbleSort(arrBubbleSort);
+mergeSort(arrMergeSort);
+insertionSort(arrInsertionSort);
+quickSort(arrQuicksort);
+randomQuicksort(arrRandomQuicksort);
+heapsort(arrHeapsort);
+shellSort(arrShellSort);
+selectionSort(arrSelectionSort);
+countingSort(arrCountingSort);
 radixSort(arrRadixSort);
 
-// console.log("Bubble Sort: ", arrBubbleSort);
-// console.log("Merge Sort: ", arrMergeSort);
-// console.log("Insertion Sort: ", arrInsertionSort);
-// console.log("Quicksort: ", arrQuicksort);
-// console.log("Random Quicksort: ", arrRandomQuicksort);
-// console.log("Heapsort: ", arrHeapsort);
-// console.log("Shell Sort: ", arrShellSort);
-// console.log("Selection Sort: ", arrSelectionSort);
-// console.log("Counting Sort: ", arrCountingSort);
+console.log("Bubble Sort: ", arrBubbleSort);
+console.log("Merge Sort: ", arrMergeSort);
+console.log("Insertion Sort: ", arrInsertionSort);
+console.log("Quicksort: ", arrQuicksort);
+console.log("Random Quicksort: ", arrRandomQuicksort);
+console.log("Heapsort: ", arrHeapsort);
+console.log("Shell Sort: ", arrShellSort);
+console.log("Selection Sort: ", arrSelectionSort);
+console.log("Counting Sort: ", arrCountingSort);
 console.log("Radix Sort: ", arrRadixSort);
+
+console.log(binarySearch(arr, 4));
