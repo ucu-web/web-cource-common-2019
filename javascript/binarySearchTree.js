@@ -46,6 +46,8 @@ class BinarySearchTree {
 
     }
 
+    // TODO: write item deletion
+
     deleteItem(item) {
 
     }
