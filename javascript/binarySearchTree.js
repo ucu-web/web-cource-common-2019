@@ -64,6 +64,58 @@ class BinarySearchTree {
 
     }
 
+    delete() {
+    //    TODO: Write item deletion
+    }
+
+    preOrder(node=this) {
+
+        if (node === null) {
+            return null;
+        } else {
+            console.log(node.data);
+            this.preOrder(node.left);
+            this.preOrder(node.right);
+        }
+
+    }
+
+    inOrder(node=this) {
+
+        if (node === null) {
+            return null;
+        } else {
+            this.inOrder(node.left);
+            console.log(node.data);
+            this.inOrder(node.right);
+        }
+
+    }
+
+    postOrder(node=this) {
+
+        if (node === null) {
+            return null;
+        } else {
+            this.postOrder(node.left);
+            this.postOrder(node.right);
+            console.log(node.data);
+        }
+
+    }
+
+    levelOrder(node=this) {
+
+        if (node === null) {
+            return null;
+        } else {
+            console.log(node.data);
+            console.log(node.left);
+            console.log(node.right);
+        }
+
+    }
+
 }
 
 let bst = new BinarySearchTree(6);
@@ -77,5 +129,9 @@ bst.insert(0);
 bst.insert(23);
 
 bst.search(23);
-
 bst.print();
+bst.preOrder();
+console.log();
+bst.inOrder();
+console.log();
+bst.postOrder();
