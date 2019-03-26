@@ -14,9 +14,6 @@
 .Grid__cell_1{width: calc(100% / 12 * 1); margin: 0 calc((100% - (100% / 12 * 1)) / 11)}
 .Grid__cell_2{width: calc(100% / 12 * 2);}
 .Grid__cell_3{width: calc(100% / 12 * 3);
-    /*width: calc((100% - 20px * 3) / 3);*/
-    /*margin-right: 10px;*/
-    /*margin-left: 10px;*/
 }
 .Grid__cell_4{width: calc(100% / 12 * 4);}
 .Grid__cell_5{width: calc(100% / 12 * 5);}
