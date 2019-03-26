@@ -1,6 +1,6 @@
 // Works only for array of non negative numbers.
 function radixSort(array) {
-    let maxElement = getMaxElement(array), divider = 1;
+    let maxElement = Math.max(...array), divider = 1;
 
     while (maxElement / divider ^ 0 > 0) {
         countingSortByOneDigit(array, divider);
@@ -29,16 +29,4 @@ function countingSortByOneDigit(array, divider) {
     for (let i = 0; i < array.length; ++i) {
         array[i] = sortedArray[i];
     }
-}
-
-function getMaxElement(array) {
-    let result = array[0];
-
-    for (let i = 1; i < array.length; ++i) {
-        if (array[i] > result) {
-            result = array[i];
-        }
-    }
-
-    return result;
 }
