@@ -1,18 +1,27 @@
 // Works only for array of non negative numbers.
+const { getRandomArray, cloneArray } = require("./lib");
+
 function countingSort(array) {
-    if (array.length === 0) return;
+  const sorterArray = cloneArray(array);
 
-    let countingArray = new Array(Math.max(...array) + 1);
-    countingArray.fill(0);
+  if (sorterArray.length === 0) return;
 
-    for(let i = 0; i < array.length; ++i){
-        countingArray[array[i]]++;
+  let countingArray = new Array(Math.max(...sorterArray) + 1);
+  countingArray.fill(0);
+
+  for (let i = 0; i < sorterArray.length; ++i) {
+    countingArray[sorterArray[i]]++;
+  }
+
+  let totalAdded = 0;
+  for (let i = 0; i < countingArray.length; ++i) {
+    for (let j = 0; j < countingArray[i]; ++j) {
+      sorterArray[totalAdded++] = i;
     }
+  }
 
-    let totalAdded = 0;
-    for (let i = 0; i < countingArray.length; ++i) {
-        for (let j = 0; j < countingArray[i]; ++j) {
-            array[totalAdded++] = i;
-        }
-    }
+  return sorterArray;
 }
+
+const a = getRandomArray(10); /*?*/
+countingSort(a); /*?*/

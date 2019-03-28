@@ -3,20 +3,22 @@
 .Footer-block {
   font-size: 15px;
 
-  &__link, &__text {
+  &__text {
     display: block;
   }
 
-  &__link{
+  &__link {
+    display: block;
     color: $key-color;
     text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
-  &__link:hover {
-    text-decoration: underline;
-  }
-
-  &__text--up, &__link--up {
+  &__text--up,
+  &__link--up {
     margin-bottom: 10px;
   }
 

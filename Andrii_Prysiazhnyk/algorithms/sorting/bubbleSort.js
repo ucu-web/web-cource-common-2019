@@ -1,22 +1,24 @@
-function bubbleSort(array, comparisonFunction) {
-    let alreadySorted, i, j;
+const { cloneArray, getRandomArray, swap } = require("./lib");
 
-    for (i = array.length - 1; i > 0; --i) {
-        alreadySorted = true;
+function bubbleSort(array, comparisonFunction = (a, b) => a > b) {
+  let sortedArray = cloneArray(array);
+  let alreadySorted, i, j;
 
-        for (j = 0; j < i; ++j) {
-            if (comparisonFunction(array[j], array[j + 1]) > 0) {
-                swap(array, j, j + 1);
-                alreadySorted = false;
-            }
-        }
+  for (i = sortedArray.length - 1; i > 0; --i) {
+    alreadySorted = true;
 
-        if (alreadySorted) break;
+    for (j = 0; j < i; ++j) {
+      if (comparisonFunction(sortedArray[j], sortedArray[j + 1]) > 0) {
+        swap(sortedArray, j, j + 1);
+        alreadySorted = false;
+      }
     }
+
+    if (alreadySorted) return sortedArray;
+  }
+
+  return sortedArray;
 }
 
-function swap(array, first_index, second_index) {
-    let temporary = array[first_index];
-    array[first_index] = array[second_index];
-    array[second_index] = temporary;
-}
+const a = getRandomArray(10); /*?*/
+bubbleSort(a) /*?*/
