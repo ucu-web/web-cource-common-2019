@@ -1,6 +1,0 @@
-What does * { box-sizing: border-box; } do? What are its advantages?
-
-В загальному box-sizing: border-box міняє  як будуть обраховуватится height і width(border i padding також враховуються в цих обрахунках), а саме: height обраховується тепер додавання до висоти content area вертикальних padding`ів та border`ів.
-
-
-
