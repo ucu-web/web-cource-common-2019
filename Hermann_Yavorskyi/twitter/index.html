@@ -1,680 +1,683 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8"/>
     <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-      crossorigin="anonymous"
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+            integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+            crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="styles/trends.css" />
-    <link rel="stylesheet" href="styles/search-form.css" />
-    <link rel="stylesheet" href="styles/statistic.css" />
-    <link rel="stylesheet" href="styles/other-contacts.css" />
-    <link rel="stylesheet" href="styles/suggested.css" />
-    <link rel="stylesheet" href="styles/recommendations-header.css" />
-    <link rel="stylesheet" href="styles/right-aside-wrapper.css" />
-    <link rel="stylesheet" href="styles/recommendations.css" />
-    <link rel="stylesheet" href="styles/tweet-header.css" />
-    <link rel="stylesheet" href="styles/tweet-form.css" />
-    <link rel="stylesheet" href="styles/tweet-footer.css" />
-    <link rel="stylesheet" href="styles/tweet.css" />
-    <link rel="stylesheet" href="styles/news-feed.css" />
-    <link rel="stylesheet" href="styles/left-aside-wrapper.css" />
-    <link rel="stylesheet" href="styles/account.css" />
-    <link rel="stylesheet" href="styles/main-page.css" />
-    <link rel="stylesheet" href="styles/global-actions.css" />
-    <link rel="stylesheet" href="styles/layout.css" />
-    <link rel="stylesheet" href="styles/site-navigation.css" />
-    <link rel="stylesheet" href="styles/common.css" />
-    <link rel="stylesheet" href="styles/header.css" />
-    <link rel="stylesheet" href="styles/copyright.css" />
+    <link rel="stylesheet" href="styles/trends.css"/>
+    <link rel="stylesheet" href="styles/search-form.css"/>
+    <link rel="stylesheet" href="styles/statistic.css"/>
+    <link rel="stylesheet" href="styles/other-contacts.css"/>
+    <link rel="stylesheet" href="styles/suggested.css"/>
+    <link rel="stylesheet" href="styles/recommendations-header.css"/>
+    <link rel="stylesheet" href="styles/right-aside-wrapper.css"/>
+    <link rel="stylesheet" href="styles/recommendations.css"/>
+    <link rel="stylesheet" href="styles/tweet-header.css"/>
+    <link rel="stylesheet" href="styles/tweet-form.css"/>
+    <link rel="stylesheet" href="styles/tweet-footer.css"/>
+    <link rel="stylesheet" href="styles/tweet.css"/>
+    <link rel="stylesheet" href="styles/news-feed.css"/>
+    <link rel="stylesheet" href="styles/left-aside-wrapper.css"/>
+    <link rel="stylesheet" href="styles/account.css"/>
+    <link rel="stylesheet" href="styles/main-page.css"/>
+    <link rel="stylesheet" href="styles/global-actions.css"/>
+    <link rel="stylesheet" href="styles/layout.css"/>
+    <link rel="stylesheet" href="styles/site-navigation.css"/>
+    <link rel="stylesheet" href="styles/common.css"/>
+    <link rel="stylesheet" href="styles/header.css"/>
+    <link rel="stylesheet" href="styles/copyright.css"/>
     <link
-      rel="shortcut icon"
-      href="//abs.twimg.com/favicons/favicon.ico"
-      type="image/x-icon"
+            rel="shortcut icon"
+            href="//abs.twimg.com/favicons/favicon.ico"
+            type="image/x-icon"
     />
     <title>Twitter</title>
-  </head>
-  <body>
-    <div class="Layout">
-      <header class="layout__header">
+</head>
+<body>
+<div class="Layout">
+    <header class="layout__header">
         <div class="header">
-          <nav class="site-navigation">
-            <a
-              href=""
-              class="site-navigation__link site-navigation__link_active"
-            >
-              <svg
-                class="site-navigation__icon Site-navigation__icon_active"
-                viewBox="0 0 24 24"
-              >
-                <g>
-                  <path
-                    d="M22.58 7.35L12.475 1.897a1 1 0 0 0-.95 0L1.425 7.35A1.002 1.002 0 0 0 1.9 9.231c.16 0 .324-.038.475-.12l.734-.396 1.59 11.25c.216 1.214 1.31 2.062 2.66 2.062h9.282c1.35 0 2.444-.848 2.662-2.088l1.588-11.225.737.398a1 1 0 0 0 .95-1.759zM12 15.435a3.25 3.25 0 1 1 0-6.5 3.25 3.25 0 0 1 0 6.5z"
-                  ></path>
-                </g>
-              </svg>
-              <span>Home</span>
-            </a>
-            <a
-              href=""
-              class="site-navigation__link site-navigation__link_wider"
-            >
-              <svg class="site-navigation__icon" viewBox="0 0 24 24">
-                <g>
-                  <path
-                    d="M21.697 16.468c-.02-.016-2.14-1.64-2.103-6.03.02-2.532-.812-4.782-2.347-6.335C15.872 2.71 14.01 1.94 12.005 1.93h-.013c-2.004.01-3.866.78-5.242 2.174-1.534 1.553-2.368 3.802-2.346 6.334.037 4.33-2.02 5.967-2.102 6.03a.75.75 0 0 0 .447 1.353h4.92c.102 2.31 1.997 4.16 4.33 4.16s4.226-1.85 4.327-4.16h4.922c.322 0 .61-.206.71-.514a.747.747 0 0 0-.263-.838zM12 20.478a2.84 2.84 0 0 1-2.828-2.658h5.656c-.1 1.48-1.323 2.66-2.828 2.66zM4.38 16.32c.74-1.132 1.548-3.028 1.524-5.896-.018-2.16.644-3.982 1.913-5.267C8.91 4.05 10.397 3.437 12 3.43c1.603.008 3.087.62 4.18 1.728 1.27 1.285 1.933 3.106 1.915 5.267-.024 2.868.785 4.765 1.525 5.896H4.38z"
-                  ></path>
-                </g>
-              </svg>
-              <span>Notifications</span>
-            </a>
-            <button class="site-navigation__button">
-              <svg class="site-navigation__icon" viewBox="0 0 24 24">
-                <g>
-                  <path
-                    d="M19.25 3.018H4.75A2.753 2.753 0 0 0 2 5.77v12.495a2.754 2.754 0 0 0 2.75 2.753h14.5A2.754 2.754 0 0 0 22 18.265V5.77a2.753 2.753 0 0 0-2.75-2.752zm-14.5 1.5h14.5c.69 0 1.25.56 1.25 1.25v.714l-8.05 5.367a.81.81 0 0 1-.9-.002L3.5 6.482v-.714c0-.69.56-1.25 1.25-1.25zm14.5 14.998H4.75c-.69 0-1.25-.56-1.25-1.25V8.24l7.24 4.83a2.265 2.265 0 0 0 2.52.001l7.24-4.83v10.022c0 .69-.56 1.25-1.25 1.25z"
-                  ></path>
-                </g>
-              </svg>
-              <span>Messages</span>
-            </button>
-          </nav>
-          <h1>
-            <img
-              class="header__logo"
-              src="images/twitter-logo.png"
-              alt="Twitter"
-            />
-            <span hidden="">Twitter</span>
-          </h1>
-          <div class="global-actions">
-            <form action="search" class="global-actions__search-form">
-              <input
-                type="text"
-                placeholder="Search Twitter"
-                class="search-form__input"
-              />
-              <button class="search-form__button" aria-label="search">
-                <svg
-                  class="search-form__icon"
-                  aria-hidden="true"
-                  focusable="false"
-                  data-prefix="fal"
-                  data-icon="search"
-                  role="img"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512 512"
+            <nav class="site-navigation">
+                <a
+                        href=""
+                        class="site-navigation__link site-navigation__link_active"
                 >
-                  <path
-                    fill="currentColor"
-                    d="M508.5 481.6l-129-129c-2.3-2.3-5.3-3.5-8.5-3.5h-10.3C395 312 416 262.5 416 208 416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c54.5 0 104-21 141.1-55.2V371c0 3.2 1.3 6.2 3.5 8.5l129 129c4.7 4.7 12.3 4.7 17 0l9.9-9.9c4.7-4.7 4.7-12.3 0-17zM208 384c-97.3 0-176-78.7-176-176S110.7 32 208 32s176 78.7 176 176-78.7 176-176 176z"
-                    class=""
-                  ></path>
-                </svg>
-              </button>
-            </form>
-            <button class="global-actions__profile-button">
-              <img
-                class="global-actions__profile-button-avatar"
-                src="https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png"
-                alt="Profile and settings"
-              />
-            </button>
-            <button class="global-actions__tweet">Tweet</button>
-          </div>
+                    <svg
+                            class="site-navigation__icon Site-navigation__icon_active"
+                            viewBox="0 0 24 24"
+                    >
+                        <g>
+                            <path
+                                    d="M22.58 7.35L12.475 1.897a1 1 0 0 0-.95 0L1.425 7.35A1.002 1.002 0 0 0 1.9 9.231c.16 0 .324-.038.475-.12l.734-.396 1.59 11.25c.216 1.214 1.31 2.062 2.66 2.062h9.282c1.35 0 2.444-.848 2.662-2.088l1.588-11.225.737.398a1 1 0 0 0 .95-1.759zM12 15.435a3.25 3.25 0 1 1 0-6.5 3.25 3.25 0 0 1 0 6.5z"
+                            ></path>
+                        </g>
+                    </svg>
+                    <span>Home</span>
+                </a>
+                <a
+                        href=""
+                        class="site-navigation__link site-navigation__link_wider"
+                >
+                    <svg class="site-navigation__icon" viewBox="0 0 24 24">
+                        <g>
+                            <path
+                                    d="M21.697 16.468c-.02-.016-2.14-1.64-2.103-6.03.02-2.532-.812-4.782-2.347-6.335C15.872 2.71 14.01 1.94 12.005 1.93h-.013c-2.004.01-3.866.78-5.242 2.174-1.534 1.553-2.368 3.802-2.346 6.334.037 4.33-2.02 5.967-2.102 6.03a.75.75 0 0 0 .447 1.353h4.92c.102 2.31 1.997 4.16 4.33 4.16s4.226-1.85 4.327-4.16h4.922c.322 0 .61-.206.71-.514a.747.747 0 0 0-.263-.838zM12 20.478a2.84 2.84 0 0 1-2.828-2.658h5.656c-.1 1.48-1.323 2.66-2.828 2.66zM4.38 16.32c.74-1.132 1.548-3.028 1.524-5.896-.018-2.16.644-3.982 1.913-5.267C8.91 4.05 10.397 3.437 12 3.43c1.603.008 3.087.62 4.18 1.728 1.27 1.285 1.933 3.106 1.915 5.267-.024 2.868.785 4.765 1.525 5.896H4.38z"
+                            ></path>
+                        </g>
+                    </svg>
+                    <span>Notifications</span>
+                </a>
+                <button class="site-navigation__button">
+                    <svg class="site-navigation__icon" viewBox="0 0 24 24">
+                        <g>
+                            <path
+                                    d="M19.25 3.018H4.75A2.753 2.753 0 0 0 2 5.77v12.495a2.754 2.754 0 0 0 2.75 2.753h14.5A2.754 2.754 0 0 0 22 18.265V5.77a2.753 2.753 0 0 0-2.75-2.752zm-14.5 1.5h14.5c.69 0 1.25.56 1.25 1.25v.714l-8.05 5.367a.81.81 0 0 1-.9-.002L3.5 6.482v-.714c0-.69.56-1.25 1.25-1.25zm14.5 14.998H4.75c-.69 0-1.25-.56-1.25-1.25V8.24l7.24 4.83a2.265 2.265 0 0 0 2.52.001l7.24-4.83v10.022c0 .69-.56 1.25-1.25 1.25z"
+                            ></path>
+                        </g>
+                    </svg>
+                    <span>Messages</span>
+                </button>
+            </nav>
+            <h1>
+                <img
+                        class="header__logo"
+                        src="images/twitter-logo.png"
+                        alt="Twitter"
+                />
+                <span hidden="">Twitter</span>
+            </h1>
+            <div class="global-actions">
+                <form action="search" class="global-actions__search-form">
+                    <input
+                            type="text"
+                            placeholder="Search Twitter"
+                            class="search-form__input"
+                    />
+                    <button class="search-form__button" aria-label="search">
+                        <svg
+                                class="search-form__icon"
+                                aria-hidden="true"
+                                focusable="false"
+                                data-prefix="fal"
+                                data-icon="search"
+                                role="img"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512"
+                        >
+                            <path
+                                    fill="currentColor"
+                                    d="M508.5 481.6l-129-129c-2.3-2.3-5.3-3.5-8.5-3.5h-10.3C395 312 416 262.5 416 208 416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c54.5 0 104-21 141.1-55.2V371c0 3.2 1.3 6.2 3.5 8.5l129 129c4.7 4.7 12.3 4.7 17 0l9.9-9.9c4.7-4.7 4.7-12.3 0-17zM208 384c-97.3 0-176-78.7-176-176S110.7 32 208 32s176 78.7 176 176-78.7 176-176 176z"
+                                    class=""
+                            ></path>
+                        </svg>
+                    </button>
+                </form>
+                <button class="global-actions__profile-button">
+                    <img
+                            class="global-actions__profile-button-avatar"
+                            src="https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png"
+                            alt="Profile and settings"
+                    />
+                </button>
+                <button class="global-actions__tweet">Tweet</button>
+            </div>
         </div>
-      </header>
-      <main class="layout__main-page">
+    </header>
+    <main class="layout__main-page">
         <aside class="main-page__left-aside-wrapper">
-          <section class="left-aside-wrapper__account">
-            <a href="" class="account__background" aria-label="profile"></a>
-            <!---TODO: ACCOUNT AVATAR -->
-            <div class="account__profile-name">
-              <h2 class="account__user-name">
-                <a class="account__link">Hermann Yavorskyi</a>
-              </h2>
-              <span class="account__tag"
-                ><a class="Account__link"
-                  >@<span class="account__shortcut">YavHermann</span></a
-                ></span
-              >
-            </div>
-            <div class="account__statistic">
-              <a class="statistic__tweets">
-                <span class="statistic__name">Tweets</span>
-                <span class="statistic__info">0</span>
-              </a>
-              <a class="statistic__following">
-                <span class="statistic__name">Following</span>
-                <span class="statistic__info">5</span>
-              </a>
-            </div>
-          </section>
-          <nav class="left-aside-wrapper__trends">
-            <h3 class="trends__header">Trends for you</h3>
-            <a class="trends__change-link">Change</a>
-            <ul class="trends__list">
-              <li class="trends__list-item">
-                <a class="trends__link">
-                  <span class="trends__link-name">#MUFC</span>
-                  <span class="trends__link-tweets">536K Tweets</span>
-                </a>
-              </li>
-              <li class="trends__list-item">
-                <a class="trends__link">
-                  <span class="trends__link-name">#MUFC</span>
-                  <span class="trends__link-tweets">536K Tweets</span>
-                </a>
-              </li>
-              <li class="trends__list-item">
-                <a class="trends__link">
-                  <span class="trends__link-name">#MUFC</span>
-                  <span class="trends__link-tweets">536K Tweets</span>
-                </a>
-              </li>
-              <li class="trends__list-item">
-                <a class="trends__link">
-                  <span class="trends__link-name">#MUFC</span>
-                  <span class="trends__link-tweets">536K Tweets</span>
-                </a>
-              </li>
-              <li class="trends__list-item">
-                <a class="trends__link">
-                  <span class="trends__link-name">#MUFC</span>
-                  <span class="trends__link-tweets">536K Tweets</span>
-                </a>
-              </li>
-              <li class="trends__list-item">
-                <a class="trends__link">
-                  <span class="trends__link-name">#MUFC</span>
-                  <span class="trends__link-tweets">536K Tweets</span>
-                </a>
-              </li>
-              <li class="trends__list-item">
-                <a class="trends__link">
-                  <span class="trends__link-name">#MUFC</span>
-                  <span class="trends__link-tweets">536K Tweets</span>
-                </a>
-              </li>
-              <li class="trends__list-item">
-                <a class="trends__link">
-                  <span class="trends__link-name">#MUFC</span>
-                  <span class="trends__link-tweets">536K Tweets</span>
-                </a>
-              </li>
-              <li class="trends__list-item">
-                <a class="trends__link">
-                  <span class="trends__link-name">#MUFC</span>
-                  <span class="trends__link-tweets">536K Tweets</span>
-                </a>
-              </li>
-              <li class="trends__list-item">
-                <a class="trends__link">
-                  <span class="trends__link-name">#MUFC</span>
-                  <span class="trends__link-tweets">536K Tweets</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
+            <section class="left-aside-wrapper__account">
+                <a href="" class="account__background" aria-label="profile"></a>
+                <a href="" class="account__profile-avatar"><i class="fas fa-camera account__profile-icon"></i></a>
+                <div class="account__profile-name">
+                    <h2 class="account__user-name">
+                        <a class="account__link">Hermann Yavorskyi</a>
+                    </h2>
+                    <span class="account__tag"
+                    ><a class="Account__link"
+                    >@<span class="account__shortcut">YavHermann</span></a
+                    ></span
+                    >
+                </div>
+                <div class="account__statistic">
+                    <a class="statistic__tweets">
+                        <span class="statistic__name">Tweets</span>
+                        <span class="statistic__info">0</span>
+                    </a>
+                    <a class="statistic__following">
+                        <span class="statistic__name">Following</span>
+                        <span class="statistic__info">5</span>
+                    </a>
+                </div>
+            </section>
+            <nav class="left-aside-wrapper__trends">
+                <h3 class="trends__header">Trends for you</h3>
+                <a class="trends__change-link">Change</a>
+                <ul class="trends__list">
+                    <li class="trends__list-item">
+                        <a class="trends__link">
+                            <span class="trends__link-name">#MUFC</span>
+                            <span class="trends__link-tweets">536K Tweets</span>
+                        </a>
+                    </li>
+                    <li class="trends__list-item">
+                        <a class="trends__link">
+                            <span class="trends__link-name">#MUFC</span>
+                            <span class="trends__link-tweets">536K Tweets</span>
+                        </a>
+                    </li>
+                    <li class="trends__list-item">
+                        <a class="trends__link">
+                            <span class="trends__link-name">#MUFC</span>
+                            <span class="trends__link-tweets">536K Tweets</span>
+                        </a>
+                    </li>
+                    <li class="trends__list-item">
+                        <a class="trends__link">
+                            <span class="trends__link-name">#MUFC</span>
+                            <span class="trends__link-tweets">536K Tweets</span>
+                        </a>
+                    </li>
+                    <li class="trends__list-item">
+                        <a class="trends__link">
+                            <span class="trends__link-name">#MUFC</span>
+                            <span class="trends__link-tweets">536K Tweets</span>
+                        </a>
+                    </li>
+                    <li class="trends__list-item">
+                        <a class="trends__link">
+                            <span class="trends__link-name">#MUFC</span>
+                            <span class="trends__link-tweets">536K Tweets</span>
+                        </a>
+                    </li>
+                    <li class="trends__list-item">
+                        <a class="trends__link">
+                            <span class="trends__link-name">#MUFC</span>
+                            <span class="trends__link-tweets">536K Tweets</span>
+                        </a>
+                    </li>
+                    <li class="trends__list-item">
+                        <a class="trends__link">
+                            <span class="trends__link-name">#MUFC</span>
+                            <span class="trends__link-tweets">536K Tweets</span>
+                        </a>
+                    </li>
+                    <li class="trends__list-item">
+                        <a class="trends__link">
+                            <span class="trends__link-name">#MUFC</span>
+                            <span class="trends__link-tweets">536K Tweets</span>
+                        </a>
+                    </li>
+                    <li class="trends__list-item">
+                        <a class="trends__link">
+                            <span class="trends__link-name">#MUFC</span>
+                            <span class="trends__link-tweets">536K Tweets</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </aside>
         <section class="main-page__news-feed">
-          <form action="tweet" class="news-feed__tweet-form">
-            <img
-              class="tweet-form__avatar"
-              src="https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png"
-              alt="Profile and settings"
-            />
-            <input
-              type="text"
-              placeholder="What`s happening"
-              class="tweet-form__input"
-            />
-            <button class="tweet-form__gallery-button" aria-label="gallery">
-              <svg class="tweet-form__gallery-button-icon" viewBox="0 0 24 24">
-                <g>
-                  <path
-                    d="M19.75 2H4.25C3.01 2 2 3.01 2 4.25v15.5C2 20.99 3.01 22 4.25 22h15.5c1.24 0 2.25-1.01 2.25-2.25V4.25C22 3.01 20.99 2 19.75 2zM4.25 3.5h15.5c.413 0 .75.337.75.75v9.676l-3.858-3.858a.75.75 0 0 0-.53-.22h-.003a.74.74 0 0 0-.532.224l-4.317 4.384-1.813-1.806a.75.75 0 0 0-.53-.22c-.193-.03-.395.08-.535.227L3.5 17.642V4.25c0-.413.337-.75.75-.75zm-.744 16.28l5.418-5.534 6.282 6.254H4.25a.75.75 0 0 1-.744-.72zm16.244.72h-2.42l-5.007-4.987 3.792-3.85 4.385 4.384v3.703c0 .413-.337.75-.75.75z"
-                  ></path>
-                  <circle cx="8.868" cy="8.309" r="1.542"></circle>
-                </g>
-              </svg>
-            </button>
-          </form>
-          <article class="news-feed__tweet">
-            <img
-              class="tweet__avatar"
-              src="images/nassa-avatar.jpg"
-              alt="NassaAvatar"
-            />
-            <section class="tweet__content">
-              <header class="tweet__tweet-header">
-                <a
-                  class="tweet-header__nickname tweet-header__nickname_verified"
-                  >NASA</a
-                >
-                <i class="fas fa-check-circle"></i>
-                <a class="tweet-header__tag">@NASA</a>
-                <time class="tweet-header__time">1h</time>
-              </header>
-              <p class="tweet__text">
-                Time flies when you’re exploring deep space. 💫 Ten years ago,
-                we launched our 1st planet hunter,
-                <a class="tweet__link" href="">@NASAKepler</a>, that collected
-                data revealing our night sky to be filled with billions of
-                hidden planets – more planets even than stars. Details:
-                <a class="tweet__link" href="">go.nasa.gov/2IYNBvW</a>
-              </p>
-              <img
-                src="images/space_craft.jpg"
-                alt="spacecraft"
-                class="tweet__single-img"
-              />
-              <footer class="tweet__tweet-footer">
-                <button class="tweet-footer__button" aria-label="comment">
-                  <i class="tweet-footer__icon far fa-comment-alt"></i>
-                  <span>141</span>
-                </button>
-                <button class="tweet-footer__button tweet-footer__retweet" aria-label="retweet">
-                  <i class="tweet-footer__icon fas fa-retweet"></i
-                  ><span>239</span>
-                </button>
-                <button class="tweet-footer__button tweet-footer__like" aria-label="like">
-                  <i class="tweet-footer__icon far fa-heart"></i
-                  ><span>1.1K</span>
-                </button>
-                <button class="tweet-footer__button tweet-footer__message" aria-label="forward message">
-                  <i class="far fa-envelope"></i>
-                </button>
-              </footer>
-            </section>
-          </article>
-          <article class="news-feed__tweet">
-            <img
-              class="tweet__avatar"
-              src="images/nassa-avatar.jpg"
-              alt="NassaAvatar"
-            />
-            <section class="tweet__content">
-              <header class="tweet__tweet-header">
-                <a
-                  class="tweet-header__nickname tweet-header__nickname_verified"
-                  >NASA</a
-                >
-                <i class="fas fa-check-circle"></i>
-                <a class="tweet-header__tag">@NASA</a>
-                <time class="tweet-header__time">1h</time>
-              </header>
-              <p class="tweet__text">
-                Today, flight controllers in Mission Control watched
-                <a class="tweet__link">@VP</a>
-                speak live with
-                <a class="tweet__link">@AstroAnnimal</a> and
-                <a class="tweet__link">@Astro_DavidS</a> aboard the
-                International <a class="tweet__link">@Space_Station</a>>. The
-                <a class="tweet__link">@SpaceX</a> #CrewDragon is docked to
-                station on its first mission as part of NASA’s
-                <a class="tweet__link">@Commercial_Crew</a> program.
-              </p>
-              <div class="tweet__gallery">
+            <form action="tweet" class="news-feed__tweet-form">
                 <img
-                  src="images/space_craft.jpg"
-                  alt="spacecraft"
-                  class="tweet__main-img"
+                        class="tweet-form__avatar"
+                        src="https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png"
+                        alt="Profile and settings"
                 />
+                <input
+                        type="text"
+                        placeholder="What`s happening"
+                        class="tweet-form__input"
+                />
+                <button class="tweet-form__gallery-button" aria-label="gallery">
+                    <svg class="tweet-form__gallery-button-icon" viewBox="0 0 24 24">
+                        <g>
+                            <path
+                                    d="M19.75 2H4.25C3.01 2 2 3.01 2 4.25v15.5C2 20.99 3.01 22 4.25 22h15.5c1.24 0 2.25-1.01 2.25-2.25V4.25C22 3.01 20.99 2 19.75 2zM4.25 3.5h15.5c.413 0 .75.337.75.75v9.676l-3.858-3.858a.75.75 0 0 0-.53-.22h-.003a.74.74 0 0 0-.532.224l-4.317 4.384-1.813-1.806a.75.75 0 0 0-.53-.22c-.193-.03-.395.08-.535.227L3.5 17.642V4.25c0-.413.337-.75.75-.75zm-.744 16.28l5.418-5.534 6.282 6.254H4.25a.75.75 0 0 1-.744-.72zm16.244.72h-2.42l-5.007-4.987 3.792-3.85 4.385 4.384v3.703c0 .413-.337.75-.75.75z"
+                            ></path>
+                            <circle cx="8.868" cy="8.309" r="1.542"></circle>
+                        </g>
+                    </svg>
+                </button>
+            </form>
+            <article class="news-feed__tweet">
                 <img
-                  src="images/space_craft.jpg"
-                  alt="spacecraft"
-                  class="tweet__side-img"
+                        class="tweet__avatar"
+                        src="images/nassa-avatar.jpg"
+                        alt="NassaAvatar"
                 />
+                <section class="tweet__content">
+                    <header class="tweet__tweet-header">
+                        <a
+                                class="tweet-header__nickname tweet-header__nickname_verified"
+                        >NASA</a
+                        >
+                        <i class="fas fa-check-circle"></i>
+                        <a class="tweet-header__tag">@NASA</a>
+                        <time class="tweet-header__time">1h</time>
+                    </header>
+                    <p class="tweet__text">
+                        Time flies when you’re exploring deep space. 💫 Ten years ago,
+                        we launched our 1st planet hunter,
+                        <a class="tweet__link" href="">@NASAKepler</a>, that collected
+                        data revealing our night sky to be filled with billions of
+                        hidden planets – more planets even than stars. Details:
+                        <a class="tweet__link" href="">go.nasa.gov/2IYNBvW</a>
+                    </p>
+                    <img
+                            src="images/space_craft.jpg"
+                            alt="spacecraft"
+                            class="tweet__single-img"
+                    />
+                    <footer class="tweet__tweet-footer">
+                        <button class="tweet-footer__button" aria-label="comment">
+                            <i class="tweet-footer__icon far fa-comment-alt"></i>
+                            <span>141</span>
+                        </button>
+                        <button class="tweet-footer__button tweet-footer__retweet" aria-label="retweet">
+                            <i class="tweet-footer__icon fas fa-retweet"></i
+                            ><span>239</span>
+                        </button>
+                        <button class="tweet-footer__button tweet-footer__like" aria-label="like">
+                            <i class="tweet-footer__icon far fa-heart"></i
+                            ><span>1.1K</span>
+                        </button>
+                        <button class="tweet-footer__button tweet-footer__message" aria-label="forward message">
+                            <i class="far fa-envelope"></i>
+                        </button>
+                    </footer>
+                </section>
+            </article>
+            <article class="news-feed__tweet">
                 <img
-                  src="images/space_craft.jpg"
-                  alt="spacecraft"
-                  class="tweet__side-img"
+                        class="tweet__avatar"
+                        src="images/nassa-avatar.jpg"
+                        alt="NassaAvatar"
                 />
+                <section class="tweet__content">
+                    <header class="tweet__tweet-header">
+                        <a
+                                class="tweet-header__nickname tweet-header__nickname_verified"
+                        >NASA</a
+                        >
+                        <i class="fas fa-check-circle"></i>
+                        <a class="tweet-header__tag">@NASA</a>
+                        <time class="tweet-header__time">1h</time>
+                    </header>
+                    <p class="tweet__text">
+                        Today, flight controllers in Mission Control watched
+                        <a class="tweet__link">@VP</a>
+                        speak live with
+                        <a class="tweet__link">@AstroAnnimal</a> and
+                        <a class="tweet__link">@Astro_DavidS</a> aboard the
+                        International <a class="tweet__link">@Space_Station</a>>. The
+                        <a class="tweet__link">@SpaceX</a> #CrewDragon is docked to
+                        station on its first mission as part of NASA’s
+                        <a class="tweet__link">@Commercial_Crew</a> program.
+                    </p>
+                    <div class="tweet__gallery">
+                        <img
+                                src="images/space_craft.jpg"
+                                alt="spacecraft"
+                                class="tweet__main-img"
+                        />
+                        <img
+                                src="images/space_craft.jpg"
+                                alt="spacecraft"
+                                class="tweet__side-img"
+                        />
+                        <img
+                                src="images/space_craft.jpg"
+                                alt="spacecraft"
+                                class="tweet__side-img"
+                        />
+                        <img
+                                src="images/space_craft.jpg"
+                                alt="spacecraft"
+                                class="tweet__side-img"
+                        />
+                    </div>
+                    <footer class="tweet__tweet-footer">
+                        <button class="tweet-footer__button" aria-label="comment">
+                            <i class="tweet-footer__icon far fa-comment-alt"></i>
+                            <span>141</span>
+                        </button>
+                        <button class="tweet-footer__button tweet-footer__retweet" aria-label="retweet">
+                            <i class="tweet-footer__icon fas fa-retweet"></i
+                            ><span>239</span>
+                        </button>
+                        <button class="tweet-footer__button tweet-footer__like" aria-label="like">
+                            <i class="tweet-footer__icon far fa-heart"></i
+                            ><span>1.1K</span>
+                        </button>
+                        <button class="tweet-footer__button tweet-footer__message" aria-label="forward message">
+                            <i class="far fa-envelope"></i>
+                        </button>
+                    </footer>
+                </section>
+            </article>
+            <article class="news-feed__tweet">
                 <img
-                  src="images/space_craft.jpg"
-                  alt="spacecraft"
-                  class="tweet__side-img"
+                        class="tweet__avatar"
+                        src="images/nassa-avatar.jpg"
+                        alt="NassaAvatar"
                 />
-              </div>
-              <footer class="tweet__tweet-footer">
-                <button class="tweet-footer__button" aria-label="comment">
-                  <i class="tweet-footer__icon far fa-comment-alt"></i>
-                  <span>141</span>
-                </button>
-                <button class="tweet-footer__button tweet-footer__retweet" aria-label="retweet">
-                  <i class="tweet-footer__icon fas fa-retweet"></i
-                  ><span>239</span>
-                </button>
-                <button class="tweet-footer__button tweet-footer__like" aria-label="like">
-                  <i class="tweet-footer__icon far fa-heart"></i
-                  ><span>1.1K</span>
-                </button>
-                <button class="tweet-footer__button tweet-footer__message" aria-label="forward message">
-                  <i class="far fa-envelope"></i>
-                </button>
-              </footer>
-            </section>
-          </article>
-          <article class="news-feed__tweet">
-            <img
-              class="tweet__avatar"
-              src="images/nassa-avatar.jpg"
-              alt="NassaAvatar"
-            />
-            <section class="tweet__content">
-              <header class="tweet__tweet-header">
-                <a
-                  class="tweet-header__nickname tweet-header__nickname_verified"
-                  >NASA</a
-                >
-                <i class="fas fa-check-circle"></i>
-                <a class="tweet-header__tag">@NASA</a>
-                <time class="tweet-header__time">1h</time>
-              </header>
-              <p class="tweet__text">
-                Time flies when you’re exploring deep space. 💫 Ten years ago,
-                we launched our 1st planet hunter,
-                <a class="tweet__link" href="">@NASAKepler</a>, that collected
-                data revealing our night sky to be filled with billions of
-                hidden planets – more planets even than stars. Details:
-                <a class="tweet__link" href="">go.nasa.gov/2IYNBvW</a>
-              </p>
-              <img
-                src="images/space_craft.jpg"
-                alt="spacecraft"
-                class="tweet__single-img"
-              />
-              <footer class="tweet__tweet-footer">
-                <button class="tweet-footer__button" aria-label="comment"">
-                  <i class="tweet-footer__icon far fa-comment-alt"></i>
-                  <span>141</span>
-                </button>
-                <button class="tweet-footer__button tweet-footer__retweet" aria-label="retweet"">
-                  <i class="tweet-footer__icon fas fa-retweet"></i
-                  ><span>239</span>
-                </button>
-                <button class="tweet-footer__button tweet-footer__like" aria-label="like"">
-                  <i class="tweet-footer__icon far fa-heart"></i
-                  ><span>1.1K</span>
-                </button>
-                <button class="tweet-footer__button tweet-footer__message" aria-label="forward message">
-                  <i class="far fa-envelope"></i>
-                </button>
-              </footer>
-            </section>
-          </article>
-          <article class="news-feed__tweet">
-            <img
-              class="tweet__avatar"
-              src="images/nassa-avatar.jpg"
-              alt="NassaAvatar"
-            />
-            <section class="tweet__content">
-              <header class="tweet__tweet-header">
-                <a
-                  class="tweet-header__nickname tweet-header__nickname_verified"
-                  >NASA</a
-                >
-                <i class="fas fa-check-circle"></i>
-                <a class="tweet-header__tag">@NASA</a>
-                <time class="tweet-header__time">1h</time>
-              </header>
-              <p class="tweet__text">
-                Today, flight controllers in Mission Control watched
-                <a class="tweet__link">@VP</a>
-                speak live with
-                <a class="tweet__link">@AstroAnnimal</a> and
-                <a class="tweet__link">@Astro_DavidS</a> aboard the
-                International <a class="tweet__link">@Space_Station</a>>. The
-                <a class="tweet__link">@SpaceX</a> #CrewDragon is docked to
-                station on its first mission as part of NASA’s
-                <a class="tweet__link">@Commercial_Crew</a> program.
-              </p>
-              <div class="tweet__gallery">
+                <section class="tweet__content">
+                    <header class="tweet__tweet-header">
+                        <a
+                                class="tweet-header__nickname tweet-header__nickname_verified"
+                        >NASA</a
+                        >
+                        <i class="fas fa-check-circle"></i>
+                        <a class="tweet-header__tag">@NASA</a>
+                        <time class="tweet-header__time">1h</time>
+                    </header>
+                    <p class="tweet__text">
+                        Time flies when you’re exploring deep space. 💫 Ten years ago,
+                        we launched our 1st planet hunter,
+                        <a class="tweet__link" href="">@NASAKepler</a>, that collected
+                        data revealing our night sky to be filled with billions of
+                        hidden planets – more planets even than stars. Details:
+                        <a class="tweet__link" href="">go.nasa.gov/2IYNBvW</a>
+                    </p>
+                    <img
+                            src="images/space_craft.jpg"
+                            alt="spacecraft"
+                            class="tweet__single-img"
+                    />
+                    <footer class="tweet__tweet-footer">
+                        <button class="tweet-footer__button" aria-label="comment"
+                        ">
+                        <i class="tweet-footer__icon far fa-comment-alt"></i>
+                        <span>141</span>
+                        </button>
+                        <button class="tweet-footer__button tweet-footer__retweet" aria-label="retweet"
+                        ">
+                        <i class="tweet-footer__icon fas fa-retweet"></i
+                        ><span>239</span>
+                        </button>
+                        <button class="tweet-footer__button tweet-footer__like" aria-label="like"
+                        ">
+                        <i class="tweet-footer__icon far fa-heart"></i
+                        ><span>1.1K</span>
+                        </button>
+                        <button class="tweet-footer__button tweet-footer__message" aria-label="forward message">
+                            <i class="far fa-envelope"></i>
+                        </button>
+                    </footer>
+                </section>
+            </article>
+            <article class="news-feed__tweet">
                 <img
-                  src="images/space_craft.jpg"
-                  alt="spacecraft"
-                  class="tweet__main-img"
+                        class="tweet__avatar"
+                        src="images/nassa-avatar.jpg"
+                        alt="NassaAvatar"
                 />
-                <img
-                  src="images/space_craft.jpg"
-                  alt="spacecraft"
-                  class="tweet__side-img"
-                />
-                <img
-                  src="images/space_craft.jpg"
-                  alt="spacecraft"
-                  class="tweet__side-img"
-                />
-                <img
-                  src="images/space_craft.jpg"
-                  alt="spacecraft"
-                  class="tweet__side-img"
-                />
-              </div>
-              <footer class="tweet__tweet-footer">
-                <button class="tweet-footer__button" aria-label="comment">
-                  <i class="tweet-footer__icon far fa-comment-alt"></i>
-                  <span>141</span>
-                </button>
-                <button class="tweet-footer__button tweet-footer__retweet" aria-label="retweet">
-                  <i class="tweet-footer__icon fas fa-retweet"></i
-                  ><span>239</span>
-                </button>
-                <button class="tweet-footer__button tweet-footer__like" aria-label="like">
-                  <i class="tweet-footer__icon far fa-heart"></i
-                  ><span>1.1K</span>
-                </button>
-                <button class="tweet-footer__button tweet-footer__message" aria-label="forward message">
-                  <i class="far fa-envelope"></i>
-                </button>
-              </footer>
-            </section>
-          </article>
+                <section class="tweet__content">
+                    <header class="tweet__tweet-header">
+                        <a
+                                class="tweet-header__nickname tweet-header__nickname_verified"
+                        >NASA</a
+                        >
+                        <i class="fas fa-check-circle"></i>
+                        <a class="tweet-header__tag">@NASA</a>
+                        <time class="tweet-header__time">1h</time>
+                    </header>
+                    <p class="tweet__text">
+                        Today, flight controllers in Mission Control watched
+                        <a class="tweet__link">@VP</a>
+                        speak live with
+                        <a class="tweet__link">@AstroAnnimal</a> and
+                        <a class="tweet__link">@Astro_DavidS</a> aboard the
+                        International <a class="tweet__link">@Space_Station</a>>. The
+                        <a class="tweet__link">@SpaceX</a> #CrewDragon is docked to
+                        station on its first mission as part of NASA’s
+                        <a class="tweet__link">@Commercial_Crew</a> program.
+                    </p>
+                    <div class="tweet__gallery">
+                        <img
+                                src="images/space_craft.jpg"
+                                alt="spacecraft"
+                                class="tweet__main-img"
+                        />
+                        <img
+                                src="images/space_craft.jpg"
+                                alt="spacecraft"
+                                class="tweet__side-img"
+                        />
+                        <img
+                                src="images/space_craft.jpg"
+                                alt="spacecraft"
+                                class="tweet__side-img"
+                        />
+                        <img
+                                src="images/space_craft.jpg"
+                                alt="spacecraft"
+                                class="tweet__side-img"
+                        />
+                    </div>
+                    <footer class="tweet__tweet-footer">
+                        <button class="tweet-footer__button" aria-label="comment">
+                            <i class="tweet-footer__icon far fa-comment-alt"></i>
+                            <span>141</span>
+                        </button>
+                        <button class="tweet-footer__button tweet-footer__retweet" aria-label="retweet">
+                            <i class="tweet-footer__icon fas fa-retweet"></i
+                            ><span>239</span>
+                        </button>
+                        <button class="tweet-footer__button tweet-footer__like" aria-label="like">
+                            <i class="tweet-footer__icon far fa-heart"></i
+                            ><span>1.1K</span>
+                        </button>
+                        <button class="tweet-footer__button tweet-footer__message" aria-label="forward message">
+                            <i class="far fa-envelope"></i>
+                        </button>
+                    </footer>
+                </section>
+            </article>
         </section>
         <div class="main-page__right-aside-wrapper">
-          <aside class="right-aside-wrapper__recommendations">
-            <header class="recommendations__recommendations-header">
-              <h3 class="recommendations-header__topic">Who to follow</h3>
-              <button style="" class="recommendations-header__refresh">
-                <small>Refresh</small>
-              </button>
-              <small
-                ><a href="" class="recommendations-header__view-all"
-                  >View all</a
-                ></small
-              >
-            </header>
-            <section class="Recommendations__Suggested">
-              <article class="suggested__single-recommendation">
-                <a class="suggested__profile-link">
-                  <img
-                    class="suggested__avatar"
-                    src="images/recommended-user-avatar.jpg"
-                    alt="Avatar"
-                  />
-                  <span class="suggested__username"
-                    ><b class="suggested__nickname">Quillette</b
-                    >@Quillette</span
-                  >
-                </a>
-                <button class="suggested__cross-sign">
-                  <svg
-                    class="suggested__cross-icon"
-                    width="64"
-                    version="1.1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="64"
-                    viewBox="0 0 64 64"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    enable-background="new 0 0 64 64"
-                  >
-                    <g>
-                      <path
-                        fill="#1D1D1B"
-                        d="M28.941,31.786L0.613,60.114c-0.787,0.787-0.787,2.062,0,2.849c0.393,0.394,0.909,0.59,1.424,0.59   c0.516,0,1.031-0.196,1.424-0.59l28.541-28.541l28.541,28.541c0.394,0.394,0.909,0.59,1.424,0.59c0.515,0,1.031-0.196,1.424-0.59   c0.787-0.787,0.787-2.062,0-2.849L35.064,31.786L63.41,3.438c0.787-0.787,0.787-2.062,0-2.849c-0.787-0.786-2.062-0.786-2.848,0   L32.003,29.15L3.441,0.59c-0.787-0.786-2.061-0.786-2.848,0c-0.787,0.787-0.787,2.062,0,2.849L28.941,31.786z"
-                      />
-                    </g>
-                  </svg>
+            <aside class="right-aside-wrapper__recommendations">
+                <header class="recommendations__recommendations-header">
+                    <h3 class="recommendations-header__topic">Who to follow</h3>
+                    <button style="" class="recommendations-header__action">
+                        <small class="recommendations-header__link">Refresh</small>
+                    </button>
+                    <small class="recommendations-header__action"
+                    ><a href="" class="recommendations-header__link"
+                    >View all</a
+                    ></small
+                    >
+                </header>
+                <section class="Recommendations__Suggested">
+                    <article class="suggested__single-recommendation">
+                        <a class="suggested__profile-link">
+                            <img
+                                    class="suggested__avatar"
+                                    src="images/recommended-user-avatar.jpg"
+                                    alt="Avatar"
+                            />
+                            <span class="suggested__username"
+                            ><b class="suggested__nickname">Quillette</b
+                            >@Quillette</span
+                            >
+                        </a>
+                        <button class="suggested__cross-sign">
+                            <svg
+                                    class="suggested__cross-icon"
+                                    width="64"
+                                    version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="64"
+                                    viewBox="0 0 64 64"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    enable-background="new 0 0 64 64"
+                            >
+                                <g>
+                                    <path
+                                            fill="#1D1D1B"
+                                            d="M28.941,31.786L0.613,60.114c-0.787,0.787-0.787,2.062,0,2.849c0.393,0.394,0.909,0.59,1.424,0.59   c0.516,0,1.031-0.196,1.424-0.59l28.541-28.541l28.541,28.541c0.394,0.394,0.909,0.59,1.424,0.59c0.515,0,1.031-0.196,1.424-0.59   c0.787-0.787,0.787-2.062,0-2.849L35.064,31.786L63.41,3.438c0.787-0.787,0.787-2.062,0-2.849c-0.787-0.786-2.062-0.786-2.848,0   L32.003,29.15L3.441,0.59c-0.787-0.786-2.061-0.786-2.848,0c-0.787,0.787-0.787,2.062,0,2.849L28.941,31.786z"
+                                    />
+                                </g>
+                            </svg>
+                        </button>
+                        <button class="suggested__follow">Follow</button>
+                    </article>
+                    <article class="suggested__single-recommendation">
+                        <a class="suggested__profile-link">
+                            <img
+                                    class="suggested__avatar"
+                                    src="images/recommended-user-avatar.jpg"
+                                    alt="Avatar"
+                            />
+                            <span class="suggested__username"
+                            ><b class="suggested__nickname">Quilleasdasdtte</b
+                            >@Quilasdalette</span
+                            >
+                        </a>
+                        <button class="suggested__cross-sign">
+                            <svg
+                                    class="suggested__cross-icon"
+                                    width="64"
+                                    version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="64"
+                                    viewBox="0 0 64 64"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    enable-background="new 0 0 64 64"
+                            >
+                                <g>
+                                    <path
+                                            fill="#1D1D1B"
+                                            d="M28.941,31.786L0.613,60.114c-0.787,0.787-0.787,2.062,0,2.849c0.393,0.394,0.909,0.59,1.424,0.59   c0.516,0,1.031-0.196,1.424-0.59l28.541-28.541l28.541,28.541c0.394,0.394,0.909,0.59,1.424,0.59c0.515,0,1.031-0.196,1.424-0.59   c0.787-0.787,0.787-2.062,0-2.849L35.064,31.786L63.41,3.438c0.787-0.787,0.787-2.062,0-2.849c-0.787-0.786-2.062-0.786-2.848,0   L32.003,29.15L3.441,0.59c-0.787-0.786-2.061-0.786-2.848,0c-0.787,0.787-0.787,2.062,0,2.849L28.941,31.786z"
+                                    />
+                                </g>
+                            </svg>
+                        </button>
+                        <button class="suggested__follow">Follow</button>
+                    </article>
+                    <article class="suggested__single-recommendation">
+                        <a class="suggested__profile-link">
+                            <img
+                                    class="suggested__avatar"
+                                    src="images/recommended-user-avatar.jpg"
+                                    alt="Avatar"
+                            />
+                            <span class="suggested__username"
+                            ><b class="suggested__nickname">Quillette</b
+                            >@Quillette</span
+                            >
+                        </a>
+                        <button class="suggested__cross-sign">
+                            <svg
+                                    class="suggested__cross-icon"
+                                    width="64"
+                                    version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="64"
+                                    viewBox="0 0 64 64"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    enable-background="new 0 0 64 64"
+                            >
+                                <g>
+                                    <path
+                                            fill="#1D1D1B"
+                                            d="M28.941,31.786L0.613,60.114c-0.787,0.787-0.787,2.062,0,2.849c0.393,0.394,0.909,0.59,1.424,0.59   c0.516,0,1.031-0.196,1.424-0.59l28.541-28.541l28.541,28.541c0.394,0.394,0.909,0.59,1.424,0.59c0.515,0,1.031-0.196,1.424-0.59   c0.787-0.787,0.787-2.062,0-2.849L35.064,31.786L63.41,3.438c0.787-0.787,0.787-2.062,0-2.849c-0.787-0.786-2.062-0.786-2.848,0   L32.003,29.15L3.441,0.59c-0.787-0.786-2.061-0.786-2.848,0c-0.787,0.787-0.787,2.062,0,2.849L28.941,31.786z"
+                                    />
+                                </g>
+                            </svg>
+                        </button>
+                        <button class="suggested__follow">Follow</button>
+                    </article>
+                </section>
+                <section class="recommendations__other-contacts">
+                    <button
+                            class="other-contacts__gmail-button"
+                            aria-label="Link items from gmail"
+                    >
+                        <img
+                                src="images/gmai-iconl.png"
+                                alt="Gmail"
+                                class="other-contacts__gmail-icon"
+                        />
+                    </button>
+                    <span class="other-contacts__topic"
+                    ><strong>Find people you know</strong></span
+                    >
+                    <p class="other-contacts__text">
+                        Import your contacts from Gmail
+                    </p>
+                </section>
+                <button class="recommendations__connect-other">
+                    Connect other address books
                 </button>
-                <button class="suggested__follow">Follow</button>
-              </article>
-              <article class="suggested__single-recommendation">
-                <a class="suggested__profile-link">
-                  <img
-                    class="suggested__avatar"
-                    src="images/recommended-user-avatar.jpg"
-                    alt="Avatar"
-                  />
-                  <span class="suggested__username"
-                    ><b class="suggested__nickname">Quilleasdasdtte</b
-                    >@Quilasdalette</span
-                  >
+            </aside>
+            <aside class="right-aside-wrapper__copyright-ads">
+                <ul class="copyright">
+                    <li class="copyright__list-item">© 2019 Twitter</li>
+                    <li class="copyright__list-item">
+                        <a class="copyright__list-link" href="">About</a>
+                    </li>
+                    <li class="copyright__list-item">
+                        <a class="copyright__list-link" href="">Help Center</a>
+                    </li>
+                    <li class="copyright__list-item">
+                        <a class="copyright__list-link" href="">Terms</a>
+                    </li>
+                    <li class="copyright__list-item">
+                        <a class="copyright__list-link" href="">Privacy policy</a>
+                    </li>
+                    <li class="copyright__list-item">
+                        <a class="copyright__list-link" href="">Cookies</a>
+                    </li>
+                    <li class="copyright__list-item">
+                        <a class="copyright__list-link" href="">Ads info</a>
+                    </li>
+                    <li class="copyright__list-item">
+                        <a class="copyright__list-link" href="">Brand</a>
+                    </li>
+                    <li class="copyright__list-item">
+                        <a class="copyright__list-link" href="">Blog</a>
+                    </li>
+                    <li class="copyright__list-item">
+                        <a class="copyright__list-link" href="">Status</a>
+                    </li>
+                    <li class="copyright__list-item">
+                        <a class="copyright__list-link" href="">Apps</a>
+                    </li>
+                    <li class="copyright__list-item">
+                        <a class="copyright__list-link" href="">Jobs</a>
+                    </li>
+                    <li class="copyright__list-item">
+                        <a class="copyright__list-link" href="">Marketing</a>
+                    </li>
+                    <li class="copyright__list-item">
+                        <a class="copyright__list-link" href="">Businesses</a>
+                    </li>
+                    <li class="copyright__list-item">
+                        <a class="copyright__list-link" href="">Developers</a>
+                    </li>
+                </ul>
+                <a class="right-aside-wrapper__info-ads" href="">
+                    <i
+                            class="fas fa-external-link-alt right-aside-wrapper__info-link-icon"
+                    ></i>
+                    <span class="right-aside-wrapper__info-link"
+                    >Advertise with Twitter</span
+                    >
                 </a>
-                <button class="suggested__cross-sign">
-                  <svg
-                    class="suggested__cross-icon"
-                    width="64"
-                    version="1.1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="64"
-                    viewBox="0 0 64 64"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    enable-background="new 0 0 64 64"
-                  >
-                    <g>
-                      <path
-                        fill="#1D1D1B"
-                        d="M28.941,31.786L0.613,60.114c-0.787,0.787-0.787,2.062,0,2.849c0.393,0.394,0.909,0.59,1.424,0.59   c0.516,0,1.031-0.196,1.424-0.59l28.541-28.541l28.541,28.541c0.394,0.394,0.909,0.59,1.424,0.59c0.515,0,1.031-0.196,1.424-0.59   c0.787-0.787,0.787-2.062,0-2.849L35.064,31.786L63.41,3.438c0.787-0.787,0.787-2.062,0-2.849c-0.787-0.786-2.062-0.786-2.848,0   L32.003,29.15L3.441,0.59c-0.787-0.786-2.061-0.786-2.848,0c-0.787,0.787-0.787,2.062,0,2.849L28.941,31.786z"
-                      />
-                    </g>
-                  </svg>
-                </button>
-                <button class="suggested__follow">Follow</button>
-              </article>
-              <article class="suggested__single-recommendation">
-                <a class="suggested__profile-link">
-                  <img
-                    class="suggested__avatar"
-                    src="images/recommended-user-avatar.jpg"
-                    alt="Avatar"
-                  />
-                  <span class="suggested__username"
-                    ><b class="suggested__nickname">Quillette</b
-                    >@Quillette</span
-                  >
-                </a>
-                <button class="suggested__cross-sign">
-                  <svg
-                    class="suggested__cross-icon"
-                    width="64"
-                    version="1.1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="64"
-                    viewBox="0 0 64 64"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    enable-background="new 0 0 64 64"
-                  >
-                    <g>
-                      <path
-                        fill="#1D1D1B"
-                        d="M28.941,31.786L0.613,60.114c-0.787,0.787-0.787,2.062,0,2.849c0.393,0.394,0.909,0.59,1.424,0.59   c0.516,0,1.031-0.196,1.424-0.59l28.541-28.541l28.541,28.541c0.394,0.394,0.909,0.59,1.424,0.59c0.515,0,1.031-0.196,1.424-0.59   c0.787-0.787,0.787-2.062,0-2.849L35.064,31.786L63.41,3.438c0.787-0.787,0.787-2.062,0-2.849c-0.787-0.786-2.062-0.786-2.848,0   L32.003,29.15L3.441,0.59c-0.787-0.786-2.061-0.786-2.848,0c-0.787,0.787-0.787,2.062,0,2.849L28.941,31.786z"
-                      />
-                    </g>
-                  </svg>
-                </button>
-                <button class="suggested__follow">Follow</button>
-              </article>
-            </section>
-            <section class="recommendations__other-contacts">
-              <button
-                class="other-contacts__gmail-button"
-                aria-label="Link items from gmail"
-              >
-                <img
-                  src="images/gmai-iconl.png"
-                  alt="Gmail"
-                  class="other-contacts__gmail-icon"
-                />
-              </button>
-              <span class="other-contacts__topic"
-                ><strong>Find people you know</strong></span
-              >
-              <p class="other-contacts__text">
-                Import your contacts from Gmail
-              </p>
-            </section>
-            <button class="recommendations__connect-other">
-              Connect other address books
-            </button>
-          </aside>
-          <aside class="right-aside-wrapper__copyright-ads">
-            <ul class="copyright">
-              <li class="copyright__list-item">© 2019 Twitter</li>
-              <li class="copyright__list-item">
-                <a class="copyright__list-link" href="">About</a>
-              </li>
-              <li class="copyright__list-item">
-                <a class="copyright__list-link" href="">Help Center</a>
-              </li>
-              <li class="copyright__list-item">
-                <a class="copyright__list-link" href="">Terms</a>
-              </li>
-              <li class="copyright__list-item">
-                <a class="copyright__list-link" href="">Privacy policy</a>
-              </li>
-              <li class="copyright__list-item">
-                <a class="copyright__list-link" href="">Cookies</a>
-              </li>
-              <li class="copyright__list-item">
-                <a class="copyright__list-link" href="">Ads info</a>
-              </li>
-              <li class="copyright__list-item">
-                <a class="copyright__list-link" href="">Brand</a>
-              </li>
-              <li class="copyright__list-item">
-                <a class="copyright__list-link" href="">Blog</a>
-              </li>
-              <li class="copyright__list-item">
-                <a class="copyright__list-link" href="">Status</a>
-              </li>
-              <li class="copyright__list-item">
-                <a class="copyright__list-link" href="">Apps</a>
-              </li>
-              <li class="copyright__list-item">
-                <a class="copyright__list-link" href="">Jobs</a>
-              </li>
-              <li class="copyright__list-item">
-                <a class="copyright__list-link" href="">Marketing</a>
-              </li>
-              <li class="copyright__list-item">
-                <a class="copyright__list-link" href="">Businesses</a>
-              </li>
-              <li class="copyright__list-item">
-                <a class="copyright__list-link" href="">Developers</a>
-              </li>
-            </ul>
-            <a class="right-aside-wrapper__info-ads" href="">
-              <i
-                class="fas fa-external-link-alt right-aside-wrapper__info-link-icon"
-              ></i>
-              <span class="right-aside-wrapper__info-link"
-                >Advertise with Twitter</span
-              >
-            </a>
-          </aside>
+            </aside>
         </div>
-      </main>
-    </div>
-  </body>
+    </main>
+</div>
+</body>
 </html>
