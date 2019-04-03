@@ -64,8 +64,23 @@ class BinarySearchTree {
 
     }
 
-    delete() {
+    delete(root = this, data) {
     //    TODO: Write item deletion
+        if (this.data === null) {
+            return null;
+        }
+
+        if (data < this.data) {
+            this.left.delete(this.left, data);
+        } else if (data > this.data) {
+            this.right.delete(this.right, data);
+        } else {
+            if (this.left === null) {
+                let temp = this.right;
+                this.data = null;
+                return temp;
+            }
+        }
     }
 
     preOrder(node=this) {
@@ -109,9 +124,15 @@ class BinarySearchTree {
         if (node === null) {
             return null;
         } else {
-            console.log(node.data);
-            console.log(node.left);
-            console.log(node.right);
+            // console.log(node.data);
+            if (node.left !== null) {
+                console.log(node.left.data);
+            }
+            if (node.right !== null) {
+                console.log(node.right.data);
+            }
+            this.levelOrder(node.right);
+            this.levelOrder(node.left);
         }
 
     }
@@ -128,10 +149,12 @@ bst.insert(6);
 bst.insert(0);
 bst.insert(23);
 
-bst.search(23);
 bst.print();
-bst.preOrder();
-console.log();
-bst.inOrder();
-console.log();
-bst.postOrder();
+// bst.search(23);
+// bst.preOrder();
+// console.log();
+// bst.inOrder();
+// console.log();
+// bst.postOrder();
+
+bst.levelOrder();
