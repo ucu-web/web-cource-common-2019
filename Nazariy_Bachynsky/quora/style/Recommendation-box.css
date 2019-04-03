@@ -1,0 +1,13 @@
+.Recommendation-box {
+  padding: 0 16px;
+}
+.Recommendation-box__explanation {
+  display: block;
+  margin: 8px 0;
+  color: #666666;
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 400;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/*# sourceMappingURL=Recommendation-box.css.map */
