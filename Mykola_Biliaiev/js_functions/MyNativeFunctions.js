@@ -9,6 +9,8 @@ Array.prototype.myFilter = function (f, i = 0) {
 };
 
 
+
+
 const map = (arr, f) => {
     const MappingThrough = (arr_new, i = 0) => arr.length === i ? arr_new : MappingThrough([...arr_new, f(arr[i])], ++i);
     return MappingThrough([])
