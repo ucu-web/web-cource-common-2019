@@ -1,51 +1,21 @@
-const map = (arr, f) => {
-    const MappingThrough = (arr_new, i = 0) => arr.length === i ? arr_new : MappingThrough([...arr_new, f(arr[i])], ++i);
-    return MappingThrough([])
+const map = (arr, f) => reduce([], (a, b) => [...a, f(b)], arr);
+const reduce = (initValue, reducer, [head, ...tail]) => tail.length !== 0 ? reduce(reducer(initValue, head), reducer, tail) : reducer(initValue, head);
+const filter = (arr, f) => reduce([], (a, b) => f(b) ? [...a, b] : a, arr);
+const compose = (...fns) => val => reduce(val, (a, b) => b(a), fns);
+const carry = (fn) => function f1(...args) {
+    return (args.length >= fn.length) ? fn(...args) : (...argsMore) => (f1(...args.concat(argsMore)))
 };
-const filter = (arr, f) => {
-    const MappingThrough = (arr_new, i = 0) => arr.length === i ? arr_new : f(arr[i]) ? MappingThrough([...arr_new], ++i) : MappingThrough([...arr_new, arr[i]], ++i);
-    return MappingThrough([])
-}
-const forEach = (arr, f) => {
-    if (arr.length) {
-        f(arr[0]);
-        forEach(arr.slice(1), f)
-    }
-};
+const flip = (fn) => (a, b, ...rest) => fn(b, a, rest);
+const flatten = (arr) => reduce([], (a, b) => (Array.isArray(b)) ? a.concat(flatten(b)) : [...a, b], arr);
+const pipe = (...fns) => val => reduce(val, (a, b) => b(a), fns.reverse());
 
 
-const reduce = (arr, reducer, initValue) => {
-
-    const MappingThrough = (res, arr_inner) => arr_inner.length === 0 ? res : MappingThrough(reducer(res, arr_inner[0]), arr_inner.slice(1));
-    return initValue === undefined ? MappingThrough(arr[0], arr.slice(1)) : MappingThrough(initValue, arr)
-};
-
-const compose = (...fns) => {
-    return reduce(fns, (a, b) => x => (b(a(x))))
-};
-
-const carry = (fn) => {
-    return function f1(...args) {
-        return (args.length >= fn.length) ? fn(...args) : (...argsMore) => (f1(...args.concat(argsMore)))
-    }
-};
-
-const flip = (fn) => {
-    return (a, b, ...rest) => fn(b, a, rest);
-};
-
-const flatten = (arr) => {
-    let res = [];
-    const innerFunc = (arr, res) => {
-        typeof arr === "number" ? res.push(arr) : arr.map(innerFunc)
-    }
-    innerFunc(arr, []);
-    return res
-
-};
-
-const pipe = (...fns) => {
-    return reduce(fns.reverse(), (a, b) => x => (b(a(x))))
-};
-
-
+console.log("map test", map([1, 2, 3], x => x + 1));
+console.log("filter test", filter([1, 2, 3], x => x === 1));
+console.log("reduce test", reduce(0, (a, b) => a + b, [1, 2, 4]));
+console.log("compose test", compose((x) => x + 1, (x) => x * 2)(2));
+console.log("carry test", carry((a, b) => a + b)(4)(5));
+console.log("flip test", flip((a, b) => a + b * 2)(4, 5));
+console.log("flatten test", flatten([1, 2, [[5], 6, 7]]));
+console.log("reduce test", reduce(0, (a, b) => a + b, [1, 2, 4]));
+console.log("pipe test", pipe((x) => x + 1, (x) => x * 2)(2));
