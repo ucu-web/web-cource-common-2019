@@ -1,21 +1,23 @@
-function insertionSort(array, comparisonFunction) {
-    let currentElement, i, j;
+const { getRandomArray, cloneArray } = require("./lib");
 
-    for (i = 1; i < array.length; ++i) {
-        currentElement = array[i];
-        j = i - 1;
+function insertionSort(array, comparisonFunction = (a, b) => a - b) {
+  let sortedArray = cloneArray(array);
 
-        while (j >= 0 && comparisonFunction(array[j], currentElement) > 0) {
-            array[j + 1] = array[j];
-            --j;
-        }
+  let currentElement, i, j;
 
-        array[j + 1] = currentElement;
+  for (i = 1; i < sortedArray.length; ++i) {
+    currentElement = sortedArray[i];
+    j = i - 1;
+
+    while (j >= 0 && comparisonFunction(sortedArray[j], currentElement) > 0) {
+      sortedArray[j + 1] = sortedArray[j];
+      --j;
     }
+
+    sortedArray[j + 1] = currentElement;
+  }
+  return sortedArray;
 }
 
-function swap(array, first_index, second_index) {
-    let temporary = array[first_index];
-    array[first_index] = array[second_index];
-    array[second_index] = temporary;
-}
+const a = getRandomArray(10); /*?*/
+insertionSort(a); /*?*/
