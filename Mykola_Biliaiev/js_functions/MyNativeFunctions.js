@@ -1,16 +1,3 @@
-Array.prototype.myMap = function (f, i = 0) {
-    this[i] = f(this[i]);
-    return this.length === (i + 1) ? this : this.myMap(f, ++i);
-};
-
-Array.prototype.myFilter = function (f, i = 0) {
-    f(this[i]) ? this.splice(i, 1) : null;
-    return this.length === (i + 1) ? this : this.myFilter(f, ++i);
-};
-
-
-
-
 const map = (arr, f) => {
     const MappingThrough = (arr_new, i = 0) => arr.length === i ? arr_new : MappingThrough([...arr_new, f(arr[i])], ++i);
     return MappingThrough([])
@@ -37,11 +24,28 @@ const compose = (...fns) => {
     return reduce(fns, (a, b) => x => (b(a(x))))
 };
 
-
 const carry = (fn) => {
     return function f1(...args) {
         return (args.length >= fn.length) ? fn(...args) : (...argsMore) => (f1(...args.concat(argsMore)))
     }
+};
+
+const flip = (fn) => {
+    return (a, b, ...rest) => fn(b, a, rest);
+};
+
+const flatten = (arr) => {
+    let res = [];
+    const innerFunc = (arr, res) => {
+        typeof arr === "number" ? res.push(arr) : arr.map(innerFunc)
+    }
+    innerFunc(arr, []);
+    return res
+
+};
+
+const pipe = (...fns) => {
+    return reduce(fns.reverse(), (a, b) => x => (b(a(x))))
 };
 
 
