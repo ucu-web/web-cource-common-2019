@@ -1,0 +1,30 @@
+body {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #000;
+    font-family: "Open Sans", X-LocaleSpecific, sans-serif;
+}
+
+
+blockquote, body, dd, dl, dt, fieldset, figcaption, figure, form, h1, h2, h3, h4, h5, h6, hr, html, legend, li, ol, p, pre, table, ul {
+    margin: 0;
+    padding: 0;
+}
+
+dl, ol, p, table, ul {
+    margin: 0 0 1.25em;
+}
+
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+    display: block;
+}
+
+
+
+
+label {
+    display: block;
+    font-weight: 700;
+    margin: 0 0 .25em;
+}

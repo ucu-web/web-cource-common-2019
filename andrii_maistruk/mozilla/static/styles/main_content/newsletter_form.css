@@ -1,0 +1,92 @@
+.newsletter_form {
+    grid-column: 2;
+    width: auto;
+    float: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 104px 84px 0 0;
+}
+
+.newsletter_form_header {
+    display: block;
+    margin-top: 10%;
+}
+
+.newsletter_form_title {
+    font-size: 2.25rem;
+    line-height: 1.1111;
+    margin-bottom: .25em;
+
+}
+
+.newsletter_form_tag_line {
+    margin: 0 0 1.25em;
+}
+
+.newsletter_form_fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.newsletter_input {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 3px;
+    border: 1px solid #4a4a4f;
+    display: inline-block;
+    line-height: 1.25;
+    padding: .25em 8px;
+    width: 100%;
+}
+
+.newsletter_sign_up_details {
+    display: none;
+}
+
+
+.newsletter_form_submit {
+    text-align: center;
+    padding: 0;
+    margin: 0 0 1.25em;
+}
+
+.newsletter_for_submit_button {
+    margin-bottom: 8px;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    background-color: #000;
+    border-radius: 2px;
+    border: 2px solid #000;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    padding: 14px 30px;
+    text-decoration: none;
+}
+
+.newsletter_for_submit_button:hover {
+    -webkit-transform: translate(-2px,-2px);
+    transform: translate(-2px,-2px);
+    background-color: #fff;
+    box-shadow: 4px 4px 0 0 #000;
+    color: #000;
+}
+
+.newsletter_submit_button_name {
+}
+
+.newsletter_submit_note {
+    font-size: .875rem;
+    line-height: 1.285;
+    color: #4a4a4f;
+    display: block;
+    font-weight: 400;
+}

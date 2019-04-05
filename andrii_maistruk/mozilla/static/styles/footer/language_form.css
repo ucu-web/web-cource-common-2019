@@ -1,0 +1,32 @@
+.language_form {
+    float: right;
+    font-weight: 700;
+    box-sizing: content-box;
+}
+
+.language_form_header_link {
+    color: #fff;
+    font-weight: 400;
+    text-decoration: underline;
+    margin: 0 24px 8px 0;
+    font-size: .875rem;
+    line-height: 1.285;
+    display: inline-block;
+}
+
+.language_form_label {
+    font-size: .875rem;
+    line-height: 1.285;
+    display: inline-block;
+    visibility: hidden;
+}
+
+.language_form_select {
+    font-size: .75rem;
+    line-height: 1.333;
+    border: none;
+    display: inline-block;
+    background: #ededf0;
+    font-weight: 700;
+    min-width: 147px;
+}

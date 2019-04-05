@@ -1,0 +1,76 @@
+.main_content__header {
+    background-image: url("https://www.mozilla.org/media/img/firefox/accounts/fxa-hero-img.d86392a86cc4.png");
+    -webkit-background-size: 584px 389px;
+    background-size: 584px 389px;
+    background-position: 80% 60%;
+    background-repeat: no-repeat;
+    padding: 80px 96px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 1420px;
+    min-width: 304px;
+    position: relative;
+    text-align: left;
+    min-height: 405px;
+}
+
+.main_content__header_name {
+    margin-bottom: 48px;
+    padding-left: 48px;
+    padding-top: 2px;
+    text-align: left;
+    position: relative;
+    line-height: 40px;
+    display: block;
+    color: black;
+    background: url("https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png") top left no-repeat;
+    background-position-x: left;
+    background-position-y: top;
+    -webkit-background-size: 40px 40px;
+    background-size: 40px 40px;
+    font-weight: 400;
+}
+
+.main_content__header_sub_name {
+    display: inline-block;
+    font-size: 3rem;
+    line-height: 1.083;
+    margin-bottom: 32px;
+}
+
+.main_content__header_note {
+    font-size: 1.5rem;
+    line-height: 1.083;
+    margin-bottom: 32px;
+}
+
+.main_content__header_button {
+    margin-top: 24px;
+    text-align: left;
+}
+
+
+.main_content__header_link {
+    background-color: transparent;
+    color: #000;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 2px;
+    border: 2px solid #000;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    padding: 14px 30px;
+    text-decoration: none;
+}
+
+.main_content__header_link:hover {
+    -webkit-transform: translate(-2px,-2px);
+    transform: translate(-2px,-2px);
+    background-color: #fff;
+    box-shadow: 4px 4px 0 0 #000;
+    color: #000;
+}

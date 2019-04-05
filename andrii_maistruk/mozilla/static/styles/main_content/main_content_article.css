@@ -1,0 +1,113 @@
+.main_content_articles_wrapper {
+    margin-top: 40px;
+    max-width: 1420px;
+    margin-left: auto;
+    padding: 24px 96px 24px 96px;
+    box-sizing: border-box;
+    margin-right: auto;
+}
+
+.main_content_articles_wrapper:after {
+    clear: both;
+    content: '';
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.main_content__article {
+    margin-left: 0;
+    margin-right: 20px;
+    float: left;
+    box-sizing: border-box;
+    margin-bottom: 32px;
+    padding: 0;
+}
+
+.main_content__article.big {
+    width: calc(66.6% - 20px);
+    height: 100%;
+}
+
+
+.main_content__article.medium {
+    width: calc(50% - 10px);
+    height: 100%;
+}
+
+.main_content__article.small {
+    width: calc(33.3% - (20px));
+    margin-right: 20px;
+}
+
+.main_content__article.small.one_one {
+    margin-right: 0;
+    width: 33%;
+}
+
+.main_content__article.small:nth-child(3n + 2) {
+    margin-right: 0;
+    width: 33%;
+}
+
+.main_content__article.medium:nth-of-type(2n) {
+    margin-right: 0;
+}
+
+section.main_content__article.medium.bypass_margin {
+    margin-right: 0;
+}
+
+section.main_content__article.medium.force_margin {
+    margin-right: 20px;
+}
+
+.main_content__article.image {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+
+.main_content__article.link {
+    display: block;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    color: black;
+}
+
+.main_content__article.link:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, .2);
+}
+
+
+.main_content__article.note {
+    line-height: 1.8;
+    min-height: 25px;
+    color: #4a4a4f;
+    font-weight: 400;
+    margin-bottom: 4px;
+    padding-bottom: 10px;
+}
+
+.main_content__article.header {
+    margin: 0;
+    padding: 0;
+    clear: both;
+    font-size: 2rem;
+    line-height: 1.1111;
+    border-bottom: 2px solid transparent;
+    display: inline;
+}
+
+.main_content__article.header:hover {
+    text-decoration: underline;
+}
+
+.main_content__article.content {
+    padding: 0;
+    margin: 4px 0 0;
+    display: inline;
+}

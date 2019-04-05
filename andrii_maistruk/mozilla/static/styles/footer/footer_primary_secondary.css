@@ -1,0 +1,64 @@
+.mozilla_footer {
+    background: #000;
+    clear: both;
+    color: #fff;
+    margin: 0;
+    padding-top: 24px;
+    width: 100%;
+}
+
+.footer_content_wrapper {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    zoom: 1;
+    margin: 0 auto;
+    max-width: 1420px;
+    min-width: 304px;
+    padding: 24px 96px;
+}
+
+.footer_content_primary {
+    font-size: 1rem;
+    line-height: 1.5;
+    box-sizing: border-box;
+    zoom: 1;
+    margin: 0 auto 48px;
+}
+
+.footer_content_primary::after {
+    clear: both;
+    content: '';
+    display: block;
+    height: 0;
+    visibility: hidden;
+    font-size: 1rem;
+    line-height: 1.5;
+
+}
+
+.footer_content_primary_logo {
+    margin-bottom: 32px;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: "Open Sans", X-LocaleSpecific, sans-serif;
+    color: #fff;
+}
+
+.footer_content_primary_logo a {
+    background: url("https://www.mozilla.org/media/protocol/img/logos/mozilla/white.612a25fa976b.svg") no-repeat;
+    background-size: 100px 32px;
+    overflow: hidden;
+    text-indent: 120%;
+    white-space: nowrap;
+    display: inline-block;
+    height: 32px;
+    width: 100px;
+}
+
+
+.footer_content_secondary {
+    font-size: .75rem;
+    line-height: 1.333;
+    position: relative;
+}
