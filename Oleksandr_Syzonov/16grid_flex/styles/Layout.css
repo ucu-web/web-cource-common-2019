@@ -1,0 +1,54 @@
+.Layout {
+  background-color: #ff7979;
+  width: 1408px;
+  display: flex;
+  margin: 0 auto;
+  align-content: space-around;
+}
+.Layout__column_1 {
+  background-color: #6ab04c;
+}
+.Layout__column_2 {
+  background-color: #6ab04c;
+}
+.Layout__column_3 {
+  background-color: #6ab04c;
+}
+.Layout__column_4 {
+  background-color: #6ab04c;
+}
+.Layout__column_5 {
+  background-color: #6ab04c;
+}
+.Layout__column_6 {
+  background-color: #6ab04c;
+}
+.Layout__column_7 {
+  background-color: #6ab04c;
+}
+.Layout__column_8 {
+  background-color: #6ab04c;
+}
+.Layout__column_9 {
+  background-color: #6ab04c;
+}
+.Layout__column_10 {
+  background-color: #6ab04c;
+}
+.Layout__column_11 {
+  background-color: #6ab04c;
+}
+.Layout__column_12 {
+  background-color: #6ab04c;
+}
+.Layout__column_13 {
+  background-color: #6ab04c;
+}
+.Layout__column_14 {
+  background-color: #6ab04c;
+}
+.Layout__column_15 {
+  background-color: #6ab04c;
+}
+
+/*# sourceMappingURL=Layout.css.map */

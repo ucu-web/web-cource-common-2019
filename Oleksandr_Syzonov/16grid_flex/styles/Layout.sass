@@ -1,0 +1,16 @@
+$column-width: 70px
+$num_columns: 16
+$column-margin: 9px
+
+
+
+
+.Layout
+  background-color: #ff7979
+  width: $column-width * $num_columns + 2 * $column-margin * $num_columns
+  display: flex
+  margin: 0 auto
+  align-content: space-around
+  @for $i from 1 to $num_columns
+    &__column_#{$i}
+      background-color: #6ab04c
