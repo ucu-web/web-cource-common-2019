@@ -1,6 +1,3 @@
-let canvas = document.getElementById("field");
-let ctx = canvas.getContext("2d");
-
 const roundedRect = (ctx, x, y, width, height, radius) => {
     ctx.beginPath();
     ctx.moveTo(x, y + radius);
@@ -41,7 +38,7 @@ const drawApple = (ctx, x, y, width, height) => {
 };
 
 const random = (min, max) => Math.floor(Math.random() * (max - min) + min);
-const randPos = () => Math.round(random(0, canvas.width) / (canvas.width / 25)) * canvas.width / 25;
+const randPos = (fieldSize, PosNum) => Math.round(random(0, fieldSize) / PosNum) * PosNum;
 const randChoice = (arr) => arr[random(0, arr.length)];
 const randDir = () => {
     let tmp = randChoice([-1, 0, 1]);
@@ -56,10 +53,10 @@ class Entity {
         this.dir = dir;
     }
 
-    move(step) {
+    move(step, field_size) {
         [this.x, this.y] = [this.x, this.y].map((v, i) => {
             let new_pos = v + this.dir[i] * step;
-            if (new_pos > 0 && new_pos < canvas.width - step) {
+            if (new_pos > 0 && new_pos < field_size - step) {
                 return new_pos;
             }
             return v;
@@ -78,62 +75,74 @@ class Shadow extends Entity {
         drawGhost(ctx, this.x, this.y, width, width);
     }
 
-    move(step) {
+    move(step, field_size) {
         this.dir = randDir();
-        super.move(step);
+        super.move(step, field_size);
     }
 }
 
 class Apple extends Entity {
     draw(ctx, width) {
-        drawWidth(ctx, this.x, this.y, width, width);
+        drawApple(ctx, this.x, this.y, width, width);
     }
 }
 
-
-let pac = new Pacman(28, 28, [1, 0]);
-let shadows = new Array(3).fill(0).map(() => new Shadow(randPos(), randPos(), randDir()));
-
-const drawField = (ctx, canvas) => {
-    roundedRect(ctx, 0, 0, canvas.width, canvas.height, 15);
-    roundedRect(ctx, 7, 7, canvas.width - 14, canvas.height - 14, 9);
-    setInterval(draw, 180);
+const initCharacters = (field_size, cell_size) => {
+    let cellNum = field_size / cell_size;
+    let pac = new Pacman(cell_size, cell_size, [1, 0]);
+    let shadows = new Array(3).fill(0).map(() => new Shadow(randPos(field_size, cell_size), randPos(field_size, cell_size), randDir()));
+    let apples = new Array((cellNum - 2) * (cellNum - 2)).fill(0).map((v, i) => new Apple((1 + i % (cellNum - 2)) * cell_size, (1 + Math.floor(i / (cellNum - 2))) * cell_size, [0, 0]));
+    return [pac, shadows, apples];
 };
 
-const drawApples = () => {
-    for (let i = canvas.width / 25; i < canvas.width - canvas.width / 25; i += canvas.width / 25) {
-        for (let j = canvas.width / 25; j < canvas.width - canvas.width / 25; j += canvas.width / 25) {
-            drawApple(ctx, i, j, canvas.width / 25, canvas.width / 25);
-        }
+const drawField = (ctx, field_size, cell_size) => {
+    roundedRect(ctx, 0, 0, field_size, field_size, 15);
+    roundedRect(ctx, cell_size / 4, cell_size / 4, field_size - cell_size / 2, field_size - cell_size / 2, 9);
+};
+
+const drawApples = (ctx, cell_size, apples) => apples.forEach((v) => v.draw(ctx, cell_size));
+
+const draw = (ctx, field_size, cell_size, characters) => {
+    let [pac, shadows, apples] = characters;
+    ctx.clearRect(cell_size / 4, cell_size / 4, field_size - cell_size / 2, field_size - cell_size / 2);
+
+    [pac, ...shadows].forEach((v) => v.move(cell_size, field_size));
+
+    apples = apples.filter((v) => v.x !== pac.x || v.y !== pac.y);
+    characters[2] = apples;
+    if (shadows.filter((v) => v.x === pac.x && v.y === pac.y).length > 0) {
+        alert("End of game\n" + "Score: " + +(529 - apples.length));
     }
+    [pac, ...shadows].forEach((v) => v.draw(ctx, cell_size));
+    drawApples(ctx, cell_size, apples);
 };
 
-const draw = () => {
-    ctx.clearRect(7, 7, canvas.width - 14, canvas.height - 14);
-    let cell_width = canvas.width / 25;
-    [pac, ...shadows].forEach((v) => {
-        v.move(cell_width);
-        v.draw(ctx, cell_width);
-    });
-    // drawApple(ctx, 28, 28, 28, 28);
-    drawApples();
-};
-
-drawField(ctx, canvas);
-
-document.onkeypress = (e) => {
+const keyController = (pacman, e) => {
     switch (e.key) {
         case "ArrowLeft":
-            pac.dir = [-1, 0];
+            pacman.dir = [-1, 0];
             break;
         case "ArrowRight":
-            pac.dir = [1, 0];
+            pacman.dir = [1, 0];
             break;
         case "ArrowUp":
-            pac.dir = [0, -1];
+            pacman.dir = [0, -1];
             break;
         case "ArrowDown":
-            pac.dir = [0, 1];
+            pacman.dir = [0, 1];
             break;
     }
 };
+
+const startGame = (canvas) => {
+    let ctx = canvas.getContext("2d");
+
+    let [field_size, cell_size] = [canvas.width, canvas.width / 25];
+    let characters = initCharacters(field_size, cell_size);
+    drawField(ctx, field_size, cell_size);
+    setInterval(draw.bind(null, ctx, field_size, cell_size, characters), 180);
+
+    document.onkeypress = keyController.bind(null, characters[0]);
+};
+
+startGame(document.getElementById("field"));
