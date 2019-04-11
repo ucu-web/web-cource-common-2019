@@ -18,8 +18,9 @@ const toLower = curry((str) => str.toLowerCase());
 const ap = curry(([fn, ...fns], applyX) => fn === undefined ? [] : map(fn, applyX).concat(...ap(fns, applyX)));
 const append = curry((element, array) => array.concat([element]));
 const apply = curry((fn, args) => fn.apply(this, args));
-
-
+const applyTo = curry((val, fn) => fn(val));
+const head = curry(a => a===''? '' : a[0]);
+const tail = curry(a => a.slice(1));
 
 //TESTING
 
@@ -112,3 +113,23 @@ console.log(append(4)([3,4,5]));
 //apply
 console.log(apply(Math.max, [2,3,4,5]));
 console.log(apply(Math.max)([2,3,4,5]));
+
+//applyTo
+console.log(applyTo(42)(add(1)));
+
+//head
+console.log(head(['fi', 'fo', 'fum']));
+console.log(head([]));
+console.log(head('abc'));
+console.log(head(''));
+
+
+//tail
+console.log(tail([1, 2, 3]));
+console.log(tail([1, 2]));
+console.log(tail([1]));
+console.log(tail([]));
+console.log(tail('abc'));
+console.log(tail('ab'));
+console.log(tail('a'));
+console.log(tail(''));
