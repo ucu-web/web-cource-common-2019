@@ -1,0 +1,33 @@
+$grid-columns-number: 16;
+
+$cell-width: 67px;
+$cell-margin: 9px;
+
+$grid-width: $grid-columns-number * ($cell-width +  2 * $cell-margin);
+
+.Grid {
+  width: $grid-width;
+  margin: 0 auto;
+  background: gold;
+
+  &__row:after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+
+  &__cell {
+    float: left;
+    @for $i from 1 through $grid-columns-number {
+      &_#{$i} {
+        width: $cell-width * $i + (2 * $cell-margin) * ($i - 1);
+        background: #2980b9;
+        margin: 0 $cell-margin;}
+    }
+
+    @for $i from 0 through $grid-columns-number - 2  {
+      &_push-#{$i + 1} { margin-left: $cell-margin + $i * ($cell-width + 2 * $cell-margin); }
+    }
+
+  }
+}

@@ -1,0 +1,185 @@
+body {
+  font-family: IBMPlexSans, Helvetica Neue, Segoe UI, Helvetica, Verdana, Arial, sans-serif;
+}
+button {
+  cursor: pointer;
+}
+.main_header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.navigation{
+  /*background: rebeccapurple;*/
+  padding: 0px 20px 0px 20px;
+  height: 49px;
+  border-bottom: 1px solid rgb(237, 239, 241);
+  /*line-height: 48px;*/
+
+  /*text-align: center;*/
+
+}
+.navigation nav {
+  float: left;
+  display: inline-block;
+}
+.navigation nav * {
+  float: left;
+  display: inline-block;
+  /*vertical-align: center;*/
+}
+
+.navigation .reddit_logo {
+  height: 34px;
+  margin:  8px 0px 8px 0px;
+}
+
+.dropdown_menu_button {
+  border: 1px solid rgb(237, 239, 241);
+  border-radius: 4px;
+  padding: 0px 56px 0px 40px;
+  text-align: left;
+  height: 34px;
+  width: 270px;
+  margin: 8px 0 8px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #fff;
+  position: relative;
+}
+
+.dropdown_menu_button .left_img {
+  height: 22px;
+  width: 22px;
+  position: absolute;
+  left: 10px;
+  top: 6px;
+  fill: aqua;
+}
+
+.dropdown_menu_button .right_img {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  right: 10px;
+  top: 7px;
+}
+
+.search_form {
+  position: relative;
+  margin-right: 8px;
+}
+
+.search_form input {
+  padding: 0 16px 0 40px;
+  border: 1px solid rgb(237, 239, 241);
+  border-radius: 4px;
+  background-color: rgb(246, 247, 248);
+  height: 36px;
+  margin:  6px 0px 6px 16px;
+  font-size: 14px;
+}
+.search_form img {
+  height: 18px;
+  width: 18px;
+  position: absolute;
+  left: 28px;
+  top: 16px;
+}
+
+.often_used {
+  margin: 8px 0 8px;
+  border-right: 1px solid rgb(237, 239, 241);
+  padding-right: 8px;
+}
+
+.often_used a {
+  height: 16px;
+  width: 16px;
+  margin-left: 8px;
+  padding: 8px;
+}
+.often_used a img {
+  height: 16px;
+  width: 16px;
+}
+
+.account_navigation {
+  margin-left: -8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.account_navigation button:nth-child(1)  {
+  background-color: #fff;
+  color: rgb(0, 121, 211);
+}
+
+.account_navigation button:nth-child(2)  {
+  background-color: rgb(0, 121, 211);;
+  color: #fff;
+}
+
+.account_navigation .log_ {
+  height: 32px;
+  width:120px;
+  border: 1px solid rgb(0, 121, 211);
+  border-radius: 4px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+  text-transform: uppercase;
+  padding: 3px 16px;
+  margin-left: 16px;
+}
+
+.account_navigation .account_info {
+  width: 70px;
+  height: 30px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  margin: 1px 0 1px 8px;
+  background: #fff;
+}
+
+.account_info img {
+  position: relative;
+}
+
+.account_info img:nth-child(1) {
+  height: 24px;
+  width: 24px;
+}
+
+.account_info img:nth-child(2) {
+  height: 20px;
+  width: 20px;
+  top: 2px;
+  left: 5px;
+}
+
+.categories {
+  height: 40px;
+  background: rebeccapurple;
+  text-align: center;
+}
+
+.categories ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.categories li a {
+  height: 40px;
+  display: inline-block;
+  float: left;
+  line-height: 40px;
+  font-size: 12px;
+  font-weight: 500;
+  text-underline: none;
+  color: #000;
+  text-decoration: none;
+  padding: 0 10px;
+}
