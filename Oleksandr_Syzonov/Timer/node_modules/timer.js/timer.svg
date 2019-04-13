@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="11 7 28 30">
+  <g>
+    <g id="top-button">
+      <!-- stop button base -->
+      <rect x="22" y="10" width="4" height="3" fill="#413C3F"/>
+      <!-- stop button -->
+      <rect x="20" y="8" width="8" height="3" rx="1" ry="1" fill="#58505B"/>
+       <g fill="#756A79" rx="1" ry="1">
+         <rect x="21.5" y="8.5" width="1" height="2" rx=".4" ry=".4"/>
+         <rect x="23.5" y="8.5" width="1" height="2" rx=".4" ry=".4"/>
+         <rect x="25.5" y="8.5" width="1" height="2" rx=".4" ry=".4"/>
+       </g>
+    </g>
+
+    <g id="side-buttons" fill="#FFE5C2">
+      <rect x="0" y="0" width="4" height="4"
+          transform="translate(13.5, 14) rotate(45, 2, 2)" rx=".4" ry=".4"/>
+
+       <rect x="0" y="0" width="4" height="4"
+            transform="translate(30.5, 14) rotate(45, 2, 2)" rx=".4" ry=".4"/>
+    </g>
+
+    <g id="circles">
+      <!-- outer circle -->
+      <circle fill="#58505B" cx="24" cy="24" r="12" />
+      <!-- inner circle -->
+      <circle fill="#fff" cx="24" cy="24" r="10.5" />
+    </g>
+
+    <line x1="24" y1="24" x2="31" y2="24" stroke="#F5AD45" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="24" y1="24" x2="24" y2="17" stroke="#D75400" stroke-width="2" stroke-linecap="round"/>
+
+    <circle fill="#fff" cx="24" cy="24" r=".5" />
+
+    <g id="dots" fill="#58505B">
+      <circle cx="14.5" cy="24" r=".5"/>
+      <circle cx="33.5" cy="24" r=".5"/>
+      <circle cx="24" cy="14.5" r=".5"/>
+      <circle cx="24" cy="33.5" r=".5"/>
+      <circle cx="17.5" cy="30.5" r=".5"/>
+      <circle cx="30.5" cy="30.5" r=".5"/>
+      <circle cx="17.5" cy="17.5" r=".5"/>
+      <circle cx="30.5" cy="17.5" r=".5"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,20 @@
+{
+  "name": "Timer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "easytimer.js": "^3.1.0"
+  },
+  "devDependencies": {
+    "timer.js": "^1.0.4",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  },
+  "scripts": {
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
