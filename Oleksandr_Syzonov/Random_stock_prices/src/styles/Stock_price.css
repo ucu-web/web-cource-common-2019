@@ -1,0 +1,9 @@
+.Stock_price {
+  display: flex;
+  justify-content: space-around;
+}
+.Stock_price__stock-logo {
+  width: 100px;
+  height: 100px;
+}
+/*# sourceMappingURL=Stock_price.css.map */
