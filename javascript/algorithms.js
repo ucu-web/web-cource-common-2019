@@ -1,4 +1,15 @@
-"use strict";
+// "use strict";
+
+const swap = (v1, v2) => {
+    v2 = [v1, v1 = v2][0];
+};
+
+let a = 5;
+let b = 10;
+
+console.log(a, b);
+swap(a, b);
+console.log(a, b);
 
 // Bubble Sort
 
