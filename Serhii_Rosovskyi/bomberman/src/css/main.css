@@ -1,0 +1,113 @@
+#map {
+    width: 500px;
+    height: 500px;
+    background: lightgrey;
+    position: relative;
+    margin: auto;
+}
+
+#game {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    margin: auto;
+}
+
+.tile {
+    width: 50px;
+    height: 50px;
+    background: grey;
+    position: absolute;
+    outline: 1px solid #eee;
+}
+
+.target {
+    width: 50px;
+    height: 50px;
+    background: red;
+    position: absolute;
+    outline: 1px solid #eee;
+}
+
+#map #player {
+    border-radius: 25%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background: #222222;
+    z-index: 9999;
+}
+
+.bomb {
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background: #333;
+    z-index: 999;
+}
+
+#score p, #score span {
+    font-family: sans-serif;
+    color: #333;
+    font-size: 16px;
+    display: inline;
+}
+
+h4 {
+    font-family: sans-serif;
+    color: #333;
+    text-align: center;
+}
+
+p, strong {
+    font-family: sans-serif;
+    color: #333;
+    text-align: left;
+    font-size: 12px;
+}
+
+#win {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 9999999;
+    background: rgba(181, 181, 195, 0.1);
+    pointer-events: none;
+    opacity: 0;
+}
+
+#win p {
+    color: red;
+    font-size: 130px;
+    text-align: center;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    height: 100%;
+    margin: 0;
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -25%);
+    right: 0;
+    bottom: 0;
+    font-weight: bold;
+    text-shadow: 5px 5px #333;
+}
+
+#restart {
+    text-align: center;
+    padding: 10px 20px;
+    font-family: sans-serif;
+    color: #333;
+    outline: #ccc 1px solid;
+    display: table;
+    margin: auto;
+    cursor: pointer;
+}
+
+#restart:hover {
+    background: #eee;
+}
