@@ -1,8 +1,18 @@
 .Stock_price{
+  width: 600px;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  align-content: space-around;
+  &__stocks{
+    display: flex;
+    justify-content: space-around;
+  }
   &__stock-logo{
     width: 100px;
     height: 100px;
+  }
+  &__reload{
+    width: 5rem;
+    margin: 0 auto;
   }
 }

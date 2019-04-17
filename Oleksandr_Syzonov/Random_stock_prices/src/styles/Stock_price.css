@@ -1,9 +1,19 @@
 .Stock_price {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+}
+.Stock_price__stocks {
   display: flex;
   justify-content: space-around;
 }
 .Stock_price__stock-logo {
   width: 100px;
   height: 100px;
+}
+.Stock_price__reload {
+  width: 5rem;
+  margin: 0 auto;
 }
 /*# sourceMappingURL=Stock_price.css.map */
