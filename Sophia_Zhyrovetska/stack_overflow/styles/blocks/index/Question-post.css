@@ -21,7 +21,6 @@
   float: left;
 }
 .Question-post__tag {
-  display: inline-block;
   margin: 0.7em 0.1em 0.1em;
 }
 .Question-post__started {
