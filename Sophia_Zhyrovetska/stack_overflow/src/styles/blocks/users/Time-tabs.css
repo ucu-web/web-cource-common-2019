@@ -1,0 +1,23 @@
+.Time-tabs {
+  padding: 24px 0 0 0;
+}
+.Time-tabs__tab {
+  display: block;
+  margin: 0 0 0 0.17em;
+  padding: 0.67em;
+  border-bottom: 1px solid transparent;
+  color: #6a737c;
+  font-size: 0.75em;
+  line-height: 1.5;
+  float: right;
+}
+.Time-tabs__tab--selected {
+  border-color: #f48024;
+  font-weight: 700;
+  color: #3b4045;
+}
+.Time-tabs__tab:hover {
+  border-color: #f48024;
+  color: #3b4045;
+}
+/*# sourceMappingURL=Time-tabs.css.map */

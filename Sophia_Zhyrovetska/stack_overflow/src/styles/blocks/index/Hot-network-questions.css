@@ -1,0 +1,29 @@
+.Hot-network-questions {
+  display: flex;
+  flex-direction: column;
+}
+.Hot-network-questions__title {
+  margin-bottom: 1.4em;
+}
+.Hot-network-questions__title-link {
+  font-weight: normal;
+  color: #242729;
+  font-size: 1.2em;
+}
+.Hot-network-questions__list {
+  margin: 0;
+  padding: 0;
+}
+.Hot-network-questions__question {
+  display: flex;
+  text-decoration: none;
+  margin-bottom: 0.7em;
+}
+.Hot-network-questions__question-link {
+  font-size: 0.75em;
+  flex: 13;
+}
+.Hot-network-questions__icon {
+  flex: 1;
+}
+/*# sourceMappingURL=Hot-network-questions.css.map */

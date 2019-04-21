@@ -1,0 +1,38 @@
+.Site-chapter-navigation__link {
+  font-size: 0.81em;
+  color: #535a60;
+  line-height: 1.8;
+  display: block;
+  padding: 0.25em 0.25em 0.25em 1.88em;
+}
+.Site-chapter-navigation__link--home {
+  padding: 0.25em 0.25em 0.25em 0.5em;
+}
+.Site-chapter-navigation__link--current {
+  background: rgba(12, 13, 14, 0.05);
+  border-right: 3px solid #f48024;
+  color: #0c0d0e;
+  font-weight: bold;
+}
+.Site-chapter-navigation__link--with-icon {
+  display: flex;
+  align-items: center;
+  padding: 0.5em 0.38em 0.5em 0.5em;
+}
+.Site-chapter-navigation__link:hover,
+.Site-chapter-navigation__link:focus,
+.Site-chapter-navigation__link:active {
+  color: #0c0d0e;
+}
+.Site-chapter-navigation__icon_globe {
+  margin: 0 0.25em 0 0;
+  fill: #848d95;
+}
+.Site-chapter-navigation__section-title {
+  text-transform: uppercase;
+  color: #6a737c;
+  margin: 1.45em 0 0.725em 0.36em;
+  font-size: 0.69em;
+  font-weight: inherit;
+}
+/*# sourceMappingURL=Site-chapter-navigation.css.map */

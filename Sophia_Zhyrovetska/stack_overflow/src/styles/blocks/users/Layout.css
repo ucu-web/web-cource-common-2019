@@ -1,0 +1,24 @@
+.Layout {
+  display: grid;
+  grid-template-columns: auto 164px minmax(auto, 1076px) auto;
+  grid-template-rows: 50px auto 300px;
+}
+.Layout__header {
+  grid-area: 1/1/2/5;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.Layout__navigation {
+  grid-column-start: 2;
+  padding: 24px 0 0 0;
+}
+.Layout__sticky-navigation {
+  position: sticky;
+  top: 74px;
+  margin: 0 0 0.75em 0;
+}
+.Layout__footer {
+  grid-area: 3/1/4/5;
+}
+/*# sourceMappingURL=Layout.css.map */
