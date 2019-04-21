@@ -1,5 +1,6 @@
 import QuestionPost from "./components/QuestionPost";
 import FeaturedTagsBlock from "./components/FeaturedTagsBlock";
+import HotNetworkQuestions from "./components/HotNetworkQuestions"
 
 const RenderQuestionList = async () => {
   const questionContainer = document.querySelector(".Questions-list");
@@ -18,6 +19,14 @@ const RenderFeaturedTagsBlocks = async () => {
   data.map(block => blockContainer.appendChild(FeaturedTagsBlock(block)));
 };
 
+const RenderHotNetworkQuestions = async () => {
+  const blockContainer = document.querySelector(".Hot-network-questions__list");
+  const data = await (await fetch(
+      "src/components/HotNetworkQuestions/data.json"
+  )).json();
+  data.map(question => blockContainer.appendChild(HotNetworkQuestions(question)));
+};
+
 RenderQuestionList();
 RenderFeaturedTagsBlocks();
-
+RenderHotNetworkQuestions();

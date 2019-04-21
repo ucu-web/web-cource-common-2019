@@ -4,7 +4,7 @@ const b = BEM("Featured-tags-block");
 
 const FeaturedTagsBlock = data => {
   const rootEl = document.createElement("section");
-  rootEl.className = "Featured-tags-block Aside-panel__item";
+  rootEl.className = b() + " Aside-panel__item";
 
   rootEl.innerHTML = `
   <header class="${b("header")}">
