@@ -1,5 +1,4 @@
 import {drawPacman, drawGhost, drawApple} from "./drawing";
-import {randChoice} from "./gameHelpers";
 
 class Entity {
     constructor(x, y, dir) {

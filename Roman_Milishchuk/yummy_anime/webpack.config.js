@@ -18,5 +18,6 @@ module.exports = {
                 use: ["url-loader"]
             }
         ]
-    }
+    },
+    watch: true
 };

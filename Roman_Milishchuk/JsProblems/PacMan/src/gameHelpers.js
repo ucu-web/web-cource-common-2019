@@ -2,7 +2,7 @@ import {Pacman, Shadow, Apple} from "./Characters";
 
 const random = (min, max) => Math.floor(Math.random() * (max - min) + min);
 const randPos = (fieldSize, PosNum) => Math.round(random(0, fieldSize) / PosNum) * PosNum;
-export const randChoice = (arr) => arr[random(0, arr.length)];
+const randChoice = (arr) => arr[random(0, arr.length)];
 const randDir = () => {
     let tmp = randChoice([-1, 0, 1]);
     return tmp !== 0 ? [tmp, 0] : [tmp, randChoice([-1, 0, 1])];
