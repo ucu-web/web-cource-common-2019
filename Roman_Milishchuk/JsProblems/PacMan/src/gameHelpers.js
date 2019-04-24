@@ -2,8 +2,8 @@ import {Pacman, Shadow, Apple} from "./Characters";
 
 const random = (min, max) => Math.floor(Math.random() * (max - min) + min);
 const randPos = (fieldSize, PosNum) => Math.round(random(0, fieldSize) / PosNum) * PosNum;
-const randChoice = (arr) => arr[random(0, arr.length)];
-export const randDir = () => {
+export const randChoice = (arr) => arr[random(0, arr.length)];
+const randDir = () => {
     let tmp = randChoice([-1, 0, 1]);
     return tmp !== 0 ? [tmp, 0] : [tmp, randChoice([-1, 0, 1])];
 };
@@ -21,7 +21,7 @@ export const draw = (ctx, field_size, cell_size, characters) => {
     let [pac, shadows, apples] = characters;
     ctx.clearRect(cell_size / 4, cell_size / 4, field_size - cell_size / 2, field_size - cell_size / 2);
 
-    [pac, ...shadows].forEach((v) => v.move(cell_size, field_size));
+    [pac, ...shadows].forEach((v) => v.move(cell_size, field_size, pac));
 
     characters[2] = apples = apples.filter((v) => v.x !== pac.x || v.y !== pac.y);
     if (shadows.filter((v) => v.x === pac.x && v.y === pac.y).length > 0) {

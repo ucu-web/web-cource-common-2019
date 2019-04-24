@@ -1,5 +1,5 @@
 import {drawPacman, drawGhost, drawApple} from "./drawing";
-import {randDir} from "./gameHelpers";
+import {randChoice} from "./gameHelpers";
 
 class Entity {
     constructor(x, y, dir) {
@@ -30,8 +30,19 @@ export class Shadow extends Entity {
         drawGhost(ctx, this.x, this.y, width, width);
     }
 
-    move(step, field_size) {
-        this.dir = randDir();
+    move(step, field_size, pacman) {
+        let rel_x = pacman.x - this.x ? (pacman.x - this.x) / Math.abs(pacman.x - this.x) : 0;
+        let rel_y = pacman.y - this.y ? (pacman.y - this.y) / Math.abs(pacman.y - this.y) : 0;
+        let dir = [rel_x, rel_y];
+        if (dir[0] + dir[1] !== 1) {
+            if ((pacman.x - this.x) > (pacman.y - this.y)) {
+                this.dir = [0, dir[1]];
+            } else {
+                this.dir = [dir[0], 0];
+            }
+        } else {
+            this.dir = dir;
+        }
         super.move(step, field_size);
     }
 }
