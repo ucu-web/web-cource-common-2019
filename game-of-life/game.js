@@ -1,5 +1,3 @@
-FIELD_SIZE = 100;
-
 const generateRow = (size) => new Array(size).fill(size).map(() => Math.round(Math.random()));
 const generateField = (size) => new Array(size).fill(size).map(() => generateRow(size));
 const getCellValue = (field, i, j) => !field[i] ? 0 : !field[i][j] ? 0 : field[i][j];
@@ -25,7 +23,7 @@ const sumOfNeighbors = (field, i, j) =>
     getCellValue(field, i + 1, j) +
     getCellValue(field, i + 1, j + 1);
 
-let field = generateField(50);
+let field = generateField(100);
 
 setInterval(() => {
     updateView(renderView(field));

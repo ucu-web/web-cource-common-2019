@@ -1,9 +1,10 @@
-$field-size: 50;
-$cell-size: 5px;
+$field-size: 100;
+$cell-size: 9px;
 
 #game {
   width: $cell-size * $field-size;
   height: $cell-size * $field-size;
+  margin: auto;
   font-size: 0;
   border: 1px solid black;
 }

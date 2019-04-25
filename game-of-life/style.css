@@ -1,13 +1,14 @@
 #game {
-  width: 250px;
-  height: 250px;
+  width: 900px;
+  height: 900px;
+  margin: auto;
   font-size: 0;
   border: 1px solid black;
 }
 
 .Cell {
-  width: 5px;
-  height: 5px;
+  width: 9px;
+  height: 9px;
   display: inline-block;
   margin: 0;
   padding: 0;
