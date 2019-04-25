@@ -1,12 +1,8 @@
 const random = (min, max) => Math.floor(Math.random() * (max - min) + min);
 
 const generatePopulation = (field, num) => {
-    // return num === 0 ? generatePopulation(field, num - 1) : true;
-    for (let i = 0; i < num; i++) {
-        let x = random(0, field.length);
-        let y = random(0, field.length);
-        field[random(0, field.length)][random(0, field.length)] = 1;
-    }
+    field[random(0, field.length)][random(0, field.length)] = 1;
+    return num === 0 ? generatePopulation(field, num - 1) : true;
 };
 
 const draw = (ctx, cell_size, x, y) => ctx.fillRect(x * cell_size, y * cell_size, cell_size, cell_size);
