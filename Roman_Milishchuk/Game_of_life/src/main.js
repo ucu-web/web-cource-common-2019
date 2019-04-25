@@ -15,7 +15,6 @@ const generate_field_test = (generate_field, field_size) => {
             }
         })
     });
-    console.log("END");
 };
 
 const generate_life_test = (generate_life, field, num) => {
@@ -54,7 +53,6 @@ const count_neighbours_test = (count_neighbours, field, x, y) => {
 
 const new_field_test = (gen_new_field, field) => {
     let new_field = gen_new_field(field);
-
     field.map((a, x) => {
         a.map((v, y) => {
                 let count = count_neighbours(field, x, y);
@@ -77,7 +75,6 @@ const generate_field = (field_size) => {
     for (let i = 0; i < field_size; i++) {
         arr.push(new Array(field_size).fill(0));
     }
-    console.log(arr);
     return arr;
 };
 
@@ -120,7 +117,7 @@ const new_field = (field) => {
             let neighbours = count_neighbours(field, i, j);
             if (neighbours < 2 && field[i][j] === 1) {
                 new_field[i][j] = 0;
-            } 
+            }
         }
     }
 };
