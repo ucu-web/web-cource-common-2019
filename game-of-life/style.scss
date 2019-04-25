@@ -1,0 +1,25 @@
+$field-size: 50;
+$cell-size: 5px;
+
+#game {
+  width: $cell-size * $field-size;
+  height: $cell-size * $field-size;
+  font-size: 0;
+  border: 1px solid black;
+}
+
+.Cell {
+  width: $cell-size;
+  height: $cell-size;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+
+  &--live {
+    background: #000;
+  }
+
+  &--dead {
+    background: #fff;
+  }
+}

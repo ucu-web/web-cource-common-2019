@@ -1,16 +1,13 @@
-body {
-  margin: 0;
-  padding: 0;
-}
+@import "../config";
 
 header {
-  height: 64px;
+  height: $header-height;
   background-color: #24292e;
   margin-bottom: 24px;
 }
 
 main {
-  max-width: 980px;
+  max-width: $main-width;
   margin: auto;
   display: grid;
   grid-template-columns: 230px 730px;
@@ -18,11 +15,9 @@ main {
 }
 
 aside {
-  width: 230px;
+  width: $aside-width;
 }
 
 article {
-  width: 730px;
+  width: $article-width;
 }
-
-/*# sourceMappingURL=css-grid.css.map */

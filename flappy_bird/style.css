@@ -1,3 +1,7 @@
 body {
     margin: 0;
 }
+
+#game {
+    border: 1px solid;
+}

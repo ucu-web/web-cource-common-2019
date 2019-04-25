@@ -1,0 +1,122 @@
+@import "../config";
+
+//.ProfileInfo {
+//
+//  &__avatar {
+//    border: 1px solid #e1e4e8;
+//    border-radius: 3px;
+//    overflow: hidden;
+//    margin-bottom: 16px;
+//  }
+//
+//  &__picture {
+//    width: 230px;
+//    height: 230px;
+//  }
+//
+//  &__icon {
+//    width: 18px;
+//    height: 18px;
+//  }
+//
+//  &__status {
+//    display: inline-block;
+//    font-size: $font-size-small;
+//    font-family: $font-family;
+//    color: rgb(36, 41, 46);
+//  }
+//
+//  &__name {
+//    font-family: $font-family;
+//    font-size: $font-size-very-big;
+//    font-weight: $font-weight-bold;
+//    margin: 0;
+//    color: rgb(36, 41, 46);
+//  }
+//
+//  &__nickname {
+//    font-family: $font-family;
+//    font-weight: normal;
+//    font-size: $font-size-big;
+//    color: rgb(102, 102, 102);
+//    margin: 0;
+//  }
+//
+//  &__separator {
+//    margin: 16px 0;
+//  }
+//
+//}
+
+.ProfileInfo {
+  &__avatar {
+    width: 230px;
+    border-radius: 3px 3px 0 0;
+    border: 1px solid #e1e4e8;
+    box-sizing: border-box;
+    border-bottom: 0;
+  }
+
+  &__avatar-footer {
+    width: 227px;
+    height: 49px;
+    margin-top: -6px;
+    border-bottom: 1px solid #e1e4e8;
+    border-radius: 0 0 3px 3px;
+    border-left: 1px solid #e1e4e8;
+    border-right: 1px solid #e1e4e8;
+  }
+
+  &__icon-wrapper {
+    border-radius: 50%;
+    display: flex;
+    background-color: #FFF;
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    margin-top: -14px;
+    margin-left: 15px;
+  }
+
+  &__icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  &__status {
+    font-family: $font-family;
+    color: #24292e;
+    position: absolute;
+    font-size: 12px;
+    margin-top: 24px;
+    margin-left: 12px;
+    text-decoration: none;
+  }
+
+  &__name {
+    font-family: $font-family;
+    margin: 16px 0 0;
+    color: #24292e;
+    font-size: $font-size-very-big;
+    font-weight: $font-weight-bold;
+  }
+
+  &__nickname {
+    font-family: $font-family;
+    color: #6a737d;
+    margin: 0;
+    font-size: $font-size-big;
+    font-weight: $font-weight-normal;
+  }
+
+  &__separator {
+    margin-top: 16px;
+    margin-bottom: 18px;
+    border: 0;
+    height: 1px;
+    background: #ddd;
+  }
+}

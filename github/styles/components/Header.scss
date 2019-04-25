@@ -1,0 +1,106 @@
+@import "../config";
+
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+
+  &__wrapper--left, &__wrapper--right {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon img {
+    width: 32px;
+    height: 32px;
+  }
+
+  &__form {
+    height: 28px;
+    width: 300px;
+    position: relative;
+    background: hsla(0,0%,100%,.125);
+    border-radius: 3px;
+    margin: 0 16px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%;
+      right: 9px;
+      display: block;
+      width: 19px;
+      height: 20px;
+      background: url("../../images/search-key-slash.svg");
+    }
+  }
+
+  &__input {
+    height: 28px;
+    width: 257px;
+    border: none;
+    background: none;
+    border-radius: 3px;
+    padding: 0 8px;
+
+    &::placeholder {
+      font-size: $font-size-normal;
+      font-weight: $font-weight-normal;
+      color: $font-color;
+    }
+  }
+
+  &__nav-item {
+    color: $item-color;
+    font-size: $font-size-normal;
+    font-weight: $font-weight-bold;
+    font-family: $font-family;
+    text-decoration: none;
+    margin-right: 16px;
+
+    &:hover {
+      color: $item-color-hover;
+    }
+  }
+
+  &__notification {
+    width: 14px;
+    height: 16px;
+    margin-right: 16px;
+    background: url("../../images/bell.svg");
+  }
+
+  // TODO: finish this two buttons
+
+  &__button {
+    position: relative;
+    border: none;
+    background: yellow;
+    margin-right: 16px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+
+    &--plus {
+      width: 12px;
+      background: url("../../images/plus.svg") no-repeat;
+    }
+
+    &--profile {
+
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 8px;
+      height: 4px;
+      display: block;
+      background: url("../../images/dropdown.svg");
+    }
+  }
+}
