@@ -12,14 +12,14 @@ import "../styles/common.css"
 
 import {get_anime} from "./new_anime"
 
-const add_all = (get_func, n) => n !== 0 ? Promise.resolve(get_func())
-    .then(value => add_anime(value))
-    .then(add_all(get_func, n - 1)) : true;
-
 const add_anime_to_container = (container, new_anime) => {
     container.innerHTML += new_anime;
 };
 
 const add_anime = add_anime_to_container.bind(null, document.body.getElementsByClassName("new-on-site__anime-list")[0]);
+
+const add_all = (get_func, n) => n !== 0 ? Promise.resolve(get_func())
+    .then(value => add_anime(value))
+    .then(add_all(get_func, n - 1)) : true;
 
 add_all(get_anime, 8);
