@@ -1,0 +1,137 @@
+@import "../../styles/variables.scss";
+@import "../../styles/buttons.scss";
+
+
+.LetterControls {
+  margin-right: 16px;
+
+  width: calc(100% - 16px);
+  height: 48px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e5e5e5;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 4px 0 16px;
+
+  &__round-button {
+    @include round-button;
+
+    width: 20px;
+    height: 20px;
+    margin: 12px 10px 11px;
+    background-size: 20px;
+
+    &:hover {
+      opacity: 1;
+
+      &::after {
+        opacity: .54;
+        top: -10px; left: -10px;
+        padding: calc(50% + 10px);
+      }
+    }
+  }
+
+  &__checkbox {
+    display: none;
+
+    & + .LetterControls__square-button {
+      background-image: url("/images/icons/checkbox_empty.png");
+    }
+    &:checked + .LetterControls__square-button {
+      background-image: url("/images/icons/checkbox_checked.png");
+    }
+  }
+
+  &__square-button {
+    cursor: pointer;
+
+    position: relative;
+    display: block;
+    border: none;
+
+    padding: 0;
+
+    height: 20px;
+    min-width: 20px;
+
+    opacity: .54;
+
+    background-size: 20px 20px;
+    background: none no-repeat;
+
+    &::after {
+      position: absolute;
+      display: block;
+      content: "";
+
+      top: 50%;
+      left: 50%;
+      padding: 0;
+
+      border-radius: 4px;
+      background-color: #3332;
+      opacity: .54;
+
+      transition-property: left, top, padding;
+      transition-duration: 150ms;
+      transition-timing-function: cubic-bezier(0.4,0.0,0.2,1);
+    }
+
+    &:hover {
+      opacity: 1;
+
+      &::after {
+        left: -4px;
+        top: -8px;
+
+        padding: 18px calc(50% + 4px);
+      }
+    }
+  }
+
+  // should be used together with square-button class
+  &__narrow-button {
+    &:hover::after {
+      left: -2px;
+      padding: 18px calc(50% + 2px);
+    }
+  }
+
+  // should be used together with square-button class
+  &__text-container {
+    opacity: 1;
+    color: #5f6368;
+    margin: 0 4px;
+  }
+
+  &__selection-container {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__select-custom { background-image: url("/images/icons/dropdown.png"); }
+
+  &__refresh { background-image: url("/images/icons/refresh.png"); }
+  &__options { background-image: url("/images/icons/options.png"); }
+  &__splitter {
+    flex-grow: 1;
+  }
+  &__newer { background-image: url("/images/icons/arrow-left.png"); }
+  &__older { background-image: url("/images/icons/arrow-right.png"); }
+  &__settings {
+    background-image: url("/images/icons/settings.png");
+    margin-right: 12px;
+    margin-left: 22px;
+  }
+  &__input-tools-select { background-image: url("/images/icons/dropdown.png"); }
+
+}
+
+
+
+
+

@@ -1,0 +1,116 @@
+@import "../../styles/variables";
+@import "../../styles/buttons";
+
+
+.Header {
+  position: absolute;
+  top: 0;
+
+  box-sizing: border-box;
+
+  width: 100%;
+  height: 64px;
+  padding: 8px 8px 8px 12px;
+
+  border-bottom: 1px solid #eceff1;
+
+  display: flex;
+  flex-direction: row;
+
+  &__round-button {
+    @include round-button;
+
+    width: 24px;
+    height: 24px;
+    margin: 12px;
+    background-size: 24px;
+
+    &:hover::after {
+      left: -7px;
+      top: -7px;
+      padding: calc(50% + 7px);
+    }
+  }
+
+  &__show-menu {
+    min-width: 24px;
+    background-image: url("../../images/icons/burger-menu.svg");
+
+    &:hover::after {
+      top: -12px;
+      left: -12px;
+      padding: calc(50% + 12px);
+    }
+  }
+
+  &__logo {
+    padding: 4px;
+    width: 196px;
+    min-width: 196px;
+    box-sizing: border-box;
+  }
+
+  &__search-container {
+    background: rgba(0,0,0,0.04);
+    padding: 0 4px 0 2px;
+
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    height: 48px;
+    flex-grow: 1;
+    max-width: 722px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__search-submit { background-image: url("../../images/icons/search.svg"); }
+  &__search-clear {
+    display: none;
+    background-image: url("../../images/icons/cross.svg");
+  }
+  &__search-options { background-image: url("../../images/icons/dropdown.svg"); }
+
+  &__search-input {
+    font: normal 16px Roboto,sans-serif;
+
+    background: none;
+    border: none;
+    /* TODO fix with js */
+    outline: none;
+
+    color: rgba(0, 0, 0, 0.54);
+
+    padding: 11px 16px 11px 3px;
+    height: 48px;
+    flex-grow: 1;
+    box-sizing: border-box;
+  }
+
+  &__menu {
+    padding: 0 12px 0 32px;
+
+    display: flex;
+    justify-content: flex-end;
+
+    flex: 1;
+  }
+
+  &__google-apps { background-image: url("../../images/icons/menu.svg"); }
+  &__notifications { background-image: url("../../images/icons/notification.svg"); }
+  &__account {
+    margin: 8px;
+
+    &:hover::after {
+      left: -3px;
+      top: -3px;
+    }
+  }
+  &__account-image {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+}

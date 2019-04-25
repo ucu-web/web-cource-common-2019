@@ -1,0 +1,46 @@
+@mixin round-button {
+  cursor: pointer;
+  position: relative;
+
+  display: block;
+  border: none;
+  background: none;
+
+  opacity: .54;
+  padding: 0;
+
+  &::after {
+    position: absolute;
+
+    display: block;
+    content: "";
+    left: 50%;
+    top: 50%;
+
+    border-radius: 50%;
+    padding: 0;
+    background-color: #3332;
+
+    transition-property: top, left, padding;
+    transition-timing-function: cubic-bezier(0.4,0.0,0.2,1);
+    transition-duration: 150ms;
+  }
+
+  &:hover {
+    /* .round:hover::after should be changed to change the size of pop-up */
+    &::after {
+      left: -7px;
+      top: -7px;
+      padding: calc(50% + 7px);
+    }
+  }
+
+  &:disabled {
+    opacity: .27 !important;
+    cursor: default;
+
+    &::after {
+      padding: 0 !important;
+    }
+  }
+}

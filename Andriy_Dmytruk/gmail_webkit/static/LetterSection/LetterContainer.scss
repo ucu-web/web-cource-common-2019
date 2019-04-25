@@ -1,0 +1,108 @@
+@import "../../styles/variables.scss";
+@import "../../styles/buttons.scss";
+
+.LetterContainer {
+  margin-right: 16px;
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+}
+
+
+.Letter {
+  display: flex;
+  box-sizing: border-box;
+  padding: 9px 0 10px;
+
+  border-bottom: 1px solid #e5e5e5;
+  background-clip: border-box;
+
+  height: 40px;
+  font-size: 14px;
+
+  background-color: #f5f7f7;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  &.unread {
+    background-color: #FFF;
+    font-weight: bold;
+  }
+
+  &__round-button {
+    @include round-button;
+    cursor: pointer;
+
+    width: 20px;
+    height: 20px;
+    margin: 0;
+
+    background-color: inherit;
+    background-size: 20px;
+
+    opacity: .16;
+
+    &:hover {
+      opacity: 1;
+
+      &::after {
+        left: -10px;
+        top: -10px;
+        padding: calc(50% + 10px);
+        opacity: .54;
+      }
+    }
+  }
+
+  &__select { background-image: url("/images/icons/checkbox_empty.png"); }
+  &__favourite { background-image: url("/images/icons/star_empty.png"); }
+
+  &__checkbox {
+    display: none;
+
+    &:checked + .Letter__round-button {
+      opacity: .54;
+    }
+
+    &:checked + .Letter__select { background-image: url("/images/icons/checkbox_checked.png"); }
+    &:checked + .Letter__favourite { background-image: url("/images/icons/star_filled.png"); }
+  }
+
+  &__select-col {
+    padding-left: 16px;
+    width: 20px;
+  }
+  &__favourite-col {
+    padding-left: 9px;
+    width: 20px;
+  }
+  &__title-col {
+    padding: 2px 10px;
+    width: 150px;
+    height: 20px;
+    line-height: 20px;
+
+    overflow: hidden;
+  }
+  &__details-col {
+    padding: 2px 10px 2px 30px;
+    height: 20px;
+    line-height: 20px;
+
+    overflow: hidden;
+
+    flex-grow: 1;
+  }
+  &__time-col {
+    padding: 0 16px 0 40px;
+
+    color: #5f6368;
+    line-height: 20px;
+    font-size: 12px;
+  }
+}
+

@@ -1,0 +1,129 @@
+@import "../../styles/variables.scss";
+@import "../../styles/buttons.scss";
+
+
+.InboxControls {
+  min-width: 256px;
+  width: 256px;
+
+  &__compose-new {
+    cursor: pointer;
+
+    height: 48px;
+    border-radius: 24px;
+    min-width: 56px;
+    padding: 0 24px 0 56px;
+    margin: 16px 8px;
+
+    -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302), 0 1px 3px 1px rgba(60, 64, 67, 0.149);
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302), 0 1px 3px 1px rgba(60, 64, 67, 0.149);
+    font-family: 'Google Sans', Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+    font-size: .875rem;
+    letter-spacing: .25px;
+    color: #3c4043;
+    font-weight: 500;
+
+    background-color: #FFF;
+    border: none;
+
+    background-image: url("/images/icons/compose.png");
+    background-repeat: no-repeat;
+    background-position: 12px 8px;
+    background-size: 32px;
+
+    transition: box-shadow .08s linear,min-width .15s cubic-bezier(0.4,0.0,0.2,1);
+
+    &:hover {
+      -webkit-box-shadow: 0 1px 3px 0 rgba(60,64,67,0.302), 0 4px 8px 3px rgba(60,64,67,0.149);
+      box-shadow: 0 1px 3px 0 rgba(60,64,67,0.302), 0 4px 8px 3px rgba(60,64,67,0.149);
+      background-color: #fafafb;
+    }
+  }
+
+  &__letters-type {
+    display: block;
+    box-sizing: border-box;
+    width: 240px;
+    height: 32px;
+
+    background: none;
+    border: none;
+    text-align: left;
+    font-family: inherit;
+
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+
+    padding: 6px 12px 6px 26px;
+
+    font-size: 0.9em;
+
+    cursor: pointer;
+
+    /* why ::before? Because image needs opacity :( */
+    &::before {
+      float: left;
+      width: 20px;
+      height: 20px;
+      content: " ";
+      display: block;
+
+      margin-right: 18px;
+
+      background-size: 20px;
+      background-repeat: no-repeat;
+      opacity: .54;
+    }
+
+    &:hover {
+      background-color: #f1f3f6;
+    }
+
+    &.unread {
+      font-weight: bold;
+    }
+
+    &.selected {
+      background-color: #e8eaed;
+      font-weight: bold;
+    }
+
+
+    &-inbox {
+      &::before {
+        background-image: url("/images/icons/inbox.png");
+      }
+
+      &.selected {
+        background-color: #fce8e6;
+        color: #d93025;
+
+        &::before {
+          background-image: url("/images/icons/inbox-selected.png");
+          opacity: 1;
+        }
+      }
+    }
+
+    &-starred::before {
+      background-image: url("/images/icons/star.png");
+    }
+
+    &-snoozed::before {
+      background-image: url("/images/icons/clock.png");
+    }
+
+    &-sent::before {
+      background-image: url("/images/icons/sent.png");
+    }
+
+    &-drafts::before {
+      background-image: url("/images/icons/draft.png");
+    }
+
+    &-more::before {
+      background-image: url("/images/icons/dropdown-arrow.png");
+    }
+  }
+
+}

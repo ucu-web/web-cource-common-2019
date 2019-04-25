@@ -1,0 +1,47 @@
+@import "./variables.scss";
+
+$fonts: (
+   (
+           family: "Google Sans",
+           weights: ((weight: normal, file: "google-sans.woff2"),),
+           directory: "Google_Sans"
+   ),
+   (
+           family: "Roboto",
+           weights: (
+                   (weight: normal, file: "Roboto-Regular.ttf"),
+                   (weight: bold, file: "Roboto-Bold.ttf"),
+                   (weight: 300, file: "Roboto-Light.ttf")),
+           directory: "Roboto"
+   )
+);
+
+@each $font in $fonts {
+  @debug "Loading font " + map-get($font, family);
+  $weights: map-get($font, weights);
+
+  @each $weight in $weights {
+    @font-face {
+      src: url("../fonts/" + map-get($font, directory) + "/" + map-get($weight, file));
+      font-family: map-get($font, family);
+      font-weight: map-get($weight, weight);
+    }
+  }
+}
+
+body {
+  margin: 0;
+  font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+  overflow: hidden;
+  color: var(--black);
+
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  /* header height */
+  padding-top: 64px;
+
+  display: flex;
+  flex-direction: row;
+}
