@@ -25,20 +25,22 @@ body {
 .pipe {
   width: 52px;
   position: absolute;
-}
-.pipe__north {
-  height: 242px;
-  top: -30px;
-  left: 200px;
-  background: url("assets/images/pipeNorth.png") no-repeat;
-  background-size: cover;
-}
-.pipe__south {
-  height: 378px;
-  top: 290px;
-  left: 200px;
-  background: url("assets/images/pipeSouth.png") no-repeat;
-  background-size: cover;
+
+  &__north {
+    height: 242px;
+    top: -30px;
+    left: 200px;
+    background: url("assets/images/pipeNorth.png") no-repeat;
+    background-size: cover;
+  }
+
+  &__south {
+    height: 378px;
+    top: 290px;
+    left: 200px;
+    background: url("assets/images/pipeSouth.png") no-repeat;
+    background-size: cover;
+  }
 }
 
 #floor {
@@ -49,5 +51,3 @@ body {
   background: url("assets/images/fg.png") no-repeat;
   background-size: cover;
 }
-
-/*# sourceMappingURL=style.css.map */
