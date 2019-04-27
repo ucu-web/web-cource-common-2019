@@ -6,7 +6,6 @@ let canvas = document.getElementById("game");
 canvas.height = CANVAS_SIZE;
 canvas.width = CANVAS_SIZE;
 let context = canvas.getContext("2d");
-let score = document.getElementsByClassName("score")[0];
 
 class Snake {
     constructor(x, y, snakeSize, canvasSize) {
@@ -122,6 +121,18 @@ class Game {
         this.deltaX = 0;
         this.deltaY = 0;
 
+        this.handleGesture = () => {
+            if (this.deltaX > 0 && Math.abs(this.deltaY) < Math.abs(this.deltaX)) {
+                this.snake.changeDirection(0, 1);
+            } else if (this.deltaX < 0 && Math.abs(this.deltaY) < Math.abs(this.deltaX)) {
+                this.snake.changeDirection(0, -1);
+            } else if (this.deltaY > 0 && Math.abs(this.deltaX) < Math.abs(this.deltaY)) {
+                this.snake.changeDirection(1, 0);
+            } else if (this.deltaY < 0 && Math.abs(this.deltaX) < Math.abs(this.deltaY)) {
+                this.snake.changeDirection(-1, 0);
+            }
+        }
+
         this.initializeControl();
     }
 
@@ -141,20 +152,8 @@ class Game {
         document.addEventListener("touchend", (event) => {
             this.deltaX = event.changedTouches[0].clientX - this.touchstartX;
             this.deltaY = event.changedTouches[0].clientY - this.touchstartY;
-            handleGesture();
+            this.handleGesture();
         });
-
-        function handleGesture() {
-            if (this.deltaX > 0 && Math.abs(this.deltaY) < Math.abs(this.deltaX)) {
-                this.snake.changeDirection(0, 1);
-            } else if (this.deltaX < 0 && Math.abs(this.deltaY) < Math.abs(this.deltaX)) {
-                this.snake.changeDirection(0, -1);
-            } else if (this.deltaY > 0 && Math.abs(this.deltaX) < Math.abs(this.deltaY)) {
-                this.snake.changeDirection(1, 0);
-            } else if (this.deltaY < 0 && Math.abs(this.deltaX) < Math.abs(this.deltaY)) {
-                this.snake.changeDirection(-1, 0);
-            }
-        }
 
         // CONTROL FOR KEYBOARD
 

@@ -6,9 +6,7 @@ html, body {
 body {
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  overscroll-behavior: none;
 }
 
 /*# sourceMappingURL=style.css.map */
