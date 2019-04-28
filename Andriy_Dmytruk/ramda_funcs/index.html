@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Ramda </title>
+    <script src="index.js"></script>
+
+    <style>
+        body {
+            font-family: sans-serif
+        }
+    </style>
+</head>
+<body>
+    <h1> Ramda funcs </h1>
+    <h2 class="ramda-num"></h2>
+
+    <script>
+        let rambdaNum = document.querySelector(".ramda-num");
+
+        const countValues = (obj) => Object.keys(obj).length;
+
+        rambdaNum.innerText = "Ramda functions number: " + countValues(R || {});
+    </script>
+</body>
+</html>
