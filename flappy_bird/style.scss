@@ -1,8 +1,3 @@
-body {
-  margin: 0;
-  padding: 0;
-}
-
 #game {
   width: 288px;
   height: 512px;
@@ -16,9 +11,16 @@ body {
   width: 38px;
   height: 26px;
   position: absolute;
-  top: 250px;
-  left: 20px;
   background: url("assets/images/bird.png") no-repeat;
+  background-size: cover;
+}
+
+#floor {
+  width: 288px;
+  height: 118px;
+  position: absolute;
+  bottom: 0;
+  background: url("assets/images/fg.png") no-repeat;
   background-size: cover;
 }
 
@@ -37,13 +39,4 @@ body {
     background: url("assets/images/pipeSouth.png") no-repeat;
     background-size: cover;
   }
-}
-
-#floor {
-  width: 288px;
-  height: 118px;
-  position: absolute;
-  bottom: 0;
-  background: url("assets/images/fg.png") no-repeat;
-  background-size: cover;
 }
