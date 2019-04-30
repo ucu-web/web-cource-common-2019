@@ -1,56 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8">
     <title>Home / Twitter</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/nav-menu.css">
-    <link rel="stylesheet" href="styles/search-form.css">
-    <link rel="stylesheet" href="styles/profile-button.css">
+    <link rel="stylesheet" href="layout.css">
 </head>
 <body>
-    <header class="header">
-        <div class="header__wrapper">
-            <nav class="nav-menu">
-                <a class="nav-menu__item--active" href="" aria-label="Home">
-                    <img class="nav-menu__image" src="/images/home-active.svg" alt="">
-                </a>
-                <a class="nav-menu__item" href="" aria-label="Explore">
-                    <img class="nav-menu__image" src="/images/grid.svg" alt="">
-                </a>
-                <a class="nav-menu__item" href="" aria-label="Notifications">
-                    <img class="nav-menu__image" src="/images/bell.svg" alt="">
-                </a>
-                <a class="nav-menu__item" href="" aria-label="Messages">
-                    <img class="nav-menu__image" src="/images/message.svg" alt="">
-                </a>
+    <header class="Header">
+        <div class="Header__wrapper">
+            <nav class="Header__nav">
+                <a href="">Home</a>
+                <a href="">Explore</a>
+                <a href="">Notifications</a>
+                <a href="">Messages</a>
             </nav>
-            <form action="/search" class="search-form">
-                <img class="search-form__image" src="/images/search.svg" alt="">
-                <input type="text" placeholder="Search Twitter" class="search-form__field">
+            <form class="Header__search-form" action="./search" aria-label="search-form">
+                <input class="Header__search-input" type="text" aria-label="search-field">
             </form>
-            <button class="profile-button">
-                <img class="profile-button__avatar" src="/images/avatar.jpg" alt="">
-                <h2 class="profile-button__title">Vitaliy Vorobyov</h2>
-                <img class="profile-button__icon" src="/images/dropdown.svg" alt="">
-            </button>
+            <button class="Header__menu-button"></button>
         </div>
     </header>
-    <main class="content">
-        <article class="news-feed">
-            <header class="news-feed__header">
-                <h2 class="news-feed__title">Home</h2>
-                <button></button>
+    <main class="Main">
+        <article class="PrimaryColumn">
+            <header class="PrimaryColumn__header">
+                <h1 class="PrimaryColumn__name">Home</h1>
+                <button class="PrimaryColumn__button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path fill="#1DA1F2" d="M22.772 10.506l-5.618-2.192-2.16-6.5c-.102-.307-.39-.514-.712-.514s-.61.207-.712.513l-2.16 6.5-5.62 2.192c-.287.112-.477.39-.477.7s.19.585.478.698l5.62 2.192 2.16 6.5c.102.306.39.513.712.513s.61-.207.712-.513l2.16-6.5 5.62-2.192c.287-.112.477-.39.477-.7s-.19-.585-.478-.697zm-6.49 2.32c-.208.08-.37.25-.44.46l-1.56 4.695-1.56-4.693c-.07-.21-.23-.38-.438-.462l-4.155-1.62 4.154-1.622c.208-.08.37-.25.44-.462l1.56-4.693 1.56 4.694c.07.212.23.382.438.463l4.155 1.62-4.155 1.622zM6.663 3.812h-1.88V2.05c0-.414-.337-.75-.75-.75s-.75.336-.75.75v1.762H1.5c-.414 0-.75.336-.75.75s.336.75.75.75h1.782v1.762c0 .414.336.75.75.75s.75-.336.75-.75V5.312h1.88c.415 0 .75-.336.75-.75s-.335-.75-.75-.75zm2.535 15.622h-1.1v-1.016c0-.414-.335-.75-.75-.75s-.75.336-.75.75v1.016H5.57c-.414 0-.75.336-.75.75s.336.75.75.75H6.6v1.016c0 .414.335.75.75.75s.75-.336.75-.75v-1.016h1.098c.414 0 .75-.336.75-.75s-.336-.75-.75-.75z"></path>
+                    </svg>
+                </button>
             </header>
-            <div class="news-feed__tweets">
-                
-            </div>
+            <button class="PrimaryColumn__create-post">
+
+            </button>
         </article>
-        <aside class="secondary-content">
-            
-        </aside>
+        <aside class="SidebarColumn"></aside>
     </main>
 </body>
 </html>

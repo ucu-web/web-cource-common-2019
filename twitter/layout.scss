@@ -1,0 +1,92 @@
+$font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+$font-size: 19px;
+$font-weight: 800;
+
+
+body {
+  margin: 0;
+  background: rgb(230, 236, 240);
+}
+
+.Header {
+  height: 53px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  background: #fff;
+
+  &__wrapper {
+    width: 980px;
+    height: inherit;
+    margin: auto;
+  }
+}
+
+.Main {
+  width: 980px;
+  padding: 0 10px;
+  height: 100px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.PrimaryColumn {
+  width: 600px;
+  height: 500px;
+  background: #fff;
+
+  &__header {
+    border-bottom: 1px solid rgb(230, 236, 240);
+    padding: 8px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__name {
+    margin: 0;
+    max-width: 500px;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+  }
+
+  &__button {
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    transition: 0.2s;
+  }
+
+  &__button svg {
+    height: 2em;
+  }
+
+  &__button:hover {
+    background: rgba(29, 161, 242, 0.1);
+  }
+
+  &__create-post {
+    width: 100%;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    border-bottom: 1px solid rgb(230, 236, 240);
+  }
+}
+
+.SidebarColumn {
+  width: 360px;
+  height: 100px;
+  background: #fff;
+}
