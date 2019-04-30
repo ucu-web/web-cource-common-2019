@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Blog",
+    "questions": [
+      {
+        "icon": "codegolf",
+        "link": "How the 2019 Stack Overflow Developer Survey Came to Be (And Your Last Chance…"
+      }
+    ]
+  },
+
+  {
+    "title": "Featured on meta",
+    "questions": [
+      {
+        "icon": "stackoverflowmeta",
+        "link": "Take the 2019 Developer Survey"
+      }
+    ]
+  },
+
+  {
+    "title": "Hot meta posts",
+    "questions": [
+      {
+        "icon": "stackoverflowmeta",
+        "link": "Technology I am using has a small community"
+      },
+      {
+        "icon": "stackoverflowmeta",
+        "link": "Wrong encoding of name in mail notification"
+      }
+    ]
+  }
+]

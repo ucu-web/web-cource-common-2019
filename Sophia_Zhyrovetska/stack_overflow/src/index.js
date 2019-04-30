@@ -1,6 +1,7 @@
 import QuestionPost from "./components/QuestionPost";
 import FeaturedTagsBlock from "./components/FeaturedTagsBlock";
 import HotNetworkQuestions from "./components/HotNetworkQuestions"
+import CommunityBulletin from "./components/CommunityBulletin"
 
 const RenderQuestionList = async () => {
   const questionContainer = document.querySelector(".Questions-list");
@@ -27,6 +28,16 @@ const RenderHotNetworkQuestions = async () => {
   data.map(question => blockContainer.appendChild(HotNetworkQuestions(question)));
 };
 
+const RenderCommunityBulletin = async () => {
+  const blockContainer = document.querySelector(".Community-bulletin");
+  const data = await (await fetch(
+      "src/components/CommunityBulletin/data.json"
+  )).json();
+
+  data.map(block => blockContainer.appendChild(CommunityBulletin(block)));
+};
+
 RenderQuestionList();
 RenderFeaturedTagsBlocks();
 RenderHotNetworkQuestions();
+RenderCommunityBulletin();
