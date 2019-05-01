@@ -1,0 +1,60 @@
+.header{
+    background-color: black;
+    font-size: 1.2rem;
+    font-family: "Segoe UI Semibold", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    flex-wrap: wrap;
+    min-height: 4.7rem;
+}
+
+.navigation{
+    list-style-type: none;
+    align-self: center;
+}
+
+.navigation__person-icon{
+    color: white;
+    height: 0.9rem;
+    width: 0.9rem;
+    margin-right: 0.5rem;
+}
+
+.image-link__logo{
+    height: 4.3rem;
+    width: 10.5rem;
+    align-self: center;
+}
+
+.navigation__item{
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+.navigation__item a{
+    font-weight: 400;
+    color: darkgrey;
+    text-decoration: none;
+}
+
+.navigation__item a:hover{
+    color: #02a388;
+}
+
+.navigation__boards-icon{
+    background-image: url("https://www.istockphoto.com/landing/assets/unisporkal_engine/images/istock/boards/icon_boards-new.svg");
+    display: inline-block;
+    height: 0.875rem;
+    width: 0.875rem;
+    margin-right: 0.5rem;
+}
+
+.navigation__item_right-border{
+    border-right: 2px solid #474747;
+    padding-right: 2rem;
+}
+
+.navigation__item .white-text{
+    color: white;
+}

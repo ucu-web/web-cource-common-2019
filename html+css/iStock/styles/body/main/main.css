@@ -1,0 +1,9 @@
+.main{
+    background-color: #E8EDED;
+    position: relative;
+}
+
+.main-page-content{
+    margin: 0 auto;
+    max-width: 75rem;
+}

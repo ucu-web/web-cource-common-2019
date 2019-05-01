@@ -1,0 +1,1537 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5.2 Introduction</title>
+</head>
+<body>
+    <h1>HTML 5.2</h1>
+    <h2>W3C Recommendation, <time datetime="14-12-2017">14 December 2017</time></h2>
+    <nav class="bradcrump">
+        <a href="#">Table of contents</a>
+        --
+        <a href="#">2 Common infrastructure</a>
+    </nav>
+    <h3>Table of Contents</h3>
+    <nav>
+        <ul type="none">
+            <li><a href="#">1   Introduction </a></li>
+            <li><a href="#">1.1 Background   </a></li>
+            <li><a href="#">1.2 Audience     </a></li>
+            <li><a href="#">1.3 Scope        </a></li>
+            <li><a href="#">1.4 History      </a></li>
+            <li>
+                <a href="#">1.5      Design notes</a>
+                <ul type="none">
+                    <li><a href="#">1.5.1 Serializability of script execution   </a></li>
+                    <li><a href="#">1.5.2 Compliance with other specifications  </a></li>
+                    <li><a href="#">1.5.3 Extensibility                         </a></li>
+                </ul>
+            </li>
+            <li><a href="#">1.6 HTML vs XML Syntax                   </a></li>
+            <li>
+                <a href="#">1.7 Structure of this specification      </a>
+                <ul type="none">
+                    <li><a href="#">1.7.1 How to read this specification  </a></li>
+                    <li><a href="#">1.7.2 Typographic conventions         </a></li>
+                </ul>
+            </li>
+            <li><a href="#">1.8      Privacy concerns                     </a></li>
+            <li>
+                <a href="#">1.9 A quick introduction to HTML         </a>
+                <ul type="none">
+                    <li><a href="#">1.9.1 Writing secure applications with HTML                                        </a></li>
+                    <li><a href="#">1.9.2 Common pitfalls to avoid when using the scripting APIs                       </a></li>
+                    <li><a href="#">1.9.3 How to catch mistakes when writing HTML: validators and conformance checkers </a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">1.10 Conformance requirements for authors </a>
+                <ul type="none">
+                    <li><a href="#">1.10.1 Presentational markup                                  </a></li>
+                    <li><a href="#">1.10.2 Syntax errors                                          </a></li>
+                    <li><a href="#">1.10.3 Restrictions on content models and on attribute values </a></li>
+                </ul>
+            </li>
+            <li><a href="#">1.11 Suggested reading                    </a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <article class="introduction">
+            <header>
+                <h2>1. Introduction</h2>
+            </header>
+            <section>
+                <h3>1.1. Background</h3>
+                <p><em>This section is non-normative.</em></p>
+                <p>
+                   HTML is the World Wide Web’s core markup language. Originally, HTML was primarily designed as a
+                   language for semantically describing scientific documents. Its general design, however, has enabled
+                   it to be adapted, over the subsequent years, to describe a number of other types of documents and
+                   even applications.
+                </p>
+            </section>
+            <section>
+                <h3>1.2. Audience</h3>
+                <p><em>This section is non-normative.</em></p>
+                <p>
+                    This specification is intended for authors of documents and scripts that use the features defined
+                    in this specification, implementors of tools that operate on pages that use the features defined
+                    in this specification, and individuals wishing to establish the correctness of documents or
+                    implementations with respect to the requirements of this specification.
+                </p>
+                <p>
+                    This document is probably not suited to readers who do not already have at least a passing
+                    familiarity with Web technologies, as in places it sacrifices clarity for precision, and brevity
+                    for completeness. More approachable tutorials and authoring guides can provide a gentler
+                    introduction to the topic.
+                </p>
+                <p>
+                    In particular, familiarity with the basics of DOM is necessary for a complete understanding
+                    of some of the more technical parts of this specification. An understanding of Web IDL, HTTP,
+                    XML, Unicode, character encodings, JavaScript, and CSS will also be helpful in places but is not
+                    essential.
+                </p>
+            </section>
+            <section>
+                <h3>1.3. Scope</h3>
+                <p><em>This section is non-normative.</em></p>
+                <p>
+                    This specification is limited to providing a semantic-level markup language and associated
+                    semantic-level scripting APIs for authoring accessible pages on the Web ranging from static
+                    documents to dynamic applications.
+                </p>
+                <p>
+                    The scope of this specification does not include providing mechanisms for media-specific
+                    customization of presentation (although default rendering rules for Web browsers are included
+                    at the end of this specification, and several mechanisms for hooking into CSS are provided as
+                    part of the language).
+                </p>
+                <p>
+                    The scope of this specification is not to describe an entire operating system. In particular,
+                    hardware configuration software, image manipulation tools, and applications that users would be
+                    expected to use with high-end workstations on a daily basis are out of scope. In terms of
+                    applications, this specification is targeted specifically at applications that would be expected
+                    to be used by users on an occasional basis, or regularly but from disparate locations, with low
+                    CPU requirements. Examples of such applications include online purchasing systems, searching
+                    systems, games (especially multiplayer online games), public telephone books or address books,
+                    communications software (e-mail clients, instant messaging clients, discussion software), document
+                    editing software, etc.
+                </p>
+            </section>
+            <section>
+                <h3>1.4. History</h3>
+                <p><em>This section is non-normative.</em></p>
+                <p>
+                    For its first five years (1990-1995), HTML went through a number of revisions and experienced a
+                    number of extensions, primarily hosted first at CERN, and then at the IETF.
+                </p>
+                <p>
+                    With the creation of the W3C, HTML’s development changed venue again. A first abortive attempt at
+                    extending HTML in 1995 known as HTML 3.0 then made way to a more pragmatic approach known as
+                    HTML 3.2, which was completed in 1997. HTML 4.01 quickly followed later that same year.
+                </p>
+                <p>
+                    The following year, the W3C membership decided to stop evolving HTML and instead begin work on
+                    an XML-based equivalent, called XHTML. This effort started with a reformulation of HTML 4.01 in
+                    XML, known as XHTML 1.0, which added no new features except the new serialization, and which was
+                    completed in 2000. After XHTML 1.0, the W3C’s focus turned to making it easier for other working
+                    groups to extend XHTML, under the banner of XHTML Modularization. In parallel with this, the W3C
+                    also worked on a new language that was not compatible with the earlier HTML and XHTML languages,
+                    calling it XHTML 2.0.
+                </p>
+                <p>
+                    Around the time that HTML’s evolution was stopped in 1998, parts of the API for HTML developed by
+                    browser vendors were specified and published under the name DOM Level 1 (in 1998) and DOM Level 2
+                    Core and DOM Level 2 HTML (starting in 2000 and culminating in 2003). These efforts then petered
+                    out, with some DOM Level 3 specifications published in 2004 but the working group being closed
+                    before all the Level 3 drafts were completed.
+                </p>
+                <p>
+                    In 2003, the publication of XForms, a technology which was positioned as the next generation of Web
+                    forms, sparked a renewed interest in evolving HTML itself, rather than finding replacements for it.
+                    This interest was borne from the realization that XML’s deployment as a Web technology was limited
+                    to entirely new technologies (like RSS and later Atom), rather than as a replacement for existing
+                    deployed technologies (like HTML).
+                </p>
+                <p>
+                    A proof of concept to show that it was possible to extend HTML 4.01’s forms to provide many of the
+                    features that XForms 1.0 introduced, without requiring browsers to implement rendering engines that
+                    were incompatible with existing HTML Web pages, was the first result of this renewed interest. At
+                    this early stage, while the draft was already publicly available, and input was already being
+                    solicited from all sources, the specification was only under Opera Software’s copyright.
+                </p>
+                <p>
+                    The idea that HTML’s evolution should be reopened was tested at a W3C workshop in 2004, where some
+                    of the principles that underlie the HTML work (described below), as well as the aforementioned
+                    early draft proposal covering just forms-related features, were presented to the W3C jointly by
+                    Mozilla and Opera. The proposal was rejected on the grounds that the proposal conflicted with the
+                    previously chosen direction for the Web’s evolution; the W3C staff and membership voted to continue
+                    developing XML-based replacements instead.
+                </p>
+                <p>
+                    Shortly thereafter, Apple, Mozilla, and Opera jointly announced their intent to continue working on
+                    the effort under the umbrella of a new venue called the WHATWG. A public mailing list was created,
+                    and the draft was moved to the WHATWG site. The copyright was subsequently amended to be jointly
+                    owned by all three vendors, and to allow reuse of the specification.
+                </p>
+                <p>
+                    The WHATWG was based on several core principles, in particular that technologies need to be
+                    backwards compatible, that specifications and implementations need to match even if this means
+                    changing the specification rather than the implementations, and that specifications need to be
+                    detailed enough that implementations can achieve complete interoperability without
+                    reverse-engineering each other.
+                </p>
+                <p>
+                    The latter requirement in particular required that the scope of the HTML specification include
+                    what had previously been specified in three separate documents: HTML 4.01, XHTML 1.1, and DOM
+                    Level 2 HTML. It also meant including significantly more detail than had previously been considered
+                    the norm.
+                </p>
+                <p>
+                    In 2006, the W3C indicated an interest to participate in the development of HTML 5.0 after all,
+                    and in 2007 formed a working group chartered to work with the WHATWG on the development of the
+                    HTML specification. Apple, Mozilla, and Opera allowed the W3C to publish the specification under
+                    the W3C copyright, while keeping a version with the less restrictive license on the WHATWG site.
+                </p>
+                <p>
+                    For a number of years, both groups then worked together under the same editor: Ian Hickson.
+                    In 2011, the groups came to the conclusion that they had different goals: the W3C wanted to draw
+                    a line in the sand for features for a HTML 5.0 Recommendation, while the WHATWG wanted to continue
+                    working on a Living Standard for HTML, continuously maintaining the specification and adding new
+                    features. In mid 2012, a new editing team was introduced at the W3C to take care of creating a
+                    HTML 5.0 Recommendation and prepare a Working Draft for the next HTML version.
+                </p>
+                <p>
+                    Since then, the W3C Web Platform WG has been cherry picking patches from the WHATWG that resolved
+                    bugs registered on the W3C HTML specification or more accurately represented implemented reality
+                    in user agents. At time of publication of this document, patches from the
+                    <a href="#">WHATWG HTML specification</a>
+                    have been merged until January 12, 2016. The W3C HTML editors have also added patches that resulted
+                    from discussions and decisions made by the W3C Web Platform WG as well a bug fixes from bugs not
+                    shared by the WHATWG.
+                </p>
+                <p>
+                    A separate document is published to document the differences between the HTML specified in this
+                    document and the language described in the HTML 4.01 specification. <a href="#">[HTML5-DIFF]</a>
+                </p>
+            </section>
+            <section>
+                <h3>1.5. Design notes</h3>
+                <p><em>This section is non-normative.</em></p>
+                <p>
+                    It must be admitted that many aspects of HTML appear at first glance to be nonsensical and
+                    inconsistent.
+                </p>
+                <p>
+                    HTML, its supporting DOM APIs, as well as many of its supporting technologies, have been developed
+                    over a period of several decades by a wide array of people with different priorities who, in many
+                    cases, did not know of each other’s existence.
+                </p>
+                <p>
+                    Features have thus arisen from many sources, and have not always been designed in especially
+                    consistent ways. Furthermore, because of the unique characteristics of the Web, implementation
+                    bugs have often become de-facto, and now de-jure, standards, as content is often unintentionally
+                    written in ways that rely on them before they can be fixed.
+                </p>
+                <p>
+                    Despite all this, efforts have been made to adhere to certain design goals. These are described
+                    in the next few subsections.
+                </p>
+                <section>
+                    <h4>1.5.1. Serializability of script execution</h4>
+                    <p><em>This section is non-normative.</em></p>
+                    <p>
+                        To avoid exposing Web authors to the complexities of multithreading, the HTML and DOM APIs are
+                        designed such that no script can ever detect the simultaneous execution of other scripts. Even
+                        with <a href="#">workers</a>, the intent is that the behavior of implementations can be thought
+                        of as completely serializing the execution of all scripts in all <a href="#">browsing
+                        contexts</a>.
+                    </p>
+                </section>
+                <section>
+                    <h4>1.5.2. Compliance with other specifications</h4>
+                    <p><em>This section is non-normative.</em></p>
+                    <p>
+                        This specification interacts with and relies on a wide variety of other specifications. In
+                        certain circumstances, unfortunately, conflicting needs have led to this specification
+                        violating the requirements of these other specifications. Whenever this has occurred, the
+                        transgressions have each been noted as a "<strong>willful violation</strong>", and the reason
+                        for the violation has been noted.
+                    </p>
+                </section>
+                <section>
+                    <h4>1.5.3. Extensibility</h4>
+                    <p><em>This section is non-normative.</em></p>
+                    <p>
+                        HTML has a wide array of extensibility mechanisms that can be used for adding semantics in a
+                        safe manner:
+                    </p>
+                    <ul>
+                        <li>
+                            Authors can use the <a href="#">class</a> attribute to extend elements, effectively
+                            creating their own elements, while using the most applicable existing "real" HTML
+                            element, so that browsers and other tools that don’t know of the extension can still
+                            support it somewhat well. This is the tack used by microformats, for example.
+                        </li>
+                        <li>
+                            Authors can include data for inline client-side scripts or server-side site-wide
+                            scripts to process using the <a href="#">data-*=""</a> attributes. These are guaranteed
+                            to never be touched by browsers, and allow scripts to include data on HTML
+                            elements that scripts can then look for and process.
+                        </li>
+                        <li>
+                            Authors can use the <a href="#">meta name="" content=""</a> mechanism to include
+                            page-wide metadata by <a href="#">registering extensions to the predefined set of
+                            metadata names.</a>
+                        </li>
+                        <li>
+                            Authors can use the <a href="#"> rel=""</a> mechanism to annotate links with specific
+                            meanings by registering <a href="#">extensions to the predefined set of link types.</a>
+                            This is also used by microformats.
+                        </li>
+                        <li>
+                            Authors can embed raw data using the <a href="#"> script type=""</a> mechanism with a
+                            custom type, for further handling by inline or server-side scripts.
+                        </li>
+                        <li>
+                            Authors can extend APIs using the JavaScript prototyping mechanism. This is widely used
+                            by script libraries, for instance.
+                        </li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <h3>1.6. HTML vs XML Syntax</h3>
+                <p><em>This section is non-normative.</em></p>
+                <p>
+                    This specification defines an abstract language for describing documents and applications, and
+                    some APIs for interacting with in-memory representations of resources that use this language.
+                </p>
+                <p>
+                    The in-memory representation is known as "DOM HTML", or "the DOM" for short.
+                </p>
+                <p>
+                    There are various concrete syntaxes that can be used to transmit resources that use this
+                    abstract language, two of which are defined in this specification.
+                </p>
+                <p>
+                    The first such concrete syntax is the HTML syntax. This is the format suggested for most authors.
+                    It is compatible with most legacy Web browsers. If a document is transmitted with the
+                    <a href="#"> text/html</a> <a href="#"> MIME type</a>, then it will be processed as an HTML
+                    document by Web browsers. This specification defines the latest version of the HTML syntax,
+                    known simply as "HTML".
+                </p>
+                <p>
+                    The second concrete syntax is the XHTML syntax, which is an application of XML. When a document
+                    is transmitted with an <a href="#"> XML MIME type</a>, such as
+                    <a href="#">application/xhtml+xml</a>, then it is treated as an XML document by Web browsers,
+                    to be parsed by an XML processor. Authors are reminded that the processing for XML and HTML
+                    differs; in particular, even minor syntax errors will prevent a document labeled as XML from
+                    being rendered fully, whereas they would be ignored in the HTML syntax. This specification
+                    defines the latest version of the XHTML syntax, known simply as "XHTML".
+                </p>
+                <p>
+                    The DOM, the HTML syntax, and the XHTML syntax cannot all represent the same content.
+                    For example, namespaces cannot be represented using the HTML syntax, but they are supported
+                    in the DOM and in the XHTML syntax. Similarly, documents that use the <a href="#">noscript</a>
+                    feature can be represented using the HTML syntax, but cannot be represented with the DOM or in
+                    the XHTML syntax. Comments that contain the string "-->" can only be represented in the DOM,
+                    not in the HTML and XHTML syntaxes.
+                </p>
+            </section>
+            <section>
+                <h3>1.7. Structure of this specification</h3>
+                <p><em>This section is non-normative.</em></p>
+                <p>
+                    This specification is divided into the following major sections:
+                </p>
+                <dl>
+                    <dt><a href="#">§1 Introduction</a></dt>
+                    <dd>Non-normative materials providing a context for the HTML specification.</dd>
+                    <dt><a href="#">§2 Common infrastructure</a></dt>
+                    <dd>The conformance classes, algorithms, definitions, and the common underpinnings of the
+                        rest of the specification.</dd>
+                    <dt><a href="#">§3 Semantics, structure, and APIs of HTML documents</a></dt>
+                    <dd>Documents are built from elements. These elements form a tree using the DOM. This section
+                        defines the features of this DOM, as well as introducing the features common to all elements,
+                        and the concepts used in defining elements.</dd>
+                    <dt><a href="#">§4 The elements of HTML</a></dt>
+                    <dd>Each element has a predefined meaning, which is explained in this section. Rules for authors
+                        on how to use the element, along with user agent requirements for how to handle each element,
+                        are also given. This includes large signature features of HTML such as video playback and
+                        subtitles, form controls and form submission, and a 2D graphics API known as
+                        the HTML canvas.</dd>
+                    <dt><a href="#">§5 User interaction</a></dt>
+                    <dd>HTML documents can provide a number of mechanisms for users to interact with and modify
+                        content, which are described in this section, such as how focus works, and drag-and-drop.</dd>
+                    <dt><a href="#">§6 Loading Web pages</a></dt>
+                    <dd>HTML documents do not exist in a vacuum — this section defines many of the features that
+                        affect environments that deal with multiple pages, such as Web browsers and offline caching
+                        of Web applications.</dd>
+                    <dt><a href="#">§7 Web application APIs</a></dt>
+                    <dd>This section introduces basic features for scripting of applications in HTML.</dd>
+                    <dt><a href="#">§8 The HTML syntax</a></dt>
+                    <dt><a href="#">§9 The XML syntax</a></dt>
+                    <dd>All of these features would be for naught if they couldn’t be represented in a serialized
+                        \form and sent to other people, and so these sections define the syntaxes of HTML and XHTML,
+                        along with rules for how to parse content using those syntaxes.</dd>
+                    <dt><a href="#">§10 Rendering</a></dt>
+                    <dd>This section defines the default rendering rules for Web browsers.</dd>
+                </dl>
+                <p>There are also some appendices, listing <a href="#"> §11 Obsolete features</a> and <a href="#">
+                    §12 IANA</a> considerations, and several indices.</p>
+
+                <section>
+                    <h4>1.7.1. How to read this specification</h4>
+                    <p>
+                        This specification should be read like all other specifications. First, it should be read
+                        cover-to-cover, multiple times. Then, it should be read backwards at least once. Then it
+                        should be read by picking random sections from the contents list and following all the
+                        cross-references.
+                    </p>
+                    <p>
+                        As described in the conformance requirements section below, this specification describes
+                        conformance criteria for a variety of conformance classes. In particular, there are conformance
+                        requirements that apply to <i>producers</i>, for example authors and the documents they create,
+                        and there are conformance requirements that apply to <i>consumers</i>, for example Web
+                        browsers. They can be distinguished by what they are requiring: a requirement on a producer
+                        states what is allowed, while a requirement on a consumer states how software is to act.
+                    </p>
+                    <div class="example">
+                        <h5>EXAMPLE 1</h5>
+                        <p>
+                            For example, "the foo attribute’s value must be a <a href="#">valid integer"</a> is a
+                            requirement on producers, as it lays out the allowed values; in contrast, the requirement
+                            "the foo attribute’s value must be parsed using <a href="#">the rules for parsing
+                            integers"</a> is a requirement on consumers, as it describes how to process the content.
+                        </p>
+                    </div>
+                    <p>
+                        <strong>Requirements on producers have no bearing whatsoever on consumers.</strong>
+                    </p>
+                    <div class="example">
+                        <h5>EXAMPLE 2</h5>
+                        <p>
+                            Continuing the above example, a requirement stating that a particular attribute’s value
+                            is constrained to being a <a href="#">valid integer</a> emphatically does <i>not</i> imply
+                            anything about the requirements on consumers. It might be that the consumers are in fact
+                            required to treat the attribute as an opaque string, completely unaffected by whether the
+                            value conforms to the requirements or not. It might be (as in the previous example) that
+                            the consumers are required to parse the value using specific rules that define how invalid
+                            (non-numeric in this case) values are to be processed.
+                        </p>
+                    </div>
+                </section>
+
+                <section>
+                    <h4>1.7.2. Typographic conventions</h4>
+                    <p>This is a definition, requirement, or explanation.</p>
+                    <div>
+                        <h5>NOTE:</h5>
+                        <p>This is a note.</p>
+                    </div>
+                    <div>
+                        <h5>Example 3</h5>
+                        <p>This is an example.</p>
+                    </div>
+                    <div>
+                        <p>This is an open issue.</p>
+                    </div>
+                    <div>
+                        <p>This is a warning.</p>
+                    </div>
+                    <div>
+                        <p> interface Example {          </p>
+                        <p> // this is an IDL definition </p>
+                        <p> };                           </p>
+                    </div>
+                    <div>
+                        <p>This definition is non-normative. Implementation requirements are given below this
+                            definition.</p>
+                        <p><b> variable = object . method( [  </b></p>
+                        <p><b> optionalArgument ] )           </b></p>
+                        <p>This is a note to authors describing the usage of an interface.</p>
+                    </div>
+                    <div>
+                        <p>/* this is a CSS fragment */</p>
+                    </div>
+
+                    <p>
+                        The defining instance of a term is marked up like <dfn id="this">this</dfn>. Uses of
+                        that term are marked up like <a href="index.html#this">this</a> or like
+                        <a href="index.html#this">this</a>.
+                    </p>
+
+                    <p>
+                        The defining instance of an element, attribute, or API is marked up like <a href="#">this</a>.
+                        References to that element, attribute, or API are marked up like <a href="#">this</a>.
+                    </p>
+                    <p>
+                        Other code fragments are marked up like <code>this</code>.
+                    </p>
+                    <p>
+                        Byte sequences with bytes in the range 0x00 to 0x7F, inclusive, are marked up like
+                        <code>this</code>.
+                    </p>
+                        Variables are marked up like <var>this</var>.
+                    </p>
+                    <p>
+                        In an algorithm, steps in <a href="#">synchronous sections</a> are marked with ⌛.
+                    </p>
+                    <p>
+                        In some cases, requirements are given in the form of lists with conditions and corresponding
+                        requirements. In such cases, the requirements that apply to a condition are always the first
+                        set of requirements that follow the condition, even in the case of there being multiple sets
+                        of conditions for those requirements. Such cases are presented as follows:
+                    </p>
+
+                    <dl>
+                        <dt>This is a condition</dt>
+                        <dt>This is another condition</dt>
+                        <dl>This is the requirement that applies to the conditions above.</dl>
+                        <dt>This is a third condition</dt>
+                        <dl>This is the requirement that applies to the third condition.</dl>
+                    </dl>
+                </section>
+            </section>
+            <section>
+                <h3>1.8. Privacy concerns</h3>
+                <p><em>This section is non-normative.</em></p>
+                <p>
+                    Some features of HTML trade user convenience for a measure of user privacy.
+                </p>
+                <p>
+                    In general, due to the Internet’s architecture, a user can be distinguished from another by the
+                    user’s IP address. IP addresses do not perfectly match to a user; as a user moves from device to
+                    device, or from network to network, their IP address will change; similarly, NAT routing, proxy
+                    servers, and shared computers enable packets that appear to all come from a single IP address to
+                    actually map to multiple users. Technologies such as onion routing can be used to further anonymize
+                    requests so that requests from a single user at one node on the Internet appear to come from many
+                    disparate parts of the network.
+                </p>
+                <p>
+                    However, the IP address used for a user’s requests is not the only mechanism by which a user’s
+                    requests could be related to each other. Cookies, for example, are designed specifically to enable
+                    this, and are the basis of most of the Web’s session features that enable you to log into a site
+                    with which you have an account.
+                </p>
+                <p>
+                    There are other mechanisms that are more subtle. Certain characteristics of a user’s system can be
+                    used to distinguish groups of users from each other; by collecting enough such information, an
+                    individual user’s browser’s "digital fingerprint" can be computed, which can be as good, if not
+                    better, as an IP address in ascertaining which requests are from the same user.
+                </p>
+                <p>
+                    Grouping requests in this manner, especially across multiple sites, can be used for both benign
+                    (and even arguably positive) purposes, as well as for malevolent purposes. An example of a
+                    reasonably benign purpose would be determining whether a particular person seems to prefer sites
+                    with dog illustrations as opposed to sites with cat illustrations (based on how often they visit
+                    the sites in question) and then automatically using the preferred illustrations on subsequent
+                    visits to participating sites. Malevolent purposes, however, could include governments combining
+                    information such as the person’s home address (determined from the addresses they use when getting
+                    driving directions on one site) with their apparent political affiliations (determined by examining
+                    the forum sites that they participate in) to determine whether the person should be prevented from
+                    voting in an election.
+                </p>
+                <p>
+                    Since the malevolent purposes can be remarkably evil, user agent implementors are encouraged to
+                    consider how to provide their users with tools to minimize leaking information that could be used
+                    to fingerprint a user.
+                </p>
+                <p>
+                    Unfortunately, as the first paragraph in this section implies, sometimes there is great benefit to
+                    be derived from exposing the very information that can also be used for fingerprinting purposes,
+                    so it’s not as easy as simply blocking all possible leaks. For instance, the ability to log into
+                    a site to post under a specific identity requires that the user’s requests be identifiable as all
+                    being from the same user. More subtly, though, information such as how wide text is, which is
+                    necessary for many effects that involve drawing text onto a canvas (e.g., any effect that involves
+                    drawing a border around the text) also leaks information that can be used to group a user’s
+                    requests. (In this case, by potentially exposing, via a brute force search, which fonts a user
+                    has installed, information which can vary considerably from user to user.)
+                </p>
+                <p>
+                    Features in this specification which can be <strong>used to fingerprint the user</strong> are
+                    marked as this paragraph is. (This is a fingerprinting vector.)
+                </p>
+                <p>
+                    Other features in the platform can be used for the same purpose, though, including, though not
+                    limited to:
+                </p>
+                <ul>
+                    <li>The exact list of which features a user agents supports.                                 </li>
+                    <li>The maximum allowed stack depth for recursion in script.                                 </li>
+                    <li>Features that describe the user’s environment, like Media Queries and
+                        the <a href="#">Screen</a> object. <a href="#">[MEDIAQ]</a><a href="#">[CSSOM-VIEW]</a>  </li>
+                    <li>The user’s time zone.                                                                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>1.9. A quick introduction to HTML</h3>
+                <p><em>This section is non-normative.</em></p>
+                <p>A basic HTML document looks like this:</p>
+                <div class="code">
+                    <pre>
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html&gt;
+                           &lt;head&gt;
+                             &lt;title&gt;Sample page&lt;/title&gt;
+                           &lt;/head&gt;
+                           &lt;body&gt;
+                             &lt;h1&gt;Sample page&lt;/h1&gt;
+                             &lt;p&gt;This is a &lt;a href="demo.html"&gt;simple&lt;/a&gt; sample.&lt;/p&gt;
+                             &lt;!-- this is a comment --&gt;
+                           &lt;/body&gt;
+                        &lt;/html&gt;
+                    </pre>
+                </div>
+                <p>
+                    HTML documents consist of a tree of elements and text. Each element is denoted in the source by
+                    a <a href="#"> start tag</a>, such as <a href="#">"body"</a>, and an <a href="#">end tag</a>, such
+                    as "<a href="#">"body"</a>". (Certain start tags and end tags can in certain cases be
+                    <a href="#"> omitted</a> and are implied by other tags.)
+                </p>
+                <p>
+                    Tags have to be nested such that elements are all completely within each other, without overlapping:
+                </p>
+                <div class="code">
+                    <pre>&lt;p&gt;This is &lt;em&gt;very &lt;strong&gt;wrong&lt;/em&gt;!&lt;/strong&gt;&lt;/p&gt;</pre>
+                </div>
+                <div class="code">
+                    <pre>&lt;p&gt;This &lt;em&gt;is &lt;strong&gt;correct&lt;/strong&gt;.&lt;/em&gt;&lt;/p&gt;</pre>
+                </div>
+                <p>
+                    This specification defines a set of elements that can be used in HTML, along with rules about
+                    the ways in which the elements can be nested.
+                </p>
+                <p>
+                    Elements can have attributes, which control how the elements work. In the example below, there
+                    is a <a href="#">hyperlink</a>, formed using the <a href="#">a</a> element and its
+                    <a href="#">href</a> attribute:
+                </p>
+                <div class="code">
+                    <pre>&lt;a href="demo.html"&gt;simple&lt;/a&gt;</pre>
+                </div>
+                <p>
+                    <a href="#">Attributes</a> are placed inside the start tag, and consist of a <a href="#">name</a>
+                    and a <a href="#">value</a>, separated by an "=" character. The attribute value can remain
+                    <a href="#">unquoted</a> if it doesn’t contain <a href="#">space characters</a> or any of
+                    " ' ` = < or >. Otherwise, it has to be quoted using either single or double quotes. The value,
+                    along with the "=" character, can be omitted altogether if the value is the empty string.
+                </p>
+                <div class="code">
+                    <pre>
+                        &lt;!-- empty attributes --&gt;
+                        &lt;input name=address disabled&gt;
+                        &lt;input name=address disabled=""&gt;
+
+                        &lt;!-- attributes with a value --&gt;
+                        &lt;input name=address maxlength=200&gt;
+                        &lt;input name=address maxlength='200'&gt;
+                        &lt;input name=address maxlength="200"&gt;
+                    </pre>
+                </div>
+                <p>
+                    HTML user agents (e.g., Web browsers) then <a href="#">parse</a> this markup, turning it into
+                    a DOM (Document Object Model) tree. A DOM tree is an in-memory representation of a document.
+                </p>
+                <p>
+                    DOM trees contain several kinds of nodes, in particular a <a href="#">DocumentType</a> node,
+                    <a href="#">Element</a> nodes, <a href="#">Text</a> nodes, <a href="#">Comment</a> nodes,
+                    and in some cases <a href="#">ProcessingInstruction</a> nodes.
+                </p>
+                <p>
+                    The <a href="#">markup snippet at the top of this section</a> would be turned into the following
+                    DOM tree:
+                </p>
+                <ul type="none">
+                    <li>
+                        DOCTYPE: <code>html</code>
+                    </li>
+                    <li>
+                        <code><a href="#">&lt;html&gt;</a></code>
+                        <ul type="none">
+                            <li>
+                                <code><a href="#">&lt;head&gt;</a></code>
+                                <ul type="none">
+                                    <li>
+                                        <code>#text</code>:⏎␣␣
+                                    </li>
+                                    <li>
+                                        <code><a href="#">&lt;title&gt;</a></code>
+                                        <ul type="none">
+                                            <li>
+                                                <code>#text</code>: <i>Sample page</i>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <code>#text</code>:⏎␣
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <code>#text</code>:⏎␣
+                            </li>
+                            <li>
+                                <code><a href="#">&lt;body&gt;</a></code>
+                                <ul type="none">
+                                    <li>
+                                        <code>#text</code>:⏎␣␣
+                                    </li>
+                                    <li>
+                                        <code><a href="#">&lt;h1&gt;</a></code>
+                                        <ul type="none">
+                                            <li>
+                                                <code>#text</code>: <i>Sample page</i>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <code>#text</code>:⏎␣␣
+                                    </li>
+                                    <li>
+                                        <code><a href="#">&lt;p&gt;</a></code>
+                                        <ul type="none">
+                                            <li>
+                                                <code>text</code>: <i>This is a</i>
+                                            </li>
+                                            <li>
+                                                <code><a href="#">&lt;a1&gt;</a></code> <code>href</code>="
+                                                <code>demo.html</code>"
+                                                <ul type="none">
+                                                    <li>
+                                                        <code>#text</code>: <i>simple</i>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <code>#text</code>: <i>sample</i>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <code>#text</code>:⏎␣␣
+                                    </li>
+                                    <li>
+                                        <code>#comment</code>: <i>this is a comment</i>
+                                    </li>
+                                    <li>
+                                        <code>#text</code>:⏎␣⏎
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>
+                    The <a href="#">document</a> element of this tree is the <a href="#">html</a> element, which is
+                    the element always found in that position in HTML documents. It contains two elements,
+                    <a href="#">head</a> and <a href="#">body</a>, as well as a <a href="#">Text</a> node between them.
+                </p>
+                <p>
+                    There are many more <a href="#">Text</a> nodes in the DOM tree than one would initially expect,
+                    because the source contains a number of spaces (represented here by "␣") and line breaks ("⏎")
+                    that all end up as <a href="#">Text</a> nodes in the DOM. However, for historical reasons not all
+                    of the spaces and line breaks in the original markup appear in the DOM. In particular, all the
+                    white space before <a href="#">head</a> start tag ends up being dropped silently, and all the white
+                    space after the <a href="#">body</a> end tag ends up placed at the end of the <a href="#">body</a>.
+                </p>
+                <p>
+                    The <a href="#">head</a> element contains a <a href="#">title</a> element, which itself contains
+                    a <a href="#">Text</a> node with the text "Sample page". Similarly, the <a href="#">body</a>
+                    element contains an <a href="#">h1</a> element, a <a href="#">p</a> element, and a comment.
+                </p>
+                <hr>
+                <p>
+                    This DOM tree can be manipulated from scripts in the page. Scripts (typically in JavaScript) are
+                    small programs that can be embedded using the <a href="#">script</a> element or using
+                    <a href="#">event handler content attributes</a>. For example, here is a form with a script that
+                    sets the value of the form’s <a href="#">output</a> element to say "Hello World"
+                </p>
+                <pre>
+                    &lt;form name="main"&gt;
+                      Result: &lt;output name="result"&gt;&lt;/output&gt;
+                      &lt;script&gt;
+                        document.forms.main.elements.result.value = 'Hello World';
+                      &lt;/script&gt;
+                    &lt;/form&gt;
+                </pre>
+                <p>
+                    Each element in the DOM tree is represented by an object, and these objects have APIs so that
+                    they can be manipulated. For instance, a link (e.g., the <a href="#">a</a> element in the tree
+                    above) can have its "<a href="#">href</a>" attribute changed in several ways:
+                </p>
+                <pre>
+                    var a = document.links[0]; // obtain the first link in the document
+                    a.href = 'sample.html'; // change the destination URL of the link
+                    a.protocol = 'https'; // change just the scheme part of the URL
+                    a.setAttribute('href', 'http://example.com/'); // change the content attribute directly
+                </pre>
+                <p>
+                    Since DOM trees are used as the way to represent HTML documents when they are processed and
+                    presented by implementations (especially interactive implementations like Web browsers), this
+                    specification is mostly phrased in terms of DOM trees, instead of the markup described above.
+                </p>
+                <hr>
+                <p>
+                    HTML documents represent a media-independent description of interactive content. HTML documents
+                    might be rendered to a screen, or through a speech synthesizer, or on a braille display. To
+                    influence exactly how such rendering takes place, authors can use a styling language such as CSS.
+                </p>
+                <p>
+                    In the following example, the page has been made yellow-on-blue using CSS.
+                </p>
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                      &lt;head&gt;
+                        &lt;title&gt;Sample styled page&lt;/title&gt;
+                        &lt;style&gt;
+                          body { background: navy; color: yellow; }
+                        &lt;/style&gt;
+                      &lt;/head&gt;
+                      &lt;body&gt;
+                        &lt;h1&gt;Sample styled page&lt;/h1&gt;
+                        &lt;p&gt;This page is just a demo.&lt;/p&gt;
+                      &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+                <p>
+                    For more details on how to use HTML, authors are encouraged to consult tutorials and guides. Some
+                    of the examples included in this specification might also be of use, but the novice author is
+                    cautioned that this specification, by necessity, defines the language with a level of detail that
+                    might be difficult to understand at first.
+                </p>
+
+                <section>
+                    <h4>1.9.1. Writing secure applications with HTML</h4>
+                    <p><em>This section is non-normative.</em></p>
+                    <p>
+                        When HTML is used to create interactive sites, care needs to be taken to avoid introducing
+                        vulnerabilities through which attackers can compromise the integrity of the site itself or of
+                        the site’s users.
+                    </p>
+                    <p>
+                        A comprehensive study of this matter is beyond the scope of this document, and authors are
+                        strongly encouraged to study the matter in more detail. However, this section attempts to
+                        provide a quick introduction to some common pitfalls in HTML application development.
+                    </p>
+                    <p>
+                        The security model of the Web is based on the concept of "origins", and correspondingly many
+                        of the potential attacks on the Web involve cross-origin actions. <a href="#">[ORIGIN]</a>
+                    </p>
+                    <dl>
+                        <dt>Not validating user input  </dt>
+                        <dt>Cross-site scripting (XSS) </dt>
+                        <dt>SQL injection              </dt>
+                        <p>
+                            When accepting untrusted input, e.g., user-generated content such as text comments, values
+                            in URL parameters, messages from third-party sites, etc, it is imperative that the data
+                            be validated before use, and properly escaped when displayed. Failing to do this can
+                            allow a hostile user to perform a variety of attacks, ranging from the potentially
+                            benign, such as providing bogus user information like a negative age, to the serious,
+                            such as running scripts every time a user looks at a page that includes the information,
+                            potentially propagating the attack in the process, to the catastrophic, such as deleting
+                            all data in the server.
+                        </p>
+                        <p>
+                            When writing filters to validate user input, it is imperative that filters always be
+                            safelist-based, allowing known-safe constructs and disallowing all other input.
+                            Blocklist-based filters that disallow known-bad inputs and allow everything else are not
+                            secure, as not everything that is bad is yet known (for example, because it might be invented
+                            in the future).
+                        </p>
+                        <div class="example">
+                            <h5>EXAMPLE 4</h5>
+                            <p>
+                                For example, suppose a page looked at its URL’s query string to determine what to display,
+                                and the site then redirected the user to that page to display a message, as in:
+                            </p>
+                            <pre>
+                                &lt;ul&gt;
+                                  &lt;li&gt;&lt;a href="message.cgi?say=Hello"&gt;Say Hello&lt;/a&gt;
+                                  &lt;li&gt;&lt;a href="message.cgi?say=Welcome"&gt;Say Welcome&lt;/a&gt;
+                                  &lt;li&gt;&lt;a href="message.cgi?say=Kittens"&gt;Say Kittens&lt;/a&gt;
+                                &lt;/ul&gt;
+                            </pre>
+                            <p>
+                                If the message was just displayed to the user without escaping, a hostile attacker could
+                                then craft a URL that contained a script element:
+                            </p>
+                            <pre>
+                                http://example.com/message.cgi?say=%3Cscript%3Ealert%28%27Oh%20no%21%27%29%3C/script%3E
+                            </pre>
+                            <p>
+                                If the attacker then convinced a victim user to visit this page, a script of the
+                                attacker’s choosing would run on the page. Such a script could do any number of hostile
+                                actions, limited only by what the site offers: if the site is an e-commerce shop, for
+                                instance, such a script could cause the user to unknowingly make arbitrarily many
+                                unwanted purchases.
+                            </p>
+                            <p>
+                                This is called a cross-site scripting attack.
+                            </p>
+                        </div>
+                        <p>
+                            There are many constructs that can be used to try to trick a site into executing code. Here
+                            are some that authors are encouraged to consider when writing safelist filters:
+                        </p>
+                        <ul>
+                            <li>
+                                <p>
+                                    When allowing harmless-seeming elements like <code><a href="#">img</a></code>, it is
+                                    important to safelist any provided attributes as well. If one allowed all attributes
+                                    then an attacker could, for instance, use the <a href="#"><code>onload</code></a>
+                                    attribute to run arbitrary script.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    When allowing URLs to be provided (e.g., for links), the scheme of each URL also needs to be
+                                    explicitly safelisted, as there are many schemes that can be abused. The most prominent
+                                    example is "<code>javascript:</code>", but user agents can implement (and indeed, have
+                                    historically implemented) others.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Allowing a <code><a href="#">base</a></code> element to be inserted means any
+                                    <code><a href="#">script</a></code> elements in the page with relative links can be
+                                    hijacked, and similarly that any form submissions can get redirected to a hostile
+                                    site.
+                                </p>
+                            </li>
+                        </ul>
+                        <dt>Cross-site request forgery (CSRF)</dt>
+                        <dd>
+                            <p>
+                                If a site allows a user to make form submissions with user-specific side-effects, for
+                                example posting messages on a forum under the user’s name, making purchases, or
+                                applying for a passport, it is important to verify that the request was made by the
+                                user intentionally, rather than by another site tricking the user into making the
+                                request unknowingly.
+                            </p>
+                            <p>This problem exists because HTML forms can be submitted to other origins.</p>
+                            <p>
+                                Sites can prevent such attacks by populating forms with user-specific hidden tokens, or by
+                                checking <code>Origin</code> headers on all requests.
+                            </p>
+                        </dd>
+                        <dt>Clickjacking</dt>
+                        <dd>
+                            <p>
+                                A page that provides users with an interface to perform actions that the user might not
+                                wish to perform needs to be designed so as to avoid the possibility that users can be
+                                tricked into activating the interface.
+                            </p>
+                            <p>
+                                One way that a user could be so tricked is if a hostile site places the victim site in a
+                                small <code><a href="#">iframe</a></code> and then convinces the user to click, for
+                                instance by having the user play a reaction game. Once the user is playing the game,
+                                the hostile site can quickly position the <code><a href="#">iframe</a></code> under the
+                                mouse cursor just as the user is about to click, thus tricking the user into clicking
+                                the victim site’s interface.
+                            </p>
+                            <p>
+                                To avoid this, sites that do not expect to be used in frames are encouraged to only
+                                enable their interface if they detect that they are not in a frame (e.g., by comparing
+                                the <code><a href="#">window</a></code> object to the value of the
+                                <code><a href="#">top</a></code> attribute).
+                            </p>
+                        </dd>
+                    </dl>
+                </section>
+                <section>
+                    <h4>1.9.2. Common pitfalls to avoid when using the scripting APIs</h4>
+                    <p><em>This section is non-normative.</em></p>
+                    <p>
+                        Scripts in HTML have "run-to-completion" semantics, meaning that the browser will generally run
+                        the script uninterrupted before doing anything else, such as firing further events or continuing
+                        to parse the document.
+                    </p>
+                    <p>
+                        On the other hand, parsing of HTML files happens incrementally, meaning that the parser can
+                        pause at any point to let scripts run. This is generally a good thing, but it does mean that
+                        authors need to be careful to avoid hooking event handlers after the events could have
+                        possibly fired.
+                    </p>
+                    <p>
+                        There are two techniques for doing this reliably: use <a href="#">event handler content
+                        attributes</a>, or create the element and add the event handlers in the same script. The latter
+                        is safe because, as mentioned earlier, scripts are run to completion before further events can
+                        fire.
+                    </p>
+                    <div class="example">
+                        <h5>EXAMPLE 5</h5>
+                        <p>
+                            One way this could manifest itself is with <a href="#">img</a> elements and the
+                            <a href="#">load</a> event. The event could fire as soon as the element has been parsed,
+                            especially if the image has already been cached (which is common).
+                        </p>
+                        <p>
+                            Here, the author uses the <a href="#">onload</a> handler on an <a href="#">img</a> element
+                            to catch the <a href="#">load</a> event:
+                        </p>
+                        <pre>
+                            &lt;img src="games.png" alt="Games" onload="gamesLogoHasLoaded(event)"&gt;
+                        </pre>
+                        <p>
+                            If the element is being added by script, then so long as the event handlers are added in the
+                            same script, the event will still not be missed:
+                        </p>
+                        <pre>
+                            &lt;script&gt;
+                                var img = new Image();
+                                img.src = 'games.png';
+                                img.alt = 'Games';
+                                img.onload = gamesLogoHasLoaded;
+                                // img.addEventListener('load', gamesLogoHasLoaded, false); // would work also
+                            &lt;/script&gt;
+                        </pre>
+                        <p>
+                            However, if the author first created the <a href="#">img</a> element and then in
+                            a separate script added the event listeners, there’s a chance that the <code>load</code>
+                            event would be fired in between, leading it to be missed:
+                        </p>
+                        <pre>
+                            <!-- Do not use this style, it has a race condition! -->
+                            &lt;img id="games" src="games.png" alt="Games"&gt;
+                            <!-- the 'load' event might fire here while the parser is taking a
+                                break, in which case you will not see it! -->
+                            &lt;script&gt;
+                                var img = document.getElementById('games');
+                                img.onload = gamesLogoHasLoaded; // might never fire!
+                            &lt;/script&gt;
+
+                        </pre>
+                    </div>
+                </section>
+                <section>
+                    <h4>1.9.3. How to catch mistakes when writing HTML: validators and conformance checkers</h4>
+                    <p><em>This section is non-normative.</em></p>
+                    <p>
+                        Authors are encouraged to make use of conformance checkers (also known as <i>validators</i>) to
+                        catch common mistakes. The W3C provides a number of online validation services, including the
+                        <a href="#">Nu Markup Validation Service</a>.
+                    </p>
+                </section>
+            </section>
+            <section>
+                <h3>1.10. Conformance requirements for authors</h3>
+                <p><em>This section is non-normative.</em></p>
+                <p>
+                    Unlike previous versions of the HTML specification, this specification defines in some detail the
+                    required processing for invalid documents as well as valid documents.
+                </p>
+                <p>
+                    However, even though the processing of invalid content is in most cases well-defined, conformance
+                    requirements for documents are still important: in practice, interoperability (the situation in
+                    which all implementations process particular content in a reliable and identical or equivalent
+                    way) is not the only goal of document conformance requirements. This section details some of the
+                    more common reasons for still distinguishing between a
+                    <a href="#">conforming document</a> and one with errors.
+                </p>
+                <section>
+                    <h4>1.10.1. Presentational markup</h4>
+                    <p><em>This section is non-normative.</em></p>
+                    <p>
+                        The majority of presentational features from previous versions of HTML are no longer allowed.
+                        Presentational markup in general has been found to have a number of problems:
+                    </p>
+                    <dl>
+                        <dt>The use of presentational elements leads to poorer accessibility</dt>
+                        <dd>
+                            <p>
+                                While it is possible to use presentational markup in a way that provides users of assistive
+                                technologies (ATs) with an acceptable experience (e.g., using ARIA), doing so is significantly
+                                more difficult than doing so when using semantically-appropriate markup. Furthermore,
+                                even using such techniques doesn’t help make pages accessible for non-AT, non-graphical users,
+                                such as users of text-mode browsers.
+                            </p>
+                            <p>
+                                Using media-independent markup, on the other hand, provides an easy way for documents to be
+                                authored in such a way that they are "accessible" for more users (e.g., users of text
+                                browsers).
+                            </p>
+                        </dd>
+                        <dt>Higher cost of maintenance</dt>
+                        <dd>
+                            <p>
+                                It is significantly easier to maintain a site written in such a way that the markup is
+                                style-independent. For example, changing the color of a site that uses
+                                <code>&lt;font color=""&gt;</code> throughout requires changes across the entire site,
+                                whereas a similar change to a site based on CSS can be done by changing a single file.
+                            </p>
+                        </dd>
+                        <dt>Larger document sizes</dt>
+                        <dd>
+                            <p>
+                                Presentational markup tends to be much more redundant, and thus results in larger document
+                                sizes.
+                            </p>
+                        </dd>
+                    </dl>
+                    <p>
+                        For those reasons, presentational markup has been removed from HTML in this version. This
+                        change should not come as a surprise; HTML 4.0 deprecated presentational markup many years ago
+                        and provided a mode (HTML Transitional) to help authors move away from presentational markup;
+                        later, XHTML 1.1 went further and obsoleted those features altogether.
+                    </p>
+                    <p>
+                        The only remaining presentational markup features in HTML are the <code><a href="#">
+                        style</a></code> attribute and the <code><a href="#">style</a></code> element. Use of the
+                        <code><a href="#">style</a></code> attribute is somewhat discouraged in production
+                        environments, but it can be useful for rapid prototyping (where its rules can be
+                        directly moved into a separate style sheet later) and for providing specific styles in unusual
+                        cases where a separate style sheet would be inconvenient. Similarly, the
+                        <code><a href="#">style</a></code> element can be useful in syndication or for page-specific
+                        styles, but in general an external style sheet is likely to be more convenient when the styles
+                        apply to multiple pages.
+                    </p>
+                    <p>
+                        It is also worth noting that some elements that were previously presentational have been
+                        redefined in this specification to be media-independent: <code><a href="#">b</a></code>,
+                        <code><a href="#">i</a></code>, <code><a href="#">hr</a></code>, <code><a href="#">s</a></code>,
+                        <code><a href="#">small</a></code>, and <code><a href="#">u</a></code>.
+                    </p>
+                </section>
+                <section>
+                    <h4>1.10.2. Syntax errors</h4>
+                    <p><em>This section is non-normative.</em></p>
+                    <p>The syntax of HTML is constrained to avoid a wide variety of problems.</p>
+                    <dl>
+                        <dt>Unintuitive error-handling behavior</dt>
+                        <dd>
+                            <p>
+                                Certain invalid syntax constructs, when parsed, result in DOM trees that are highly
+                                unintuitive.
+                            </p>
+                            <div class="example">
+                                <p>
+                                    For example, the following markup fragment results in a DOM with an <code>
+                                    <a href="#">hr</a></code> element that is an <em>earlier</em> sibling of the
+                                    corresponding <code><a href="#">table</a></code> element:
+                                    <code>&lt;table&gt;&lt;hr&gt;</code>
+                                </p>
+                            </div>
+                        </dd>
+                        <dt>Errors with optional error recovery</dt>
+                        <dd>
+                            <p>
+                                To allow user agents to be used in controlled environments without having to implement the
+                                more bizarre and convoluted error handling rules, user agents are permitted to fail whenever
+                                encountering a <a href="#">parse error</a>.
+                            </p>
+                        </dd>
+                        <dt>Errors where the error-handling behavior is not compatible with streaming user agents</dt>
+                        <dd>
+                            <p>
+                                Some error-handling behavior, such as the behavior for the<code>&lt;table&gt;&lt;
+                                hr&gt;</code>... example mentioned above, are incompatible with streaming user agents
+                                (user agents that process HTML files in one pass, without storing state). To avoid
+                                interoperability problems with such user agents, any syntax resulting in such behavior
+                                is considered invalid.
+                            </p>
+                        </dd>
+                        <dt>Errors that can result in infoset coercion</dt>
+                        <dd>
+                            <p>
+                                When a user agent based on XML is connected to an HTML parser, it is possible that certain
+                                invariants that XML enforces, such as element or attribute names never contain multiple
+                                colons, will be violated by an HTML file. Handling this can require that the parser coerce the
+                                HTML DOM into an XML-compatible infoset. Most syntax constructs that require such handling are
+                                considered invalid. (Comments containing two consecutive hyphens, or ending with a hyphen, are
+                                exceptions that are allowed in the HTML syntax.)
+                            </p>
+                        </dd>
+                        <dt>Errors that result in disproportionately poor performance</dt>
+                        <dd>
+                            <p>
+                                Certain syntax constructs can result in disproportionately poor performance. To
+                                discourage the use of such constructs, they are typically made non-conforming.
+                            </p>
+                        <div class="example">
+                            <h5>EXAMPLE 7</h5>
+                            <p>
+                                For example, the following markup results in poor performance, since all the unclosed
+                                <code><a href="#">i</a></code> elements have to be reconstructed in each paragraph,
+                                resulting in progressively more elements in each paragraph:
+                            </p>
+                            <p>The resulting DOM for this fragment would be:</p>
+                        </div>
+                        </dd>
+                        <dt>Errors involving fragile syntax constructs</dt>
+                        <dd>
+                            <p>
+                                There are syntax constructs that, for historical reasons, are relatively fragile. To help
+                                reduce the number of users who accidentally run into such problems, they are made
+                                non-conforming.
+                            </p>
+                            <div class="example">
+                                <h5>EXAMPLE 8</h5>
+                                <p>
+                                    For example, the parsing of certain named character references in attributes happens even
+                                    with the closing semicolon being omitted. It is safe to include an ampersand followed by
+                                    letters that do not form a named character reference, but if the letters are changed to a
+                                    string that <em>does</em> form a named character reference, they will be interpreted as that
+                                    character instead.
+                                </p>
+                                <p>In this fragment, the attribute’s value is "<code>?bill&amp;ted</code>":</p>
+                                <p>
+                                    In the following fragment, however, the attribute’s value is actually
+                                    "<code>?art©</code>", <em>not</em> the intended "<code>?art&amp;copy</code>",
+                                    because even without the final semicolon, "<code>&amp;copy</code>" is handled the same
+                                    as "<code>&amp;copy;</code>" and thus gets interpreted as "<code>©</code>":
+                                </p>
+                                <p>
+                                    To avoid this problem, all named character references are required to end with a
+                                    semicolon, and uses of named character references without a semicolon are flagged as
+                                    errors.
+                                </p>
+                                <p>Thus, the correct way to express the above cases is as follows:</p>
+                                <pre>
+                                    &lt;a href="?bill&amp;ted"&gt;Bill and Ted&lt;a&gt;&lt;!-- &amp;ted is ok, since it’s
+                                    not a named character reference --&gt;
+                                </pre>
+                                <pre>
+                                    &lt;a href="?art&amp;amp;copy"&gt;Art and Copy&lt;/a&gt;&lt;!-- the &amp; has to be
+                                    escaped, since &amp;copy is a named character reference --&gt;
+                                </pre>
+                            </div>
+                        </dd>
+                        <dt>Errors involving known interoperability problems in legacy user agents</dt>\
+                        <dd>
+                            <p>
+                                Certain syntax constructs are known to cause especially subtle or serious problems in legacy
+                                user agents, and are therefore marked as non-conforming to help authors avoid them.
+                            </p>
+                            <div class="example">
+                                For example, this is why the U+0060 GRAVE ACCENT character (`) is not allowed in unquoted
+                                attributes. In certain legacy user agents, it is sometimes treated as a quote character.
+                            </div>
+                            <p class="example">
+                                Another example of this is the DOCTYPE, which is required to trigger
+                                <a href="#">no-quirks mode</a>, because the behavior of legacy user agents in
+                                <a href="#">quirks mode</a> is often largely undocumented.
+                            </p>
+                        </dd>
+                        <dt>Errors that risk exposing authors to security attacks</dt>
+                        <dd>
+                            <p>Certain restrictions exist purely to avoid known security problems.</p>
+                            <p class="example">
+                                For example, the restriction on using UTF-7 exists purely to avoid authors falling prey
+                                to a known cross-site-scripting attack using UTF-7. <a href="#">[RFC2152]</a>
+                            </p>
+                        </dd>
+                        <dt>Cases where the author’s intent is unclear</dt>
+                        <dd>
+                            <p>
+                                Markup where the author’s intent is very unclear is often made non-conforming. Correcting these
+                                errors early makes later maintenance easier.
+                            </p>
+                            <p class="example">
+                                For example, it is unclear whether the author intended the following to be an
+                                <code><a href="#">h1</a></code> heading or an <code><a href="#">h2</a></code> heading:
+                            </p>
+                            <pre>&lt;h2&gt;Contact details&lt;/h1&gt;</pre>
+                        </dd>
+                        <dt>Cases that are likely to be typos</dt>
+                        <dd>
+                            <p>
+                                When a user makes a simple typo, it is helpful if the error can be caught early, as this can
+                                save the author a lot of debugging time. This specification therefore usually considers it
+                                an error to use element names, attribute names, and so forth, that do not match the names
+                                defined in this specification.
+                            </p>
+                            <p class="example">
+                               For example, if the author typed <code>&lt;capton&gt;</code> instead of
+                                <code><a href="#">caption</a></code>, this would be flagged as an error and the author
+                                could correctthe typo immediately.
+                            </p>
+                        </dd>
+                        <dt>Errors that could interfere with new syntax in the future</dt>
+                        <dd>
+                            <p>
+                                In order to allow the language syntax to be extended in the future, certain otherwise
+                                harmless features are disallowed.
+                            </p>
+                            <p class="example">
+                               For example, attributes in end tags are ignored currently, but they are invalid, in case
+                                a future change to the language makes use of that syntax feature without conflicting with
+                                already-deployed (and valid!) content.
+                            </p>
+                        </dd>
+                    </dl>
+                    <p>
+                        Some authors find it helpful to be in the practice of always quoting all attributes and always
+                        including all optional tags, preferring the consistency derived from such custom over the minor
+                        benefits of terseness afforded by making use of the flexibility of the HTML syntax. To aid such
+                        authors, conformance checkers can provide modes of operation wherein such conventions are
+                        enforced.
+                    </p>
+                </section>
+                <section>
+                    <h4>1.10.3. Restrictions on content models and on attribute values</h4>
+                    <p><em>This section is non-normative.</em></p>
+                    <p>
+                        Beyond the syntax of the language, this specification also places restrictions on how elements
+                        and attributes can be specified. These restrictions are present for similar reasons:
+                    </p>
+                    <dl>
+                        <dt>Errors involving content with dubious semantics</dt>
+                        <dd>
+                            <p>To avoid misuse of elements with defined meanings, content models are defined that restrict
+                                how elements can be nested when such nestings would be of dubious value.</p>
+                            <div class="example">
+                               <p>For example, this specification disallows nesting a <code><a href="#">section</a>
+                                </code> element inside a <code><a href="#">kbd</a></code> element, since it is highly
+                                   unlikely for an author to indicate that an entire section should be keyed in.</p>
+                            </div>
+                        </dd>
+                        <dt>Errors that involve a conflict in expressed semantics</dt>
+                        <dd>
+                            <p>Similarly, to draw the author’s attention to mistakes in the use of elements, clear
+                                contradictions in the semantics expressed are also considered conformance errors.</p>
+                            <div class="example">
+                                <p>
+                                    In the fragments below, for example, the semantics are nonsensical: a separator cannot
+                                    simultaneously be a cell, nor can a radio button be a progress bar.
+                                </p>
+                                <pre>&lt;hr role="cell"&gt;</pre>
+                                <pre>&lt;input type=radio role=progressbar&gt;</pre>
+                            </div>
+                            <div class="example">
+                                <p>
+                                    Another example is the restrictions on the content models of the <code><a href="#">
+                                    ul</a></code> element, which only allows <code><a href="#">li</a></code> element
+                                    children. Lists by definition consist just of zero or more list items, so if a
+                                    <code><a href="#">ul</a></code> element contains something other than an
+                                    <code><a href="#">li</a></code> element, it’s not clear what was meant.
+                                </p>
+                            </div>
+                        </dd>
+                        <dt>Cases where the default styles are likely to lead to confusion</dt>
+                        <dd>
+                            <div class="example">
+                                <p>
+                                    For example, <code><a href="#">div</a></code> elements are rendered as <a href="#">
+                                    block boxes</a>, and <code><a href="#">span</a></code> elements as
+                                    <a href="#">inline boxes</a>. Putting a <a href="#">block box</a>
+                                    in an inline box is unnecessarily confusing; since either nesting just <code><a href="#">
+                                    div</a></code> elements, or nesting just <code><a href="#">span</a></code> elements, or
+                                    nesting <code><a href="#">span</a></code> elements inside <code><a href="#">div</a></code>
+                                    elements all serve the same purpose as nesting a <code><a href="#">div</a></code> element
+                                    in a <code><a href="#">span</a></code> element, but only the latter involves a <a href="#">
+                                    block box</a> in an <a href="#">inline box</a>, the latter combination is disallowed.
+                                </p>
+                            </div>
+                            <div class="example">
+                                <p>
+                                    Another example would be the way <a href="#">interactive content</a> cannot be
+                                    nested. For example, a <code><a href="#">button</a></code> element cannot contain
+                                    a <code><a href="#">textarea</a></code> element. This is because the default
+                                    behavior of such nesting interactive elements would be highly confusing to users.
+                                    Instead of nesting these elements, they can be placed side by side.
+                                </p>
+                            </div>
+                        </dd>
+                        <dt>Errors that indicate a likely misunderstanding of the specification</dt>
+                        <dd>
+                            <p>Sometimes, something is disallowed because allowing it would likely cause
+                                author confusion.</p>
+                            <div class="example">
+                                <p>
+                                    For example, setting the <code><a href="#">disabled</a></code> attribute to the
+                                    value "<code>false</code>" is disallowed, because despite the appearance of meaning
+                                    that the element is enabled, it in fact means that the element is <i>disabled</i>
+                                    (what matters for implementations is the presence of the attribute, not its value).
+                                </p>
+                            </div>
+                        </dd>
+                        <dt>Errors involving limits that have been imposed merely to simplify the language </dt>
+                        <dd>
+                            <p>Some conformance errors simplify the language that authors need to learn.</p>
+                            <div class="example">
+                                <p>
+                                    For example, the <code><a href="#">area</a></code> element’s <code><a href="#">
+                                    shape</a></code> attribute, despite accepting both "<code><a href="#">circ</a>
+                                    </code>" and "<code><a href="#">circle</a></code>" values in practice as synonyms,
+                                    disallows the use of the "<code><a href="#">circ</a></code>" value, so as to
+                                    simplify tutorials and other learning aids. There would be no benefit to allowing
+                                    both, but it would cause extra confusion when teaching the language.
+                                </p>
+                            </div>
+                        </dd>
+                        <dt>Errors that involve peculiarities of the parser </dt>
+                        <dd>
+                            <p>Certain elements are parsed in somewhat eccentric ways (typically for historical
+                                reasons), and their content model restrictions are intended to avoid exposing the
+                                author to these issues.</p>
+                            <div class="example">
+                                <p>For example, a <code><a href="#">form</a></code> element isn’t allowed inside
+                                    <a href="#">phrasing content</a>, because when parsed as HTML, a <code><a href="#">
+                                    form</a></code> element’s start tag will imply a <code><a href="#">p</a></code>
+                                    element’s end tag. Thus, the following markup results in two paragraphs, not one:</p>
+                                <pre>&lt;p&gt;Welcome. &lt;form&gt;&lt;label&gt;Name:&lt;/label&gt; &lt;
+                                    input&gt;&lt;/form&gt;</pre>
+                                <p>It is parsed exactly like the following:</p>
+                                <pre>&lt;p&gt;Welcome. &lt;/p&gt;&lt;form&gt;&lt;label&gt;Name:&lt;/label&gt;
+                                    &lt;input&gt;&lt;/form&gt;</pre>
+                            </div>
+                        </dd>
+                        <dt>Errors that would likely result in scripts failing in hard-to-debug ways</dt>
+                        <dd>
+                            <p>Some errors are intended to help prevent script problems that would be hard to debug.</p>
+                            <div class="example">
+                                <p>This is why, for instance, it is non-conforming to have two <code><a href="#">id</a>
+                                </code> attributes with the same value. Duplicate IDs lead to the wrong element being
+                                    selected, with sometimes disastrous effects whose cause is hard to determine.</p>
+                            </div>
+                        </dd>
+                        <dt>Errors that waste authoring time</dt>
+                        <dd>
+                            <p>Some constructs are disallowed because historically they have been the cause of a lot of
+                                wasted authoring time, and by encouraging authors to avoid making them, authors can
+                                save time in future efforts.</p>
+                            <div class="example">
+                                <p>
+                                    For example, a <code><a href="#">script</a></code> element’s <code><a href="#">src
+                                    </a></code> attribute causes the element’s contents to be ignored. However, this
+                                    isn’t obvious, especially if the element’s contents appear to be executable script
+                                    — which can lead to authors spending a lot of time trying to debug the inline
+                                    script without realizing that it is not executing. To reduce this problem, this
+                                    specification makes it non-conforming to have executable script in a <code>
+                                    <a href="#">script</a></code> element when the <code><a href="#">src</a></code>
+                                    attribute is present. This means that authors who are validating their documents
+                                    are less likely to waste time with this kind of mistake.
+                                </p>
+                            </div>
+                        </dd>
+                        <dt>Errors that involve areas that affect authors migrating to and from XHTML</dt>
+                        <dd>
+                            <p>
+                                Some authors like to write files that can be interpreted as both XML and HTML with
+                                similar results. Though this practice is discouraged in general due to the myriad of
+                                subtle complications involved (especially when involving scripting, styling, or any
+                                kind of automated serialization), this specification has a few restrictions intended
+                                to at least somewhat mitigate the difficulties. This makes it easier for authors to use
+                                this as a transitionary step when migrating between HTML and XHTML.
+                            </p>
+                            <div class="example">
+                                <p>
+                                    For example, there are somewhat complicated rules surrounding the <a href="#">lang
+                                    </a></code> and <a href="#">xml:lang</a></code> attributes intended to keep the two
+                                    synchronized.
+                                </p>
+                            </div>
+                            <div class="example">
+                                <p>
+                                    Another example would be the restrictions on the values of <a href="#">xmlns</a>
+                                    </code> attributes in the HTML serialization, which are intended to ensure that
+                                    elements in conforming documents end up in the same namespaces whether processed as
+                                    HTML or XML.
+                                </p>
+                            </div>
+                        </dd>
+                        <dt>Errors that involve areas reserved for future expansion</dt>
+                        <dd>
+                            <p>
+                                As with the restrictions on the syntax intended to allow for new syntax in future
+                                revisions of the language, some restrictions on the content models of elements and
+                                values of attributes are intended to allow for future expansion of the HTML vocabulary.
+                            </p>
+                            <div  class="example">
+                                <p>
+                                    For example, limiting the values of the <a href="#">target</a></code> attribute
+                                    that start with an U+005F LOW LINE character (_) to only specific predefined values
+                                    allows new predefined values to be introduced at a future time without conflicting
+                                    with author-defined values.
+                                </p>
+                            </div>
+                        </dd>
+                        <dt>Errors that indicate a mis-use of other specifications</dt>
+                        <dd>
+                            <p>
+                                Certain restrictions are intended to support the restrictions made by other
+                                specifications.
+                            </p>
+                            <div class="example">
+                                <p>
+                                    For example, requiring that attributes that take media query lists use only valid
+                                    media query lists reinforces the importance of following the conformance rules of
+                                    that specification.
+                                </p>
+                            </div>
+                        </dd>
+                    </dl>
+                </section>
+            </section>
+            <section>
+                <h3>1.11. Suggested reading</h3>
+                <p><em>This section is non-normative.</em></p>
+                <p>The following documents might be of interest to readers of this specification.</p>
+                <p>The following documents might be of interest to readers of this specification.</p>
+                <dl>
+                    <dt>Character Model for the World Wide Web 1.0: Fundamentals <a href="#">[CHARMOD]</a></dt>
+                    <dd>
+                        <i>This Architectural Specification provides authors of specifications, software developers,
+                        and content developers with a common reference for interoperable text manipulation on the
+                        World Wide Web, building on the Universal Character Set, defined jointly by the Unicode
+                        specification and ISO/IEC 10646. Topics addressed include use of the terms "character",
+                        "encoding" and "string", a reference processing model, choice and identification of character
+                        encodings, character escaping, and string indexing. </i>
+                    </dd>
+                    <dt>Unicode Security Considerations <a href="#">[UNICODE-SECURITY]</a></dt>
+                    <dd>
+                        Because Unicode contains such a large number of characters and incorporates the varied writing
+                        systems of the world, incorrect usage can expose programs or systems to possible security
+                        attacks. This is especially important as more and more products are internationalized. This
+                        document describes some of the security considerations that programmers, system analysts,
+                        standards developers, and users should take into account, and provides specific recommendations
+                        to reduce the risk of problems.
+                    </dd>
+                    <dt>Web Content Accessibility Guidelines (WCAG) 2.0 [WCAG20]</dt>
+                    <dd>
+                        Web Content Accessibility Guidelines (WCAG) 2.0 covers a wide range of recommendations for
+                        making Web content more accessible. Following these guidelines will make content accessible
+                        to a wider range of people with disabilities, including blindness and low vision, deafness and
+                        hearing loss, learning disabilities, cognitive limitations, limited movement, speech
+                        disabilities, photosensitivity and combinations of these. Following these guidelines will also
+                        often make your Web content more usable to users in general.
+                    </dd>
+                    <dt>Authoring Tool Accessibility Guidelines (ATAG) 2.0 [ATAG20]</dt>
+                    <dd>
+                        This specification provides guidelines for designing Web content authoring tools that are more
+                        accessible for people with disabilities. An authoring tool that conforms to these guidelines
+                        will promote accessibility by providing an accessible user interface to authors with
+                        disabilities as well as by enabling, supporting, and promoting the production of accessible Web
+                        content by all authors
+                    </dd>
+                    <dt>User Agent Accessibility Guidelines (UAAG) 2.0 [UAAG20]</dt>
+                    <dd>
+                        This document provides guidelines for designing user agents that lower barriers to Web
+                        accessibility for people with disabilities. User agents include browsers and other types of
+                        software that retrieve and render Web content. A user agent that conforms to these guidelines
+                        will promote accessibility through its own user interface and through other internal
+                        facilities, including its ability to communicate with other technologies (especially assistive
+                        technologies). Furthermore, all users, not just users with disabilities, should find conforming
+                        user agents to be more usable.
+                    </dd>
+                    <dt>HTML Accessibility APIs Mappings 1.0 [html-aam-1.0]</dt>
+                    <dd>
+                        Defines how user agents map HTML 5.1 elements and attributes to platform accessibility APIs.
+                        Documenting these mappings promotes interoperable exposure of roles, states, properties, and
+                        events implemented by accessibility APIs and helps to ensure that this information appears
+                        in a manner consistent with author intent.
+                    </dd>
+                </dl>
+            </section>
+        </article>
+    </main>
+</body>
+</html>

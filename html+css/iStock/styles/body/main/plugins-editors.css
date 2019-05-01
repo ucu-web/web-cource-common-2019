@@ -1,0 +1,80 @@
+.plugins-editors {
+    background-color: #DCE1E1;
+    /*position: absolute;*/
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.plugins-photos_brightness_70 {
+    filter: brightness(70%);
+}
+
+.plugin {
+    background-color: white;
+    position: relative;
+    max-width: 23rem;
+    height: 26.5rem;
+    margin: 1rem 1%;
+}
+
+.plugin_first-block h3, h4, h5 {
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    position: absolute;
+    left: 2.1rem;
+    z-index: 100;
+}
+
+.plugin__h3 {
+    color: white;
+    font-weight: 500;
+    font-size: 2.1rem;
+    top: 5rem;
+}
+
+.plugin__h4 {
+    color: #FFD900;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.plugin__h4_first {
+    top: 12rem;
+}
+
+.plugin__h4_second {
+    top: 13.5rem
+}
+
+.plugin__h5 {
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    top: 15.2rem
+}
+
+.plugin_block h4, h6{
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    position: relative;
+    display: inline-block;
+    left: 1rem;
+}
+
+.plugin_block h4{
+    color: #333333;
+    font-weight: 500;
+    font-size: 1.2rem;
+    top: 0.2rem
+}
+
+.plugin_block h6{
+    top: 0.4rem;
+    color: #465161;
+    font-weight: 300;
+    font-size: 1rem;
+    margin-right: 1rem;
+}

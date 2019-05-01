@@ -1,0 +1,32 @@
+.photos-illustrations-video{
+    position: relative;
+}
+
+.photos-illustrations-video a{
+    text-decoration: none;
+}
+
+.content-span-2 a{
+    color: #02a388;
+}
+
+.content-span-2 a:hover{
+    color: #02886d;
+}
+
+.plugins-editors a:hover .plugins-photos{
+    transform: scale(1.05);
+    opacity: 0.8;
+}
+
+.photos-illustrations-video .content-wrapper h3{
+    font-family: "Segoe UI", sans-serif;
+    color: #24292E;
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+
+.photos-illustrations-video .content-wrapper{
+    padding-bottom: 5rem;
+    margin-bottom: 0;
+}

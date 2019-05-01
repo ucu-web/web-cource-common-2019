@@ -1,0 +1,25 @@
+.main-nav{
+    margin: 2.6rem 1rem;
+    padding-bottom: 4rem;
+    background-color: transparent;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.main-nav__column{
+    text-align: center;
+    font-size: 1rem;
+    font-family: "Segoe UI Semibold", sans-serif;
+    list-style-type: none;
+    align-self: center;
+}
+
+.main-nav__column a{
+    text-decoration: none;
+    color: #02a388;
+}
+
+.main-nav__column a:hover{
+    color: #027d64;
+}
