@@ -14,7 +14,9 @@ const QuestionPost = data => {
         >
       </h3>
       <div class=" ${b("tags")}">
-        ${data.tags.map(tag => `<a href="#" class="Tag ${b("tag")}">${tag}</a>`).join("")}
+        ${data.tags
+          .map(tag => `<a href="#" class="Tag ${b("tag")}">${tag}</a>`)
+          .join("")}
       </div>
       <footer class=" ${b("started")}">
         <a href="#" class=" ${b("started-link")}"
@@ -30,14 +32,18 @@ const QuestionPost = data => {
     </section>
 
     <section class="${b("reaction")}">
-      <div class="${b("counter")} Question-reaction-counter Question-reaction-counter--votes">
+      <div class="${b(
+        "counter"
+      )} Question-reaction-counter Question-reaction-counter--votes">
         <span class="Question-reaction-counter__number" title="0 votes">
             ${data.votes}
         </span>
         <span>votes</span>
       </div>
       <div
-        class="${b("counter")} Question-reaction-counter Question-reaction-counter--answers Question-reaction-counter--answers--has-no-answer"
+        class="${b(
+          "counter"
+        )} Question-reaction-counter Question-reaction-counter--answers Question-reaction-counter--answers--has-no-answer"
       >
         <span
           class="Question-reaction-counter__number"
@@ -47,7 +53,9 @@ const QuestionPost = data => {
         <span>answers</span>
       </div>
       <div
-        class="${b("counter")} Question-reaction-counter Question-reaction-counter--views"
+        class="${b(
+          "counter"
+        )} Question-reaction-counter Question-reaction-counter--views"
       >
         <span class="Question-reaction-counter__number" title="${
           data.views

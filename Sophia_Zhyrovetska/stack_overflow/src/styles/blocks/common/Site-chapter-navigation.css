@@ -1,5 +1,5 @@
 .Site-chapter-navigation__link {
-  font-size: 0.81em;
+  font-size: 0.81rem;
   color: #535a60;
   line-height: 1.8;
   display: block;
@@ -32,7 +32,7 @@
   text-transform: uppercase;
   color: #6a737c;
   margin: 1.45em 0 0.725em 0.36em;
-  font-size: 0.69em;
+  font-size: 0.69rem;
   font-weight: inherit;
 }
 /*# sourceMappingURL=Site-chapter-navigation.css.map */

@@ -22,12 +22,7 @@
   },
   {
     "question": "Printing arrays created in a class",
-    "tags": [
-      "c++",
-      "java",
-      "python",
-      "javascript"
-    ],
+    "tags": ["c++", "java", "python", "javascript"],
     "time": "20 mins ago",
     "author": "Martin",
     "score": 926,

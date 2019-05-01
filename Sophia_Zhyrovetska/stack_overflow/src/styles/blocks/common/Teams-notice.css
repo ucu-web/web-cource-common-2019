@@ -10,12 +10,12 @@
 }
 .Teams-notice__title {
   font-weight: bold;
-  font-size: 0.81em;
+  font-size: 0.81rem;
   color: #0c0d0e;
   margin: 0;
 }
 .Teams-notice__text {
-  font-size: 0.75em;
+  font-size: 0.75rem;
   color: #3b4045;
   margin: 0.2em 0 0 0;
 }

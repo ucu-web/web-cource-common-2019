@@ -25,7 +25,12 @@ const FeaturedTagsBlock = data => {
   </header>
   <div class="${b("content")}">
   ${data.tags
-    .map(tag => `<a href="#" class="Tag ${b("tag")}" title="show questions tagged '${tag}'">${tag}</a>`)
+    .map(
+      tag =>
+        `<a href="#" class="Tag ${b(
+          "tag"
+        )}" title="show questions tagged '${tag}'">${tag}</a>`
+    )
     .join("")}
   </div>
 `;

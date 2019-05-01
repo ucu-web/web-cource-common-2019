@@ -3,10 +3,10 @@ import BEM from "../../helpers/BEM";
 const b = BEM("User-info");
 
 const UserInfo = data => {
-    const rootEl = document.createElement("article");
-    rootEl.className = b() + " Users-list__user-info";
+  const rootEl = document.createElement("article");
+  rootEl.className = b() + " Users-list__user-info";
 
-    rootEl.innerHTML = `
+  rootEl.innerHTML = `
         <a href="#">
           <img
             class="${b("avatar")}"
@@ -27,11 +27,13 @@ const UserInfo = data => {
         </div>
         
         <div class="${b("tags")}">
-          ${data.tags.map(tag => `<a href="#" class="${b("tag")}">${tag}</a>`).join("")}
+          ${data.tags
+            .map(tag => `<a href="#" class="${b("tag")}">${tag}</a>`)
+            .join("")}
         </div>
 `;
 
-    return rootEl;
+  return rootEl;
 };
 
 export default UserInfo;

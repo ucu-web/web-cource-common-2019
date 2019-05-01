@@ -17,16 +17,16 @@
 .Profile-navigation__reputation-score {
   padding: 0 0 0 0.7em;
   font-weight: bold;
-  font-size: 0.75em;
+  font-size: 0.75rem;
   color: #535a60;
 }
 .Profile-navigation__budge-circle {
   color: #d0a278;
-  font-size: 0.81em;
+  font-size: 0.81rem;
   margin: 0 0 0 0.5em;
 }
 .Profile-navigation__budge-count {
-  font-size: 0.75em;
+  font-size: 0.75rem;
   color: #d0a278;
 }
 .Profile-navigation__image {
