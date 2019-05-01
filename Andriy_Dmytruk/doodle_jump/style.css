@@ -1,0 +1,329 @@
+.game {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+}
+
+.background {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.field {
+    background-color: #FFF5CC;
+    overflow: hidden;
+    position: relative;
+}
+
+.score {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    color: #555555;
+    font-family: "Droid Sans Mono", monospace;
+    font-size: 30px;
+
+    z-index: 2;
+}
+
+.menu {
+    background-color: #FFFFFFAA;
+    font-family: "Droid Sans Mono", monospace;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 3;
+}
+.menu_hidden {
+    display: none;
+}
+.menu_start {
+    background-color: #FFF;
+}
+
+.menu__row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 100px;
+}
+
+.menu__title {
+    color: #000000;
+    font-size: 40px;
+}
+.menu__score {
+    color: #000000AA;
+    font-size: 28px;
+}
+
+.menu__button {
+    background-color: #ded6b1;
+    color: #000000;
+    border: 2px solid #000000;
+    outline: none;
+
+    font-size: 22px;
+    height: 30px;
+    width: 100px;
+    border-radius: 15px;
+    box-sizing: content-box;
+
+    cursor: pointer;
+}
+.menu__button:hover {
+    background-color: #debc80;
+}
+.menu__button:active {
+    width: 110px;
+    height: 33px;
+    border-radius: 16.5px;
+
+    margin: -1.5px -5px;
+}
+
+.doodle {
+    z-index: 1;
+}
+
+.doodle-body {
+    position: absolute;
+    background-color: #dfc84f;
+
+    height: 50px;
+    width: 40px;
+    border-radius: 20px 20px 0 0;
+}
+
+.doodle-bottom {
+    position: absolute;
+    bottom: 0;
+
+    background-color: #53a665;
+
+    width: 40px;
+    height: 10px;
+}
+
+.doodle-nose {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    background-color: #dfc84f;
+    transition: 0.2s;
+}
+.doodle_left .doodle-nose {
+    transform: rotate(-180deg);
+}
+.doodle_shooting .doodle-nose {
+    transform: rotate(-90deg);
+}
+
+.doodle-nose-begin {
+    position: absolute;
+    top: -4px;
+    left: 0;
+
+    width: 32px;
+    height: 8px;
+
+    background-color: inherit;
+
+    transition: 1s;
+}
+.doodle-nose-end {
+    position: absolute;
+    left: 25px;
+    top: -7px;
+
+    height: 14px;
+    width: 7px;
+
+    background-color: inherit;
+    border-radius: 7px 0 0 7px;
+}
+
+.doodle-eye-left {
+    position: absolute;
+    background-color: #111;
+    width: 4px;
+    height: 6px;
+    border-radius: 2px;
+
+    left: 20px;
+    top: 18px;
+
+    transition: 0.2s;
+}
+.doodle-eye-right {
+    position: absolute;
+    background-color: #111;
+    width: 4px;
+    height: 6px;
+    border-radius: 2px;
+
+    left: 26px;
+    top: 18px;
+
+    transition: 0.2s;
+}
+.doodle_left .doodle-eye-left {
+    left: 10px;
+}
+.doodle_left .doodle-eye-right {
+    left: 16px;
+}
+
+.doodle-legs {
+    position: absolute;
+
+    left: 6px;
+
+    height: 12px;
+    width: 28px;
+    top: 50px;
+
+    transition: 0.2s, top 0.1s;
+}
+.doodle_left .doodle_legs {
+    left: 6px;
+}
+.doodle_jumping .doodle-legs {
+    top: 46px;
+}
+
+.doodle-leg {
+    position: absolute;
+    height: 12px;
+    width: 3px;
+
+    background-color: #222;
+
+    border-radius: 0 0 2px 2px;
+}
+
+.doodle-foot {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 6px;
+    height: 3px;
+
+    background-color: #222;
+
+    border-radius: 2px;
+
+    transition: 0.2s;
+}
+.doodle_left .doodle-foot {
+    left: -3px;
+}
+
+.platform {
+    position: absolute;
+}
+
+.platform-static {
+    position: absolute;
+    width: 60px;
+    height: 10px;
+
+    background-color: #6cc668;
+    border-radius: 5px;
+}
+
+.platform-breaking-right {
+    position: absolute;
+    width: 28px;
+    height: 10px;
+
+    background-color: #85503d;
+    right: 0;
+
+    border-radius: 2px 5px 5px 2px;
+
+    transition: right 4s, transform 0.2s;
+}
+.platform-broken-right {
+    right: -40px;
+    transform: rotate(30deg);
+}
+.platform-breaking-left {
+    position: absolute;
+    width: 28px;
+    height: 10px;
+
+    background-color: #85503d;
+    left: 0;
+
+    border-radius: 5px 2px 2px 5px;
+
+    transition: left 4s, transform 0.2s;
+}
+.platform-broken-left {
+    left: -40px;
+    transform: rotate(-30deg);
+}
+
+.platform-disappearing {
+    width: 60px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #b1deff;
+    box-sizing: border-box;
+
+    transition: background-color 0.5s;
+}
+.platform-disappeared {
+    background-color: #eefff600;
+}
+
+.platform-horizontal {
+    position: absolute;
+    width: 60px;
+    height: 10px;
+
+    background-color: #4c94c6;
+    border-radius: 5px;
+}
+
+.platform-vertical {
+    position: absolute;
+    width: 60px;
+    height: 10px;
+
+    background-color: #5a7081;
+    border-radius: 5px;
+}
+
+.platform-destructing {
+    position: absolute;
+    width: 60px;
+    height: 10px;
+
+    background-color: #fdd056;
+    border-radius: 5px;
+    transition: background-color 0.2s, width 0.2s, height 0.2s, margin 0.2s;
+}
+.platform-destructing-alert {
+    background-color: #e8594c;
+}
+.platform-destroyed {
+    width: 84px;
+    height: 14px;
+    margin: -4px -12px;
+    background-color: #e8594c00;
+}

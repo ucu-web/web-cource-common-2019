@@ -1,0 +1,32 @@
+.Footer {
+  margin: 16px;
+  color: #5f6368;
+  font-size: 12px;
+  line-height: 20px;
+
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
+    text-align: center;
+
+    &_first {
+      text-align: left;
+    }
+    &_last {
+      text-align: right;
+    }
+  }
+
+  &__text {
+    margin: 0;
+  }
+  &__link {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
