@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <header class="Header">
+        <a class="Header__github-logo-link" aria-label="GitHub logo">
+            <svg class="Header__svg-logo" viewBox="0 0 16 16" version="1.1" aria-hidden="true">
+                <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+            </svg>
+        </a>
+        <nav class="Header__left-navigation General-navigation">
+            <form class="General-navigation__search-form">
+                <input class="General-navigation__search-input" type="text" aria-label="Search" placeholder="Search or jump to...">
+            </form>
+            <ul class="General-navigation__list-of-options">
+                <li class="General-navigation__list-element">
+                    <a class="General-navigation__link" href="#">Pull requests</a>
+                </li>
+                <li class="General-navigation__list-element">
+                    <a class="General-navigation__link" href="#">Issues</a>
+                </li>
+                <li class="General-navigation__list-element">
+                    <a class="General-navigation__link" href="#">Marketplace</a>
+                </li>
+                <li class="General-navigation__list-element">
+                    <a class="General-navigation__link" href="#">Explore</a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="Header__right-navigation Profile-navigation">
+            <ul class="Profile-navigation__list-of-options">
+                <li class="Profile-navigation__list-element">
+                    <a href="#" aria-label="Notifications">
+                        <svg class="Profile-navigation__notifications-icon" viewBox="0 0 14 16" version="1.1" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M14 12v1H0v-1l.73-.58c.77-.77.81-2.55 1.19-4.42C2.69 3.23 6 2 6 2c0-.55.45-1 1-1s1 .45 1 1c0 0 3.39 1.23 4.16 5 .38 1.88.42 3.66 1.19 4.42l.66.58H14zm-7 4c1.11 0 2-.89 2-2H5c0 1.11.89 2 2 2z"></path>
+                        </svg>
+                    </a>
+                </li>
+                <li class="Profile-navigation__list-element">
+                    <details class="Profile-navigation__details Profile-navigation__details--right-webkit">
+                        <summary>
+                            <svg class="Profile-navigation__additional-info-icon" viewBox="0 0 12 16" version="1.1" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path>
+                            </svg>
+                        </summary>
+                    </details>
+                </li>
+                <li class="Profile-navigation__list-element">
+                    <details class="Profile-navigation__details Profile-navigation__details--right-webkit">
+                        <summary>
+                            <img class="Profile-navigation__github-photo" alt="Your profile" src="../src/images/github_photo.png">
+                        </summary>
+                    </details>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="Layout">
+        <section class="Layout__navigation">
+            <div class="Layout__navigation-content Account">
+                <details class="Account__block Account__block--underscored Account__block--right-webkit">
+                    <summary class="Account__details-summary">
+                        <img class="Account__github-photo" alt="Your profile" src="../src/images/github_photo.png">
+                        <span class="Account__nick-name">andriiprysiazhnyk</span>
+                    </summary>
+                </details>
+                <div class="Account__block Account__block--underscored">
+                    <nav class="Repository-navigation">
+                        <h4 class="Repository-navigation__title">
+                            Repositories
+                            <a class="Repository-navigation__new-repository" href="#">
+                                <svg class="Repository-navigation__repository-icon Repository-navigation__repository-icon--white" version="1.1">
+                                    <path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"></path>
+                                </svg>
+                                New
+                            </a>
+                        </h4>
+                        <form>
+                            <input class="Repository-navigation__input" type="text" placeholder="Find a repository...">
+                        </form>
+                        <ul class="Repository-navigation__list">
+                            <li class="Repository-navigation__list-element">
+                                <svg class="Repository-navigation__repository-icon Repository-navigation__repository-icon--grey" version="1.1">
+                                    <path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"></path>
+                                </svg>
+                                <a class="Repository-navigation__repository-name" href="#">andriiprysiazhnyk/WebHome...</a>
+                            </li>
+                            <li class="Repository-navigation__list-element">
+                                <svg class="Repository-navigation__repository-icon Repository-navigation__repository-icon--grey" version="1.1">
+                                    <path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"></path>
+                                </svg>
+                                <a class="Repository-navigation__repository-name" href="#">nickolanick/course_work_deploy</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <section class="Account__block">
+                    <h4 class="Account__block-title">Your teams</h4>
+                    <p>You don’t belong to any teams yet!</p>
+                </section>
+            </div>
+        </section>
+        <main class="Layout__main">
+            <!--<article class="News News&#45;&#45;underscored">-->
+                <!--<a class="News__user-link" href="#">-->
+                    <!--<img class="News__user-photo" alt="User's photo" src="../src/images/user.jpg">-->
+                <!--</a>-->
+                <!--<div class="News__content">-->
+                    <!--<p class="News__post-info">-->
+                        <!--<a class="News__post-info-link" href="#">olekscode</a> starred-->
+                        <!--<a class="News__post-info-link" href="#">dannywillems/Makefiles</a>-->
+                        <!--<time class="News__post-time" datetime="18-01-2019">24 days ago</time>-->
+                    <!--</p>-->
+                    <!--<div class="Project">-->
+                        <!--<form class="Project__star-form">-->
+                            <!--<button class="Project__star-button" type="button">-->
+                                <!--<svg class="Project__star-icon" version="1.1">-->
+                                    <!--<path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path>-->
+                                <!--</svg>-->
+                                <!--<span class="Project__star-span">Star</span>-->
+                            <!--</button>-->
+                        <!--</form>-->
+                        <!--<h4 class="Project__name">-->
+                            <!--<a class="Project__link" href="#">dannywillems/Makefiles</a>-->
+                        <!--</h4>-->
+                        <!--<p class="Project__information">-->
+                            <!--List of makefiles for different projects-->
+                        <!--</p>-->
+                        <!--<footer>-->
+                            <!--<time class="Project__creation-time" datetime="18-01-2019">Updated Jan 18</time>-->
+                        <!--</footer>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</article>-->
+            <!--<article class="News News&#45;&#45;underscored">-->
+                <!--<a class="News__user-link" href="#">-->
+                    <!--<img class="News__user-photo" alt="User's photo" src="../src/images/user.jpg">-->
+                <!--</a>-->
+                <!--<div class="News__content">-->
+                    <!--<p class="News__post-info">-->
+                        <!--<a class="News__post-info-link" href="#">olekscode</a> created a repository-->
+                        <!--<a class="News__post-info-link" href="#">olekscode/NgramModel</a>-->
+                        <!--<time class="News__post-time" datetime="12-01-2019">on 12 Jan</time>-->
+                    <!--</p>-->
+                    <!--<div class="Project">-->
+                        <!--<form class="Project__star-form">-->
+                            <!--<button class="Project__star-button" type="button">-->
+                                <!--<svg class="Project__star-icon" version="1.1">-->
+                                    <!--<path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path>-->
+                                <!--</svg>-->
+                                <!--<span class="Project__star-span">Star</span>-->
+                            <!--</button>-->
+                        <!--</form>-->
+                        <!--<h4 class="Project__name">-->
+                            <!--<a class="Project__link" href="#">olekscode/NgramModel</a>-->
+                        <!--</h4>-->
+                        <!--<p class="Project__information">-->
+                            <!--Ngram language model implemented in Pharo-->
+                        <!--</p>-->
+                        <!--<footer>-->
+                            <!--<time class="Project__creation-time" datetime="21-01-2019">Updated Jan 21</time>-->
+                        <!--</footer>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</article>-->
+            <!--<article class="News News&#45;&#45;underscored">-->
+                <!--<a class="News__user-link" href="#">-->
+                    <!--<img class="News__user-photo" alt="User's photo" src="../src/images/user.jpg">-->
+                <!--</a>-->
+                <!--<div class="News__content">-->
+                    <!--<p class="News__post-info">-->
+                        <!--<a class="News__post-info-link" href="#">olekscode</a> created a repository-->
+                        <!--<a class="News__post-info-link" href="#">olekscode/CodeTokenizer</a>-->
+                        <!--<time class="News__post-time" datetime="10-01-2019">on 10 Jan</time>-->
+                    <!--</p>-->
+                    <!--<div class="Project">-->
+                        <!--<form class="Project__star-form">-->
+                            <!--<button class="Project__star-button" type="button">-->
+                                <!--<svg class="Project__star-icon" version="1.1">-->
+                                    <!--<path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path>-->
+                                <!--</svg>-->
+                                <!--<span class="Project__star-span">Star</span>-->
+                            <!--</button>-->
+                        <!--</form>-->
+                        <!--<h4 class="Project__name">-->
+                            <!--<a class="Project__link" href="#">olekscode/CodeTokenizer</a>-->
+                        <!--</h4>-->
+                        <!--<p class="Project__information">-->
+                            <!--Source code and identifier name tokenizer for Pharo-->
+                        <!--</p>-->
+                        <!--<footer>-->
+                            <!--<time class="Project__creation-time" datetime="11-01-2019">Updated Jan 11</time>-->
+                        <!--</footer>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</article>-->
+            <!--<article class="News News&#45;&#45;underscored">-->
+                <!--<a class="News__user-link" href="#">-->
+                    <!--<img class="News__user-photo" alt="User's photo" src="../src/images/user.jpg">-->
+                <!--</a>-->
+                <!--<div class="News__content">-->
+                    <!--<p class="News__post-info">-->
+                        <!--<a class="News__post-info-link" href="#">olekscode</a> created a repository-->
+                        <!--<a class="News__post-info-link" href="#">PolyMathOrg/project-proposals</a>-->
+                        <!--<time class="News__post-time" datetime="27-12-2018">on 27 Dec 2018</time>-->
+                    <!--</p>-->
+                    <!--<div class="Project">-->
+                        <!--<form class="Project__star-form">-->
+                            <!--<button class="Project__star-button" type="button">-->
+                                <!--<svg class="Project__star-icon" version="1.1">-->
+                                    <!--<path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path>-->
+                                <!--</svg>-->
+                                <!--<span class="Project__star-span">Star</span>-->
+                            <!--</button>-->
+                        <!--</form>-->
+                        <!--<h4 class="Project__name">-->
+                            <!--<a class="Project__link" href="#">PolyMathOrg/project-proposals</a>-->
+                        <!--</h4>-->
+                        <!--<p class="Project__information">-->
+                            <!--Project proposals and idea list for PolyMath community-->
+                        <!--</p>-->
+                        <!--<footer>-->
+                            <!--<time class="Project__creation-time" datetime="27-12-2018">Updated Dec 27</time>-->
+                        <!--</footer>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</article>-->
+            <aside class="Subscribing">
+                <p>
+                    <svg class="Subscribing__icon-light" version="1.1">
+                        <path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path>
+                    </svg>
+                    <strong class="Subscribing__line-part">ProTip!</strong>
+                    <span class="Subscribing__line-part">The feed shows you events from people you</span>
+                    <a class="Subscribing__link" href="#">follow</a>
+                    <span class="Subscribing__line-part">and repositories you</span>
+                    <a class="Subscribing__link" href="#">watch</a>.
+                </p>
+                <a class="Subscribing__news" href="#">
+                    <svg class="Subscribing__network-icon" version="1.1" aria-hidden="true" >
+                        <path fill-rule="evenodd" d="M2 13H0v-2c1.11 0 2 .89 2 2zM0 3v1a9 9 0 0 1 9 9h1C10 7.48 5.52 3 0 3zm0 4v1c2.75 0 5 2.25 5 5h1c0-3.31-2.69-6-6-6z"></path>
+                    </svg>
+                    <span class="Subscribing__line-part">Subscribe to your news feed</span>
+                </a>
+            </aside>
+            <footer class="Footer">
+                <a class="Footer__github-link" href="#">
+                    <svg class="Footer__github-icon" viewBox="0 0 16 16" version="1.1" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                    </svg>
+                    <span class="Footer__github-link-text">© 2019 GitHub, Inc.</span>
+                </a>
+                <nav class="Footer__navigation">
+                    <ul class="Footer__links">
+                        <li class="Footer__list-element"><a href="#" class="Footer__nav-link">Blog</a></li>
+                        <li class="Footer__list-element"><a href="#" class="Footer__nav-link">About</a></li>
+                        <li class="Footer__list-element"><a href="#" class="Footer__nav-link">Shop</a></li>
+                        <li class="Footer__list-element"><a href="#" class="Footer__nav-link">Contact GitHub</a></li>
+                        <li class="Footer__list-element"><a href="#" class="Footer__nav-link">Pricing</a></li>
+                    </ul>
+                    <ul class="Footer__links">
+                        <li class="Footer__list-element"><a href="#" class="Footer__nav-link">API</a></li>
+                        <li class="Footer__list-element"><a href="#" class="Footer__nav-link">Training</a></li>
+                        <li class="Footer__list-element"><a href="#" class="Footer__nav-link">Status</a></li>
+                        <li class="Footer__list-element"><a href="#" class="Footer__nav-link">Security</a></li>
+                    </ul>
+                    <ul class="Footer__links">
+                        <li class="Footer__list-element"><a href="#" class="Footer__nav-link">Terms</a></li>
+                        <li class="Footer__list-element"><a href="#" class="Footer__nav-link">Privacy</a></li>
+                        <li class="Footer__list-element"><a href="#" class="Footer__nav-link">Help</a></li>
+                    </ul>
+                </nav>
+            </footer>
+        </main>
+        <aside class="Layout__sidebar">
+            <div class="Sidebar">
+                <h4 class="Sidebar__title">Discover repositories</h4>
+                <div class="Sidebar__block">
+                    <div class="Repository-block Repository-block--underscored">
+                        <h5 class="Repository-block__title">
+                            <a class="Repository-block__title-link" href="#">prettier/prettie</a>
+                        </h5>
+                        <p class="Repository-block__description">
+                            Prettier is an opinionated code formatter.
+                        </p>
+                        <footer>
+                            <span class="Repository-block__language Repository-block__language--circle Repository-block__language--orange-circle">
+                                Go
+                            </span>
+                            <span class="Repository-block__subscribers">
+                                <svg class="Repository-block__star-icon" version="1.1">
+                                    <path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path>
+                                </svg>
+                                959
+                            </span>
+                        </footer>
+                    </div>
+                </div>
+                <div class="Sidebar__block">
+                    <div class="Repository-block Repository-block--underscored">
+                        <h5 class="Repository-block__title">
+                            <a class="Repository-block__title-link" href="#">symfony/symfony</a>
+                        </h5>
+                        <p class="Repository-block__description">
+                            The Symfony PHP framework
+                        </p>
+                        <footer>
+                            <span class="Repository-block__language Repository-block__language--circle Repository-block__language--blue-circle">
+                                CSS
+                            </span>
+                            <span class="Repository-block__subscribers">
+                                <svg class="Repository-block__star-icon" version="1.1">
+                                    <path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path>
+                                </svg>
+                                131k
+                            </span>
+                        </footer>
+                    </div>
+                </div>
+                <div class="Sidebar__block">
+                    <div class="Repository-block">
+                        <h5 class="Repository-block__title">
+                            <a class="Repository-block__title-link" href="#">tesseract-ocr/tesseract</a>
+                        </h5>
+                        <p class="Repository-block__description">
+                            Tesseract Open Source OCR Engine (main repository)
+                        </p>
+                        <footer>
+                            <span class="Repository-block__language Repository-block__language--circle Repository-block__language--yellow-circle">
+                                Go
+                            </span>
+                            <span class="Repository-block__subscribers">
+                                <svg class="Repository-block__star-icon" version="1.1">
+                                    <path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path>
+                                </svg>
+                                14.7k
+                            </span>
+                        </footer>
+                    </div>
+                </div>
+                <a class="Sidebar__footer-link" href="#">Go to explore</a>
+            </div>
+        </aside>
+    </div>
+<script src="bundle.js"></script>
+</body>
+</html>

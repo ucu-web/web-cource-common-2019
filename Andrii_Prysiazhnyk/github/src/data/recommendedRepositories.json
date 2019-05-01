@@ -1,0 +1,23 @@
+[
+  {
+    "repositoryName": "prettier/prettie",
+    "description": "Prettier is an opinionated code formatter.",
+    "stars": 959,
+    "language": "Go",
+    "circleColor": "orange"
+  },
+  {
+    "repositoryName": "symfony/symfony",
+    "description": "The Symfony PHP framework",
+    "stars": 1310,
+    "language": "CSS",
+    "circleColor": "blue"
+  },
+  {
+    "repositoryName": "tesseract-ocr/tesseract",
+    "description": "Tesseract Open Source OCR Engine (main repository)",
+    "stars": 1470,
+    "language": "Go",
+    "circleColor": "yellow"
+  }
+]

@@ -1,0 +1,55 @@
+@import "common-styles";
+
+.Repository-block {
+  padding: 8px 0;
+
+  &--underscored {
+    @extend %underscored;
+  }
+
+  &__title, &__description {
+    margin: 4px 0;
+  }
+
+  &__title-link {
+    @extend %basic-link;
+  }
+
+  &__title-link:hover {
+    @extend %basic-link-hover;
+  }
+
+  &__description, &__language, &__subscribers {
+    font-size: $small-font;
+    color: $grey-color;
+  }
+
+  &__star-icon {
+    fill: #586069;
+    margin-left: 8px;
+    width: 14px;
+    height: 16px;
+    vertical-align: bottom;
+  }
+
+  &__language--circle::before {
+    content: ' ';
+    display: inline-block;
+    border-radius: 50%;
+    height: 12px;
+    width: 12px;
+    margin-right: 3px;
+  }
+
+  &__language--orange-circle::before {
+    background-color: #e34c26;
+  }
+
+  &__language--blue-circle::before {
+    background-color: #1556D3;
+  }
+
+  &__language--yellow-circle::before {
+    background-color: #F18E33;
+  }
+}

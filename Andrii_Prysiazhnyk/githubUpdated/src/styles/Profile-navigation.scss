@@ -1,0 +1,40 @@
+@import "basic-header-navigation";
+@import "common-styles";
+
+.Profile-navigation {
+  &__list-of-options {
+    @extend %list-of-options;
+  }
+
+  &__list-element {
+    @extend %list-element;
+  }
+
+  &__details {
+    color: white;
+  }
+
+  &__details--right-webkit summary::-webkit-details-marker {
+    @extend %right-webkit;
+    margin-top: 7px;
+  }
+
+  &__additional-info-icon, &__notifications-icon {
+    width: 14px;
+    height: 16px;
+  }
+
+  &__notifications-icon {
+    fill: hsla(0,0%,100%,.75);
+  }
+
+  &__additional-info-icon {
+    fill: white;
+  }
+
+  &__github-photo {
+    border-radius:3px;
+    width: 20px;
+    height: 20px;
+  }
+}

@@ -1,0 +1,57 @@
+@import "common-styles";
+
+.Project {
+  background: white;
+  border: 1px solid #D2D6D7;
+  border-radius: 3px;
+  padding: 16px;
+
+  &__star-form {
+    float: right;
+  }
+
+  &__star-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 26px;
+    width: 60px;
+    background-color: #eff3f6;
+    border-radius: 3px;
+    border: 1px solid rgba(34,34,34,0.25);
+  }
+
+  &__star-icon {
+    width: 14px;
+    height: 16px;
+    fill: #24292e;
+  }
+
+  &__star-span {
+    font-weight: 600;
+    font-size: $small-font;
+  }
+
+  &__name {
+    font-size: $big-font;
+    margin: 4px 0;
+  }
+
+  &__information {
+    color: $grey-color;
+    margin: 4px 0;
+  }
+
+  &__creation-time {
+    font-size: $small-font;
+    color: $grey-color;
+  }
+
+  &__link {
+    @extend %basic-link;
+  }
+
+  &__link:hover {
+    @extend %basic-link-hover;
+  }
+}
