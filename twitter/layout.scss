@@ -1,3 +1,5 @@
+@import "components/button/button";
+
 $font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
 $font-size: 19px;
 $font-weight: 800;
@@ -6,9 +8,10 @@ $font-weight: 800;
 body {
   margin: 0;
   background: rgb(230, 236, 240);
+  font-family: $font-family;
 }
 
-.Header {
+.header {
   height: 53px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   background: #fff;
@@ -20,56 +23,56 @@ body {
   }
 }
 
-.Main {
+.main {
   width: 980px;
   padding: 0 10px;
-  height: 100px;
+  height: auto;
   margin: 10px auto;
   display: flex;
   justify-content: space-between;
 }
 
-.PrimaryColumn {
+.primary-column {
   width: 600px;
   height: 500px;
   background: #fff;
 
-  &__header {
-    border-bottom: 1px solid rgb(230, 236, 240);
-    padding: 8px 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  &__name {
-    margin: 0;
-    max-width: 500px;
-    width: 100%;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    font-family: $font-family;
-    font-size: $font-size;
-    font-weight: $font-weight;
-  }
-
-  &__button {
-    width: 37px;
-    height: 37px;
-    border-radius: 50%;
-    cursor: pointer;
-    border: none;
-    padding: 0;
-    transition: 0.2s;
-  }
-
-  &__button svg {
-    height: 2em;
-  }
-
-  &__button:hover {
-    background: rgba(29, 161, 242, 0.1);
-  }
+  //&__header {
+  //  border-bottom: 1px solid rgb(230, 236, 240);
+  //  padding: 8px 10px;
+  //  display: flex;
+  //  justify-content: space-between;
+  //  align-items: center;
+  //}
+  //
+  //&__name {
+  //  margin: 0;
+  //  max-width: 500px;
+  //  width: 100%;
+  //  text-overflow: ellipsis;
+  //  overflow: hidden;
+  //  font-family: $font-family;
+  //  font-size: $font-size;
+  //  font-weight: $font-weight;
+  //}
+  //
+  //&__button {
+  //  width: 37px;
+  //  height: 37px;
+  //  border-radius: 50%;
+  //  cursor: pointer;
+  //  border: none;
+  //  padding: 0;
+  //  transition: 0.2s;
+  //}
+  //
+  //&__button svg {
+  //  height: 2em;
+  //}
+  //
+  //&__button:hover {
+  //  background: rgba(29, 161, 242, 0.1);
+  //}
 
   &__create-post {
     width: 100%;
@@ -85,7 +88,124 @@ body {
   }
 }
 
-.SidebarColumn {
+.post {
+  border-bottom: 1px solid rgb(230, 236, 240);
+  padding: 15px 10px;
+
+  &__retweeted {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+  &__retweeted-picture {
+    width: 13px;
+    height: 13px;
+    margin: 0 10px 0 35px;
+  }
+
+  &__retweeted-link {
+    color: rgb(101, 119, 134);
+    font-size: 13px;
+    font-weight: 400;
+    text-decoration: none;
+  }
+
+  &__retweeted-link:hover {
+    text-decoration: underline;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__sidebar {
+    width: 49px;
+  }
+
+  &__sidebar-profile-image {
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+  }
+
+  &__content {
+    width: 521px;
+  }
+
+  &__header {
+
+  }
+
+  &__profile-link {
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  &__profile-link:hover &__profile-link--main {
+    text-decoration: underline;
+  }
+
+  &__profile-link--main {
+    color: #000;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  &__profile-link--secondary {
+    color: rgb(101, 119, 134);
+    font-weight: 400;
+    text-decoration: none;
+  }
+
+  &__profile-verified {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: baseline;
+  }
+
+
+
+  &__info {
+
+  }
+
+  &__image {
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 14px;
+    border: 1px solid rgb(204, 214, 221);
+  }
+}
+
+.column-header {
+  border-bottom: 1px solid rgb(230, 236, 240);
+  padding: 8px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__title {
+    margin: 0;
+    max-width: 500px;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    //font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+  }
+
+  &__button {
+    width: 37px;
+    height: 37px;
+  }
+}
+
+.sidebar-column {
   width: 360px;
   height: 100px;
   background: #fff;

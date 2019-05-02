@@ -7,35 +7,69 @@
     <link rel="stylesheet" href="layout.css">
 </head>
 <body>
-    <header class="Header">
-        <div class="Header__wrapper">
-            <nav class="Header__nav">
+    <header class="header">
+        <div class="header__wrapper">
+            <nav class="header__nav">
                 <a href="">Home</a>
                 <a href="">Explore</a>
                 <a href="">Notifications</a>
                 <a href="">Messages</a>
             </nav>
-            <form class="Header__search-form" action="./search" aria-label="search-form">
-                <input class="Header__search-input" type="text" aria-label="search-field">
+            <form class="header__search-form" action="./search" aria-label="search-form">
+                <input class="header__search-input" type="text" aria-label="search-field">
             </form>
-            <button class="Header__menu-button"></button>
+            <button class="header__menu-button"></button>
         </div>
     </header>
-    <main class="Main">
-        <article class="PrimaryColumn">
-            <header class="PrimaryColumn__header">
-                <h1 class="PrimaryColumn__name">Home</h1>
-                <button class="PrimaryColumn__button">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path fill="#1DA1F2" d="M22.772 10.506l-5.618-2.192-2.16-6.5c-.102-.307-.39-.514-.712-.514s-.61.207-.712.513l-2.16 6.5-5.62 2.192c-.287.112-.477.39-.477.7s.19.585.478.698l5.62 2.192 2.16 6.5c.102.306.39.513.712.513s.61-.207.712-.513l2.16-6.5 5.62-2.192c.287-.112.477-.39.477-.7s-.19-.585-.478-.697zm-6.49 2.32c-.208.08-.37.25-.44.46l-1.56 4.695-1.56-4.693c-.07-.21-.23-.38-.438-.462l-4.155-1.62 4.154-1.622c.208-.08.37-.25.44-.462l1.56-4.693 1.56 4.694c.07.212.23.382.438.463l4.155 1.62-4.155 1.622zM6.663 3.812h-1.88V2.05c0-.414-.337-.75-.75-.75s-.75.336-.75.75v1.762H1.5c-.414 0-.75.336-.75.75s.336.75.75.75h1.782v1.762c0 .414.336.75.75.75s.75-.336.75-.75V5.312h1.88c.415 0 .75-.336.75-.75s-.335-.75-.75-.75zm2.535 15.622h-1.1v-1.016c0-.414-.335-.75-.75-.75s-.75.336-.75.75v1.016H5.57c-.414 0-.75.336-.75.75s.336.75.75.75H6.6v1.016c0 .414.335.75.75.75s.75-.336.75-.75v-1.016h1.098c.414 0 .75-.336.75-.75s-.336-.75-.75-.75z"></path>
+    <main class="main">
+        <section class="primary-column">
+            <header class="column-header">
+                <h1 class="column-header__title">Home</h1>
+                <button class="button column-header__button">
+                    <svg class="button__image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M22.772 10.506l-5.618-2.192-2.16-6.5c-.102-.307-.39-.514-.712-.514s-.61.207-.712.513l-2.16 6.5-5.62 2.192c-.287.112-.477.39-.477.7s.19.585.478.698l5.62 2.192 2.16 6.5c.102.306.39.513.712.513s.61-.207.712-.513l2.16-6.5 5.62-2.192c.287-.112.477-.39.477-.7s-.19-.585-.478-.697zm-6.49 2.32c-.208.08-.37.25-.44.46l-1.56 4.695-1.56-4.693c-.07-.21-.23-.38-.438-.462l-4.155-1.62 4.154-1.622c.208-.08.37-.25.44-.462l1.56-4.693 1.56 4.694c.07.212.23.382.438.463l4.155 1.62-4.155 1.622zM6.663 3.812h-1.88V2.05c0-.414-.337-.75-.75-.75s-.75.336-.75.75v1.762H1.5c-.414 0-.75.336-.75.75s.336.75.75.75h1.782v1.762c0 .414.336.75.75.75s.75-.336.75-.75V5.312h1.88c.415 0 .75-.336.75-.75s-.335-.75-.75-.75zm2.535 15.622h-1.1v-1.016c0-.414-.335-.75-.75-.75s-.75.336-.75.75v1.016H5.57c-.414 0-.75.336-.75.75s.336.75.75.75H6.6v1.016c0 .414.335.75.75.75s.75-.336.75-.75v-1.016h1.098c.414 0 .75-.336.75-.75s-.336-.75-.75-.75z"></path>
                     </svg>
                 </button>
             </header>
-            <button class="PrimaryColumn__create-post">
+            <section class="posts">
+                <article class="post">
+                    <span class="post__retweeted">
+                        <svg class="post__retweeted-picture" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path fill="#657786" d="M23.77 15.67c-.292-.293-.767-.293-1.06 0l-2.22 2.22V7.65c0-2.068-1.683-3.75-3.75-3.75h-5.85c-.414 0-.75.336-.75.75s.336.75.75.75h5.85c1.24 0 2.25 1.01 2.25 2.25v10.24l-2.22-2.22c-.293-.293-.768-.293-1.06 0s-.294.768 0 1.06l3.5 3.5c.145.147.337.22.53.22s.383-.072.53-.22l3.5-3.5c.294-.292.294-.767 0-1.06zm-10.66 3.28H7.26c-1.24 0-2.25-1.01-2.25-2.25V6.46l2.22 2.22c.148.147.34.22.532.22s.384-.073.53-.22c.293-.293.293-.768 0-1.06l-3.5-3.5c-.293-.294-.768-.294-1.06 0l-3.5 3.5c-.294.292-.294.767 0 1.06s.767.293 1.06 0l2.22-2.22V16.7c0 2.068 1.683 3.75 3.75 3.75h5.85c.414 0 .75-.336.75-.75s-.337-.75-.75-.75z"/>
+                        </svg>
+                        <a class="post__retweeted-link" href="">NASA Retweeted</a>
+                    </span>
+                    <div class="post__wrapper">
+                        <aside class="post__sidebar">
+                            <a class="post__sidebar-profile-link" href="">
+                                <img class="post__sidebar-profile-image" src="./images/profile-image.jpg" alt="">
+                            </a>
+                        </aside>
+                        <main class="post__content">
+                            <header class="post__header">
+                                <a class="post__profile-link" href="">
+                                    <span class="post__profile-link--main">Christina H Koch</span>
+                                    <svg class="post__profile-verified" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path fill="#1da1f2" d="M22.5 12.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4 0-2.21-1.71-3.998-3.818-3.998-.47 0-.92.084-1.336.25C14.818 2.415 13.51 1.5 12 1.5s-2.816.917-3.437 2.25c-.415-.165-.866-.25-1.336-.25-2.11 0-3.818 1.79-3.818 4 0 .494.083.964.237 1.4-1.272.65-2.147 2.018-2.147 3.6 0 1.495.782 2.798 1.942 3.486-.02.17-.032.34-.032.514 0 2.21 1.708 4 3.818 4 .47 0 .92-.086 1.335-.25.62 1.334 1.926 2.25 3.437 2.25 1.512 0 2.818-.916 3.437-2.25.415.163.865.248 1.336.248 2.11 0 3.818-1.79 3.818-4 0-.174-.012-.344-.033-.513 1.158-.687 1.943-1.99 1.943-3.484zm-6.616-3.334l-4.334 6.5c-.145.217-.382.334-.625.334-.143 0-.288-.04-.416-.126l-.115-.094-2.415-2.415c-.293-.293-.293-.768 0-1.06s.768-.294 1.06 0l1.77 1.767 3.825-5.74c.23-.345.696-.436 1.04-.207.346.23.44.696.21 1.04z"/>
+                                    </svg>
+                                    <span class="post__profile-link--secondary">@Astro_Christina</span>
+                                </a>
+                            </header>
+                            <article class="post__info">
+                                <p class="post__text">Waving to the mitten! Greetings to my friends and family in Michigan. The Great Lakes are as stunning from space as they are in person.</p>
+                                <img class="post__image" src="https://pbs.twimg.com/media/D5gf-HkWkAEoj-W?format=jpg&name=medium" alt="">
+                                <span class="post__image-subscript">Intl. Space Station and NASA</span>
+                            </article>
+                            <footer class="post__footer"></footer>
+                        </main>
+                    </div>
+                </article>
 
-            </button>
-        </article>
-        <aside class="SidebarColumn"></aside>
+            </section>
+        </section>
+        <aside class="sidebar-column">
+
+        </aside>
     </main>
 </body>
 </html>

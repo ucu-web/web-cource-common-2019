@@ -3,21 +3,21 @@ body {
   padding: 0;
 }
 
-.Header {
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 16px;
 }
-.Header__wrapper--left, .Header__wrapper--right {
+.header__wrapper--left, .header__wrapper--right {
   display: flex;
   align-items: center;
 }
-.Header__icon img {
+.header__icon img {
   width: 32px;
   height: 32px;
 }
-.Header__form {
+.header__form {
   height: 28px;
   width: 300px;
   position: relative;
@@ -25,7 +25,7 @@ body {
   border-radius: 3px;
   margin: 0 16px;
 }
-.Header__form::after {
+.header__form::after {
   content: "";
   position: absolute;
   transform: translateY(-50%);
@@ -36,7 +36,7 @@ body {
   height: 20px;
   background: url("../../images/search-key-slash.svg");
 }
-.Header__input {
+.header__input {
   height: 28px;
   width: 257px;
   border: none;
@@ -44,12 +44,12 @@ body {
   border-radius: 3px;
   padding: 0 8px;
 }
-.Header__input::placeholder {
+.header__input::placeholder {
   font-size: 14px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.4);
 }
-.Header__nav-item {
+.header__nav-item {
   color: white;
   font-size: 14px;
   font-weight: 600;
@@ -57,16 +57,16 @@ body {
   text-decoration: none;
   margin-right: 16px;
 }
-.Header__nav-item:hover {
+.header__nav-item:hover {
   color: rgba(255, 255, 255, 0.7);
 }
-.Header__notification {
+.header__notification {
   width: 14px;
   height: 16px;
   margin-right: 16px;
   background: url("../../images/bell.svg");
 }
-.Header__button {
+.header__button {
   position: relative;
   border: none;
   background: yellow;
@@ -75,11 +75,11 @@ body {
   display: flex;
   align-items: center;
 }
-.Header__button--plus {
+.header__button--plus {
   width: 12px;
   background: url("../../images/plus.svg") no-repeat;
 }
-.Header__button::after {
+.header__button::after {
   content: "";
   position: absolute;
   top: 0;

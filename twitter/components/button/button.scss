@@ -1,0 +1,16 @@
+.button {
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  transition: 0.2s;
+  padding: 0;
+
+  &__image {
+    fill: #1da1f2;
+    height: 2em;
+  }
+
+  &:hover {
+    background: rgba(29, 161, 242, 0.1);
+  }
+}
