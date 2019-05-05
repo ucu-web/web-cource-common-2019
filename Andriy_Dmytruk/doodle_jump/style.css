@@ -21,18 +21,6 @@
     position: relative;
 }
 
-.score {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-
-    color: #555555;
-    font-family: "Droid Sans Mono", monospace;
-    font-size: 30px;
-
-    z-index: 2;
-}
-
 .menu {
     background-color: #FFFFFFAA;
     font-family: "Droid Sans Mono", monospace;
@@ -69,16 +57,17 @@
 }
 
 .menu__button {
-    background-color: #ded6b1;
-    color: #000000;
-    border: 2px solid #000000;
+    background-color: #433521;
+    border: none;
+    color: #FFF;
+    /*border: 2px solid #000000;*/
     outline: none;
 
     font-size: 22px;
-    height: 30px;
-    width: 100px;
+    height: 34px;
+    width: 104px;
     border-radius: 15px;
-    box-sizing: content-box;
+    box-sizing: border-box;
 
     cursor: pointer;
 }
@@ -86,11 +75,61 @@
     background-color: #debc80;
 }
 .menu__button:active {
-    width: 110px;
-    height: 33px;
+    width: 114px;
+    height: 37px;
     border-radius: 16.5px;
 
     margin: -1.5px -5px;
+}
+
+.menu__overlay {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.menu__topbar {
+    background-color: rgba(222, 235, 255, 0.67);
+    height: 40px;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu__topbar-score {
+    color: #433521;
+    margin: 0 20px;
+    font-family: "Droid Sans Mono", monospace;
+    font-size: 30px;
+}
+.menu__topbar-button {
+    position: relative;
+    background-color: #433521;
+    border: none;
+    color: #FFF;
+    /*border: 2px solid #0e2639;*/
+    outline: none;
+
+    font-size: 20px;
+    height: 28px;
+    width: 80px;
+    border-radius: 14px;
+    box-sizing: border-box;
+
+    margin-left: 20px;
+
+    cursor: pointer;
+}
+
+.menu__topbar-button:hover {
+    background-color: #debc80;
+}
+.menu__topbar-button:active {
+    left: -4px;
+    width: 88px;
+    height: 31px;
+    border-radius: 15.5px;
 }
 
 .doodle {
@@ -127,9 +166,7 @@
 .doodle_left .doodle-nose {
     transform: rotate(-180deg);
 }
-.doodle_shooting .doodle-nose {
-    transform: rotate(-90deg);
-}
+
 
 .doodle-nose-begin {
     position: absolute;
@@ -326,4 +363,80 @@
     height: 14px;
     margin: -4px -12px;
     background-color: #e8594c00;
+}
+
+.bullet {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+
+    background-color: black;
+    border: 2px solid #888;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.enemy {
+    transition: transform 0.2s;
+}
+.enemy_hit {
+    transform: scale(1.1);
+}
+.enemy_dead {
+    transform: scale(0);
+}
+
+.enemy-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #ea945b;
+}
+
+@keyframes face-move {
+    0% { margin-top: -6px }
+    100% { margin-top: 6px }
+}
+.enemy-circle__face {
+    position: absolute;
+    width: 12px;
+    height: 20px;
+    top: 16px;
+    left: 24px;
+
+    animation: face-move;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+.enemy__eye-left {
+    position: absolute;
+    background-color: #111;
+    width: 4px;
+    height: 6px;
+    border-radius: 2px;
+
+    left: 0;
+}
+.enemy__eye-right {
+    position: absolute;
+    background-color: #111;
+    width: 4px;
+    height: 6px;
+    border-radius: 2px;
+
+    right: 0;
+}
+
+.enemy__mouth {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #222;
+
+    bottom: 0;
+    left: calc(50% - 4px);
 }

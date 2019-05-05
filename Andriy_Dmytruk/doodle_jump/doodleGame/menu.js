@@ -1,6 +1,19 @@
 class Menu {
+    linkTopbarContainer(container) {
+        const background = new El("background").parent(container);
+        const overlay = new El("menu__overlay").parent(background).dimensions(this.width, this.height);
+        const topBar = new El("menu__topbar").parent(overlay)
+            .listener("click", (e) => { e.cancelBubble = true; } , false);
+        const topBarButton = new El("menu__topbar-button", "button").innerText("pause")
+            .parent(topBar).listener("click", this.gamePause);
+        this.topBarScore = new El("menu__topbar-score").parent(topBar).innerText("0");
+    }
+
     linkContainer(container) {
+        this.linkTopbarContainer(container);
+
         this.background = new El("background").parent(container);
+        this.background.listener("click", (e) => { e.cancelBubble = true; } , false);
         this.element = new El("menu").dimensions(this.width, this.height).parent(this.background);
 
         const row = new El("menu__row").parent(this.element);
@@ -18,16 +31,6 @@ class Menu {
         this.lastListener = callBack;
     }
 
-    gameStart() {
-        this.hidden = true;
-        this.game.start();
-    }
-
-    gameRestart() {
-        this.hidden = true;
-        this.game.restart();
-    }
-
     gameScore() {
         return this.game.score;
     }
@@ -37,8 +40,9 @@ class Menu {
         this.width = width;
         this.height = height;
 
-        this.gameStart = this.gameStart.bind(this);
-        this.gameRestart = this.gameRestart.bind(this);
+        this.gameStart = () => this.game.start();
+        this.gamePause = () => this.game.pause();
+        this.gameRestart = () => this.game.restart();
 
         this.linkContainer(container);
     }
@@ -52,6 +56,10 @@ class Menu {
     }
     get hidden() {
         return this.background.containsClass("menu_hidden");
+    }
+
+    draw(dur) {
+        this.topBarScore.innerText(this.gameScore());
     }
 
     pause() {

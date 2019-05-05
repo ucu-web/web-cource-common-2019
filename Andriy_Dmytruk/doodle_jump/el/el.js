@@ -68,6 +68,16 @@ class El {
         return this;
     }
 
+    transition(v) {
+        this.element.style.transition = v;
+        return this;
+    }
+
+    transform(v) {
+        this.element.style.transform = v;
+        return this;
+    }
+
     innerHTML(html) {
         this.element.innerHTML = html;
         return this;
@@ -78,13 +88,17 @@ class El {
         return this;
     }
 
-    listener(type, callback) {
-        this.element.addEventListener(type, callback);
+    listener(type, callback, options) {
+        this.element.addEventListener(type, callback, options);
         return this;
     }
 
-    removeListener(type, callback) {
-        if (callback) this.element.removeEventListener(type, callback);
+    removeListener(type, callback, options) {
+        if (callback) this.element.removeEventListener(type, callback, options);
         return this;
+    }
+
+    getRect() {
+        return this.element.getBoundingClientRect();
     }
 }

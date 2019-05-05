@@ -12,10 +12,13 @@ class FieldGenerator {
 
     reset() {
         this.field.bottom = 0;
+        this.field.doodle.alive = true;
         this.field.doodle.x = (this.field.width - this.field.doodle.width) / 2;
         this.field.doodle.y = (this.field.height - this.field.doodle.height) / 2;
         this.field.objects.forEach(o => o.destructor ? o.destructor() : null);
-        this.field.objects = [new StaticPlatform(this.field,this.field.width / 2 - 30, 100)]
+        this.field.objects = [new StaticPlatform(this.field,this.field.width / 2 - 30, 100)];
+        this.field.enemies.forEach(e => e.destructor ? e.destructor() : null);
+        this.field.enemies = [];
         this.lastBlockTop = 0;
     }
 
@@ -23,6 +26,8 @@ class FieldGenerator {
         const valid = o => o.y + o.height >= this.field.bottom;
         this.field.objects.forEach(o => !valid(o) && (o.destructor ? o.destructor() : null));
         this.field.objects = this.field.objects.filter(valid);
+        this.field.enemies.forEach(o => !valid(o) && (o.destructor ? o.destructor() : null));
+        this.field.enemies = this.field.enemies.filter(valid);
     }
 
     // Should be able to jump through the block
@@ -50,6 +55,8 @@ class FieldGenerator {
         platforms = this.makeSolvable(platforms);
         platforms = this.normalizePlatforms(platforms);
         this.field.objects = [...this.field.objects, ...platforms];
+
+        this.generateEnemies();
     }
 
     change(dur) {
@@ -71,9 +78,11 @@ class FieldGenerator {
         p.x = Math.round(Math.random() * (this.field.width - p.width));
     }
     setRandomY(p, i, all) {
-        p.y = Math.round(
-            (this.blockSize - p.height) * (i / all.length) + (Math.random() - 0.5) * 40 + this.lastBlockTop
-        );
+        if (i || i === 0) {
+            p.y = Math.round((this.blockSize - p.height) * (i / all.length) + (Math.random() - 0.5) * 40 + this.lastBlockTop);
+        } else {
+            p.y = Math.round(Math.random() * (this.blockSize - p.height) + this.lastBlockTop)
+        }
     }
 
     normalizePlatforms(platforms) {
@@ -185,6 +194,31 @@ class FieldGenerator {
         platforms.forEach(this.setRandomY.bind(this));
 
         return platforms;
+    }
+
+    ENEMY_TYPES = [
+        [EnemyCircle, 1]
+    ];
+
+    generateEnemies() {
+        const probability = 0.8;
+        const createEnemy = (Type) => {
+            const enemy = new Type(this.field);
+            this.setRandomX(enemy);
+            this.setRandomY(enemy);
+            this.field.enemies.push(enemy);
+        };
+
+        let create = Math.random() < probability;
+        if (create) {
+            let type = Math.random() / this.ENEMY_TYPES.reduce((a, b) => a + b[1], 0);
+            let Type = this.ENEMY_TYPES.reduce((a, b) => a instanceof Enemy ? a : a + b[1] >= type ? b[0] : a + b[0], 0);
+
+            if (Type) {
+                createEnemy(Type);
+            }
+        }
+
     }
 }
 

@@ -2,7 +2,6 @@ class Field {
     linkContainer(container) {
         const background = new El("background").parent(container);
         this.element = new El("field").dimensions(this.width, this.height).parent(background);
-        this.score = new El("score").parent(this.element).innerText(0);
     }
 
     constructor(container, width, height) {
@@ -13,7 +12,9 @@ class Field {
         this.linkContainer(container);
 
         this.doodle = new Doodle(this);
+        this.bulletManager = new BulletManager(this, this.doodle);
         this.objects = [];
+        this.enemies = [];
     }
 
     translatePosition(object) {
@@ -31,22 +32,22 @@ class Field {
         }
     }
 
-    changeScore(dur) {
-        this.score.innerText(Math.floor(this.bottom));
-    }
-
     change(dur) {
         this.doodle.change(dur);
         this.objects.forEach(p => p.change(dur));
+        this.enemies.forEach(e => e.change(dur));
+        this.bulletManager.change(dur);
 
         this.objects.forEach(p => this.doodle.affect(p, dur));
+        this.enemies.forEach(o => { this.doodle.affect(o, dur); this.bulletManager.affect(o, dur)} );
 
         this.changeFocus();
-        this.changeScore();
     }
 
     draw() {
         this.doodle.draw();
         this.objects.forEach(p => p.draw());
+        this.enemies.forEach(e => e.draw());
+        this.bulletManager.draw();
     }
 }

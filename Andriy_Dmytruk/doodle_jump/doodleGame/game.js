@@ -43,6 +43,7 @@ class DoodleGame {
         this.field.change(duration);
         this.fieldGenerator.change(duration);
         this.field.draw();
+        this.menu.draw();
 
         if (this.isLost()) {
             this.menu.end();
@@ -58,10 +59,12 @@ class DoodleGame {
     start() {
         this.paused = false;
         this.play();
+        this.menu.hidden = true;
     }
 
     pause() {
         this.paused = true;
+        this.lastFrame = 0;
         this.menu.pause();
     }
 
@@ -69,5 +72,7 @@ class DoodleGame {
         this.paused = true;
         this.fieldGenerator.reset();
         this.paused = false;
+        this.menu.hidden = true;
+
     }
 }
