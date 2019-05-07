@@ -3,11 +3,11 @@
 }
 
 .Sidebar__home_header{
-    background: url("../images/home-banner.png") center center / cover no-repeat rgb(0, 121, 211);
+    background: url('../../images/home-banner.png') center center / cover no-repeat rgb(0, 121, 211);
     height: 34px;
     width: 100%;
     z-index: -1;
-    border-radius: 4px 4px 0px 0px;
+    border-radius: 4px 4px 0 0;
 }
 
 .Sidebar__home-header-text{
@@ -25,7 +25,7 @@
     height: 68px;
     position: relative;
     width: 40px;
-    background: url("../images/snoo-home.png") 0 0 / 40px 68px;
+    background: url('../../images/snoo-home.png') 0 0 / 40px 68px;
     vertical-align: middle;
     margin-top: -46px;
     z-index: 0;

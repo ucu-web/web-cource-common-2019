@@ -8,6 +8,10 @@ body{
     vertical-align: baseline;
 }
 
+body:focus{
+    outline: none;
+}
+
 button{
     background: transparent;
     border: none;
@@ -27,6 +31,14 @@ a{
     font-size: inherit;
     font-weight: inherit;
     line-height: inherit;
+}
+
+a:focus{
+    outline: 0;
+}
+
+button:focus{
+    outline: 0;
 }
 
 span{

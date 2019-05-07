@@ -1,0 +1,39 @@
+.Posts__post_votes{
+    width: 40px;
+    border-left: 4px solid transparent;
+    height: 100%;
+    left: 0;
+    padding: 8px 4px 8px 0;
+    top: 0;
+}
+
+.Posts__post_votes_up-arrow,.Posts__post_votes_down-arrow {
+    height: 24px;
+    width: 24px;
+    font-family: FontAwesome, serif;
+    color: rgb(129, 131, 132);
+    border-radius: 2px;
+    transition: background-color 0.1s ease 0s;
+}
+
+.Posts__post_votes_up-arrow:hover{
+    color: #FF4500;
+}
+.Posts__post_votes_down-arrow:hover {
+    color: rgb(90, 117, 204);
+}
+
+.Posts__post_votes_up-arrow:before {
+    content: "\f062";
+}
+
+.Posts__post_votes_down-arrow:before {
+    content: "\f063";
+}
+
+.Posts__post_votes_number{
+    color: #D7DADC;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+}

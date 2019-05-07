@@ -5,22 +5,29 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles/Header.css">
+
+    <script type="module" src="dist/bundle.js"></script>
+
+    <link rel="stylesheet" href="styles/Header/Header.css">
     <link rel="stylesheet" href="styles/initial.css">
     <link rel="stylesheet" href="styles/common.css">
-    <link rel="stylesheet" href="styles/Header__menu.css">
-    <link rel="stylesheet" href="styles/Header__navigation.css">
-    <link rel="stylesheet" href="styles/Header__logo.css">
-    <link rel="stylesheet" href="styles/Header__search.css">
+    <link rel="stylesheet" href="styles/Header/Header__menu.css">
+    <link rel="stylesheet" href="styles/Header/Header__navigation.css">
+    <link rel="stylesheet" href="styles/Header/Header__logo.css">
+    <link rel="stylesheet" href="styles/Header/Header__search.css">
     <link rel="stylesheet" href="styles/Section-View.css">
     <link rel="stylesheet" href="styles/Layout.css">
-    <link rel="stylesheet" href="styles/Posts.css">
-    <link rel="stylesheet" href="styles/Sidebar.css">
-    <link rel="stylesheet" href="styles/Sidebar__home.css">
-    <link rel="stylesheet" href="styles/Sidebar__premium.css">
-    <link rel="stylesheet" href="styles/Sidebar__channels.css">
+    <link rel="stylesheet" href="styles/Posts/Posts.css">
+    <link rel="stylesheet" href="styles/Posts/Posts__post_header.css">
+    <link rel="stylesheet" href="styles/Posts/Posts__post_actions.css">
+    <link rel="stylesheet" href="styles/Posts/Posts__post_votes.css">
+    <link rel="stylesheet" href="styles/Sidebar/Sidebar.css">
+    <link rel="stylesheet" href="styles/Sidebar/Sidebar__home.css">
+    <link rel="stylesheet" href="styles/Sidebar/Sidebar__premium.css">
+    <link rel="stylesheet" href="styles/Sidebar/Sidebar__channels.css">
     <link rel="stylesheet" href="styles/Footer.css">
     <link rel="stylesheet" href="styles/layouts/flex-layout.css">
+
     <title>reddit: the front page of the internet</title>
 </head>
 <body>
@@ -135,161 +142,7 @@
             </div>
         </section>
 
-        <main class="Posts Layout__posts">
-            <article class="Posts__post">
-                <div class="Posts__post_votes">
-                    <button type="submit" class="Posts__post_votes_up-arrow">
-                    </button>
-                    <p class="Posts__post_votes_number">
-                        10.0k
-                    </p>
-                    <button type="submit" class="Posts__post_votes_down-arrow">
-                    </button>
-                </div>
-                <div class="Posts__post_content">
-                    <header class="Posts__post_header">
-                        <a>
-                            <img class="Posts__post_header_channel-picture" src="images/posts/default-picture.png" alt="channel's picture">
-                        </a>
-                        <a href="" class="Posts__post_header_channel-name">
-                            r/ProgrammerHumor
-                        </a>
-                        <span class="Posts__post_header_dot">•</span>
-                        <div class="Posts__post_header_text">
-                            <span>Posted by</span>
-                            <a href="" aria-label="post's author">u/yehiaserag</a>
-                            <a href="" aria-label="post's date">11 hours ago</a>
-                        </div>
-                    </header>
-                    <h2 class="Posts__post_text">
-                        The arm of cleaning your own ____!
-                    </h2>
-                    <video class="Posts__post_main-content" autoplay loop src="https://external-preview.redd.it/mp4/XEctr-sK2KHCf86ji0r5Cq4hxis2Ccj7pjP6REYFMs4-source.mp4?s=0bc40844788c27aa48ce41aad545900a21731f32">
-                    </video>
-
-                    <footer class="Posts__post_actions">
-                        <a href="" class="Posts__post_actions_action">
-                            <span class="Posts__post_action-icon Posts__post_action-comment"></span>
-                            <span>73 comments</span>
-                        </a>
-                        <button class="Posts__post_actions_action">
-                            <span class="Posts__post_action-icon Posts__post_action-award"></span>
-                            <span>give award</span>
-                        </button>
-                        <div class="Posts__post_actions_action">
-                            <span class="Posts__post_action-icon Posts__post_action-share"></span>
-                            <span>share</span>
-                        </div>
-                        <button class="Posts__post_actions_action">
-                            <span>...</span>
-                        </button>
-                    </footer>
-                </div>
-            </article>
-
-            <article class="Posts__post">
-                <div class="Posts__post_votes">
-                    <button type="submit" class="Posts__post_votes_up-arrow">
-                    </button>
-                    <p class="Posts__post_votes_number">
-                        7.1k
-                    </p>
-                    <button type="submit" class="Posts__post_votes_down-arrow">
-                    </button>
-                </div>
-                <div class="Posts__post_content">
-                    <header class="Posts__post_header">
-                        <a>
-                            <img class="Posts__post_header_channel-picture" src="images/posts/default-picture.png" alt="channel's picture">
-                        </a>
-                        <a href="" class="Posts__post_header_channel-name">
-                            r/trippinthroughtime
-                        </a>
-                        <span class="Posts__post_header_dot">•</span>
-                        <div class="Posts__post_header_text">
-                            <span>Posted by</span>
-                            <a href="" aria-label="post's author">u/iam4real</a>
-                            <a href="" aria-label="post's date">7 hours ago</a>
-                        </div>
-                    </header>
-                    <h2 class="Posts__post_text">
-                        We're in good hands
-                    </h2>
-                    <a href="" class="Posts__post_link">
-                        http://i.imgur.com/FGXTxES.jpg
-                    </a>
-                    <img src="images/posts/femki.jpg" alt="post's image" class="Posts__post_main-content">
-
-                    <footer class="Posts__post_actions">
-                        <a href="" class="Posts__post_actions_action">
-                            <span class="Posts__post_action-icon Posts__post_action-comment"></span>
-                            <span>73 comments</span>
-                        </a>
-                        <button class="Posts__post_actions_action">
-                            <span class="Posts__post_action-icon Posts__post_action-award"></span>
-                            <span>give award</span>
-                        </button>
-                        <div class="Posts__post_actions_action">
-                            <span class="Posts__post_action-icon Posts__post_action-share"></span>
-                            <span>share</span>
-                        </div>
-                        <button class="Posts__post_actions_action">
-                            <span>...</span>
-                        </button>
-                    </footer>
-                </div>
-            </article>
-
-            <article class="Posts__post">
-                <div class="Posts__post_votes">
-                    <button type="submit" class="Posts__post_votes_up-arrow">
-                    </button>
-                    <p class="Posts__post_votes_number">
-                        50.7k
-                    </p>
-                    <button type="submit" class="Posts__post_votes_down-arrow">
-                    </button>
-                </div>
-                <div class="Posts__post_content">
-                    <header class="Posts__post_header">
-                        <a >
-                            <img class="Posts__post_header_channel-picture" src="images/posts/channel_funny.png" alt="channel's picture">
-                        </a>
-                        <a href="" class="Posts__post_header_channel-name">
-                            r/funny
-                        </a>
-                        <span class="Posts__post_header_dot">•</span>
-                        <div class="Posts__post_header_text">
-                            <span>Posted by</span>
-                            <a href="" aria-label="post's author">u/nate8334</a>
-                            <a href="" aria-label="post's date">15 hours ago</a>
-                        </div>
-                    </header>
-                    <h2 class="Posts__post_text">
-                        Well
-                    </h2>
-                    <img src="images/posts/post1.jpg" alt="post's image" class="Posts__post_main-content">
-
-                    <footer class="Posts__post_actions">
-                        <a href="" class="Posts__post_actions_action">
-                            <span class="Posts__post_action-icon Posts__post_action-comment"></span>
-                            <span>948 comments</span>
-                        </a>
-                        <button class="Posts__post_actions_action">
-                            <span class="Posts__post_action-icon Posts__post_action-award"></span>
-                            <span>give award</span>
-                        </button>
-                        <div class="Posts__post_actions_action">
-                            <span class="Posts__post_action-icon Posts__post_action-share"></span>
-                            <span>share</span>
-                        </div>
-                        <button class="Posts__post_actions_action">
-                            <span>...</span>
-                        </button>
-                    </footer>
-                </div>
-            </article>
-        </main>
+        <main class="Posts Layout__posts"></main>
 
         <aside class="Sidebar Layout_sidebar">
             <article class="Sidebar__home">
