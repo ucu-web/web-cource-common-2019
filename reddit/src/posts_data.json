@@ -1,0 +1,26 @@
+[
+  {
+    "votes": "7.1k",
+    "channel" : "r/trippinthroughtime",
+    "channel_image" : "default-picture.png",
+    "author" : "u/iam4real",
+    "time" : "7 hours ago",
+    "text" : "We're in good hands",
+    "content_type" : "img",
+    "content_src" : "images/posts/femki.jpg",
+    "comments_number" : "73"
+  },
+  {
+    "votes": "10k",
+    "channel" : "r/ProgrammerHumor",
+    "channel_image" : "default-picture.png",
+    "author" : "u/yehiaserag",
+    "time" : "11 hours ago",
+    "text" : "The arm of cleaning your own ____!",
+    "content_parameters": "autoplay",
+    "content_type" : "video",
+    "content_src" : "https://external-preview.redd.it/mp4/XEctr-sK2KHCf86ji0r5Cq4hxis2Ccj7pjP6REYFMs4-source.mp4?s=0bc40844788c27aa48ce41aad545900a21731f32",
+    "comments_number" : "73"
+  }
+
+]
