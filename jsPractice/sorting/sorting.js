@@ -119,11 +119,6 @@ function counting_sort(arr){
     return res;
 }
 
-function counting_sort2(arr){
-    return arr.reduce( (acc, v) => (acc[v] = (acc[v] || 0) + 1, acc), [] )
-        .reduce( (acc, n, i) => acc.concat(Array(n).fill(i)), [] );
-}
-
 arr = [1,4,2,5, 3,10,21, 11];
 console.log(counting_sort(arr));
 console.log(arr);
