@@ -8,8 +8,6 @@ const carry = (fn) => function f1(...args) {
 const flip = (fn) => (a, b, ...rest) => fn(b, a, rest);
 const flatten = (arr) => reduce([], (a, b) => (Array.isArray(b)) ? a.concat(flatten(b)) : [...a, b], arr);
 const pipe = (...fns) => val => reduce(val, (a, b) => b(a), fns.reverse());
-
-
 console.log("map test", map([1, 2, 3], x => x + 1));
 console.log("filter test", filter([1, 2, 3], x => x === 1));
 console.log("reduce test", reduce(0, (a, b) => a + b, [1, 2, 4]));
