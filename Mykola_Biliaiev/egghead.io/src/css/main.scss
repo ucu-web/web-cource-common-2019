@@ -1,0 +1,248 @@
+//colors
+$main-dark: #141618;
+$main-padding: 2rem;
+$whitish: hsla(0, 0%, 100%, .6);
+$main-grey: #141618;
+//global
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+}
+
+.website-layout-width {
+  max-width: 83.75rem;
+}
+
+.flex-join {
+  display: flex;
+}
+
+.website-layout-position {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+//nav-bar
+
+.nav-bar {
+  background-color: $main-dark;
+  &__padding-wrapper {
+    padding: 0 $main-padding;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+  }
+  &__wrapper {
+    height: 60px;
+
+  }
+  &__headers {
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+    &-logo {
+      margin-right: 25px;
+    }
+    &-content {
+      padding-left: .5rem;
+      cursor: pointer;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      opacity: 0.9;
+      &-icon {
+        margin-right: .7rem;
+      }
+      &-link {
+        text-transform: none;
+        text-decoration: none;
+        color: hsla(0, 0%, 100%, .9);
+        font-size: 14px;
+        font-family: sans-serif;
+
+        font-weight: 400;
+      }
+    }
+  }
+  &__navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+//course-big-block
+
+.course-big-block {
+  flex: 1;
+  margin-right: 40px;
+  &__wrapper {
+    background-color: #fff;
+    border-radius: 10px;
+  }
+  &__course-header {
+    align-items: center;
+    width: 100%;
+  }
+  &__course-header-wrapper {
+    height: 100px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+  }
+  &__image {
+    width: 100%;
+    max-width: 420px;
+    height: 100%;
+  }
+  &__image-wrapper {
+    max-width: 264px;
+    padding: 20px 0;
+    margin: auto;
+  }
+  &__wrap-content {
+    text-align: center;
+
+  }
+  &__course-overview {
+    flex: 1;
+    box-shadow: 0 5px 30px -15px rgba(0, 0, 0, .2);
+    color: black;
+    //width: 50%;
+  }
+
+}
+
+//course-content-regular
+.course-content-regular {
+  flex: 1;
+  color: black;
+  box-shadow: 0 5px 30px -15px rgba(0, 0, 0, .2);
+  background-color: #fff;
+  border-left: 1px solid #f4f7f9;
+  &__list {
+
+  }
+  &__list-item {
+    padding: 1rem 1rem 1rem 2rem;
+    color: rgba(0, 0, 0, .9);
+    cursor: pointer;
+    font-size: 0.875rem;
+    list-style-type: none;
+  }
+  &__list-item:hover {
+    background-color: #f4f7f9;
+
+  }
+
+}
+
+//.dotted-header
+.dotted-header {
+  justify-content: center;
+  color: $main-grey;
+  opacity: 0.6;
+  font-weight: 400;
+  font-size: 13px;
+  display: flex;
+
+  &__dot {
+    margin-right: .25rem;
+    margin-left: .25rem;
+  }
+
+}
+
+//stats_and_remainders
+
+.stats_and_remainders {
+  background-color: $main-dark;
+  padding: 50px 0;
+  &__wrapper {
+    padding-left: $main-padding;
+    padding-right: $main-padding;
+    color: #fff;
+  }
+}
+
+//stats-block
+
+.stats-block {
+  width: 450px;
+  &__single-stat {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    flex: 1;
+    background-color: #21252d;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__rect-stat {
+    width: 100%;
+    border: none;
+    background-color: #21252d;
+    padding: 10px 5px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+//mini-profile
+
+.mini-profile {
+
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1rem .5rem 1rem;
+  &__content-wrapper {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    &-header {
+      font-size: 15px;
+      font-weight: 400;
+      opacity: 0.7;
+
+    }
+    &-sub_header {
+      font-weight: 400;
+      font-size: 12px;
+      color: rgba(0, 0, 0, .6);
+
+    }
+  }
+
+}
+
+//icon
+
+.icon {
+  display: block;
+  border-radius: 99999px;
+  &--small {
+    width: 35px;
+    height: 35px;
+  }
+
+}
+
+//flex adders
+
+
+
