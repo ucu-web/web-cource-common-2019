@@ -1,4 +1,4 @@
-class Doodle extends HitMap {
+class Doodle extends PhysicalObject {
     linkField (field) {
         const legs = new El("doodle-legs").addChild(
             new Array(4).fill(0).map((v, i) =>

@@ -1,7 +1,9 @@
 let http = require("http");
-let fs = require("fs");
+let fs = require("fs").promises;
+let {last, split} = require("ramda");
+const path = require('path');
 
-const PORT = 3000;
+const [, , PORT = 3000, INITIAL_DIRECTORY = __dirname] = process.argv;
 
 const contentTypes = {
     "html": "text/html",
@@ -11,89 +13,94 @@ const contentTypes = {
     "xml": "application/xml",
 };
 
-const getContentType = (path) => {
-    let contentType = "text/plain";
-    let pathParts = path.split(".");
-    let format = (pathParts.length ? pathParts[pathParts.length - 1] : "").toLowerCase();
+const getContentTypeBasedByFileExtension = (path) => {
+    let extension = last(split(".", path));
 
-    if (contentTypes[format])
-        contentType = contentTypes[format];
-
-    return contentType;
+    return contentTypes[extension] || "text/plain";
 };
 
-const returnError = (path, code, data, res) => {
-    res.writeHead(code, {"Content-Type": contentTypes["html"]});
-    res.end(`<h1> ${code} </h1> <h2> ${data} </h2>`);
-    console.log(`[Server] ${path} - ${code}`);
-};
-
-const returnFile = (path, res) => {
-    fs.readFile(path, (error, data) => {
-        if (error) {
-            returnError(path, 505, "Error retrieving resource", res);
-        } else {
-            res.writeHead(200, {"Content-Type": getContentType(path)});
-            res.end(data);
-            console.log(`[Server] ${path} - 200`);
-        }
-    });
-};
-
-const returnDirectory = (path, res) => {
-    fs.readdir(path, (error, files) => {
-        files = files.map(f => `<a href="${path}${f}"> ${f} </a>`);
-
-        res.writeHead(200, {"Content-Type": contentTypes["html"]});
-        res.end(`<h2> Directory Contents </h2> ${files.join("<br>")}`);
-        console.log(`[Server] ${path} - 200`);
-    });
-};
-
-const handleDirectoryRequest = (path, res) => {
-    if (!path.endsWith("/")) {
-        path = path + "/";
-    }
-
-    // Checks if index.html exists and returns it
-    const index = `${path}index.html`;
-
-    fs.stat(index, (error, indexStats) => {
-        if (!error && indexStats.isFile()) {
-            returnFile(index, res);
-        } else {
-            returnDirectory(path, res);
-        }
-    });
-};
-
-const handleError = (path, error, res) => {
-    if (error.code === "EACCES")
-        returnError(path, 403, "Not permitted", res);
-    else if (error.code === "ENOENT")
-        returnError(path, 404, "Not found", res);
-    else
-        returnError(path, 505, "Error retrieving resource", res);
-};
-
-
-let server = http.createServer((req, res) => {
-    let path = "." + req.url;
-
-    fs.stat(path, (error, stats) => {
-        if (error) {
-            handleError(path, error, res);
-        }
-        else if (stats.isDirectory()) {
-            handleDirectoryRequest(path, res);
-        }
-        else if (stats.isFile()) {
-            returnFile(path, res);
-        }
-    });
-
+const getErrorResponse = (path, code, data) => ({
+    contentType: contentTypes["html"],
+    data: `<h1> ${code} </h1> <h2> ${data} </h2>`,
+    status: code
 });
 
-server.listen(3000, () => {
-    console.log(`[Server] started on port ${PORT}`);
+const getFileResponse = async (relPath) => {
+    try {
+        const data = await fs.readFile(path.join(INITIAL_DIRECTORY, relPath));
+
+        return {
+            contentType: getContentTypeBasedByFileExtension(relPath),
+            data,
+            status: 200
+        };
+    } catch (error) {
+        return getErrorResponse(relPath, 505, "Error retrieving resource");
+    }
+};
+
+const getDirectoryResponse = async (relPath) => {
+    let files = await fs.readdir(path.join(INITIAL_DIRECTORY, relPath));
+
+    files = files.map(fileName => `<a href="${path.join(relPath, fileName)}"> ${fileName} </a>`);
+
+    return {
+        contentType: contentTypes["html"],
+        data: `<h2> Directory Contents </h2> ${files.join("<br>")}`,
+        status: 200
+    }
+};
+
+const handleDirectoryRequest = async (relPath) => {
+    // Checks if index.html exists and returns it
+    const index = path.join(relPath, "index.html");
+    try {
+        const indexStats = await fs.stat(path.join(INITIAL_DIRECTORY, index));
+        if (indexStats.isFile())
+            return getFileResponse(index);
+    } catch(e) {}
+
+    return getDirectoryResponse(relPath);
+};
+
+const handleError = (path, error) => {
+    switch (error.code) {
+        case "EACESS":
+            return getErrorResponse(path, 403, "Not permitted");
+        case "ENOENT":
+            return getErrorResponse(path, 404, "Not found");
+        default:
+            return getErrorResponse(path, 505, "Error retrieving resource");
+    }
+};
+
+let server = http.createServer(async (req, res) => {
+    let relPath = req.url;
+
+    let result;
+
+    try {
+        const stats = await fs.stat(path.join(INITIAL_DIRECTORY, relPath));
+
+        if (stats.isDirectory()) {
+            result = await handleDirectoryRequest(relPath);
+        } else if (stats.isFile()) {
+            result = await getFileResponse(relPath);
+        }
+    } catch (error) {
+        result = await handleError(relPath, error);
+    }
+
+    const {contentType, data, status} = result;
+
+    res.writeHead(status, {"Content-Type": contentType});
+    res.end(data);
+    console.log(`[Server] ${req.url} - ${status}`);
+});
+
+server.listen(PORT, () => {
+    console.log(`[Server] Started
+    \tPort ${PORT}
+    \tDirectory ${INITIAL_DIRECTORY}/
+    \tLink http://localhost:${PORT}`);
 });

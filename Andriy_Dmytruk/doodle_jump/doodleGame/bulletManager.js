@@ -1,4 +1,4 @@
-class Bullet extends HitMap {
+class Bullet extends PhysicalObject {
     linkField(field) {
         this.element = new El("bullet").parent(field.element);
     }

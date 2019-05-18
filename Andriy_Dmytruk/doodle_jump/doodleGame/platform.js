@@ -1,4 +1,4 @@
-class Platform extends HitMap {
+class Platform extends PhysicalObject {
     linkField(field) {
         return this.element =
             new El("platform").dimensions(this.width, this.height).parent(field.element);

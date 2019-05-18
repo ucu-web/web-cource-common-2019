@@ -1,4 +1,4 @@
-class Enemy extends HitMap {
+class Enemy extends PhysicalObject {
     linkField(field, component) {
         this.element = new El("enemy")
             .dimensions(this.width, this.height)

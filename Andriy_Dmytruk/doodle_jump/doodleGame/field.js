@@ -18,7 +18,7 @@ class Field {
     }
 
     translatePosition(object) {
-        if (object instanceof HitMap) {
+        if (object instanceof PhysicalObject) {
             let x = object.pos.x;
             let y = (object.pos.y - this.bottom);
             return [x, y];
