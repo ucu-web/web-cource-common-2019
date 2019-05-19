@@ -4,7 +4,6 @@
   grid-template-areas: ". header ." "larrow  courses rarrow" ". buttons .";
   grid-row-gap: 20px;
   max-width: 1250px;
-  margin: 0 auto;
 }
 .carousel__header {
   grid-area: header;
