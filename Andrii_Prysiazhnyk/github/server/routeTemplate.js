@@ -1,5 +1,5 @@
 const fs = require('fs').promises;
-const {getJson, allFieldsPresent, getLargestId, getRepositoryById, writeResults, numberOfKeys} = require('./common.js');
+const {getJson, allFieldsPresent, getLargestId, getRepositoryById, writeResults, numberOfKeys} = require('./helperFunctions.js');
 
 const getAllRepositories = async (pathToJsonFile, request, response) => {
     try {
@@ -86,3 +86,11 @@ const deleteRepository = async (pathToJsonFile, request, response) => {
         writeResults(response, 500, "Internal server error");
     }
 };
+
+module.exports.getAllRepositories = getAllRepositories;
+module.exports.getOneRepository = getOneRepository;
+module.exports.postRepositoryValidator = postRepositoryValidator;
+module.exports.postRepository = postRepository;
+module.exports.putRepositoryValidator = putRepositoryValidator;
+module.exports.putRepository = putRepository;
+module.exports.deleteRepository = deleteRepository;
