@@ -45,7 +45,7 @@
 
   @provider-logo-size: 55px;
   @provider-logo-padding: 0.5rem;
-  &__provider-logo{
+  &__provider-logo-container{
     position: absolute;
     top: calc(@logo-height - @provider-logo-padding - @provider-logo-size / 2);
     height: @provider-logo-size;
@@ -54,10 +54,10 @@
     border: 1px solid #E1E1E1;
     border-radius: 3px;
     background-color: white;
-    background-image: url(../images/stanford_small_logo.png);
-    background-position: center;
-    background-size: @provider-logo-size @provider-logo-size;
-    background-repeat: no-repeat;
+  }
+  &__provider-logo{
+    width: @provider-logo-size;
+    height: @provider-logo-size;
   }
 
   &:hover{

@@ -6,13 +6,6 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link type="text/css" rel="stylesheet" href="styles/course.css">
-  <link type="text/css" rel="stylesheet" href="styles/carousel.css">
-  <link type="text/css" rel="stylesheet" href="styles/common.css">
-  <link type="text/css" rel="stylesheet" href="styles/offers.css">
-  <link type="text/css" rel="stylesheet" href="styles/feedback.css">
-  <link type="text/css" rel="stylesheet" href="styles/header.css">
-  <link type="text/css" rel="stylesheet" href="styles/footer.css">
 </head>
 <body>
 <header class="header">
@@ -40,51 +33,8 @@
     </a>
   </nav>
 </header>
-<section class="carousel">
-  <h2 class="carousel__header">Trending courses in Math and Logic</h2>
-  <button class="carousel__swap-button carousel__swap-button_left"></button>
-  <div class="carousel__courses-wrapper">
-    <article class="course carousel__course">
-      <a class="course__course-info">
-        <h3 class="course__name">Machine Learning</h3>
-        <span class="course__provider">Stanford University</span>
-        <h4 class="course__type">Course</h4>
-        <span class="course__provider-logo"></span>
-      </a>
-    </article>
-    <article class="course carousel__course">
-      <a class="course__course-info">
-        <h3 class="course__name">Machine Learning</h3>
-        <span class="course__provider">Stanford University</span>
-        <h4 class="course__type">Course</h4>
-        <span class="course__provider-logo"></span>
-      </a>
-    </article>
-    <article class="course carousel__course">
-      <a class="course__course-info">
-        <h3 class="course__name">Machine Learning</h3>
-        <span class="course__provider">Stanford University</span>
-        <h4 class="course__type">Course</h4>
-        <span class="course__provider-logo"></span>
-      </a>
-    </article>
-    <article class="course carousel__course">
-      <a class="course__course-info">
-        <h3 class="course__name">Machine Learning</h3>
-        <span class="course__provider">Stanford University</span>
-        <h4 class="course__type">Course</h4>
-        <span class="course__provider-logo"></span>
-      </a>
-    </article>
-  </div>
-  <button class="carousel__swap-button carousel__swap-button_right"></button>
-  <nav class="carousel__navigation">
-    <button class="carousel__navigation-button carousel__navigation-button_active"></button>
-    <button class="carousel__navigation-button"></button>
-    <button class="carousel__navigation-button"></button>
-  </nav>
-</section>
-<section class="offers">
+<div class="courses-carousel"></div>
+<section class="offers layout__offers">
   <h2 class="offers__header"> What Coursera Has to Offer</h2>
   <dl class="offers__list">
     <dt class="offers__offer-box"><span class="offers__title offers__title_centered">Learning Program</span></dt>
@@ -122,9 +72,9 @@
     </dd>
   </dl>
 </section>
-<figure class="feedback">
+<figure class="feedback layout__feedback">
   <h3 class="visually-hidden">User feedback</h3>
-  <img class="feedback__user-photo" src="images/user-photo.jpg" alt="user-picture">
+  <img class="feedback__user-photo" src="src/images/user-photo.jpg" alt="user-picture">
   <blockquote class="feedback__quote">
     "Coursera gives me a platform to explore new skills. I was able to experience education
     from world-renowned universities without losing out on career opportunities."
@@ -133,7 +83,7 @@
 </figure>
 <footer class="footer">
   <section class="footer__logos">
-    <img src="./images/coursera_logo.svg" alt="coursera-logo">
+    <img src="src/images/coursera_logo.svg" alt="coursera-logo">
     <p class="footer__motto">
       Coursera provides universal access to the world’s best education, partnering with top universities
       and organizations to offer courses online.
@@ -141,9 +91,9 @@
     <small>© 2019 Coursera Inc. All rights reserved.</small>
     <div>
       <a class="footer__apps-link" href="#" aria-label="download-ios-app">
-        <img src="./images/apple_store.svg" alt="apple-store-logo"></a>
+        <img src="src/images/apple_store.svg" alt="apple-store-logo"></a>
       <a class="footer__apps-link" href="#" aria-label="download-android-app">
-        <img src="./images/google_play.svg" alt="google-play-logo"></a>
+        <img src="src/images/google_play.svg" alt="google-play-logo"></a>
     </div>
   </section>
   <nav class="footer__navigation" aria-label="coursera-navigation">
@@ -186,5 +136,6 @@
     <a class="footer__navigation-link" href="#">Affiliates</a>
   </nav>
 </footer>
+<script src="dist/bundle.js"></script>
 </body>
 </html>

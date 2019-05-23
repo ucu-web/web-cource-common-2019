@@ -37,7 +37,7 @@
   font-family: 'OpenSans-Bold', Arial, sans-serif;
   color: hsla(0, 0%, 47%, 0.75);
 }
-.course__provider-logo {
+.course__provider-logo-container {
   position: absolute;
   top: calc(130px - 0.5rem - 55px / 2);
   height: 55px;
@@ -46,10 +46,10 @@
   border: 1px solid #E1E1E1;
   border-radius: 3px;
   background-color: white;
-  background-image: url(../images/stanford_small_logo.png);
-  background-position: center;
-  background-size: 55px 55px;
-  background-repeat: no-repeat;
+}
+.course__provider-logo {
+  width: 55px;
+  height: 55px;
 }
 .course:hover {
   box-shadow: 0 3px 10px rgba(31, 31, 31, 0.16), 0 3px 10px rgba(31, 31, 31, 0.23);
