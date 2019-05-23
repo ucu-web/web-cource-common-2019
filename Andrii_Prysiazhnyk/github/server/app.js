@@ -8,6 +8,7 @@ const PORT = 3000;
 
 app.use(express.json());
 app.use(express.static(path.resolve(__dirname, '../', 'dist')));
+app.use(express.static(path.resolve(__dirname, '../', 'src', 'images')));
 
 app.use('/friendsRepository', friendRepositoryRouter);
 app.use('/recommendedRepository', recommendedRepositoryRouter);

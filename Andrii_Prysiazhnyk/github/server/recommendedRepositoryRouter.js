@@ -4,7 +4,7 @@ const path = require('path');
 const routeTemplate = require('./routeTemplate');
 
 const pathToJsonFile = path.resolve(__dirname, '../', 'src', 'data', 'recommendedRepositories.json');
-const fields = ["repositoryName", "description", "stars", "language", "circleColor"];
+const fields = ["repositoryName", "description", "stars", "language"];
 
 router.get('/', (request, response) => {
     routeTemplate.getAllRepositories(pathToJsonFile, request, response);

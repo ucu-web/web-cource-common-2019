@@ -4,7 +4,7 @@ export const friendsRepository = (data) => {
 
     rootEl.innerHTML = `
                 <a class="News__user-link" href="#">
-                    <img class="News__user-photo" alt="User's photo" src="./src/images/user.jpg">
+                    <img class="News__user-photo" alt="User's photo" src="unknown.jpeg">
                 </a>
                 <div class="News__content">
                     <p class="News__post-info">
@@ -37,6 +37,8 @@ export const friendsRepository = (data) => {
     return rootEl;
 };
 
+const getRandomColor = () => ["blue", "yellow", "orange"][(Math.random() * 3) ^ 0];
+
 export const recommendedRepository = (data) => {
     const rootEl = document.createElement("div");
     rootEl.className = "Sidebar__block";
@@ -50,7 +52,7 @@ export const recommendedRepository = (data) => {
                                 ${data.description}
                             </p>
                             <footer>
-                            <span class="Repository-block__language Repository-block__language--circle Repository-block__language--${data.circleColor}-circle">
+                            <span class="Repository-block__language Repository-block__language--circle Repository-block__language--${getRandomColor()}-circle">
                                 ${data.language}
                             </span>
                                 <span class="Repository-block__subscribers">

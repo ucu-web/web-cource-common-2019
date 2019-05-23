@@ -21,5 +21,5 @@ const render = async (containerClass, path, htmlElementCreator) => {
     data.map(element => container.appendChild(htmlElementCreator(element)));
 };
 
-render(".News-Container", "src/data/friendsRepositories.json", friendsRepository);
-render(".Sidebar__block-container", "src/data/recommendedRepositories.json", recommendedRepository);
+render(".News-Container", "friendsRepository", friendsRepository);
+render(".Sidebar__block-container", "recommendedRepository", recommendedRepository);

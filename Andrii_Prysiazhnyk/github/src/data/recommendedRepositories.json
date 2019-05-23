@@ -4,20 +4,27 @@
     "description": "Prettier is an opinionated code formatter.",
     "stars": 959,
     "language": "Go",
-    "circleColor": "orange"
+    "id": 1
   },
   {
     "repositoryName": "symfony/symfony",
     "description": "The Symfony PHP framework",
     "stars": 1310,
     "language": "CSS",
-    "circleColor": "blue"
+    "id": 2
   },
   {
     "repositoryName": "tesseract-ocr/tesseract",
     "description": "Tesseract Open Source OCR Engine (main repository)",
     "stars": 1470,
     "language": "Go",
-    "circleColor": "yellow"
+    "id": 3
+  },
+  {
+    "repositoryName": "rochacbruno/flask-powered",
+    "description": "List of companies using Flask framework - who is using Flask?",
+    "stars": 360,
+    "language": "JavaScript",
+    "id": 4
   }
 ]
