@@ -1,0 +1,41 @@
+$main-dark: #141618;
+$main-padding: 2rem;
+$whitish: hsla(0, 0%, 100%, .6);
+$main-grey: #141618;
+
+//stats_and_remainders
+
+.stats_and_remainders {
+  background-color: $main-dark;
+  padding: 50px 0;
+  &__wrapper {
+    padding-left: $main-padding;
+    padding-right: $main-padding;
+    color: #fff;
+  }
+}
+
+//stats-block
+
+.stats-block {
+  width: 450px;
+  &__single-stat {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    flex: 1;
+    background-color: #21252d;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__rect-stat {
+    width: 100%;
+    border: none;
+    background-color: #21252d;
+    padding: 10px 5px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+  }
+}

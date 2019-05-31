@@ -1,0 +1,45 @@
+.course_cart {
+  flex: 1;
+  box-shadow: 0 5px 30px -15px rgba(0, 0, 0, .2);
+  height: 500px;
+  color: black;
+
+
+
+  &__wrapper {
+    background-color: #fff;
+    border-radius: 10px;
+  }
+  &__header {
+    align-items: center;
+    width: 100%;
+  }
+  &__header-wrapper {
+    height: 100px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+  }
+  &__image {
+    width: 100%;
+    max-width: 420px;
+    height: 100%;
+  }
+  &__image-wrapper {
+    max-width: 264px;
+    padding: 20px 0;
+    margin: auto;
+  }
+  &__wrap-content {
+    text-align: center;
+
+  }
+  &__course-overview {
+    flex: 1;
+    box-shadow: 0 5px 30px -15px rgba(0, 0, 0, .2);
+    height: 500px;
+    color: black;
+    //width: 50%;
+  }
+
+}

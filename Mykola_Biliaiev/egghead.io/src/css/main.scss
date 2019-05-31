@@ -114,6 +114,7 @@ body {
   &__course-overview {
     flex: 1;
     box-shadow: 0 5px 30px -15px rgba(0, 0, 0, .2);
+    height: 500px;
     color: black;
     //width: 50%;
   }
@@ -126,7 +127,9 @@ body {
   color: black;
   box-shadow: 0 5px 30px -15px rgba(0, 0, 0, .2);
   background-color: #fff;
+  overflow: scroll;
   border-left: 1px solid #f4f7f9;
+  height: 500px;
   &__list {
 
   }
@@ -158,43 +161,6 @@ body {
     margin-left: .25rem;
   }
 
-}
-
-//stats_and_remainders
-
-.stats_and_remainders {
-  background-color: $main-dark;
-  padding: 50px 0;
-  &__wrapper {
-    padding-left: $main-padding;
-    padding-right: $main-padding;
-    color: #fff;
-  }
-}
-
-//stats-block
-
-.stats-block {
-  width: 450px;
-  &__single-stat {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    flex: 1;
-    background-color: #21252d;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
-  &__rect-stat {
-    width: 100%;
-    border: none;
-    background-color: #21252d;
-    padding: 10px 5px;
-    margin-top: 5px;
-    display: flex;
-    justify-content: space-between;
-  }
 }
 
 //mini-profile
@@ -244,5 +210,32 @@ body {
 
 //flex adders
 
+//publications
 
+.publications {
+  background-color: #f4f7f9;
+  &__wrapper {
+    padding-top: 4rem;
 
+    padding-bottom: 2rem;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__button {
+    padding: 16px 24px;
+    border: 1px #316aff;
+    background-color: #316aff;
+    color: #fff;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: .875rem;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+}
