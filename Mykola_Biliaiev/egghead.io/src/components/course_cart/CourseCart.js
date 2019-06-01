@@ -1,8 +1,13 @@
 export const CourseCart = data => {
     const result = document.createElement("div")
-    result.className = "course_cart"
 
+
+    result.className = "course_cart " + (data.space_between_inline ? "course_cart--space_between_inline" : "");
+
+    result.style.width = data.width ? data.width : "100%";
     result.innerHTML = `
+
+<div class="course_cart__shadow">
                         <div class="course_cart__wrapper">
                             <div class="course_cart__image-wrapper">
 
@@ -40,6 +45,7 @@ export const CourseCart = data => {
 
                             </div>
 
+                        </div>
                         </div>
     `
     return result

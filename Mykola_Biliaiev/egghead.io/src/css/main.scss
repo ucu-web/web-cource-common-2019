@@ -168,6 +168,7 @@ body {
 .mini-profile {
 
   align-items: center;
+  background-color: #fff;
   display: flex;
   justify-content: space-between;
   padding: 1rem 1rem .5rem 1rem;
@@ -177,6 +178,7 @@ body {
     display: flex;
   }
   &__content {
+    padding-left: 0.5rem;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -209,33 +211,3 @@ body {
 }
 
 //flex adders
-
-//publications
-
-.publications {
-  background-color: #f4f7f9;
-  &__wrapper {
-    padding-top: 4rem;
-
-    padding-bottom: 2rem;
-  }
-  &__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  &__button {
-    padding: 16px 24px;
-    border: 1px #316aff;
-    background-color: #316aff;
-    color: #fff;
-    text-transform: uppercase;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    font-size: .875rem;
-    border-radius: 5px;
-    box-sizing: border-box;
-  }
-}

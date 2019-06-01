@@ -10,7 +10,7 @@ const course_big_block = (data) => {
     //course-big-block__wrap-content course_cart__wrapper
     course_big_block.innerHTML = `
 
-                    ${CourseCart().outerHTML}
+                    ${CourseCart(data).outerHTML}
 
                     <div class="course-content-regular">
                         <ul class="course-content-regular__list">

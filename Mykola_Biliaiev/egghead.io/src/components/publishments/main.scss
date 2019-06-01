@@ -1,0 +1,29 @@
+
+
+.publications {
+  background-color: #f4f7f9;
+  &__wrapper {
+    padding-top: 4rem;
+
+    padding-bottom: 2rem;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__button {
+    padding: 16px 24px;
+    border: 1px #316aff;
+    background-color: #316aff;
+    color: #fff;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: .875rem;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+}
