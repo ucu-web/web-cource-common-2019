@@ -1,0 +1,31 @@
+.Bezier-Visualization {
+    text-align: center;
+}
+
+.Bezier-Visualization__title {
+    font-size: 45px;
+    font-family: Monospaced, monospace;
+}
+
+.Bezier-Visualization__drawing-field {
+    margin: 0 auto;
+    border: 1px #9a9899 solid;
+}
+
+.Bezier-Visualization__curve {
+    fill: none;
+    stroke: red;
+    stroke-width: 2px;
+}
+
+.Bezier-Visualization__pivots {
+    fill: none;
+    stroke: cornflowerblue;
+    stroke-width: 1px;
+}
+
+.Bezier-Visualization__line {
+    fill: none;
+    stroke: #6a737d;
+    stroke-width: 1px;
+}

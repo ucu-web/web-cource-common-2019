@@ -1,0 +1,17 @@
+{
+  "name": "bezier_curves",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "d3": "^5.9.2",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2"
+  }
+}
