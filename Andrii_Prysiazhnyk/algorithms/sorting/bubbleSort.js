@@ -20,5 +20,5 @@ function bubbleSort(array, comparisonFunction = (a, b) => a > b) {
   return sortedArray;
 }
 
-const a = getRandomArray(10); /*?*/
-bubbleSort(a) /*?*/
+const a = getRandomArray(10);
+bubbleSort(a);

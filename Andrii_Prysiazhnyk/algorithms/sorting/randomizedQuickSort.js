@@ -1,4 +1,4 @@
-import { swap } from "./lib";
+const { swap } = require("./lib");
 function randomizedQuickSort(array, comparisonFunction) {
   randomizedQuickSortWithBoundaries(
     array,

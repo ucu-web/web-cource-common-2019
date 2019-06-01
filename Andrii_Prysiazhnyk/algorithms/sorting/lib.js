@@ -7,7 +7,7 @@ const getRandomInt = (min, max) => {
 const cloneArray = arr => arr.slice();
 
 const getRandomArray = (n, min = 0, max = 100) =>
-  new Array(n).fill().map(() => getRandomInt(min, max));
+  new Array(n).fill(0).map(() => getRandomInt(min, max));
 
 const swap = (array, firstIndex, secondIndex) => {
   const temporary = array[firstIndex];
