@@ -3,14 +3,6 @@ import bem from "../../helpers/bem";
 
 const b = bem("publications");
 const Publishments = (data) => {
-    let test_date = [{width: "33.3%", "space_between_inline": true}, {
-        width: "33.3%",
-        "space_between_inline": true
-    }, {width: "33.3%", "space_between_inline": true}
-        , {width: "25%", "space_between_inline": true}, {
-            width: "25%", "space_between_inline": true
-        }, {width: "25%", "space_between_inline": true},
-        {width: "25%", "space_between_inline": true}];
     const publichments = document.createElement("section");
     publichments.className = `${b()}`;
     publichments.innerHTML = `
@@ -47,7 +39,7 @@ const Publishments = (data) => {
             </div>
         </div>
         <div class="${b("list")} website-layout-width website-layout-position">
-            ${test_date.map(item => CourseCart(item).outerHTML).join("")}
+            ${data.map(item => CourseCart(item).outerHTML).join("")}
         </div>
 `;
     return publichments;

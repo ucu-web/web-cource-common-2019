@@ -3,6 +3,7 @@ import bem from "../../helpers/bem";
 
 const b = bem("cart_list_combination")
 const CartListCombination = (data) => {
+    console.log(data,"DATA")
     const cart_list_combination = document.createElement("div");
     cart_list_combination.className = b();
 

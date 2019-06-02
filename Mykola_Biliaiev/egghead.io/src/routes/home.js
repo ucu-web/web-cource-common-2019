@@ -9,8 +9,8 @@ export const home_route = (app) => {
     const view = [
         {"endpoint": "src/components/stats_and_remainders/data.json", "component": NavBar},
         {"endpoint": "src/components/stats_and_remainders/data.json", "component": StatsAndRemainders},
-        {"endpoint": "src/components/stats_and_remainders/data.json", "component": Publishments},
-        {"endpoint": "src/components/cart_lists_combination/data.json", "component": CartListCombination}
+        {"endpoint": "/api/new_content", "component": Publishments},
+        {"endpoint": "/api/list_courses", "component": CartListCombination}
     ];
     view.map(data => fetch_and_add(app, data.endpoint, data.component));
 };
