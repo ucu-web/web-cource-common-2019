@@ -20,12 +20,12 @@
 
 .Bezier-Visualization__pivots {
     fill: none;
-    stroke: cornflowerblue;
+    stroke: #1556D3;
     stroke-width: 1px;
 }
 
-.Bezier-Visualization__line {
+.Bezier-Visualization__stationary-line {
     fill: none;
-    stroke: #6a737d;
+    stroke: #c6cbd1;
     stroke-width: 1px;
 }
