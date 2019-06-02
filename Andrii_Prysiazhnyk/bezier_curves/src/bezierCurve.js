@@ -9,12 +9,23 @@ const renderBezierCurve = (points, container) => {
         .transition()
         .duration(points.length * 1000)
         .attrTween("d", () => (t) => line(path.slice(0, Math.ceil(path.length * t))));
+
+    renderLeadingPoint(points, path, container);
 };
 
+const renderLeadingPoint = (points, path, container)  => container.select(".Bezier-Visualization__leading-point")
+    .attr("r", 3)
+    .attr("cx", path[0][0])
+    .attr("cy", path[0][1])
+    .transition()
+    .duration(points.length * 1000)
+    .attrTween("cx", () => (t) => path[Math.ceil((path.length - 1) * t)][0])
+    .attrTween("cy", () => (t) => path[Math.ceil((path.length - 1) * t)][1]);
+
 const bezierPath = (points) =>
-    new Array(points.length * 200)
+    new Array(points.length * 150)
         .fill(0)
-        .map((_, i) => getPointOnBezierCurve(points, i / (points.length * 200)));
+        .map((_, i) => getPointOnBezierCurve(points, i / (points.length * 150)));
 
 const getPointOnBezierCurve = (points, t) => {
     return points

@@ -1,31 +1,37 @@
-.Bezier-Visualization {
-    text-align: center;
-}
+$curve_color: red;
 
-.Bezier-Visualization__title {
+.Bezier-Visualization {
+  text-align: center;
+
+  &__title {
     font-size: 45px;
     font-family: Monospaced, monospace;
-}
+  }
 
-.Bezier-Visualization__drawing-field {
+  &__drawing-field {
     margin: 0 auto;
     border: 1px #9a9899 solid;
-}
+  }
 
-.Bezier-Visualization__curve {
+  &__curve {
     fill: none;
-    stroke: red;
+    stroke: $curve_color;
     stroke-width: 2px;
-}
+  }
 
-.Bezier-Visualization__pivots {
+  &__pivots {
     fill: none;
-    stroke: #1556D3;
+    stroke: #065580;
     stroke-width: 1px;
-}
+  }
 
-.Bezier-Visualization__stationary-line {
+  &__stationary-line {
     fill: none;
     stroke: #c6cbd1;
     stroke-width: 1px;
+  }
+
+  &__leading-point {
+    fill: $curve_color;
+  }
 }
