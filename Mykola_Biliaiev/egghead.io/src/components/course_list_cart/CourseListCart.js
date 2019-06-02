@@ -1,20 +1,21 @@
 import {clock, green_flag, mark} from "./icons/icons";
-
+import bem from "../../helpers/bem";
+const b = bem("course-list-cart")
 const CourseListsCart = (data) => {
     const course_list_cart = document.createElement("div");
     course_list_cart.className = "course-list-cart";
 
     course_list_cart.innerHTML = `
     
-    <div class="course-list-cart__wrapper">
-    <div class="course-list-cart__description">
+    <div class="${b("wrapper")}">
+    <div class="${b("description")}">
     
-    <div class="course-list-cart__icon-wrapper">
+    <div class="${b("icon-wrapper")}">
         ${green_flag}
     </div>
     
-    <div class="course-list-cart__title-author">
-        <h1 class="course-list-cart__header">Setup up some stuff</h1>
+    <div class="${b("title-author")}">
+        <h1 class="${b("header")}">Setup up some stuff</h1>
     
     <div class="profile-minimal">
             <a class="profile-minimal__author">Alan Show</a> 
@@ -25,9 +26,9 @@ const CourseListsCart = (data) => {
     </div>
 
 
-<div class="course-list-cart__time_script">
-    <div class="course-list-cart__icon-text-share">${clock} 1:17</div>
-    <div class="course-list-cart__icon-text-share">${mark} javascript</div>
+<div class="${b("time_script")}">
+    <div class="${b("icon-text-share")}">${clock} 1:17</div>
+    <div class="${b("icon-text-share")}">${mark} javascript</div>
 </div>
     
     </div>

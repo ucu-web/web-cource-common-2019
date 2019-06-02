@@ -1,12 +1,14 @@
 import CourseListsCart from "../course_list_cart/CourseListCart";
+import bem from "../../helpers/bem";
 
+const b = bem("cart_list_combination")
 const CartListCombination = (data) => {
     const cart_list_combination = document.createElement("div");
-    cart_list_combination.className = "cart_list_combination";
+    cart_list_combination.className = b();
 
     cart_list_combination.innerHTML = `
-    <div class="cart_list_combination__wrapper website-layout-width">
-    <div class="cart_list_combination__padding">
+    <div class="${b('wrapper')} website-layout-width">
+    <div class="${b('padding')}">
     ${data.map(item =>
         CourseListsCart(item).outerHTML
     ).join("")}

@@ -1,12 +1,15 @@
+import bem from "../../helpers/bem";
+
+const b = bem("nav-bar");
 const nav_bar = (data) => {
     const nav_bar = document.createElement("nav");
-    nav_bar.className = "nav-bar";
+    nav_bar.className = `${b()}`;
 
     nav_bar.innerHTML = `
-    <div class="nav-bar__wrapper website-layout-width website-layout-position">
-    <div class="nav-bar__padding-wrapper">
-    <div class="nav-bar__headers">
-    <svg class="nav-bar__headers-logo" width="136" height="34" viewBox="0 0 136 34"
+    <div class="${b("wrapper")} website-layout-width website-layout-position">
+    <div class="${b("padding-wrapper")}">
+    <div class="${b("headers")}">
+    <svg class="${b("headers-logo")}" width="136" height="34" viewBox="0 0 136 34"
 xmlns="http://www.w3.org/2000/svg"><title>
     egghead-logo-white</title>
     <g fill="none">
@@ -37,10 +40,10 @@ d="M47.765,20.49 C47.635,20.947 47.43,21.381 47.16,21.773 C46.884,22.178 46.544,
     </g>
     </svg>
 
-    <div class="nav-bar__headers-content">
+    <div class="${b("headers-content")}">
     <svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="1em" width="1em"
 viewBox="0 0 21 19"
-class="nav-bar__headers-content-icon" aria-label="icon"
+class="{${b("headers")}-content-icon" aria-label="icon"
 style="color:hsla(0,0%,100%,.9);vertical-align:middle">
     <g>
     <g id="⚙️-Site-Navigation" stroke="none" stroke-width="1" fill-rule="evenodd">
@@ -62,13 +65,13 @@ id="Shape"></path>
     </g>
     </g>
     </svg>
-    <a class="nav-bar__headers-content-link" href="#">Learn to Code</a>
+    <a class="${b("headers-content-link")}" href="#">Learn to Code</a>
 </div>
 
 </div>
 
 
-<div class="nav-bar__navigation">
+<div class="${b("navigation")}">
 
 
     <form action="">

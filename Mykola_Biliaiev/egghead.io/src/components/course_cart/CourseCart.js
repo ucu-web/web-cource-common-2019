@@ -1,17 +1,20 @@
+import bem from "../../helpers/bem";
+
+const b = bem("course_cart")
 export const CourseCart = data => {
     const result = document.createElement("div")
 
 
-    result.className = "course_cart " + (data.space_between_inline ? "course_cart--space_between_inline" : "");
+    result.className = b() + (data.space_between_inline ? ` ${b(["space_between_inline"])}` : "");
 
     result.style.width = data.width ? data.width : "100%";
     result.innerHTML = `
 
-<div class="course_cart__shadow">
-                        <div class="course_cart__wrapper">
-                            <div class="course_cart__image-wrapper">
+        <div class="${b("shadow")}">
+                       <div class="${b("wrapper")}">
+                            <div class="${b("image-wrapper")}">
 
-                                <img class="course_cart__image" src="src/images/react-big-img.png" alt="">
+                                <img class="${b("image")}" src="src/images/react-big-img.png" alt="">
 
                             </div>
 
@@ -19,8 +22,8 @@ export const CourseCart = data => {
                                 <span>COURSE </span><span class="dotted-header__dot">•</span><span> REACT</span>
                             </div>
 
-                            <div class="course_cart__header-wrapper">
-                                <h3 class="course_cart__header">Test React With Enzum and JEST</h3>
+                            <div class="${b("header-wrapper")}">
+                                <h3 class="${b("header")}">Test React With Enzum and JEST</h3>
                             </div>
 
                         </div>

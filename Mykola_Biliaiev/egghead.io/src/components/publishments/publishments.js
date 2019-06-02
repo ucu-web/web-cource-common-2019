@@ -1,5 +1,7 @@
 import {CourseCart} from "../course_cart/CourseCart";
+import bem from "../../helpers/bem";
 
+const b = bem("publications");
 const Publishments = (data) => {
     let test_date = [{width: "33.3%", "space_between_inline": true}, {
         width: "33.3%",
@@ -10,9 +12,9 @@ const Publishments = (data) => {
         }, {width: "25%", "space_between_inline": true},
         {width: "25%", "space_between_inline": true}];
     const publichments = document.createElement("section");
-    publichments.className = "publications";
+    publichments.className = `${b()}`;
     publichments.innerHTML = `
-        <div class="publications__wrapper website-layout-width website-layout-position">
+        <div class="${b("wrapper")} website-layout-width website-layout-position">
             <div class="publications__header">
                 <div class="publications__header-label">
                     <h2>
@@ -44,7 +46,7 @@ const Publishments = (data) => {
                 </button>
             </div>
         </div>
-        <div class="publications_list website-layout-width website-layout-position">
+        <div class="${b("list")} website-layout-width website-layout-position">
             ${test_date.map(item => CourseCart(item).outerHTML).join("")}
         </div>
 `;

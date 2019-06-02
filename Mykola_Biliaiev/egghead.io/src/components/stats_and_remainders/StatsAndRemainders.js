@@ -1,5 +1,7 @@
 import course_big_block from "../course_big_block";
+import bem from "../../helpers/bem";
 
+const b = bem("stats_and_remainders");
 
 const StatsAndRemainders = data => {
 
@@ -8,13 +10,13 @@ const StatsAndRemainders = data => {
     stats_and_remainders.className = "stats_and_remainders";
 
     stats_and_remainders.innerHTML = `
-        <div class="stats_and_remainders__wrapper flex-join website-layout-width website-layout-positionwebsite-layout-width website-layout-position">
+        <div class="${b("wrapper )")} flex-join website-layout-width website-layout-position">
             <div class="course-big-block">
-                <h2 class="stats_and_remainders__header">CONTINUE WATCHING</h2>
+                <h2 class="${b("header)")} ">CONTINUE WATCHING</h2>
                 ${course_big_block(data).outerHTML}
             </div>
             <div class="stats-block">
-                <h2 class="stats_and_remainders__header">STATS</h2>
+                <h2 class="${b("header)")} ">STATS</h2>
                 <div class="stats-block-wrapper">
 
                     <div class="flex-join">
