@@ -2,11 +2,16 @@ import StatsAndRemainders from "../components/stats_and_remainders";
 import NavBar from "../components/nav_bar/NavBar";
 import {fetch_and_add} from "../helpers/fetch_and_add";
 import Publishments from "../components/publishments/";
+import CourseListsCart from "../components/course_list_cart/";
+import CartListCombination from "../components/cart_lists_combination/";
 
 export const home_route = (app) => {
-    const view = [{"endpoint": "src/components/stats_and_remainders/data.json", "component": NavBar},
+    const view = [
+        {"endpoint": "src/components/stats_and_remainders/data.json", "component": NavBar},
         {"endpoint": "src/components/stats_and_remainders/data.json", "component": StatsAndRemainders},
-        {"endpoint": "src/components/stats_and_remainders/data.json", "component": Publishments}];
+        {"endpoint": "src/components/stats_and_remainders/data.json", "component": Publishments},
+        {"endpoint": "src/components/cart_lists_combination/data.json", "component": CartListCombination}
+    ];
     view.map(data => fetch_and_add(app, data.endpoint, data.component));
 };
 

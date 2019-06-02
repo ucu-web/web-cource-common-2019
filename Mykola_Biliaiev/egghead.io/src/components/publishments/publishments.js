@@ -44,7 +44,7 @@ const Publishments = (data) => {
                 </button>
             </div>
         </div>
-        <div class="publications_list">
+        <div class="publications_list website-layout-width website-layout-position">
             ${test_date.map(item => CourseCart(item).outerHTML).join("")}
         </div>
 `;
