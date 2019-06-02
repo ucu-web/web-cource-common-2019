@@ -15,7 +15,7 @@ const CourseListsCart = (data) => {
     </div>
     
     <div class="${b("title-author")}">
-        <h1 class="${b("header")}">Setup up some stuff</h1>
+        <h1 class="${b("header")}">${data.courseName}</h1>
     
     <div class="profile-minimal">
             <a class="profile-minimal__author">Alan Show</a> 

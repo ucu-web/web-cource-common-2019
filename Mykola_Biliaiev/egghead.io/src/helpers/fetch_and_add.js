@@ -1,13 +1,14 @@
 export const fetch_and_add = (app, endpoint, component) => {
     const tmp = document.createElement("div");
-    app.appendChild(tmp);
+    // app.appendChild(tmp);
 
     fetch(endpoint).then(res => res.json()).then(
         res => {
-            setOuter(tmp, component(res).outerHTML);
+            app.appendChild(component(res));
+            // setOuter(tmp, component(res).outerHTML);
         }
     ).catch(err => {
-        tmp.outerHTML = `error `
+        // tmp.outerHTML = `error `
     });
 };
 
