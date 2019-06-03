@@ -16,12 +16,11 @@ $curve_color: red;
   &__curve {
     fill: none;
     stroke: $curve_color;
-    stroke-width: 2px;
+    stroke-width: 4px;
   }
 
   &__pivots {
     fill: none;
-    stroke: #065580;
     stroke-width: 1px;
   }
 

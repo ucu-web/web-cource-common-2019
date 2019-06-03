@@ -2,6 +2,8 @@ import "./styles/Bezier-Visualization.scss"
 
 const d3 = require("d3");
 const {renderBezierCurve} = require("./bezierCurve.js");
+const {renderPivotLines} = require("./pivotsLine");
+
 
 const renderPoint = (point, container) =>
     container
@@ -9,14 +11,6 @@ const renderPoint = (point, container) =>
         .attr("cx", point[0])
         .attr("cy", point[1])
         .attr("r", 5);
-
-const renderPivotsLine = (points, container) =>
-    container.select(".Bezier-Visualization__pivots")
-        .attr("d", d3.line()(points.slice(0, -1)))
-        .interrupt()
-        .transition()
-        .duration(points.length * 1000)
-        .attr("d", d3.line()(points.slice(1)));
 
 const renderStationaryLine = (points, container) => container.select(".Bezier-Visualization__stationary-line")
     .attr("d", d3.line()(points));
@@ -30,7 +24,6 @@ const start = () => {
         .attr("height", height);
 
     field.append("path").attr("class", "Bezier-Visualization__curve");
-    field.append("path").attr("class", "Bezier-Visualization__pivots");
     field.append("path").attr("class", "Bezier-Visualization__stationary-line");
     field.append("circle").attr("class", "Bezier-Visualization__leading-point");
 
@@ -40,10 +33,12 @@ const start = () => {
 
         points.push(newPoint);
 
+        if (points.length > 2)
+            renderPivotLines(points, field);
+
         if (points.length > 1) {
             renderStationaryLine(points, field);
             renderBezierCurve(points, field);
-            renderPivotsLine(points, field);
         }
     });
 };

@@ -14,7 +14,7 @@ const renderBezierCurve = (points, container) => {
 };
 
 const renderLeadingPoint = (points, path, container)  => container.select(".Bezier-Visualization__leading-point")
-    .attr("r", 3)
+    .attr("r", 4)
     .attr("cx", path[0][0])
     .attr("cy", path[0][1])
     .transition()
