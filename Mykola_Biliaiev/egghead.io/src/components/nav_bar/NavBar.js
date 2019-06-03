@@ -1,4 +1,5 @@
 import bem from "../../helpers/bem";
+import {search_icon} from "./icons";
 
 const b = bem("nav-bar");
 const nav_bar = (data) => {
@@ -74,21 +75,23 @@ id="Shape"></path>
 <div class="${b("navigation")}">
 
 
-    <form action="">
-    <input type="text">
-    <button type="submit"></button>
+    <form class="${b("form")}" action="">
+        <input class="${b("input")}" placeholder="Search ..." type="text">
+        
+        <button class="${b("form-button")}" type="submit">${search_icon}</button>
     </form>
-    <button>
-    Feedback
-    </button>
-    <button>
+        <button class="${b("feadback-button")}">
+            Feedback
+        </button>
+        
+    <button class="${b("profile")}">
     Mykhailo
-    <img src="" alt="">
+    <img class="${b("profile-avatar")}" src="src/images/headhock.png" alt="">
     </button>
     </div>
     </div>
     </div>
-`
+`;
     return nav_bar;
 };
 export default nav_bar;

@@ -1,4 +1,4 @@
-import NavBar from "../components/nav_bar/NavBar";
+import NavBar from "../components/nav_bar/";
 import {fetch_and_add} from "../helpers/fetch_and_add";
 import Registration from "../auth/registration/Registration";
 

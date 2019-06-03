@@ -42,13 +42,13 @@ exports.Course = mongoose.model("Course", courseSchema);
 //     console.log(err, res)
 // })
 
-exports.Course.insertMany({
-
-    courseName: "ract",
-    courseTech: "react",
-    courseAuthor: 4,
-    courseDescription: "testing",
-    author: "5cf3c54d3ab0c440e1d48a68"
-}, (err, res) => {
-    console.log(err, res)
-})
+// exports.Course.insertMany({
+//
+//     courseName: "ract",
+//     courseTech: "react",
+//     courseAuthor: 4,
+//     courseDescription: "testing",
+//     author: "5cf3c54d3ab0c440e1d48a68"
+// }, (err, res) => {
+//     console.log(err, res)
+// })

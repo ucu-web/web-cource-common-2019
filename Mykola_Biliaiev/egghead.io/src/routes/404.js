@@ -1,9 +1,5 @@
-import StatsAndRemainders from "../components/stats_and_remainders";
-import NavBar from "../components/nav_bar/NavBar";
+import NavBar from "../components/nav_bar/";
 import {fetch_and_add} from "../helpers/fetch_and_add";
-import Publishments from "../components/publishments/";
-import CourseListsCart from "../components/course_list_cart/";
-import CartListCombination from "../components/cart_lists_combination/";
 
 export const f_0_f_route = (app) => {
     const view = [

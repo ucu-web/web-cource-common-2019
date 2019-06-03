@@ -6,8 +6,8 @@ const handle_registration = (e) => {
 };
 
 const create_input_label = (label) => {
-    const input = document.createElement("input");
-    const label = document.createElement("label");
+    // const input = document.createElement("input");
+    // const label = document.createElement("label");
 };
 const registration = (data) => {
 
