@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack --watch",
-    "start": "webpack-dev-server"
+    "start": "webpack;node ./backend/node_express/server.js"
   },
   "keywords": [],
   "author": "",

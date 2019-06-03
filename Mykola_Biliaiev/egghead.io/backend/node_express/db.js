@@ -1,4 +1,4 @@
-const uri = "mongodb://127.0.0.1:27017/posts";
+const uri = "mongodb://mongo:27017/docker-node-mongo";
 
 const mongoose = require("mongoose")
 mongoose.connect(uri);
@@ -7,7 +7,7 @@ let db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'connection error'));
 db.once('open', () => {
-    console.log("succses")
+    console.log("connected")
 })
 
 let userSchema = mongoose.Schema({

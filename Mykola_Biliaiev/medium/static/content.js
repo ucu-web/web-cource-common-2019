@@ -45,4 +45,4 @@ export const article_creator = function () {
 `;
     return article;
 
-}
+};

@@ -31,7 +31,7 @@ main_router.post('/login', (req, res) => {
         const token = jwt.sign({
             username: user.name,
 
-        }, key , {expiresIn: "3 hours"})
+        }, key , {expiresIn: "3 hours"});
 
         res
             .status(200)
