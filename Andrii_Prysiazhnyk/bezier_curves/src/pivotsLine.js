@@ -1,6 +1,5 @@
-const d3 = require("d3");
-const {multiplyPointByScalar, addPoints} = require("./myMath.js");
-
+import {line} from "d3";
+import {multiplyPointByScalar, addPoints} from "./myMath"
 
 const getPivotLine = (points, t) => {
     const pivotPoints = points.slice(0, -1);
@@ -22,21 +21,24 @@ const getPivotLines = (points, pathLength) => {
 const colors = ["blueviolet", "springgreen", "lawngreen", "blue", "yellow", "green", "orangered", "deeppink", "orange"];
 const endColor = "#bfbfbf";
 
-const renderPivotLines = (points, container) => {
-    container.append("path").attr("class", "Bezier-Visualization__pivots");
+export const renderPivotLines = (points, container) => {
+    if (points.length > 2) {
+        container.selectAll(".Bezier-Visualization__pivots").remove();
 
-    const pathLength = points.length * 300;
-    const paths = getPivotLines(points, pathLength);
+        const pathLength = points.length * 300;
+        const paths = getPivotLines(points, pathLength);
 
-    container.selectAll(".Bezier-Visualization__pivots")
-        .data(paths)
-        .attr("d", (d) => d3.line()(d[0]))
-        .attr("stroke", (d, i) => colors[i % colors.length])
-        .interrupt()
-        .transition()
-        .duration(points.length * 1000)
-        .attrTween("d", (d) => (t) => d3.line()(d[(Math.ceil((pathLength - 1) * t))]))
-        .attrTween("stroke", (d, i) => (t) => t === 1 ? endColor : colors[i % colors.length]);
+        container.selectAll(".Bezier-Visualization__pivots").data(paths).enter().append("path")
+            .attr("class", "Bezier-Visualization__pivots");
+
+        container.selectAll(".Bezier-Visualization__pivots")
+            .data(paths)
+            .attr("d", (d) => line()(d[0]))
+            .attr("stroke", (d, i) => colors[i % colors.length])
+            .interrupt()
+            .transition()
+            .duration(points.length * 1000)
+            .attrTween("d", (d) => (t) => line()(d[(Math.ceil((pathLength - 1) * t))]))
+            .attrTween("stroke", (d, i) => (t) => t === 1 ? endColor : colors[i % colors.length]);
+    }
 };
-
-module.exports.renderPivotLines = renderPivotLines;
