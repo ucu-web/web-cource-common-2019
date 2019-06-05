@@ -7,7 +7,7 @@ export const generateCourse = (data) => {
         <span class="course__provider">${data.organization}</span>
         <h4 class="course__type">${data.type}</h4>
         <span class="course__provider-logo-container">
-          <img class="course__provider-logo" src="./src/images/stanford_small_logo.png" alt="Course organizer logo">
+          <img class="course__provider-logo" src="./static/images/stanford_small_logo.png" alt="Course organizer logo">
         </span>
     </a>
     `;

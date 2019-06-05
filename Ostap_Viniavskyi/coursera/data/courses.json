@@ -1,0 +1,94 @@
+[
+  {
+    "name": "Trending courses in Math and Logic",
+    "courses": [
+      {
+        "name": "Machine Learning",
+        "organization": "Stanford University",
+        "type": "course"
+      },
+      {
+        "name": "Data Science",
+        "organization": "Stanford University",
+        "type": "course"
+      },
+      {
+        "name": "Algorithms",
+        "organization": "Stanford University",
+        "type": "course"
+      },
+      {
+        "name": "OOP",
+        "organization": "Stanford University",
+        "type": "course"
+      },
+      {
+        "name": "Deep Learning",
+        "organization": "Stanford University",
+        "type": "specialization"
+      },
+      {}
+    ]
+  },
+  {
+    "name": "Trending courses in Math and Logic",
+    "courses": [
+      {
+        "name": "Machine Learning",
+        "organization": "Stanford University",
+        "type": "course"
+      },
+      {
+        "name": "Data Science",
+        "organization": "Stanford University",
+        "type": "course"
+      },
+      {
+        "name": "Algorithms",
+        "organization": "Stanford University",
+        "type": "course"
+      },
+      {
+        "name": "OOP",
+        "organization": "Stanford University",
+        "type": "course"
+      },
+      {
+        "name": "Deep Learning",
+        "organization": "Stanford University",
+        "type": "specialization"
+      },
+      {}
+    ]
+  },
+  {
+    "name": "Trending courses in Math and Logic",
+    "courses": [
+      {
+        "name": "Machine Learning",
+        "organization": "Stanford University",
+        "type": "course"
+      },
+      {
+        "name": "Data Science",
+        "organization": "Stanford University",
+        "type": "course"
+      },
+      {
+        "name": "Algorithms",
+        "organization": "Stanford University",
+        "type": "course"
+      },
+      {
+        "name": "OOP",
+        "organization": "Stanford University",
+        "type": "course"
+      },
+      {
+        "name": "Deep Learning",
+        "organization": "Stanford University",
+        "type": "specialization"
+      }
+    ]
+  }
+]
