@@ -11,8 +11,10 @@ class Dino{
         this.runCount = -5;
         this.size = 50;
         this.img = new Image();
+        this.jump_sound = new Sound("https://raw.githubusercontent.com/vicboma1/T-Rex-Game/master/Unity/Sounds/jump.mp3");
     }
     update(){
+        this.new_pos();
         let ctx = game_area.context;
         if (this.duck && this.posY === 0) {
             if (this.runCount < 0) {
@@ -51,7 +53,6 @@ class Dino{
         this.duck = isDucking;
     }
 
-
     new_pos(){
         this.posY += this.velY;
         if (this.posY > 0) {
@@ -67,6 +68,7 @@ class Dino{
             this.gravity = 1.2;
             this.velY = 16;
             this.duck = false;
+            this.jump_sound.play();
         }
     }
     crashWith(otherobj) {

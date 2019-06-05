@@ -22,7 +22,8 @@ class Obstacle{
         this.x = x - this.width;
         this.y = y - this.height;
     }
-    update(){
+    update(y){
+        this.new_pos(y);
         let ctx = game_area.context;
         ctx.drawImage(this.img, this.x, this.y, this.width, this.height);
     }
