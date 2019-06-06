@@ -1,6 +1,12 @@
+import PhysicalObject from "./PhysicalObject";
+import Element from "../Element/Element";
+import {Enemy} from "./Enemy";
+
+import "./styles/Bullet.scss";
+
 class Bullet extends PhysicalObject {
     linkField(field) {
-        this.element = new El("bullet").parent(field.element);
+        this.element = new Element("bullet").parent(field.element);
     }
 
     constructor(field, x, y) {
@@ -21,7 +27,7 @@ class Bullet extends PhysicalObject {
 }
 
 
-class BulletManager {
+export default class BulletManager {
     addListeners() {
         const shootUp = (e) => {
             if (e.key === " ") this.shoot(0);

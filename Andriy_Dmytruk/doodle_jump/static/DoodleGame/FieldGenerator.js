@@ -1,4 +1,38 @@
-class FieldGenerator {
+import Field from "./Field";
+import {
+    BreakingPlatform,
+    Platform,
+    PlatformDestructing, PlatformDisappearing,
+    PlatformHorizontal,
+    PlatformVertical,
+    StaticPlatform
+} from "./Platform";
+import {Enemy, EnemyCircle} from "./Enemy";
+
+const TYPES = [
+    [[StaticPlatform, 1]],
+    [[PlatformHorizontal, 1]],
+    [[PlatformVertical, 1]],
+    [[PlatformDisappearing, 1]],
+    [[PlatformDestructing, 1]],
+    [[PlatformDestructing, 2]],
+    [[PlatformDisappearing, 0.5], [PlatformDestructing, 0.5]],
+    [[StaticPlatform, 0.7], [PlatformHorizontal, 0.3]],
+    [[PlatformDisappearing, 2], [BreakingPlatform, 3]],
+    [[StaticPlatform, 2]],
+    [[StaticPlatform, 0.5], [PlatformDestructing, 0.5]],
+    [[StaticPlatform, 0.7], [PlatformVertical, 0.2]],
+    [[PlatformHorizontal, 2]],
+    [[PlatformHorizontal, 1], [PlatformVertical, 1]],
+    [[PlatformHorizontal, 0.4], [PlatformVertical, 0.4], [PlatformDestructing, 0.2]],
+    [[PlatformDisappearing, 4]]
+];
+
+const ENEMY_TYPES = [
+    [EnemyCircle, 1]
+];
+
+export default class FieldGenerator {
     constructor(field) {
         if (!field instanceof Field) throw new Error("field should be of class Field");
 
@@ -6,6 +40,10 @@ class FieldGenerator {
         this.blockSize = 1440;
         this.generateNext = this.blockSize * 2;
         this.lastBlockTop = 0;
+
+        // Should be able to jump through the block
+        this.maxVerticalDistance = 180.5;
+        this.minPlayableTimeout = 3.5;
 
         this.isValidPlatform = this.isValidPlatform.bind(this);
     }
@@ -30,9 +68,6 @@ class FieldGenerator {
         this.field.enemies = this.field.enemies.filter(valid);
     }
 
-    // Should be able to jump through the block
-    maxVerticalDistance = 180.5;
-    minPlayableTimeout = 3.5;
     isValidPlatform (p) {
         return !(p instanceof BreakingPlatform || p instanceof PlatformDestructing) ||
         (p instanceof PlatformDestructing && p.timeout >= this.minPlayableTimeout);
@@ -49,7 +84,7 @@ class FieldGenerator {
     }
 
     generateBlock() {
-        const blockTypes = this.TYPES[Math.floor(Math.random() * this.TYPES.length)];
+        const blockTypes = TYPES[Math.floor(Math.random() * TYPES.length)];
         let platforms = this.generateBlockOfType(blockTypes);
         platforms = platforms.concat(this.generateBreakablePlatforms());
         platforms = this.makeSolvable(platforms);
@@ -144,25 +179,6 @@ class FieldGenerator {
         return [...platforms, ...newPlatforms];
     }
 
-    TYPES = [
-        [[StaticPlatform, 1]],
-        [[PlatformHorizontal, 1]],
-        [[PlatformVertical, 1]],
-        [[PlatformDisappearing, 1]],
-        [[PlatformDestructing, 1]],
-        [[PlatformDestructing, 2]],
-        [[PlatformDisappearing, 0.5], [PlatformDestructing, 0.5]],
-        [[StaticPlatform, 0.7], [PlatformHorizontal, 0.3]],
-        [[PlatformDisappearing, 2], [BreakingPlatform, 3]],
-        [[StaticPlatform, 2]],
-        [[StaticPlatform, 0.5], [PlatformDestructing, 0.5]],
-        [[StaticPlatform, 0.7], [PlatformVertical, 0.2]],
-        [[PlatformHorizontal, 2]],
-        [[PlatformHorizontal, 1], [PlatformVertical, 1]],
-        [[PlatformHorizontal, 0.4], [PlatformVertical, 0.4], [PlatformDestructing, 0.2]],
-        [[PlatformDisappearing, 4]]
-    ];
-
     generateBlockOfType(types) {
         const level = this.getLevel();
         const number = Math.ceil((this.blockSize / 100) * level);
@@ -196,10 +212,6 @@ class FieldGenerator {
         return platforms;
     }
 
-    ENEMY_TYPES = [
-        [EnemyCircle, 1]
-    ];
-
     generateEnemies() {
         const probability = 0.8;
         const createEnemy = (Type) => {
@@ -211,8 +223,8 @@ class FieldGenerator {
 
         let create = Math.random() < probability;
         if (create) {
-            let type = Math.random() / this.ENEMY_TYPES.reduce((a, b) => a + b[1], 0);
-            let Type = this.ENEMY_TYPES.reduce((a, b) => a instanceof Enemy ? a : a + b[1] >= type ? b[0] : a + b[0], 0);
+            let type = Math.random() / ENEMY_TYPES.reduce((a, b) => a + b[1], 0);
+            let Type = ENEMY_TYPES.reduce((a, b) => a instanceof Enemy ? a : a + b[1] >= type ? b[0] : a + b[0], 0);
 
             if (Type) {
                 createEnemy(Type);

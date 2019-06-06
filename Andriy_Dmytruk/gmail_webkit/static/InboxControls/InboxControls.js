@@ -21,7 +21,7 @@ class InboxControls extends Renderable {
 
         let navigation = this.element.getElementsByClassName(this.block("navigation"))[0];
         buttons.map(btn => navigation.appendChild(
-            this.elementCreate("button", this.block(["letters-type", "letters-type-" + btn.style]), btn.name)
+            this.elementCreate("button", this.block(["letters-type", "letters-type-" + btn.Game]), btn.name)
         ));
     }
 }

@@ -1,0 +1,139 @@
+.doodle {
+  z-index: 1;
+
+  &__body {
+    position: absolute;
+    background-color: #dfc84f;
+
+    height: 50px;
+    width: 40px;
+    border-radius: 20px 20px 0 0;
+  }
+
+  &__bottom {
+    position: absolute;
+    bottom: 0;
+
+    background-color: #53a665;
+
+    width: 40px;
+    height: 10px;
+  }
+
+  &__nose {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    background-color: #dfc84f;
+    transition: 0.2s;
+  }
+  &_left .doodle__nose {
+    transform: rotate(-180deg);
+  }
+
+
+  &__nose-begin {
+    position: absolute;
+    top: -4px;
+    left: 0;
+
+    width: 32px;
+    height: 8px;
+
+    background-color: inherit;
+
+    transition: 1s;
+  }
+  &__nose-end {
+    position: absolute;
+    left: 25px;
+    top: -7px;
+
+    height: 14px;
+    width: 7px;
+
+    background-color: inherit;
+    border-radius: 7px 0 0 7px;
+  }
+
+  &__eye-left {
+    position: absolute;
+    background-color: #111;
+    width: 4px;
+    height: 6px;
+    border-radius: 2px;
+
+    left: 20px;
+    top: 18px;
+
+    transition: 0.2s;
+  }
+  &__eye-right {
+    position: absolute;
+    background-color: #111;
+    width: 4px;
+    height: 6px;
+    border-radius: 2px;
+
+    left: 26px;
+    top: 18px;
+
+    transition: 0.2s;
+  }
+  &_left .doodle__eye-left {
+    left: 10px;
+  }
+  &_left .doodle__eye-right {
+    left: 16px;
+  }
+
+  &__legs {
+    position: absolute;
+
+    left: 6px;
+
+    height: 12px;
+    width: 28px;
+    top: 50px;
+
+    transition: 0.2s, top 0.1s;
+  }
+  &_left .doodle__legs {
+    left: 6px;
+  }
+  &_jumping .doodle__legs {
+    top: 46px;
+  }
+
+  &__leg {
+    position: absolute;
+    height: 12px;
+    width: 3px;
+
+    background-color: #222;
+
+    border-radius: 0 0 2px 2px;
+  }
+
+  &__foot {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 6px;
+    height: 3px;
+
+    background-color: #222;
+
+    border-radius: 2px;
+
+    transition: 0.2s;
+  }
+
+  &_left .doodle__foot {
+    left: -3px;
+
+  }
+
+}

@@ -1,6 +1,11 @@
-class Enemy extends PhysicalObject {
+import PhysicalObject from "./PhysicalObject";
+import Element from "../Element/Element";
+
+import "./styles/Enemy.scss";
+
+export class Enemy extends PhysicalObject {
     linkField(field, component) {
-        this.element = new El("enemy")
+        this.element = new Element("enemy")
             .dimensions(this.width, this.height)
             .addChild(component)
             .parent(field.element);
@@ -52,13 +57,13 @@ class Enemy extends PhysicalObject {
     }
 }
 
-class EnemyCircle extends Enemy {
+export class EnemyCircle extends Enemy {
     constructor(field, x=0, y=0) {
-        const element = new El("enemy-circle").addChild(
-            new El("enemy-circle__face").addChild(
-                new El("enemy__eye-left"),
-                new El("enemy__eye-right"),
-                new El("enemy__mouth")
+        const element = new Element("enemy__circle").addChild(
+            new Element("enemy__circle__face").addChild(
+                new Element("enemy__eye-left"),
+                new Element("enemy__eye-right"),
+                new Element("enemy__mouth")
             )
         );
 

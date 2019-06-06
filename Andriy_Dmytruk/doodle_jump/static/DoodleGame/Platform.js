@@ -1,7 +1,12 @@
-class Platform extends PhysicalObject {
+import PhysicalObject from "./PhysicalObject";
+import Element from "../Element/Element";
+
+import "./styles/Platform.scss";
+
+export class Platform extends PhysicalObject {
     linkField(field) {
         return this.element =
-            new El("platform").dimensions(this.width, this.height).parent(field.element);
+            new Element("platform").dimensions(this.width, this.height).parent(field.element);
     }
 
     constructor(field, x=0, y=0) {
@@ -24,47 +29,47 @@ class Platform extends PhysicalObject {
     }
 }
 
-class StaticPlatform extends Platform {
+export class StaticPlatform extends Platform {
     linkField(field) {
-        return super.linkField(field).addChild(new El("platform-static"));
+        return super.linkField(field).addChild(new Element("platform__static"));
     }
 }
 
-class BreakingPlatform extends Platform {
+export class BreakingPlatform extends Platform {
     linkField(field) {
         const platform = super.linkField(field);
-        this.left = new El("platform-breaking-left").parent(platform);
-        this.right= new El("platform-breaking-right").parent(platform);
+        this.left = new Element("platform__breaking-left").parent(platform);
+        this.right= new Element("platform__breaking-right").parent(platform);
     }
 
     doodleDoesJump() {
         this.acceleration.y = -600;
-        this.left.addClass("platform-broken-left");
-        this.right.addClass("platform-broken-right");
+        this.left.addClass("platform__broken-left");
+        this.right.addClass("platform__broken-right");
         return false;
     }
 }
 
-class PlatformDisappearing extends Platform {
+export class PlatformDisappearing extends Platform {
     linkField(field) {
         const platform = super.linkField(field);
-        this.inner = new El("platform-disappearing").parent(platform);
+        this.inner = new Element("platform__disappearing").parent(platform);
         this.visible = true;
     }
 
     doodleDoesJump() {
         if (this.visible) {
             this.visible = false;
-            this.inner.addClass("platform-disappeared");
+            this.inner.addClass("platform__disappeared");
             return true;
         }
         return false;
     }
 }
 
-class PlatformHorizontal extends Platform {
+export class PlatformHorizontal extends Platform {
     linkField(field) {
-        super.linkField(field).addChild(new El("platform-horizontal"));
+        super.linkField(field).addChild(new Element("platform__horizontal"));
         this.velocity.x = Math.round((20 + Math.random() * 60) * (Math.random > 0.5 ? 1 : -1));
     }
 
@@ -79,9 +84,9 @@ class PlatformHorizontal extends Platform {
     }
 }
 
-class PlatformVertical extends Platform {
+export class PlatformVertical extends Platform {
     linkField(field) {
-        super.linkField(field).addChild(new El("platform-vertical"));
+        super.linkField(field).addChild(new Element("platform__vertical"));
     }
 
     constructor(field, x=0, y=0, range) {
@@ -103,10 +108,10 @@ class PlatformVertical extends Platform {
     }
 }
 
-class PlatformDestructing extends Platform {
+export class PlatformDestructing extends Platform {
     linkField(field) {
         const platform = super.linkField(field);
-        this.inner = new El("platform-destructing").parent(platform);
+        this.inner = new Element("platform__destructing").parent(platform);
     }
 
     constructor(field, x=0, y=0, timeout) {
@@ -129,11 +134,11 @@ class PlatformDestructing extends Platform {
 
         if (this.state === "start" && this.time >= this.timeout - this.alertBefore) {
             this.state = "alert";
-            this.inner.addClass("platform-destructing-alert");
+            this.inner.addClass("platform__destructing-alert");
         }
         if (this.state === "alert" && this.time >= this.timeout) {
             this.state = "destroyed";
-            this.inner.addClass("platform-destroyed");
+            this.inner.addClass("platform__destroyed");
         }
     }
 

@@ -1,7 +1,14 @@
-class Field {
+import Doodle from "./Doodle";
+import BulletManager from "./BulletManager";
+import Element from "../Element/Element";
+import PhysicalObject from "./PhysicalObject";
+
+import "./styles/Field.scss";
+
+export default class Field {
     linkContainer(container) {
-        const background = new El("background").parent(container);
-        this.element = new El("field").dimensions(this.width, this.height).parent(background);
+        const background = new Element("field__background").parent(container);
+        this.element = new Element("field").dimensions(this.width, this.height).parent(background);
     }
 
     constructor(container, width, height) {

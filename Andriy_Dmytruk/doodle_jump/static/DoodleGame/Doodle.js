@@ -1,20 +1,28 @@
-class Doodle extends PhysicalObject {
+import PhysicalObject from "./PhysicalObject";
+import Element from "../Element/Element";
+import {Enemy} from "./Enemy";
+import {Platform} from "./Platform";
+
+
+import "./styles/Doodle.scss";
+
+export default class Doodle extends PhysicalObject {
     linkField (field) {
-        const legs = new El("doodle-legs").addChild(
+        const legs = new Element("doodle__legs").addChild(
             new Array(4).fill(0).map((v, i) =>
-                new El("doodle-leg").absolutePosition(i * 8, 0)
-                    .addChild(new El("doodle-foot"))));
+                new Element("doodle__leg").absolutePosition(i * 8, 0)
+                    .addChild(new Element("doodle__foot"))));
 
-        this.nose = new El("doodle-nose")
-            .addChild(new El("doodle-nose-begin"), new El("doodle-nose-end"));
+        this.nose = new Element("doodle__nose")
+            .addChild(new Element("doodle__nose-begin"), new Element("doodle__nose-end"));
 
-        this.element = new El("doodle").dimensions(this.width, this.height)
+        this.element = new Element("doodle").dimensions(this.width, this.height)
             .parent(field.element).addChild(
                 legs,
                 this.nose,
-                new El("doodle-body").addChild(new El("doodle-bottom")),
-                new El("doodle-eye-left"),
-                new El("doodle-eye-right"),
+                new Element("doodle__body").addChild(new Element("doodle__bottom")),
+                new Element("doodle__eye-left"),
+                new Element("doodle__eye-right"),
             );
     }
 

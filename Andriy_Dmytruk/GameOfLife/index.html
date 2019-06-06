@@ -94,7 +94,7 @@
         showField() {
             if (!this.container) return;
             let tiles = this.container.getElementsByClassName("tile");
-            mapField(this.tiles, (x, y, v) => tiles[y * this.width + x].style.background = v ? "black" : "white");
+            mapField(this.tiles, (x, y, v) => tiles[y * this.width + x].Game.background = v ? "black" : "white");
         }
     }
 

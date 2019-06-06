@@ -1,6 +1,6 @@
 const positionString = (v) => (typeof v === "number" || v instanceof Number) ? (v + "px") : v;
 
-class El {
+export default class Element {
     constructor(className, tag="div") {
         this.element = document.createElement(tag);
         if (className) this.addClass(className);
@@ -25,7 +25,7 @@ class El {
         const add = (child) => {
             if (child instanceof Array) {
                 child.map(c => add(c));
-            } else if (child instanceof Element) {
+            } else if (child instanceof window.Element) {
                 this.element.appendChild(child);
             } else if (child.element) {
                 this.element.appendChild(child.element);
@@ -37,7 +37,7 @@ class El {
     }
 
     parent(parent) {
-        if (parent instanceof Element) {
+        if (parent instanceof window.Element) {
             parent.appendChild(this.element);
         } else if (parent.element) {
             parent.element.appendChild(this.element);

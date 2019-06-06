@@ -1,6 +1,13 @@
-class DoodleGame {
+import FieldGenerator from "./FieldGenerator";
+import Menu from "./Menu";
+import Field from "./Field";
+import Element from "../Element/Element";
+
+import "./styles/Game.scss";
+
+export default class DoodleGame {
     linkContainer(container) {
-        this.element = new El("game").parent(container);
+        this.element = new Element("game").parent(container);
     }
 
     addListeners() {
