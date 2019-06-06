@@ -3,43 +3,14 @@ import FeaturedTagsBlock from "./components/FeaturedTagsBlock";
 import HotNetworkQuestions from "./components/HotNetworkQuestions";
 import CommunityBulletin from "./components/CommunityBulletin";
 
-const RenderQuestionList = async () => {
-  const questionContainer = document.querySelector(".Questions-list");
-  const data = await (await fetch(
-    "src/components/QuestionPost/data.json"
-  )).json();
+const render = async (containerClass, path, htmlElementGenerator) => {
+  const container = document.querySelector(containerClass);
+  const data = await (await fetch(path)).json();
 
-  data.map(question => questionContainer.appendChild(QuestionPost(question)));
+  data.map(element => container.appendChild(htmlElementGenerator(element)));
 };
 
-const RenderFeaturedTagsBlocks = async () => {
-  const blockContainer = document.querySelector(".Tags-blocks");
-  const data = await (await fetch(
-    "src/components/FeaturedTagsBlock/data.json"
-  )).json();
-  data.map(block => blockContainer.appendChild(FeaturedTagsBlock(block)));
-};
-
-const RenderHotNetworkQuestions = async () => {
-  const blockContainer = document.querySelector(".Hot-network-questions__list");
-  const data = await (await fetch(
-    "src/components/HotNetworkQuestions/data.json"
-  )).json();
-  data.map(question =>
-    blockContainer.appendChild(HotNetworkQuestions(question))
-  );
-};
-
-const RenderCommunityBulletin = async () => {
-  const blockContainer = document.querySelector(".Community-bulletin");
-  const data = await (await fetch(
-    "src/components/CommunityBulletin/data.json"
-  )).json();
-
-  data.map(block => blockContainer.appendChild(CommunityBulletin(block)));
-};
-
-RenderQuestionList();
-RenderFeaturedTagsBlocks();
-RenderHotNetworkQuestions();
-RenderCommunityBulletin();
+render(".Questions-list", "src/components/QuestionPost/data.json", QuestionPost);
+render(".Tags-blocks", "src/components/FeaturedTagsBlock/data.json", FeaturedTagsBlock);
+render(".Hot-network-questions__list", "src/components/HotNetworkQuestions/data.json", HotNetworkQuestions);
+render(".Community-bulletin", "src/components/CommunityBulletin/data.json", CommunityBulletin);

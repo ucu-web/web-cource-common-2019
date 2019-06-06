@@ -18,5 +18,12 @@
     "webpack": "^4.30.0",
     "webpack-cli": "^3.3.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "eslint": "^5.16.0",
+    "express": "^4.17.1",
+    "node": "^12.4.0",
+    "path": "^0.12.7",
+    "promise-fs": "^2.1.0",
+    "ramda": "^0.26.1"
+  }
 }
