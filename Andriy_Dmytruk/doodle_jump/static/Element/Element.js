@@ -101,4 +101,6 @@ export default class Element {
     getRect() {
         return this.element.getBoundingClientRect();
     }
+
+    get style() { return this.element.style; }
 }

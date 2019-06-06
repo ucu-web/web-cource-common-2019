@@ -8,6 +8,16 @@ import "./styles/Game.scss";
 export default class DoodleGame {
     linkContainer(container) {
         this.element = new Element("game").parent(container);
+
+        this.scale();
+        window.addEventListener("resize", this.scale.bind(this));
+    }
+
+    scale() {
+        let scaleWidth = window.innerWidth / this.width;
+        let scaleHeight = window.innerHeight / this.height;
+
+        this.element.style.transform = `scale(${scaleWidth > scaleHeight ? scaleHeight : scaleWidth})`;
     }
 
     addListeners() {
@@ -20,6 +30,7 @@ export default class DoodleGame {
         this.height = 800;
 
         this.linkContainer(container);
+
         this.field = new Field(this.element, this.width, this.height);
         this.fieldGenerator = new FieldGenerator(this.field);
         this.fieldGenerator.reset();
