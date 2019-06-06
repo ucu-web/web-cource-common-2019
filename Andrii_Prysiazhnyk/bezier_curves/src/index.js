@@ -27,7 +27,6 @@ const bezierCurveVisualization = (el, options = {}) => {
 
   const render = () => {
     svgRoot
-      // .datum(initialLayout)
       .call(renderStationaryLine, initialLayout)
       .call(renderPivotLines, initialLayout)
       .call(renderBezierCurve, initialLayout)

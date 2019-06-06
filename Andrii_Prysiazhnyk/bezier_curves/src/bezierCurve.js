@@ -19,7 +19,8 @@ export const renderBezierCurve = (container, points) => {
       lineFn(path.slice(0, Math.ceil(path.length * t))),
     );
 
-  renderLeadingPoint(points, path, container);
+  container.call(renderLeadingPoint, points, path);
+  // renderLeadingPoint(container, points, path);
 };
 
 export const renderImmediately = (container, points) => {
@@ -30,7 +31,7 @@ export const renderImmediately = (container, points) => {
     .attr('d', line()(bezierPath(points)));
 };
 
-const renderLeadingPoint = (points, path, container) => {
+const renderLeadingPoint = (container, points, path) => {
   container.select('.Bezier-Visualization__leading-point').remove();
 
   container
