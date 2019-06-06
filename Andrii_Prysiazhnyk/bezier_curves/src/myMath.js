@@ -3,7 +3,7 @@ export const multiplyPointByScalar = (point, scalar) =>
 
 export const addPoints = (point1, point2) => [
   point1[0] + point2[0],
-  point1[1] + point2[1]
+  point1[1] + point2[1],
 ];
 
 let intermediateValues = {};
@@ -20,5 +20,3 @@ const factorialOptimized = n => {
 
 export const combination = (n, i) =>
   factorialOptimized(n) / (factorialOptimized(i) * factorialOptimized(n - i));
-
-export const andriiFunction = x => x + 1;
