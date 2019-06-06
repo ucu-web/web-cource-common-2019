@@ -1,10 +1,10 @@
 import UserInfo from "./components/UserInfo/UserInfo";
 
-const RenderUsersList = async () => {
-  const userContainer = document.querySelector(".Users-list");
-  const data = await (await fetch("src/components/UserInfo/data.json")).json();
+const render = async (containerClass, path, htmlElementGenerator) => {
+  const container = document.querySelector(containerClass);
+  const data = await (await fetch(path)).json();
 
-  data.map(user => userContainer.appendChild(UserInfo(user)));
+  data.map(element => container.appendChild(htmlElementGenerator(element)));
 };
 
-RenderUsersList();
+render(".Users-list", "http://localhost:5000/users", UserInfo).catch((err) => console.log(err));

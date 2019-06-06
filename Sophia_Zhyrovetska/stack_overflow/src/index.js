@@ -10,7 +10,8 @@ const render = async (containerClass, path, htmlElementGenerator) => {
   data.map(element => container.appendChild(htmlElementGenerator(element)));
 };
 
-render(".Questions-list", "src/components/QuestionPost/data.json", QuestionPost);
+
+render(".Questions-list", "http://localhost:5000/questions", QuestionPost).catch((err) => console.log(err));
 render(".Tags-blocks", "src/components/FeaturedTagsBlock/data.json", FeaturedTagsBlock);
 render(".Hot-network-questions__list", "src/components/HotNetworkQuestions/data.json", HotNetworkQuestions);
 render(".Community-bulletin", "src/components/CommunityBulletin/data.json", CommunityBulletin);

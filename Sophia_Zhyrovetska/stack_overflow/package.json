@@ -24,6 +24,7 @@
     "node": "^12.4.0",
     "path": "^0.12.7",
     "promise-fs": "^2.1.0",
-    "ramda": "^0.26.1"
+    "ramda": "^0.26.1",
+    "body-parser": "latest"
   }
 }
