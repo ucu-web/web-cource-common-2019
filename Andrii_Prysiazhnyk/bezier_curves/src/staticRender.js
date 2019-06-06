@@ -1,32 +1,32 @@
-import { line, mouse, selectAll } from 'd3';
-import { renderBezierCurve, renderImmediately } from './bezierCurve';
-import { renderPivotLines } from './pivotsLine';
+import { line, mouse, selectAll } from "d3";
+import { renderBezierCurve, renderImmediately } from "./bezierCurve";
+import { renderPivotLines } from "./pivotsLine";
 
 export const renderPoints = (container, points) => {
-  const className = 'Bezier-Visualization__stationary-point';
-  container.selectAll('.' + className).remove();
+  const className = "Bezier-Visualization__stationary-point";
+  container.selectAll("." + className).remove();
 
   container
-    .selectAll('.' + className)
+    .selectAll("." + className)
     .data(points)
     .enter()
-    .append('circle')
-    .attr('class', className)
-    .attr('cx', ([x]) => x)
-    .attr('cy', ([, y]) => y)
-    .attr('r', 5);
+    .append("circle")
+    .attr("class", className)
+    .attr("cx", ([x]) => x)
+    .attr("cy", ([, y]) => y)
+    .attr("r", 5);
 
   initializeHandlers(container, points);
 };
 
 const initializeHandlers = (selection, points) => {
-  selectAll('.Bezier-Visualization__stationary-point').on('mousedown', function(
+  selectAll(".Bezier-Visualization__stationary-point").on("mousedown", function(
     _,
-    i,
+    i
   ) {
-    selection.on('mousemove', function() {
-      selection.selectAll('.Bezier-Visualization__pivots').remove();
-      selection.select('.Bezier-Visualization__leading-point').remove();
+    selection.on("mousemove", function() {
+      selection.selectAll(".Bezier-Visualization__pivots").remove();
+      selection.select(".Bezier-Visualization__leading-point").remove();
 
       points[i] = mouse(this);
 
@@ -36,7 +36,7 @@ const initializeHandlers = (selection, points) => {
         .call(renderPoints, points);
     });
 
-    selection.on('mouseup', function() {
+    selection.on("mouseup", function() {
       points[i] = mouse(this);
 
       selection
@@ -44,16 +44,19 @@ const initializeHandlers = (selection, points) => {
         .call(renderPivotLines, points)
         .call(renderBezierCurve, points)
         .call(renderPoints, points)
-        .on('mousemove', null)
-        .on('mouseup', null);
+        .on("mousemove", null)
+        .on("mouseup", null);
     });
   });
 };
 
 export const renderStationaryLine = function(selection, points) {
-  selection.select('.Bezier-Visualization__stationary-line').remove();
-  selection
-    .append('path')
-    .attr('class', 'Bezier-Visualization__stationary-line')
-    .attr('d', line()(points));
+  const lineFn = line();
+
+  selection.select(".Bezier-Visualization__stationary-line").remove();
+
+  return selection
+    .append("path")
+    .attr("class", "Bezier-Visualization__stationary-line")
+    .attr("d", lineFn(points));
 };
