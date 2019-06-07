@@ -33,6 +33,5 @@ repositories.delete("/:fileId", async (req, res) => {
 });
 
 module.exports = {
-    repositories: repositories
+    repositories
 };
-
