@@ -1,4 +1,4 @@
-.top_navigation_bar {
+.top-navigation-bar {
     display: block;
     width: 100%;
     margin: 15px auto 0 auto;
@@ -6,7 +6,7 @@
     max-width: 1228px;
 }
 
-.top_navigation_bar__logo {
+.top-navigation-bar img {
     float: left;
     padding-top: 10px;
     line-height: 1.5;
@@ -14,7 +14,7 @@
 
 }
 
-.top_navigation_bar__nav_list {
+.top-navigation-bar__list {
     list-style-type: none;
     margin: 0 auto;
     padding: 0;
@@ -24,14 +24,14 @@
 
 }
 
-.top_navigation_bar__nav_list_item {
+.top-navigation-bar__list li {
     float: left;
     padding: 15px;
     display: inline-block;
     line-height: 1.5;
 }
 
-.top_navigation_bar__nav_list_item_link {
+.top-navigation-bar__link {
     text-decoration: none;
     text-underline: none;
     color: black;
@@ -44,7 +44,7 @@
 
 }
 
-.top_navigation_bar__download_button {
+.top-navigation-bar__link button {
     background-color: transparent;
     color: #0060df;
     padding: 16px 16px;
@@ -59,13 +59,13 @@
     margin-top: 7px;
 }
 
-.top_navigation_bar__download_button:hover {
+.top-navigation-bar__link:hover button {
     background-color: #0060df;
     color: white;
 
 }
 
-.top_navigation_bar__download_button_link:after {
+.top-navigation-bar__link:after {
     content: "";
     clear: both;
     display: table;
