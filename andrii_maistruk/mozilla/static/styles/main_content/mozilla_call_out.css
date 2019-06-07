@@ -4,7 +4,7 @@
     color: #fff;
 }
 
-.mozilla_call_out_wrapper {
+.mozilla_call_out div {
     grid-column-gap: 32px;
     column-gap: 32px;
     display: grid;
@@ -17,7 +17,7 @@
 
 }
 
-.mozilla_call_out_wrapper::after {
+.mozilla_call_out div::after {
     clear: both;
     content: '';
     display: block;
@@ -26,7 +26,7 @@
 }
 
 
-.mozilla_call_out_content {
+.mozilla_call_out div h2 {
     box-sizing: border-box;
     grid-column: 1;
     background-position: 0 35%;
@@ -39,7 +39,7 @@
 }
 
 
-.mozilla_call_out_learn_more {
+.mozilla_call_out div p a {
     color: white;
     border-color: white;
     padding: auto 0;
@@ -48,7 +48,7 @@
     position: center;
 }
 
-.mozilla_call_link_button_wrapper {
+.mozilla_call_out div p {
     text-align: center;
     padding-top: 7%;
 }

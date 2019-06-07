@@ -18,7 +18,7 @@
     visibility: hidden;
 }
 
-.newsletter__image_wrapper {
+.newsletter__image-wrapper {
     grid-column: 1;
     width: auto;
     float: none;
@@ -27,7 +27,7 @@
     text-align: center;
 }
 
-.newsletter__image_wrapper img {
+.newsletter__image-wrapper img {
     height: auto;
     max-width: 100%;
 }

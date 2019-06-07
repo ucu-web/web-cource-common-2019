@@ -17,6 +17,7 @@
     <link href="static/styles/footer/footer_license_terms_social.css" rel="stylesheet" type="text/css">
     <link href="static/styles/footer/footer_sections.css" rel="stylesheet" type="text/css">
     <link href="static/styles/footer/language_form.css" rel="stylesheet" type="text/css">
+    <script src="static/js/form.js" defer></script>
 </head>
 <body>
 <header class="top-navigation-bar">
@@ -260,84 +261,77 @@
     </div>
     <!-- Sign up form -->
     <aside class="newsletter">
-        <div class="newsletter_image_wrapper">
-            <img class="newsletter_image" alt="image"
+        <div class="newsletter__image-wrapper">
+            <img alt="image"
                  src="https://www.mozilla.org/media/img/home/2018/newsletter-graphic-high-res.dfdd8a0a8b68.png">
         </div>
-        <div class="newsletter_content">
-            <form class="newsletter_form">
-                <header class="newsletter_form_header">
-                    <h3 class="newsletter_form_title">Love the Web?</h3>
-                    <p class="newsletter_form_tagline">Get the Mozilla newsletter and help us keep it open and free.</p>
-                </header>
-                <fieldset class="newsletter_form_fieldset">
+        <form class="newsletter__form">
+            <header>
+                <h3>Love the Web?</h3>
+                <p>Get the Mozilla newsletter and help us keep it open and free.</p>
+            </header>
+            <fieldset>
+                <p>
+                    <label for="id_email">Your email address</label>
+                    <input class="newsletter_input" id="id_email" name="email" placeholder="yourname@example.com"
+                           required="required" type="email"/>
+                </p>
+                <div id="sign_up_details">
                     <p>
-                        <label for="id_email">Your email address</label>
-                        <input class="newsletter_input" id="id_email" name="email" placeholder="yourname@example.com"
-                               required="required"
-                               type="email"/>
+                        <label for="id_country">Enter your country</label>
+                        <select aria-required="true" id="id_country" name="country" required="required">
+                            <option value="fi">Finland</option>
+                            <option value="fr">France</option>
+                            <option value="ch">Switzerland</option>
+                            <option value="ua">Ukraine</option>
+                            <option value="gb">United Kingdom</option>
+                        </select>
                     </p>
-                    <div class="newsletter_sign_up_details">
+                    <p>
+                        <label for="id_lang">Enter your language</label>
+                        <select aria-required="true" id="id_lang" name="lang" required="required">
+                            <option value="de">Deutsch</option>
+                            <option value="en" selected="selected">English</option>
+                            <option value="es">Español</option>
+                            <option value="fr">Français</option>
+                        </select>
+                    </p>
+                    <fieldset>
+                        <legend>Format</legend>
                         <p>
-                            <label for="id_country">Enter your country</label>
-                            <select aria-required="true" id="id_country" name="country" required="required">
-                                <option value="fi">Finland</option>
-                                <option value="fr">France</option>
-                                <option value="ch">Switzerland</option>
-                                <option value="ua">Ukraine</option>
-                                <option value="gb">United Kingdom</option>
-                            </select>
+                            <label for="format-html">
+                                <input type="radio" id="format-html" checked> HTML
+                            </label>
+                            <label for="format-text">
+                                <input type="radio" id="format-text"> Text
+                            </label>
                         </p>
                         <p>
-                            <label for="id_lang">Enter your language</label>
-                            <select aria-required="true" id="id_lang" name="lang" required="required">
-                                <option value="de">Deutsch</option>
-                                <option value="en" selected="selected">English</option>
-                                <option value="es">Español</option>
-                                <option value="fr">Français</option>
-                            </select>
+                            <label for="privacy">
+                                <input type="checkbox" id="privacy" name="privacy" required aria-required="true">
+                                I’m okay with Mozilla handling my info as explained in <a
+                                    href="/en-US/privacy/websites/">this
+                                Privacy Notice</a>
+                            </label>
                         </p>
-                        <fieldset>
-                            <legend>Format</legend>
-                            <p>
-                                <label for="format-html">
-                                    <input type="radio" id="format-html" checked> HTML
-                                </label>
-                                <label for="format-text">
-                                    <input type="radio" id="format-text"> Text
-                                </label>
-                            </p>
-                            <p>
-                                <label for="privacy">
-                                    <input type="checkbox" id="privacy" name="privacy" required aria-required="true">
-                                    I’m okay with Mozilla handling my info as explained in <a
-                                        href="/en-US/privacy/websites/">this
-                                    Privacy Notice</a>
-                                </label>
-                            </p>
-                        </fieldset>
-                    </div>
-                    <p class="newsletter_form_submit">
-                        <button type="submit" class="newsletter_for_submit_button"><span
-                                class="newsletter_submit_button_name">Sign up now</span></button>
-                        <span class="newsletter_submit_note">We will only send you Mozilla-related information.</span>
-                    </p>
-                </fieldset>
-            </form>
-        </div>
+                    </fieldset>
+                </div>
+                <p class="newsletter_form_submit">
+                    <button type="submit" onclick="show_details()">
+                        <span >Sign up now</span></button>
+                    <span>We will only send you Mozilla-related information.</span>
+                </p>
+            </fieldset>
+        </form>
+
     </aside>
-
-
     <section class="mozilla_call_out">
-        <!-- url of background image
-        https://www.mozilla.org/media/protocol/img/logos/firefox/firefox-high-res.376b3754d68d.png
-        -->
-        <div class="mozilla_call_out_wrapper">
-            <h2 class="mozilla_call_out_content">
+        <div>
+            <h2>
                 The account that protects you rather than profits off you.
             </h2>
-            <p class="mozilla_call_link_button_wrapper">
-                <a class="main_content__header_link mozilla_call_out_learn_more" href="/en-US/firefox/accounts/">
+            <p>
+                <a class="main-content__link" href="/en-US/firefox/accounts/">
                     Learn More
                 </a>
             </p>

@@ -1,4 +1,4 @@
-.newsletter_form {
+.newsletter__form {
     grid-column: 2;
     width: auto;
     float: none;
@@ -7,29 +7,29 @@
     padding: 104px 84px 0 0;
 }
 
-.newsletter_form_header {
+.newsletter__form header {
     display: block;
     margin-top: 10%;
 }
 
-.newsletter_form_title {
+.newsletter__form header h3 {
     font-size: 2.25rem;
     line-height: 1.1111;
     margin-bottom: .25em;
 
 }
 
-.newsletter_form_tag_line {
+.newsletter__form header p {
     margin: 0 0 1.25em;
 }
 
-.newsletter_form_fieldset {
+.newsletter__form fieldset {
     border: 0;
     margin: 0;
     padding: 0;
 }
 
-.newsletter_input {
+.newsletter__form fieldset p input {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -42,18 +42,19 @@
     width: 100%;
 }
 
-.newsletter_sign_up_details {
+#sign_up_details {
+    visibility: hidden;
     display: none;
 }
 
 
-.newsletter_form_submit {
+.newsletter__form {
     text-align: center;
     padding: 0;
     margin: 0 0 1.25em;
 }
 
-.newsletter_for_submit_button {
+.newsletter__form fieldset p button {
     margin-bottom: 8px;
     width: 100%;
     -webkit-box-sizing: border-box;
@@ -72,7 +73,7 @@
     text-decoration: none;
 }
 
-.newsletter_for_submit_button:hover {
+.newsletter__form fieldset p button:hover {
     -webkit-transform: translate(-2px,-2px);
     transform: translate(-2px,-2px);
     background-color: #fff;
@@ -80,10 +81,7 @@
     color: #000;
 }
 
-.newsletter_submit_button_name {
-}
-
-.newsletter_submit_note {
+.newsletter__form fieldset p span {
     font-size: .875rem;
     line-height: 1.285;
     color: #4a4a4f;
