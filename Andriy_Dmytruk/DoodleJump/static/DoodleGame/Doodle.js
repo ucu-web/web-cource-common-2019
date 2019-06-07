@@ -1,10 +1,10 @@
 import "./styles/Doodle.scss";
-
+import {getNewPositionBasedOnDuration} from "./helperFunctions";
 
 export class Doodle {
     width = 40;
     height = 60;
-    gravity = -600;
+    accelerationY = -600;
     exists = true;
     lastNoseRotate = 1;
     element = this.createElement();
@@ -15,7 +15,7 @@ export class Doodle {
 
         let legs = new Array(4).fill(0).map((v, i) =>
             `<div class="doodle__leg" style="left: ${i * 8}px"> 
-                <div class="doodle_foot"></div> 
+                <div class="doodle__foot"></div> 
              </div>`).join("");
 
         element.innerHTML = `
@@ -32,58 +32,47 @@ export class Doodle {
 
         return element;
     }
-
-    updateElement = (element) => {
-        const nose = element.querySelector(".doodle__nose");
-
-        if (this.velocityY >= 200) element.classList.add("doodle_jumping");
-        else element.classList.remove("doodle_jumping");
-
-        if (this.velocityX < 0) element.classList.add("doodle_left");
-        if (this.velocityX > 0) element.classList.remove("doodle_left");
-
-        if (this.lastNoseRotate > 0.5) {
-            nose.transform("");
-        }
-    };
-
-    rotateNose = (angle) => {
-        const nose = this.element.querySelector(".doodle__nose");
-
-        angle = -Math.PI / 2 + angle;
-        nose.style.transition = "0s";
-        nose.style.transform = "rotate(" + angle + "rad)";
-        this.lastNoseRotate = 0;
-    };
-
-    shootBullet = (angle) => {
-        this.rotateNose(angle);
-
-        if (Math.abs(angle) > Math.PI / 4) angle = Math.sign(angle) * Math.PI / 4;
-        const velocity = 400;
-
-        const bulletElement = document.createElement("div");
-        bulletElement.classList.add("bullet");
-        return {
-            width: 20,
-            height: 20,
-            x: this.x + this.width / 2 - 5 + 32 * Math.sin(angle),
-            y: this.y + this.height - this.width / 2 + 32 * Math.cos(angle),
-            velocityX: velocity * Math.sin(angle),
-            velocityY: velocity * Math.cos(angle),
-            element: bulletElement
-        };
-    }
 }
 
-export class Bullet {
-    width = 20;
-    height = 20;
-    element = this.createElement();
+export const updateDoodleElement = (doodle) => {
+    const nose = doodle.element.querySelector(".doodle__nose");
 
-    createElement() {
-        const element = document.createElement("div");
-        element.classList.add("bullet");
-        return element;
+    if (doodle.velocityY >= 200) doodle.element.classList.add("doodle_jumping");
+    else doodle.element.classList.remove("doodle_jumping");
+
+    if (doodle.velocityX < 0) doodle.element.classList.add("doodle_left");
+    if (doodle.velocityX > 0) doodle.element.classList.remove("doodle_left");
+
+    if (doodle.lastNoseRotate > 0.5) {
+        nose.style.transition = "";
+        nose.style.transform = "";
     }
+};
+
+const rotateNose = (doodle, angle) => {
+    const nose = doodle.element.querySelector(".doodle__nose");
+
+    angle = -Math.PI / 2 + angle;
+    nose.style.transition = "0s";
+    nose.style.transform = "rotate(" + angle + "rad)";
+    doodle.lastNoseRotate = 0;
+};
+
+export const shootBullet = (doodle, angle) => {
+    rotateNose(doodle, angle);
+
+    if (Math.abs(angle) > Math.PI / 4) angle = Math.sign(angle) * Math.PI / 4;
+    const velocity = 400;
+
+    const bulletElement = document.createElement("div");
+    bulletElement.classList.add("bullet");
+    return {
+        width: 20,
+        height: 20,
+        x: doodle.x + doodle.width / 2 - 5 + 32 * Math.sin(angle),
+        y: doodle.y + doodle.height - doodle.width / 2 + 32 * Math.cos(angle),
+        velocityX: velocity * Math.sin(angle),
+        velocityY: velocity * Math.cos(angle),
+        element: bulletElement
+    };
 }
