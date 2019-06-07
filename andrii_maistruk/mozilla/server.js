@@ -2,8 +2,8 @@ let http = require("http");
 let fs = require("fs");
 
 let server = new http.Server();
-
-server.listen(5000, "127.0.0.1");
+const port_number = 5000;
+server.listen(port_number, "127.0.0.1");
 
 server.on("request", function (req, res) {
     if (req.url === "/") {
@@ -37,3 +37,5 @@ function sendFile(file, res) {
         file.destroy();
     });
 }
+
+process.stdout.write("Server is running.\nGo to http://localhost:" + port_number + ".\n");

@@ -1,0 +1,21 @@
+{
+  "name": "mozilla",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ucu-web/web-cource-common-2019/tree/andrii_maistruk/andrii_maistruk/mozilla"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "mozilla.org"
+  ],
+  "author": "andrii maistruk",
+  "license": "ISC"
+}
