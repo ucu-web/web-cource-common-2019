@@ -1,12 +1,19 @@
-.footer{
+@import "common.less";
+
+.footer {
   display: flex;
-  justify-content: space-around;
-  height: 20rem;
+  justify-content: center;
   padding: 1rem 15% 0 15%;
   font-size: 1.0625rem;
   background: white;
 
-  &__logos{
+  &__apps-links-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  &__logos {
     width: 35%;
     display: flex;
     flex-direction: column;
@@ -14,33 +21,65 @@
     padding: 2px 0;
   }
 
-  &__motto{
+  &__motto {
     margin: 1rem 0;
   }
 
-  &__apps-link{
-    float: left;
+  &__apps-link {
     margin-top: 1em;
     margin-right: 0.5em;
   }
 
-  &__navigation{
+  &__navigation {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin: 10px;
     padding: 2px 0;
   }
 
-  &__navigation-header{
+  &__navigation-header {
     margin: 0 0 0 0.1em;
     font-size: 1rem;
     font-weight: 400;
     text-transform: uppercase;
   }
 
-  &__navigation-link{
+  &__navigation-link {
     padding: 0.4rem 0;
     color: #757598;
     text-decoration: none;
+  }
+}
+
+@media (max-width: @tablet-version-max-width) {
+  .footer {
+    flex-wrap: wrap;
+
+    &__logos {
+      width: 100%
+    }
+
+    &__apps-links-wrapper {
+      align-self: center;
+    }
+  }
+}
+
+@media (min-width: @mobile-version-max-width) and (max-width: @tablet-version-max-width)  {
+  .footer{
+    padding: 1rem 10% 0 10%;
+    &__navigation{
+      width: 20%;
+    }
+  }
+}
+
+@media (max-width: @mobile-version-max-width) {
+  .footer{
+    padding: 1rem 3% 0 3%;
+    &__navigation{
+      width: 45%;
+    }
   }
 }

@@ -1,7 +1,10 @@
+@import "common.less";
+
 .header {
   display: flex;
   align-items: center;
   height: 4em;
+  background-color: #ffffff;
   border-bottom: 1px solid hsla(0, 0%, 78%, 0.75);
 
   &__main-logo {
@@ -53,14 +56,16 @@
       color: hsla(0, 0%, 47%, .75);
     }
   }
-  &__search-submit{
+
+  &__search-submit {
     height: 40px;
     width: 40px;
     background: #4285f4 url("../images/search_icon.svg") no-repeat center;
     border: none;
     margin-left: 1px;
   }
-  &__login-navigation{
+
+  &__login-navigation {
     display: flex;
     align-items: stretch;
     height: 2.5em;
@@ -68,23 +73,72 @@
     margin-right: 2%;
     padding-left: 2em;
   }
-  &__navigation-text{
+
+  &__navigation-text {
     display: inline-block;
     padding-top: 0.5em;
   }
-  &__enterprise-version-switch{
+
+  &__enterprise-version-switch {
     width: 8em;
     border-right: 1px solid hsla(0, 0%, 47%, .75);
     color: hsla(0, 0%, 47%, .75);
   }
-  &__login-link{
+
+  &__login-link {
     width: 5em;
     color: #4285f4;
     text-align: center;
-    &_sign-up{
+
+    &_sign-up {
       background: #4285f4;
       color: #ffffff;
       border-radius: 100px;
+    }
+  }
+
+  &__login-menu-button {
+    display: none;
+  }
+
+  &__search-menu-button {
+    display: none;
+  }
+}
+
+@media (max-width: @tablet-version-max-width) {
+  .header {
+    justify-content: space-between;
+    padding: 0 1rem;
+
+    &__explore-button {
+      display: none;
+    }
+
+    &__search-bar {
+      display: none;
+    }
+
+    &__login-navigation {
+      display: none;
+    }
+
+    @menu-button-size: 1.5rem;
+
+    &__login-menu-button {
+      display: inline;
+      order: -1;
+      background: url("../images/burger-menu.svg") no-repeat center;
+      height: @menu-button-size;
+      width: @menu-button-size;
+    }
+
+    &__search-menu-button {
+      display: inline;
+      order: 1;
+      background: url("../images/search_icon_black.svg") no-repeat center;
+      height: @menu-button-size;
+      width: @menu-button-size;
     }
   }
 }

@@ -7,6 +7,7 @@
   background-size: 100% 130px;
   background-repeat: no-repeat;
   box-shadow: 0 1px 6px rgba(31, 31, 31, 0.12), 0 1px 4px rgba(31, 31, 31, 0.12);
+  decoration: none;
 }
 .course__course-info {
   box-sizing: border-box;
@@ -21,6 +22,7 @@
   line-height: 1.5rem;
   font-size: 1.25rem;
   font-weight: normal;
+  color: black;
 }
 .course__provider {
   line-height: 1.5rem;

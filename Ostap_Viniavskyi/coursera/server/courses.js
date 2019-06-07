@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const sanitizeHtml = require('google-caja-sanitizer').sanitize;
 const {fetchJSON, saveJSON} = require('./helpers');
 
 coursesRouter = express.Router();
@@ -29,7 +30,10 @@ coursesRouter.post('/:id', async (req, res) => {
     const dataPath = path.resolve('.', 'data', 'courses.json');
     try {
         const data = await fetchJSON(dataPath);
-        const {name, organization, type} = req.body;
+        const name = sanitizeHtml(req.body.name);
+        const organization = sanitizeHtml(req.body.organization);
+        const type = sanitizeHtml(req.body.type);
+        // const {name, organization, type} = req.body;
         data[req.params.id].courses.push({name, organization, type});
         await saveJSON(dataPath, data);
         res.status(201).json(data);

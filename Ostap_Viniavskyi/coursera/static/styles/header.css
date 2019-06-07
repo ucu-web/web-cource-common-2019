@@ -1,7 +1,47 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  font-family: OpenSans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dd,
+dt,
+dl,
+p,
+blockquote {
+  margin: 0;
+}
+h2 {
+  line-height: 2rem;
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #4a4a4a;
+}
+a {
+  text-decoration: none;
+}
+button {
+  border: none;
+}
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
 .header {
   display: flex;
   align-items: center;
   height: 4em;
+  background-color: #ffffff;
   border-bottom: 1px solid hsla(0, 0%, 78%, 0.75);
 }
 .header__main-logo {
@@ -81,5 +121,40 @@
   background: #4285f4;
   color: #ffffff;
   border-radius: 100px;
+}
+.header__login-menu-button {
+  display: none;
+}
+.header__search-menu-button {
+  display: none;
+}
+@media (max-width: 992px) {
+  .header {
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+  .header__explore-button {
+    display: none;
+  }
+  .header__search-bar {
+    display: none;
+  }
+  .header__login-navigation {
+    display: none;
+  }
+  .header__login-menu-button {
+    display: inline;
+    order: -1;
+    background: url("../images/burger-menu.svg") no-repeat center;
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  .header__search-menu-button {
+    display: inline;
+    order: 1;
+    background: url("../images/search_icon_black.svg") no-repeat center;
+    height: 1.5rem;
+    width: 1.5rem;
+  }
 }
 /*# sourceMappingURL=header.css.map */

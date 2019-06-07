@@ -1,0 +1,57 @@
+.course-details {
+  width: 300px;
+  padding: 1rem 1rem 5rem;
+  background-color: #ffffff;
+  box-shadow: 0 3px 10px rgba(31, 31, 31, 0.16), 0 3px 10px rgba(31, 31, 31, 0.23);
+  z-index: 500;
+}
+.course-details__provider-logo {
+  height: 2rem;
+  background: url("../images/stanford-horizontal-logo.png") no-repeat;
+  margin-bottom: 0.7rem;
+}
+.course-details__name {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 0.7rem 0;
+}
+.course-details__syllabus-button {
+  color: #ffffff;
+  background-color: #2073d4;
+  font-weight: 700;
+  border: none;
+  border-radius: 2px;
+  height: 2.2rem;
+  width: 8.5rem;
+}
+.course-details__info-container {
+  margin: 1rem 0;
+  border-top: 1px solid hsla(0, 0%, 73%, 0.75);
+  border-bottom: 1px solid hsla(0, 0%, 73%, 0.75);
+}
+.course-details__info {
+  margin: 0.7rem;
+  padding-left: 2.5rem;
+  background-size: 1.2rem;
+  background-repeat: no-repeat;
+  background-position: 0.3rem center;
+}
+.course-details__info_online {
+  background-image: url("../images/world-symbol.svg");
+}
+.course-details__info_level {
+  background-image: url("../images/level-bars.svg");
+}
+.course-details__info_timings {
+  background-image: url("../images/clock.svg");
+}
+.course-details__skills {
+  font-size: 0.8rem;
+}
+.course-details__skills-header {
+  margin-bottom: 0.3rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+/*# sourceMappingURL=course-details.css.map */

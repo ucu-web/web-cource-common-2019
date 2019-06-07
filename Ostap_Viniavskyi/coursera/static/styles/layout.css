@@ -1,10 +1,18 @@
+.layout__header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 .layout__carousel {
-  margin: 1em auto 1em;
+  margin: 1rem auto 1rem;
+  width: 95%;
 }
 .layout__offers {
-  margin: 1em auto 1em;
+  margin: 1rem auto 1rem;
+  width: 95%;
 }
 .layout__feedback {
-  margin: 4em auto 4em;
+  margin: 4rem auto 4rem;
+  width: 95%;
 }
 /*# sourceMappingURL=layout.css.map */

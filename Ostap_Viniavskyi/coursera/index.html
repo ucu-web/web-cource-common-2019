@@ -8,7 +8,7 @@
   <title>Document</title>
 </head>
 <body>
-<header class="header">
+<header class="header layout__header">
   <a class="header__main-logo" href="#" aria-label="main-page-link">
     <h1 class="visually-hidden">Coursera</h1>
   </a>
@@ -32,12 +32,17 @@
       <span class="header__navigation-text">Sign Up</span>
     </a>
   </nav>
+
+  <button class="header__login-menu-button" aria-label="open login menu in mobile version"></button>
+  <button class="header__search-menu-button" aria-label="open search menu in mobile version"></button>
 </header>
 <div class="courses-carousel"></div>
 <section class="offers layout__offers">
   <h2 class="offers__header"> What Coursera Has to Offer</h2>
   <dl class="offers__list">
-    <dt class="offers__offer-box"><span class="offers__title offers__title_centered">Learning Program</span></dt>
+    <dt class="offers__offer-box offers__offer-box_title">
+      <span class="offers__title offers__title_centered">Learning Program</span>
+    </dt>
     <dd class="offers__title">Description</dd>
     <dt class="offers__offer-box"><span class="offers__offer offers__offer_blue">Course</span></dt>
     <dd class="offers__description">
@@ -89,7 +94,7 @@
       and organizations to offer courses online.
     </p>
     <small>© 2019 Coursera Inc. All rights reserved.</small>
-    <div>
+    <div class="footer__apps-links-wrapper">
       <a class="footer__apps-link" href="#" aria-label="download-ios-app">
         <img src="static/images/apple_store.svg" alt="apple-store-logo"></a>
       <a class="footer__apps-link" href="#" aria-label="download-android-app">
