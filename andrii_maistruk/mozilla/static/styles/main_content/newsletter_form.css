@@ -48,13 +48,13 @@
 }
 
 
-.newsletter__form {
+.newsletter__form div {
     text-align: center;
     padding: 0;
     margin: 0 0 1.25em;
 }
 
-.newsletter__form fieldset p button {
+.newsletter__submit-button {
     margin-bottom: 8px;
     width: 100%;
     -webkit-box-sizing: border-box;
@@ -73,7 +73,7 @@
     text-decoration: none;
 }
 
-.newsletter__form fieldset p button:hover {
+.newsletter__submit-button:hover {
     -webkit-transform: translate(-2px,-2px);
     transform: translate(-2px,-2px);
     background-color: #fff;
