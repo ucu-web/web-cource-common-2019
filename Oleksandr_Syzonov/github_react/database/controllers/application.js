@@ -12,3 +12,4 @@ app.use("/readme", readme);
 app.use("/files", files);
 app.use("/repositories", repositories);
 app.listen(port, () => console.log(`Server at port: ${port}`));
+console.log(`http://127.0.0.1:${port}/src/templates/index.html`);
