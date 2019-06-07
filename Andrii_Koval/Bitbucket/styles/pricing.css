@@ -1,0 +1,135 @@
+.Pricing {
+  padding: 16px 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.Pricing__title {
+  text-align: center;
+  margin-left: 25%;
+  max-width: 1200px;
+  width: 50%;
+  float: left;
+  padding: 16px;
+}
+.Pricing__title-text {
+  font-size: 2.25rem;
+  line-height: 1.3;
+}
+.Pricing__container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.Pricing__container-remarks {
+  text-align: center;
+  width: 100%;
+  padding: 16px;
+  float: left;
+}
+.Pricing__container-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  width: 33%;
+  box-sizing: border-box;
+}
+.Pricing__container-block {
+  text-align: center;
+  margin-left: 0;
+  border-radius: 4px;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+.Pricing__block {
+  box-sizing: border-box;
+}
+.Pricing__block-bg {
+  padding: 40px;
+  background-color: #F4F5F7;
+}
+.Pricing__block-name {
+  font-size: 1.25rem;
+  line-height: 1.2;
+  font-weight: 500;
+}
+.Pricing__block-subname {
+  color: #253858;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.Pricing__block-price {
+  color: #0052CC;
+  font-size: 72px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.Pricing__block-usability {
+  color: #42526E;
+  font-size: 1.25rem;
+  letter-spacing: 0.3px;
+  line-height: 1.4;
+}
+.Pricing__features {
+  padding-left: 64px;
+  padding-bottom: 32px;
+  padding-top: 32px;
+  text-align: left;
+}
+.Pricing__feature-active {
+  list-style-type: none;
+  margin-left: -20px;
+  min-height: 15px;
+  padding-left: 32px;
+  margin-bottom: 12px;
+}
+.Pricing__feature-inactive {
+  list-style-type: none;
+  margin-left: -20px;
+  min-height: 15px;
+  padding-left: 32px;
+  margin-bottom: 12px;
+  opacity: 0.15;
+}
+.Pricing__separator {
+  margin-top: 15px;
+}
+.Pricing__extra {
+  padding-left: 64px;
+  padding-bottom: 32px;
+  padding-top: 32px;
+  text-align: left;
+}
+.Pricing__extra-text {
+  list-style-type: none;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: inherit;
+}
+.Pricing__list {
+  padding-left: 0;
+}
+.Pricing__get-started-btn {
+  color: #FFF;
+  display: inline-block;
+  font-weight: 500;
+  background-color: #0052CC;
+  border: 1px solid #0052CC;
+  height: 40px;
+  line-height: 38px;
+  padding: 0 16px;
+  border-radius: 3px;
+  margin-bottom: 16px;
+}
+.Pricing__get-started-btn :hover {
+  background: #0047B3;
+  border-color: #0047B3;
+  transition: all 250ms;
+}
+.Pricing__btn-container {
+  text-align: center;
+  margin-top: 15px;
+}
+/*# sourceMappingURL=pricing.css.map */
