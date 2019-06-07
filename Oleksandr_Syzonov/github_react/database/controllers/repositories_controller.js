@@ -3,7 +3,7 @@ const { JsonTable, IdNotFoundError } = require("./helpers");
 const repositories = express.Router();
 const verificator = x => true;
 
-let repositories_table = new JsonTable("../data/repositories.json", verificator);
+let repositories_table = new JsonTable("database/data/repositories.json", verificator);
 
 repositories.get("/", async (req, res) => {
     res.end(JSON.stringify(await repositories_table.getAll()));

@@ -7,7 +7,7 @@ const express = require("express");
 let app = express();
 const port = 5000;
 app.use(bodyParser.json());
-app.use(express.static("../.."));
+app.use(express.static("./"));
 app.use("/readme", readme);
 app.use("/files", files);
 app.use("/repositories", repositories);

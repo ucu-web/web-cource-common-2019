@@ -4,7 +4,7 @@ const readme = express.Router();
 
 const verificator = x => true;
 
-let files = new JsonTable("../data/readme_paragraphs.json", verificator);
+let files = new JsonTable("database/data/readme_paragraphs.json", verificator);
 
 readme.get("/", async (req, res) => {
   res.end(JSON.stringify(await files.getAll()));

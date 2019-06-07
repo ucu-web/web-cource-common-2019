@@ -4,7 +4,7 @@ const files = express.Router();
 
 const verificator = x => true;
 
-let files_table = new JsonTable("../data/files.json", verificator);
+let files_table = new JsonTable("database/data/files.json", verificator);
 
 files.get("/", async (req, res) => {
   res.end(JSON.stringify(await files_table.getAll()));
