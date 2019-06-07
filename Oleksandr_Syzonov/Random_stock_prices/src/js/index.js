@@ -1,4 +1,5 @@
 import {StockMarket} from "./StockMarket";
 
-let a = new StockMarket(["A", "B"]);
-document.body.appendChild(a.toHtml(["a", "c"]));
+console.log("38");
+let a = new StockMarket(["A", "B"], document.body, ["../img/austin-chan-275638-unsplash.jpg",
+    "../img/austin-chan-275638-unsplash.jpg"]);

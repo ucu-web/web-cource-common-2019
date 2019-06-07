@@ -15,12 +15,8 @@ class GameTimer {
     render() {
         this.container.innerHTML = `
         <div class="Timer">
-            <span class="Timer__time">
-            Waiting for you to click
-            </span>
-            <button class="Timer__start">
-            Wait for market
-            </button>
+            <span class="Timer__time"> Waiting for you to click</span>
+            <button class="Timer__start">Wait for market</button>
         </div>`;
     }
 
@@ -60,7 +56,7 @@ class GameTimer {
             if (ev.target.matches('.Timer__start')) {
                 if (this.current_market_waits) {
                     this.startTimer(this.waitForMarket);
-                }else{
+                } else {
                     this.startTimer(this.marketTime);
                 }
             }

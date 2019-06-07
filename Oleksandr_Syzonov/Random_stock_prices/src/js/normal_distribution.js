@@ -1,5 +1,4 @@
-let Chance = require('chance');
-
+import Chance from "chance";
 
 export function generateNormal(n, mean, sd) {
     let chance = new Chance(),
@@ -9,4 +8,5 @@ export function generateNormal(n, mean, sd) {
     }
     return numbers;
 }
+
 

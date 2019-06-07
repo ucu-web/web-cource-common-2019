@@ -5,11 +5,11 @@ import {renderRepositoryDescription} from "../components/Repository/render.js";
 
 const renderFile = async () => {
   const repoId = 1;
-  const repo = await (await fetch(`http://127.0.0.1:3000/repositories/${repoId}`)).json();
+  const repo = await (await fetch(`http://127.0.0.1:5000/repositories/${repoId}`)).json();
   console.log(repo);
   renderRepositoryDescription(repo, document.querySelector(".Repository__description"));
   const filesContainer = document.querySelector(".Repository__files");
-  let files = await (await fetch("http://127.0.0.1:3000/files/")).json();
+  let files = await (await fetch("http://127.0.0.1:5000/files/")).json();
   console.log(files);
   files = filter((x) => (parseInt(x["repository_id"]) === repoId), files);
   console.log(files);
@@ -18,7 +18,7 @@ const renderFile = async () => {
     filesContainer.appendChild(x);
   }, files);
   let readmeContainer = document.querySelector(".Readme__description");
-  let paragraphs = await (await fetch("http://127.0.0.1:3000/readme/")).json();
+  let paragraphs = await (await fetch("http://127.0.0.1:5000/readme/")).json();
   paragraphs = map(x => create_paragraph(x), paragraphs);
   map(x => (readmeContainer.innerHTML += x), paragraphs);
 };
