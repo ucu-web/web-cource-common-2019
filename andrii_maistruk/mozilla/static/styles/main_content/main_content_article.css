@@ -1,4 +1,4 @@
-.main_content_articles_wrapper {
+.main-content__articles {
     margin-top: 40px;
     max-width: 1420px;
     margin-left: auto;
@@ -7,7 +7,7 @@
     margin-right: auto;
 }
 
-.main_content_articles_wrapper:after {
+.main-content__articles:after {
     clear: both;
     content: '';
     display: block;
@@ -15,7 +15,7 @@
     visibility: hidden;
 }
 
-.main_content__article {
+.main-content__article {
     margin-left: 0;
     margin-right: 20px;
     float: left;
@@ -24,66 +24,66 @@
     padding: 0;
 }
 
-.main_content__article.big {
+.main-content__article.big {
     width: calc(66.6% - 20px);
     height: 100%;
 }
 
 
-.main_content__article.medium {
+.main-content__article.medium {
     width: calc(50% - 10px);
     height: 100%;
 }
 
-.main_content__article.small {
+.main-content__article.small {
     width: calc(33.3% - (20px));
     margin-right: 20px;
 }
 
-.main_content__article.small.one_one {
+.main-content__article.small.one_one {
     margin-right: 0;
     width: 33%;
 }
 
-.main_content__article.small:nth-child(3n + 2) {
+.main-content__article.small:nth-child(3n + 2) {
     margin-right: 0;
     width: 33%;
 }
 
-.main_content__article.medium:nth-of-type(2n) {
+.main-content__article.medium:nth-of-type(2n) {
     margin-right: 0;
 }
 
-section.main_content__article.medium.bypass_margin {
+.main-content__article.medium.bypass_margin {
     margin-right: 0;
 }
 
-section.main_content__article.medium.force_margin {
+.main-content__article.medium.force_margin {
     margin-right: 20px;
 }
 
-.main_content__article.image {
+.main-content__article a img {
     width: 100%;
     margin: 0;
     padding: 0;
     height: auto;
 }
 
-.main_content__article.link {
+.main-content__article a {
     display: block;
     padding: 0;
     width: 100%;
     height: auto;
     margin: 0;
     color: black;
+    text-decoration: none;
 }
 
-.main_content__article.link:hover {
+.main-content__article:hover a {
     box-shadow: 0 0 11px rgba(33, 33, 33, .2);
 }
 
-
-.main_content__article.note {
+.main-content__article a p {
     line-height: 1.8;
     min-height: 25px;
     color: #4a4a4f;
@@ -92,7 +92,7 @@ section.main_content__article.medium.force_margin {
     padding-bottom: 10px;
 }
 
-.main_content__article.header {
+.main-content__article a h2 {
     margin: 0;
     padding: 0;
     clear: both;
@@ -102,11 +102,11 @@ section.main_content__article.medium.force_margin {
     display: inline;
 }
 
-.main_content__article.header:hover {
+.main-content__article:hover a h2 {
     text-decoration: underline;
 }
 
-.main_content__article.content {
+.main-content__article a h2 {
     padding: 0;
     margin: 4px 0 0;
     display: inline;

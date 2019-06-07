@@ -1,4 +1,4 @@
-.main_content__billboard {
+.main-content__billboard {
     position: relative;
     margin: 96px 0;
     width: 100%;
@@ -9,13 +9,13 @@
     background: #ededf0;
 }
 
-.main_content__billboard:after {
+.main-content__billboard:after {
     clear: both;
     content: '';
     display: table;
 }
 
-.main_content__billboard_image_container {
+.main-content__billboard div {
     float: left;
     width: 50%;
     margin: -42px 0 -42px calc(50% - 390px);
@@ -24,19 +24,19 @@
     text-align: center;
 }
 
-.main_content__billboard_image_container.reverse_content {
+.main-content__billboard .reverse_content {
     float: right;
     margin: -42px calc(50% - 390px) -42px 0;
 }
 
-.main_content__billboard_image {
+.main-content__billboard div img {
     max-width: none;
     margin: 0;
     height: auto;
 }
 
-.main_content__billboard_content_wrapper {
-    margin:0 calc(50% - 390px) 0 auto;
+.main-content__billboard .content_wrapper {
+    margin: 0 calc(50% - 390px) 0 auto;
     right: 0;
     width: 50%;
     box-sizing: border-box;
@@ -51,13 +51,13 @@
     float: left;
 }
 
-.main_content__billboard_content_wrapper.reverse_content {
+.main-content__billboard .content_wrapper.reverse_content {
     float: right;
-    margin:0 auto 0 calc(50% - 390px);
+    margin: 0 auto 0 calc(50% - 390px);
 }
 
-.main_content__billboard_header {
-    margin: 0 0 0.3em 0;
+.main-content__billboard div h2 {
+    margin: auto 0 0.3em 0;
     padding-top: 0;
     padding-bottom: 0;
     font-size: 2rem;
@@ -66,14 +66,14 @@
 }
 
 
-.main_content__billboard_content {
+.main-content__billboard div p {
     padding: 0;
-    margin: 0 0 5px 0;
+    margin: auto 0 5px 0;
     height: auto;
     text-align: center;
 }
 
-.main_content__billboard_link {
+.main-content__billboard div a {
     margin: 0;
     padding: 0;
     border-bottom: 2px solid;
@@ -81,4 +81,3 @@
     text-decoration: none;
     font-weight: 700;
 }
-
