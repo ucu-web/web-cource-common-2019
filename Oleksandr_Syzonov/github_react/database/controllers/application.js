@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const express = require("express");
 
 let app = express();
-const port = 3000;
+const port = 5000;
 app.use(bodyParser.json());
 app.use(express.static("../.."));
 app.use("/readme", readme);
