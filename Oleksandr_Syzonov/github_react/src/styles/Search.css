@@ -6,6 +6,7 @@
   border-radius: 0.25em;
   align-items: center;
   width: 100%;
+  margin-left: 0.8rem;
 }
 .Search__field {
   background-color: transparent;

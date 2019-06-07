@@ -1,0 +1,39 @@
+.Issues-list {
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+}
+.Issues-list__issue {
+  display: flex;
+  border-top: 1px solid #e1e4e8;
+}
+.Issues-list__issue-icon {
+  margin: 0.2rem 1rem;
+}
+.Issues-list__issue-description {
+  color: #586069;
+  margin: 0 auto;
+}
+.Issues-list__filters-pannel {
+  display: flex;
+  background-color: #f6f8fa;
+  border: 1px solid #d1d5da;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+}
+.Issues-list__issues-state {
+  background: none;
+  border: none;
+}
+.Issues-list__filter {
+  background: transparent;
+  border: none;
+  margin: 0 0.5rem;
+}
+.Issues-list__issue-name {
+  color: #24292e;
+  margin: 0 auto;
+}
+.Issues-list__issue-text-block {
+  padding: 1rem 0;
+}
+/*# sourceMappingURL=Issues-list.css.map */

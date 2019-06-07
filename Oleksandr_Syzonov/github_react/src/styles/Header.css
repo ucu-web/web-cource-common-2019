@@ -16,14 +16,17 @@
 .Header__search ::placeholder {
   color: hsla(0, 0%, 100%, 0.75);
 }
-.Header__navigation_places {
+.Header__navigation {
+  margin-left: 0.7rem;
+}
+.Header__navigation-places {
   list-style: none;
   padding-left: 0.5em;
   margin: 0;
   display: flex;
   align-content: center;
 }
-.Header__navigation_place {
+.Header__navigation-place {
   display: inline-block;
 }
 .Header__link {

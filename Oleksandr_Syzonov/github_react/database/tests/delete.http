@@ -1,0 +1,11 @@
+DELETE http://127.0.0.1:3000/files/91
+###
+GET http://127.0.0.1:3000/files/
+###
+GET http://127.0.0.1:3000/files/1
+###
+GET  http://127.0.0.1:3000/repositories/1
+
+###
+
+

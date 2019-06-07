@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../styles/Repository.css" rel="stylesheet">
+    <link href="../styles/Layout.css" rel="stylesheet">
+    <link href="../styles/Repository-navigation.css" rel="stylesheet">
+    <link href="../styles/Header.css" rel="stylesheet">
+    <link href="../styles/Search.css" rel="stylesheet">
+    <link href="../styles/Repository-title.css" rel="stylesheet">
+    <link href="../styles/Repository-data.css" rel="stylesheet">
+    <link href="../styles/Dropdown.css" rel="stylesheet">
+    <link href="../styles/Counter.css" rel="stylesheet">
+    <link href="../styles/Footer.css" rel="stylesheet">
+    <link href="../styles/Logo.css" rel="stylesheet">
+    <link href="../styles/Issues-main.css" rel="stylesheet">
+    <link href="../styles/Issues-actions.css" rel="stylesheet">
+    <link href="../styles/Issues-list.css" rel="stylesheet">
+</head>
+<body class="Layout">
+<header class="Layout__header">
+    <div class="Header">
+        <a class="Logo Logo--inverted" href="#"><img class="Logo__image" src="../icons/github-dark.svg"></a>
+        <div class="Header__menu">
+            <div class="Header__navigation-search">
+                <div class="Header__search">
+                    <form class="Search">
+                        <input class="Search__field" placeholder="Search or jump to..." type="text">
+                        <img class="Search__slash-icon" src="../icons/search-key-slash.svg">
+                    </form>
+                </div>
+                <nav class="Header__navigation">
+                    <ul class="Header__navigation-places">
+                        <li class="Header__navigation-place"><a class="Header__link" href="#">Pull requests</a></li>
+                        <li class="Header__navigation-place"><a class="Header__link" href="#">Issues</a></li>
+                        <li class="Header__navigation-place"><a class="Header__link" href="#">Marketplace</a></li>
+                        <li class="Header__navigation-place"><a class="Header__link" href="#">Explore</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="Header__controls">
+                <a class="Header__notifications" href="#">
+                    <img alt="" class="Header__notifications-icon" src="../icons/bell-icon.svg">
+                </a>
+                <button class="Header__user-button">
+                    <img alt="" class="Header__user-button-icon Header__user-button-icon--inverted"
+                         src="../icons/plus.svg">
+                    <span class="Dropdown Dropdown--white Dropdown--normal"></span>
+                </button>
+                <button class="Header__user-button">
+                    <img alt="" class="Header__user-button-icon" src="../icons/user.png">
+                    <span class="Dropdown Dropdown--white Dropdown--normal"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</header>
+<main class="Layout__main">
+    <div class="Repository">
+        <nav class="Repository__header">
+            <div class="Repository-navigation">
+                <section class="Repository-navigation__data">
+                    <h1 class="Repository-title">
+                        <img class="Repository-title__icon" src="../icons/book.svg">
+                        <a class="Repository-title__user-link" href="#">
+                            facebook
+                        </a>
+                        /
+                        <a class="Repository-title__repository-link" href="#">
+                            react
+                        </a>
+                    </h1>
+                    <div class="Repository-navigation__stats">
+                        <div class="Repository-data">
+                            <button class="Repository-data__action">
+                                <img class="Repository-data__icon" src="../icons/eye.svg">
+                                Watch
+                                <span class="Dropdown"></span>
+                            </button>
+                            <a class="Repository-data__count" href="#">
+                                6,642
+                            </a>
+                        </div>
+                        <div class="Repository-data">
+                            <button class="Repository-data__action">
+                                Star
+                            </button>
+                            <a class="Repository-data__count" href="#">
+                                123,598
+                            </a>
+                        </div>
+                        <div class="Repository-data">
+                            <button class="Repository-data__action">
+                                Fork
+                            </button>
+                            <a class="Repository-data__count" href="#">
+                                22,444
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <section class="Repository-navigation__sections">
+                    <ul class="Repository-navigation__section">
+                        <li class="Repository-navigation__entry"><a
+                                class="Repository-navigation__section-link "
+                                href="http://127.0.0.1:3000/src/templates/index.html"><img
+                                alt="Code" class="Repository-navigation__icon"
+                                src="../icons/code.svg"> Code</a></li>
+                        <li class="Repository-navigation__entry  Repository-navigation__entry--chosen"><a
+                                class="Repository-navigation__section-link Repository-navigation__section-link--chosen"
+                                href="#"><img
+                                alt="Issues" class="Repository-navigation__icon Repository-navigation__icon--chosen"
+                                src="../icons/green-issue.svg"> Issues<span
+                                class="Counter">418</span></a></li>
+                        <li class="Repository-navigation__entry"><a class="Repository-navigation__section-link"
+                                                                    href="#"><img
+                                alt="Pull requests" class="Repository-navigation__icon" src="../icons/pulls.svg">Pull
+                            requests <span class="Counter">153</span></a></li>
+                        <li class="Repository-navigation__entry"><a class="Repository-navigation__section-link"
+                                                                    href="#"><img
+                                alt="Projects" class="Repository-navigation__icon" src="../icons/project.svg"> Projects</a><span
+                                class="Counter">0</span>
+                        </li>
+                        <li class="Repository-navigation__entry"><a class="Repository-navigation__section-link"
+                                                                    href="#"><img
+                                alt="Wiki" class="Repository-navigation__icon" src="../icons/book2.svg"> Wiki</a></li>
+                        <li class="Repository-navigation__entry"><a class="Repository-navigation__section-link"
+                                                                    href="#"><img
+                                alt="Insights" class="Repository-navigation__icon" src="../icons/stats.svg">
+                            Insights</a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </nav>
+        <div class="Issues-main">
+            <div class="Issues-main__banner">
+                <h3 class="Issues-main__banner-header">
+                    <img class="emoji" alt="wave" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44b.png" width="20" height="20">
+                     Want to contribute to facebook/react?
+                </h3>
+                <p class="Issues-main__banner-message">
+                    If you have a bug or an idea, read the contributing guidelines before opening an issue.
+                </p>
+                <p class="Issues-main__banner-message">
+                    If you're ready to tackle some open issues, we've collected some good first issues for you .
+                </p>
+                <button class="Issues-main__banner-dismiss">
+                    Dismiss
+                </button>
+            </div>
+            <div class="Issues-main__actions-place">
+                <div class="Issues-actions">
+                    <div class="Issues-actions__wrapper">
+                        <form class="Issues-actions__search-form">
+                            <button class="Issues-actions__choose-filter">
+                                Filters
+                                <span class="Dropdown"></span>
+                            </button>
+                            <input class="Issues-actions__text-field" placeholder="Search all issues" type="text">
+                        </form>
+                        <div class="Issues-actions__fixing-status">
+                            <a class="Issues-actions__go-to-data" href="#">
+                                <img class="Issues-list__state-icon" src="../icons/tag.svg">
+                                Labels <span class="Counter">50</span></a><a class="Issues-actions__go-to-data" href="#">
+                            <img class="Issues-list__state-icon" src="../icons/tag.svg">
+                            Milestones <span class="Counter">1</span></a>
+                        </div>
+                    </div>
+                    <a class="Issues-actions__report-issue" href="#">New issue</a>
+                </div>
+            </div>
+            <div class="Issues-main__list">
+                <div class="Issues-list">
+                    <div class="Issues-list__filters-pannel">
+                        <div class="Issues-list__issues-states">
+                            <button class="Issues-list__issues-state">
+                                <img class="Issues-list__state-icon" src="../icons/green-issue.svg">
+                                523 Open
+                            </button>
+                            <button class="Issues-list__issues-state">
+                                <img class="Issues-list__state-icon" src="../icons/checkbox.svg">
+                                7,000 Closed
+                            </button>
+                        </div>
+                        <div class="Issues-list__filters-list">
+                            <button class="Issues-list__filter">Author<span class="Dropdown"></span></button>
+                            <button class="Issues-list__filter">Author<span class="Dropdown"></span></button>
+                            <button class="Issues-list__filter">Author<span class="Dropdown"></span></button>
+                            <button class="Issues-list__filter">Author<span class="Dropdown"></span></button>
+                            <button class="Issues-list__filter">Author<span class="Dropdown"></span></button>
+                            <button class="Issues-list__filter">Author<span class="Dropdown"></span></button>
+                        </div>
+                    </div>
+                    <article class="Issues-list__issue">
+                        <img class="Issues-list__issue-icon" src="../icons/green-issue.svg">
+                        <div class="Issues-list__issue-text-block">
+                            <h4 class="Issues-list__issue-name">Heavy Computation</h4>
+                            <p class="Issues-list__issue-description">#15676 opened 18 days ago by nvoisin </p>
+                        </div>
+                    </article>
+                    <article class="Issues-list__issue">
+                        <img class="Issues-list__issue-icon" src="../icons/green-issue.svg">
+                        <div class="Issues-list__issue-text-block">
+                            <h4 class="Issues-list__issue-name">Heavy Computation</h4>
+                            <p class="Issues-list__issue-description">#15676 opened 18 days ago by nvoisin </p>
+                        </div>
+                    </article>
+                    <article class="Issues-list__issue">
+                        <img class="Issues-list__issue-icon" src="../icons/green-issue.svg">
+                        <div class="Issues-list__issue-text-block">
+                            <h4 class="Issues-list__issue-name">Heavy Computation</h4>
+                            <p class="Issues-list__issue-description">#15676 opened 18 days ago by nvoisin </p>
+                        </div>
+                    </article>
+                    <article class="Issues-list__issue">
+                        <img class="Issues-list__issue-icon" src="../icons/green-issue.svg">
+                        <div class="Issues-list__issue-text-block">
+                            <h4 class="Issues-list__issue-name">Heavy Computation</h4>
+                            <p class="Issues-list__issue-description">#15676 opened 18 days ago by nvoisin </p>
+                        </div>
+                    </article>
+                    <article class="Issues-list__issue">
+                        <img class="Issues-list__issue-icon" src="../icons/green-issue.svg">
+                        <div class="Issues-list__issue-text-block">
+                            <h4 class="Issues-list__issue-name">Heavy Computation</h4>
+                            <p class="Issues-list__issue-description">#15676 opened 18 days ago by nvoisin </p>
+                        </div>
+                    </article>
+                    <article class="Issues-list__issue">
+                        <img class="Issues-list__issue-icon" src="../icons/green-issue.svg">
+                        <div class="Issues-list__issue-text-block">
+                            <h4 class="Issues-list__issue-name">Heavy Computation</h4>
+                            <p class="Issues-list__issue-description">#15676 opened 18 days ago by nvoisin </p>
+                        </div>
+                    </article>
+                    <article class="Issues-list__issue">
+                        <img class="Issues-list__issue-icon" src="../icons/green-issue.svg">
+                        <div class="Issues-list__issue-text-block">
+                            <h4 class="Issues-list__issue-name">Heavy Computation</h4>
+                            <p class="Issues-list__issue-description">#15676 opened 18 days ago by nvoisin </p>
+                        </div>
+                    </article>
+                    <article class="Issues-list__issue">
+                        <img class="Issues-list__issue-icon" src="../icons/green-issue.svg">
+                        <div class="Issues-list__issue-text-block">
+                            <h4 class="Issues-list__issue-name">Heavy Computation</h4>
+                            <p class="Issues-list__issue-description">#15676 opened 18 days ago by nvoisin </p>
+                        </div>
+                    </article>
+                    <article class="Issues-list__issue">
+                        <img class="Issues-list__issue-icon" src="../icons/green-issue.svg">
+                        <div class="Issues-list__issue-text-block">
+                            <h4 class="Issues-list__issue-name">Heavy Computation</h4>
+                            <p class="Issues-list__issue-description">#15676 opened 18 days ago by nvoisin </p>
+                        </div>
+                    </article>
+                    <article class="Issues-list__issue">
+                        <img class="Issues-list__issue-icon" src="../icons/green-issue.svg">
+                        <div class="Issues-list__issue-text-block">
+                            <h4 class="Issues-list__issue-name">Heavy Computation</h4>
+                            <p class="Issues-list__issue-description">#15676 opened 18 days ago by nvoisin </p>
+                        </div>
+                    </article>
+                    <article class="Issues-list__issue">
+                        <img class="Issues-list__issue-icon" src="../icons/green-issue.svg">
+                        <div class="Issues-list__issue-text-block">
+                            <h4 class="Issues-list__issue-name">Heavy Computation</h4>
+                            <p class="Issues-list__issue-description">#15676 opened 18 days ago by nvoisin </p>
+                        </div>
+                    </article>
+                    <article class="Issues-list__issue">
+                        <img class="Issues-list__issue-icon" src="../icons/green-issue.svg">
+                        <div class="Issues-list__issue-text-block">
+                            <h4 class="Issues-list__issue-name">Heavy Computation</h4>
+                            <p class="Issues-list__issue-description">#15676 opened 18 days ago by nvoisin </p>
+                        </div>
+                    </article>
+                    <article class="Issues-list__issue">
+                        <img class="Issues-list__issue-icon" src="../icons/green-issue.svg">
+                        <div class="Issues-list__issue-text-block">
+                            <h4 class="Issues-list__issue-name">Heavy Computation</h4>
+                            <p class="Issues-list__issue-description">#15676 opened 18 days ago by nvoisin </p>
+                        </div>
+                    </article>
+                    <article class="Issues-list__issue">
+                        <img class="Issues-list__issue-icon" src="../icons/green-issue.svg">
+                        <div class="Issues-list__issue-text-block">
+                            <h4 class="Issues-list__issue-name">Heavy Computation</h4>
+                            <p class="Issues-list__issue-description">#15676 opened 18 days ago by nvoisin </p>
+                        </div>
+                    </article>
+                    <article class="Issues-list__issue">
+                        <img class="Issues-list__issue-icon" src="../icons/green-issue.svg">
+                        <div class="Issues-list__issue-text-block">
+                            <h4 class="Issues-list__issue-name">Heavy Computation</h4>
+                            <p class="Issues-list__issue-description">#15676 opened 18 days ago by nvoisin </p>
+                        </div>
+                    </article>
+                </div>
+                <nav class="Issues-main__navigation">
+                    <a class="Issues-main__navigation-page" href="#">Previous</a>
+                    <a class="Issues-main__navigation-page" href="#">1</a>
+                    <a class="Issues-main__navigation-page" href="#">2</a>
+                    <a class="Issues-main__navigation-page" href="#">3</a>
+                    <a class="Issues-main__navigation-page  Issues-main__navigation-page--chosen" href="#">4</a>
+                    <a class="Issues-main__navigation-page" href="#">5</a>
+                    <a class="Issues-main__navigation-page" href="#">6</a>
+                    <a class="Issues-main__navigation-page" href="#">Next</a>
+                </nav>
+                <p class="Issues-main__hint">
+                    ProTip! Type g p on any issue or pull request to go back to the pull request listing page.
+                </p>
+            </div>
+        </div>
+        <footer class="Repository__footer">
+            <div class="Footer">
+                <div class="Footer__block">
+                    © 2019 GitHub, Inc.
+                    <nav class="Footer__navigation">
+                        <a class="Footer__place" href="#">Terms</a>
+                        <a class="Footer__place" href="#">Privacy</a>
+                        <a class="Footer__place" href="#">Security</a>
+                        <a class="Footer__place" href="#">Status</a>
+                        <a class="Footer__place" href="#">Help</a>
+                    </nav>
+                </div>
+                <a class="Logo Logo--grey Logo--small" href="#"><img src="../icons/github-dark.svg"></a>
+                <div class="Footer__block">
+                    <a class="Footer__place" href="#">Terms</a>
+                    <a class="Footer__place" href="#">Terms</a>
+                    <a class="Footer__place" href="#">Terms</a>
+                    <a class="Footer__place" href="#">Terms</a>
+                    <a class="Footer__place" href="#">Terms</a>
+                    <a class="Footer__place" href="#">Terms</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</main>
+<script src="../../dist/main.js"></script>
+</body>
+</html>
+</html>

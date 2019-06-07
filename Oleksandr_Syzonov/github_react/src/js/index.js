@@ -1,15 +1,26 @@
-import {htmlToElement} from "./helper_functions";
+import { File } from "../components/File/File";
+import { map , filter} from "ramda";
+import { create_paragraph } from "../components/Readme_paragraph/create_paragraph";
+import {renderRepositoryDescription} from "../components/Repository/render.js";
 
-function createFile(filename, date, commit_message) {
-    return htmlToElement(`<article class="File">
-                <img alt="" class="File__icon" src="icons/directory.svg">
-                <h4 class="File__filename"><a class="File__link" href="#">${filename}</a></h4>
-                <p class="File__description">${commit_message} </p>
-                <time class="File__edited">${date}</time>
-            </article>`);
-}
+const renderFile = async () => {
+  const repoId = 1;
+  const repo = await (await fetch(`http://127.0.0.1:3000/repositories/${repoId}`)).json();
+  console.log(repo);
+  renderRepositoryDescription(repo, document.querySelector(".Repository__description"));
+  const filesContainer = document.querySelector(".Repository__files");
+  let files = await (await fetch("http://127.0.0.1:3000/files/")).json();
+  console.log(files);
+  files = filter((x) => (parseInt(x["repository_id"]) === repoId), files);
+  console.log(files);
+  files = map(x => File(x), files);
+  map(x => {
+    filesContainer.appendChild(x);
+  }, files);
+  let readmeContainer = document.querySelector(".Readme__description");
+  let paragraphs = await (await fetch("http://127.0.0.1:3000/readme/")).json();
+  paragraphs = map(x => create_paragraph(x), paragraphs);
+  map(x => (readmeContainer.innerHTML += x), paragraphs);
+};
 
-
-for (let i = 0; i < 38; i++) {
-    document.getElementsByClassName("Repository__files")[0].appendChild(createFile('very_important.txt', '17-04-2019', 'Cool  commmit message'));
-}
+renderFile();

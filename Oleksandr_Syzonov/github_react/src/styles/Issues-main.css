@@ -1,0 +1,44 @@
+.Issues-main {
+  max-width: 980px;
+  margin: 0 auto;
+}
+.Issues-main__banner {
+  text-align: center;
+  position: relative;
+  background-color: transparent;
+  margin: 2rem 0;
+  border: 1px solid #e1e4e8 !important;
+  border-radius: 3px !important;
+}
+.Issues-main__banner-dismiss {
+  position: absolute;
+  top: 1.4rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  color: #0366d6;
+}
+.Issues-main__banner-message {
+  margin: 0 auto;
+}
+.Issues-main__navigation {
+  display: flex;
+  max-width: 25.7rem;
+  margin: 2rem auto;
+}
+.Issues-main__navigation-page {
+  text-decoration: none;
+  background: #fff;
+  border: 1px solid #e1e4e8;
+  color: #0366d6;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  padding: 0.5rem 0.7rem;
+}
+.Issues-main__navigation-page--chosen {
+  background-color: #0366d6;
+  border-color: #0366d6;
+  color: #fff;
+}
+/*# sourceMappingURL=Issues-main.css.map */
