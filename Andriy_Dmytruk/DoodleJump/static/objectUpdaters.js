@@ -1,4 +1,4 @@
-import {getNewPositionBasedOnDuration} from "./helperFunctions";
+import {getNewPositionBasedOnDuration} from "./helpers";
 import {updateDoodleElement} from "./Doodle";
 
 export const slowDownVelocityX = (position, duration) => {

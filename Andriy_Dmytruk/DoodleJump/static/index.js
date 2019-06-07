@@ -1,6 +1,4 @@
-import DoodleGame from "./DoodleGame/Game";
+import DoodleGame from "./Game";
 
 const doodleGame = new DoodleGame(document.querySelector("body"));
 doodleGame.play();
-
-window.game = doodleGame;
