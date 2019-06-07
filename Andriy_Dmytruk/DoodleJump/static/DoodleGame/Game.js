@@ -1,43 +1,32 @@
-import Element from "../Element";
-
 import "./styles/Bullet.scss";
-import "./styles/Doodle.scss";
 import "./styles/Enemy.scss";
 import "./styles/Field.scss";
 import "./styles/Game.scss";
 import "./styles/Menu.scss";
 import "./styles/Platform.scss";
 
-const setNewPosition = (object, newPosition) => {
-    Object.keys(newPosition).forEach(key => (object[key] = newPosition[key]));
-};
-
 const getNewPositionBasedOnDuration = (object, duration) => ({
-    x: (object.x || 0) + (object.vX || 0) * duration,
-    y: (object.y || 0) + (object.vY || 0) * duration,
-    vY: (object.vY || 0) + (object.gravity || 0) * duration
+    x: (object.x || 0) + (object.velocityX || 0) * duration,
+    y: (object.y || 0) + (object.velocityY || 0) * duration,
+    velocityY: (object.velocityY || 0) + (object.gravity || 0) * duration
 });
 
-const updatePositionBasedOnDuration = (object, duration) => {
-    setNewPosition(object, getNewPositionBasedOnDuration(object, duration));
-};
-
-const doCollideOneDim = (firstX1, firstX2, secondX1, secondX2) =>
+const doCollideOneDimension = (firstX1, firstX2, secondX1, secondX2) =>
     (secondX1 <= firstX1 && firstX1 <= secondX2) ||
     (secondX1 <= firstX2 && firstX2 <= secondX2) ||
     (firstX1 <= secondX1 && secondX1 <= firstX2);
 
 const doCollideBottom = (first, second) => {
-    const precision = Math.abs(first.vY - second.vY);
+    const precision = Math.abs(first.velocityY - second.velocityY);
 
     return (
-        doCollideOneDim(
+        doCollideOneDimension(
             first.x,
             first.x + first.width,
             second.x,
             second.x + second.width
         ) &&
-        doCollideOneDim(
+        doCollideOneDimension(
             first.y - precision,
             first.y + precision,
             second.y + second.height,
@@ -46,249 +35,29 @@ const doCollideBottom = (first, second) => {
     );
 };
 
-const doCollide = (first, other) => {
+const doCollide = (first, second) => {
     return (
-        doCollideOneDim(
+        doCollideOneDimension(
             first.x,
             first.x + first.width,
-            other.x,
-            other.x + other.width
+            second.x,
+            second.x + second.width
         ) &&
-        doCollideOneDim(
+        doCollideOneDimension(
             first.y,
             first.y + first.height,
-            other.y,
-            other.y + other.height
+            second.y,
+            second.y + second.height
         )
     );
 };
-
-export class Doodle {
-    constructor() {
-        this.width = 40;
-        this.height = 60;
-        this.gravity = -600;
-
-        this.exists = true;
-        this.lastNoseRotate = 1;
-
-        this.createElement();
-    }
-
-    createElement() {
-        this.element = document.createElement("div");
-        this.element.classList.add("doodle");
-        this.element.style.width = this.width;
-        this.element.style.height = this.height;
-
-        let legs = new Array(4).fill(0).map((v, i) =>
-            `<div class="doodle__leg" style="left: ${i * 8}px"> 
-                <div class="doodle_foot"></div> 
-             </div>`).join("");
-
-        this.element.innerHTML = `
-        <div class="doodle__body">
-            <div class="doodle__legs"> ${legs} </div>
-            <div class="doodle__bottom"></div>
-            <div class="doodle__nose">
-                <div class="doodle__nose-begin"></div>
-                <div class="doodle__nose-end"></div>
-            </div>
-            <div class="doodle__eye-left"></div>
-            <div class="doodle__eye-right"></div>
-        </div>`;
-
-        this.nose = this.element.querySelector(".doodle__nose");
-    }
-
-    update(duration) {
-        this.lastNoseRotate += duration;
-
-        if (this.vY >= 200) this.element.addClass("doodle_jumping");
-        else this.element.removeClass("doodle_jumping");
-
-        if (this.vX < 0) this.element.addClass("doodle_left");
-        if (this.vX > 0) this.element.removeClass("doodle_left");
-
-        if (this.lastNoseRotate > 0.5) {
-            this.nose.transform("");
-        }
-    }
-
-    rotateNose(angle) {
-        angle = - Math.PI / 2 + angle;
-        this.nose.transition("0s").transform("rotate(" + angle + "rad)");
-        this.lastNoseRotate = 0;
-    }
-}
-
-export class StaticPlatform {
-    constructor() {
-        this.width = 60;
-        this.height = 10;
-        this.exists = true;
-
-        this.createElement();
-    }
-
-    createElement() {
-        this.element = document.createElement("div");
-        this.element.classList.add("platform__static");
-    }
-}
-
-export class BreakingPlatform {
-    constructor() {
-        this.width = 60;
-        this.height = 10;
-        this.exists = true;
-
-        this.createElement();
-    }
-
-    createElement() {
-        this.element = document.createElement("div");
-        this.element.classList.add("platform__breaking");
-        this.element.innerHTML = `
-            <div class="platform__breaking-left"></div>
-            <div class="platform__breaking-right"></div>
-        `;
-    }
-
-    jumpOnto() {
-        this.acceleration.y = -600;
-        this.left.classList.add("platform__broken-left");
-        this.right.classList.add("platform__broken-right");
-        return false;
-    }
-}
-
-export class PlatformDisappearing  {
-    constructor() {
-        this.width = 60;
-        this.height = 10;
-        this.exists = true;
-
-        this.createElement();
-    }
-
-    createElement() {
-        this.element = document.createElement("div");
-        this.element.classList.add("platform__disappearing");
-    }
-
-    jumpOnto() {
-        this.element.classList.add("platform__disappeared");
-        this.exists = false;
-    }
-}
-
-export class PlatformHorizontal {
-    constructor () {
-        this.width = 60;
-        this.height = 10;
-        this.exists = true;
-
-        this.createElement();
-    }
-
-    createElement() {
-        this.element = document.createElement("div");
-        this.element.classList.add("platform__horizontal");
-        this.vX = Math.round((20 + Math.random() * 60) * (Math.random > 0.5 ? 1 : -1));
-    }
-
-    update() {
-        if (this.x <= 0) {
-            this.vX = Math.abs(this.vX);
-        } else if (this.x >= 600) {
-            // TODO >= what
-            this.vX = - Math.abs(this.vX);
-        }
-    }
-}
-
-export class PlatformVertical {
-    createElement() {
-        this.element = document.createElement("div");
-        this.element.classList.add("platform__vertical");
-    }
-
-    constructor(range) {
-        this.exists = true;
-        this.initialY = null;
-
-        this.range = range || (100 + Math.random() * 200);
-        this.vY = Math.round((20 + Math.random() * 20) * (Math.random > 0.5 ? 1 : -1));
-
-        this.createElement();
-    }
-
-    update() {
-        if (!this.initialY) this.initialY = this.y;
-
-        if (this.y <= this.initialY - this.range / 2) {
-            this.vY = Math.abs(this.vY);
-        } else if (this.y >= this.initialY + this.range / 2) {
-            this.vY = - Math.abs(this.vY);
-        }
-    }
-}
-
-export class PlatformDestructing {
-    createElement () {
-        this.element = document.createElement("div");
-        this.element.classList.add("platform__destructing");
-    }
-
-    constructor(field, x=0, y=0, timeout) {
-        this.exists = true;
-        this.time = 0;
-        this.alertBefore = 1;
-        this.timeout = timeout || (2 + Math.random() * 4);
-
-        this.state = "init";
-        this.createElement();
-    }
-
-    update(duration) {
-        if (this.state !== "init") {
-            this.time += duration;
-        } else if (true) {
-            // TODO what this.field.bottom + this.field.height / 2 > this.y - 100
-            this.state = "start";
-        }
-
-        if (this.state === "start" && this.time >= this.timeout - this.alertBefore) {
-            this.state = "alert";
-            this.element.classList.add("platform__destructing-alert");
-        }
-        if (this.state === "alert" && this.time >= this.timeout) {
-            this.exists = false;
-            this.state = "destroyed";
-            this.element.classList.add("platform__destroyed");
-        }
-    }
-}
-
-export class Bullet {
-    createElement(field) {
-        this.element = document.createElement("div");
-        this.element.classList.add("bullet");
-    }
-
-    constructor(field, x, y) {
-        this.width = 20;
-        this.height = 20;
-        this.createElement();
-    }
-}
 
 export default class Game {
     width = 600;
     height = 800;
 
     paused = false;
+    doodle = new Doodle();
     platforms = [];
     bullets = [];
     enemies = [];
@@ -297,24 +66,44 @@ export default class Game {
 
     constructor(container) {
         container.innerHTML = `
-      <div class="game">
-        <div class="field__background">
-            <div class="field" style="width: ${width}px, height:${height}px"></div>
-        </div>
-      </div>     
-    `;
+          <div class="game">
+            <div class="field__background">
+                <div class="field" style="width: ${width}px, height:${height}px"></div>
+            </div>
+          </div>     
+        `;
 
-        this.doodle = new Doodle();
+        this.field = container.querySelector(".field");
+
         this.doodle.x = (this.width - this.doodle.width) / 2;
         this.doodle.y = (this.height - this.doodle.height) / 2;
-        this.doodle.element.insertInto(this.field);
+        this.field.appendChild(this.doodle.element);
     }
 
-    updateObject(object, duration) {
-        updatePositionBasedOnDuration(object, duration);
-        const { x, y } = this.translatePosition(object);
-        object.element.absolutePosition(x, y);
-        object.update(duration);
+    updatePlatform(platform, duration) {
+        let position = getNewPositionBasedOnDuration(platform, duration);
+
+        let newPlatform = {
+            ...platform,
+            ...position,
+            velocityX: position.x < 0 ? Math.abs(newObject.velocityX) :
+                position.x > this.width - platform.width ? -Math.abs(position.velocityX) : position.velocityX,
+            velocityY: (platform.range && position.y > platform.initialY + platform.range / 2) ? -Math.abs(position.velocityY) :
+                (platform.range && position.y < platform.initialY - platform.range / 2) ? Math.abs(position.velocityY) :
+                    position.velocityY,
+            timeBeforeDestroyed: platform.timeBeforeDestroyed !== undefined ? platform.timeBeforeDestroyed - duration :
+                undefined,
+            canBeJumpedOntoTimes: (platform.timeBeforeDestroyed < 0) ? 0 : platform.canBeJumpedOntoTimes
+        };
+
+
+        const {x, y} = this.translatePosition(newObject);
+        newPlatform.element.style.bottom = y;
+        newPlatform.element.style.left = x;
+
+        newPlatform.updateElement();
+
+        return newPlatform;
     }
 
     doesObjectExist(object) {
@@ -341,7 +130,7 @@ export default class Game {
     }
 
     translatePosition(object) {
-        return { x: object.x, y: object.y - this.fieldBottom };
+        return {x: object.x, y: object.y - this.fieldBottom};
     }
 
     renderAnimationFrame() {

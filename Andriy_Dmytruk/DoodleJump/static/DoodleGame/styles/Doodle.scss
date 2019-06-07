@@ -1,5 +1,8 @@
 .doodle {
   z-index: 1;
+  width: 40px;
+  height: 60px;
+  position: absolute;
 
   &__body {
     position: absolute;
