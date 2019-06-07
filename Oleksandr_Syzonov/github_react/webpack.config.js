@@ -1,5 +1,6 @@
 module.exports = {
-  entry: "./src/js/index.js",
+  entry:{"main": "./src/js/index.js",
+  "issues": "./src/js/issues.js"},
   module: {
     rules: [
       {
