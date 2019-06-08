@@ -60,23 +60,18 @@ class figure {
         this.color = color;
     }
 
-
     move_left() {
         this.center[0]-=1;
     }
-
     move_right() {
         this.center[0]+=1;
     }
-
     move_down() {
         this.center[1]-=1;
     }
-
     rotate() {
         this.current_frame = (this.current_frame+1)%4;
     }
-
     _getCoord(frame) {
         let res = [];
         this.frames[frame].forEach(
@@ -85,11 +80,9 @@ class figure {
 
         return res;
     }
-
     getCoord() {
         return this._getCoord(this.current_frame);
     }
-
     getCoordNextRotation() {
         return this._getCoord((this.current_frame+1)%4);
     }
@@ -174,7 +167,6 @@ class board {
 
         }
     }
-    
 
     checkRow(n) {
         for (let i = 0; i < this.state[n].length; i++) {
@@ -191,7 +183,6 @@ class board {
             if ((!this.isVacant([coords[i][0], coords[i][1]-1]))) {
                 return true;
             }
-
         }
 
         return false;
