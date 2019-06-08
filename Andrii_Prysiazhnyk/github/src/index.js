@@ -14,12 +14,15 @@ import './styles/Repository-navigation.scss';
 
 import {friendsRepository, recommendedRepository} from './htmlGenerator'
 
-const render = async (containerClass, path, htmlElementCreator) => {
-    const container = document.querySelector(containerClass);
-    const data = await (await fetch(path)).json();
+const generateData = async () => {
+    const user = await (await fetch("api/users/1")).json();
+    const repositories = await (await fetch("api/users/1/repositories")).json();
 
-    data.map(element => container.appendChild(htmlElementCreator(element)));
+    const container1 = document.querySelector(".News-Container");
+    const container2 = document.querySelector(".Sidebar__block-container");
+
+    repositories.map(element => container1.appendChild(friendsRepository(user, element)));
+    repositories.map(element => container2.appendChild(recommendedRepository(user, element)));
 };
 
-render(".News-Container", "friendsRepository", friendsRepository);
-render(".Sidebar__block-container", "recommendedRepository", recommendedRepository);
+generateData();

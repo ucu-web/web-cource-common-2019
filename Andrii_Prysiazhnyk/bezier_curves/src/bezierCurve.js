@@ -20,7 +20,6 @@ export const renderBezierCurve = (container, points) => {
     );
 
   container.call(renderLeadingPoint, points, path);
-  // renderLeadingPoint(container, points, path);
 };
 
 export const renderImmediately = (container, points) => {
