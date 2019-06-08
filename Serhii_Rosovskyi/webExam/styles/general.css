@@ -1,0 +1,23 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: #F9F9F1;
+}
+
+.Layout {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.Layout__container {
+  position: absolute;
+  width: 50vh;
+  height: 50vh;
+  background: #BEB0A7;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 0 0 5px 5px;
+}
+
+/*# sourceMappingURL=general.css.map */
