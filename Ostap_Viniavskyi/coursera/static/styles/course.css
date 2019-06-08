@@ -1,13 +1,16 @@
 .course {
   position: relative;
   height: 270px;
-  width: 270px;
+  min-width: 270px;
+  max-width: 270px;
   padding-top: 130px;
   background-image: url(../images/machine-learning-logo.png);
   background-size: 100% 130px;
+  background-color: white;
   background-repeat: no-repeat;
   box-shadow: 0 1px 6px rgba(31, 31, 31, 0.12), 0 1px 4px rgba(31, 31, 31, 0.12);
-  decoration: none;
+  text-decoration: none;
+  user-select: none;
 }
 .course__course-info {
   box-sizing: border-box;
@@ -16,6 +19,7 @@
   height: calc(100% - 50px);
   margin-top: 50px;
   padding: 0.75rem 1.5rem;
+  -webkit-user-drag: none;
 }
 .course__name {
   margin-bottom: 0.5rem;

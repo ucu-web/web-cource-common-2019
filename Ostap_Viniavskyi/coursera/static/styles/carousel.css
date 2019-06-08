@@ -10,9 +10,14 @@
 }
 .carousel__courses-wrapper {
   grid-area: courses;
+  overflow: hidden;
+  padding: 4px;
+}
+.carousel__courses-movable-wrapper {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  transition-property: transform;
 }
 .carousel__swap-button {
   height: 40px;

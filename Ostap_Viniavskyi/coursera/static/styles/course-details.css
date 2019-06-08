@@ -1,13 +1,13 @@
 .course-details {
-  width: 300px;
-  padding: 1rem 1rem 5rem;
+  width: 320px;
+  padding: 1.5rem 1.5rem 5rem;
   background-color: #ffffff;
   box-shadow: 0 3px 10px rgba(31, 31, 31, 0.16), 0 3px 10px rgba(31, 31, 31, 0.23);
   z-index: 500;
 }
 .course-details__provider-logo {
-  height: 2rem;
-  background: url("../images/stanford-horizontal-logo.png") no-repeat;
+  height: 3rem;
+  background: url("../images/stanford-horizontal-logo.png") no-repeat 0.5rem center;
   margin-bottom: 0.7rem;
 }
 .course-details__name {
@@ -18,11 +18,12 @@
 .course-details__syllabus-button {
   color: #ffffff;
   background-color: #2073d4;
-  font-weight: 700;
+  font-weight: 500;
   border: none;
   border-radius: 2px;
   height: 2.2rem;
   width: 8.5rem;
+  margin-top: 0.5rem;
 }
 .course-details__info-container {
   margin: 1rem 0;
@@ -52,6 +53,31 @@
   margin-bottom: 0.3rem;
   font-size: 0.85rem;
   text-transform: uppercase;
+  font-weight: bold;
+}
+.course-details__rating-container {
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+  margin: 1rem 0;
+}
+.course-details__rating-star {
+  height: 1.2rem;
+  width: 1.2rem;
+  background-repeat: no-repeat;
+  background-size: 1.2rem;
+}
+.course-details__rating-star_full {
+  background-image: url("../images/star.svg");
+}
+.course-details__rating-star_half-empty {
+  background-image: url("../images/star-half-empty.svg");
+}
+.course-details__rating-star_empty {
+  background-image: url("../images/empty-star-.svg");
+}
+.course-details__rating {
+  margin: 0 0.25rem 0 0.5rem;
   font-weight: bold;
 }
 /*# sourceMappingURL=course-details.css.map */

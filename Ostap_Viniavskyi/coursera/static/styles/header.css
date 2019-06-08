@@ -52,24 +52,25 @@ button {
   background-repeat: no-repeat;
 }
 .header__explore-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 0 1rem 0 0.1rem;
   height: 2.5em;
   width: 6.5em;
   margin-right: 3em;
   border: none;
   border-radius: 3px;
+  background-image: url("../images/down-arrow.svg");
+  background-position: bottom 50% right 0.35rem;
+  background-repeat: no-repeat;
+  background-size: 0.8rem;
   background-color: #4285f4;
   color: #ffffff;
   font-weight: 700;
   font-size: 14px;
 }
-.header__explore-more-label {
-  height: 0.8em;
-  width: 0.8em;
-  content: url("../images/down-arrow.svg");
-  padding: 0 0.2em;
+.header__explore-button:hover {
+  background-color: #ffffff;
+  color: #4285f4;
+  background-image: url("../images/down-arrow-blue.svg");
 }
 .header__search-bar {
   display: flex;
@@ -87,6 +88,9 @@ button {
 }
 .header__search-input::placeholder {
   color: hsla(0, 0%, 47%, 0.75);
+}
+.header__search-input:focus {
+  border: 1px solid #4285f4;
 }
 .header__search-submit {
   height: 40px;
@@ -111,6 +115,10 @@ button {
   width: 8em;
   border-right: 1px solid hsla(0, 0%, 47%, 0.75);
   color: hsla(0, 0%, 47%, 0.75);
+}
+.header__navigation-text:hover {
+  text-decoration: underline;
+  text-decoration-color: inherit;
 }
 .header__login-link {
   width: 5em;

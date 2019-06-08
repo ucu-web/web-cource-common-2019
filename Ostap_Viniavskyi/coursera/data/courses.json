@@ -9,7 +9,9 @@
         "place": "100% online",
         "level": "Beginner Level",
         "timings": "57 hours",
-        "skills": "Python, JavaScript, TensorFlow"
+        "skills": "Python, JavaScript, TensorFlow",
+        "rating": 4.7,
+        "votesNumber": 1000
       },
       {
         "name": "Data Science",
@@ -18,7 +20,10 @@
         "place": "100% online",
         "level": "Beginner Level",
         "timings": "57 hours",
-        "skills": "Python, JavaScript, TensorFlow"
+        "skills": "Python, JavaScript, TensorFlow",
+        "rating": 4.7,
+        "votesNumber": 1000
+
       },
       {
         "name": "Algorithms",
@@ -27,16 +32,20 @@
         "place": "100% online",
         "level": "Beginner Level",
         "timings": "57 hours",
-        "skills": "Python, JavaScript, TensorFlow"
+        "skills": "Python, JavaScript, TensorFlow",
+        "rating": 4.7,
+        "votesNumber": 1000
       },
       {
-        "name": "OOP",
+        "name": "Object Oriented Programming",
         "organization": "Stanford University",
         "type": "course",
         "place": "100% online",
         "level": "Beginner Level",
         "timings": "57 hours",
-        "skills": "Python, JavaScript, TensorFlow"
+        "skills": "Python, JavaScript, TensorFlow",
+        "rating": 3.2,
+        "votesNumber": 1000
       },
       {
         "name": "Deep Learning",
@@ -45,7 +54,9 @@
         "place": "100% online",
         "level": "Beginner Level",
         "timings": "57 hours",
-        "skills": "Python, JavaScript, TensorFlow"
+        "skills": "Python, JavaScript, TensorFlow",
+        "rating": 4.7,
+        "votesNumber": 1000
       },
       {
         "name": "Web Design",
@@ -54,7 +65,9 @@
         "place": "100% online",
         "level": "Beginner Level",
         "timings": "57 hours",
-        "skills": "Python, JavaScript, TensorFlow"
+        "skills": "Python, JavaScript, TensorFlow",
+        "rating": 4.7,
+        "votesNumber": 1000
       },
       {
         "name": "Data Bases",
@@ -63,7 +76,9 @@
         "place": "100% online",
         "level": "Beginner Level",
         "timings": "57 hours",
-        "skills": "Python, JavaScript, TensorFlow"
+        "skills": "Python, JavaScript, TensorFlow",
+        "rating": 4.7,
+        "votesNumber": 1000
       },
       {
         "name": "Christianity",
@@ -72,7 +87,9 @@
         "place": "100% online",
         "level": "Beginner Level",
         "timings": "57 hours",
-        "skills": "Python, JavaScript, TensorFlow"
+        "skills": "Python, JavaScript, TensorFlow",
+        "rating": 4.7,
+        "votesNumber": 1000
       },
       {
         "name": "Social Entrepreneurship",
@@ -81,7 +98,9 @@
         "place": "100% online",
         "level": "Beginner Level",
         "timings": "57 hours",
-        "skills": "Python, JavaScript, TensorFlow"
+        "skills": "Python, JavaScript, TensorFlow",
+        "rating": 4.7,
+        "votesNumber": 1000
       }
     ]
   }

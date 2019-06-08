@@ -1,0 +1,42 @@
+.explore-navigation {
+  width: 18rem;
+  padding: 1rem 0 2.5rem;
+  background-color: white;
+  z-index: 500;
+}
+.explore-navigation__topic-links {
+  margin: 0 1rem 1.5em;
+  border-bottom: 1px solid #cccccc;
+}
+.explore-navigation__link {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+  padding: 0.3rem;
+  background-image: url("../images/arrow-right.svg");
+  background-size: 0.6rem;
+  background-repeat: no-repeat;
+  background-position: bottom 50% right 0.3rem;
+}
+.explore-navigation__link_last {
+  margin: 1rem 0 3rem;
+}
+.explore-navigation__link:hover {
+  background-color: #f6f6f6;
+}
+.explore-navigation__main-page-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 3.5rem;
+  width: 14rem;
+  margin-left: 1rem;
+  background-color: #286ec2;
+  color: white;
+  font-weight: 600;
+}
+.explore-navigation__main-page-link:hover {
+  background-color: #005bbe;
+}
+/*# sourceMappingURL=explore-navigation.css.map */

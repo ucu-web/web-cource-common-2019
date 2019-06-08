@@ -81,6 +81,14 @@ button {
   color: #757598;
   text-decoration: none;
 }
+.footer__navigation-link:focus {
+  text-decoration: underline;
+  text-decoration-color: #4a89dc;
+}
+.footer__navigation-link:hover {
+  text-decoration: underline;
+  text-decoration-color: #757598;
+}
 @media (max-width: 992px) {
   .footer {
     flex-wrap: wrap;

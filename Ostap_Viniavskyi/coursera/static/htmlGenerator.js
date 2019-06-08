@@ -1,7 +1,7 @@
-export const generateCourse = (data) => {
-    const container = document.createElement('article');
-    container.className = 'course carousel__course';
-    container.innerHTML = `
+export const generateCourse = data => {
+  const container = document.createElement("article");
+  container.className = "course carousel__course";
+  container.innerHTML = `
     <a class="course__course-info" href="#">
         <h3 class="course__name">${data.name}</h3>
         <span class="course__provider">${data.organization}</span>
@@ -11,29 +11,39 @@ export const generateCourse = (data) => {
         </span>
     </a>
     `;
-    return container;
+  return container;
 };
 
-export const generateCarousel = (data) => {
-    const container = document.createElement('section');
-    container.className = 'carousel layout__carousel';
-    container.innerHTML = `
+export const generateCarousel = data => {
+  const container = document.createElement("section");
+  container.className = "carousel layout__carousel";
+  container.innerHTML = `
     <h2 class="carousel__header">${data.name}</h2>
     <button class="carousel__swap-button carousel__swap-button_left"></button>
-    <div class="carousel__courses-wrapper"></div>
+    <div class="carousel__courses-wrapper">
+      <div class="carousel__courses-movable-wrapper"></div>
+    </div>
     <button class="carousel__swap-button carousel__swap-button_right"></button>
     <nav class="carousel__navigation"></nav>
     `;
-    return container;
+  return container;
 };
 
-export const generateCourseDetails = (data) => {
-    const container = document.createElement('article');
-    container.className = 'course-details';
-    container.innerHTML = `
+export const generateCourseDetails = data => {
+  const container = document.createElement("article");
+  container.className = "course-details";
+  container.innerHTML = `
     <div class="course-details__provider-logo"></div>
     <h3 class="course-details__name">${data.name}</h3>
-    <div class="course-details__rating-container"></div>
+    <div class="course-details__rating-container">
+        <span class="course-details__rating-star"></span>
+        <span class="course-details__rating-star"></span>
+        <span class="course-details__rating-star"></span>
+        <span class="course-details__rating-star"></span>
+        <span class="course-details__rating-star"></span>
+        <span class="course-details__rating">${data.rating}</span>
+        <span class="course-details__votes-number">(${data.votesNumber})</span>
+    </div>
     <button class="course-details__syllabus-button" aria-label="view syllabus of a course">
         View Syllabus
     </button>
@@ -49,5 +59,24 @@ export const generateCourseDetails = (data) => {
         ${data.skills}
     </div>
     `;
-    return container;
+
+  if (data.rating) {
+    const startsElements = container.querySelectorAll(
+      ".course-details__rating-star"
+    );
+    let rating =
+      Math.round(Math.min(startsElements.length, data.rating) * 2) / 2;
+    startsElements.forEach(starEl => {
+      if (rating >= 1) {
+        starEl.classList.add("course-details__rating-star_full");
+      } else if (rating >= 0.5) {
+        starEl.classList.add("course-details__rating-star_half-empty");
+      } else {
+        starEl.classList.add("course-details__rating-star_empty");
+      }
+      rating--;
+    });
+  }
+
+  return container;
 };

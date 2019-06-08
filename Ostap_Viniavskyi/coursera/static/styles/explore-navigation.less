@@ -1,0 +1,48 @@
+.explore-navigation {
+  width: 18rem;
+  padding: 1rem 0 2.5rem;
+  @side-offset: 1rem;
+  background-color: white;
+  z-index: 500;
+
+  &__topic-links {
+    margin: 0 @side-offset 1.5em;
+    border-bottom: 1px solid #cccccc;
+  }
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    font-size: 1rem;
+    padding: 0.3rem;
+    background-image: url("../images/arrow-right.svg");
+    background-size: 0.6rem;
+    background-repeat: no-repeat;
+    background-position: bottom 50% right 0.3rem;
+
+    &_last {
+      margin: 1rem 0 3rem;
+    }
+
+    &:hover {
+      background-color: #f6f6f6;
+    }
+  }
+
+  &__main-page-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 3.5rem;
+    width: 14rem;
+    margin-left: @side-offset;
+    background-color: #286ec2;
+    color: white;
+    font-weight: 600;
+
+    &:hover {
+      background-color: #005bbe;
+    }
+  }
+}

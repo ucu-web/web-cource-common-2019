@@ -12,9 +12,15 @@
 
   &__courses-wrapper {
     grid-area: courses;
+    overflow: hidden;
+    padding: 4px;
+  }
+
+  &__courses-movable-wrapper{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    transition-property: transform;
   }
 
   &__swap-button {

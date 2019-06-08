@@ -49,6 +49,16 @@
     padding: 0.4rem 0;
     color: #757598;
     text-decoration: none;
+
+    &:focus {
+      text-decoration: underline;
+      text-decoration-color: #4a89dc;
+    }
+
+    &:hover {
+      text-decoration: underline;
+      text-decoration-color: #757598;
+    }
   }
 }
 
@@ -66,19 +76,21 @@
   }
 }
 
-@media (min-width: @mobile-version-max-width) and (max-width: @tablet-version-max-width)  {
-  .footer{
+@media (min-width: @mobile-version-max-width) and (max-width: @tablet-version-max-width) {
+  .footer {
     padding: 1rem 10% 0 10%;
-    &__navigation{
+
+    &__navigation {
       width: 20%;
     }
   }
 }
 
 @media (max-width: @mobile-version-max-width) {
-  .footer{
+  .footer {
     padding: 1rem 3% 0 3%;
-    &__navigation{
+
+    &__navigation {
       width: 45%;
     }
   }
