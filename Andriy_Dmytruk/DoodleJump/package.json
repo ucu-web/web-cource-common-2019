@@ -5,8 +5,8 @@
   "main": "static/index.js",
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "start": "npx webpack --watch",
-    "server": "webpack-dev-server",
+    "start": "webpack-dev-server",
+    "save": "npx webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
@@ -16,6 +16,7 @@
     "babel-loader": "^8.0.6",
     "css-loader": "^2.1.1",
     "node-sass": "^4.11.0",
+    "prettier": "1.18.2",
     "sass": "*",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",

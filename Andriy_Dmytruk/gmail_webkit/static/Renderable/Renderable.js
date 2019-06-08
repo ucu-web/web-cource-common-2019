@@ -10,7 +10,7 @@ class Renderable {
 
     renderSafe() {
         if (!this.render) {
-            throw new Error("Each element should have a render function");
+            throw new Error("Each element should have a updateState function");
         }
 
         this.render();
