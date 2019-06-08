@@ -1,4 +1,5 @@
 import "./styles/Platform.scss";
+import {getNewPositionBasedOnDuration} from "./helpers";
 
 class Platform {
   width = 60;
@@ -51,7 +52,7 @@ class Platform {
       }
 
       case "vertical": {
-        this.range = 100 + Math.random() * 200;
+        this.verticalRange = 100 + Math.random() * 200;
         this.velocityY =
           (0.02 + Math.random() * 0.02) * (Math.random > 0.5 ? 1 : -1);
         this.initialY = y;
@@ -73,15 +74,45 @@ class Platform {
     }
   }
 
-  destroy = () => {
+  destroy () {
     this.element.parentNode &&
       this.element.parentNode.removeChild(this.element);
   };
 
-  setPosition = (x, y) => {
+  setPosition (x, y) {
     this.element.style.bottom = y + "px";
     this.element.style.left = x + "px";
   };
+
+  updateState(duration, fieldWidth) {
+    const {x, y, velocityX, velocityY} = getNewPositionBasedOnDuration(this, duration);
+    this.x = x;
+    this.y = y;
+    this.velocityX = velocityX;
+    this.velocityY = velocityY;
+
+    if (x < 0) this.velocityX = Math.abs(this.velocityX);
+    else if (x > fieldWidth - this.width) this.velocityX = -Math.abs(this.velocityX);
+
+    if (this.verticalRange && this.y > this.initialY + this.verticalRange / 2) {
+      this.velocityY = -Math.abs(this.velocityY);
+    } else if (this.verticalRange && this.y < this.initialY - this.verticalRange / 2) {
+      this.velocityY = Math.abs(this.velocityY);
+    }
+
+    if (this.timeBeforeDestroyed !== undefined) this.timeBeforeDestroyed -= duration;
+    if (this.timeBeforeDestroyed < 0) this.canBeJumpedOntoTimes = 0;
+
+    if (this.updateElement) this.updateElement();
+  }
+
+  jumpOnto() {
+    this.jumpedOntoTimes += 1;
+  }
+
+  canBeJumpedOnto() {
+    return this.jumpedOntoTimes < this.canBeJumpedOntoTimes;
+  }
 }
 
 export default Platform;

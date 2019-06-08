@@ -1,13 +1,8 @@
 import "./styles/Field.scss";
 import "./styles/Game.scss";
 
-import {Doodle} from "./Doodle";
+import { Doodle } from "./Doodle";
 import { createDefaultPlatforms, doCollideBottom } from "./helpers";
-import {
-  getNewBulletBasedOnDuration,
-  getNewDoodleBasedOnDuration,
-  getNewPlatformBasedOnDuration
-} from "./objectUpdaters";
 
 export default class Game {
   width = 600;
@@ -34,41 +29,27 @@ export default class Game {
 
     this.field.appendChild(this.doodle.element);
 
-    const handleKeyDown = event => {
-      if (["ArrowLeft", "ArrowRight"].includes(event.key)) {
-        let direction =
-          event.key === "ArrowLeft" ? -1 : event.key === "ArrowRight" ? 1 : 0;
-        this.doodle = {
-          ...this.doodle,
-          velocityX: direction * 0.4
-        };
-      }
-      if (event.key === " ") {
-        const { bullet: newBullet, doodle } = this.doodle.shootBullet(0);
-        this.field.appendChild(newBullet.element);
-        this.bullets = [...this.bullets, newBullet];
-        this.doodle = doodle;
-      }
+
+    const handleKeyDown = ({ key }) => {
+        switch(key) {
+            case "ArrowLeft": return this.doodle.move(-1);
+            case "ArrowRight": return this.doodle.move(1);
+            case " ":
+                const newBullet = this.doodle.shootBullet(0);
+                this.field.appendChild(newBullet.element);
+                this.bullets = [...this.bullets, newBullet];
+        }
     };
 
-    const handleKyeUp = ({ key }) => {
-      const directionMap = {
-        ArrowLeft: -1,
-        ArrowRight: 1
-      };
-      const direction = directionMap[key] || 0;
-
-      this.doodle = {
-        ...this.doodle,
-        velocityX:
-          Math.sign(this.doodle.velocityX) === Math.sign(direction)
-            ? 0
-            : this.doodle.velocityX
-      };
+    const handleKeyUp = ({ key }) => {
+        switch(key) {
+            case "ArrowLeft": return this.doodle.stopMovementInDirection(-1);
+            case "ArrowRight": return this.doodle.stopMovementInDirection(1);
+        }
     };
 
     document.addEventListener("keydown", handleKeyDown);
-    document.addEventListener("keyup", handleKyeUp);
+    document.addEventListener("keyup", handleKeyUp);
   }
 
   displayOnField(object) {
@@ -84,31 +65,18 @@ export default class Game {
   }
 
   updateState(duration) {
-    this.doodle = getNewDoodleBasedOnDuration(
-      this.doodle,
-      duration,
-      this.width
-    );
-    this.platforms = this.platforms
-      .map(p => getNewPlatformBasedOnDuration(p, duration, this.width))
-      .filter(p => this.doesObjectExist(p));
+    this.doodle.updateState(duration, this.width);
+    this.platforms = this.platforms.filter(p => this.doesObjectExist(p));
+    this.platforms.forEach(p => p.updateState(duration, this.width));
 
-    this.bullets = this.bullets
-      .map(b => getNewBulletBasedOnDuration(b, duration))
-      .filter(b => this.doesObjectExist(b));
+    this.bullets = this.bullets.filter(b => this.doesObjectExist(b));
+    this.bullets.forEach(b => b.updateState(duration));
 
-    this.platforms = this.platforms.map(platform => {
+    this.platforms.forEach(platform => {
       if (doCollideBottom(this.doodle, platform, duration)) {
-          console.log("here");
-        if (platform.jumpedOntoTimes < platform.canBeJumpedOntoTimes) {
-          this.doodle = { ...this.doodle, velocityY: 0.5 };
-        }
-        return {
-          ...platform,
-          jumpedOntoTimes: platform.jumpedOntoTimes + 1
-        };
+        if (platform.canBeJumpedOnto()) this.doodle.jump();
+        platform.jumpOnto();
       }
-      return platform;
     });
 
     // display
@@ -122,8 +90,8 @@ export default class Game {
 
     this.displayOnField(this.doodle);
 
-    this.platforms.map(p => this.displayOnField(p));
-    this.bullets.map(b => this.displayOnField(b));
+    this.platforms.forEach(p => this.displayOnField(p));
+    this.bullets.forEach(b => this.displayOnField(b));
   }
 
   renderAnimationFrame() {
