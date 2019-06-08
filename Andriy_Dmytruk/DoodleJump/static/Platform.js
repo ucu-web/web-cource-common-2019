@@ -1,88 +1,86 @@
 import "./styles/Platform.scss";
 
-const createPlatformElement = className => {
-  const element = document.createElement("div");
-  element.classList.add(className);
-  return element;
-};
+class Platform {
+  width = 60;
+  height = 10;
+  canBeJumpedOntoTimes = Infinity;
+  jumpedOntoTimes = 0;
 
-const createBasicPlatform = (x, y, type) => ({
-  x,
-  y,
-  width: 60,
-  height: 10,
-  canBeJumpedOntoTimes: Infinity,
-  jumpedOntoTimes: 0,
-  element: createPlatformElement(`platform__${type}`),
-  setPosition: (platform, x, y) => {
-    platform.element.style.bottom = y + "px";
-    platform.element.style.left = x + "px";
-  },
-  deleteElement: (platform) => platform.element.parentNode && platform.element.parentNode.removeChild(platform.element)
-});
+  constructor(x, y, type) {
+    this.element = document.createElement("div");
+    this.element.className = `platform__${type}`;
 
-export const createPlatform = (x, y, type) => {
-  const platform = createBasicPlatform(x, y, type);
+    this.x = x;
+    this.y = y;
 
-  switch (type) {
-    case "static":
-      return platform;
+    switch (type) {
+      case "static":
+        break;
 
-    case "breaking":
-      platform.element.innerHTML = `<div class="platform__breaking-left"></div><div class="platform__breaking-right"></div>`;
-      return {
-        ...platform,
-        canBeJumpedOntoTimes: 0,
-        updateElement: platform => {
-          if (platform.jumpedOntoTimes > 0) {
-            platform.element
+      case "breaking": {
+        this.element.innerHTML = `<div class="platform__breaking-left"></div><div class="platform__breaking-right"></div>`;
+
+        this.canBeJumpedOntoTimes = 0;
+        this.updateElement = () => {
+          if (this.jumpedOntoTimes > 0) {
+            this.element
               .querySelector(".platform__breaking-left")
               .classList.add("platform__broken-left");
-            platform.element
+            this.element
               .querySelector(".platform__breaking-right")
               .classList.add("platform__broken-right");
           }
-        }
-      };
+        };
+        break;
+      }
 
-    case "disappearing":
-      return {
-        ...platform,
-        canBeJumpedOntoTimes: 1,
-        updateElement: platform => {
-          if (platform.jumpedOntoTimes > 0) {
-            platform.element.classList.add("platform__disappeared");
+      case "disappearing": {
+        this.canBeJumpedOntoTimes = 1;
+        this.updateElement = () => {
+          if (this.jumpedOntoTimes > 0) {
+            this.element.classList.add("platform__disappeared");
           }
-        }
-      };
+        };
+        break;
+      }
 
-    case "horizontal":
-      return {
-        ...platform,
-        velocityX: (0.02 + Math.random() * 0.06) * (Math.random > 0.5 ? 1 : -1)
-      };
+      case "horizontal": {
+        this.velocityX =
+          (0.02 + Math.random() * 0.06) * (Math.random > 0.5 ? 1 : -1);
+        break;
+      }
 
-    case "vertical":
-      return {
-        ...platform,
-        range: 100 + Math.random() * 200,
-        velocityY: (0.02 + Math.random() * 0.02) * (Math.random > 0.5 ? 1 : -1),
-        initialY: y
-      };
+      case "vertical": {
+        this.range = 100 + Math.random() * 200;
+        this.velocityY =
+          (0.02 + Math.random() * 0.02) * (Math.random > 0.5 ? 1 : -1);
+        this.initialY = y;
+      }
 
-    case "destructing":
-      return {
-        ...platform,
-        timeBeforeDestroyed: 2000 + Math.random() * 4000,
-
-        updateElement: platform => {
-          if (platform.timeBeforeDestroyed < 1000) {
-            platform.element.classList.add("platform__destructing_alert");
+      case "destructing": {
+        this.timeBeforeDestroyed = 2000 + Math.random() * 4000;
+        this.updateElement = () => {
+          if (this.timeBeforeDestroyed < 1000) {
+            this.element.classList.add("platform__destructing_alert");
           }
-          if (platform.timeBeforeDestroyed <= 0) {
-            platform.element.classList.add("platform__destroyed");
+          if (this.timeBeforeDestroyed <= 0) {
+            this.element.classList.add("platform__destroyed");
           }
-        }
-      };
+        };
+      }
+    }
   }
-};
+
+  destroy = () => {
+    this.element.parentNode &&
+      this.element.parentNode.removeChild(this.element);
+  };
+
+  setPosition = (__, x, y) => {
+    //TODO: remove first argument
+    this.element.style.bottom = y + "px";
+    this.element.style.left = x + "px";
+  };
+}
+
+export default Platform;

@@ -27,7 +27,6 @@ export default class Game {
        </div>     
     `;
 
-
     this.field = container.querySelector(".field");
     this.platforms.forEach(p => this.field.appendChild(p.element));
 
@@ -80,7 +79,7 @@ export default class Game {
     const exists =
       object.y > this.fieldBottom &&
       object.y < this.fieldBottom + this.height * 3;
-    if (!exists) object.deleteElement(object);
+    if (!exists) object.destroy();
     return exists;
   }
 

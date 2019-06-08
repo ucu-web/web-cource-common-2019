@@ -1,4 +1,4 @@
-import {createPlatform} from "./Platform";
+import Platform from "./Platform";
 
 export const getNewPositionBasedOnDuration = (object, duration) => ({
   x: (object.x || 0) + (object.velocityX || 0) * duration,
@@ -37,13 +37,11 @@ export const doCollide = (A, B) =>
   doCollideOneDimension(A.x, A.x + A.width, B.x, B.x + B.width) &&
   doCollideOneDimension(A.y, A.y + A.height, B.y, B.y + B.height);
 
-export const createDefaultPlatforms = () => {
-  return [
-    createPlatform(270, 100, "static"),
-    createPlatform(200, 300, "breaking"),
-    createPlatform(400, 300, "vertical"),
-    createPlatform(300, 500, "disappearing"),
-    createPlatform(200, 600, "horizontal"),
-    createPlatform(30, 50, "destructing")
-  ];
-};
+export const createDefaultPlatforms = () => [
+  new Platform(270, 100, "static"),
+  new Platform(200, 300, "breaking"),
+  new Platform(400, 300, "vertical"),
+  new Platform(300, 500, "disappearing"),
+  new Platform(200, 600, "horizontal"),
+  new Platform(30, 50, "destructing")
+];
