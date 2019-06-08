@@ -1,0 +1,130 @@
+body {
+  background-color: #0747A6;
+  font-family: "Charlie Text Regular", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Droid Sans, "Helvetica Neue", sans-serif;
+}
+.Login {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  min-height: 500px;
+  width: 400px;
+  margin: 0 auto;
+}
+.Login__header {
+  margin-top: 48px;
+  text-align: center;
+  color: #deebff;
+  display: block;
+}
+.Login__header-title {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  margin-top: 40px;
+}
+.Login__logo {
+  padding: 0 60px;
+  color: #ffffff;
+  display: inline-block;
+  fill: #ffffff;
+  height: 48px;
+  position: relative;
+}
+.Login__form {
+  margin: 48px 0;
+}
+.Login__box {
+  background: #ffffff none repeat scroll 0% 0%;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 10px;
+  box-sizing: border-box;
+  color: #172b4d;
+  padding: 48px;
+}
+.Login__box-google {
+  margin-bottom: 24px;
+}
+.Login__box-google-btn {
+  text-align: center;
+  max-width: 100%;
+  opacity: 1;
+  line-height: 39px !important;
+  color: #505f79 !important;
+  cursor: default;
+  box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 5px 0px !important;
+  font-weight: bold;
+  align-items: baseline;
+  background-color: #ffffff;
+  border-radius: 3px;
+  border-width: 0;
+  box-sizing: border-box;
+  font-size: inherit;
+  font-style: normal;
+  height: 2.28571em;
+  outline: currentcolor none medium !important;
+  padding: 0 8px;
+  text-decoration: none;
+  vertical-align: middle;
+  width: 100%;
+}
+.Login__box-submit {
+  margin: 12px 0 0;
+  padding: 0;
+  color: #172b4d;
+}
+.Login__box-email {
+  margin-top: 0;
+  align-items: center;
+  background-color: #fafbfc;
+  border-color: #dfe1e6;
+  border-radius: 3px;
+  border-style: solid;
+  box-sizing: border-box;
+  color: #091e42;
+  display: flex;
+  flex: 1 0 auto;
+  font-size: 14px;
+  justify-content: space-between;
+  line-height: 1.42857;
+  max-width: 100%;
+  overflow: hidden;
+  transition: background-color 0.2s ease-in-out 0s, border-color 0.2s ease-in-out 0s;
+  overflow-wrap: break-word;
+  border-width: 2px;
+  padding: 6px;
+}
+.Login__box-email-field {
+  background: transparent none repeat scroll 0 0;
+  border: 0 none;
+  box-sizing: border-box;
+  color: inherit;
+  cursor: inherit;
+  font-family: inherit;
+  font-size: 14px;
+  outline: currentcolor none medium;
+  width: 100%;
+}
+.Login__box-continue {
+  margin-top: 24px;
+}
+.Login__box-continue-btn {
+  height: 39px !important;
+  line-height: 39px !important;
+  background-color: #0052cc;
+  border-radius: 3px;
+  border-width: 0;
+  box-sizing: border-box;
+  color: #ffffff !important;
+  cursor: default;
+  font-size: inherit;
+  font-style: normal;
+  max-width: 100%;
+  padding: 0 8px;
+  text-align: center;
+  width: 100%;
+}
+.Login__box-continue-btn:hover {
+  background-color: #0065ff;
+  cursor: pointer;
+}
+/*# sourceMappingURL=login.css.map */
