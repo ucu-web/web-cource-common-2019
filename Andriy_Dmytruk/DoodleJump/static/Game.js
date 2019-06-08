@@ -1,7 +1,7 @@
 import "./styles/Field.scss";
 import "./styles/Game.scss";
 
-import { createDoodle, shootBullet } from "./Doodle";
+import {Doodle} from "./Doodle";
 import { createDefaultPlatforms, doCollideBottom } from "./helpers";
 import {
   getNewBulletBasedOnDuration,
@@ -30,7 +30,7 @@ export default class Game {
     this.field = container.querySelector(".field");
     this.platforms.forEach(p => this.field.appendChild(p.element));
 
-    this.doodle = createDoodle(width / 2, height / 2);
+    this.doodle = new Doodle(width / 2, height / 2);
 
     this.field.appendChild(this.doodle.element);
 
@@ -44,7 +44,7 @@ export default class Game {
         };
       }
       if (event.key === " ") {
-        const { bullet: newBullet, doodle } = shootBullet(this.doodle, 0);
+        const { bullet: newBullet, doodle } = this.doodle.shootBullet(0);
         this.field.appendChild(newBullet.element);
         this.bullets = [...this.bullets, newBullet];
         this.doodle = doodle;
@@ -72,7 +72,7 @@ export default class Game {
   }
 
   displayOnField(object) {
-    object.setPosition(object, object.x, object.y - this.fieldBottom);
+    object.setPosition(object.x, object.y - this.fieldBottom);
   }
 
   doesObjectExist(object) {
@@ -99,6 +99,7 @@ export default class Game {
 
     this.platforms = this.platforms.map(platform => {
       if (doCollideBottom(this.doodle, platform, duration)) {
+          console.log("here");
         if (platform.jumpedOntoTimes < platform.canBeJumpedOntoTimes) {
           this.doodle = { ...this.doodle, velocityY: 0.5 };
         }

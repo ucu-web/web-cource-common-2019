@@ -12,24 +12,14 @@ export const doCollideOneDimension = (firstX1, firstX2, secondX1, secondX2) =>
   (secondX1 <= firstX2 && firstX2 <= secondX2) ||
   (firstX1 <= secondX1 && secondX1 <= firstX2);
 
-export const doCollideBottom = (first, second, duration) => {
-  if (first.velocityY >= 0) return false;
+export const doCollideBottom = (A, B, duration) => {
+  if (A.velocityY >= 0) return false;
 
-  const precision = Math.abs(first.velocityY - second.velocityY) * duration;
+  const err = Math.abs(A.velocityY - B.velocityY) * duration;
 
   return (
-    doCollideOneDimension(
-      first.x,
-      first.x + first.width,
-      second.x,
-      second.x + second.width
-    ) &&
-    doCollideOneDimension(
-      first.y - precision,
-      first.y + precision,
-      second.y + second.height,
-      second.y + second.height
-    )
+    doCollideOneDimension(A.x, A.x + A.width, B.x, B.x + B.width) &&
+    doCollideOneDimension(A.y - err, A.y + err, B.y + B.height, B.y + B.height)
   );
 };
 

@@ -1,5 +1,4 @@
 import { getNewPositionBasedOnDuration } from "./helpers";
-import { updateDoodleElement } from "./Doodle";
 
 export const getNewDoodleBasedOnDuration = (doodle, duration, fieldWidth) => {
   const position = getNewPositionBasedOnDuration(doodle, duration);
@@ -17,7 +16,7 @@ export const getNewDoodleBasedOnDuration = (doodle, duration, fieldWidth) => {
     lastNoseRotate: doodle.lastNoseRotate + duration
   };
 
-  updateDoodleElement(newDoodle);
+  newDoodle.updateElement();
   return newDoodle;
 };
 

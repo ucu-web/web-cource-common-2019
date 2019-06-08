@@ -55,6 +55,7 @@ class Platform {
         this.velocityY =
           (0.02 + Math.random() * 0.02) * (Math.random > 0.5 ? 1 : -1);
         this.initialY = y;
+        break;
       }
 
       case "destructing": {
@@ -67,6 +68,7 @@ class Platform {
             this.element.classList.add("platform__destroyed");
           }
         };
+        break;
       }
     }
   }
@@ -76,8 +78,7 @@ class Platform {
       this.element.parentNode.removeChild(this.element);
   };
 
-  setPosition = (__, x, y) => {
-    //TODO: remove first argument
+  setPosition = (x, y) => {
     this.element.style.bottom = y + "px";
     this.element.style.left = x + "px";
   };
