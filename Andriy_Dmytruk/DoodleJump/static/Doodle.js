@@ -91,7 +91,7 @@ export class Doodle {
     }
   }
 
-  updateState(duration, fieldWidth) {
+  updateState(duration, fieldWidth, translatePosition) {
     const { x, y, velocityX, velocityY } = getNewPositionBasedOnDuration(this, duration);
     this.x = x;
     this.y = y;
@@ -105,6 +105,10 @@ export class Doodle {
     this.lastNoseRotate += duration;
 
     this.updateElement();
+
+    const {x: translatedX, y: translatedY} = translatePosition(x, y);
+    this.element.style.bottom = translatedY + "px";
+    this.element.style.left = translatedX + "px";
   }
 
   move(direction) {

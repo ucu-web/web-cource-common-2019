@@ -1,5 +1,5 @@
 import "./styles/Platform.scss";
-import {getNewPositionBasedOnDuration} from "./helpers";
+import { getNewPositionBasedOnDuration } from "./helpers";
 
 class Platform {
   width = 60;
@@ -74,36 +74,42 @@ class Platform {
     }
   }
 
-  destroy () {
+  destroy() {
     this.element.parentNode &&
       this.element.parentNode.removeChild(this.element);
-  };
+  }
 
-  setPosition (x, y) {
-    this.element.style.bottom = y + "px";
-    this.element.style.left = x + "px";
-  };
 
-  updateState(duration, fieldWidth) {
-    const {x, y, velocityX, velocityY} = getNewPositionBasedOnDuration(this, duration);
+  updateState(duration, xRestriction, translatePosition) {
+    const { x, y, velocityX, velocityY } =
+        getNewPositionBasedOnDuration(this, duration);
     this.x = x;
     this.y = y;
     this.velocityX = velocityX;
     this.velocityY = velocityY;
 
     if (x < 0) this.velocityX = Math.abs(this.velocityX);
-    else if (x > fieldWidth - this.width) this.velocityX = -Math.abs(this.velocityX);
+    else if (x > xRestriction - this.width)
+      this.velocityX = -Math.abs(this.velocityX);
 
     if (this.verticalRange && this.y > this.initialY + this.verticalRange / 2) {
       this.velocityY = -Math.abs(this.velocityY);
-    } else if (this.verticalRange && this.y < this.initialY - this.verticalRange / 2) {
+    } else if (
+      this.verticalRange &&
+      this.y < this.initialY - this.verticalRange / 2
+    ) {
       this.velocityY = Math.abs(this.velocityY);
     }
 
-    if (this.timeBeforeDestroyed !== undefined) this.timeBeforeDestroyed -= duration;
+    if (this.timeBeforeDestroyed !== undefined)
+      this.timeBeforeDestroyed -= duration;
     if (this.timeBeforeDestroyed < 0) this.canBeJumpedOntoTimes = 0;
 
     if (this.updateElement) this.updateElement();
+
+    const {x: translatedX, y: translatedY} = translatePosition(x, y);
+    this.element.style.bottom = translatedY + "px";
+    this.element.style.left = translatedX + "px";
   }
 
   jumpOnto() {

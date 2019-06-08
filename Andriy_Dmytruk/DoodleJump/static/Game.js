@@ -29,32 +29,35 @@ export default class Game {
 
     this.field.appendChild(this.doodle.element);
 
-
     const handleKeyDown = ({ key }) => {
-        switch(key) {
-            case "ArrowLeft": return this.doodle.move(-1);
-            case "ArrowRight": return this.doodle.move(1);
-            case " ":
-                const newBullet = this.doodle.shootBullet(0);
-                this.field.appendChild(newBullet.element);
-                this.bullets = [...this.bullets, newBullet];
-        }
+      switch (key) {
+        case "ArrowLeft":
+          return this.doodle.move(-1);
+        case "ArrowRight":
+          return this.doodle.move(1);
+        case " ":
+          const newBullet = this.doodle.shootBullet(0);
+          this.field.appendChild(newBullet.element);
+          this.bullets = [...this.bullets, newBullet];
+      }
     };
 
     const handleKeyUp = ({ key }) => {
-        switch(key) {
-            case "ArrowLeft": return this.doodle.stopMovementInDirection(-1);
-            case "ArrowRight": return this.doodle.stopMovementInDirection(1);
-        }
+      switch (key) {
+        case "ArrowLeft":
+          return this.doodle.stopMovementInDirection(-1);
+        case "ArrowRight":
+          return this.doodle.stopMovementInDirection(1);
+      }
     };
 
     document.addEventListener("keydown", handleKeyDown);
     document.addEventListener("keyup", handleKeyUp);
   }
 
-  displayOnField(object) {
-    object.setPosition(object.x, object.y - this.fieldBottom);
-  }
+  translatePosition = (x, y) => {
+      return {x, y: y - this.fieldBottom};
+  };
 
   doesObjectExist(object) {
     const exists =
@@ -65,12 +68,12 @@ export default class Game {
   }
 
   updateState(duration) {
-    this.doodle.updateState(duration, this.width);
+    this.doodle.updateState(duration, this.width, this.translatePosition);
     this.platforms = this.platforms.filter(p => this.doesObjectExist(p));
-    this.platforms.forEach(p => p.updateState(duration, this.width));
+    this.platforms.forEach(p => p.updateState(duration, this.width, this.translatePosition));
 
     this.bullets = this.bullets.filter(b => this.doesObjectExist(b));
-    this.bullets.forEach(b => b.updateState(duration));
+    this.bullets.forEach(b => b.updateState(duration, this.translatePosition));
 
     this.platforms.forEach(platform => {
       if (doCollideBottom(this.doodle, platform, duration)) {
@@ -87,11 +90,6 @@ export default class Game {
       this.fieldBottom =
         this.doodle.y - this.height / 2 + this.doodle.height / 2;
     }
-
-    this.displayOnField(this.doodle);
-
-    this.platforms.forEach(p => this.displayOnField(p));
-    this.bullets.forEach(b => this.displayOnField(b));
   }
 
   renderAnimationFrame() {

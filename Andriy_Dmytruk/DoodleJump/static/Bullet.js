@@ -14,22 +14,21 @@ export default class Bullet {
         this.element.className = "bullet";
     }
 
-    setPosition(x, y) {
-        this.element.style.bottom = y + "px";
-        this.element.style.left = x + "px";
-    };
-
     destroy() {
         this.element.parentNode &&
         this.element.parentNode.removeChild(this.element);
     }
 
-    updateState(duration) {
+    updateState(duration, translatePosition) {
         const { x, y, velocityX, velocityY } = getNewPositionBasedOnDuration(this, duration);
         this.x = x;
         this.y = y;
         this.velocityX = velocityX;
         this.velocityY = velocityY;
+
+        const {x: translatedX, y: translatedY} = translatePosition(x, y);
+        this.element.style.bottom = translatedY + "px";
+        this.element.style.left = translatedX + "px";
     }
 }
 
