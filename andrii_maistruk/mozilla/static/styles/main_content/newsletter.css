@@ -27,7 +27,7 @@
     text-align: center;
 }
 
-.newsletter__image-wrapper img {
+.newsletter__image {
     height: auto;
     max-width: 100%;
 }

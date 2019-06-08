@@ -18,10 +18,9 @@
     <link href="static/styles/footer/footer_sections.css" rel="stylesheet" type="text/css">
     <link href="static/styles/footer/language_form.css" rel="stylesheet" type="text/css">
     <script src="static/js/form.js" defer></script>
+    <script src="static/js/format_input.js" defer></script>
 </head>
-
 <body>
-
 <header class="top-navigation-bar">
     <a href="index.html">
         <img class="top-navigation-bar__img" alt="logo_image" src="static/images/black_mozilla_icon.svg">
@@ -49,9 +48,7 @@
                href="https://www.mozilla.org/en-US/firefox/accounts/">Learn more</a>
         </p>
     </section>
-
     <div class="main-content__articles">
-        <!-- Big and small posts in a row -->
         <section class="main-content__article main-content__article_big">
             <a class="main-content__link" href="https://www.mozilla.org/en-US/firefox/">
                 <img class="main-content__img" alt="image" src="static/images/firefox-quantum.jpg">
@@ -78,7 +75,6 @@
                 </div>
             </a>
         </section>
-        <!-- Three small posts in a row -->
         <section class="main-content__article">
             <a class="main-content__link"
                href="https://blog.mozilla.org/firefox/when-an-internet-emergency-strikes/?utm_source=www.mozilla.org&utm_medium=referral&utm_campaign=homepage&utm_content=card">
@@ -118,7 +114,6 @@
             </a>
         </section>
     </div>
-    <!--Billboard post-->
     <section class="billboard">
         <div class="billboard__wrapper">
             <div class="billboard__image-container">
@@ -136,7 +131,6 @@
         </div>
     </section>
     <div class="main-content__article_col_two">
-        <!--Two medium sized posts after billboard-->
         <section class="main-content__article">
             <a class="main-content__link"
                href="https://irlpodcast.org/season4/episode6/?utm_source=www.mozilla.org&utm_medium=referral&utm_campaign=homepage&utm_content=card">
@@ -162,7 +156,6 @@
             </a>
         </section>
     </div>
-    <!-- four aside posts in a row -->
     <aside class="aside-pocket">
         <div class="aside-pocket__header">
             <h3 class="aside-pocket__heading">What we are reading:</h3>
@@ -214,7 +207,6 @@
             </section>
         </div>
     </aside>
-    <!-- Two medium sized posts in a row -->
     <div class="main-content__article_col_two">
         <section class="main-content__article">
             <a class="main-content__link"
@@ -241,7 +233,6 @@
             </a>
         </section>
     </div>
-    <!-- Billboard post -->
     <section class="billboard">
         <div class="billboard__wrapper">
             <div class="billboard__content-wrapper">
@@ -257,7 +248,6 @@
             </div>
         </div>
     </section>
-    <!-- Two medium sized posts in a row -->
     <div class="main-content__article_col_two">
         <section class="main-content__article">
             <a class="main-content__link"
@@ -284,7 +274,6 @@
             </a>
         </section>
     </div>
-    <!-- Billboard post -->
     <section class="billboard">
         <div class="billboard__wrapper">
             <div class="billboard__image-container">
@@ -299,7 +288,6 @@
             </div>
         </div>
     </section>
-    <!-- Two medium sized posts in a row -->
     <div class="main-content__article_col_two">
         <section class="main-content__article">
             <a class="main-content__link" href="https://monitor.firefox.com">
@@ -324,36 +312,34 @@
             </a>
         </section>
     </div>
-    <!-- Sign up form -->
     <aside class="newsletter">
         <div class="newsletter__image-wrapper">
-            <img alt="image"
+            <img class="newsletter__image" alt="image"
                  src="https://www.mozilla.org/media/img/home/2018/newsletter-graphic-high-res.dfdd8a0a8b68.png">
         </div>
-        <form class="newsletter__form">
-            <header>
-                <h3>Love the Web?</h3>
-                <p>Get the Mozilla newsletter and help us keep it open and free.</p>
+        <form class="newsletter__form" action="/" method="POST">
+            <header class="newsletter__form-header">
+                <h3 class="newsletter__form-question">Love the Web?</h3>
+                <p class="newsletter__form-note">Get the Mozilla newsletter and help us keep it open and free.</p>
             </header>
-            <fieldset>
-                <p>
-                    <label for="id_email">Your email address</label>
-                    <input class="newsletter_input" id="id_email" name="email" placeholder="yourname@example.com"
-                           required="required" type="email"/>
-                </p>
-                <div id="sign_up_details">
-                    <p>
-                        <label for="id_country">Enter your country</label>
+            <fieldset class="newsletter__form-info">
+                <label for="id_email">Your email address</label>
+                <input class="newsletter__form-input" id="id_email" name="email" placeholder="yourname@example.com"
+                       required="required" type="email"/>
+
+                <div class="newsletter__form-details" id="sign_up_details">
+                    <p class="newsletter__form-country">
+                        <label for="id_country"></label>
                         <select aria-required="true" id="id_country" name="country" required="required">
+                            <option value="ua">Ukraine</option>
                             <option value="fi">Finland</option>
                             <option value="fr">France</option>
                             <option value="ch">Switzerland</option>
-                            <option value="ua">Ukraine</option>
                             <option value="gb">United Kingdom</option>
                         </select>
                     </p>
-                    <p>
-                        <label for="id_lang">Enter your language</label>
+                    <p class="newsletter__form-lang">
+                        <label for="id_lang"></label>
                         <select aria-required="true" id="id_lang" name="lang" required="required">
                             <option value="de">Deutsch</option>
                             <option value="en" selected="selected">English</option>
@@ -361,14 +347,14 @@
                             <option value="fr">Français</option>
                         </select>
                     </p>
-                    <fieldset>
+                    <fieldset class="newsletter__form-format">
                         <legend>Format</legend>
                         <p>
-                            <label for="format-html">
-                                <input type="radio" id="format-html" checked> HTML
+                            <label class="newsletter__label" for="format-html">
+                                <input class="" type="radio" onclick="format_input(0)" id="format-html" value="H" checked=""> HTML
                             </label>
-                            <label for="format-text">
-                                <input type="radio" id="format-text"> Text
+                            <label class="newsletter__label" for="format-text">
+                                <input type="radio" id="format-text" onclick="format_input(1)" value="T"> Text
                             </label>
                         </p>
                         <p>
@@ -381,14 +367,11 @@
                         </p>
                     </fieldset>
                 </div>
-                <div>
-                    <button class="newsletter__submit-button" type="submit" onclick="show_details()">
-                        <span>Sign up now</span></button>
-                    <span>We will only send you Mozilla-related information.</span>
-                </div>
+                <button class="newsletter__submit-button" type="submit" onclick="show_details()">
+                    <span>Sign up now</span></button>
+                <span>We will only send you Mozilla-related information.</span>
             </fieldset>
         </form>
-
     </aside>
     <section class="mozilla_call_out">
         <div>
@@ -473,7 +456,8 @@
                 <li class="footer_terms_item"><a class="footer_terms_link" href="">Website Privacy Notice</a></li>
                 <li class="footer_terms_item"><a class="footer_terms_link" href="">Cookies</a></li>
                 <li class="footer_terms_item"><a class="footer_terms_link" href="">Legal</a></li>
-                <li class="footer_terms_item"><a class="footer_terms_link" href="">Community Participation
+                <li class="footer_terms_item"><a class="footer_terms_link" href="">
+                    Community Participation
                     Guidelines</a>
                 </li>
             </ul>

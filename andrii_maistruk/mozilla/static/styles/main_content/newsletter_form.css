@@ -7,29 +7,29 @@
     padding: 104px 84px 0 0;
 }
 
-.newsletter__form header {
+.newsletter__form-header {
     display: block;
     margin-top: 10%;
 }
 
-.newsletter__form header h3 {
+.newsletter__form-question {
     font-size: 2.25rem;
     line-height: 1.1111;
     margin-bottom: .25em;
 
 }
 
-.newsletter__form header p {
+.newsletter__form-note {
     margin: 0 0 1.25em;
 }
 
-.newsletter__form fieldset {
+.newsletter__form-info {
     border: 0;
     margin: 0;
     padding: 0;
 }
 
-.newsletter__form fieldset p input {
+.newsletter__form-input {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -40,18 +40,45 @@
     line-height: 1.25;
     padding: .25em 8px;
     width: 100%;
+    margin-bottom: 10px
 }
 
-#sign_up_details {
+.newsletter__form-details {
     visibility: hidden;
     display: none;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #000;
+    font-family: "Open Sans", X-LocaleSpecific, sans-serif;
 }
 
-
-.newsletter__form div {
-    text-align: center;
-    padding: 0;
+.newsletter__form-country {
     margin: 0 0 1.25em;
+    padding: 0;
+}
+
+.newsletter__form-lang {
+
+}
+
+#id_country, #id_lang {
+    width: 100%;
+}
+
+.newsletter__form-format {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #000;
+    font-family: "Open Sans",X-LocaleSpecific,sans-serif;
+}
+
+.newsletter__label {
+    display: inline;
+    font-weight: 400;
+    margin: 0 0 .25em;
 }
 
 .newsletter__submit-button {
@@ -74,17 +101,9 @@
 }
 
 .newsletter__submit-button:hover {
-    -webkit-transform: translate(-2px,-2px);
-    transform: translate(-2px,-2px);
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
     background-color: #fff;
     box-shadow: 4px 4px 0 0 #000;
     color: #000;
-}
-
-.newsletter__form fieldset p span {
-    font-size: .875rem;
-    line-height: 1.285;
-    color: #4a4a4f;
-    display: block;
-    font-weight: 400;
 }
