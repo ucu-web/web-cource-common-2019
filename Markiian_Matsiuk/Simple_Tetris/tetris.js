@@ -1,5 +1,9 @@
 const figureI = [[1, 1, 1, 1]];
-const figureJ = [[1, 0, 0], [1, 1, 1]];
+//prettier-ignore
+const figureJ = [
+    [1, 0, 0],
+    [1, 1, 1]
+];
 const figureL = [[0, 0, 1], [1, 1, 1]];
 const figureO = [[1, 1], [1, 1]];
 const figureS = [[0, 1, 1], [1, 1, 0]];
@@ -21,55 +25,46 @@ spaceBetweenBlocks = 3;
 height = Math.floor(window.innerHeight / (blockSize + spaceBetweenBlocks)) - 1;
 width = Math.floor(window.innerWidth / (blockSize + spaceBetweenBlocks)) - 1;
 
-const rotateMatrix = matrix => {
-  let result = [];
-  for (let i = 0; i < matrix[0].length; i++) {
-    let row = matrix.map(e => e[i]).reverse();
-    result.push(row);
-  }
-  return result;
-};
-const incrustBlock = (coordinates, originalMatrix, block) => {
-  if (
-    coordinates[0] + block[0].length > originalMatrix[0].length ||
-    coordinates[1] + block.length > originalMatrix.length
-  ) {
-    return false;
-  }
-  // Check place available
-  let flag = 0;
-  block.forEach((row, indexY) => {
-    row.forEach((element, indexX) => {
-      if (
-        element !== 0 &&
-        originalMatrix[indexY + coordinates[1]][indexX + coordinates[0]] !== 0
-      ) {
-        flag = 1;
-      }
-    });
-  });
+const rotateMatrix = matrix =>
+  matrix[0].map((_, i) => matrix.map(e => e[i]).reverse());
 
-  if (flag) return false;
+const OCCUPIED = 0;
+
+const checkPlaceAvailable = (block, originalMatrix, [x, y]) =>
+  block.reduce(
+    (flag, row, deltaY) =>
+      row.reduce(
+        (flag, element, deltaX) =>
+          element !== OCCUPIED &&
+          originalMatrix[deltaY + y][deltaX + x] !== OCCUPIED
+            ? true
+            : flag,
+        flag
+      ),
+    false
+  );
+
+const isOutOfFrame = (block, originalMatrix, [x, y]) =>
+  x + block[0].length > originalMatrix[0].length ||
+  y + block.length > originalMatrix.length;
+
+const incrustBlock = ([x, y], originalMatrix, block) => {
+  if (isOutOfFrame(block, originalMatrix, [x, y])) return false;
+  if (checkPlaceAvailable(block, originalMatrix, [x, y])) return false;
 
   // Incrust block
   block.forEach((row, indexY) => {
     row.forEach((element, indexX) => {
-      if (element !== 0) {
-        originalMatrix[indexY + coordinates[1]][
-          indexX + coordinates[0]
-        ] = element;
-      }
+      if (element !== 0) originalMatrix[indexY + y][indexX + x] = element;
     });
   });
+
   return true;
 };
+
 const deleteBlock = (coordinates, originalMatrix, block) => {
-  if (
-    coordinates[0] + block[0].length > originalMatrix[0].length ||
-    coordinates[1] + block.length > originalMatrix.length
-  ) {
-    return false;
-  }
+  if (isOutOfFrame(block, originalMatrix, [x, y])) return false;
+
   block.forEach((row, indexY) => {
     row.forEach((element, indexX) => {
       if (element === 1) {
@@ -337,7 +332,5 @@ class TetrisGame {
     }
   }
 }
-
-
 
 const tetris = new TetrisGame(document.querySelector(".tetris"), "You");
