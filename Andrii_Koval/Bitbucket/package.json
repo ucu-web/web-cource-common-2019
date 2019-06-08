@@ -2,7 +2,7 @@
   "name": "bitbucket",
   "version": "1.0.0",
   "description": "Web course project",
-  "main": "static/index.js",
+  "main": "index.js",
   "dependencies": {
     "body-parser": "latest",
     "css-loader": "^2.1.1",

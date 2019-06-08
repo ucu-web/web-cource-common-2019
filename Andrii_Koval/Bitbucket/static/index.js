@@ -13,9 +13,9 @@ import './styles/pricing.less'
 import {loginForm} from './components/login/Login'
 
 const path_name = window.location.pathname;
+const app = document.getElementsByTagName("body");
 
-if (path_name === "/login") {
-    document.getElementsByTagName("body")[0].innerHTML = "";
-    document.appendChild(loginForm())
-
+if (path_name === "login") {
+    app.innerHTML = "";
+    app.appendChild(loginForm())
 }
