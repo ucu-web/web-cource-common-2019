@@ -1,4 +1,3 @@
-import {} from "./Platform";
 import {
     createPlatformStatic,
     createPlatformBreaking,

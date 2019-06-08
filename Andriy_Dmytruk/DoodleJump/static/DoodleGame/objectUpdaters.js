@@ -1,21 +1,8 @@
-import {getNewPositionBasedOnDuration} from "./helperFunctions";
+import {getNewPositionBasedOnDuration} from "./helpers";
 import {updateDoodleElement} from "./Doodle";
 
-export const slowDownVelocityX = (position, duration) => {
-    return position;
-
-    // if (position.accelerationX || Math.abs(position.velocityX) >= 0) return position;
-    //
-    // let velocityChange = 100 * duration;
-    // const velocityX = Math.abs(velocityX) > velocityChange
-    // const velocityX  = Math.sign(this.velocityX) * Math.floor(Math.abs(this.velocityX) / 6 - 1) * 6;
-    // return {
-    //     ...position,
-    //     velocityX
-};
-
 export const getNewDoodleBasedOnDuration = (doodle, duration, fieldWidth) => {
-    const position = slowDownVelocityX(getNewPositionBasedOnDuration(doodle, duration), duration);
+    const position = getNewPositionBasedOnDuration(doodle, duration);
 
     const newDoodle = {
         ...doodle,

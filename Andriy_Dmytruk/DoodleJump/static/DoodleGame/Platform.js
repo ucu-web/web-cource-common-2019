@@ -31,7 +31,13 @@ const createPlatformBreakingElement = () => {
 };
 export const createPlatformBreaking = (x, y) => ({
     ...createPlatform(x, y, createPlatformBreakingElement()),
-    canBeJumpedOntoTimes: 0
+    canBeJumpedOntoTimes: 0,
+    updateElement: (platform) => {
+        if (platform.jumpedOntoTimes > 0) {
+            platform.element.querySelector(".platform__breaking-left").classList.add("platform__broken-left");
+            platform.element.querySelector(".platform__breaking-right").classList.add("platform__broken-right");
+        }
+    }
 });
 
 
@@ -66,7 +72,7 @@ export const createPlatformDestructing = (x, y) => ({
 
     updateElement: (platform) => {
         if (platform.timeBeforeDestroyed < 1) {
-            platform.element.classList.add("platform__destructing-alert");
+            platform.element.classList.add("platform__destructing_alert");
         }
         if (platform.timeBeforeDestroyed <= 0) {
             platform.element.classList.add("platform__destroyed");

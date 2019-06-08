@@ -1,38 +1,47 @@
 import "./styles/Doodle.scss";
-import {getNewPositionBasedOnDuration} from "./helperFunctions";
+import "./styles/Bullet.scss";
 
-export class Doodle {
-    width = 40;
-    height = 60;
-    accelerationY = -600;
-    exists = true;
-    lastNoseRotate = 1;
-    element = this.createElement();
+const createDoodleElement = () => {
+    const element = document.createElement("div");
+    element.classList.add("doodle");
 
-    createElement() {
-        const element = document.createElement("div");
-        element.classList.add("doodle");
-
-        let legs = new Array(4).fill(0).map((v, i) =>
-            `<div class="doodle__leg" style="left: ${i * 8}px"> 
+    element.innerHTML = `
+    <div class="doodle__body">
+        <div class="doodle__legs"> 
+            <div class="doodle__leg" style="left: 0"> 
                 <div class="doodle__foot"></div> 
-             </div>`).join("");
-
-        element.innerHTML = `
-        <div class="doodle__body">
-            <div class="doodle__legs"> ${legs} </div>
-            <div class="doodle__bottom"></div>
-            <div class="doodle__nose">
-                <div class="doodle__nose-begin"></div>
-                <div class="doodle__nose-end"></div>
             </div>
-            <div class="doodle__eye-left"></div>
-            <div class="doodle__eye-right"></div>
-        </div>`;
+            <div class="doodle__leg" style="left: 8px"> 
+                <div class="doodle__foot"></div> 
+            </div>
+            <div class="doodle__leg" style="left: 16px"> 
+                <div class="doodle__foot"></div> 
+            </div>
+            <div class="doodle__leg" style="left: 24px"> 
+                <div class="doodle__foot"></div> 
+            </div>
+        </div>
+        <div class="doodle__bottom"></div>
+        <div class="doodle__nose">
+            <div class="doodle__nose-begin"></div>
+            <div class="doodle__nose-end"></div>
+        </div>
+        <div class="doodle__eye-left"></div>
+        <div class="doodle__eye-right"></div>
+    </div>`;
 
-        return element;
-    }
-}
+    return element;
+};
+
+export const createDoodle = (centerX, centerY) => ({
+    x: centerX - 20,
+    y: centerY - 30,
+    width: 40,
+    height: 60,
+    accelerationY: -600,
+    lastNoseRotate: 1,
+    element: createDoodleElement()
+});
 
 export const updateDoodleElement = (doodle) => {
     const nose = doodle.element.querySelector(".doodle__nose");
@@ -55,18 +64,17 @@ const rotateNose = (doodle, angle) => {
     angle = -Math.PI / 2 + angle;
     nose.style.transition = "0s";
     nose.style.transform = "rotate(" + angle + "rad)";
-    doodle.lastNoseRotate = 0;
+
+    return {...doodle, lastNoseRotate: 0};
 };
 
 export const shootBullet = (doodle, angle) => {
-    rotateNose(doodle, angle);
-
     if (Math.abs(angle) > Math.PI / 4) angle = Math.sign(angle) * Math.PI / 4;
     const velocity = 400;
 
     const bulletElement = document.createElement("div");
     bulletElement.classList.add("bullet");
-    return {
+    const bullet = {
         width: 20,
         height: 20,
         x: doodle.x + doodle.width / 2 - 5 + 32 * Math.sin(angle),
@@ -75,4 +83,6 @@ export const shootBullet = (doodle, angle) => {
         velocityY: velocity * Math.cos(angle),
         element: bulletElement
     };
-}
+
+    return {doodle: rotateNose(doodle, angle), bullet}
+};

@@ -1,11 +1,5 @@
-@import "common";
-
 .field {
   background-color: #FFF5CC;
   overflow: hidden;
   position: relative;
-
-  &__background {
-    @include background;
-  }
 }

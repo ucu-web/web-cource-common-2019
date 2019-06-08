@@ -1,10 +1,8 @@
-import "./styles/Bullet.scss";
-import "./styles/Enemy.scss";
 import "./styles/Field.scss";
 import "./styles/Game.scss";
-import "./styles/Menu.scss";
-import {Doodle, shootBullet} from "./Doodle";
-import {doCollideBottom, createDefaultPlatforms} from "./helperFunctions";
+
+import {createDoodle, shootBullet} from "./Doodle";
+import {doCollideBottom, createDefaultPlatforms} from "./helpers";
 import {getNewBulletBasedOnDuration, getNewDoodleBasedOnDuration, getNewPlatformBasedOnDuration} from "./objectUpdaters";
 
 
@@ -13,7 +11,6 @@ export default class Game {
     height = 800;
 
     paused = false;
-    doodle = new Doodle();
     platforms = [...createDefaultPlatforms()];
     bullets = [];
 
@@ -22,18 +19,15 @@ export default class Game {
 
     constructor(container) {
         container.innerHTML = `
-          <div class="game">
-            <div class="field__background">
-                <div class="field" style="width: ${this.width}px; height:${this.height}px;"></div>
-            </div>
-          </div>     
+           <div class="game">
+              <div class="field" style="width: ${this.width}px; height:${this.height}px;"></div>
+           </div>     
         `;
 
         this.field = container.querySelector(".field");
         this.platforms.forEach(p => this.field.appendChild(p.element));
 
-        this.doodle.x = (this.width - this.doodle.width) / 2;
-        this.doodle.y = (this.height - this.doodle.height) / 2;
+        this.doodle = createDoodle(this.width / 2, this.height / 2);
         this.field.appendChild(this.doodle.element);
 
         this.addListeners();
@@ -45,25 +39,27 @@ export default class Game {
                 let direction = event.key === "ArrowLeft" ? -1 : event.key === "ArrowRight" ? 1 : 0;
                 this.doodle = {
                     ...this.doodle,
-                    accelerationX: direction * 800
+                    velocityX: direction * 400
                 };
             }
             if (event.key === " ") {
-                const newBullet = shootBullet(this.doodle, 0);
+                const {bullet: newBullet, doodle} = shootBullet(this.doodle, 0);
                 this.field.appendChild(newBullet.element);
                 this.bullets = [...this.bullets, newBullet];
+                this.doodle = doodle;
             }
         });
 
         document.addEventListener("keyup", (event) => {
-            this.doodle = {...this.doodle, accelerationX: 0};
+            let direction = event.key === "ArrowLeft" ? -1 : event.key === "ArrowRight" ? 1 : 0;
+            this.doodle = {...this.doodle,
+                velocityX: Math.sign(this.doodle.velocityX) === Math.sign(direction) ? 0 : this.doodle.velocityX};
         })
     }
 
     displayOnField(object) {
-        const {x, y} = this.translatePosition(object);
-        object.element.style.bottom = y + "px";
-        object.element.style.left = x + "px";
+        object.element.style.bottom = object.y - this.fieldBottom + "px";
+        object.element.style.left = object.x + "px";
     }
 
 
@@ -74,18 +70,14 @@ export default class Game {
         return exists;
     }
 
-    render(duration) {
+    updateState(duration) {
         this.doodle = getNewDoodleBasedOnDuration(this.doodle, duration, this.width);
-
-        this.platforms = this.platforms.map(p => getNewPlatformBasedOnDuration(p, duration, this.width));
-        this.bullets = this.bullets.map(b => getNewBulletBasedOnDuration(b, duration));
-
-        if (this.fieldBottom < this.doodle.y - this.height / 2 + this.doodle.height / 2) {
-            this.fieldBottom = this.doodle.y - this.height / 2 + this.doodle.height / 2;
-        }
-
-        this.platforms = this.platforms.filter(p => this.doesObjectExist(p));
-        this.bullets = this.bullets.filter(b => this.doesObjectExist(b));
+        this.platforms = this.platforms
+            .map(p => getNewPlatformBasedOnDuration(p, duration, this.width))
+            .filter(p => this.doesObjectExist(p));
+        this.bullets = this.bullets
+            .map(b => getNewBulletBasedOnDuration(b, duration))
+            .filter(b => this.doesObjectExist(b));
 
         this.platforms = this.platforms.map((platform) => {
             if (doCollideBottom(this.doodle, platform, duration)) {
@@ -98,13 +90,13 @@ export default class Game {
         });
 
         // display
+        if (this.fieldBottom < this.doodle.y - this.height / 2 + this.doodle.height / 2) {
+            this.fieldBottom = this.doodle.y - this.height / 2 + this.doodle.height / 2;
+        }
+
         this.displayOnField(this.doodle);
         this.platforms.map(p => this.displayOnField(p));
         this.bullets.map(b => this.displayOnField(b));
-    }
-
-    translatePosition(object) {
-        return {x: object.x, y: object.y - this.fieldBottom};
     }
 
     renderAnimationFrame() {
@@ -115,7 +107,7 @@ export default class Game {
             const duration = time - this.lastUpdateTime;
 
             if (duration < 1)
-                this.render(duration);
+                this.updateState(duration);
             this.lastUpdateTime = time;
             requestAnimationFrame(render);
         };
