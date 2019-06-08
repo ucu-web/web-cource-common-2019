@@ -1,0 +1,28 @@
+.score {
+  position: absolute;
+  display: table;
+  top: -9vh;
+  width: 22vh;
+  height: 10vh;
+  background: #B0BEC5;
+  border-radius: 5px 0 0 0;
+  text-align: center;
+  padding-top: 0.5vh;
+  box-sizing: border-box;
+
+  &__container {
+    display: table-cell;
+    font-size: 3.5vh;
+  }
+
+  &__title {
+    display: block;
+    color: #455A64;
+  }
+
+  &__score-field {
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+}

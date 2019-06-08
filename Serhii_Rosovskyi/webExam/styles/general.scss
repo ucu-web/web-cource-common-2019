@@ -1,7 +1,8 @@
-body {
-  padding: 0;
+html, body{
   margin: 0;
-  background: #F9F9F1;
+  background: #111;
+  min-height: 100%;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .Layout {
@@ -13,10 +14,12 @@ body {
     position: absolute;
     width: 50vh;
     height: 50vh;
-    background: #BEB0A7;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    background: #B0BEC5;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
     border-radius: 0 0 5px 5px;
   }
 }
