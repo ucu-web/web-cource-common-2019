@@ -1,0 +1,13 @@
+GET http://localhost:3000/api/v0/users
+###
+GET http://localhost:3000/api/v0/users/1
+###
+
+POST http://localhost:3000/api/v0/users
+
+###
+
+
+GET http://localhost:3000/api/v0/repositories
+
+###

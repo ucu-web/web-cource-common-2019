@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const {getFirst, add} = require("./dataStorage");
-const {validateInputObject, addAutoIncrement, checkPermission} = require("./helperFunctions");
+const {getAll, getFirst, add} = require("./dataStorage");
+const {validateInputObject, addAutoIncrement, checkPermission} = require("./helper");
 const {usersPath, repositoriesPath, contributorsPath} = require("./constants");
 
 const repositoryRequestFields = ["name", "description", "creationTime", "updateTime", "language", "stars", "userId", "login", "password"];

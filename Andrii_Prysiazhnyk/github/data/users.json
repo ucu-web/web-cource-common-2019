@@ -6,5 +6,13 @@
     "email": "olekscode@ucu.edu.ua",
     "country": "Ukraine",
     "id": 1
+  },
+  {
+    "login": "andriiprysiazhnyk",
+    "password": "Andre20142",
+    "name": "Andrii",
+    "email": "prysiazhnyk@ucu.edu.ua",
+    "country": "Ukraine",
+    "id": 2
   }
 ]

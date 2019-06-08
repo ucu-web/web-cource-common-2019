@@ -1,20 +1,15 @@
-const express = require('express');
+const express = require("express");
 const path = require("path");
-const usersGetRouter = require('./usersGetRouter');
-const usersPostRouter = require('./usersPostRouter');
-const repositoriesGetRouter = require('./repositoriesGetRouter');
-const repositoriesPostRouter = require('./repositoriesPostRouter');
 
 const app = express();
 const PORT = 3000;
 
 app.use(express.json());
-app.use(express.static(path.resolve(__dirname, '../', 'dist')));
-app.use(express.static(path.resolve(__dirname, '../', 'src', 'images')));
+app.use(express.static(path.resolve(__dirname, "../dist")));
+app.use(express.static(path.resolve(__dirname, "../src/images")));
 
-app.use('/api/users', usersGetRouter);
-app.use('/api/users', usersPostRouter);
-app.use('/api/repositories', repositoriesGetRouter);
-app.use('/api/repositories', repositoriesPostRouter);
+app.use("/api", require("./api"));
 
-app.listen(PORT, () => console.log(`Server started at http://localhost:${PORT}`));
+app.listen(PORT, () =>
+    console.log(`Server started at http://localhost:${PORT}`)
+);
