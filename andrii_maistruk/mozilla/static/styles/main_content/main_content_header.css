@@ -1,10 +1,13 @@
-.main-content__section {
-    background-image: url("https://www.mozilla.org/media/img/firefox/accounts/fxa-hero-img.d86392a86cc4.png");
+.main-content__header-section {
+	margin-top: 0;
+	padding-top: 24px;
+	background-image: url("https://www.mozilla.org/media/img/firefox/accounts/fxa-hero-img.d86392a86cc4.png");
     -webkit-background-size: 584px 389px;
     background-size: 584px 389px;
     background-position: 80% 60%;
     background-repeat: no-repeat;
-    padding: 80px 96px;
+    padding-left:96px;
+	padding-right: 96px;
     box-sizing: border-box;
     margin: 0 auto;
     max-width: 1420px;
@@ -14,10 +17,9 @@
     min-height: 405px;
 }
 
-.main-content__section h2 {
+.main-content__header-name {
     margin-bottom: 48px;
     padding-left: 48px;
-    padding-top: 2px;
     text-align: left;
     position: relative;
     line-height: 40px;
@@ -31,26 +33,26 @@
     font-weight: 400;
 }
 
-.main-content__section h3 {
+.main-content__header-motto {
     display: inline-block;
     font-size: 3rem;
     line-height: 1.083;
     margin-bottom: 32px;
 }
 
-.main-content__section h4 {
+.main-content__header-message {
     font-size: 1.5rem;
     line-height: 1.083;
     margin-bottom: 32px;
 }
 
-.main-content__section p {
+.main-content__header-paragraph {
     margin-top: 24px;
     text-align: left;
 }
 
 
-.main-content__link {
+.main-content__header-link {
     background-color: transparent;
     color: #000;
     -webkit-box-sizing: border-box;
@@ -67,7 +69,7 @@
     text-decoration: none;
 }
 
-.main-content__link:hover {
+.main-content__header-link:hover {
     -webkit-transform: translate(-2px, -2px);
     transform: translate(-2px, -2px);
     background-color: #fff;

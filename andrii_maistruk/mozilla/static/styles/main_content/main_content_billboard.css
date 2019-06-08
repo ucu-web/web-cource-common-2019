@@ -1,44 +1,51 @@
-.main-content__billboard {
+.billboard {
     position: relative;
-    margin: 96px 0;
+    margin: 96px auto;
     width: 100%;
     height: 268px;
     box-sizing: border-box;
-    float: left;
     display: block;
+}
+
+
+.billboard__wrapper {
+    max-width: 1220px;
+    min-width: 304px;
+    height: 268px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 32px;
+    align-items: center;
+    border: none;
+    box-sizing: border-box;
+    padding-right: 180px;
+    padding-left: 180px;
     background: #ededf0;
+
 }
 
-.main-content__billboard:after {
-    clear: both;
-    content: '';
-    display: table;
-}
-
-.main-content__billboard div {
-    float: left;
-    width: 50%;
-    margin: -42px 0 -42px calc(50% - 390px);
+.billboard__image-container {
     max-width: 374px;
     display: block;
+    margin: -45px 0;
+    padding-left: 110px;
     text-align: center;
 }
 
-.main-content__billboard .reverse_content {
-    float: right;
-    margin: -42px calc(50% - 390px) -42px 0;
+.billboard__image-container_reverse_content {
+    grid-column-start: 2;
+    grid-column-end: 3;
 }
 
-.main-content__billboard div img {
+
+.billboard__image {
     max-width: none;
     margin: 0;
     height: auto;
 }
 
-.main-content__billboard .content_wrapper {
-    margin: 0 calc(50% - 390px) 0 auto;
-    right: 0;
-    width: 50%;
+.billboard__content-wrapper {
     box-sizing: border-box;
     max-width: 374px;
     text-align: center;
@@ -46,34 +53,33 @@
     align-items: center;
     -webkit-box-pack: center;
     justify-content: center;
-    padding: 8px 8px 0 8px;
     min-height: 220px;
-    float: left;
+    vertical-align: center;
 }
 
-.main-content__billboard .content_wrapper.reverse_content {
-    float: right;
-    margin: 0 auto 0 calc(50% - 390px);
+.billboard__content-wrapper_reverse_content {
+    grid-column-start: 1;
+    grid-column-end: 2;
 }
 
-.main-content__billboard div h2 {
-    margin: auto 0 0.3em 0;
-    padding-top: 0;
-    padding-bottom: 0;
+
+.billboard__header {
+    padding-top: auto;
     font-size: 2rem;
     line-height: 1.1111;
     font-weight: 700;
 }
 
 
-.main-content__billboard div p {
+.billboard__content {
     padding: 0;
-    margin: auto 0 5px 0;
+    margin: 0 0 5px 0;
     height: auto;
     text-align: center;
+    vertical-align: center;
 }
 
-.main-content__billboard div a {
+.billboard__link {
     margin: 0;
     padding: 0;
     border-bottom: 2px solid;
@@ -81,3 +87,4 @@
     text-decoration: none;
     font-weight: 700;
 }
+
