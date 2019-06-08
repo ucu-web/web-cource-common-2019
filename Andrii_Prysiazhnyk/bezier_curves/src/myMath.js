@@ -3,20 +3,16 @@ export const multiplyPointByScalar = (point, scalar) =>
 
 export const addPoints = (point1, point2) => [
   point1[0] + point2[0],
-  point1[1] + point2[1],
+  point1[1] + point2[1]
 ];
 
 let intermediateValues = {};
 
-const factorialOptimized = n => {
-  if (intermediateValues[n]) {
-    return intermediateValues[n];
-  }
-
-  const res = n === 0 ? 1 : n * factorialOptimized(n - 1);
-  intermediateValues[n] = res;
-  return res;
+const factorial = n => {
+  intermediateValues[n] =
+    intermediateValues[n] || (n === 0 ? 1 : n * factorial(n - 1));
+  return intermediateValues[n];
 };
 
 export const combination = (n, i) =>
-  factorialOptimized(n) / (factorialOptimized(i) * factorialOptimized(n - i));
+  factorial(n) / (factorial(i) * factorial(n - i));
