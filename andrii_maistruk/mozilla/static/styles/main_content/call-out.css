@@ -1,0 +1,78 @@
+.call-out {
+    background-color: #2a0140;
+    display: block;
+    color: #fff;
+}
+
+.call-out__wrapper{
+    grid-column-gap: 32px;
+    column-gap: 32px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 0 auto;
+    max-width: 1056px;
+    padding: 48px 96px;
+    box-sizing: border-box;
+    position: relative;
+
+}
+
+.call-out__wrapper::after {
+    clear: both;
+    content: '';
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+
+.call-out__heading {
+    font-size: 1.5rem;
+    line-height: 1.166;
+    width: 600px;
+    box-sizing: border-box;
+    grid-column: 1;
+    background-position: 0 35%;
+    padding: 13px 0 0 96px;
+    min-height: 112px;
+    background-image: url("https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png");
+    background-repeat: no-repeat;
+    background-size: 64px 64px;
+    vertical-align: middle;
+    margin-right: 50px;
+}
+
+
+.header-paragraph__right {
+    margin-top: 24px;
+    text-align: center;
+    margin-left: 80px;
+}
+
+.header-paragraph__link_color_white {
+    background-color: transparent;
+    color: white;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 2px;
+    border: 2px solid white;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    padding: 14px 30px;
+    text-decoration: none;
+}
+
+
+
+.header-paragraph__link_color_white:hover {
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+    background-color: #fff;
+    box-shadow: 4px 4px 0 0 #000;
+    color: #000;
+}
+
