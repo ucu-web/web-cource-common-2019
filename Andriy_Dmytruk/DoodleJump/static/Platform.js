@@ -6,80 +6,83 @@ const createPlatformElement = className => {
   return element;
 };
 
-const createPlatform = (x, y, element) => ({
+const createBasicPlatform = (x, y, type) => ({
   x,
   y,
   width: 60,
   height: 10,
   canBeJumpedOntoTimes: Infinity,
   jumpedOntoTimes: 0,
-  element
+  element: createPlatformElement(`platform__${type}`),
+  setPosition: (platform, x, y) => {
+    platform.element.style.bottom = y + "px";
+    platform.element.style.left = x + "px";
+  },
+  deleteElement: (platform) => platform.element.parentNode && platform.element.parentNode.removeChild(platform.element)
 });
 
-export const createPlatformStatic = (x, y) => ({
-  ...createPlatform(x, y, createPlatformElement("platform__static"))
-});
+export const createPlatform = (x, y, type) => {
+  const platform = createBasicPlatform(x, y, type);
 
-const createPlatformBreakingElement = () => {
-  const element = document.createElement("div");
-  element.classList.add("platform__breaking");
-  element.innerHTML = `
-   <div class="platform__breaking-left"></div>
-   <div class="platform__breaking-right"></div>
-  `;
-  return element;
+  switch (type) {
+    case "static":
+      return platform;
+
+    case "breaking":
+      platform.element.innerHTML = `<div class="platform__breaking-left"></div><div class="platform__breaking-right"></div>`;
+      return {
+        ...platform,
+        canBeJumpedOntoTimes: 0,
+        updateElement: platform => {
+          if (platform.jumpedOntoTimes > 0) {
+            platform.element
+              .querySelector(".platform__breaking-left")
+              .classList.add("platform__broken-left");
+            platform.element
+              .querySelector(".platform__breaking-right")
+              .classList.add("platform__broken-right");
+          }
+        }
+      };
+
+    case "disappearing":
+      return {
+        ...platform,
+        canBeJumpedOntoTimes: 1,
+        updateElement: platform => {
+          if (platform.jumpedOntoTimes > 0) {
+            platform.element.classList.add("platform__disappeared");
+          }
+        }
+      };
+
+    case "horizontal":
+      return {
+        ...platform,
+        velocityX: (0.02 + Math.random() * 0.06) * (Math.random > 0.5 ? 1 : -1)
+      };
+
+    case "vertical":
+      return {
+        ...platform,
+        range: 100 + Math.random() * 200,
+        velocityY: (0.02 + Math.random() * 0.02) * (Math.random > 0.5 ? 1 : -1),
+        initialY: y
+      };
+
+    case "destructing":
+      return {
+        ...platform,
+        timeBeforeDestroyed: 2000 + Math.random() * 4000,
+
+        updateElement: platform => {
+          if (platform.timeBeforeDestroyed < 1000) {
+            platform.element.classList.add("platform__destructing_alert");
+          }
+          if (platform.timeBeforeDestroyed <= 0) {
+            platform.element.classList.add("platform__destroyed");
+          }
+        }
+      };
+  }
 };
-export const createPlatformBreaking = (x, y) => ({
-  ...createPlatform(x, y, createPlatformBreakingElement()),
-  canBeJumpedOntoTimes: 0,
-  updateElement: platform => {
-    if (platform.jumpedOntoTimes > 0) {
-      platform.element
-        .querySelector(".platform__breaking-left")
-        .classList.add("platform__broken-left");
-      platform.element
-        .querySelector(".platform__breaking-right")
-        .classList.add("platform__broken-right");
-    }
-  }
-});
-
-export const createPlatformDisappearing = (x, y) => ({
-  ...createPlatform(x, y, createPlatformElement("platform__disappearing")),
-  canBeJumpedOntoTimes: 1,
-  updateElement: platform => {
-    if (platform.jumpedOntoTimes > 0) {
-      platform.element.classList.add("platform__disappeared");
-    }
-  }
-});
-
-export const createPlatformHorizontal = (x, y) => ({
-  ...createPlatform(x, y, createPlatformElement("platform__horizontal")),
-  velocityX: Math.round(
-    (20 + Math.random() * 60) * (Math.random > 0.5 ? 1 : -1)
-  )
-});
-
-export const createPlatformVertical = (x, y) => ({
-  ...createPlatform(x, y, createPlatformElement("platform__vertical")),
-  range: 100 + Math.random() * 200,
-  velocityY: Math.round(
-    (20 + Math.random() * 20) * (Math.random > 0.5 ? 1 : -1)
-  ),
-  initialY: y
-});
-
-export const createPlatformDestructing = (x, y) => ({
-  ...createPlatform(x, y, createPlatformElement("platform__destructing")),
-  timeBeforeDestroyed: 2 + Math.random() * 4,
-
-  updateElement: platform => {
-    if (platform.timeBeforeDestroyed < 1) {
-      platform.element.classList.add("platform__destructing_alert");
-    }
-    if (platform.timeBeforeDestroyed <= 0) {
-      platform.element.classList.add("platform__destroyed");
-    }
-  }
-});

@@ -27,10 +27,12 @@ export default class Game {
        </div>     
     `;
 
+
     this.field = container.querySelector(".field");
     this.platforms.forEach(p => this.field.appendChild(p.element));
 
     this.doodle = createDoodle(width / 2, height / 2);
+
     this.field.appendChild(this.doodle.element);
 
     const handleKeyDown = event => {
@@ -39,7 +41,7 @@ export default class Game {
           event.key === "ArrowLeft" ? -1 : event.key === "ArrowRight" ? 1 : 0;
         this.doodle = {
           ...this.doodle,
-          velocityX: direction * 400
+          velocityX: direction * 0.4
         };
       }
       if (event.key === " ") {
@@ -71,21 +73,23 @@ export default class Game {
   }
 
   displayOnField(object) {
-    object.element.style.bottom = object.y - this.fieldBottom + "px";
-    object.element.style.left = object.x + "px";
+    object.setPosition(object, object.x, object.y - this.fieldBottom);
   }
 
   doesObjectExist(object) {
     const exists =
       object.y > this.fieldBottom &&
       object.y < this.fieldBottom + this.height * 3;
-    if (!exists && this.field.contains(object.element))
-      this.field.removeChild(object.element);
+    if (!exists) object.deleteElement(object);
     return exists;
   }
 
   updateState(duration) {
-    this.doodle = getNewDoodleBasedOnDuration(this.doodle, duration, this.width);
+    this.doodle = getNewDoodleBasedOnDuration(
+      this.doodle,
+      duration,
+      this.width
+    );
     this.platforms = this.platforms
       .map(p => getNewPlatformBasedOnDuration(p, duration, this.width))
       .filter(p => this.doesObjectExist(p));
@@ -97,7 +101,7 @@ export default class Game {
     this.platforms = this.platforms.map(platform => {
       if (doCollideBottom(this.doodle, platform, duration)) {
         if (platform.jumpedOntoTimes < platform.canBeJumpedOntoTimes) {
-          this.doodle = { ...this.doodle, velocityY: 500 };
+          this.doodle = { ...this.doodle, velocityY: 0.5 };
         }
         return {
           ...platform,
@@ -123,16 +127,14 @@ export default class Game {
   }
 
   renderAnimationFrame() {
-    let lastUpdateTime = 0;
+    let lastUpdateTime;
     const render = time => {
       if (this.paused) return;
 
-      time /= 1000; //TODO: fix it
       const duration = time - lastUpdateTime;
       lastUpdateTime = time;
 
-      //TODO: fix it
-      if (duration < 1) this.updateState(duration);
+      this.updateState(duration || 0);
 
       requestAnimationFrame(render);
     };

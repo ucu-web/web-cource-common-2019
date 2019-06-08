@@ -18,7 +18,6 @@ export const getNewDoodleBasedOnDuration = (doodle, duration, fieldWidth) => {
   };
 
   updateDoodleElement(newDoodle);
-
   return newDoodle;
 };
 
@@ -58,6 +57,5 @@ export const getNewPlatformBasedOnDuration = (
   };
 
   if (newPlatform.updateElement) newPlatform.updateElement(newPlatform);
-
   return newPlatform;
 };
