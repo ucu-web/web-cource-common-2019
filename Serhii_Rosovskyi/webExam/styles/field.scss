@@ -1,0 +1,23 @@
+.field {
+  width: 100%;
+  height: 100%;
+  padding-top: 1vh;
+
+  &__row {
+    position: relative;
+    width: 100%;
+    height: 10vh;
+    padding-left: 1vh;
+
+    &_block {
+      position: relative;
+      float: left;
+      width: 10vh;
+      height: 10vh;
+      background: #CFD8DC;
+      border-radius: 5px;
+      margin: 1vh;
+      text-align: center;
+    }
+  }
+}
