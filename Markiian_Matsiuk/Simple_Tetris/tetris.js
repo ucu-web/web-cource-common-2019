@@ -63,7 +63,7 @@ const incrustBlock = ([x, y], originalMatrix, block) => {
 };
 
 const deleteBlock = (coordinates, originalMatrix, block) => {
-  if (isOutOfFrame(block, originalMatrix, [x, y])) return false;
+  if (isOutOfFrame(block, originalMatrix, coordinates)) return false;
 
   block.forEach((row, indexY) => {
     row.forEach((element, indexX) => {
