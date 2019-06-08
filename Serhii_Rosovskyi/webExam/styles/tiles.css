@@ -11,42 +11,42 @@
   transition: box-shadow 0.3s;
 }
 .tiles .tile-2 {
-  background: rgba(255, 255, 255, 0.9);
+  background: #eee4da;
 }
 .tiles .tile-4 {
-  background: #B3E5FC;
+  background: #ede0c8;
 }
 .tiles .tile-8 {
-  background: #81D4FA;
+  background: #FFAD68;
 }
 .tiles .tile-16 {
-  background: #4FC3F7;
+  background: #f59563;
   color: white;
 }
 .tiles .tile-32 {
-  background: #29B6F6;
+  background: #f67c5f;
   color: white;
 }
 .tiles .tile-64 {
-  background: #03A9F4;
+  background: #f65e3b;
   color: white;
 }
 .tiles .tile-128 {
-  background: #E6EE9C;
+  background: #edcf72;
 }
 .tiles .tile-256 {
-  background: #DCE775;
+  background: #edcc61;
   box-shadow: 0 0 10px 1px #DCE775;
 }
 .tiles .tile-512 {
-  background: #D4E157;
+  background: #edc850;
   box-shadow: 0 0 15px 1px #D4E157;
 }
 .tiles .tile-1024 {
-  background: #FFEB3B;
+  background: #edc53f;
 }
 .tiles .tile-2048 {
-  background: #FFC107;
+  background: #edc22e;
   box-shadow: 0 0 10px 1px #FFC107;
 }
 .tiles .tile .tile_content {

@@ -4,7 +4,7 @@
   right: 0;
   width: 29vh;
   height: 10vh;
-  background: #B0BEC5;
+  background: #BCABA1;
   border-radius: 0 5px 0 0;
 }
 .new-game__button {
@@ -16,7 +16,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #CFD8DC;
+  background: #EDE0D7;
   border-radius: 4px;
   cursor: pointer;
 }

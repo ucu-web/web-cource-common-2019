@@ -3,7 +3,7 @@
 
 html, body {
   margin: 0;
-  background: #111;
+  background: #F9F9F1;
   min-height: 100%;
   font-family: 'Montserrat', sans-serif;
 }
@@ -17,7 +17,7 @@ html, body {
     position: absolute;
     width: 50vh;
     height: 50vh;
-    background: #B0BEC5;
+    background: #BAAC9F;
     margin: auto;
     left: 0;
     right: 0;
@@ -38,4 +38,30 @@ html, body {
   100% {
     transform: scale(1);
   }
+}
+
+.tile {
+  position: absolute;
+  width: 10vh;
+  height: 10vh;
+  border-radius: 5px;
+  transition: box-shadow 0.3s;
+}
+
+.tile_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transform-origin: center center;
+  animation: pop-up 0.3s ease-in forwards;
+
+  span {
+    font-size: 4.5vh;
+    font-family: 'Roboto', sans-serif;
+  }
+}
+
+.tile-2 {
+  background: #eee4da;
 }
