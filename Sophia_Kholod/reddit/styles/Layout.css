@@ -17,6 +17,8 @@
     display: grid;
     grid-template-columns: minmax(24px, 2fr) minmax(auto, 648px) 24px 312px minmax(24px, 2fr);
     grid-template-rows: 40px 20px minmax(auto,100%);
+    width:100%;
+    top:49px;
 
 }
 .Layout__pop-up{
