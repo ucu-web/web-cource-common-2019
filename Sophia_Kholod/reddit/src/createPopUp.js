@@ -95,29 +95,29 @@ export const createPopUp = (post) => {
 
                         <section class="Tools">
                             <div class="Icons">
-                                <a href="#" class="Icon_bold hover" alt="Bold"><i class="fas fa-bold"></i></a>
-                                <a href="#" class="Icon_italic hover" alt="Italics"><i
+                                <a href="#" class="Icon_bold" alt="Bold"><i class="fas fa-bold"></i></a>
+                                <a href="#" class="Icon_italic" alt="Italics"><i
                                         class="fas fa-italic"></i></a>
                                 <!--<a href="#" class="Icon_link" alt="Link"><i class='fas fa-link'></i></a>-->
-                                <a href="#" class="Icon_list-ul hover" alt="Bulleted List"><i
+                                <a href="#" class="Icon_list-ul" alt="Bulleted List"><i
                                         class='fas fa-list-ul'></i></a>
-                                <a href="#" class="Icon_list-ol hover" alt="Numbered List"><i
+                                <a href="#" class="Icon_list-ol" alt="Numbered List"><i
                                         class='fas fa-list-ol'></i></a>
-                                <a href="#" class="Icon_strikethrough hover" alt="Strikethrough"><i
+                                <a href="#" class="Icon_strikethrough" alt="Strikethrough"><i
                                         class='fas fa-strikethrough'></i></a>
-                                <a href="#" class="Icon_quote hover" alt="Quote"><i
+                                <a href="#" class="Icon_quote" alt="Quote"><i
                                         class='fas fa-quote-right'></i></a>
 
-                                <a href="#" class="Icon_spoiler hover" alt="Spoiler"><i
+                                <a href="#" class="Icon_spoiler" alt="Spoiler"><i
                                         class='fas fa-exclamation-circle'></i></a>
-                                <a href="#" class="Icon_heading hover" alt="Heading"><i
+                                <a href="#" class="Icon_heading" alt="Heading"><i
                                         class='fas fa-heading'></i></a>
-                                <a href="#" class="Icon_superscript hover" alt="Superscript"><i
+                                <a href="#" class="Icon_superscript" alt="Superscript"><i
                                         class='fas fa-superscript'></i></a>
-                                <a href="#" class="Icon_subscript hover" alt="Subscript"><i
+                                <a href="#" class="Icon_subscript" alt="Subscript"><i
                                         class='fas fa-subscript'></i></a>
-                                <a href="#" class="Icon_undo hover" alt="Undo"><i class='fas fa-undo-alt'></i></a>
-                                <a href="#" class="Icon_redo hover" alt="Redo"><i class='fas fa-redo-alt'></i></a>
+                                <a href="#" class="Icon_undo" alt="Undo"><i class='fas fa-undo-alt'></i></a>
+                                <a href="#" class="Icon_redo" alt="Redo"><i class='fas fa-redo-alt'></i></a>
                             </div>
                             <button class="Tools__comment-button">comment</button>
                         </section>

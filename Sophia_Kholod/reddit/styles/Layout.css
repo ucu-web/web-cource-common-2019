@@ -1,13 +1,9 @@
 .Layout{
-    /*display: grid;*/
-    /*grid-template-columns: minmax(24px, 2fr) minmax(auto, 648px) 24px 312px minmax(24px, 2fr);*/
-    /*grid-template-rows: 49px 40px 20px minmax(auto,100%);*/
     display: flex;
     flex-direction: column;
 }
 
 .Layout__head-bar {
-    /*grid-area: 1/1/2/6;*/
     position: sticky;
     z-index: 2;
     top: 0;
