@@ -159,4 +159,8 @@
     .search__plans-and-pricing {
         font-size: 0.8rem;
     }
+    .search-form__search{
+        margin-right: 0;
+        font-size: 1rem;
+    }
 }

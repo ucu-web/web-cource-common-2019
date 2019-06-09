@@ -100,3 +100,15 @@
     border-radius: 1px;
     border: #24292E;
 }
+
+@media screen and (max-width: 405px){
+    .content-themes {
+        display: block;
+    }
+    .plugins-photos {
+       width: 280px;
+    }
+    .content-block-img{
+        width: 15rem;
+    }
+}
