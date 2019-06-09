@@ -9,8 +9,9 @@ export default class Game {
   height = 800;
 
   paused = false;
-  platforms = [...createDefaultPlatforms()];
-  bullets = [];
+  doodle = null;
+  platforms = null;
+  bullets = null;
 
   fieldBottom = 0;
 
@@ -23,11 +24,8 @@ export default class Game {
     `;
 
     this.field = container.querySelector(".field");
-    this.platforms.forEach(p => this.field.appendChild(p.element));
 
-    this.doodle = new Doodle(width / 2, height / 2);
-
-    this.field.appendChild(this.doodle.element);
+    this.reset();
 
     const handleKeyDown = ({ key }) => {
       switch (key) {
@@ -36,7 +34,7 @@ export default class Game {
         case "ArrowRight":
           return this.doodle.move(1);
         case " ":
-          const newBullet = this.doodle.shootBullet(0);
+          const newBullet = this.doodle.shootBullet(this.field, 0);
           this.field.appendChild(newBullet.element);
           this.bullets = [...this.bullets, newBullet];
       }
@@ -90,6 +88,11 @@ export default class Game {
       this.fieldBottom =
         this.doodle.y - this.height / 2 + this.doodle.height / 2;
     }
+
+    if (this.doodle.y < this.fieldBottom) {
+      console.log("Game over");
+      this.reset();
+    }
   }
 
   renderAnimationFrame() {
@@ -115,5 +118,18 @@ export default class Game {
   play() {
     this.paused = false;
     this.renderAnimationFrame();
+  }
+
+  reset() {
+    if (this.doodle) {
+      this.doodle.destroy();
+      this.platforms.forEach(p => p.destroy());
+      this.bullets.forEach(b => b.destroy());
+    }
+
+    this.fieldBottom = 0;
+    this.doodle = new Doodle(this.field, {centerX: this.width / 2, centerY: this.height / 2});
+    this.platforms = createDefaultPlatforms(this.field, this.width);
+    this.bullets = [];
   }
 }

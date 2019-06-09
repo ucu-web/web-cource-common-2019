@@ -9,7 +9,7 @@ export class Doodle {
   accelerationY = -0.0006;
   lastNoseRotate = 1;
 
-  constructor(centerX, centerY) {
+  constructor(container, { centerX, centerY }) {
     this.x = centerX - 20;
     this.y = centerY - 30;
 
@@ -40,6 +40,8 @@ export class Doodle {
             <div class="doodle__eye-left"></div>
             <div class="doodle__eye-right"></div>
         </div>`;
+
+    container.appendChild(this.element);
   }
 
   setPosition(x, y) {
@@ -49,7 +51,7 @@ export class Doodle {
 
   destroy() {
     this.element.parentNode &&
-      this.element.parentNode.removeChild(doodle.element);
+      this.element.parentNode.removeChild(this.element);
   }
 
   rotateNose(angle) {
@@ -62,18 +64,20 @@ export class Doodle {
     this.lastNoseRotate = 0;
   }
 
-  shootBullet(angle) {
+  shootBullet(container, angle) {
     this.rotateNose(angle);
 
     if (Math.abs(angle) > Math.PI / 4) angle = (Math.sign(angle) * Math.PI) / 4;
     const velocity = 0.4;
+    const noseLength = 32;
 
-    return new Bullet(
-        this.x + this.width / 2 - 5 + 32 * Math.sin(angle),
-        this.y + this.height - this.width / 2 + 32 * Math.cos(angle),
-        velocity * Math.sin(angle),
-        velocity * Math.cos(angle)
-    );
+    return new Bullet(container, {
+      centerX: this.x + this.width / 2 + noseLength * Math.sin(angle),
+      centerY:
+        this.y + this.height - this.width / 2 + noseLength * Math.cos(angle),
+      velocityX: velocity * Math.sin(angle),
+      velocityY: velocity * Math.cos(angle)
+    });
   }
 
   updateElement() {
@@ -92,7 +96,10 @@ export class Doodle {
   }
 
   updateState(duration, fieldWidth, translatePosition) {
-    const { x, y, velocityX, velocityY } = getNewPositionBasedOnDuration(this, duration);
+    const { x, y, velocityX, velocityY } = getNewPositionBasedOnDuration(
+      this,
+      duration
+    );
     this.x = x;
     this.y = y;
     this.velocityX = velocityX;
@@ -104,20 +111,33 @@ export class Doodle {
     if (this.velocityY < -700) this.velocityY = -700;
     this.lastNoseRotate += duration;
 
+    // doodle inertia
+    let airFrictionAcceleration = 0.001;
+    if (Math.abs(this.velocityX) < airFrictionAcceleration * duration) {
+      this.velocityX = 0;
+    } else if (!this.accelerationX) {
+      this.velocityX -= Math.sign(this.velocityX) * airFrictionAcceleration * duration;
+    }
+
     this.updateElement();
 
-    const {x: translatedX, y: translatedY} = translatePosition(x, y);
+    const { x: translatedX, y: translatedY } = translatePosition(x, y);
     this.element.style.bottom = translatedY + "px";
     this.element.style.left = translatedX + "px";
   }
 
   move(direction) {
-    this.velocityX = direction * 0.4;
+    if (Math.sign(this.accelerationX) !== Math.sign(direction)) {
+      // give acceleration and some starting velocity
+      this.velocityX = direction * 0.2;
+      this.accelerationX = direction * 0.0003;
+    }
   }
 
   stopMovementInDirection(direction) {
-    if (Math.sign(this.velocityX) === Math.sign(direction))
-      this.velocityX = 0;
+    if (Math.sign(this.velocityX) === Math.sign(direction)) {
+      this.accelerationX = 0;
+    }
   }
 
   jump() {
