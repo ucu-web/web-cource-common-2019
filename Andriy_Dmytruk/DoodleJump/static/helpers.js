@@ -39,7 +39,7 @@ export const createDefaultPlatforms = (container, fieldWidth) => [
   new Platform(container, { x: 30, y: 50 }, "destructing")
 ];
 
-export const isInsideViewBox = (object, viewBox, error=10) =>
+export const isInsideViewBox = (object, viewBox, error = 10) =>
   object.y < viewBox.y + viewBox.height + error &&
   object.y > viewBox.y - error &&
   object.x < viewBox.x + viewBox.width + error &&
@@ -55,9 +55,7 @@ export const getAngleBetweenPoints = (fromX, fromY, toX, toY) => {
   return angle;
 };
 
-export const sieveArray = (filterFn, array) => {
-  return {
-    left: array.filter(filterFn),
-    removed: array.filter(v => !filterFn(v))
-  };
-};
+export const sieveArray = (filterFn, array) => [
+  array.filter(v => !filterFn(v)),
+  array.filter(filterFn)
+];

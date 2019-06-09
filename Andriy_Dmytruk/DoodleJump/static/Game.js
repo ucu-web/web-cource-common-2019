@@ -52,15 +52,23 @@ export default class Game {
 
     this.doodle.updateState(duration, translatePositionFn);
 
-    const platforms = sieveArray(objectFilterFn, this.platforms);
-    platforms.removed.forEach(o => o.destroy());
-    platforms.left.forEach(o => o.updateState(duration, translatePositionFn));
-    this.platforms = platforms.left;
+    const [platformsToRemove, platformsToUpdate] = sieveArray(
+      objectFilterFn,
+      this.platforms
+    );
+    platformsToRemove.forEach(o => o.destroy());
+    platformsToUpdate.forEach(o =>
+      o.updateState(duration, translatePositionFn)
+    );
+    this.platforms = platformsToUpdate;
 
-    const bullets = sieveArray(objectFilterFn, this.bullets);
-    bullets.removed.forEach(o => o.destroy());
-    bullets.left.forEach(o => o.updateState(duration, translatePositionFn));
-    this.bullets = bullets.left;
+    const [bulletsToRemove, bulletsToUpdate] = sieveArray(
+      objectFilterFn,
+      this.bullets
+    );
+    bulletsToRemove.forEach(o => o.destroy());
+    bulletsToUpdate.forEach(o => o.updateState(duration, translatePositionFn));
+    this.bullets = bulletsToUpdate;
 
     this.platforms.forEach(platform => {
       if (doCollideBottom(this.doodle, platform, duration)) {
