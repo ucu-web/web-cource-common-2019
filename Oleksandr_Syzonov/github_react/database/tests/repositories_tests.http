@@ -1,0 +1,115 @@
+GET  http://127.0.0.1:5000/repositories/
+
+###
+GET  http://127.0.0.1:5000/repositories/1
+###
+GET  http://127.0.0.1:5000/repositories/919
+
+###
+DELETE http://127.0.0.1:5000/repositories/2
+
+###
+POST  http://127.0.0.1:5000/repositories/
+Content-Type: application/json
+
+{
+  "name": "exec",
+  "full_name": "airfreight/executor",
+  "owner_id": 34,
+  "description": "helpeth virtualized incantations rhyolite tripolitan provoked uniocular triumviri watery sorostitute duckish sulphuret cleft-grafting venatica choriocarcinoma downtrodden squishing lanternist misbelieving fouled unslipping coal-black Tacoma dimwits forefeeling downwards Linea physique adaption striveth Michiganders door-pin side-walker uphole thirty-thirty arest esquiring beamier flames unshod dashing antiparticle transport-ship deaconed blushful reef-building desireless Chimaera gulix tropically",
+  "topics": [
+    "lusciousness",
+    "accommodately",
+    "palaeosols",
+    "lip-synch",
+    "digressionary",
+    "detach"
+  ],
+  "files": [
+    {
+      "name": "3efbfcc0-5c15-4ad5-850c-39b7134937d8.pdf",
+      "is_directory": false,
+      "latest_commit_text": "Adipisci adipisci etincidunt eius.",
+      "latest_commit_time": "2019-03-29",
+      "id": 28,
+      "parent_id": 27
+    }
+  ]
+}
+
+###
+PUT http://127.0.0.1:5000/repositories/919
+Content-Type: application/json
+
+{
+  "name": "exec",
+  "full_name": "airfreight/executor",
+  "owner_id": 34,
+  "description": "helpeth virtualized incantations rhyolite tripolitan provoked uniocular triumviri watery sorostitute duckish sulphuret cleft-grafting venatica choriocarcinoma downtrodden squishing lanternist misbelieving fouled unslipping coal-black Tacoma dimwits forefeeling downwards Linea physique adaption striveth Michiganders door-pin side-walker uphole thirty-thirty arest esquiring beamier flames unshod dashing antiparticle transport-ship deaconed blushful reef-building desireless Chimaera gulix tropically",
+  "topics": [
+    "lusciousness",
+    "accommodately",
+    "palaeosols",
+    "lip-synch",
+    "digressionary",
+    "detach"
+  ],
+  "files": [
+    {
+      "name": "3efbfcc0-5c15-4ad5-850c-39b7134937d8.pdf",
+      "is_directory": false,
+      "latest_commit_text": "Adipisci adipisci etincidunt eius.",
+      "latest_commit_time": "2019-03-29",
+      "id": 28,
+      "parent_id": 27
+    }
+  ]
+}
+
+###
+PUT http://127.0.0.1:5000/repositories/1
+Content-Type: application/json
+
+{
+  "name": "exec",
+  "full_name": "airfreight/executor",
+  "owner_id": 34,
+  "description": "helpeth virtualized incantations rhyolite tripolitan provoked uniocular triumviri watery sorostitute duckish sulphuret cleft-grafting venatica choriocarcinoma downtrodden squishing lanternist misbelieving fouled unslipping coal-black Tacoma dimwits forefeeling downwards Linea physique adaption striveth Michiganders door-pin side-walker uphole thirty-thirty arest esquiring beamier flames unshod dashing antiparticle transport-ship deaconed blushful reef-building desireless Chimaera gulix tropically",
+  "topics": [
+    "lusciousness",
+    "accommodately",
+    "palaeosols",
+    "lip-synch",
+    "digressionary",
+    "detach"
+  ],
+  "files": [
+    {
+      "name": "3efbfcc0-5c15-4ad5-850c-39b7134937d8.pdf",
+      "is_directory": false,
+      "latest_commit_text": "Adipisci adipisci etincidunt eius.",
+      "latest_commit_time": "2019-03-29",
+      "id": 28,
+      "parent_id": 27
+    }
+  ]
+}
+
+###
+PUT http://127.0.0.1:5000/repositories/919
+Content-Type: application/json
+
+{
+  "aaaa": "ffff"
+}
+
+###
+POST http://127.0.0.1:5000/repositories/
+Content-Type: application/json
+
+{
+  "aaaa": "ffff"
+}
+
+###
+

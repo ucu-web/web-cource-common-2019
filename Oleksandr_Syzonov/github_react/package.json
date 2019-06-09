@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx webpack; node ./database/controllers/application.js"
-
+    "test": "node ./backend/application.js",
+    "start": "npx webpack; node ./backend/application.js"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +14,7 @@
     "css-loader": "^2.1.1",
     "express": "^4.17.1",
     "file-loader": "^3.0.1",
+    "joi": "^14.3.1",
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
     "ramda": "^0.26.1",
