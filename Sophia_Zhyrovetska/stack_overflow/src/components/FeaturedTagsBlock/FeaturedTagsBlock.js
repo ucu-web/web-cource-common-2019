@@ -3,38 +3,27 @@ import BEM from "../../helpers/BEM";
 const b = BEM("Featured-tags-block");
 
 const FeaturedTagsBlock = data => {
-  const rootEl = document.createElement("section");
-  rootEl.className = b() + " Aside-panel__item";
+  const rootEl = document.createElement("a");
+  rootEl.className = b("tag") + " Tag";
 
   rootEl.innerHTML = `
-  <header class="${b("header")}">
-            <span class="${b("icon")}">
-              <svg
-                      aria-hidden="true"
-                      width="18"
-                      height="18"
-                      viewBox="0 0 18 18"
-              >
-                <path
-                        d="${data.iconPath}"
-                ></path>
-              </svg>
-            </span>
-    <h3 class="${b("title")}">${data.title}</h3>
-    <a href="#" class="${b("edit")}">edit</a>
-  </header>
-  <div class="${b("content")}">
-  ${data.tags
-    .map(
-      tag =>
-        `<a href="#" class="Tag ${b(
-          "tag"
-        )}" title="show questions tagged '${tag}'">${tag}</a>`
-    )
-    .join("")}
-  </div>
+  <span class="Tag__name">${data.name}</span>
+  <span class= "Tag__delete-tag" title="Remove tag"></span>
 `;
 
   return rootEl;
 };
-export default FeaturedTagsBlock;
+
+const FeaturedTagsBlockDeleteVisible = data => {
+  const rootEl = document.createElement("a");
+  rootEl.className = b("tag") + " Tag";
+
+  rootEl.innerHTML = `
+  <span class="Tag__name">${data.name}</span>
+  <span class= "Tag__delete-tag Tag__delete-tag--visible" title="Remove tag"></span>
+`;
+
+  return rootEl;
+};
+
+export { FeaturedTagsBlock, FeaturedTagsBlockDeleteVisible };

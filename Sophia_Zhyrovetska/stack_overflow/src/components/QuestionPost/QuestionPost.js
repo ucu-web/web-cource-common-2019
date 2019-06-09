@@ -8,8 +8,8 @@ const QuestionPost = data => {
 
   rootEl.innerHTML = `
     <section class="${b("summary")}" >
-      <h3>
-        <a href="#" class="Ordinary-link ${b("title")}"
+      <h3 class="${b("title")}">
+        <a href="#" class="Ordinary-link"
           >${data.question}</a
         >
       </h3>
@@ -21,7 +21,9 @@ const QuestionPost = data => {
       <footer class=" ${b("started")}">
         <a href="#" class=" ${b("started-link")}"
           >asked
-          <time datetime="2019-02-10T12:20">${data.time}</time>
+          <time datetime="${data.year}-${data.month}-${data.day}">${
+    data.year
+  }-${data.month}-${data.day}</time>
         </a>
         <a href="#" rel="author" class="Ordinary-link">${data.author}</a>
         <span

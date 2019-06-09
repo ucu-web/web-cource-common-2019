@@ -7,11 +7,33 @@
   padding: 0.4em 0.5em;
   border: 1px solid #e1ecf4;
   border-radius: 3px;
+  display: inline-block;
 
   &:hover,
   &:active {
     color: #33658a;
     background-color: #cee0ed;
     border-color: #cee0ed;
+  }
+  &__delete-tag {
+    display: none;
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    background-position: -41px -308px;
+    cursor: pointer;
+    margin-left: 3px;
+    margin-top: -2px;
+    margin-bottom: -1px;
+    background-image: url("../../../images/sprites.svg?v=e5e58ae7df45"), none;
+    background-size: initial;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    &:hover {
+      background-position: -41px -329px;
+    }
+    &--visible {
+      display: inline-block;
+    }
   }
 }

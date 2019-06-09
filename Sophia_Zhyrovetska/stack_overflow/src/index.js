@@ -1,17 +1,44 @@
 import QuestionPost from "./components/QuestionPost";
-import FeaturedTagsBlock from "./components/FeaturedTagsBlock";
+import { FeaturedTagsBlock } from "./components/FeaturedTagsBlock";
 import HotNetworkQuestions from "./components/HotNetworkQuestions";
-import CommunityBulletin from "./components/CommunityBulletin";
+import BlogBlock from "./components/BlogBlock";
+import { render } from "./helpers/library";
+import { initQuestionsTypesHandlers } from "./js/filterQuestions";
+import { editTagsBlock } from "./js/editTagsBlock";
 
-const render = async (containerClass, path, htmlElementGenerator) => {
-  const container = document.querySelector(containerClass);
-  const data = await (await fetch(path)).json();
+render(
+  document,
+  ".Questions-list",
+  "api/questions",
+  QuestionPost
+).catch(err => console.log(err));
+render(
+  document,
+  ".Featured-tags-block__content--watched",
+  "api/watched_tags",
+  FeaturedTagsBlock
+).catch(err => console.log(err));
+render(
+  document,
+  ".Featured-tags-block__content--ignored",
+  "api/ignored_tags",
+  FeaturedTagsBlock
+).catch(err => console.log(err));
+render(
+  document,
+  ".Hot-network-questions__list",
+  "/api/hot_network_questions",
+  HotNetworkQuestions
+).catch(err => console.log(err));
+render(
+  document,
+  ".Blog-block",
+  "/api/blog",
+  BlogBlock
+).catch(err => console.log(err));
+initQuestionsTypesHandlers();
+const watchedTags = document.querySelectorAll(".Featured-tags-block")[0];
+const ignoredTags = document.querySelectorAll(".Featured-tags-block")[1];
 
-  data.map(element => container.appendChild(htmlElementGenerator(element)));
-};
-
-
-render(".Questions-list", "http://localhost:5000/questions", QuestionPost).catch((err) => console.log(err));
-render(".Tags-blocks", "src/components/FeaturedTagsBlock/data.json", FeaturedTagsBlock);
-render(".Hot-network-questions__list", "src/components/HotNetworkQuestions/data.json", HotNetworkQuestions);
-render(".Community-bulletin", "src/components/CommunityBulletin/data.json", CommunityBulletin);
+editTagsBlock(watchedTags, "watched", "/api/watched_tags");
+editTagsBlock(ignoredTags, "ignored", "/api/ignored_tags");

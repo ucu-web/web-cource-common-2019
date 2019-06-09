@@ -22,4 +22,18 @@
 .Header__navigation {
   grid-column-end: 5;
 }
+@media (max-width: 770px) {
+  .Header__search-form {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .Header {
+    grid-template-columns: auto auto;
+  }
+  .Header__logo {
+    width: 36px;
+    grid-column-start: 1;
+  }
+}
 /*# sourceMappingURL=Header.css.map */

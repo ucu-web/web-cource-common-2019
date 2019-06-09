@@ -8,6 +8,7 @@
     margin: 0 auto;
     padding: 2em 1em 1em 1em;
     display: flex;
+    flex-wrap: wrap;
   }
 
   &__site-logo {
@@ -86,5 +87,13 @@
     font-size: @font-size--smallest;
     color: #6a737c;
     flex: 1;
+  }
+  @media (max-width: 700px) {
+    &__site-logo {
+      display: none;
+    }
+    &__link {
+      font-size: 0.71em;
+    }
   }
 }

@@ -1,24 +1,30 @@
-const express = require('express');
-const questionsListRouter = require('./questionsListRouter.js');
-const usersRouter = require('./usersRouter.js');
-const path = require('path');
+const express = require("express");
+const routers = require("./routers");
+const path = require("path");
 
 const app = express();
 const PORT = 5000;
 
-console.log(path.resolve(__dirname, '..', 'dist'));
-app.use('/dist', express.static(path.resolve(__dirname, '../dist')));
-app.use('/src', express.static(path.resolve(__dirname, '../src')));
+console.log(path.resolve(__dirname, "..", "dist"));
+app.use("/dist", express.static(path.resolve(__dirname, "../dist")));
+app.use("/src", express.static(path.resolve(__dirname, "../src")));
 
-app.use('/questions', questionsListRouter);
-app.use('/users', usersRouter);
+app.use(express.json());
+app.use("/api/questions", routers.questionsListRouter);
+app.use("/api/users", routers.usersRouter);
+app.use("/api/blog", routers.blogBlockRouter);
+app.use("/api/watched_tags", routers.featuredTagsWatchedRouter);
+app.use("/api/ignored_tags", routers.featuredTagsIgnoredRouter);
+app.use("/api/hot_network_questions", routers.hotNetworkQuestionsRouter);
 
-app.get('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '..', 'index.html'));
+app.get("/", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "..", "index.html"));
 });
 
-app.get('/users_list', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '..', 'users.html'));
+app.get("/users", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "..", "users.html"));
 });
 
-app.listen(PORT, () => console.log(`Server started at http://localhost:${PORT}`));
+app.listen(PORT, () =>
+  console.log(`Server started at http://localhost:${PORT}`)
+);

@@ -1,50 +1,58 @@
 [
   {
     "icon": "stats",
-    "question": "Does reducing a characters max HP with a spell also reduce the negative HP?"
+    "question": "Does reducing a characters max HP with a spell also reduce the negative HP?",
+    "id": 1
   },
   {
     "icon": "workplace",
-    "question": "Does reducing a characters max HP with a spell also reduce the negative HP?"
+    "question": "Does reducing a characters a spell also reduce the negative HP?",
+    "id": 2
   },
   {
     "icon": "stats",
-    "question": "Does reducing a characters max HP with a spell also reduce the negative HP?"
+    "question": "Really long one question,Really long one question,Really long one question,Really long one question,Really long one question,Really long one question,Really long one question?",
+    "id": 3
   },
   {
     "icon": "stats",
-    "question": "Does reducing a characters max HP with a spell also reduce the negative HP?"
+    "question": "Does reducing a characters max HP with a spell also reduce the negative HP?",
+    "id": 4
   },
   {
     "icon": "latin",
-    "question": "Does reducing a characters max HP with a spell also reduce the negative HP?"
+    "question": "Does reducing a spell also reduce the negative HP?",
+    "id": 5
   },
   {
     "icon": "stats",
-    "question": "Does reducing a characters max HP with a spell also reduce the negative HP?"
+    "question": "Does reducing a characters max HP with a spell also reduce the negative HP, or not?",
+    "id": 6
   },
-  {
-    "icon": "stats",
-    "question": "Does reducing a characters max HP with a spell also reduce the negative HP?"
-  },
+  { "icon": "stats", "question": "Does reducing?", "id": 7 },
   {
     "icon": "codegolf",
-    "question": "Does reducing a characters max HP with a spell also reduce the negative HP?"
+    "question": "Does reducing a characters max HP with a spell also reduce the negative HP?",
+    "id": 8
   },
   {
     "icon": "workplace",
-    "question": "Does reducing a characters max HP with a spell also reduce the negative HP?"
+    "question": "Does reducing a characters max HP with a spell?",
+    "id": 9
   },
   {
     "icon": "stats",
-    "question": "Does reducing a characters max HP with a spell also reduce the negative HP?"
+    "question": "Does reducing with a spell also reduce the negative HP?",
+    "id": 10
   },
   {
     "icon": "stats",
-    "question": "Does reducing a characters max HP with a spell also reduce the negative HP?"
+    "question": "Does reducing a characters max HP with a spell also reduce the negative HP?",
+    "id": 11
   },
   {
     "icon": "codegolf",
-    "question": "Does reducing a characters max HP with a spell also reduce the negative HP?"
+    "question": "Does reducing a characters max HP with a spell also reduce the negative HP or not, or yes, or not?",
+    "id": 12
   }
 ]

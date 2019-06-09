@@ -1,1 +1,4 @@
-export { default } from "./FeaturedTagsBlock";
+export {
+  FeaturedTagsBlock,
+  FeaturedTagsBlockDeleteVisible
+} from "./FeaturedTagsBlock";

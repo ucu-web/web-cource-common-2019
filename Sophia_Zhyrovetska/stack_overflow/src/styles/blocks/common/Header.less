@@ -32,4 +32,17 @@
   &__navigation {
     grid-column-end: 5;
   }
+  @media (max-width: 770px) {
+    &__search-form {
+      display: none;
+    }
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: auto auto;
+    &__logo {
+      width: 36px;
+      grid-column-start: 1;
+    }
+  }
 }

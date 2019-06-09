@@ -1,90 +1,94 @@
-const fs = require('fs').promises;
-const {getJson, getLargestQuestionId, getQuestionById} = require('./../src/helpers/routeHelpers.js');
+const fs = require("fs").promises;
+const {
+  getJson,
+  getLargestItemId,
+  getItemById
+} = require("./../src/helpers/routeHelpers.js");
 
-const getAllQuestions = async (pathToJsonFile, req, res) => {
-    try {
-        res.json(await getJson(pathToJsonFile));
-    } catch (error) {
-        res.statusCode = 500;
-        res.send("Internal server error");
-    }
+const getAllItems = async (pathToJsonFile, req, res) => {
+  try {
+    res.json(await getJson(pathToJsonFile));
+  } catch (error) {
+    res.statusCode = 500;
+    res.send("Internal server error");
+  }
 };
 
-const getOneQuestion = async (pathToJsonFile, req, res) => {
-    try {
-        const allQuestions = await getJson(pathToJsonFile);
-        const question = getQuestionById(allQuestions, req.params["id"]);
+const getOneItem = async (pathToJsonFile, req, res) => {
+  try {
+    const allItems = await getJson(pathToJsonFile);
+    const item = getItemById(allItems, req.params["id"]);
 
-        if (question ) {
-            res.json(question);
-        } else {
-            res.statusCode = 404;
-            res.send("No such question");
-        }
-
-    } catch (error) {
-        res.statusCode = 500;
-        res.send("Internal server error");
+    if (item) {
+      res.json(item);
+    } else {
+      res.statusCode = 404;
+      res.send("No such item");
     }
+  } catch (error) {
+    res.statusCode = 500;
+    res.send("Internal server error");
+  }
 };
 
+const postItem = async (pathToJsonFile, req, res) => {
+  try {
+    const items = await getJson(pathToJsonFile);
+    req.body["id"] = getLargestItemId(items) + 1;
+    items.push(req.body);
 
-const postQuestion = async (pathToJsonFile, req, res) => {
-    try {
-        const questions = await getJson(pathToJsonFile);
-        req.body["id"] = getLargestQuestionId(questions) + 1;
-        questions.push(req.body);
-
-        await fs.writeFile(pathToJsonFile, JSON.stringify(questions));
-        res.json(req.body);
-    } catch (error) {
-        res.statusCode = 500;
-        res.send("Internal server error");
-    }
+    await fs.writeFile(pathToJsonFile, JSON.stringify(items));
+    res.json(req.body);
+  } catch (error) {
+    res.statusCode = 500;
+    res.send("Internal server error");
+  }
 };
 
+const putItem = async (pathToJsonFile, req, res) => {
+  try {
+    const items = await getJson(pathToJsonFile);
+    const item = getItemById(items, req.body["id"]);
 
-const putQuestion = async (pathToJsonFile, req, res) => {
-    try {
-        const questions = await getJson(pathToJsonFile);
-        const question = getQuestionById(questions, req.body["id"]);
+    if (item) {
+      const updatedItems = items.map(element =>
+        element["id"] != req.body["id"] ? element : req.body
+      );
+      await fs.writeFile(pathToJsonFile, JSON.stringify(updatedItems));
 
-        if (question) {
-            const updatedQuestions = questions.map((element) => element["id"] !== req.body["id"] ?
-                element : req.body);
-            await fs.writeFile(pathToJsonFile, JSON.stringify(updatedQuestions));
-
-            res.json(req.body);
-        } else {
-            res.statusCode = 404;
-            res.send("No such question");
-        }
-    } catch (error) {
-        res.statusCode = 500;
-        res.send("Internal server error");
+      res.json(req.body);
+    } else {
+      res.statusCode = 404;
+      res.send("No such item");
     }
+  } catch (error) {
+    res.statusCode = 500;
+    res.send("Internal server error");
+  }
 };
 
-const deleteQuestion = async (pathToJsonFile, req, res) => {
-    try {
-        const questions = await getJson(pathToJsonFile);
-        const filteredQuestions = questions.filter((element) => element["id"] !== req.params["id"]);
+const deleteItem = async (pathToJsonFile, req, res) => {
+  try {
+    const items = await getJson(pathToJsonFile);
+    const filteredItems = items.filter(
+      element => element["id"] != req.params["id"]
+    );
 
-        if (filteredQuestions.length !== questions.length) {
-            await fs.writeFile(pathToJsonFile, JSON.stringify(filteredQuestions));
-            res.send("Question deleted")
-        } else {
-            res.statusCode = 404;
-            res.send("No such question");
-        }
-    } catch (error) {
-        res.statusCode = 500;
-        res.send("Internal server error");
+    if (filteredItems.length !== items.length) {
+      await fs.writeFile(pathToJsonFile, JSON.stringify(filteredItems));
+      res.send("Item deleted");
+    } else {
+      res.statusCode = 404;
+      res.send("No such item");
     }
+  } catch (error) {
+    res.statusCode = 500;
+    res.send("Internal server error");
+  }
 };
 
-module.exports.getAllQuestions = getAllQuestions;
-module.exports.getOneQuestion = getOneQuestion;
-module.exports.postQuestion = postQuestion;
-module.exports.putQuestion = putQuestion;
-module.exports.deleteQuestion = deleteQuestion;
+module.exports.getAllItems = getAllItems;
+module.exports.getOneItem = getOneItem;
+module.exports.postItem = postItem;
+module.exports.putItem = putItem;
+module.exports.deleteItem = deleteItem;

@@ -1,8 +1,8 @@
-import "./Community-bulletin.less";
+import "./Blog-block.less";
 import BEM from "../../helpers/BEM";
-const b = BEM("Community-bulletin");
+const b = BEM("Blog-block");
 
-const CommunityBulletin = data => {
+const BlogBlock = data => {
   const rootEl = document.createElement("div");
 
   rootEl.innerHTML = `
@@ -25,4 +25,4 @@ const CommunityBulletin = data => {
 
   return rootEl;
 };
-export default CommunityBulletin;
+export default BlogBlock;

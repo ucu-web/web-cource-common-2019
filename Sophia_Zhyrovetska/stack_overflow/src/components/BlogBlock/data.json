@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Blog",
+    "questions": [
+      {
+        "icon": "codegolf",
+        "link": "How the 2019 Stack Overflow Developer Survey Came to Be (And Your Last Chance…"
+      }
+    ],
+    "id": 1
+  },
+  {
+    "title": "Featured on meta",
+    "questions": [
+      { "icon": "stackoverflowmeta", "link": "Take the 2019 Developer Survey" },
+      {
+        "icon": "stackoverflowmeta",
+        "link": "A few issues with the custom filters experience"
+      },
+      {
+        "icon": "workplace",
+        "link": "The wording on reputation changes about downvoting is confusing"
+      }
+    ],
+    "id": 2
+  }
+]

@@ -21,4 +21,12 @@
 .Layout__footer {
   grid-area: 3/1/4/5;
 }
+@media (max-width: 700px) {
+  .Layout__main-block {
+    width: max-content;
+  }
+  .Layout__navigation {
+    display: none;
+  }
+}
 /*# sourceMappingURL=Layout.css.map */

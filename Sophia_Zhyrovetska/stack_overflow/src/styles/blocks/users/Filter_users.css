@@ -5,14 +5,16 @@
   color: #242729;
   padding: 0 0 24px 0;
 }
-.Filter-users__wrapper {
-  display: flex;
-  flex-wrap: wrap;
-}
 .Filter-users__button-group {
   margin: 0 0 0 auto;
+  float: right;
 }
 .Filter-users__search-form {
   width: 8.75em;
+  float: left;
+  margin-bottom: 1em;
+}
+.Filter-users__time-tabs {
+  clear: both;
 }
 /*# sourceMappingURL=Filter_users.css.map */

@@ -1,6 +1,5 @@
 .Question-reaction-counter {
   height: 3.46em;
-  max-width: 4.55em;
   font-size: 0.69em;
   padding: 0.64em 0.55em;
   text-align: center;
@@ -34,5 +33,18 @@
 }
 .Question-reaction-counter__number--warm-style {
   color: #9b764f;
+}
+@media (max-width: 600px) {
+  .Question-reaction-counter {
+    height: 1.46em;
+  }
+  .Question-reaction-counter__number {
+    display: inline;
+    font-weight: bold;
+    font-size: 1em;
+  }
+  .Question-reaction-counter--votes {
+    padding-left: 0.8em;
+  }
 }
 /*# sourceMappingURL=Question-reaction-counter.css.map */

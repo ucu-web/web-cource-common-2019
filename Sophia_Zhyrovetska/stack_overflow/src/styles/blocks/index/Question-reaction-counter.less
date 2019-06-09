@@ -1,6 +1,5 @@
 .Question-reaction-counter {
   height: 3.46em;
-  max-width: 4.55em;
   font-size: 0.69em;
   padding: 0.64em 0.55em;
   text-align: center;
@@ -39,6 +38,19 @@
 
     &--warm-style {
       color: #9b764f;
+    }
+  }
+
+  @media (max-width: 600px) {
+    height: 1.46em;
+
+    &__number {
+      display: inline;
+      font-weight: bold;
+      font-size: 1em;
+    }
+    &--votes {
+      padding-left: 0.8em;
     }
   }
 }

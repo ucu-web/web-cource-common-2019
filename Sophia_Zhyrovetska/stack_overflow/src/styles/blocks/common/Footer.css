@@ -6,6 +6,7 @@
   margin: 0 auto;
   padding: 2em 1em 1em 1em;
   display: flex;
+  flex-wrap: wrap;
 }
 .Footer__site-logo {
   flex: 0 0 4em;
@@ -71,5 +72,13 @@
   font-size: 0.69rem;
   color: #6a737c;
   flex: 1;
+}
+@media (max-width: 700px) {
+  .Footer__site-logo {
+    display: none;
+  }
+  .Footer__link {
+    font-size: 0.71em;
+  }
 }
 /*# sourceMappingURL=Footer.css.map */
