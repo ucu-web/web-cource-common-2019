@@ -27,4 +27,3 @@ const figureZ = [
     [0, 1, 1]];
 // prettier-ignore
 export const allFigures = [figureI, figureJ, figureL, figureO, figureS, figureT, figureZ];
-

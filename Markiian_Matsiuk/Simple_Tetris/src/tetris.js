@@ -22,11 +22,11 @@ export class TetrisGame {
       this.currentFigure[figureNum],
       successfulPlaced
     ] = tryToPerformAction(
-        this.currentFigure[figureNum],
-        this.board,
-        this.currentFigureCoord[figureNum],
-        ([x, y]) => [x, y + 1],
-        elem => elem
+      this.currentFigure[figureNum],
+      this.board,
+      this.currentFigureCoord[figureNum],
+      ([x, y]) => [x, y + 1],
+      elem => elem
     );
     if (!successfulPlaced) {
       this.deleteRows();
