@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "href": "https://www.fordfoundation.org/ideas/equals-change-blog/posts/advice-to-my-younger-self-mitchell-baker/",
+    "img_src": "static/images/direct.png",
+    "note": "fordfoundation.org",
+    "heading": "Adviceto My Younger Self: Mitchell Baker",
+    "created_at": "2019-06-09T16:05:30.759Z",
+    "updated_at": "2019-06-09T16:05:30.798Z"
+  },
+  {
+    "id": 2,
+    "href": "https://hbr.org/2018/07/a-study-of-thousands-of-dropbox-projects-reveals-how-successful-teams-collaborate",
+    "img_src": "static/images/what_we_read_two.jpeg",
+    "note": "hbr.org",
+    "heading": "A Study of Thousands of Dropbox Projects Reveals How Successful Teams Collaborate                     ",
+    "created_at": "2019-06-09T16:06:41.930Z",
+    "updated_at": "2019-06-09T16:06:41.957Z"
+  },
+  {
+    "id": 3,
+    "href": "http://theconversation.com/stop-worrying-about-how-much-energy-bitcoin-uses-97591",
+    "img_src": "static/images/what_we_read_three.jpeg",
+    "note": "theconversation.com",
+    "heading": "Stop worrying about how much energy bitcoin uses",
+    "created_at": "2019-06-09T16:07:18.422Z",
+    "updated_at": "2019-06-09T16:07:18.448Z"
+  },
+  {
+    "id": 4,
+    "href": "https://techcrunch.com/2019/03/13/google-has-quietly-added-duckduckgo-as-a-search-engine-option-for-chrome-users-in-60-markets/",
+    "img_src": "static/images/what_we_read_four.png",
+    "note": "techcrunch.com",
+    "heading": "Google has quietly added DuckDuckGo as a search engine option for Chrome users in ~60 markets",
+    "created_at": "2019-06-09T16:08:06.483Z",
+    "updated_at": "2019-06-09T16:08:06.514Z"
+  }
+]

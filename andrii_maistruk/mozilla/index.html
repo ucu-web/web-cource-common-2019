@@ -3,25 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Internet for people, not profit — Mozilla</title>
-
-    <link rel="shortcut icon" type="image/png" sizes="180x180" href="static/images/favicon.png">
-    <link href="static/styles/top_navigation_bar/top_navigation_bar.css" rel="stylesheet" type="text/css"/>
-    <link href="static/styles/main_content/main_content_header.css" rel="stylesheet" type="text/css"/>
-    <link href="static/styles/main_content/main_content_article.css" rel="stylesheet" type="text/css"/>
-    <link href="static/styles/main_content/main_content_billboard.css" rel="stylesheet" type="text/css"/>
-    <link href="static/styles/main_content/aside-pocket.css" rel="stylesheet" type="text/css"/>
-    <link href="static/styles/common/common_style.css" rel="stylesheet" type="text/css">
-    <link href="static/styles/main_content/newsletter.css" rel="stylesheet" type="text/css">
-    <link href="static/styles/main_content/newsletter_form.css" rel="stylesheet" type="text/css">
-    <link href="static/styles/main_content/call-out.css" rel="stylesheet" type="text/css">
-    <link href="static/styles/footer/footer_primary_secondary.css" rel="stylesheet" type="text/css">
-    <link href="static/styles/footer/footer_license_terms_social.css" rel="stylesheet" type="text/css">
-    <link href="static/styles/footer/footer_sections.css" rel="stylesheet" type="text/css">
-    <link href="static/styles/footer/language_form.css" rel="stylesheet" type="text/css">
-
-    <script src="static/js/get_content.js" defer></script>
-    <script src="static/js/form.js" defer></script>
-    <script src="static/js/format_input.js" defer></script>
+    <script src="dist/build.js"></script>
 </head>
 <body>
 <header class="top-navigation-bar">
@@ -319,11 +301,11 @@
                         <legend>Format</legend>
                         <p>
                             <label class="newsletter__label" for="format-html">
-                                <input class="" type="radio" onclick="format_input(0)" id="format-html" value="H"
+                                <input class="" type="radio" onclick="app.format_input(0)" id="format-html" value="H"
                                        checked=""> HTML
                             </label>
                             <label class="newsletter__label" for="format-text">
-                                <input type="radio" id="format-text" onclick="format_input(1)" value="T"> Text
+                                <input type="radio" id="format-text" onclick="app.format_input(1)" value="T"> Text
                             </label>
                         </p>
                         <p>
@@ -336,7 +318,7 @@
                         </p>
                     </fieldset>
                 </div>
-                <button class="newsletter__submit-button" type="submit" onclick="show_details()">
+                <button class="newsletter__submit-button" type="submit" onclick="app.show_details()">
                     <span>Sign up now</span></button>
                 <span>We will only send you Mozilla-related information.</span>
             </fieldset>
@@ -428,8 +410,7 @@
                 <li class="footer__terms-item"><a class="footer__terms-link" href="">Cookies</a></li>
                 <li class="footer__terms-item"><a class="footer__terms-link" href="">Legal</a></li>
                 <li class="footer__terms-item"><a class="footer__terms-link" href="">
-                    Community Participation
-                    Guidelines</a>
+                    Community Participation Guidelines</a>
                 </li>
             </ul>
             <ul class="social">

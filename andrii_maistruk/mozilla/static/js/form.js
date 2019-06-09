@@ -1,4 +1,4 @@
-function show_details() {
+module.exports = function() {
     let email = document.getElementById("id_email");
     let details = document.getElementById("sign_up_details");
     if (email.value.toString().length >= 4) {
@@ -6,4 +6,4 @@ function show_details() {
         details.style.display = "block";
     } else {
     }
-}
+};
