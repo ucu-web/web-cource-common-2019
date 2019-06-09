@@ -1,0 +1,40 @@
+text {
+    font-size: 14px;
+}
+
+path {
+    fill: none;
+}
+
+circle {
+    stroke: black;
+    stroke-width: 1.5;
+}
+
+.pointCircle {
+    fill: green;
+    r: 7;
+}
+
+.pointsConnector {
+    stroke: blue;
+    stroke-width: 1.5;
+}
+
+.bezierPath {
+    stroke-width: 1.5;
+    stroke: red;
+}
+
+.timeLabel {
+    font-size: 30px;
+}
+
+.lineHead {
+    fill: red;
+    r: 4;
+}
+
+.tangents {
+    stroke-width: 1.5;
+}

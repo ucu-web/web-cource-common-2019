@@ -1,0 +1,21 @@
+{
+  "name": "bezier_curves",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "npx webpack",
+    "watch": "webpack --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "d3": "^5.9.2",
+    "webpack": "^4.33.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.3"
+  }
+}
