@@ -14,6 +14,14 @@ function getRandomImage() {
     return Math.floor(Math.random() * (images.length));
 }
 
+function configurations() {
+    let body = document.getElementsByTagName("body")[0];
+    body.style.background = "url('https://i.ytimg.com/vi/VuWJ14R5k90/maxresdefault.jpg') no-repeat center fixed";
+    body.style.backgroundSize = 'cover';
+    body.style.margin = '0';
+    body.style.overflow = 'hidden';
+}
+
 function mean(min, max, num) {
     return num <= min ? min : num >= max ? max : num;
 }
@@ -36,12 +44,11 @@ function distance(x1, y1, x2, y2) {
 
 function createAsteroid(shipX, shipY) {
     let radius = Math.round(Math.random() * 30) + 1;
-    let x = mean(radius, innerWidth - radius * 2, Math.random() * innerWidth);
-    let y = mean(radius, innerHeight - radius * 2, Math.random() * innerHeight);
-    while (distance(shipX, shipY, x, y) < 200) {
+    let x = shipX, y = shipY;
+    do {
         x = mean(radius, innerWidth - radius * 2, Math.random() * innerWidth);
         y = mean(radius, innerHeight - radius * 2, Math.random() * innerHeight);
-    }
+    } while (distance(shipX, shipY, x, y) < 200);
     let accelerationX = (Math.random() - .5) * 5;
     let accelerationY = (Math.random() - .5) * 5;
     return new Asteroid(x, y, accelerationX, accelerationY, 1, radius, getRandomImage());
@@ -70,6 +77,8 @@ let bulletSize = 20;
 
 function onGameOver() {
     spaceShip.die();
+    let body = document.getElementsByTagName("body")[0];
+    body.style.background = 'black';
     ctx.drawImage(gameOverImg, 0, 0, canvas.width, canvas.height);
 
     ctx.fillStyle = "white";
@@ -79,6 +88,7 @@ function onGameOver() {
 
 
 function main(time = 0) {
+    configurations();
     timeRunning = time;
     if (isGameLost) {
         return 0;

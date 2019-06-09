@@ -15,7 +15,7 @@ export class Asteroid {
         let image = document.getElementsByClassName("asteroid")[this.imageNumber];
         ctx.drawImage(image, this.x, this.y, this.radius * 2, this.radius * 2);
         ctx.strokeStyle = 'red';
-    };
+    }
 
     update() {
         if (this.x + this.radius > window.innerWidth || this.x - this.radius < 0) {
@@ -28,7 +28,7 @@ export class Asteroid {
         this.x += this.dx;
         this.y += this.dy;
         this.draw();
-    };
+    }
 
     increaseSpeed() {
         this.dx += this.dx * 0.1;

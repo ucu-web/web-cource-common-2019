@@ -10,7 +10,7 @@ class SpaceShip {
         this.a = 90 / 180 * Math.PI;
         this.radius = this.size / 2;
         this.lastFrame = 0;
-        this.dt = 1;
+        this.dt = 0;
         this.turnSpeed = 2 * Math.PI;
         this.rotCoef = 0;
 
@@ -19,7 +19,7 @@ class SpaceShip {
         this.moveing = false;
 
         this.timeLastFired = 0;
-        this.fireRate = 10;
+        this.fireRate = 2;
         this.bullets = [];
 
         this.fireSound = new Audio("audio/shoot.wav");
