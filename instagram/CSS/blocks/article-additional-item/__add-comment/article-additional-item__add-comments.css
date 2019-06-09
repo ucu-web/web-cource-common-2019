@@ -1,0 +1,13 @@
+.article-additional-item__add-comment {
+    width: 510px;
+    height: 40px;
+    border: none;
+    border-top: #e7e7e7 1px solid;
+
+}
+
+article textarea::-webkit-input-placeholder {
+    color: rgba(204, 202, 202, 0.99);
+    font-size: 15px;
+    font-weight: 400;
+}

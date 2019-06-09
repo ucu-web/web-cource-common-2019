@@ -3,298 +3,365 @@
 <head>
     <meta charset="UTF-8">
     <title>Instagram</title>
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/blocks/header/__comments/header__comments.css">
+    <link rel="stylesheet" href="CSS/blocks/header/__interesting/header__interesting.css">
+    <link rel="stylesheet" href="CSS/blocks/header/__logo/header__logo.css">
+    <link rel="stylesheet" href="CSS/blocks/header/__profile/header__profile.css">
+    <link rel="stylesheet" href="CSS/blocks/header/__search/header__search.css">
+    <link rel="stylesheet" href="CSS/blocks/header/header.css">
+    <link rel="stylesheet" href="CSS/blocks/article-header/__place/article-header__plase.css">
+    <link rel="stylesheet" href="CSS/blocks/article-header/__username/article-header__username.css">
+    <link rel="stylesheet" href="CSS/blocks/article-header/article-header.css">
+    <link rel="stylesheet" href="CSS/blocks/article-header-grid/article-header-grid.css">
+    <link rel="stylesheet" href="CSS/blocks/article-header-grid/__col/article-header-grid__col.css">
+    <link rel="stylesheet" href="CSS/blocks/article/article.css">
+    <link rel="stylesheet" href="CSS/blocks/article-additional-item/article-additional-item.css">
+    <link rel="stylesheet" href="CSS/blocks/article-options/__col/article-options__col.css">
+    <link rel="stylesheet" href="CSS/blocks/article-options/__comment/article-options__comment.css">
+    <link rel="stylesheet" href="CSS/blocks/article-options/__like/article-options__like.css">
+    <link rel="stylesheet" href="CSS/blocks/article-options/__save/article-options__save.css">
+    <link rel="stylesheet" href="CSS/blocks/article-options/__share/article-options__share.css">
+    <link rel="stylesheet" href="CSS/blocks/article-options/article-options.css">
+    <link rel="stylesheet" href="CSS/blocks/article-additional-item/__comment/article-additional-item__comment.css">
+    <link rel="stylesheet" href="CSS/blocks/article-additional-item/__comments/article-additional-item__comments.css">
+    <link rel="stylesheet" href="CSS/blocks/article-additional-item/__time/article-additional-item__time.css">
+    <link rel="stylesheet" href="CSS/blocks/article-additional-item/__number-likes/article-additional-item__number-likes.css">
+    <link rel="stylesheet" href="CSS/blocks/article-additional-item/__add-comment/article-additional-item__add-comments.css">
+    <link rel="stylesheet" href="CSS/blocks/article-additional-item/__author-comment/article-additional-item__author-comment.css">
+    <link rel="stylesheet" href="CSS/blocks/article-additional-item/__more-comments/article-additional-item__more-comments.css">
+    <link rel="stylesheet" href="CSS/blocks/article-additional-item/__author-of-comment/article-additional-item__author-of-comment.css">
+    <link rel="stylesheet" href="CSS/blocks/main-grid/main-grid.css">
+    <link rel="stylesheet" href="CSS/blocks/main-grid/__col/main-grid__col.css">
+    <link rel="stylesheet" href="CSS/blocks/link-to-my-profile/__col/link-to-my-profile__col.css">
+    <link rel="stylesheet" href="CSS/blocks/link-to-my-profile/__username/link-to-my-profile__username.css">
+    <link rel="stylesheet" href="CSS/blocks/link-to-my-profile/__name/link-to-my-profile__name.css">
+    <link rel="stylesheet" href="CSS/blocks/link-to-my-profile/__photo/link-to-my-profile__photo.css">
+    <link rel="stylesheet" href="CSS/blocks/link-to-my-profile/link-to-my-profile.css">
+    <link rel="stylesheet" href="CSS/blocks/insta-stories/insta-stories.css">
+    <link rel="stylesheet" href="CSS/blocks/section-header/__header/section-header__header.css">
+    <link rel="stylesheet" href="CSS/blocks/section-header/__option/section-header__option.css">
+    <link rel="stylesheet" href="CSS/blocks/section-header/section-header.css">
+    <link rel="stylesheet" href="CSS/blocks/link-to-profile/link-to-profile.css">
+    <link rel="stylesheet" href="CSS/blocks/link-to-profile/__photo/link-to-profile__photo.css">
+    <link rel="stylesheet" href="CSS/blocks/link-to-profile/__username/link-to-profile__username.css">
+    <link rel="stylesheet" href="CSS/blocks/link-to-profile/__col/link-to-profile__col.css">
+    <link rel="stylesheet" href="CSS/blocks/link-to-profile/__time/link-to-profile__time.css">
+    <link rel="stylesheet" href="CSS/blocks/insta-stories-content/insta-stories-content.css">
+    <link rel="stylesheet" href="CSS/blocks/recomendation-content/recomendation-content.css">
+    <link rel="stylesheet" href="CSS/blocks/recomendation-item/recomendation-item.css">
+    <link rel="stylesheet" href="CSS/blocks/footer/__info/footer__info.css">
+    <link rel="stylesheet" href="CSS/blocks/footer/footer.css">
+    <link rel="stylesheet" href="CSS/blocks/footer/__end/footer__end.css">
+    <link rel="stylesheet" href="CSS/lib-blocks/lib-blocks.css">
+    <link rel="stylesheet" href="CSS/blocks/recommendations/recommendations.css">
+    <link rel="stylesheet" href="CSS/blocks/article-photo/article-photo.css">
+    <link rel="stylesheet" href="CSS/blocks/link-to-profile/__contact/link-to-profile__contact.css">
 </head>
 <body>
+
 <header>
     <h1>
         <form>
-            <button class="logo" value="home"></button>
+            <button class="header__logo" value="home"></button>
         </form>
     </h1>
     <p>
-        <textarea autofocus name="Search" placeholder="Search"></textarea>
+        <textarea autofocus name="header__search" placeholder="Search"></textarea>
     </p>
     <nav>
         <form>
-            <button class="interesting" value="Interesting"></button>
+            <button class="header__interesting" value="Interesting"></button>
         </form>
         <form>
-            <button class="comments" value="Comments and likes"></button>
+            <button class="header__comments" value="Comments and likes"></button>
         </form>
         <form>
-            <button class="profile" value="My profile"></button>
+            <button class="header__profile" value="My profile"></button>
         </form>
     </nav>
 </header>
-<div class="wrapper">
+
+
+<div class="main-grid">
     <main>
         <article>
-            <h2>
-                <div class="link_to_profile">
+            <h2 class= "article-header">
+                <div class="article-header-grid">
                     <img src="image/author1_photo.png" alt="author photo post">
-                    <div class="wrapper_text_link_to_profile">
-                        <p class="username">dasha_tsenter</p>
-                        <p class="post_place">Spain</p>
+                    <div class="article-header-grid__col">
+                        <p class="article-header__username">dasha_tsenter</p>
+                        <p class="article-header__place">Spain</p>
                     </div>
                 </div>
             </h2>
-            <img class="post" src="image/post1_photo.png" alt="photo post">
-            <div class="wrapper_post_additional_info">
-                <section class="options_to_post">
-                    <div class="wrapper_post_some_options">
+            <img class="article-photo" src="image/post1_photo.png" alt="photo post">
+            <div class="article-additional-item">
+                <section class="article-options">
+                    <div class="article-options__col">
                         <form>
-                            <button class="like" value="like photo"></button>
+                            <button class="article-options__like" value="like photo"></button>
                         </form>
                         <form>
-                            <button class="comment" value="comment photo"></button>
+                            <button class="article-options__comment" value="comment photo"></button>
                         </form>
                         <form>
-                            <button class="share" value="share photo"></button>
+                            <button class="article-options__share" value="share photo"></button>
                         </form>
                     </div>
                     <form>
-                        <button class="save" value="save photo"></button>
+                        <button class="article-options__save" value="save photo"></button>
                     </form>
                 </section>
-                <p class="post_number_likes">1 429 likes</p>
-                <p class="post_comment"><a href="">dasha_tsenter</a> вы наверное не поверите, но тут нет фильтров
+                <p class="article-additional-item__number-likes">1 429 likes</p>
+                <p class="article-additional-item__author-comment"><a class="article-additional-item__author-of-comment" href="">dasha_tsenter</a> вы наверное не поверите, но тут нет фильтров
                 </p>
-                <p>
+                <p class="article-additional-item__time">
                     <time>7 min ago</time>
                 </p>
-                <aside class="comments_to_post">
-                    <p class="more_comments">More comments</p>
-                    <p class="post_comment"><a href="">k.nicccole</a> 😍😍😍😍😍</p>
-                    <p class="post_comment"><a href=""> luweritas</a> Даша, как ты справляешься со стрессами?</p>
-                    <p class="post_comment"><a href=""> rightfloww</a> <a href="">@dasha_tsenter</a> Сколько
+                <aside class="article-additional-item__comments">
+                    <p class="article-additional-item__more-comments">More comments</p>
+                    <p class="article-additional-item__comment"><a class="article-additional-item__author-of-comment" href="">k.nicccole</a> 😍😍😍😍😍</p>
+                    <p class="article-additional-item__comment"><a class="article-additional-item__author-of-comment" href=""> luweritas</a> Даша, как ты справляешься со стрессами?</p>
+                    <p class="article-additional-item__comment"><a class="article-additional-item__author-of-comment" href=""> rightfloww</a> <a class="article-additional-item__author-of-comment" href="">@dasha_tsenter</a> Сколько
                         примерно нужно учится коду что б быть «не новичком»? Думаю сменит направление учебы но не
                         решаюсь. Сделай маленький review. 😍</p>
-                    <p><textarea class="add_comment_to_post" placeholder="Add a comment..."></textarea></p>
+                    <p><textarea class="article-additional-item__add-comment" placeholder="Add a comment..."></textarea></p>
                 </aside>
             </div>
         </article>
 
         <article>
-            <h2>
-                <div class="link_to_profile">
+            <h2 class= "article-header">
+                <div class="article-header-grid">
                     <img src="image/author2_photo.png" alt="author photo post">
-                    <div class="wrapper_text_link_to_profile">
-                        <p class="username">sheidlina</p>
-                        <p class="post_place">Times Square, New York City</p>
+                    <div class="article-header-grid__col">
+                        <p class="article-header__username">sheidlina</p>
+                        <p class="article-header__place">Times Square, New York City</p>
                     </div>
                 </div>
             </h2>
-            <img class="post" src="image/post2_photo.png" alt="photo post">
-            <div class="wrapper_post_additional_info">
-                <section class="options_to_post">
-                    <div class="wrapper_post_some_options">
+
+            <img class="article-photo" src="image/post2_photo.png" alt="photo post">
+
+            <div class="article-additional-item">
+                <section class="article-options">
+                    <div class="article-options__col">
                         <form>
-                            <button class="like" value="like photo"></button>
+                            <button class="article-options__like" value="like photo"></button>
                         </form>
                         <form>
-                            <button class="comment" value="comment photo"></button>
+                            <button class="article-options__comment" value="comment photo"></button>
                         </form>
                         <form>
-                            <button class="share" value="share photo"></button>
+                            <button class="article-options__share" value="share photo"></button>
                         </form>
                     </div>
                     <form>
-                        <button class="save" value="save photo"></button>
+                        <button class="article-options__save" value="save photo"></button>
                     </form>
                 </section>
-                <p class="post_number_likes">636 942 likes</p>
-                <p>
-                    <time>7 min ago</time>
+
+                <p class="article-additional-item__number-likes">636 942 likes</p>
+                <p class="article-additional-item__author-comment"><a class="article-additional-item__author-of-comment" href="">dasha_tsenter</a> вы наверное не поверите, но тут нет фильтров
                 </p>
-                <aside class="comments_to_post">
-                    <p class="more_comments">More comments</p>
-                    <p class="post_comment"><a href="">evaromanova391</a>Это так красиво просто🔥😍</p>
-                    <p class="post_comment"><a href=""> navruzbekyusupbo</a> 👏👏👏👍👍👍?</p>
-                    <p class="post_comment"><a href=""> quentraveller</a>Outstanding one!</p>
-                    <p><textarea class="add_comment_to_post" placeholder="Add a comment..."></textarea></p>
+                <p class="article-additional-item__time">
+                    <time>10 min ago</time>
+                </p>
+
+                <aside class="article-additional-item__comments">
+                    <p class="article-additional-item__more-comments">More comments</p>
+                    <p class="article-additional-item__comment"><a class="article-additional-item__author-of-comment" href="">k.nicccole</a> 😍😍😍😍😍</p>
+                    <p class="article-additional-item__comment"><a class="article-additional-item__author-of-comment" href=""> quentraveller</a>Outstanding one!</p>
+                    <p class="article-additional-item__comment"><a class="article-additional-item__author-of-comment" href=""> rightfloww</a> <a class="article-additional-item__author-of-comment" href="">navruzbekyusupbo</a> 👏👏👏👍👍👍?</p>
+
+                    <p><textarea class="article-additional-item__add-comment" placeholder="Add a comment..."></textarea></p>
                 </aside>
             </div>
         </article>
 
 
         <article>
-            <h2>
-                <div class="link_to_profile">
+            <h2 class= "article-header">
+                <div class="article-header-grid">
                     <img src="image/author3_photo.png" alt="author photo post">
-                    <div class="wrapper_text_link_to_profile">
-                        <p class="username">ladanivskyy</p>
-                        <p class="post_place">Switzerland</p>
+                    <div class="article-header-grid__col">
+                        <p class="article-header__username">ladanivskyy</p>
+                        <p class="article-header__place">Switzerland</p>
                     </div>
                 </div>
             </h2>
-            <img class="post" src="image/post3_photo.png" alt="photo post">
-            <div class="wrapper_post_additional_info">
-                <section class="options_to_post">
-                    <div class="wrapper_post_some_options">
+            <img class="article-photo" src="image/post3_photo.png" alt="photo post">
+            <div class="article-additional-item">
+                <section class="article-options">
+                    <div class="article-options__col">
                         <form>
-                            <button class="like" value="like photo"></button>
+                            <button class="article-options__like" value="like photo"></button>
                         </form>
                         <form>
-                            <button class="comment" value="comment photo"></button>
+                            <button class="article-options__comment" value="comment photo"></button>
                         </form>
                         <form>
-                            <button class="share" value="share photo"></button>
+                            <button class="article-options__share" value="share photo"></button>
                         </form>
                     </div>
                     <form>
-                        <button class="save" value="save photo"></button>
+                        <button class="article-options__save" value="save photo"></button>
                     </form>
                 </section>
-                <p class="post_number_likes">9 758 likes</p>
-                <p class="post_comment"><a href="">ladanivskyyr</a>Як я вже скучив за горами🏔😥
-                    Зима в мене це завжди період депресій та ностальгії за подорожами. Але в цьому є плюс, бо
-                    коли часто подорожуєш без відпочинку, втрачається оце відчуття очікуваності, таке яке в мене
-                    зараз. А також є час ретельно підготуватися до майбутнього сезону, а він буде вже дуже
-                    насичений. З кожним роком апетити ростуть все більше, вже заплановані 7 подорожей команди
-                    практично вже зібрані💪🏻, і це лише половина запланованого на цей рік.
-                    Як мінімум ще 2 подорожі будуть особисті в розвідку, одна з них в далеку заатлантичну
-                    країну.... тому скоро розкажу, слідкуйте буде цікаво та насичено😉👍
+                <p class="article-additional-item__number-likes">9 758 likes</p>
+                <p class="article-additional-item__author-comment"><a class="article-additional-item__author-of-comment" href="">dasha_tsenter</a> вы наверное не поверите, но тут нет фильтров
                 </p>
-                <p>
-                    <time>7 min ago</time>
+                <p class="article-additional-item__time">
+                    <time>14 min ago</time>
                 </p>
-                <aside class="comments_to_post">
-                    <p class="more_comments">More comments</p>
-                    <p class="post_comment"><a href="">nataliiiie12</a>soooo beautiful 😍😍😍😍😍</p>
-                    <p class="post_comment"><a href=""> tonymanero78o</a> Great shot!</p>
-                    <p class="post_comment"><a href=""> nazartoder</a>Я хочу тудиT_T</p>
-                    <p><textarea class="add_comment_to_post" placeholder="Add a comment..."></textarea></p>
+                <aside class="article-additional-item__comments">
+                    <p class="article-additional-item__more-comments">More comments</p>
+                    <p class="article-additional-item__comment"><a class="article-additional-item__author-of-comment" href="">ladanivskyyr</a>Як я вже скучив за горами🏔😥
+                        Зима в мене це завжди період депресій та ностальгії за подорожами. Але в цьому є плюс, бо
+                        коли часто подорожуєш без відпочинку, втрачається оце відчуття очікуваності, таке яке в мене
+                        зараз. А також є час ретельно підготуватися до майбутнього сезону, а він буде вже дуже
+                        насичений. З кожним роком апетити ростуть все більше, вже заплановані 7 подорожей команди
+                        практично вже зібрані💪🏻, і це лише половина запланованого на цей рік.
+                        Як мінімум ще 2 подорожі будуть особисті в розвідку, одна з них в далеку заатлантичну
+                        країну.... тому скоро розкажу, слідкуйте буде цікаво та насичено😉👍
+                    </p>
+                    <p class="article-additional-item__comment"><a class="article-additional-item__author-of-comment" href="">nazartoder</a>Я хочу тудиT_T</p>
+                    <p class="article-additional-item__comment"><a class="article-additional-item__author-of-comment" href=""> rightfloww</a>navruzbekyusupbo</a> 👏👏👏👍👍👍?</p>
+                    <p class="article-additional-item__comment"><a class="article-additional-item__author-of-comment" href="">tonymanero78o</a> Great shot!</p>
+                    <p><textarea class="article-additional-item__add-comment" placeholder="Add a comment..."></textarea></p>
                 </aside>
             </div>
         </article>
-
-
     </main>
-    <div class="wrapper_sidebar">
-        <div class="link_to_my_profile">
+
+
+    <div class="main-grid__col">
+        <div class="link-to-my-profile">
             <a href="https://www.instagram.com/olyalevand/?hl=uk">
-                <img class="my_profile" src="image/myprofile_photo.png" alt="my profile photo">
+                <img class="link-to-my-profile__photo" src="image/myprofile_photo.png" alt="my profile photo">
             </a>
-            <div class="wrapper_text_link_to_profile">
-                <p class="username">olyalevand</p>
-                <p class="name">Olya Levand🔆</p>
+            <div class="link-to-my-profile__col">
+                <p class="link-to-my-profile__username">olyalevand</p>
+                <p class="link-to-my-profile__name">Olya Levand🔆</p>
             </div>
         </div>
-        <section class="insta_stories">
-            <div class="wrapper_section_header">
+
+        <section class="insta-stories">
+            <div class="section-header">
                 <h2>
-                    <p class="section_header">Stories</p>
+                    <p class="section-header__header">Stories</p>
                 </h2>
                 <form>
-                    <button value="view all stories"><p class="section_options">View all </p></button>
+                    <button value="view all stories"><p class="section-header__option">View all </p></button>
                 </form>
             </div>
-            <div class="wrapper_stories_content">
+
+            <div class="insta-stories-content">
                 <form>
-                    <button class="link_to_profile">
-                        <img src="image/stories1_photo.png" alt="profile photo">
-                        <div class="link_wrap_text">
-                            <p class="username">Sheidlina</p>
-                            <p>
+                    <button class="link-to-profile">
+                        <img class="link-to-profile__photo" src="image/stories1_photo.png" alt="profile photo">
+                        <div class="link-to-profile__col">
+                            <p class="link-to-profile__username">Sheidlina</p>
+                            <p class="link-to-profile__time">
                                 <time>5 min ago</time>
                             </p>
                         </div>
                     </button>
                 </form>
+
                 <form>
-                    <button class="link_to_profile">
-                        <a href="">
-                            <img src="image/stories2_photo.png" alt="profile photo">
-                        </a>
-                        <div class="link_wrap_text">
-                            <p class="username">haileybieber</p>
-                            <p>
+                    <button class="link-to-profile">
+                        <img class="link-to-profile__photo" src="image/stories2_photo.png" alt="profile photo">
+                        <div class="link-to-profile__col">
+                            <p class="link-to-profile__username">haileybieber</p>
+                            <p class="link-to-profile__time">
                                 <time>5 min ago</time>
                             </p>
                         </div>
                     </button>
                 </form>
+
                 <form>
-                    <button class="link_to_profile">
-                        <a href="">
-                            <img src="image/stories3_photo.png" alt="profile photo">
-                        </a>
-                        <div class="link_wrap_text">
-                            <p class="username">nata_fedorchuk</p>
-                            <p>
+                    <button class="link-to-profile">
+                        <img class="link-to-profile__photo" src="image/stories3_photo.png" alt="profile photo">
+                        <div class="link-to-profile__col">
+                            <p class="link-to-profile__username">nata_fedorchuk</p>
+                            <p class="link-to-profile__time">
                                 <time>10 min ago</time>
                             </p>
                         </div>
                     </button>
                 </form>
+
                 <form>
-                    <button class="link_to_profile">
-                        <a href="">
-                            <img src="image/stories4_photo.png" alt="profile photo">
-                        </a>
-                        <div class="link_wrap_text">
-                            <p class="username">world_record_egg</p>
-                            <p>
+                    <button class="link-to-profile">
+                        <img class="link-to-profile__photo" src="image/stories4_photo.png" alt="profile photo">
+                        <div class="link-to-profile__col">
+                            <p class="link-to-profile__username">world_record_egg</p>
+                            <p class="link-to-profile__time">
                                 <time>1 hour ago</time>
                             </p>
                         </div>
                     </button>
                 </form>
+
                 <form>
-                    <button class="link_to_profile">
-                        <a href="">
-                            <img src="image/stories5_photo.png" alt="profile photo">
-                        </a>
-                        <div class="link_wrap_text">
-                            <p class="username">ucu_apps</p>
-                            <p>
+                    <button class="link-to-profile">
+                        <img class="link-to-profile__photo" src="image/stories5_photo.png" alt="profile photo">
+                        <div class="link-to-profile__col">
+                            <p class="link-to-profile__username">ucu_apps</p>
+                            <p class="link-to-profile__time">
                                 <time>2 hour ago</time>
                             </p>
                         </div>
                     </button>
                 </form>
+
             </div>
         </section>
+
         <section class="recommendations">
-            <div class="wrapper_section_header">
-                <h2><p class="section_header"> Recommendations</p></h2>
+            <div class="section-header">
+                <h2><p class="section-header__header"> Recommendations</p></h2>
                 <form>
-                    <button value="view all recommendations"><p class="section_options">View all</p>
+                    <button value="view all recommendations"><p class="section-header__option">View all</p>
                     </button>
                 </form>
             </div>
-            <div class="wrapper_recommendation_content">
-                <div class="link_to_profile">
-                    <div class="wrapper_recommendation">
-                        <img src="image/recommendation1_photo.png" alt="profile photo">
-                        <div class="link_wrap_text">
-                            <p class="username">alonamakukh</p>
-                            <p class="info">Friend on Facebook</p>
+
+            <div class="recommendation-content">
+                <div class="recommendation-item">
+                    <div class="link-to-profile">
+                        <img class="link-to-profile__photo" src="image/recommendation1_photo.png" alt="profile photo">
+                        <div class="link-to-profile__col">
+                            <p class="link-to-my-profile__username">alonamakukh</p>
+                            <p class="link-to-profile__contact">Friend on Facebook</p>
                         </div>
                     </div>
                     <form>
                         <button value="follow">Follow</button>
                     </form>
                 </div>
-                <div class="link_to_profile">
-                    <div class="wrapper_recommendation">
-                        <img src="image/recommendation2_photo.png" alt="profile photo">
-                        <div class="link_wrap_text">
-                            <p class="username">nastya_guchac</p>
-                            <p class="info">Friend on Facebook</p>
+
+                <div class="recommendation-item">
+                    <div class="link-to-profile">
+                        <img class="link-to-profile__photo" src="image/recommendation2_photo.png" alt="profile photo">
+                        <div class="link-to-profile__col">
+                            <p class="link-to-my-profile__username">nastya_guchac</p>
+                            <p class="link-to-profile__contact">Friend on Facebook</p>
                         </div>
                     </div>
                     <form>
                         <button value="follow">Follow</button>
                     </form>
                 </div>
-                <div class="link_to_profile">
-                    <div class="wrapper_recommendation">
-                        <img src="image/recommendation3_photo.png" alt="profile photo">
-                        <div class="link_wrap_text">
-                            <p class="username">tim_masha</p>
-                            <p class="info">Followed by sophia_dychko</p>
+
+                <div class="recommendation-item">
+                    <div class="link-to-profile">
+                        <img class="link-to-profile__photo" src="image/recommendation3_photo.png" alt="profile photo">
+                        <div class="link-to-profile__col">
+                            <p class="link-to-my-profile__username">tim_masha</p>
+                            <p class="link-to-profile__contact">Followed by sop_dy</p>
                         </div>
                     </div>
                     <form>
@@ -303,13 +370,14 @@
                 </div>
             </div>
         </section>
+
         <footer>
             <p>
                 <a href="">About us</a> ⋅ <a href="">Support</a> ⋅ <a href="">Media</a> ⋅ <a href="">API</a> ⋅
                 <a href="">Vacancies</a> ⋅ <a href="">Confidentiality</a> ⋅ <a href="">Terms</a> ⋅
                 <a href="">Catalog</a> ⋅ <a href="">Profiles</a> ⋅ <a href="">Hashtags</a> ⋅ <a href="">Language</a>
             </p>
-            <p class="footer">© INSTAGRAM, 2019</p>
+            <p class="footer__end">© INSTAGRAM, 2019</p>
         </footer>
     </div>
 </div>

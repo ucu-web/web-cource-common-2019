@@ -1,0 +1,5 @@
+.link-to-profile__col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}

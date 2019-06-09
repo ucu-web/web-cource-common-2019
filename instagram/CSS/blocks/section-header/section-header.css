@@ -1,0 +1,8 @@
+.section-header {
+    padding: 15px 15px 0 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 290px;
+    height: 30px;
+}

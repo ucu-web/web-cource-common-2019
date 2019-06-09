@@ -1,0 +1,5 @@
+section.insta-stories {
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+}

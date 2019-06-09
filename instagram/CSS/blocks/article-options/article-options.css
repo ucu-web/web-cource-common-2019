@@ -1,0 +1,13 @@
+.article-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 45px;
+    width: 100%;
+
+}
+
+.article-options button {
+    height: 40px;
+    width: 40px;
+}

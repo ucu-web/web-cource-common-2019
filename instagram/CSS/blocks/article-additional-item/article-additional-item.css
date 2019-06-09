@@ -1,0 +1,8 @@
+.article-additional-item > * {
+    margin-top: 10px;
+}
+
+.article-additional-item {
+    padding-left: 20px;
+    padding-right: 20px;
+}

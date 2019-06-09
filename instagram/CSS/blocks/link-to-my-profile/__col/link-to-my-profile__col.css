@@ -1,0 +1,6 @@
+.link-to-my-profile__col {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

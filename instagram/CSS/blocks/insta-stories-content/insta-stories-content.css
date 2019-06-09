@@ -1,0 +1,8 @@
+div.insta-stories-content {
+    overflow: scroll;
+    max-height: 180px;
+}
+
+.insta-stories-content button {
+    width: 100%;
+}
