@@ -10,7 +10,6 @@ export class Doodle {
   width = 40;
   height = 60;
   accelerationY = -0.0006;
-  lastNoseRotate = 1;
 
   constructor(container, { centerX, centerY, minX, maxX, controls }) {
     this.x = centerX - 20;
@@ -80,14 +79,23 @@ export class Doodle {
       this.element.parentNode.removeChild(this.element);
   }
 
-  rotateNose(angle) {
+  rotateNose() {
+    if (!this.mousePosition) return;
+    const { x: mouseX, y: mouseY } = this.mousePosition;
+    const { x: doodleX, y: doodleY } = this.element.getBoundingClientRect();
+    let angle = getAngleBetweenPoints(
+        doodleX + this.width / 2,
+        doodleY + this.height / 2,
+        mouseX,
+        mouseY
+    );
+    if (Math.abs(angle) > Math.PI / 2) angle = (Math.sign(angle) * Math.PI) / 2;
+
     const nose = this.element.querySelector(".doodle__nose");
 
     angle = -Math.PI / 2 + angle;
     nose.style.transition = "0s";
     nose.style.transform = "rotate(" + angle + "rad)";
-
-    this.lastNoseRotate = 0;
   }
 
   shootBullet(container) {
@@ -99,12 +107,11 @@ export class Doodle {
       mouseX,
       mouseY
     );
-
     if (Math.abs(angle) > Math.PI / 2) angle = (Math.sign(angle) * Math.PI) / 2;
+
     const velocity = 0.4;
     const noseLength = 32;
 
-    this.rotateNose(angle);
     return new Bullet(container, {
       centerX: this.x + this.width / 2 + noseLength * Math.sin(angle),
       centerY:
@@ -123,10 +130,7 @@ export class Doodle {
     if (this.velocityX < 0) this.element.classList.add("doodle_left");
     if (this.velocityX > 0) this.element.classList.remove("doodle_left");
 
-    if (this.lastNoseRotate > 500) {
-      nose.style.transition = "";
-      nose.style.transform = "";
-    }
+    this.rotateNose();
   }
 
   updateState(duration, translatePositionFn) {

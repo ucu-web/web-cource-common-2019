@@ -39,11 +39,11 @@ export const createDefaultPlatforms = (container, fieldWidth) => [
   new Platform(container, { x: 30, y: 50 }, "destructing")
 ];
 
-export const isInsideViewBox = (object, viewBox) =>
-  object.y > viewBox.y &&
-  object.y < viewBox.y + viewBox.height &&
-  object.x > viewBox.x &&
-  object.x < viewBox.x + viewBox.width;
+export const isInsideViewBox = (object, viewBox, error=10) =>
+  object.y < viewBox.y + viewBox.height + error &&
+  object.y > viewBox.y - error &&
+  object.x < viewBox.x + viewBox.width + error &&
+  object.x > viewBox.x - error;
 
 export const getAngleBetweenPoints = (fromX, fromY, toX, toY) => {
   const xDifference = fromX - toX;
