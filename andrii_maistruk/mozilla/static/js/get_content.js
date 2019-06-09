@@ -10,8 +10,25 @@ function load_posts(data) {
 
 fetch("http://localhost:1337/posts").then(res => res.json()).then(data => {
     load_posts(data);
-}).catch((error) => {
+}).catch(() => {
     fetch("static/js/posts.json").then(res => res.json()).then(data => {
         load_posts(data);
+    })
+});
+
+function load_readings(data) {
+    Array.from(document.getElementsByClassName("aside-pocket__post")).forEach((post, i) => {
+        post.children[0].setAttribute("href", data[i]["href"]);
+        post.children[0].children[0].setAttribute("src", data[i]["img_src"]);
+        post.children[0].children[1].innerHTML = data[i]["note"];
+        post.children[0].children[2].innerHTML = data[i]["heading"];
+    });
+}
+
+fetch("http://localhost:1337/readings").then(res => res.json()).then(data => {
+    load_readings(data);
+}).catch(() => {
+    fetch("static/js/readings.json").then(res => res.json()).then(data => {
+        load_readings(data);
     })
 });
