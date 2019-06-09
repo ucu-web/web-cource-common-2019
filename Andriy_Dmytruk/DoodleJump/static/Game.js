@@ -2,7 +2,11 @@ import "./styles/Field.scss";
 import "./styles/Game.scss";
 
 import Doodle from "./Doodle";
-import { createDefaultPlatforms, doCollideBottom } from "./helpers";
+import {
+  createDefaultPlatforms,
+  doCollideBottom,
+  isInsideViewBox
+} from "./helpers";
 
 export default class Game {
   width = 600;
@@ -23,35 +27,13 @@ export default class Game {
 
     this.toInitialState();
 
-    let mousePosition;
-    const handleMouseMove = ({clientX, clientY}) => {
-      mousePosition = {x: clientX, y: clientY};
-    };
-
     const handleKeyDown = ({ key }) => {
-      switch (key) {
-        case "ArrowLeft":
-          return this.doodle.move(-1);
-        case "ArrowRight":
-          return this.doodle.move(1);
-        case " ":
-          const newBullet = this.doodle.shootBullet(this.field, mousePosition);
-          this.bullets = [...this.bullets, newBullet];
+      if (key === " ") {
+        const newBullet = this.doodle.shootBullet(this.field);
+        this.bullets = [...this.bullets, newBullet];
       }
     };
-
-    const handleKeyUp = ({ key }) => {
-      switch (key) {
-        case "ArrowLeft":
-          return this.doodle.stopMovementInDirection(-1);
-        case "ArrowRight":
-          return this.doodle.stopMovementInDirection(1);
-      }
-    };
-
-    document.addEventListener("mousemove", handleMouseMove);
     document.addEventListener("keydown", handleKeyDown);
-    document.addEventListener("keyup", handleKeyUp);
   }
 
   updateState(duration) {
@@ -59,18 +41,25 @@ export default class Game {
       return { x, y: y - this.topThreshold + this.height / 2 };
     };
 
-    const isInsideViewBox = object =>
-      object.y > this.topThreshold - this.height / 2 &&
-      object.y < this.topThreshold + this.height * 3;
+    const viewBox = {
+      x: 0,
+      y: this.topThreshold - this.height / 2,
+      width: this.width,
+      height: this.height
+    };
 
     this.doodle.updateState(duration, translatePositionFn);
 
-    this.platforms.filter(o => !isInsideViewBox(o)).forEach(o => o.destroy());
-    this.platforms = this.platforms.filter(isInsideViewBox);
+    this.platforms
+      .filter(o => !isInsideViewBox(o, viewBox))
+      .forEach(o => o.destroy());
+    this.platforms = this.platforms.filter(o => isInsideViewBox(o, viewBox));
     this.platforms.forEach(p => p.updateState(duration, translatePositionFn));
 
-    this.bullets.filter(o => !isInsideViewBox(o)).forEach(o => o.destroy());
-    this.bullets = this.bullets.filter(isInsideViewBox);
+    this.bullets
+      .filter(o => !isInsideViewBox(o, viewBox))
+      .forEach(o => o.destroy());
+    this.bullets = this.bullets.filter(o => isInsideViewBox(o, viewBox));
     this.bullets.forEach(b => b.updateState(duration, translatePositionFn));
 
     this.platforms.forEach(platform => {
@@ -126,7 +115,8 @@ export default class Game {
     this.topThreshold = this.height / 2;
     this.doodle = new Doodle(this.field, {
       centerX: this.width / 2,
-      centerY: this.height / 2
+      centerY: this.height / 2,
+      controls: { left: "ArrowLeft", right: "ArrowRight" }
     });
     this.platforms = createDefaultPlatforms(this.field, this.width);
     this.bullets = [];

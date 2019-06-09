@@ -27,21 +27,30 @@ export const doCollide = (A, B) =>
   doCollideOneDimension(A.y, A.y + A.height, B.y, B.y + B.height);
 
 export const createDefaultPlatforms = (container, fieldWidth) => [
-  new Platform(container, {x: 270, y: 100}, "static"),
-  new Platform(container, {x: 200, y: 300}, "breaking"),
-  new Platform(container, {x: 400, y: 300, minY: 200, maxY: 400}, "vertical"),
-  new Platform(container, {x: 300, y: 500}, "disappearing"),
-  new Platform(container, {x: 200, y: 600, minX: 0, maxX: fieldWidth}, "horizontal"),
-  new Platform(container, {x: 30, y: 50}, "destructing")
+  new Platform(container, { x: 270, y: 100 }, "static"),
+  new Platform(container, { x: 200, y: 300 }, "breaking"),
+  new Platform(container, { x: 400, y: 300, minY: 200, maxY: 400 }, "vertical"),
+  new Platform(container, { x: 300, y: 500 }, "disappearing"),
+  new Platform(
+    container,
+    { x: 200, y: 600, minX: 0, maxX: fieldWidth },
+    "horizontal"
+  ),
+  new Platform(container, { x: 30, y: 50 }, "destructing")
 ];
+
+export const isInsideViewBox = (object, viewBox) =>
+  object.y > viewBox.y &&
+  object.y < viewBox.y + viewBox.height &&
+  object.x > viewBox.x &&
+  object.x < viewBox.x + viewBox.width;
 
 export const getAngleBetweenPoints = (fromX, fromY, toX, toY) => {
   const xDifference = fromX - toX;
   const yDifference = fromY - toY;
 
-  let angle = - Math.atan(xDifference / yDifference);
-  if (yDifference < 0)
-    angle = angle > 0 ? angle - Math.PI : angle + Math.PI;
+  let angle = -Math.atan(xDifference / yDifference);
+  if (yDifference < 0) angle = angle > 0 ? angle - Math.PI : angle + Math.PI;
 
   return angle;
 };

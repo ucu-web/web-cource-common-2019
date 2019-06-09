@@ -1,6 +1,9 @@
 import "./styles/Doodle.scss";
 import "./styles/Bullet.scss";
-import {getAngleBetweenPoints, getNewPositionBasedOnDuration} from "./helpers";
+import {
+  getAngleBetweenPoints,
+  getNewPositionBasedOnDuration
+} from "./helpers";
 import Bullet from "./Bullet";
 
 export class Doodle {
@@ -9,7 +12,7 @@ export class Doodle {
   accelerationY = -0.0006;
   lastNoseRotate = 1;
 
-  constructor(container, { centerX, centerY, minX, maxX }) {
+  constructor(container, { centerX, centerY, minX, maxX, controls }) {
     this.x = centerX - 20;
     this.y = centerY - 30;
 
@@ -44,11 +47,32 @@ export class Doodle {
         </div>`;
 
     container.appendChild(this.element);
-  }
 
-  setPosition(x, y) {
-    this.element.style.bottom = y + "px";
-    this.element.style.left = x + "px";
+    const handleMouseMove = ({ clientX, clientY }) => {
+      this.mousePosition = { x: clientX, y: clientY };
+    };
+
+    const directionMap = { [controls.left]: -1, [controls.right]: 1 };
+    const handleKeyDown = ({ key }) => {
+      const direction = directionMap[key] || 0;
+
+      if (Math.sign(this.accelerationX) !== Math.sign(direction)) {
+        this.velocityX = direction * 0.2;
+        this.accelerationX = direction * 0.0003;
+      }
+    };
+
+    const handleKeyUp = ({ key }) => {
+      const direction = directionMap[key] || 0;
+
+      if (Math.sign(this.velocityX) === Math.sign(direction)) {
+        this.accelerationX = 0;
+      }
+    };
+
+    document.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener("keydown", handleKeyDown);
+    document.addEventListener("keyup", handleKeyUp);
   }
 
   destroy() {
@@ -66,9 +90,15 @@ export class Doodle {
     this.lastNoseRotate = 0;
   }
 
-  shootBullet(container, {x, y}) {
-    const {x: doodleX, y: doodleY} = this.element.getBoundingClientRect();
-    let angle = getAngleBetweenPoints(doodleX + this.width / 2, doodleY + this.height / 2, x, y);
+  shootBullet(container) {
+    const { x: mouseX, y: mouseY } = this.mousePosition;
+    const { x: doodleX, y: doodleY } = this.element.getBoundingClientRect();
+    let angle = getAngleBetweenPoints(
+      doodleX + this.width / 2,
+      doodleY + this.height / 2,
+      mouseX,
+      mouseY
+    );
 
     if (Math.abs(angle) > Math.PI / 2) angle = (Math.sign(angle) * Math.PI) / 2;
     const velocity = 0.4;
@@ -131,20 +161,6 @@ export class Doodle {
     const { x: translatedX, y: translatedY } = translatePositionFn(x, y);
     this.element.style.bottom = translatedY + "px";
     this.element.style.left = translatedX + "px";
-  }
-
-  move(direction) {
-    if (Math.sign(this.accelerationX) !== Math.sign(direction)) {
-      // give acceleration and some starting velocity
-      this.velocityX = direction * 0.2;
-      this.accelerationX = direction * 0.0003;
-    }
-  }
-
-  stopMovementInDirection(direction) {
-    if (Math.sign(this.velocityX) === Math.sign(direction)) {
-      this.accelerationX = 0;
-    }
   }
 
   jump() {
