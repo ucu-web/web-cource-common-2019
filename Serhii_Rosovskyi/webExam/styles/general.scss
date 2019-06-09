@@ -1,67 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
-
 html, body {
   margin: 0;
-  background: #F9F9F1;
-  min-height: 100%;
-  font-family: 'Montserrat', sans-serif;
-}
 
-.Layout {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-
-  &__container {
-    position: absolute;
-    width: 50vh;
-    height: 50vh;
-    background: #BAAC9F;
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    border-radius: 0 0 5px 5px;
+  canvas {
+    box-sizing: border-box;
+    background: #fff;
   }
-}
-
-
-@keyframes pop-up{
-  0% {
-    transform: scale(0.4);
-  }
-  50%{
-    transform: scale(1.4);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-.tile {
-  position: absolute;
-  width: 10vh;
-  height: 10vh;
-  border-radius: 5px;
-  transition: box-shadow 0.3s;
-}
-
-.tile_content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  transform-origin: center center;
-  animation: pop-up 0.3s ease-in forwards;
-
-  span {
-    font-size: 4.5vh;
-    font-family: 'Roboto', sans-serif;
-  }
-}
-
-.tile-2 {
-  background: #eee4da;
 }

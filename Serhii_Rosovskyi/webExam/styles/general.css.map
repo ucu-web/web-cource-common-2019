@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["general.scss"],"names":[],"mappings":"AAAQ;AACA;AAER;EACE;EACA;EACA;EACA;;;AAGF;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAKJ;EACE;IACE;;EAEF;IACE;;EAEF;IACE;;;AAIJ;EACE;EACA;EACA;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;;;AAIJ;EACE","file":"general.css"}
+{"version":3,"sourceRoot":"","sources":["general.scss"],"names":[],"mappings":"AAAA;EACE;;AAEA;EACE;EACA","file":"general.css"}
