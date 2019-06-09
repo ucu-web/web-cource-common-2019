@@ -9,11 +9,10 @@ export default class Game {
   height = 800;
 
   paused = false;
-  doodle = null;
   platforms = null;
   bullets = null;
 
-  fieldBottom = 0;
+  topThreshold = 0;
 
   constructor(container) {
     const { width, height } = this;
@@ -54,21 +53,24 @@ export default class Game {
   }
 
   translatePosition = (x, y) => {
-      return {x, y: y - this.fieldBottom};
+    return { x, y: y - this.topThreshold };
   };
 
   doesObjectExist(object) {
     const exists =
-      object.y > this.fieldBottom &&
-      object.y < this.fieldBottom + this.height * 3;
+      object.y > this.topThreshold &&
+      object.y < this.topThreshold + this.height * 3;
     if (!exists) object.destroy();
     return exists;
   }
 
   updateState(duration) {
     this.doodle.updateState(duration, this.width, this.translatePosition);
+
     this.platforms = this.platforms.filter(p => this.doesObjectExist(p));
-    this.platforms.forEach(p => p.updateState(duration, this.width, this.translatePosition));
+    this.platforms.forEach(p =>
+      p.updateState(duration, this.width, this.translatePosition)
+    );
 
     this.bullets = this.bullets.filter(b => this.doesObjectExist(b));
     this.bullets.forEach(b => b.updateState(duration, this.translatePosition));
@@ -80,16 +82,15 @@ export default class Game {
       }
     });
 
-    // display
     if (
-      this.fieldBottom <
+      this.topThreshold <
       this.doodle.y - this.height / 2 + this.doodle.height / 2
     ) {
-      this.fieldBottom =
+      this.topThreshold =
         this.doodle.y - this.height / 2 + this.doodle.height / 2;
     }
 
-    if (this.doodle.y < this.fieldBottom) {
+    if (this.doodle.y < this.topThreshold) {
       console.log("Game over");
       this.reset();
     }
@@ -127,8 +128,11 @@ export default class Game {
       this.bullets.forEach(b => b.destroy());
     }
 
-    this.fieldBottom = 0;
-    this.doodle = new Doodle(this.field, {centerX: this.width / 2, centerY: this.height / 2});
+    this.topThreshold = 0;
+    this.doodle = new Doodle(this.field, {
+      centerX: this.width / 2,
+      centerY: this.height / 2
+    });
     this.platforms = createDefaultPlatforms(this.field, this.width);
     this.bullets = [];
   }
