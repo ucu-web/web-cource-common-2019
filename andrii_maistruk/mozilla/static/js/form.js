@@ -1,5 +1,3 @@
-
-
 function show_details() {
     let email = document.getElementById("id_email");
     let details = document.getElementById("sign_up_details");

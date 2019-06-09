@@ -1,0 +1,132 @@
+[
+  {
+    "id": 1,
+    "href": "https://www.mozilla.org/en-US/firefox/",
+    "img_src": "static/images/firefox-quantum.jpg",
+    "note": "Firefox",
+    "heading": "Get the latest Firefox",
+    "paragraph": "Firefox keeps what's personal private. You decide what to share and when, because your life is your business, not ours.",
+    "created_at": "2019-06-09T14:32:39.306Z",
+    "updated_at": "2019-06-09T14:32:39.362Z"
+  },
+  {
+    "id": 2,
+    "href": "https://blog.mozilla.org/internetcitizen/2019/03/08/international-womens-day-2019/?utm_source=www.mozilla.org&utm_medium=referral&utm_campaign=homepage&utm_content=card",
+    "img_src": "static/images/women-web.png",
+    "note": "Diversity + Inclusion",
+    "heading": "Celebrating women and the web",
+    "paragraph": "We asked women whose work we admire what they hope for women on the web. Here's what they had to say.",
+    "created_at": "2019-06-09T14:35:57.014Z",
+    "updated_at": "2019-06-09T14:35:57.074Z"
+  },
+  {
+    "id": 3,
+    "href": "https://blog.mozilla.org/firefox/when-an-internet-emergency-strikes/?utm_source=www.mozilla.org&utm_medium=referral&utm_campaign=homepage&utm_content=card",
+    "img_src": "static/images/internet-emergency.png",
+    "note": "Security",
+    "heading": "Not all internet emergencies are equal",
+    "paragraph": "Breaches, hacks, leaks and viruses are all serious security concerns. How you respond depends on the type of emergency you’re facing.",
+    "created_at": "2019-06-09T14:38:17.261Z",
+    "updated_at": "2019-06-09T14:38:17.296Z"
+  },
+  {
+    "id": 4,
+    "href": "https://blog.mozilla.org/firefox/send-tabs-a-better-way/?utm_source=www.mozilla.org&utm_medium=referral&utm_campaign=homepage&utm_content=card",
+    "img_src": "static/images/send-tabs.png",
+    "note": "Firefox",
+    "heading": "Stop texting yourself links",
+    "paragraph": "Pick up where you left off, from computer to mobile, by instantly sending tabs between devices without leaving your browser.",
+    "created_at": "2019-06-09T14:39:51.253Z",
+    "updated_at": "2019-06-09T14:39:51.279Z"
+  },
+  {
+    "id": 5,
+    "href": "https://blog.mozilla.org/internetcitizen/2019/03/05/fast-company-innovative-2019/?utm_source=www.mozilla.org&utm_medium=referral&utm_campaign=homepage&utm_content=card",
+    "img_src": "static/images/fast-company.png",
+    "note": "Fast Company",
+    "heading": "The World’s 50 Most Innovative Companies",
+    "paragraph": "Fast Company: How Mozilla moved fast to block Facebook and other privacy invaders from your web browser.",
+    "created_at": "2019-06-09T14:41:05.047Z",
+    "updated_at": "2019-06-09T14:42:44.447Z"
+  },
+  {
+    "id": 6,
+    "href": "https://irlpodcast.org/season4/episode6/?utm_source=www.mozilla.org&utm_medium=referral&utm_campaign=homepage&utm_content=card",
+    "img_src": "static/images/irl-decentralize.png",
+    "note": "Podcast",
+    "heading": "The antidote to Big Tech?",
+    "paragraph": "Some people believe that decentralization is the inevitable future of the web. But would it be as utopian as advocates suggest?",
+    "created_at": "2019-06-09T14:45:50.746Z",
+    "updated_at": "2019-06-09T14:45:50.806Z"
+  },
+  {
+    "id": 7,
+    "href": "https://irlpodcast.org/season4/episode7/?utm_source=www.mozilla.org&utm_medium=referral&utm_campaign=homepage&utm_content=card",
+    "img_src": "static/images/irl-women.png",
+    "note": "Podcast",
+    "heading": "Gender diversity and inclusion in tech",
+    "paragraph": "Find out why a pair of entrepreneurs created a fake man to join their team and send emails on their behalf in this episode of IRL.",
+    "created_at": "2019-06-09T14:49:00.456Z",
+    "updated_at": "2019-06-09T14:49:00.511Z"
+  },
+  {
+    "id": 8,
+    "href": "https://blog.mozvr.com/bringing-firefox-reality-to-hololens-2/?utm_source=www.mozilla.org&utm_medium=referral&utm_campaign=homepage&utm_content=card",
+    "img_src": "static/images/firefox-reality.jpg",
+    "note": "Emerging Technologies",
+    "heading": "Firefox Reality is coming to HoloLens 2",
+    "paragraph": "We are excited to announce that we’re working with Microsoft to bring the immersive web to the HoloLens 2 mixed reality headset.",
+    "created_at": "2019-06-09T14:54:32.386Z",
+    "updated_at": "2019-06-09T14:54:32.416Z"
+  },
+  {
+    "id": 9,
+    "href": "https://blog.mozvr.com/how-i-made-jingle-smash/?utm_source=www.mozilla.org&utm_medium=referral&utm_campaign=homepage&utm_content=card",
+    "img_src": "static/images/jingle-smash.jpg",
+    "note": "Developers",
+    "heading": "Jingle Smash, a WebVR puzzler",
+    "paragraph": "Go behind the scenes to see how Mozilla’s Josh Marinacci built Jingle Smash, a block smashing WebVR game.",
+    "created_at": "2019-06-09T14:55:38.273Z",
+    "updated_at": "2019-06-09T14:55:38.299Z"
+  },
+  {
+    "id": 10,
+    "href": "https://blog.mozilla.org/internetcitizen/2019/02/14/how-to-build-a-nest-of-privacy-and-security-using-better-passwords/?utm_source=www.mozilla.org&utm_medium=referral&utm_campaign=homepage&utm_content=card",
+    "img_src": "static/images/security-nest.png",
+    "note": "Security",
+    "heading": "Build a nest of privacy and security",
+    "paragraph": "In a connected world, the issues associated with insecure passwords and accounts will only increase. Take steps to protect your family.",
+    "created_at": "2019-06-09T14:58:18.546Z",
+    "updated_at": "2019-06-09T14:58:18.575Z"
+  },
+  {
+    "id": 11,
+    "href": "https://blog.mozilla.org/blog/2019/02/28/sharing-our-common-voices-mozilla-releases-the-largest-to-date-public-domain-transcribed-voice-dataset/?utm_source=www.mozilla.org&utm_medium=referral&utm_campaign=homepage&utm_content=card",
+    "img_src": "static/images/common-voice.png",
+    "note": "Emerging Technologies",
+    "heading": "2019 Common Voice dataset released",
+    "paragraph": "We released the largest to-date public domain transcribed voice dataset, featuring 18 languages, 1,400 hours and 42k contributors.",
+    "created_at": "2019-06-09T14:59:46.535Z",
+    "updated_at": "2019-06-09T14:59:46.566Z"
+  },
+  {
+    "id": 12,
+    "href": "https://monitor.firefox.com",
+    "img_src": "static/images/firefox-monitor.jpg",
+    "note": "Security",
+    "heading": "Protect yourself with Firefox Monitor",
+    "paragraph": "Find out what hackers already know about you and get alerts when data breaches put you at risk.",
+    "created_at": "2019-06-09T15:01:38.309Z",
+    "updated_at": "2019-06-09T15:01:38.346Z"
+  },
+  {
+    "id": 13,
+    "href": "https://www.mozilla.org/en-US/firefox/developer/",
+    "img_src": "static/images/developer-edition.png",
+    "note": "Developers",
+    "heading": "Are you a developer?",
+    "paragraph": "Get the latest features, fast performance and the development tools you need to build for the open web with Firefox Developer Edition.",
+    "created_at": "2019-06-09T15:02:40.965Z",
+    "updated_at": "2019-06-09T15:02:40.991Z"
+  }
+]
