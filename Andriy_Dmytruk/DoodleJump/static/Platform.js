@@ -80,7 +80,7 @@ class Platform {
       this.element.parentNode.removeChild(this.element);
   }
 
-  updateState(duration, xRestriction, translatePosition) {
+  updateState(duration, translatePositionFn) {
     const { x, y, velocityX, velocityY } = getNewPositionBasedOnDuration(
       this,
       duration
@@ -110,7 +110,7 @@ class Platform {
 
     if (this.updateElement) this.updateElement();
 
-    const { x: translatedX, y: translatedY } = translatePosition(x, y);
+    const { x: translatedX, y: translatedY } = translatePositionFn(x, y);
     this.element.style.bottom = translatedY + "px";
     this.element.style.left = translatedX + "px";
   }

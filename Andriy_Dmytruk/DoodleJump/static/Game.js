@@ -1,7 +1,7 @@
 import "./styles/Field.scss";
 import "./styles/Game.scss";
 
-import { Doodle } from "./Doodle";
+import Doodle from "./Doodle";
 import { createDefaultPlatforms, doCollideBottom } from "./helpers";
 
 export default class Game {
@@ -9,9 +9,6 @@ export default class Game {
   height = 800;
 
   paused = false;
-  platforms = null;
-  bullets = null;
-
   topThreshold = 0;
 
   constructor(container) {
@@ -24,7 +21,12 @@ export default class Game {
 
     this.field = container.querySelector(".field");
 
-    this.reset();
+    this.toInitialState();
+
+    let mousePosition;
+    const handleMouseMove = ({clientX, clientY}) => {
+      mousePosition = {x: clientX, y: clientY};
+    };
 
     const handleKeyDown = ({ key }) => {
       switch (key) {
@@ -33,8 +35,7 @@ export default class Game {
         case "ArrowRight":
           return this.doodle.move(1);
         case " ":
-          const newBullet = this.doodle.shootBullet(this.field, 0);
-          this.field.appendChild(newBullet.element);
+          const newBullet = this.doodle.shootBullet(this.field, mousePosition);
           this.bullets = [...this.bullets, newBullet];
       }
     };
@@ -48,32 +49,29 @@ export default class Game {
       }
     };
 
+    document.addEventListener("mousemove", handleMouseMove);
     document.addEventListener("keydown", handleKeyDown);
     document.addEventListener("keyup", handleKeyUp);
   }
 
-  translatePosition = (x, y) => {
-    return { x, y: y - this.topThreshold };
-  };
-
-  doesObjectExist(object) {
-    const exists =
-      object.y > this.topThreshold &&
-      object.y < this.topThreshold + this.height * 3;
-    if (!exists) object.destroy();
-    return exists;
-  }
-
   updateState(duration) {
-    this.doodle.updateState(duration, this.width, this.translatePosition);
+    const translatePositionFn = (x, y) => {
+      return { x, y: y - this.topThreshold + this.height / 2 };
+    };
 
-    this.platforms = this.platforms.filter(p => this.doesObjectExist(p));
-    this.platforms.forEach(p =>
-      p.updateState(duration, this.width, this.translatePosition)
-    );
+    const isInsideViewBox = object =>
+      object.y > this.topThreshold - this.height / 2 &&
+      object.y < this.topThreshold + this.height * 3;
 
-    this.bullets = this.bullets.filter(b => this.doesObjectExist(b));
-    this.bullets.forEach(b => b.updateState(duration, this.translatePosition));
+    this.doodle.updateState(duration, translatePositionFn);
+
+    this.platforms.filter(o => !isInsideViewBox(o)).forEach(o => o.destroy());
+    this.platforms = this.platforms.filter(isInsideViewBox);
+    this.platforms.forEach(p => p.updateState(duration, translatePositionFn));
+
+    this.bullets.filter(o => !isInsideViewBox(o)).forEach(o => o.destroy());
+    this.bullets = this.bullets.filter(isInsideViewBox);
+    this.bullets.forEach(b => b.updateState(duration, translatePositionFn));
 
     this.platforms.forEach(platform => {
       if (doCollideBottom(this.doodle, platform, duration)) {
@@ -82,17 +80,14 @@ export default class Game {
       }
     });
 
-    if (
-      this.topThreshold <
-      this.doodle.y - this.height / 2 + this.doodle.height / 2
-    ) {
-      this.topThreshold =
-        this.doodle.y - this.height / 2 + this.doodle.height / 2;
+    const doodleCenterY = this.doodle.y + this.doodle.height / 2;
+    if (this.topThreshold < doodleCenterY) {
+      this.topThreshold = doodleCenterY;
     }
 
-    if (this.doodle.y < this.topThreshold) {
+    if (this.doodle.y < this.topThreshold - this.height / 2) {
       console.log("Game over");
-      this.reset();
+      this.toInitialState();
     }
   }
 
@@ -121,14 +116,14 @@ export default class Game {
     this.renderAnimationFrame();
   }
 
-  reset() {
+  toInitialState() {
     if (this.doodle) {
       this.doodle.destroy();
       this.platforms.forEach(p => p.destroy());
       this.bullets.forEach(b => b.destroy());
     }
 
-    this.topThreshold = 0;
+    this.topThreshold = this.height / 2;
     this.doodle = new Doodle(this.field, {
       centerX: this.width / 2,
       centerY: this.height / 2

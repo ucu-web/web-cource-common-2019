@@ -34,3 +34,14 @@ export const createDefaultPlatforms = (container, fieldWidth) => [
   new Platform(container, {x: 200, y: 600, minX: 0, maxX: fieldWidth}, "horizontal"),
   new Platform(container, {x: 30, y: 50}, "destructing")
 ];
+
+export const getAngleBetweenPoints = (fromX, fromY, toX, toY) => {
+  const xDifference = fromX - toX;
+  const yDifference = fromY - toY;
+
+  let angle = - Math.atan(xDifference / yDifference);
+  if (yDifference < 0)
+    angle = angle > 0 ? angle - Math.PI : angle + Math.PI;
+
+  return angle;
+};

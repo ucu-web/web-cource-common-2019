@@ -1,6 +1,6 @@
 import "./styles/Doodle.scss";
 import "./styles/Bullet.scss";
-import { getNewPositionBasedOnDuration } from "./helpers";
+import {getAngleBetweenPoints, getNewPositionBasedOnDuration} from "./helpers";
 import Bullet from "./Bullet";
 
 export class Doodle {
@@ -9,9 +9,11 @@ export class Doodle {
   accelerationY = -0.0006;
   lastNoseRotate = 1;
 
-  constructor(container, { centerX, centerY }) {
+  constructor(container, { centerX, centerY, minX, maxX }) {
     this.x = centerX - 20;
     this.y = centerY - 30;
+
+    this.restrictions = { minX, maxX };
 
     this.element = document.createElement("div");
     this.element.classList.add("doodle");
@@ -64,13 +66,15 @@ export class Doodle {
     this.lastNoseRotate = 0;
   }
 
-  shootBullet(container, angle) {
-    this.rotateNose(angle);
+  shootBullet(container, {x, y}) {
+    const {x: doodleX, y: doodleY} = this.element.getBoundingClientRect();
+    let angle = getAngleBetweenPoints(doodleX + this.width / 2, doodleY + this.height / 2, x, y);
 
-    if (Math.abs(angle) > Math.PI / 4) angle = (Math.sign(angle) * Math.PI) / 4;
+    if (Math.abs(angle) > Math.PI / 2) angle = (Math.sign(angle) * Math.PI) / 2;
     const velocity = 0.4;
     const noseLength = 32;
 
+    this.rotateNose(angle);
     return new Bullet(container, {
       centerX: this.x + this.width / 2 + noseLength * Math.sin(angle),
       centerY:
@@ -95,7 +99,7 @@ export class Doodle {
     }
   }
 
-  updateState(duration, fieldWidth, translatePosition) {
+  updateState(duration, translatePositionFn) {
     const { x, y, velocityX, velocityY } = getNewPositionBasedOnDuration(
       this,
       duration
@@ -105,8 +109,10 @@ export class Doodle {
     this.velocityX = velocityX;
     this.velocityY = velocityY;
 
-    if (this.x < this.width / 2) this.x = fieldWidth - this.width / 2;
-    else if (this.x > fieldWidth - this.width / 2) this.x = this.width / 2;
+    if (this.x < this.restrictions.minX + this.width / 2)
+      this.x = this.restrictions.maxX - this.width / 2;
+    else if (this.x > this.restrictions.maxX - this.width / 2)
+      this.x = this.restrictions.minX + this.width / 2;
 
     if (this.velocityY < -700) this.velocityY = -700;
     this.lastNoseRotate += duration;
@@ -116,12 +122,13 @@ export class Doodle {
     if (Math.abs(this.velocityX) < airFrictionAcceleration * duration) {
       this.velocityX = 0;
     } else if (!this.accelerationX) {
-      this.velocityX -= Math.sign(this.velocityX) * airFrictionAcceleration * duration;
+      this.velocityX -=
+        Math.sign(this.velocityX) * airFrictionAcceleration * duration;
     }
 
     this.updateElement();
 
-    const { x: translatedX, y: translatedY } = translatePosition(x, y);
+    const { x: translatedX, y: translatedY } = translatePositionFn(x, y);
     this.element.style.bottom = translatedY + "px";
     this.element.style.left = translatedX + "px";
   }
