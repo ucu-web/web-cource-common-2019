@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="js/GetWeather.js" type="module"></script><head>
+    <meta charset="UTF-8">
+    <title>Weather</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/cloud.ico">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/body.css">
+    <link rel="stylesheet" type="text/css" href="css/main-content.css">
+    <link rel="stylesheet" type="text/css" href="css/search-wrapper.css">
+
+
+</head >
+<body>
+<header class="header">
+    <img src="img/cloud.ico" height="150px" width="150px" class="header__logo">
+
+    <div class="search-wrapper">
+        <label for="add_city_input"></label>
+        <input id="add_city_input" class="search-wrapper__input" autocomplete="off" type="text" placeholder="city">
+
+        <label for="add_country_input"></label>
+        <input id="add_country_input" class="search-wrapper__input" autocomplete="off" type="text" placeholder="country">
+
+        <button id="submit" class="search-wrapper__button">
+        <span>
+            ADD
+        </span>
+        </button>
+    </div>
+
+
+</header>
+
+<main class="main-content" id="info-blocks-container">
+
+</main>
+
+</body>
+</html>
