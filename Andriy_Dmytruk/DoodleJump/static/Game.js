@@ -76,7 +76,7 @@ export default class Game {
         object.jumpOnto();
       }
 
-      if (object.canKill()) {
+      if (object.canKill && object.canKill()) {
         if (doCollide(this.doodle, object)) {
           this.doodle.dead = true;
         }
