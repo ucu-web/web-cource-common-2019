@@ -1,4 +1,4 @@
-import {canvas} from "../../dual/scripts/canvas";
+import {canvas} from "../../asteroidsTwoPlayers/scripts/canvas";
 
 export class Asteroid {
     constructor(ctx, x, y, accelarteX, accelarteY, a, radius) {

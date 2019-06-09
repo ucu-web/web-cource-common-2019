@@ -84,14 +84,6 @@ let bulletSize = 5;
 function onGameOver() {
     shipNumberOne.draw();
     shipNumberTwo.draw();
-    // shipNumberOne.die();
-    // let body = document.getElementsByTagName("body")[0];
-    // body.style.background = 'black';
-    // ctx.drawImage(gameOverImg, 0, 0, canvas.width, canvas.height);
-    //
-    // ctx.fillStyle = "white";
-    // ctx.font = "bold 40px Arial";
-    // ctx.fillText("Refresh the page to restart", (canvas.width / 3.3), (canvas.height / 1.2));
 }
 
 function deleteAsteroid(ship) {
