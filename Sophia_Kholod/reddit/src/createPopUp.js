@@ -236,7 +236,7 @@ export const createComment = (parent, comment, child) => {
                         <a href="#" class="Comment__author">${comment["author"]}</a>
                         <span class="Comment__upvotes">${kFormatter(parseInt(comment["upvotes"]))} points</span>
                         <span class="Dot"> · </span>
-                        <a class="Comment__time hover" alt="${new Date(comment["date"])}">${commentDate}</a>
+                        <a class="Comment__time" alt="${new Date(comment["date"])}">${commentDate}</a>
                     </header>
                     <section class="Comment__text">
                         ${comment["text"]}

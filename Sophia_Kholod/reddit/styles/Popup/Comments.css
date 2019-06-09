@@ -52,6 +52,23 @@
     text-decoration: underline;
 }
 
+.Comment__time:hover:after {
+    content: attr(alt);
+    font-size: 10px;
+    font-weight: 500;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    pointer-events: none;
+    white-space: pre;
+    padding: 2px 4px;
+    border-radius: 5px;
+}
+
 .Comment__time{
     padding-left: 8px;
     flex: 0 0 auto;
