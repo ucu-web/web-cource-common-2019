@@ -24,8 +24,11 @@ export default class Enemy {
   }
 
   destroy() {
-    this.element.parentNode &&
-      this.element.parentNode.removeChild(this.element);
+    this.element.parentNode && this.element.parentNode.removeChild(this.element);
+  }
+
+  canBeHit() {
+    return this.health > 0;
   }
 
   hit() {

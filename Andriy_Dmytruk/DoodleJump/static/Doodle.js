@@ -1,7 +1,8 @@
 import "./styles/Doodle.scss";
 import "./styles/Bullet.scss";
 import {
-  clamp, clampCircular,
+  clamp,
+  clampCircular,
   getAngleBetweenPoints,
   getNewPositionBasedOnDuration
 } from "./library";
@@ -76,8 +77,7 @@ export class Doodle {
   }
 
   destroy() {
-    this.element.parentNode &&
-      this.element.parentNode.removeChild(this.element);
+    this.element.parentNode && this.element.parentNode.removeChild(this.element);
   }
 
   rotateNose() {
@@ -107,8 +107,7 @@ export class Doodle {
 
     return new Bullet(container, {
       centerX: this.x + this.width / 2 + noseLength * Math.sin(angle),
-      centerY:
-        this.y + this.height - this.width / 2 + noseLength * Math.cos(angle),
+      centerY: this.y + this.height - this.width / 2 + noseLength * Math.cos(angle),
       velocityX: velocity * Math.sin(angle),
       velocityY: velocity * Math.cos(angle)
     });
@@ -125,10 +124,7 @@ export class Doodle {
   }
 
   updateState(duration, translatePositionFn) {
-    const { x, y, velocityX, velocityY } = getNewPositionBasedOnDuration(
-      this,
-      duration
-    );
+    const { x, y, velocityX, velocityY } = getNewPositionBasedOnDuration(this, duration);
     this.x = x;
     this.y = y;
     this.velocityX = velocityX;
@@ -142,8 +138,7 @@ export class Doodle {
     if (Math.abs(this.velocityX) < airFrictionAcceleration * duration) {
       this.velocityX = 0;
     } else if (!this.accelerationX) {
-      this.velocityX -=
-        Math.sign(this.velocityX) * airFrictionAcceleration * duration;
+      this.velocityX -= Math.sign(this.velocityX) * airFrictionAcceleration * duration;
     }
 
     this.updateElement();

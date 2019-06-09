@@ -2,12 +2,7 @@ import "./styles/Field.scss";
 import "./styles/Game.scss";
 
 import Doodle from "./Doodle";
-import {
-  doCollide,
-  doCollideBottom,
-  isInsideViewBox,
-  sieveArray
-} from "./library";
+import { doCollide, doCollideBottom, isInsideViewBox, sieveArray } from "./library";
 import { createDefaultFieldObjects } from "./helpers";
 import Enemy from "./Enemy";
 
@@ -54,18 +49,12 @@ export default class Game {
 
     this.doodle.updateState(duration, translatePositionFn);
 
-    const [objectsToRemove, objectsToUpdate] = sieveArray(
-      objectFilterFn,
-      this.objects
-    );
+    const [objectsToRemove, objectsToUpdate] = sieveArray(objectFilterFn, this.objects);
     objectsToRemove.forEach(o => o.destroy());
     objectsToUpdate.forEach(o => o.updateState(duration, translatePositionFn));
     this.objects = objectsToUpdate;
 
-    const [bulletsToRemove, bulletsToUpdate] = sieveArray(
-      objectFilterFn,
-      this.bullets
-    );
+    const [bulletsToRemove, bulletsToUpdate] = sieveArray(objectFilterFn, this.bullets);
     bulletsToRemove.forEach(o => o.destroy());
     this.bullets.forEach(o => o.updateState(duration, translatePositionFn));
     this.bullets = bulletsToUpdate;
@@ -80,7 +69,9 @@ export default class Game {
         if (doCollide(this.doodle, object)) {
           this.doodle.dead = true;
         }
+      }
 
+      if (object.canBeHit && object.canBeHit()) {
         this.bullets.forEach(bullet => {
           if (doCollide(object, bullet) && bullet.canHit()) {
             object.hit();

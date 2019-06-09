@@ -47,14 +47,12 @@ class Platform {
       }
 
       case "horizontal": {
-        this.velocityX =
-          (0.02 + Math.random() * 0.06) * (Math.random > 0.5 ? 1 : -1);
+        this.velocityX = (0.02 + Math.random() * 0.06) * (Math.random > 0.5 ? 1 : -1);
         break;
       }
 
       case "vertical": {
-        this.velocityY =
-          (0.02 + Math.random() * 0.02) * (Math.random > 0.5 ? 1 : -1);
+        this.velocityY = (0.02 + Math.random() * 0.02) * (Math.random > 0.5 ? 1 : -1);
         break;
       }
 
@@ -76,15 +74,11 @@ class Platform {
   }
 
   destroy() {
-    this.element.parentNode &&
-      this.element.parentNode.removeChild(this.element);
+    this.element.parentNode && this.element.parentNode.removeChild(this.element);
   }
 
   updateState(duration, translatePositionFn) {
-    const { x, y, velocityX, velocityY } = getNewPositionBasedOnDuration(
-      this,
-      duration
-    );
+    const { x, y, velocityX, velocityY } = getNewPositionBasedOnDuration(this, duration);
     this.x = x;
     this.y = y;
     this.velocityX = velocityX;
