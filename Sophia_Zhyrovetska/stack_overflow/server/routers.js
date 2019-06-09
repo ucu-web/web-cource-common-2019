@@ -3,11 +3,7 @@ const getRouter = require("./getRouter");
 
 const questionsListJson = path.resolve(
   __dirname,
-  "../",
-  "src",
-  "components",
-  "QuestionPost",
-  "data.json"
+  "../src/components/QuestionPost/data.json"
 );
 const usersJson = path.resolve(
   __dirname,

@@ -1,8 +1,8 @@
-const express = require("express");
+const {Router} = require("express");
 const apiTemplate = require("./apiTemplate");
 
 const getRouter = pathToJsonFile => {
-  const router = express.Router();
+  const router = Router();
   router.get("/", (request, response) => {
     apiTemplate.getAllItems(pathToJsonFile, request, response);
   });

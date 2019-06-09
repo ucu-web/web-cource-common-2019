@@ -5,11 +5,16 @@ const path = require("path");
 const app = express();
 const PORT = 5000;
 
+
+app.use(express.json());
+
 console.log(path.resolve(__dirname, "..", "dist"));
 app.use("/dist", express.static(path.resolve(__dirname, "../dist")));
 app.use("/src", express.static(path.resolve(__dirname, "../src")));
 
-app.use(express.json());
+app.use("/api/v0", require("./api"));
+
+
 app.use("/api/questions", routers.questionsListRouter);
 app.use("/api/users", routers.usersRouter);
 app.use("/api/blog", routers.blogBlockRouter);
