@@ -1,0 +1,62 @@
+.Trends{
+    padding: 12px 12px;
+    overflow-wrap: break-word;
+    background-color: rgb(26, 26, 27);
+    color: rgb(215, 218, 220);
+    fill: rgb(215, 218, 220);
+    border-radius: 5px 5px 4px 4px;
+    overflow: visible;
+    margin-bottom: 16px;
+
+}
+
+.Trends__item{
+    display: flex;
+    align-items: center;
+    padding: 12px 0 4px;
+}
+
+
+.Sidebar__icon{
+    height: 32px;
+    margin-right: 8px;
+    width: 32px;
+    box-sizing: border-box;
+    fill: rgb(255, 255, 255);
+    border-radius: 100%;
+    background: rgb(0, 121, 211);
+    padding: 3px;
+    flex: 0 0 32px;
+}
+
+.Trends__info{
+    padding-right: 8px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    display: block;
+    text-overflow: ellipsis;
+    flex: 1 1 100%;
+}
+
+.Trends__button{
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 4px 9px 2px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: rgb(215, 218, 220);
+    color: rgb(26, 26, 27);
+    fill: rgb(26, 26, 27);
+    border-radius: 4px;
+    border: 1px solid rgb(215, 218, 220);
+    flex: 0 0 106px;
+}
+
+.Trends__channel-name, .Trends__channel-subscribers{
+    display: block;
+}

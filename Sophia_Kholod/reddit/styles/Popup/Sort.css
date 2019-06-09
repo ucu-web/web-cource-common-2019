@@ -1,0 +1,93 @@
+.Sort{
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px solid rgb(52, 53, 54);
+    margin: 16px 40px 0 5px;
+    padding: 0 16px 4px 0;
+    position: relative;
+}
+
+
+.Sort__button{
+    color: rgb(79, 188, 255);
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: .5px;
+    position: relative;
+    line-height: 24px;
+    text-transform: uppercase;
+    /*background-color: inherit;*/
+    /*border: none;*/
+    display: flex;
+    fill: rgb(129, 131, 132);
+    white-space: nowrap;
+    width: auto;
+    margin-left: 4px;
+    padding: 0 4px 1px;
+}
+
+.Sort__button:focus{
+    background-color: rgb(23, 35, 45);
+    color: rgb(215, 218, 220);
+    fill: rgb(215, 218, 220);
+    border-color: rgb(23, 35, 45);
+}
+
+.Sort__text{
+    /*display: block;*/
+    border-top: 1px solid rgb(52, 53, 54);
+    text-transform: uppercase;
+}
+
+.Sort__arrow{
+    fill: rgb(79, 188, 255);
+    width: 20px;
+    height: 20px;
+    /*vertical-align: middle;*/
+}
+
+.Sort__dropdown{
+    display: none;
+    position: absolute;
+    box-shadow: rgba(215, 218, 220, 0.2) 0px 2px 4px 0px;
+    color: rgb(215, 218, 220);
+    z-index: 2;
+    background-color: rgb(26, 26, 27);
+    border: 1px solid rgb(52, 53, 54);
+    border-radius: 4px;
+    overflow: hidden;
+    flex-direction: column;
+    left: 54px;
+    top: 27px;
+}
+
+.Sort__dropdown > *{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    color: rgb(129, 131, 132);
+    fill: rgb(129, 131, 132);
+    background-color: rgb(26, 26, 27);
+    text-transform: capitalize;
+    white-space: nowrap;
+    padding: 8px;
+     -webkit-box-align: center;
+     align-items: center;
+     flex-direction: row;
+     text-align: left;
+     width: 100%;
+}
+
+.Sort__dropdown > *:hover{
+    background-color: rgb(23, 35, 45);
+    color: rgb(215, 218, 220);
+    fill: rgb(215, 218, 220);
+    border-color: rgb(23, 35, 45);
+    /*outline: none;*/
+}
+
+.Dropdown__item_selected{
+    color: rgb(215, 218, 220);
+}

@@ -1,0 +1,59 @@
+.Title{
+    display: flex;
+    align-items: center;
+}
+
+.Title__text{
+    min-width: 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    text-decoration: none;
+    word-break: break-word;
+    position: relative;
+    color: rgb(215, 218, 220);
+    padding-right: 5px;
+    overflow: hidden;
+    padding-left: 15px;
+
+
+}
+.Title__icon{
+    font-family: FontAwesome, serif;
+    width: 16px;
+    height: 16px;
+    color: rgb(129, 131, 132);
+    border-radius: 2px;
+    transition: background-color 0.1s ease 0s;
+    margin-left: 15px;
+
+}
+.Title__icon:before{
+    content: "\f03e";
+}
+
+.Close-button{
+    border-radius: 4px;
+    color: #818384;
+    display: inline-block;
+    line-height: 22px;
+    height: 24px;
+    outline: none;
+    padding: 0 6px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-left: auto;
+    margin-right: 15px;
+    align-self: center;
+}
+
+.Close-button:hover{
+    background: #343536;
+    color: #818384;
+    cursor: pointer;
+}
+.Close-button__x{
+    padding-right: 7px;
+}

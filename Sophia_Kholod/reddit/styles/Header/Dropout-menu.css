@@ -1,0 +1,65 @@
+.Dropout-menu{
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0px 0px;
+    height: 36px;
+    width: 72px;
+    position: relative;
+    box-sizing: border-box;
+    margin-top: 5px;
+    padding-top: 2px;
+}
+
+.Dropout-menu__button{
+    background-color: rgb(26, 26, 27);
+    color: rgb(215, 218, 220);
+    line-height: 34px;
+    padding-left: 40px;
+    /*padding-right: 56px;*/
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    min-width: 72px;
+    fill: rgb(215, 218, 220);
+
+}
+
+.Dropout-menu__text {
+    display: none;
+    font-weight: 600;
+    margin-top: 2px
+}
+
+.Dropout-menu__icon_arrow{
+    height: 20px;
+    margin-top: -10px;
+    pointer-events: none;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    width: 20px;
+}
+
+
+.Dropout-menu__icon{
+    height: 22px;
+    left: 10px;
+    margin-top: -11px;
+    position: absolute;
+    top: 50%;
+    width: 22px;
+    fill: #0079d3;
+}
+
+@media (min-width: 995px) {
+    .Dropout-menu__text {
+        display: inline;
+    }
+    .Dropout-menu {
+        width: 270px;
+    }
+}
+
+.Dropout-menu__content{
+    display: none;
+}
+

@@ -1,0 +1,37 @@
+.Logo {
+  padding-left: 20px;
+  align-items: center;
+  display: inline-flex;
+  flex-direction: row;
+
+  &__img {
+    height: 32px;
+    padding: 8px 8px 8px 0;
+    width: 32px;
+  }
+
+  &__text {
+    height: 18px;
+    margin-right: 20px;
+    width: auto;
+    display: block;
+  }
+
+  @media (max-width: 1070px) {
+    &__text {
+      display: none;
+    }
+    &__img {
+      width: 38px;
+    }
+  }
+  @media (max-width: 400px) {
+    &{
+      padding-left: 5px;
+    }
+    &__img{
+      padding: 8px 5px 8px 0;
+
+    }
+  }
+}

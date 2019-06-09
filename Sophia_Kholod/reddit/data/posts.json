@@ -1,0 +1,57 @@
+[
+  {
+    "id" : 4,
+    "votes": "1050",
+    "channel" : "r/nimfy",
+    "channel_image" : "default-picture.png",
+    "author" : "u/web",
+    "date" : "2019-04-08T19:10:09.040Z",
+    "text" : "Pikaaaa",
+    "content_type" : "video",
+    "content_src" : "https://preview.redd.it/l4vdi1humww21.gif?format=mp4&s=b8862af227afcc1f73d3476a6f033dfa78b4f50d",
+    "autoplay": "autoplay",
+    "loop": "loop",
+    "comments_number" : "100500"
+  },
+
+  {
+    "id" : 3,
+    "votes": "10500",
+    "channel" : "r/nimfy",
+    "channel_image" : "default-picture.png",
+    "author" : "u/web",
+    "date" : "2019-06-08T10:10:09.040Z",
+    "text" : "Everything will be fine",
+    "content_type" : "img",
+    "content_src" : "images/posts/maxresdefault.jpg",
+    "comments_number" : "100500"
+  },
+
+  {
+    "id" : 2,
+    "votes": "7100",
+    "channel" : "r/trippinthroughtime",
+    "channel_image" : "default-picture.png",
+    "author" : "u/iam4real",
+    "date" : "2019-06-08T19:10:09.040Z",
+    "text" : "We're in good hands",
+    "content_type" : "img",
+    "content_src" : "images/posts/femki.jpg",
+    "comments_number" : "73"
+  },
+  {
+    "id" : 1,
+    "votes": "10000",
+    "channel" : "r/ProgrammerHumor",
+    "channel_image" : "default-picture.png",
+    "author" : "u/yehiaserag",
+    "date" : "2019-06-07T19:10:09.040Z",
+    "text" : "The arm of cleaning your own ____!",
+    "autoplay": "autoplay",
+    "loop": "loop",
+    "content_type" : "video",
+    "content_src" : "https://external-preview.redd.it/mp4/XEctr-sK2KHCf86ji0r5Cq4hxis2Ccj7pjP6REYFMs4-source.mp4?s=0bc40844788c27aa48ce41aad545900a21731f32",
+    "comments_number" : "73"
+  }
+
+]

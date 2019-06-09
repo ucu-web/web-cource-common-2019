@@ -1,0 +1,128 @@
+.Navigation {
+  display: flex;
+  align-content: center;
+  margin-right: 8px;
+  padding-right: 8px;
+
+  &__icon {
+    height: 16px;
+    line-height: 14px;
+    padding: 8px 16px 8px 8px;
+    width: 16px;
+    fill: rgb(215, 218, 220);
+    border-radius: 2px;
+
+    &_blue {
+      height: 16px;
+      line-height: 14px;
+      padding: 8px 16px 8px 8px;
+      width: 16px;
+      border-radius: 2px;
+      fill: #0079d3;
+    }
+    &_arrow {
+      margin-left: 2px;
+      display: inline-block;
+      fill: rgb(215, 218, 220);
+      height: 20px;
+      vertical-align: middle;
+      width: 20px;
+      float: right;
+    }
+  }
+
+  &__profile-name {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    color: rgb(215, 218, 220);
+  }
+
+  &__profile-picture {
+    margin-right: 8px;
+    max-height: 24px;
+    max-width: 24px;
+    border-radius: 4px;
+    float: left;
+
+  }
+
+  &__text {
+    margin-left: 8px;
+    text-align: left;
+    display: none;
+    flex: 1 0 0;
+    @media (min-width: 1210px) {
+      & {
+        display: block;
+      }
+    }
+  }
+
+    &__dropout {
+      display: inline-flex;
+      align-items: center;
+      flex-direction: row;
+      text-align: left;
+      width: 100%;
+      border-radius: 4px;
+      border: 1px solid transparent;
+      padding: 2px 0px;
+
+      &-text{
+        display: none;
+        //flex-direction: column;
+        @media (min-width: 1210px) {
+          & {
+            display: block;
+          }
+        }
+
+        &_wrapper{
+          display: flex;
+          align-items: center;
+          @media (min-width: 1210px) {
+            & {
+              min-width: 175px;
+            }
+          }
+
+        }
+      }
+    }
+
+    &__icons-wrapper {
+      align-items: center;
+      display: inline-flex;
+      flex-direction: row;
+      @media (max-width: 600px) {
+        & {
+          display: none;
+        }
+      }
+    }
+
+    &__karma {
+      display: block;
+      &-icon {
+        width: 12px;
+        height: 12px;
+      }
+
+      &-amount {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 16px;
+        color: rgb(168, 170, 171);
+      }
+    }
+
+  }
+
+
+
+
+
+
+

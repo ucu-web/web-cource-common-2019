@@ -1,0 +1,33 @@
+.Footer{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    text-transform: capitalize;
+    overflow-wrap: break-word;
+    background-color: rgb(26, 26, 27);
+    color: rgb(215, 218, 220);
+    fill: rgb(215, 218, 220);
+    border-radius: 5px 5px 4px 4px;
+    overflow: visible;
+    margin-bottom: 16px;
+}
+
+.Links{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    padding: 12px;
+}
+
+.Links__item a{
+    display: block;
+}
+
+.Policies{
+    text-align: center;
+    padding-bottom: 12px;
+}
+
+.Policies__item{
+    margin: 0 4px;
+}

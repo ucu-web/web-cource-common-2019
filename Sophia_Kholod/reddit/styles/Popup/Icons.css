@@ -1,0 +1,67 @@
+.Tools{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(39, 39, 41);
+    align-items: center;
+    height: 36px;
+    border-radius: 0 0 4px 4px;
+    padding-left: 10px;
+}
+
+
+.Icons > *{
+    align-self: center;
+    line-height: 0;
+    position: relative;
+    min-width: 36px;
+    color: rgb(129, 131, 132);
+    border-radius: 2px;
+    outline: none;
+    padding: 4px;
+    transition: background-color 0.1s ease 0s;
+}
+
+.Icons > *:hover, .Icons > *:focus{
+    background-color: rgba(150, 150, 150, 0.05);
+}
+.Tools__comment-button{
+    margin: 4px 8px;
+    min-height: 27px;
+    min-width: 96px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+    text-transform: uppercase;
+    background-color: rgb(215, 218, 220);
+    color: rgb(26, 26, 27);
+    fill: rgb(26, 26, 27);
+    border: 1px solid rgb(215, 218, 220);
+    border-radius: 4px;
+}
+
+@media (max-width: 785px) {
+    .Icon_spoiler, .Icon_superscript, .Icon_subscript{
+        display: none;
+    }
+}
+
+
+@media (max-width: 700px) {
+    .Icon_list-ul, .Icon_list-ol, .Icon_strikethrough{
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .Icons > *{
+        display: inline;
+    }
+}
+
+@media (max-width: 505px) {
+    .Icon_spoiler, .Icon_superscript, .Icon_subscript, .Icon_strikethrough{
+        display: none;
+    }
+}

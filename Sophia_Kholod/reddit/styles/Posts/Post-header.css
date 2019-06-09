@@ -1,0 +1,41 @@
+.Post-header{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    margin: 0 8px 8px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+}
+
+.Post__channel-picture{
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+    border-radius: 100%;
+}
+
+.Post__channel-name{
+    font-weight: 700;
+    color: rgb(215, 218, 220);
+    line-height: 20px;
+    vertical-align: baseline;
+}
+
+.Post-header__dot{
+    margin: 0 4px;
+    color: rgb(129, 131, 132);
+    font-size: 6px;
+    line-height: 20px;
+    vertical-align: middle;
+}
+
+.Post-header__text{
+    color: rgb(129, 131, 132);
+    display: inline;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+    padding-top: 5px;
+}

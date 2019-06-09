@@ -1,0 +1,57 @@
+.Write-comment{
+    margin: 24px 40px 24px 5px;
+}
+
+.Write-comment__head{
+    font-family: "Noto Sans", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgb(215, 218, 220);
+    margin-right: 4px;
+}
+
+.Write-comment__author{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: rgb(79, 188, 255);
+
+}
+
+.Text-area{
+    background-color: hsla(0,0%,100%,0);
+    outline: none;
+    user-select: text;
+    overflow-wrap: break-word;
+    color: rgb(215, 218, 220);
+    min-height: 122px;
+    word-break: break-word;
+    font-family: "Noto Sans", Arial, sans-serif;
+    resize: vertical;
+    overflow: hidden;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+.Text-area h2{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+
+}
+.Text-area__text::after{
+    color: rgb(129, 131, 132);
+    cursor: text;
+}
+
+.Write-comment__editor{
+    margin-top: 10px;
+    border: 1px solid #343536;
+    border-radius: 4px;
+    position: relative;
+}
+
+

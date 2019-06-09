@@ -1,0 +1,112 @@
+body{
+    background-color: #030303;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    /*font-family: IBMPlexSans, Arial, sans-serif;*/
+    font-family: BentonSans, sans-serif;
+    vertical-align: baseline;
+
+}
+/*video{*/
+    /*height: auto;*/
+    /**/
+/*}*/
+p{
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: 0px;
+}
+
+blockquote{
+    quotes: none;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+
+}
+
+.Quote__wrapper{
+    box-sizing: border-box;
+    line-height: 21px;
+    position: relative;
+    margin: 4px 8px;
+    padding: 2px 0px 2px 12px;
+
+}
+.Quote__wrapper::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 4px;
+    background-color: rgba(215, 218, 220, 0.1);
+    border-radius: 4px;
+}
+
+.Spoiler__wrapper{
+    color: rgb(255, 255, 255);
+    caret-color: rgb(255, 255, 255);
+    background: rgb(84, 84, 82);
+    padding: 0px 4px;
+    margin: 0px 3px;
+    border-radius: 2px;
+}
+
+.Spoiler{
+    text-align: left;
+    margin: 4px 8px;
+    padding: 2px 0px 2px 12px;
+}
+
+/*@font-face {*/
+    /*font-family: "redesignFont";*/
+    /*src: url("../fonts/redesignFont.c785c732dd9af57cc27cf5d7276693e4.woff") format("truetype");*/
+/*}*/
+
+body:focus{
+    outline: none;
+}
+
+button{
+    background: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    padding: initial;
+}
+
+svg{
+    height: inherit;
+    width: inherit;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+}
+
+a:focus{
+    outline: 0;
+}
+
+button:focus{
+    outline: 0;
+}
+
+span{
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+}

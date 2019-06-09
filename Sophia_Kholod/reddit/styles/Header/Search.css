@@ -1,0 +1,29 @@
+.Search{
+    border-radius: 4px;
+    border: 1px solid transparent;
+    width: 200px;
+    position: relative;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 5px;
+    flex-grow: 1;
+}
+
+.Search__icon{
+    position: absolute;
+    top: calc(50% - 11px);
+    height: 18px;
+    margin-left: 16px;
+    fill: rgb(129, 131, 132);
+}
+
+.Search__field{
+    background-color: rgb(39, 39, 41);
+    color: rgb(215, 218, 220);
+    height: 36px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid rgb(52, 53, 54);
+    outline: none;
+    padding: 0 16px 0 40px;
+}

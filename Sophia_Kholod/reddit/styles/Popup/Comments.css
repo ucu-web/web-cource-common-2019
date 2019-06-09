@@ -1,0 +1,128 @@
+.Comments{
+    margin-top: 16px;
+}
+
+.Comment{
+    display: flex;
+    margin-left: -23px;
+    position: relative;
+    border-radius: 4px;
+    padding: 8px 4px 0px 0px;
+    transition: color 0.5s ease 0s, fill 0.5s ease 0s, background 1s ease 0s;
+    background: transparent;
+}
+.Comment__content{
+    display: flex;
+    flex-direction: column;
+}
+
+.Comment__votes{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    min-width: 24px;
+    /* max-height: 40px; */
+    text-align: center;
+    margin-right: 5px;
+    margin-left: 15px;
+    min-height: 100%;}
+
+.Comment__header {
+    display: flex;
+}
+
+.Comment__author{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: rgb(79, 188, 255);
+
+}
+
+.Comment__upvotes{
+    padding-left: 8px;
+    flex: 0 0 auto;
+     font-size: 12px;
+     font-weight: 400;
+     line-height: 16px;
+     color: rgb(129, 131, 132);
+}
+
+.Comment__author:hover{
+    text-decoration: underline;
+}
+
+.Comment__time{
+    padding-left: 8px;
+    flex: 0 0 auto;
+    font-size: 12px;
+    position: relative;
+    font-weight: 400;
+    line-height: 16px;
+    color: rgb(129, 131, 132);
+}
+
+.Action__link{
+    display: inline-block;
+    margin-right: 12px;
+    transition: color 0.1s ease 0s;
+
+}
+
+.Dot{
+    padding-left: 8px;
+    flex: 0 0 auto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: rgb(129, 131, 132);
+
+}
+
+.Comment__text{
+    font-family: "Noto Sans", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: rgb(215, 218, 220);
+    word-break: break-word;
+    overflow: auto;
+    margin-top: 6px;
+}
+
+.Comment__actions{
+    display: flex;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    color: rgb(129, 131, 132);
+    margin: 6px 0px 8px;
+}
+
+.Action_reply{
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    color: rgb(129, 131, 132);
+
+}
+
+.Action__link:hover{
+    text-decoration: underline;
+}
+
+.Comment__line{
+    width: 2px;
+    cursor: pointer;
+    min-height: 12px;
+     height: 100%;
+    background-color: rgb(52, 53, 54);
+}
+
+.Comment__line:hover{
+    background-color: rgb(215, 218, 220);
+
+}
