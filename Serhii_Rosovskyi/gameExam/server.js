@@ -4,8 +4,7 @@ let path = require("path");
 
 app.use(express.static(path.resolve(__dirname,"assets")));
 app.use(express.static(path.resolve(__dirname,"dist")));
-app.use(express.static(path.resolve(__dirname,"scripts")));
-app.get('/',function(req,res){
+app.get('/',function(req,res) {
     res.sendFile(path.join(__dirname+'/index.html'));
 });
 
