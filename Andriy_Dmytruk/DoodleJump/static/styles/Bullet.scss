@@ -7,4 +7,12 @@
   border: 2px solid #888;
   border-radius: 50%;
   box-sizing: border-box;
+
+  transition: 0.2s width, 0.2s height, 0.2s border;
+
+  &_hit {
+    width: 0;
+    height: 0;
+    border: 0 solid #888;
+  }
 }

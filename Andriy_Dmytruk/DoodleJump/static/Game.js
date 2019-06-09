@@ -3,11 +3,13 @@ import "./styles/Game.scss";
 
 import Doodle from "./Doodle";
 import {
-  createDefaultPlatforms,
+  doCollide,
   doCollideBottom,
   isInsideViewBox,
   sieveArray
-} from "./helpers";
+} from "./library";
+import { createDefaultFieldObjects } from "./helpers";
+import Enemy from "./Enemy";
 
 export default class Game {
   width = 600;
@@ -52,28 +54,39 @@ export default class Game {
 
     this.doodle.updateState(duration, translatePositionFn);
 
-    const [platformsToRemove, platformsToUpdate] = sieveArray(
+    const [objectsToRemove, objectsToUpdate] = sieveArray(
       objectFilterFn,
-      this.platforms
+      this.objects
     );
-    platformsToRemove.forEach(o => o.destroy());
-    platformsToUpdate.forEach(o =>
-      o.updateState(duration, translatePositionFn)
-    );
-    this.platforms = platformsToUpdate;
+    objectsToRemove.forEach(o => o.destroy());
+    objectsToUpdate.forEach(o => o.updateState(duration, translatePositionFn));
+    this.objects = objectsToUpdate;
 
     const [bulletsToRemove, bulletsToUpdate] = sieveArray(
       objectFilterFn,
       this.bullets
     );
     bulletsToRemove.forEach(o => o.destroy());
-    bulletsToUpdate.forEach(o => o.updateState(duration, translatePositionFn));
+    this.bullets.forEach(o => o.updateState(duration, translatePositionFn));
     this.bullets = bulletsToUpdate;
 
-    this.platforms.forEach(platform => {
-      if (doCollideBottom(this.doodle, platform, duration)) {
-        if (platform.canBeJumpedOnto()) this.doodle.jump();
-        platform.jumpOnto();
+    this.objects.forEach(object => {
+      if (!this.doodle.dead && doCollideBottom(this.doodle, object, duration)) {
+        if (object.canBeJumpedOnto()) this.doodle.jump();
+        object.jumpOnto();
+      }
+
+      if (object.canKill()) {
+        if (doCollide(this.doodle, object)) {
+          this.doodle.dead = true;
+        }
+
+        this.bullets.forEach(bullet => {
+          if (doCollide(object, bullet) && bullet.canHit()) {
+            object.hit();
+            bullet.hit();
+          }
+        });
       }
     });
 
@@ -115,7 +128,7 @@ export default class Game {
   toInitialState() {
     if (this.doodle) {
       this.doodle.destroy();
-      this.platforms.forEach(p => p.destroy());
+      this.objects.forEach(p => p.destroy());
       this.bullets.forEach(b => b.destroy());
     }
 
@@ -127,7 +140,7 @@ export default class Game {
       maxX: this.width,
       controls: { left: "ArrowLeft", right: "ArrowRight" }
     });
-    this.platforms = createDefaultPlatforms(this.field, this.width);
+    this.objects = createDefaultFieldObjects(this.field, this.width);
     this.bullets = [];
   }
 }

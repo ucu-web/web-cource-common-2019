@@ -1,5 +1,5 @@
 import "./styles/Platform.scss";
-import { getNewPositionBasedOnDuration } from "./helpers";
+import { getNewPositionBasedOnDuration } from "./library";
 
 class Platform {
   width = 60;

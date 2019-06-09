@@ -1,9 +1,10 @@
 import "./styles/Doodle.scss";
 import "./styles/Bullet.scss";
 import {
+  clamp, clampCircular,
   getAngleBetweenPoints,
   getNewPositionBasedOnDuration
-} from "./helpers";
+} from "./library";
 import Bullet from "./Bullet";
 
 export class Doodle {
@@ -91,31 +92,16 @@ export class Doodle {
     );
 
     //Do not allow to shoot down
-    // angle = clamp (-Math.PI / 2, Math.PI / 2, angle);
-    //TODO: implement clamp
-
-    if (Math.abs(angle) > Math.PI / 2) angle = (Math.sign(angle) * Math.PI) / 2;
+    this.noseAngle = clamp(-Math.PI / 2, Math.PI / 2, angle);
 
     const nose = this.element.querySelector(".doodle__nose");
-
-    angle = -Math.PI / 2 + angle;
-
     //When we change nose position by mousemove we should turn off animation.
     nose.style.transition = "0s";
-    nose.style.transform = "rotate(" + angle + "rad)";
+    nose.style.transform = "rotate(" + (this.noseAngle - Math.PI / 2) + "rad)";
   }
 
   shootBullet(container) {
-    const { x: mouseX, y: mouseY } = this.targetObjectPosition;
-    const { x: doodleX, y: doodleY } = this.element.getBoundingClientRect();
-    let angle = getAngleBetweenPoints(
-      doodleX + this.width / 2,
-      doodleY + this.height / 2,
-      mouseX,
-      mouseY
-    );
-    if (Math.abs(angle) > Math.PI / 2) angle = (Math.sign(angle) * Math.PI) / 2;
-
+    const angle = this.noseAngle;
     const velocity = 0.4;
     const noseLength = 32;
 
@@ -148,12 +134,8 @@ export class Doodle {
     this.velocityX = velocityX;
     this.velocityY = velocityY;
 
-    if (this.x < this.restrictions.minX + this.width / 2)
-      this.x = this.restrictions.maxX - this.width / 2;
-    else if (this.x > this.restrictions.maxX - this.width / 2)
-      this.x = this.restrictions.minX + this.width / 2;
-
-    if (this.velocityY < -700) this.velocityY = -700;
+    this.x = clampCircular(this.restrictions.minX, this.restrictions.maxX, this.x);
+    this.velocityY = clamp(-700, 700, this.velocityY);
 
     // doodle inertia
     const airFrictionAcceleration = 0.001;
