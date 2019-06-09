@@ -9,6 +9,7 @@
 
   &__title, &__description {
     margin: 4px 0;
+    word-break: break-all;
   }
 
   &__title-link {

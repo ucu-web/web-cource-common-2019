@@ -11,14 +11,41 @@
     margin-left: 10px;
   }
 
+  &__github-logo-link:hover {
+    svg {
+      fill: hsla(0, 0%, 100%, .75);
+    }
+  }
+
   &__svg-logo {
-    fill:#fff;
+    fill: white;
     width: 32px;
     height: 32px;
+  }
+
+  &__toggle-button {
+    display: none;
+    width: 18px;
   }
 
   &__right-navigation {
     float: right;
     margin-top: 7px;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .Header {
+    display: flex;
+    justify-content: space-between;
+
+    &__left-navigation {
+      display: none;
+    }
+
+    &__toggle-button {
+      display: block;
+    }
   }
 }

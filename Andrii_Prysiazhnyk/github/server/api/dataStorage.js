@@ -37,3 +37,4 @@ module.exports.getAll = getAll;
 module.exports.getFirst = getFirst;
 module.exports.add = add;
 module.exports.deleteAll = deleteAll;
+module.exports.updateAll = updateAll;

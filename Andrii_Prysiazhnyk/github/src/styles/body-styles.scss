@@ -1,8 +1,13 @@
 @import "common-styles";
 
+@font-face {
+  font-family: "My Segoe UI";
+  src: url("../fonts/Segoe-UI.ttf");
+}
+
 body {
   margin: 0;
-  font-family: Segoe UI, sans-serif;
+  font-family: "My Segoe UI", sans-serif;
   background: #f6f8fa;
   font-size: $medium-font;
 }

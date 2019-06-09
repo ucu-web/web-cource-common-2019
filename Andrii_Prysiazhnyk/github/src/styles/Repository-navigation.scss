@@ -14,7 +14,7 @@
     text-decoration: none;
     color: white;
     border-radius: 3px;
-    border: 1px solid #D2D6D7;
+    border: 1px solid $border-color;
   }
 
   &__new-repository:hover {
@@ -39,7 +39,9 @@
     width: 100%;
     height: 28px;
     border-radius: 2px;
-    border: 1px solid rgba(34,34,34,0.25);
+    border: 1px solid rgba(34, 34, 34, 0.25);
+    box-sizing: border-box;
+    padding-left: 5px;
   }
 
   &__input::placeholder {
@@ -64,5 +66,35 @@
 
   &__repository-name:hover {
     text-decoration: underline;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .Repository-navigation {
+    &__new-repository {
+      display: none;
+    }
+
+    &__form {
+      padding: 14px 8px;
+      background: white;
+      border: 1px solid $border-color;
+      border-radius: 3px;
+    }
+
+    &__input {
+      height: 34px;
+      font-size: 15px;
+    }
+
+    &__list {
+      margin-bottom: 0;
+    }
+
+    &__title {
+      font-size: 16px;
+      font-weight: 400;
+    }
   }
 }

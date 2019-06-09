@@ -3,10 +3,11 @@ $medium-font: 14px;
 $big-font: 16px;
 $grey-color: #6a737d;
 $blue-color: #0366d6;
+$border-color: #D2D6D7;
 
 %basic-link {
   text-decoration: none;
-  color: black;
+  color: #24292e;
   font-weight: 600;
 }
 
@@ -15,7 +16,7 @@ $blue-color: #0366d6;
 }
 
 %underscored {
-  border-bottom: 1px solid #D2D6D7;
+  border-bottom: 1px solid $border-color;
 }
 
 %main-block {

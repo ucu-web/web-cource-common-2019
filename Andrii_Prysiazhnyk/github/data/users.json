@@ -12,7 +12,15 @@
     "password": "Andre20142",
     "name": "Andrii",
     "email": "prysiazhnyk@ucu.edu.ua",
-    "country": "Ukraine",
+    "country": "Russia",
     "id": 2
+  },
+  {
+    "login": "igorprysiazhnyk",
+    "password": "Igor20142",
+    "name": "Igor",
+    "email": "prysiazhnyk@ucu.edu.ua",
+    "country": "Italy",
+    "id": 3
   }
 ]

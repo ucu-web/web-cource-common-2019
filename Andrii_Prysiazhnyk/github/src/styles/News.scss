@@ -2,6 +2,7 @@
 
 .News {
   display: flex;
+  align-items: flex-start;
   @extend %main-block;
 
   &__user-link {
@@ -24,6 +25,7 @@
 
   &__post-info-link {
     @extend %basic-link;
+    word-break: break-all;
   }
 
   &__post-info-link:hover {

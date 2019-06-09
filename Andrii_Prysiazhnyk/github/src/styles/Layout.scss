@@ -3,18 +3,18 @@
 
   &__navigation {
     max-width: 350px;
-    width: 25%;
+    flex: 1;
     border-right: 1px solid #D2D6D7;
     background: white;
   }
 
   &__main {
-    width: 50%;
+    flex: 2;
   }
 
   &__sidebar {
     max-width: 350px;
-    width: 25%;
+    flex: 1;
     margin-top: 32px;
   }
 
@@ -25,5 +25,34 @@
 
   &__main, &__navigation-content {
     margin-top: 16px;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .Layout {
+    &__sidebar {
+      display: none;
+    }
+
+    &__main {
+      flex: 3;
+    }
+  }
+}
+
+
+@media (max-width: 600px) {
+  .Layout {
+    flex-direction: column;
+
+    &__navigation {
+      max-width: none;
+      background-color: #f6f8fa;
+    }
+
+    &__navigation-content {
+      margin-top: 0;
+    }
   }
 }

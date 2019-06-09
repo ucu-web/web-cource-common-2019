@@ -44,9 +44,19 @@
     "description": "Exam task",
     "creationTime": "today",
     "updateTime": "today",
-    "language": "Java Script",
+    "language": "JS",
     "stars": "0",
     "userId": 2,
     "id": 5
+  },
+  {
+    "name": "Politeck LABA",
+    "description": "Last laba",
+    "creationTime": "on 27 Dec 2018",
+    "updateTime": "Dec 27",
+    "language": "Java",
+    "stars": "1",
+    "userId": 3,
+    "id": 6
   }
 ]

@@ -4,8 +4,8 @@
   "description": "Github preview page with JS data generation",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx webpack && cd server2 && node app.js"
+    "dev": "webpack --watch",
+    "start": "npx webpack && cd server && node app.js"
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "express": "^4.16.4",
+    "file-loader": "^4.0.0",
     "ramda": "^0.26.1"
   }
 }
