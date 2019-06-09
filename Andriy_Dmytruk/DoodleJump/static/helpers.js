@@ -54,3 +54,10 @@ export const getAngleBetweenPoints = (fromX, fromY, toX, toY) => {
 
   return angle;
 };
+
+export const sieveArray = (filterFn, array) => {
+  return {
+    left: array.filter(filterFn),
+    removed: array.filter(v => !filterFn(v))
+  };
+};

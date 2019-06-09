@@ -148,7 +148,7 @@ export class Doodle {
     this.lastNoseRotate += duration;
 
     // doodle inertia
-    let airFrictionAcceleration = 0.001;
+    const airFrictionAcceleration = 0.001;
     if (Math.abs(this.velocityX) < airFrictionAcceleration * duration) {
       this.velocityX = 0;
     } else if (!this.accelerationX) {

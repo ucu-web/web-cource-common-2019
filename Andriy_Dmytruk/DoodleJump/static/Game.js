@@ -5,7 +5,8 @@ import Doodle from "./Doodle";
 import {
   createDefaultPlatforms,
   doCollideBottom,
-  isInsideViewBox
+  isInsideViewBox,
+  sieveArray
 } from "./helpers";
 
 export default class Game {
@@ -47,20 +48,19 @@ export default class Game {
       width: this.width,
       height: this.height
     };
+    const objectFilterFn = o => isInsideViewBox(o, viewBox);
 
     this.doodle.updateState(duration, translatePositionFn);
 
-    this.platforms
-      .filter(o => !isInsideViewBox(o, viewBox))
-      .forEach(o => o.destroy());
-    this.platforms = this.platforms.filter(o => isInsideViewBox(o, viewBox));
-    this.platforms.forEach(p => p.updateState(duration, translatePositionFn));
+    const platforms = sieveArray(objectFilterFn, this.platforms);
+    platforms.removed.forEach(o => o.destroy());
+    platforms.left.forEach(o => o.updateState(duration, translatePositionFn));
+    this.platforms = platforms.left;
 
-    this.bullets
-      .filter(o => !isInsideViewBox(o, viewBox))
-      .forEach(o => o.destroy());
-    this.bullets = this.bullets.filter(o => isInsideViewBox(o, viewBox));
-    this.bullets.forEach(b => b.updateState(duration, translatePositionFn));
+    const bullets = sieveArray(objectFilterFn, this.bullets);
+    bullets.removed.forEach(o => o.destroy());
+    bullets.left.forEach(o => o.updateState(duration, translatePositionFn));
+    this.bullets = bullets.left;
 
     this.platforms.forEach(platform => {
       if (doCollideBottom(this.doodle, platform, duration)) {
@@ -69,9 +69,8 @@ export default class Game {
       }
     });
 
-    const doodleCenterY = this.doodle.y + this.doodle.height / 2;
-    if (this.topThreshold < doodleCenterY) {
-      this.topThreshold = doodleCenterY;
+    if (this.topThreshold < this.doodle.y) {
+      this.topThreshold = this.doodle.y;
     }
 
     if (this.doodle.y < this.topThreshold - this.height / 2) {
@@ -116,6 +115,8 @@ export default class Game {
     this.doodle = new Doodle(this.field, {
       centerX: this.width / 2,
       centerY: this.height / 2,
+      minX: 0,
+      maxX: this.width,
       controls: { left: "ArrowLeft", right: "ArrowRight" }
     });
     this.platforms = createDefaultPlatforms(this.field, this.width);
