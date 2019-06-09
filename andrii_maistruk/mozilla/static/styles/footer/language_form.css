@@ -1,10 +1,10 @@
-.language_form {
+.lang-form {
     float: right;
     font-weight: 700;
     box-sizing: content-box;
 }
 
-.language_form_header_link {
+.lang-form__link {
     color: #fff;
     font-weight: 400;
     text-decoration: underline;
@@ -14,14 +14,14 @@
     display: inline-block;
 }
 
-.language_form_label {
+.lang-form__label {
     font-size: .875rem;
     line-height: 1.285;
     display: inline-block;
     visibility: hidden;
 }
 
-.language_form_select {
+.lang-form__select {
     font-size: .75rem;
     line-height: 1.333;
     border: none;

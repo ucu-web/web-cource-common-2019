@@ -1,4 +1,4 @@
-.mozilla-footer {
+.footer {
     background: #000;
     clear: both;
     color: #fff;
@@ -7,7 +7,7 @@
     width: 100%;
 }
 
-.mozilla-footer div {
+.footer__wrapper {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -18,7 +18,7 @@
     padding: 24px 96px;
 }
 
-.mozilla-footer__content-primary {
+.footer__primary {
     font-size: 1rem;
     line-height: 1.5;
     box-sizing: border-box;
@@ -26,7 +26,7 @@
     margin: 0 auto 48px;
 }
 
-.mozilla-footer__content-primary::after {
+.footer__primary::after {
     clear: both;
     content: '';
     display: block;
@@ -37,7 +37,7 @@
 
 }
 
-.mozilla-footer__logo-wrapper {
+.footer__logo {
     margin-bottom: 32px;
     font-size: 1rem;
     line-height: 1.5;
@@ -45,7 +45,7 @@
     color: #fff;
 }
 
-.mozilla-footer__logo-wrapper a {
+.footer__logo-link {
     background: url("https://www.mozilla.org/media/protocol/img/logos/mozilla/white.612a25fa976b.svg") no-repeat;
     background-size: 100px 32px;
     overflow: hidden;
@@ -57,7 +57,7 @@
 }
 
 
-.mozilla_footer__content-secondary {
+.footer__secondary {
     font-size: .75rem;
     line-height: 1.333;
     position: relative;

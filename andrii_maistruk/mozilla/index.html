@@ -351,7 +351,8 @@
                         <legend>Format</legend>
                         <p>
                             <label class="newsletter__label" for="format-html">
-                                <input class="" type="radio" onclick="format_input(0)" id="format-html" value="H" checked=""> HTML
+                                <input class="" type="radio" onclick="format_input(0)" id="format-html" value="H"
+                                       checked=""> HTML
                             </label>
                             <label class="newsletter__label" for="format-text">
                                 <input type="radio" id="format-text" onclick="format_input(1)" value="T"> Text
@@ -386,83 +387,86 @@
         </div>
     </section>
 </main>
-<footer class="mozilla-footer">
-    <div>
-        <nav class="mozilla-footer__content-primary">
-            <div class="mozilla-footer__logo-wrapper">
-                <a href="">Mozilla</a>
+<footer class="footer">
+    <div class="footer__wrapper">
+        <nav class="footer__primary">
+            <div class="footer__logo">
+                <a class="footer__logo-link" href=""></a>
             </div>
-            <div class="mozilla-footer__sections">
-                <section class="mozilla-footer__content-section">
-                    <h5>Company</h5>
-                    <ul>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Press Center</a></li>
-                        <li><a href="">Careers</a>
+            <div class="footer__sections">
+                <section class="footer__section">
+                    <h5 class="footer__section-heading">Company</h5>
+                    <ul class="footer__list">
+                        <li class="footer__list-item"><a class="footer__link" href="">About</a></li>
+                        <li class="footer__list-item"><a class="footer__link" href="">Press Center</a></li>
+                        <li class="footer__list-item"><a class="footer__link" href="">Careers</a>
                         </li>
                     </ul>
                 </section>
-                <section class="mozilla-footer__content-section">
-                    <h5>Developers</h5>
-                    <ul>
-                        <li><a href="">Test
-                            New Features</a></li>
-                        <li><a href="">MDN
-                            Web Docs</a></li>
-                        <li>
-                            <a href="">Tools</a>
+                <section class="footer__section">
+                    <h5 class="footer__section-heading">Developers</h5>
+                    <ul class="footer__list">
+                        <li class="footer__list-item">
+                            <a class="footer__link" href="/">
+                                Test New Features</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a class="footer__link" href="/">
+                                MDN Web Docs</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a class="footer__link" href="/">Tools</a>
                         </li>
                     </ul>
                 </section>
-                <section class="mozilla-footer__content-section">
-                    <h5>Resources</h5>
-                    <ul>
-                        <li><a href="">Privacy</a></li>
-                        <li><a href="">Contact</a></li>
+                <section class="footer__section">
+                    <h5 class="footer__section-heading">Resources</h5>
+                    <ul class="footer__list">
+                        <li class="footer__list-item"><a class="footer__link" href="">Privacy</a></li>
+                        <li class="footer__list-item"><a class="footer__link" href="">Contact</a></li>
                     </ul>
                 </section>
-                <section class="mozilla-footer__content-section">
-                    <h5>Product Help</h5>
-                    <ul>
-                        <li><a href="">Support</a></li>
-                        <li><a href="">File a Bug</a></li>
+                <section class="footer__section">
+                    <h5 class="footer__section-heading">Product Help</h5>
+                    <ul class="footer__list">
+                        <li class="footer__list-item"><a class="footer__link" href="">Support</a></li>
+                        <li class="footer__list-item"><a class="footer__link" href="">File a Bug</a></li>
                     </ul>
                 </section>
             </div>
         </nav>
-        <nav class="mozilla_footer__content-secondary">
-            <p class="footer_license">Visit Mozilla Corporation's non-profit parent,
-                <a class="footer_license_link" href="">Mozilla Foundation</a>.
-                </br>Portions of this content are ©1998–2019 by individual mozilla.org contributors.
-                Content available under a <a class="footer_license_link" href=""><span>Creative Commons license.</span></a>
+        <nav class="footer__secondary">
+            <p class="footer__license">Visit Mozilla Corporation's non-profit parent,
+                <a class="footer__license-link" href="">Mozilla Foundation</a>.
+                <br/>Portions of this content are ©1998–2019 by individual mozilla.org contributors.
+                Content available under a <a class="footer__license-link" href="">
+                    <span>Creative Commons license.</span></a>
             </p>
-
-            <form class="language_form">
-                <a class="language_form_header_link" href="https://www.mozilla.org/locales/">
+            <form class="lang-form">
+                <a class="lang-form__link" href="https://www.mozilla.org/locales/">
                     Language
                 </a>
-                <label class="language_form_label" for="page-language-select">
-                </label>
-                <select class="language_form_select" id="page-language-select"
+                <label class="lang-form__label" for="page-language-select"></label>
+                <select class="lang-form__select" id="page-language-select"
                         name="lang" dir="ltr">
                     <option lang="en-CA" value="en-CA">Spanish</option>
                     <option lang="en-GB" value="en-GB">Ukrainian</option>
                     <option lang="en-US" value="en-US" selected>English</option>
                 </select>
             </form>
-            <ul class="footer_terms">
-                <li class="footer_terms_item"><a class="footer_terms_link" href="">Privacy</a></li>
-                <li class="footer_terms_item"><a class="footer_terms_link" href="">Website Privacy Notice</a></li>
-                <li class="footer_terms_item"><a class="footer_terms_link" href="">Cookies</a></li>
-                <li class="footer_terms_item"><a class="footer_terms_link" href="">Legal</a></li>
-                <li class="footer_terms_item"><a class="footer_terms_link" href="">
+            <ul class="footer__terms">
+                <li class="footer__terms-item"><a class="footer__terms-link" href="">Privacy</a></li>
+                <li class="footer__terms-item"><a class="footer__terms-link" href="">Website Privacy Notice</a></li>
+                <li class="footer__terms-item"><a class="footer__terms-link" href="">Cookies</a></li>
+                <li class="footer__terms-item"><a class="footer__terms-link" href="">Legal</a></li>
+                <li class="footer__terms-item"><a class="footer__terms-link" href="">
                     Community Participation
                     Guidelines</a>
                 </li>
             </ul>
-            <ul class="links_social">
-                <li class="links_social_item"><a class="links_social_item_link twitter" href="">Twitter</a></li>
-                <li class="links_social_item"><a class="links_social_item_link instagram" href="">Instagram</a></li>
+            <ul class="social">
+                <li class="social__item"><a class="social__link twitter" href="">Twitter</a></li>
+                <li class="social__item"><a class="social__link instagram" href="">Instagram</a></li>
             </ul>
         </nav>
     </div>

@@ -1,10 +1,10 @@
-.mozilla-footer__sections {
+.footer__sections {
     border-bottom: 1px solid #38383d;
     overflow: hidden;
     padding-bottom: 48px;
 }
 
-.mozilla-footer__content-section {
+.footer__section {
     float: left;
     display: block;
     margin-bottom: 8px;
@@ -12,15 +12,15 @@
     width: calc(25% - (48px - (48px / 4)));
 }
 
-.mozilla-footer__content-section:first-of-type {
+.footer__section:first-of-type {
     padding-left: 0;
 }
 
-.mozilla-footer__content-section:last-child {
+.footer__section:last-child {
     padding-right: 0;
 }
 
-.mozilla-footer__content-section h5 {
+.footer__section-heading {
     border-bottom: 0;
     font-size: 1rem;
     line-height: 1.5;
@@ -28,21 +28,21 @@
     text-align: left;
 }
 
-.mozilla-footer__content-section ul {
+.footer__list {
     margin: 0 0 32px 0;
 }
 
-.mozilla-footer__content-section ul li {
+.footer__list-item {
     margin-top: 0;
     list-style-type: none;
     padding: 4px 0;
 }
 
-.mozilla-footer__content-section ul li:first-child {
+.footer__list-item:first-child {
     margin-top: 0;
 }
 
-.mozilla-footer__content-section ul li a {
+.footer__link {
     text-decoration: none;
     color: #fff;
     font-weight: 400;
