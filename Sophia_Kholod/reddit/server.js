@@ -60,7 +60,6 @@ let requestHandler = (request, response) => {
                                     response.writeHead(201);
                                     response.end();
                                 }
-
                             });
                     });
                 } else {

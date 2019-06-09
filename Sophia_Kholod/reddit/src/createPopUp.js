@@ -221,7 +221,6 @@ export const createPopUp = (post) => {
 
 
 export const createComment = (parent, comment, child) => {
-    // if (comment === undefined){return;}
     let el = document.createElement("article");
     el.className = "Comment";
     let commentDate = timeSince(new Date(comment["date"])) + " ago";

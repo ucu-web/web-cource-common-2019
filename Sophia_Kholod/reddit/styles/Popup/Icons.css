@@ -41,9 +41,25 @@
     border-radius: 4px;
 }
 
+@media (max-width: 1110px) {
+    .Icon_spoiler, .Icon_superscript,
+    .Icon_subscript, .Icon_strikethrough{
+        display: none;
+    }
+}
+
+@media (max-width: 965px) {
+    .Icons > *{
+        display: inline;
+    }
+}
+
 @media (max-width: 785px) {
     .Icon_spoiler, .Icon_superscript, .Icon_subscript{
         display: none;
+    }
+    .Icon_strikethrough{
+        display: inline;
     }
 }
 
@@ -65,3 +81,4 @@
         display: none;
     }
 }
+

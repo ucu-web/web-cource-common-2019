@@ -64,6 +64,8 @@ const reorderComments = async (clicked, postId) => {
 
 const renderPopUp = async (postId) => {
     document.getElementsByClassName("Layout__pop-up")[0].style.gridRowEnd = "5";
+    document.getElementsByClassName("Layout__content-wrapper")[0].style.position = "fixed";
+
     let posts = await readJSONFromFile("../data/posts.json");
     let comments = await readJSONFromFile("../data/comments" + postId.toString() + ".json");
 
@@ -75,13 +77,14 @@ const renderPopUp = async (postId) => {
     let commentsParent = $(".Comments")[0];
     $(".Pop-up")[0].style.display = "grid";
 
-    comments.sort((a, b) => {return sortNew(a, b)});
+    comments.sort((a, b) => {return sortTop(a, b)});
     comments.map(comment => createComment(commentsParent, comment));
 
     $(".Close-button")[0].addEventListener(
         "click", () => {
             layout.innerHTML = "";
             layout.style.gridRowEnd = null;
+            document.getElementsByClassName("Layout__content-wrapper")[0].style.position = "static";
         });
 
     let sortButton = $(".Sort__button")[0];
