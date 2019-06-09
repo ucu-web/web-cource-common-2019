@@ -10,8 +10,8 @@ class PubSub {
             (this.callbacks = this.callbacks.filter(fn => fn !== callback));
     }
 
-    publish(data) {
-        this.callbacks.forEach(fn => fn(data));
+    publish() {
+        this.callbacks.forEach(fn => fn(...arguments));
     }
 }
 

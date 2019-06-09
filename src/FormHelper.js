@@ -1,28 +1,22 @@
-function CreateSimpleForm(name) {
+export function CreateForm(name) {
     let taskForm = document.createElement('form');
     taskForm.className = name + '__form';
 
-    let taskSave = document.createElement('input');
-    taskSave.className = name + '__save';
-    taskSave.type = 'submit';
-    taskSave.value = 'Save';
-
-    let taskCancel = document.createElement('input');
-    taskCancel.className = name + '__cancel';
-    taskCancel.type = 'reset';
-    taskCancel.value = 'Cancel';
-
     return taskForm;
 }
+export function CreateInput(type, parentName, value='') {
+    let inputElement = document.createElement('input');
+    inputElement.className = parentName + '__' + value.toLowerCase();
+    inputElement.type = type;
+    inputElement.value = value;
+    return inputElement;
+}
 
-function ConfigureForm(form) {
+export function ConfigureForm(form) {
 
 }
 
-function AssembleForm(form, elements = []) {
+export function AssembleForm(form, elements = []) {
     form.innerHTML = '';
     elements.forEach(elem => form.appendChild(elem));
 }
-
-
-export default {CreateSimpleForm, AssembleForm, ConfigureForm};

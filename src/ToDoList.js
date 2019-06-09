@@ -1,20 +1,43 @@
 import '../style/todolist.css'
 import ToDoTask from "./ToDoTask";
 import CheckBoxHelper from './CheckBoxHelper'
-import {CreateSimpleForm, ConfigureForm, AssembleForm} from './FormHelper'
+import {CreateForm, CreateInput, ConfigureForm, AssembleForm} from './FormHelper'
 
 class ToDoList {
-    constructor(container) {
+    constructor(container, tasks={}) {
         this.container = container;
+        this.tasksValues = tasks;
         this.tasks = {};
-        this.selectAll = document.createElement('input');
-        this.selectAll.type = 'checkbox';
+        for (const year in tasks) {
+            if (!tasks.hasOwnProperty(year)) continue;
+            for (const month in tasks[year]) {
+                if (!tasks[year].hasOwnProperty(month)) continue;
+                for (const day in tasks[year][month]) {
+                    if (!tasks[year][month].hasOwnProperty(day)) continue;
+                    this.tasks[year] = this.tasks[year] || {};
+                    this.tasks[year][month] = this.tasks[year][month] || {};
+                    this.tasks[year][month][day] = this.tasks[year][month][day] || [];
+                    tasks[year][month][day].forEach(task => {
+                        const newTask = new ToDoTask(task);
+                        newTask.onTaskDeletion(() => this.removeTask(newTask));
+                        this.tasks[year][month][day].push(newTask);
+                    });
+                }
+            }
+        }
+
+        this.selectAll = CreateInput('checkbox', 'todolist');
         this.selectAll.hidden = true;
+
         this.todoList = document.createElement('div');
         this.todoList.className = 'todolist';
-        this.form = new SimpleForm('todolist');
-        // this.createForm();
-        this.configureForm();
+
+        this.form = CreateForm('todolist');
+        this.submit = CreateInput('submit', 'todolist', 'Save');
+        this.cancel = CreateInput('reset', 'todolist', 'Cancel');
+
+        // ConfigureForm(this.form);
+        this.configureForm(this.form);
         this.render(new Date());
     }
 
@@ -23,56 +46,54 @@ class ToDoList {
         this.taskInput.className = 'todolist__input';
     }
 
-    _getTasksForDay(date) {
-        let tasks = this.tasks[date.getFullYear()];
+    _getTasksForDay(tasksList) {
+        let tasks = tasksList[this.currentDate.getFullYear()];
         if (typeof tasks === "undefined") return;
-        tasks = tasks[date.getMonth() + 1];
+        tasks = tasks[this.currentDate.getMonth() + 1];
         if (typeof tasks === "undefined") return;
-        tasks = tasks[date.getDate()];
+        tasks = tasks[this.currentDate.getDate()];
         if (typeof tasks === "undefined") return;
         return tasks;
     }
 
-    getTaskList(date) {
-        const year = date.getFullYear();
-        const month = date.getMonth() + 1;
-        const day = date.getDate();
-        this.tasks[year] = this.tasks[year] || {};
-        this.tasks[year][month] = this.tasks[year][month] || {};
-        this.tasks[year][month][day] = this._getTasksForDay(date) || [];
-        return this.tasks[year][month][day];
+    getTaskList(tasks) {
+        const year = this.currentDate.getFullYear();
+        const month = this.currentDate.getMonth() + 1;
+        const day = this.currentDate.getDate();
+        tasks[year] = tasks[year] || {};
+        tasks[year][month] = tasks[year][month] || {};
+        tasks[year][month][day] = this._getTasksForDay(tasks) || [];
+        return tasks[year][month][day];
     }
 
-    addTask(date, task, tasksList) {
-        let taskList = this.getTaskList(date);
+    addTask(task, tasksList) {
+        let taskList = this.getTaskList(this.tasks);
 
         let newTask = new ToDoTask(task);
-        console.log('add task');
         taskList.push(newTask);
         newTask.render(tasksList);
-        newTask.onTaskDeletion(() => this.removeTask(date, newTask));
+        newTask.onTaskDeletion(() => this.removeTask(newTask));
         return newTask;
     }
 
-    removeTask(date, task) {
-        console.log('removing');
-        let taskList = this.getTaskList(date);
+    removeTask(task) {
+        let taskList = this.getTaskList(this.tasks);
         const i = taskList.indexOf(task);
 
-        const year = date.getFullYear();
-        const month = date.getMonth() + 1;
-        const day = date.getDate();
+        const year = this.currentDate.getFullYear();
+        const month = this.currentDate.getMonth() + 1;
+        const day = this.currentDate.getDate();
         if (i !== -1)
             this.tasks[year][month][day] = taskList.filter(el => i !== taskList.indexOf(el));
         this.newTask = undefined;
-        this.render(date);
+        this.render(this.currentDate);
     }
 
-    renderTasks(date) {
+    renderTasks() {
         let taskList = document.createElement("ul");
         taskList.className = 'todolist__tasks';
 
-        let tasks = this._getTasksForDay(date);
+        let tasks = this._getTasksForDay(this.tasks);
         if (typeof tasks !== "undefined")
             tasks.forEach(task => task.render(taskList));
 
@@ -84,8 +105,17 @@ class ToDoList {
     }
 
     commitTaskViaBlur(taskInput) {
-        if (taskInput.value === "")
+        const year = this.currentDate.getFullYear();
+        const month = this.currentDate.getMonth() + 1;
+        const day = this.currentDate.getDate();
+
+        if (taskInput.value.trim() === "")
             this.newTask.publishTaskDeletion();
+        else {
+            let taskList = this.getTaskList(this.tasksValues);
+            taskList.push(taskInput.value);
+            this.tasksValues[year][month][day] = taskList;
+        }
         taskInput.value = "";
     }
 
@@ -95,8 +125,8 @@ class ToDoList {
         taskInput.focus();
     }
 
-    configureInput(date, tasksList) {
-        this.taskInput.addEventListener('focus', () => this.newTask = this.addTask(date, "", tasksList));
+    configureInput(tasksList) {
+        this.taskInput.addEventListener('focus', () => this.newTask = this.addTask("", tasksList));
         this.taskInput.addEventListener('input', () => this.newTask.update(this.taskInput.value));
         this.taskInput.addEventListener('blur', () => this.commitTaskViaBlur(this.taskInput));
     }
@@ -107,23 +137,32 @@ class ToDoList {
     }
 
     render(date) {
-
-        let tasksList = this.renderTasks(date);
+        this.currentDate = date;
+        let tasksList = this.renderTasks();
 
         this.createInput();
-        this.configureInput(date, tasksList);
+        this.configureInput(tasksList);
 
-        // this.assembleForm();
-        this.form.assemble(this.taskInput);
+        AssembleForm(this.form, [this.taskInput, this.submit, this.cancel]);
         this.todoList.innerHTML = '';
 
-        this.todoList.appendChild(this.form.taskForm);
+        this.todoList.appendChild(this.form);
         if (tasksList.childNodes.length > 0)
             this.todoList.appendChild(this.selectAll);
         this.todoList.appendChild(tasksList);
 
+        let currentDate = document.createElement('div');
+        currentDate.innerHTML = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
+        currentDate.style.width = '90px';
+        currentDate.style.margin = 'auto';
         this.container.innerHTML = '';
+        this.container.appendChild(currentDate);
         this.container.appendChild(this.todoList);
+        return this.tasksValues;
+    }
+
+    backup() {
+        return this.tasksValues;
     }
 }
 

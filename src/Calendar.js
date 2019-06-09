@@ -15,6 +15,7 @@ class Calendar {
     this.initHandlers();
     this.onChangeMonthPubSub = new PubSub();
     this.onDaySelectPubSub = new PubSub();
+    this.onDaySelect(this.changeActiveDay.bind(this));
   }
 
   onChangeMonth(callbackFn) {
@@ -28,8 +29,16 @@ class Calendar {
   renderDays(week) {
     return week
       .map(
-        day =>
-          `<div class = "calendar__day" data-day="${day}" >${day || ""}</div>`
+        day => {
+          let dayHTML = document.createElement('div');
+          dayHTML.innerHTML = day || "";
+          if (dayHTML.innerHTML === "") { dayHTML.className = 'disabled'; return dayHTML.outerHTML; }
+          dayHTML.className = "calendar__day";
+          dayHTML.dataset.day = day;
+          dayHTML.tabIndex = 0;
+          return dayHTML.outerHTML;
+          // return `<div class = "calendar__day" data-day="${day}" >${day || ""}</div>`
+        }
       )
       .join("");
   }
@@ -52,17 +61,22 @@ class Calendar {
     this.goToDate(addMonth(this.date, 1));
   }
 
+  changeActiveDay(date, ev) {
+    if (typeof this.currentDay !== "undefined") this.currentDay.toggleAttribute('active');
+    this.currentDay = ev.target;
+    this.currentDay.toggleAttribute('active');
+  }
+
   initHandlers() {
     delegateEvent(this.container, ".calendar__day", "click", ev => {
       const date = new Date(this.date);
       date.setDate(ev.target.dataset.day);
-      this.onDaySelectPubSub.publish(date);
+      this.onDaySelectPubSub.publish(date, ev);
     });
 
-    delegateEvent(this.container, ".calendar__day", "click", ev => {
-      if (typeof this.currentDay !== "undefined") this.currentDay.toggleAttribute('active');
-      this.currentDay = ev.target;
-      this.currentDay.toggleAttribute('active');
+    delegateEvent(this.container, ".calendar__day", "keydown", ev => {
+      if (ev.key !== 'Enter') return;
+      ev.target.click();
     });
 
     delegateEvent(this.container, ".calendar__button_prev", "click", () => {
