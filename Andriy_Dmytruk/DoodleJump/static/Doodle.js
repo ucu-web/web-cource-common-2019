@@ -48,7 +48,7 @@ export class Doodle {
     container.appendChild(this.element);
 
     const handleMouseMove = ({ clientX, clientY }) => {
-      this.mousePosition = { x: clientX, y: clientY };
+      this.targetObjectPosition = { x: clientX, y: clientY };
     };
 
     const directionMap = { [controls.left]: -1, [controls.right]: 1 };
@@ -80,26 +80,33 @@ export class Doodle {
   }
 
   rotateNose() {
-    if (!this.mousePosition) return;
-    const { x: mouseX, y: mouseY } = this.mousePosition;
+    if (!this.targetObjectPosition) return;
+    const { x: mouseX, y: mouseY } = this.targetObjectPosition;
     const { x: doodleX, y: doodleY } = this.element.getBoundingClientRect();
     let angle = getAngleBetweenPoints(
-        doodleX + this.width / 2,
-        doodleY + this.height / 2,
-        mouseX,
-        mouseY
+      doodleX + this.width / 2,
+      doodleY + this.height / 2,
+      mouseX,
+      mouseY
     );
+
+    //Do not allow to shoot down
+    // angle = clamp (-Math.PI / 2, Math.PI / 2, angle);
+    //TODO: implement clamp
+
     if (Math.abs(angle) > Math.PI / 2) angle = (Math.sign(angle) * Math.PI) / 2;
 
     const nose = this.element.querySelector(".doodle__nose");
 
     angle = -Math.PI / 2 + angle;
+
+    //When we change nose position by mousemove we should turn off animation.
     nose.style.transition = "0s";
     nose.style.transform = "rotate(" + angle + "rad)";
   }
 
   shootBullet(container) {
-    const { x: mouseX, y: mouseY } = this.mousePosition;
+    const { x: mouseX, y: mouseY } = this.targetObjectPosition;
     const { x: doodleX, y: doodleY } = this.element.getBoundingClientRect();
     let angle = getAngleBetweenPoints(
       doodleX + this.width / 2,
@@ -122,8 +129,6 @@ export class Doodle {
   }
 
   updateElement() {
-    const nose = this.element.querySelector(".doodle__nose");
-
     if (this.velocityY >= 0.2) this.element.classList.add("doodle_jumping");
     else this.element.classList.remove("doodle_jumping");
 
@@ -149,7 +154,6 @@ export class Doodle {
       this.x = this.restrictions.minX + this.width / 2;
 
     if (this.velocityY < -700) this.velocityY = -700;
-    this.lastNoseRotate += duration;
 
     // doodle inertia
     const airFrictionAcceleration = 0.001;
