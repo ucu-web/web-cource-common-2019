@@ -1,17 +1,15 @@
 .main-content__header-section {
-	margin-top: 0;
 	padding-top: 24px;
 	background-image: url("https://www.mozilla.org/media/img/firefox/accounts/fxa-hero-img.d86392a86cc4.png");
-    -webkit-background-size: 584px 389px;
     background-size: 584px 389px;
-    background-position: 80% 60%;
+    background-position:85% bottom;
     background-repeat: no-repeat;
     padding-left:96px;
 	padding-right: 96px;
     box-sizing: border-box;
     margin: 0 auto;
     max-width: 1420px;
-    min-width: 304px;
+    display: block;
     position: relative;
     text-align: left;
     min-height: 405px;

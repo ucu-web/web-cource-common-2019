@@ -1,9 +1,8 @@
 .top-navigation-bar {
     display: block;
-    width: 100%;
     margin: 15px auto 0 auto;
     padding: 0 96px;
-    max-width: 1228px;
+    max-width: 1240px;
 }
 
 .top-navigation-bar__img {
@@ -18,10 +17,10 @@
 
 .top-navigation-bar__list {
     list-style-type: none;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
+    box-sizing: content-box;
     line-height: 1.5;
-    width: 100%;
     position: relative;
 
 }
@@ -33,6 +32,7 @@
     line-height: 1.5;
 	margin-top: 15px;
 	padding: 0;
+
 }
 
 .top-navigation-bar__link {
@@ -66,9 +66,8 @@
     border: 2px solid #0060df;
     font-weight: 600;
     text-decoration: none;
-    position: relative;
     display: inline-block;
-    float: right;
+    float: left;
     margin-top: 5px;
 }
 
@@ -78,7 +77,10 @@
 
 }
 .top_navigation_bar__download-link {
-	float: right;
+	margin-right: auto;
+    float:right;
+    box-sizing: border-box;
+    display: inline-block;
 }
 .top-navigation-bar:after {
 	content: "";
