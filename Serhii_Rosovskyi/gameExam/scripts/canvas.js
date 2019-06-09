@@ -14,19 +14,19 @@ function getRandomImage() {
     return Math.floor(Math.random() * (images.length));
 }
 
-function clamp(min, max, num) {
+function mean(min, max, num) {
     return num <= min ? min : num >= max ? max : num;
 }
 
 function keyDown(ev) {
-    ev.key === "ArrowUp" ? spaceShip.thrusting = true :
+    ev.key === "ArrowUp" ? spaceShip.moveing = true :
         ev.key === "ArrowLeft" ? spaceShip.rotCoef = 1 :
             ev.key === "ArrowRight" ? spaceShip.rotCoef = -1 :
                 ev.key === " " ? spaceShip.fire(timeRunning) : null;
 }
 
 function keyUp(ev) {
-    ev.key === "ArrowUp" ? spaceShip.thrusting = false :
+    ev.key === "ArrowUp" ? spaceShip.moveing = false :
         ev.key === "ArrowLeft" || ev.key === "ArrowRight" ? spaceShip.rotCoef = 0 : null;
 }
 
@@ -36,11 +36,11 @@ function distance(x1, y1, x2, y2) {
 
 function createAsteroid(shipX, shipY) {
     let radius = Math.round(Math.random() * 30) + 1;
-    let x = clamp(radius, innerWidth - radius * 2, Math.random() * innerWidth);
-    let y = clamp(radius, innerHeight - radius * 2, Math.random() * innerHeight);
+    let x = mean(radius, innerWidth - radius * 2, Math.random() * innerWidth);
+    let y = mean(radius, innerHeight - radius * 2, Math.random() * innerHeight);
     while (distance(shipX, shipY, x, y) < 200) {
-        x = clamp(radius, innerWidth - radius * 2, Math.random() * innerWidth);
-        y = clamp(radius, innerHeight - radius * 2, Math.random() * innerHeight);
+        x = mean(radius, innerWidth - radius * 2, Math.random() * innerWidth);
+        y = mean(radius, innerHeight - radius * 2, Math.random() * innerHeight);
     }
     let accelerationX = (Math.random() - .5) * 5;
     let accelerationY = (Math.random() - .5) * 5;

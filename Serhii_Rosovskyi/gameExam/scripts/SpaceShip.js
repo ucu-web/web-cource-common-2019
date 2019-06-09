@@ -14,17 +14,17 @@ class SpaceShip {
         this.turnSpeed = 2 * Math.PI;
         this.rotCoef = 0;
 
-        this.thrustSpeed = 5;
-        this.thrustPower = {x: 0, y: 0};
-        this.thrusting = false;
-        this.thrustSound = new Audio("audio/thrust.wav");
+        this.moveSpeed = 5;
+        this.movePower = {x: 0, y: 0};
+        this.moveing = false;
 
-        this.fireSound = new Audio("audio/fire.wav");
-        this.timeLastFired = 1;
-        this.fireRate = 20;
+        this.timeLastFired = 0;
+        this.fireRate = 10;
         this.bullets = [];
 
-        this.deathSound = new Audio("audio/bang.wav");
+        this.fireSound = new Audio("audio/shoot.wav");
+        this.moveSound = new Audio("audio/jetpack.wav");
+        this.deathSound = new Audio("audio/lose.wav");
 
     }
 
@@ -55,20 +55,20 @@ class SpaceShip {
         ctx.fill();
     };
 
-    thrust() {
-        this.thrustPower.x += this.thrustSpeed * Math.cos(this.a) * this.dt;
-        this.thrustPower.y -= this.thrustSpeed * Math.sin(this.a) * this.dt;
-        this.x += this.thrustPower.x;
-        this.y += this.thrustPower.y;
-        this.thrustSound.play();
+    move() {
+        this.movePower.x += this.moveSpeed * Math.cos(this.a) * this.dt;
+        this.movePower.y -= this.moveSpeed * Math.sin(this.a) * this.dt;
+        this.x += this.movePower.x;
+        this.y += this.movePower.y;
+        this.moveSound.play();
     }
 
     decelerate() {
         let friction = .5;
-        this.thrustPower.x -= friction * this.thrustPower.x * this.dt;
-        this.thrustPower.y -= friction * this.thrustPower.y * this.dt;
-        this.x += this.thrustPower.x;
-        this.y += this.thrustPower.y;
+        this.movePower.x -= friction * this.movePower.x * this.dt;
+        this.movePower.y -= friction * this.movePower.y * this.dt;
+        this.x += this.movePower.x;
+        this.y += this.movePower.y;
     }
 
     fire(time) {
@@ -88,7 +88,7 @@ class SpaceShip {
         this.draw();
 
         this.rotCoef !== 0 ? this.rotate() : null;
-        this.thrusting ? this.thrust() : this.decelerate();
+        this.moveing ? this.move() : this.decelerate();
 
         this.x < - this.radius ? this.x = canvas.width - this.radius : (this.x > canvas.width - this.radius ? this.x = +this.radius : null);
         this.y < 0 - this.radius ? this.y = canvas.height - this.radius : (this.y > canvas.height - this.radius ? this.y = this.radius : null);
