@@ -1,236 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+
     <title>Stock photos, royalty-free images</title>
-    <link href="styles/css-reset.css" rel="stylesheet">
-    <link href="styles/body/body.css" rel="stylesheet">
-    <link href="styles/body/main/main.css" rel="stylesheet">
-    <link href="styles/body/header/header.css" rel="stylesheet">
-    <link href="styles/body/main/main.css" rel="stylesheet">
-    <link href="styles/body/main/search.css" rel="stylesheet">
-    <link href="styles/body/main/navigation.css" rel="stylesheet">
-    <link href="styles/body/main/plugins-editors.css" rel="stylesheet">
-    <link href="styles/body/main/photos-illustrations-video.css" rel="stylesheet">
-    <link href="styles/body/footer/footer.css" rel="stylesheet">
-    <link href="styles/style.css" rel="stylesheet">
+    <link href="styles/css-reset.css" rel="stylesheet" type="text/css">
+    <link href="styles/body/body.css" rel="stylesheet" type="text/css">
+    <link href="styles/body/main/main.css" rel="stylesheet" type="text/css">
+    <link href="styles/body/header/header.css" rel="stylesheet" type="text/css">
+    <link href="styles/body/main/main.css" rel="stylesheet" type="text/css">
+    <link href="styles/body/main/search.css" rel="stylesheet" type="text/css">
+    <link href="styles/body/main/navigation.css" rel="stylesheet" type="text/css">
+    <link href="styles/body/main/plugins-editors.css" rel="stylesheet" type="text/css">
+    <link href="styles/body/main/photos-illustrations-video.css" rel="stylesheet" type="text/css">
+    <link href="styles/body/footer/footer.css" rel="stylesheet" type="text/css">
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+
+    <script src="styles/body/header/header.js" type="text/javascript"></script>
 </head>
-<body>
+<body id="body">
 <header class="header">
-    <ul class="navigation">
-        <li class="navigation__item"><a href="#">Photos </a></li>
-        <li class="navigation__item"><a href="#">Illustrations</a></li>
-        <li class="navigation__item"><a href="#">Video </a></li>
-        <li class="navigation__item"><a href="#">Audio </a></li>
-    </ul>
+    <nav class="header__navigation header__navigation_thin" id="navigation_bar_thin">
+        <button onclick="navigation_bar_open()" id="navigation_open" class="burger"></button>
+        <ul class="navigation" id="nav_hidden">
+            <li class="navigation__item navigation__item_vertical"><a href="#">Photos </a></li>
+            <li class="navigation__item navigation__item_vertical"><a href="#">Illustrations</a></li>
+            <li class="navigation__item navigation__item_vertical"><a href="#">Video </a></li>
+            <li class="navigation__item navigation__item_vertical"><a href="#">Audio </a></li>
+        </ul>
+    </nav>
+    <nav class="header__navigation header__navigation_wide">
+        <ul class="navigation">
+            <li class="navigation__item"><a href="#">Photos </a></li>
+            <li class="navigation__item"><a href="#">Illustrations</a></li>
+            <li class="navigation__item"><a href="#">Video </a></li>
+            <li class="navigation__item"><a href="#">Audio </a></li>
+        </ul>
+    </nav>
     <a class="image-link" href="index.html">
         <img class="image-link__logo" src="sources/istock_logo.png" alt="IStock logo">
     </a>
-    <ul class="navigation">
+    <ul class="navigation navigation_normal">
         <li class="navigation__item navigation__item_right-border"><a href="#">Pricing</a></li>
         <li class="navigation__item">
             <a href="#" class="white-text">
                 <div class="navigation__boards-icon"></div>
                 Boards</a>
         </li>
-        <li class="navigation__item"><a href="#" class="white-text">
+        <li class="navigation__item navigation__item_wide"><a href="#" class="white-text">
             <img class="navigation__person-icon" src="sources/person-icon.png" alt="person icon">
             Account</a>
         </li>
+        <li class="navigation__item navigation__item_thin">
+            <button class="open-profile" onclick="my_profile_open()"></button>
+        </li>
+    </ul>
+    <ul class="navigation" id="left_nav_hidden">
+        <li class="navigation__item navigation__item_vertical"><a href="#">Your design </a></li>
+        <li class="navigation__item navigation__item_vertical"><a href="#">Your account</a></li>
+        <li class="navigation__item navigation__item_vertical"><a href="#">Sign out    </a></li>
+    </ul>
+    <ul class="navigation navigation_super-thin">
+        <li class="navigation__item navigation__item_thin">
+            <button class="open-profile" onclick="my_profile_open()"></button>
+        </li>
     </ul>
 </header>
-<main class="main">
-    <section class="search">
-        <div class="search-bar">
-            <form class="search-form">
-                <button class="submit" type="submit">
-                    <img class="image_search-picture" src="sources/search.png" alt="search image">
+    <main class="main" id="main">
+        <section class="search">
+            <div class="search-bar">
+                <form class="search-form">
+                    <button class="submit" type="submit">
+                        <img class="image_search-picture" src="sources/search.png" alt="search image">
+                    </button>
+                    <input class="search-form__search" type="search" aria-label="search images"
+                           placeholder="Find the perfect stock photos, vectors and more...">
+                </form>
+                <button class="submit submit_search" type="submit">
+                    <img class="image_camera-picture" src="sources/camera.png" alt="search image">
                 </button>
-                <input class="search-form__search" type="search" aria-label="search images"
-                       placeholder="Find the perfect stock photos, vectors and more...">
-            </form>
-            <button class="submit" type="submit">
-                <img class="image_camera-picture" src="sources/camera.png" alt="search image">
-            </button>
-            <div class="media-filter">
-                <span class="media-filter__images-span">Images</span>
-                <img class="media-filter__arrow-down" src="sources/arrow-down.png" alt="available images">
+                <div class="media-filter">
+                    <span class="media-filter__images-span">Images</span>
+                    <img class="media-filter__arrow-down" src="sources/arrow-down.png" alt="available images">
+                </div>
             </div>
-        </div>
-        <div class="search__plans-and-pricing">
-                <span>
+            <div class="search__plans-and-pricing">
+                <span class="plans-and-pricing">
                     Save with flexible plans to suit every budget.
                     <a href="#">View plans and pricing</a>
                 </span>
-        </div>
-    </section>
-    <div class="main-page-content">
-        <section class="content">
-            <span class="content-span-1">Less searching. More finding.</span>
-            <span class="content-span-2">Discover royalty-free images, illustrations and videos that will make you stand out.</span>
-            <div class="content-wrapper">
-                <a href="#">
-                    <div class="content-block">
-                        <img alt="Photos" class="content-block-img" src="sources/r1.jpg">
-                        <h3>Photos</h3>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="content-block">
-                        <img class="content-block-img" src="sources/r2.jpg" alt="Illustrations">
-                        <h3>Illustrations</h3>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="content-block">
-                        <img class="content-block-img" src="sources/r3.jpg" alt="Vectors">
-                        <h3>Vectors</h3>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="content-block">
-                        <img class="content-block-img" src="sources/r4.jpg" alt="HD and 4K video">
-                        <h3>HD and 4K video</h3>
-                    </div>
-                </a>
-            </div>
-            <span class="content-span-2">Your idea deserves the right image. Your budget deserves a break.</span>
-            <div class="content-themes">
-                <a href="#">
-                    <div class="content-themes-block">
-                        <div class="img-wrapper">
-                            <img class="content-themes-img" src="sources/t1.jpg" alt="Vectors">
-                        </div>
-                        <h3>Best of lifestyle</h3>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="content-themes-block">
-                        <div class="img-wrapper">
-                            <img class="content-themes-img" src="sources/t2.jpg" alt="Vectors">
-                        </div>
-                        <h3>Real business</h3>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="content-themes-block">
-                        <div class="img-wrapper">
-                            <img class="content-themes-img" src="sources/t3.jpg" alt="Vectors">
-                        </div>
-                        <h3>Natural world</h3>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="content-themes-block">
-                        <div class="img-wrapper">
-                            <img class="content-themes-img" src="sources/t4.jpg" alt="Vectors">
-                        </div>
-                        <h3>Animal friends</h3>
-                    </div>
-                </a>
-                <a href="#" id="fifth-block">
-                    <div class="content-themes-block">
-                        <div class="img-wrapper">
-                            <img class="content-themes-img" src="sources/t5.jpg" alt="Vectors">
-                        </div>
-                        <h3>Vector illustration: Illustrations we <span class="heart">❤</span></h3>
-                    </div>
-                </a>
             </div>
         </section>
-        <span class="content-span-2">Browse all categories</span>
-        <nav class="main-nav">
-            <ul class="main-nav__column">
-                <li class="main-nav__element"><a href="#">Nature and landscapes </a></li>
-                <li class="main-nav__element"><a href="#">Jobs and careers </a></li>
-                <li class="main-nav__element"><a href="#">Pets and animals </a></li>
-                <li class="main-nav__element"><a href="#">Business and finance </a></li>
-                <li class="main-nav__element"><a href="#">Science and technology </a></li>
-            </ul>
-            <ul class="main-nav__column">
-                <li class="main-nav__element"><a href="#">Education </a></li>
-                <li class="main-nav__element"><a href="#">Family </a></li>
-                <li class="main-nav__element"><a href="#">Healthcare and medicine </a></li>
-                <li class="main-nav__element"><a href="#">Food and drink </a></li>
-                <li class="main-nav__element"><a href="#">Seasonal and holiday </a></li>
-            </ul>
-            <ul class="main-nav__column">
-                <li class="main-nav__element"><a href="#">Special occasions </a></li>
-                <li class="main-nav__element"><a href="#">Fitness and wellness </a></li>
-                <li class="main-nav__element"><a href="#">Fashion and beauty </a></li>
-                <li class="main-nav__element"><a href="#">Sports and recreation </a></li>
-                <li class="main-nav__element"><a href="#">Moods and feelings </a></li>
-            </ul>
-            <ul class="main-nav__column">
-                <li class="main-nav__element"><a href="#">Travel destinations </a></li>
-                <li class="main-nav__element"><a href="#">Architecture </a></li>
-                <li class="main-nav__element"><a href="#">Transportation videos </a></li>
-                <li class="main-nav__element"><a href="#">Adventure videos </a></li>
-                <li class="main-nav__element"><a href="#">4k videos </a></li>
-            </ul>
-        </nav>
-        <section class="plugins-editors">
-            <a href="#">
-                <article class="plugin plugin_first-block">
-                    <h3 class="plugin__h3">THE LEAN IN COLLECTION</h3>
-                    <h4 class="plugin__h4 plugin__h4_first">YOU CAN'T BE WHAT</h4>
-                    <h4 class="plugin__h4 plugin__h4_second">YOU CAN'T SEE</h4>
-                    <h5 class="plugin__h5">#LEANIN</h5>
-                    <div class="img-wrapper">
-                        <img alt="Photos" class="plugins-photos plugins-photos_brightness_70"
-                             src="sources/running_girl.jpg">
-                    </div>
-                </article>
-            </a>
-            <a href="#">
-                <article class="plugin plugin_block">
-                    <div class="img-wrapper">
-                        <img alt="Photos" class="plugins-photos" src="sources/computer_1.jpg">
-                    </div>
-                    <h4>Adobe plugin</h4>
-                    <h6>Design faster with our new plugin for Adobe Photoshop®, Illustrator® and InDesign® CC 2015.</h6>
-                </article>
-            </a>
+        <div class="main-page-content">
+            <section class="content">
+                <span class="content-span-1">Less searching. More finding.</span>
+                <span class="content-span-2">Discover royalty-free images, illustrations and videos that will make you stand out.</span>
+                <div class="content-wrapper">
+                    <a href="#">
+                        <div class="content-block">
+                            <img alt="Photos" class="content-block-img" src="sources/r1.jpg">
+                            <h3>Photos</h3>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="content-block">
+                            <img class="content-block-img" src="sources/r2.jpg" alt="Illustrations">
+                            <h3>Illustrations</h3>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="content-block">
+                            <img class="content-block-img" src="sources/r3.jpg" alt="Vectors">
+                            <h3>Vectors</h3>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="content-block">
+                            <img class="content-block-img" src="sources/r4.jpg" alt="HD and 4K video">
+                            <h3>HD and 4K video</h3>
+                        </div>
+                    </a>
+                </div>
+                <span class="content-span-2">Your idea deserves the right image. Your budget deserves a break.</span>
+                <div class="content-themes">
+                    <a href="#">
+                        <div class="content-themes-block">
+                            <div class="img-wrapper">
+                                <img class="content-themes-img" src="sources/t1.jpg" alt="Vectors">
+                            </div>
+                            <h3>Best of lifestyle</h3>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="content-themes-block">
+                            <div class="img-wrapper">
+                                <img class="content-themes-img" src="sources/t2.jpg" alt="Vectors">
+                            </div>
+                            <h3>Real business</h3>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="content-themes-block">
+                            <div class="img-wrapper">
+                                <img class="content-themes-img" src="sources/t3.jpg" alt="Vectors">
+                            </div>
+                            <h3>Natural world</h3>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="content-themes-block">
+                            <div class="img-wrapper">
+                                <img class="content-themes-img" src="sources/t4.jpg" alt="Vectors">
+                            </div>
+                            <h3>Animal friends</h3>
+                        </div>
+                    </a>
+                    <a href="#" id="fifth-block">
+                        <div class="content-themes-block">
+                            <div class="img-wrapper">
+                                <img class="content-themes-img" src="sources/t5.jpg" alt="Vectors">
+                            </div>
+                            <h3>Vector illustration: Illustrations we <span class="heart">❤</span></h3>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            <span class="content-span-2">Browse all categories</span>
+            <nav class="main-nav">
+                <ul class="main-nav__column">
+                    <li class="main-nav__element"><a href="#">Nature and landscapes </a></li>
+                    <li class="main-nav__element"><a href="#">Jobs and careers </a></li>
+                    <li class="main-nav__element"><a href="#">Pets and animals </a></li>
+                    <li class="main-nav__element"><a href="#">Business and finance </a></li>
+                    <li class="main-nav__element"><a href="#">Science and technology </a></li>
+                </ul>
+                <ul class="main-nav__column">
+                    <li class="main-nav__element"><a href="#">Education </a></li>
+                    <li class="main-nav__element"><a href="#">Family </a></li>
+                    <li class="main-nav__element"><a href="#">Healthcare and medicine </a></li>
+                    <li class="main-nav__element"><a href="#">Food and drink </a></li>
+                    <li class="main-nav__element"><a href="#">Seasonal and holiday </a></li>
+                </ul>
+                <ul class="main-nav__column">
+                    <li class="main-nav__element"><a href="#">Special occasions </a></li>
+                    <li class="main-nav__element"><a href="#">Fitness and wellness </a></li>
+                    <li class="main-nav__element"><a href="#">Fashion and beauty </a></li>
+                    <li class="main-nav__element"><a href="#">Sports and recreation </a></li>
+                    <li class="main-nav__element"><a href="#">Moods and feelings </a></li>
+                </ul>
+                <ul class="main-nav__column">
+                    <li class="main-nav__element"><a href="#">Travel destinations </a></li>
+                    <li class="main-nav__element"><a href="#">Architecture </a></li>
+                    <li class="main-nav__element"><a href="#">Transportation videos </a></li>
+                    <li class="main-nav__element"><a href="#">Adventure videos </a></li>
+                    <li class="main-nav__element"><a href="#">4k videos </a></li>
+                </ul>
+            </nav>
+            <section class="plugins-editors">
+                <a href="#">
+                    <article class="plugin plugin_first-block">
+                        <h3 class="plugin__h3">THE LEAN IN COLLECTION</h3>
+                        <h4 class="plugin__h4 plugin__h4_first">YOU CAN'T BE WHAT</h4>
+                        <h4 class="plugin__h4 plugin__h4_second">YOU CAN'T SEE</h4>
+                        <h5 class="plugin__h5">#LEANIN</h5>
+                        <div class="img-wrapper">
+                            <img alt="Photos" class="plugins-photos plugins-photos_brightness_70"
+                                 src="sources/running_girl.jpg">
+                        </div>
+                    </article>
+                </a>
+                <a href="#">
+                    <article class="plugin plugin_block">
+                        <div class="img-wrapper">
+                            <img alt="Photos" class="plugins-photos" src="sources/computer_1.jpg">
+                        </div>
+                        <h4>Adobe plugin</h4>
+                        <h6>Design faster with our new plugin for Adobe Photoshop®, Illustrator® and InDesign® CC
+                            2015.</h6>
+                    </article>
+                </a>
 
-            <a href="#">
-                <article class="plugin plugin_block">
-                    <div class="img-wrapper">
-                        <img alt="Photos" class="plugins-photos" src="sources/computer_2.jpg">
-                    </div>
-                    <h4>Design like a pro with iStock Editor</h4>
-                    <h6>Edit your image by cropping and resizing, adding text, uploading logos and applying
-                        filters.</h6>
-                </article>
-            </a>
-        </section>
-        <section class="photos-illustrations-video">
-            <span class="content-span-2"><a href="#">Join iStock</a> for free stock files every week</span>
-            <div class="content-wrapper">
                 <a href="#">
-                    <div class="content-block">
-                        <img alt="Photos" class="content-block-img content-block-img_width_22" src="sources/girl_with_phone.jpg">
-                        <h3>Free photo</h3>
-                    </div>
+                    <article class="plugin plugin_block">
+                        <div class="img-wrapper">
+                            <img alt="Photos" class="plugins-photos" src="sources/computer_2.jpg">
+                        </div>
+                        <h4>Design like a pro with iStock Editor</h4>
+                        <h6>Edit your image by cropping and resizing, adding text, uploading logos and applying
+                            filters.</h6>
+                    </article>
                 </a>
-                <a href="#">
-                    <div class="content-block">
-                        <img class="content-block-img content-block-img_width_22" src="sources/boots_umbrellas.jpg" alt="Illustrations">
-                        <h3>Free illustration</h3>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="content-block">
-                        <img class="content-block-img content-block-img_width_22" src="sources/grandmas.jpg" alt="Vectors">
-                        <h3>Free video clip</h3>
-                    </div>
-                </a>
-            </div>
-        </section>
-    </div>
-</main>
-<footer class="footer">
-    <img class="footer-img" src="sources/epic_photo.jpg">
-    <p>Footer somewhere here</p>
-</footer>
+            </section>
+            <section class="photos-illustrations-video">
+                <span class="content-span-2"><a href="#">Join iStock</a> for free stock files every week</span>
+                <div class="content-wrapper">
+                    <a href="#">
+                        <div class="content-block">
+                            <img alt="Photos" class="content-block-img content-block-img_width_22"
+                                 src="sources/girl_with_phone.jpg">
+                            <h3>Free photo</h3>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="content-block">
+                            <img class="content-block-img content-block-img_width_22" src="sources/boots_umbrellas.jpg"
+                                 alt="Illustrations">
+                            <h3>Free illustration</h3>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="content-block">
+                            <img class="content-block-img content-block-img_width_22" src="sources/grandmas.jpg"
+                                 alt="Vectors">
+                            <h3>Free video clip</h3>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
 </body>
 </html>

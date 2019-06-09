@@ -113,7 +113,50 @@
 }
 
 
+/* Responsive part here */
 
+.plans-and-pricing{
+    margin: 0 2rem;
+    text-align: center;
+}
 
+.search-text{
+    text-overflow: ellipsis;
+    width: 100%;
+    min-width: 30px;
+}
 
+@media screen and (max-width: 1000px) {
+    .search-bar{
+        margin: 0 0 7rem 0;
+    }
+}
 
+@media screen and (max-width: 620px) {
+    .search{
+        align-items: normal;
+        min-height: 20rem;
+    }
+    .search__plans-and-pricing{
+        font-size: 1rem;
+        height: 3rem;
+    }
+    .media-filter{
+        display: none;
+    }
+    .submit_search{
+        display: none;
+    }
+    .search-form{
+        width: 100%;
+    }
+    .search-form__search{
+        margin-right: 4rem;
+    }
+}
+
+@media screen and (max-width: 405px){
+    .search__plans-and-pricing {
+        font-size: 0.8rem;
+    }
+}

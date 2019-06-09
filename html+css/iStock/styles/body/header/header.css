@@ -14,6 +14,25 @@
     align-self: center;
 }
 
+.header__navigation_wide{
+    align-self: center;
+}
+
+#navigation_open{
+    height: 23px;
+    width: 23px;
+    margin-top: 25px;
+    margin-left: 25px;
+    border: none;
+    cursor: pointer;
+    background-size: 23px 23px;
+    background-image: url("../../../sources/burger_disabled.png");
+}
+
+#navigation_open:hover{
+    background-image: url("../../../sources/burger_enabled.png");
+}
+
 .navigation__person-icon{
     color: white;
     height: 0.9rem;
@@ -30,6 +49,13 @@
 .navigation__item{
     display: inline-block;
     margin: 0 1rem;
+}
+
+.navigation__item_vertical{
+    display: block;
+    height: 30px;
+    margin-top: 7%;
+    text-align: left;
 }
 
 .navigation__item a{
@@ -57,4 +83,72 @@
 
 .navigation__item .white-text{
     color: white;
+}
+
+/* Responsive part here */
+
+.show-left-menu{
+    transform: translateX(300px);
+    overflow: hidden;
+}
+
+.show-right-menu{
+    transform: translateX(-300px);
+    overflow: hidden;
+}
+
+.header__navigation_thin{
+    display: none;
+}
+
+.navigation__item_thin{
+    display: none;
+}
+
+.navigation_super-thin{
+    display: none;
+}
+
+.open-profile{
+    width: 1.0rem;
+    height: 1.0rem;
+    border: none;
+    cursor: pointer;
+    background-image: url("../../../sources/person-icon.png");
+    background-size: 1.0rem 1.0rem;
+    padding-top: 11px;
+}
+
+#nav_hidden{
+    display: none;
+    padding-top: 50px;
+}
+
+#left_nav_hidden{
+    display: none;
+    padding-top: 50px;
+}
+
+@media screen and (max-width: 1000px) {
+    .header__navigation_wide {
+        display: none;
+    }
+    .header__navigation_thin{
+        display: block;
+    }
+    .navigation__item_wide{
+        display: none;
+    }
+    .navigation__item_thin{
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .navigation_normal{
+        display: none;
+    }
+    .navigation_super-thin{
+        display: inline-block;
+    }
 }
