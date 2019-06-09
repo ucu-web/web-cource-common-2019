@@ -38,6 +38,11 @@
     padding: 4px 0;
 }
 
+
+.footer__list-item:hover  {
+    text-decoration: underline white;
+}
+
 .footer__list-item:first-child {
     margin-top: 0;
 }
