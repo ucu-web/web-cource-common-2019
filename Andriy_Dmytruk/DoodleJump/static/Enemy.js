@@ -31,21 +31,21 @@ export default class Enemy {
     return this.health > 0;
   }
 
+  canBeJumpedOnto() {
+    return this.health > 0;
+  }
+
+  canKill() {
+    return this.health > 0;
+  }
+
   hit() {
     this.lastHit = 0;
     this.health--;
   }
 
-  canBeJumpedOnto() {
-    return this.health > 0;
-  }
-
   jumpOnto() {
     this.health = 0;
-  }
-
-  canKill() {
-    return this.health > 0;
   }
 
   updateState(duration, translatePositionFn) {

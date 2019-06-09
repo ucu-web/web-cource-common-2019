@@ -1,5 +1,3 @@
-import Platform from "./Platform";
-
 export const getNewPositionBasedOnDuration = (object, duration) => ({
   x: (object.x || 0) + (object.velocityX || 0) * duration,
   y: (object.y || 0) + (object.velocityY || 0) * duration,
@@ -47,11 +45,9 @@ export const sieveArray = (filterFn, array) => [
   array.filter(filterFn)
 ];
 
-export const clamp = (minValue, maxValue, value) => {
-  return value < minValue ? minValue : value > maxValue ? maxValue : value;
-};
+export const clamp = (min, max, value) => (value < min ? min : value > max ? max : value);
 
-export const clampCircular = (minValue, maxValue, value) => {
-  const distance = maxValue - minValue;
-  return ((maxValue + ((value - minValue) % distance)) % distance) + minValue;
+export const clampCircular = (min, max, value) => {
+  const distance = max - min;
+  return ((max + ((value - min) % distance)) % distance) + min;
 };
