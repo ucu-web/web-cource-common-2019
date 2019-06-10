@@ -3,8 +3,7 @@ import "./styles/Game.scss";
 
 import Doodle from "./Doodle";
 import { doCollide, doCollideBottom, isInsideViewBox, sieveArray } from "./library";
-import { createDefaultFieldObjects } from "./helpers";
-import Enemy from "./Enemy";
+import { createDefaultFieldEnemies, createDefaultFieldPlatforms } from "./helpers";
 
 export default class Game {
   width = 600;
@@ -49,28 +48,34 @@ export default class Game {
 
     this.doodle.updateState(duration, translatePositionFn);
 
-    const [objectsToRemove, objectsToUpdate] = sieveArray(objectFilterFn, this.objects);
-    objectsToRemove.forEach(o => o.destroy());
-    objectsToUpdate.forEach(o => o.updateState(duration, translatePositionFn));
-    this.objects = objectsToUpdate;
+    const manageObjects = objectCollection => {
+      const [objectsToRemove, objectsToUpdate] = sieveArray(objectFilterFn, objectCollection);
+      objectsToRemove.forEach(o => o.destroy());
+      objectsToUpdate.forEach(o => o.updateState(duration, translatePositionFn));
+      return objectsToUpdate;
+    };
 
-    const [bulletsToRemove, bulletsToUpdate] = sieveArray(objectFilterFn, this.bullets);
-    bulletsToRemove.forEach(o => o.destroy());
-    this.bullets.forEach(o => o.updateState(duration, translatePositionFn));
-    this.bullets = bulletsToUpdate;
+    this.platforms = manageObjects(this.platforms);
+    this.enemies = manageObjects(this.enemies);
+    this.bullets = manageObjects(this.bullets);
 
-    this.objects.forEach(object => {
-      if (!this.doodle.dead && doCollideBottom(this.doodle, object, duration)) {
-        if (object.canBeJumpedOnto()) this.doodle.jump();
-        object.jumpOnto();
+    this.platforms.forEach(platform => {
+      if (!this.doodle.dead && doCollideBottom(this.doodle, platform, duration)) {
+        if (platform.canBeJumpedOnto()) this.doodle.jump();
+        platform.jumpOnto();
       }
+    });
 
-      if (object.canKill && object.canKill()) {
-        if (doCollide(this.doodle, object)) this.doodle.dead = true;
+    this.enemies.forEach(enemy => {
+      if (enemy.canBeInteractedWith()) {
+        if (!this.doodle.dead && doCollideBottom(this.doodle, enemy, duration)) {
+          if (enemy.canBeInteractedWith()) this.doodle.jump();
+          enemy.hit();
+        } else if (doCollide(this.doodle, enemy)) this.doodle.dead = true;
 
         this.bullets.forEach(bullet => {
-          if (doCollide(object, bullet) && bullet.canHit()) {
-            object.hit();
+          if (doCollide(enemy, bullet) && bullet.canHit()) {
+            enemy.hit();
             bullet.hit();
           }
         });
@@ -115,7 +120,8 @@ export default class Game {
   toInitialState() {
     if (this.doodle) {
       this.doodle.destroy();
-      this.objects.forEach(p => p.destroy());
+      this.platforms.forEach(p => p.destroy());
+      this.enemies.forEach(p => p.destroy());
       this.bullets.forEach(b => b.destroy());
     }
 
@@ -127,7 +133,8 @@ export default class Game {
       maxX: this.width,
       controls: { left: "ArrowLeft", right: "ArrowRight" }
     });
-    this.objects = createDefaultFieldObjects(this.field, this.width);
+    this.platforms = createDefaultFieldPlatforms(this.field, this.width);
+    this.enemies = createDefaultFieldEnemies(this.field, this.width);
     this.bullets = [];
   }
 }
