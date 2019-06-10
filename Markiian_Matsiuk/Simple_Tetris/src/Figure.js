@@ -8,6 +8,10 @@ export default class Figure {
     this.coordinates = newCoordinates;
   }
 
+  setShape(newShape) {
+    this.shape = newShape;
+  }
+
   getBlockFromGlobalCoordinates([x, y]) {
     let [localX, localY] = [x - this.coordinates[0], y - this.coordinates[1]];
     if (
