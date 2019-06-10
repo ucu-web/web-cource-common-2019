@@ -21,7 +21,7 @@
 }
 
 .billboard__content-wrapper_reverse {
-    grid-column-start: 3;
+    grid-column-start: 4;
     grid-column-end: span 5;
     margin-top: auto;
     margin-bottom: auto;
@@ -33,7 +33,7 @@
 
 }
 .billboard__image-container_reverse {
-    grid-column-start: 8;
+    grid-column-start: 9;
     max-width: 374px;
     display: block;
     margin: -45px 0;
