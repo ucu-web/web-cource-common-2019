@@ -1,8 +1,8 @@
 module.exports = {
     mode: "production",
-    entry: "./static/js/build",
+    entry: "./static/js/main",
     output: {
-        filename: "build.js",
+        filename: "main.js",
         library: "app"
     },
     module:{

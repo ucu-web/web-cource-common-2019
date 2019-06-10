@@ -52,4 +52,3 @@ let setFeedPostNote = (post, note) => {
 let setFeedPostHeading = (post, heading) => {
     post.children[0].children[2].innerHTML = heading;
 };
-

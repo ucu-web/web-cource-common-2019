@@ -32,4 +32,5 @@ import {loadData} from "./loadData.js";
 export let showDetails = require("./form.js");
 export let formatInput = require("./formatInput.js");
 
+// get data from cms
 loadData();
