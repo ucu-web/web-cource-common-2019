@@ -31,7 +31,7 @@ export default class Tetris {
       isCollisionBoard(currentFigure, this.board, [newX, newY])
     ) {
       constructFigure(currentFigure, this.board);
-      this.deleteRows();
+      this.board = clearRows(this.board);
       if (currentFigure.coordinates[1] < 2) {
         this.endGame();
       }
@@ -44,6 +44,7 @@ export default class Tetris {
     this.renderBoard();
     this.renderFigures();
   }
+
   moveLeft(playerNum) {
     let currentFigure = this.getPlayerFigure(playerNum);
 
@@ -61,6 +62,7 @@ export default class Tetris {
     this.renderBoard();
     this.renderFigures();
   }
+
   moveRight(playerNum) {
     let currentFigure = this.getPlayerFigure(playerNum);
     let [x, y] = currentFigure.coordinates;
@@ -106,31 +108,33 @@ export default class Tetris {
     this.renderFigures();
   }
 
-  deleteRows() {
-    this.board = clearRows(this.board);
-  }
-
   setFigureForPlayer(playerNum, figure) {
     this.figures[playerNum] = figure;
   }
+
   getPlayerFigure(playerNum) {
     return this.figures[playerNum];
   }
+
   endGame() {
     this.intervalId.forEach(el => clearInterval(el));
     if (confirm("You loose\nReplay?")) this.restart();
   }
+
   restart() {
     initGameVariables(this);
     this.renderBoard();
     this.renderFigures();
   }
+
   renderBoard() {
     renderBoard(this.canvasContext, this.board);
   }
+
   renderFigures() {
     this.figures.forEach(figure => renderFigure(this.canvasContext, figure));
   }
+
   addHandlers() {
     this.usedKeys = [
       "KeyA",
@@ -157,6 +161,7 @@ export default class Tetris {
       }
     });
   }
+
   startMainLoop() {
     if (this.keyMap["KeyA"]) this.moveLeft(0);
     if (this.keyMap["KeyD"]) this.moveRight(0);

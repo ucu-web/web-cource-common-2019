@@ -1,8 +1,6 @@
 import {
   arraysEqual,
-  clamp,
   cloneArray,
-  deleteBlock,
   incrustBlock,
   isOutOfFrame,
   isPlaceAvailable,
@@ -86,13 +84,11 @@ export const clearRows = board => {
 export const constructFigure = (figure, board) =>
   incrustBlock(figure.shape, board, figure.coordinates);
 
+const clear = ctx => ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+
 export const renderBoard = (canvasContext, board) => {
-  canvasContext.clearRect(
-    0,
-    0,
-    canvasContext.canvas.width,
-    canvasContext.canvas.height
-  );
+  clear(canvasContext);
+
   canvasContext.fillStyle = "#ff0000";
   canvasContext.fillRect(
     0,
@@ -119,17 +115,18 @@ export const renderBoard = (canvasContext, board) => {
     });
   });
 };
+
 export const renderFigure = (canvasContext, figure) => {
   canvasContext.fillStyle = "#2e651a";
 
   figure.shape.forEach((row, indexY) => {
     row.forEach((element, indexX) => {
+      const [x, y] = figure.coordinates;
       if (element !== 0)
+        //TODO: move renderBlock into separated function;
         canvasContext.fillRect(
-          spaceBetweenBlocks +
-            (indexX + figure.coordinates[0]) * (spaceBetweenBlocks + blockSize),
-          spaceBetweenBlocks +
-            (indexY + figure.coordinates[1]) * (spaceBetweenBlocks + blockSize),
+          spaceBetweenBlocks + (indexX + x) * (spaceBetweenBlocks + blockSize),
+          spaceBetweenBlocks + (indexY + y) * (spaceBetweenBlocks + blockSize),
           blockSize,
           blockSize
         );
@@ -145,6 +142,7 @@ export const constructCanvas = placeholder => {
   placeholder.appendChild(canvas);
   return canvas.getContext("2d");
 };
+
 export const initGameVariables = game => {
   game.keyMap = {};
   game.board = Array(height)
