@@ -133,7 +133,7 @@ export class Doodle {
     this.x = clampCircular(this.restrictions.minX, this.restrictions.maxX, this.x);
     this.velocityY = clamp(-700, 700, this.velocityY);
 
-    // doodle inertia
+    // reduce doodle inertia
     const airFrictionAcceleration = 0.001;
     if (Math.abs(this.velocityX) < airFrictionAcceleration * duration) {
       this.velocityX = 0;

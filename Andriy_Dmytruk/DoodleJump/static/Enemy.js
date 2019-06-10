@@ -27,25 +27,21 @@ export default class Enemy {
     this.element.parentNode && this.element.parentNode.removeChild(this.element);
   }
 
-  canBeHit() {
-    return this.health > 0;
+  canKill() {
+      return this.health > 0;
+  }
+
+  hit(hitPoints = 1) {
+    this.lastHit = 0;
+    this.health -= hitPoints;
   }
 
   canBeJumpedOnto() {
-    return this.health > 0;
-  }
-
-  canKill() {
-    return this.health > 0;
-  }
-
-  hit() {
-    this.lastHit = 0;
-    this.health--;
+      return this.health > 0;
   }
 
   jumpOnto() {
-    this.health = 0;
+      this.hit(this.health);
   }
 
   updateState(duration, translatePositionFn) {

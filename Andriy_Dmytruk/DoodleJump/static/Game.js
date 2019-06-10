@@ -66,12 +66,8 @@ export default class Game {
       }
 
       if (object.canKill && object.canKill()) {
-        if (doCollide(this.doodle, object)) {
-          this.doodle.dead = true;
-        }
-      }
+        if (doCollide(this.doodle, object)) this.doodle.dead = true;
 
-      if (object.canBeHit && object.canBeHit()) {
         this.bullets.forEach(bullet => {
           if (doCollide(object, bullet) && bullet.canHit()) {
             object.hit();
