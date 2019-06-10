@@ -36,7 +36,7 @@ const render = async (
   dataFiltered.map(element =>
     container.appendChild(htmlElementGenerator(element))
   );
-  localStorage.setItem(
+  sessionStorage.setItem(
     containerClass,
     document.querySelector(containerClass).innerHTML
   );
