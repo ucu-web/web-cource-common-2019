@@ -71,6 +71,7 @@ class Calendar {
 
   initHandlers() {
     delegateEvent(this.container, ".calendar__day", "click", ev => {
+      if (ev.ctrlKey || ev.metaKey) return;
       ev.preventDefault();
       const date = new Date(this.date);
       date.setDate(ev.target.dataset.day);

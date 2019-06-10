@@ -28,3 +28,13 @@ export const chunk = (array, size = 1) => {
     }
     return result;
 };
+
+export const getDateFromCurrentUrl = () => {
+    try {
+        let date = window.location.pathname.slice(1).split('-').map(n => +n);
+        if (date.length !== 3) return undefined;
+        return new Date(date[0], date[1] - 1, date[2]);
+    } catch (e) {
+        return undefined;
+    }
+};
