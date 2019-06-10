@@ -7,7 +7,7 @@ const FeaturedTagsBlock = data => {
   rootEl.className = b("tag") + " Tag";
 
   rootEl.innerHTML = `
-  <span class="Tag__name">${data.name}</span>
+  <span class="Tag__name">${data}</span>
   <span class= "Tag__delete-tag" title="Remove tag"></span>
 `;
 
@@ -19,7 +19,7 @@ const FeaturedTagsBlockDeleteVisible = data => {
   rootEl.className = b("tag") + " Tag";
 
   rootEl.innerHTML = `
-  <span class="Tag__name">${data.name}</span>
+  <span class="Tag__name">${data}</span>
   <span class= "Tag__delete-tag Tag__delete-tag--visible" title="Remove tag"></span>
 `;
 

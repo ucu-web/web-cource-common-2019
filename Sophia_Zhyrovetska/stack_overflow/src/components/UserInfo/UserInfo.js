@@ -27,7 +27,7 @@ const UserInfo = data => {
         </div>
         
         <div class="${b("tags")}">
-          ${data.tags
+          ${data.watched_tags
             .map(tag => `<a href="#" class="${b("tag")}">${tag}</a>`)
             .join("")}
         </div>
