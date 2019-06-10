@@ -24,11 +24,13 @@ export function initializeBezierCurvesVisualization(svg, points = []) {
     for (let p = 0; p < points.length; p++) {
         drawCircle(svg, points[p], p + 1);
     }
+    // add animation
     renderNewPoints(svg);
 
+    // add handler for new point
     svg.on('click', function () {
         let coordinates = mouse(this);
-        points.push([+coordinates[0], +coordinates[1]])
+        points.push(coordinates)
 
         drawCircle(svg, coordinates, points.length);
         renderNewPoints(svg)

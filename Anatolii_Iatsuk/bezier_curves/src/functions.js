@@ -6,7 +6,6 @@ export let lineGenerator = line().x(d => d[0]).y(d => d[1]);
 
 export function renderNewPoints(svg, time = 1000) {
     let points = getPoints(svg);
-    console.log(points)
 
     time = time * points.length;
 
