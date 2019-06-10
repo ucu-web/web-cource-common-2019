@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx webpack",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "serve": "node server/server.js"
   },
   "author": "",
   "license": "ISC",

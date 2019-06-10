@@ -25,9 +25,12 @@ h2 {
 }
 a {
   text-decoration: none;
+  color: black;
 }
 button {
   border: none;
+  padding: 0;
+  margin: 0;
 }
 .visually-hidden {
   clip: rect(0 0 0 0);
@@ -36,6 +39,17 @@ button {
   overflow: hidden;
   position: absolute;
   width: 1px;
+}
+.not-selectable {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
 }
 .footer {
   display: flex;

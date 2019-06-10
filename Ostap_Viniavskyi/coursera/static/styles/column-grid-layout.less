@@ -1,0 +1,48 @@
+@grid-columns-number: 16;
+@grid-max-width: 1344px;
+@cell-width: 5%;
+@cell-padding: 1.25%;
+@border-width: 1px;
+
+.Grid {
+  max-width: @grid-max-width;
+  margin: 0 auto;
+
+  &__row {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    align-items: center;
+    &--centered-content{
+      justify-content: center;
+    }
+  }
+
+  &__cell {
+
+    .generate-columns(@grid-columns-number; @cell-width; @cell-padding; @i:1)
+    when
+    (@i <= @grid-columns-number) {
+      .generate-columns(
+              @grid-columns-number; @cell-width; @cell-padding; (@i + 1)
+      );
+      &_@{i} {
+        width: @cell-width * @i + (@cell-padding * (@i - 1));
+        margin: 0 @cell-padding / 2;
+      }
+    }
+    .generate-columns(@grid-columns-number; @cell-width; @cell-padding;);
+
+    .generate-push(@grid-columns-number; @cell-width; @cell-padding; @i:1)
+    when
+    (@i < @grid-columns-number) {
+      .generate-push(@grid-columns-number; @cell-width; @cell-padding; (@i + 1));
+      &_push-@{i} {
+        margin-left: @cell-width * @i + (@cell-padding * (@i - 1)) + @cell-padding;
+      }
+    }
+    .generate-push(@grid-columns-number; @cell-width; @cell-padding;);
+
+  }
+}

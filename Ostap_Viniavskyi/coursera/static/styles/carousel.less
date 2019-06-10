@@ -1,17 +1,9 @@
 @arrow-size: 40px;
 .carousel {
-  display: grid;
-  grid-template-columns: @arrow-size auto @arrow-size;
-  grid-template-areas: ". header ." "larrow  courses rarrow" ". buttons .";
-  grid-row-gap: 20px;
-  max-width: 1250px;
-
-  &__header {
-    grid-area: header;
-  }
+  position: relative;
 
   &__courses-wrapper {
-    grid-area: courses;
+    box-sizing: border-box;
     overflow: hidden;
     padding: 4px;
   }
@@ -25,25 +17,18 @@
 
   &__swap-button {
     height: @arrow-size;
-    align-self: center;
     background-color: transparent;
     background-size: @arrow-size @arrow-size;
     background-position: center;
+    background-repeat: no-repeat;
 
     &_left {
-      grid-area: larrow;
       background-image: url("../images/left-arrow.svg");
     }
 
     &_right {
-      grid-area: rarrow;
       background-image: url("../images/right-arrow.svg");
     }
-  }
-
-  &__navigation {
-    grid-area: buttons;
-    justify-self: center;
   }
 
   @nav-button-size: 12px;

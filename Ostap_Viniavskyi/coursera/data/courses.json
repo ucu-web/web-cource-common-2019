@@ -11,7 +11,10 @@
         "timings": "57 hours",
         "skills": "Python, JavaScript, TensorFlow",
         "rating": 4.7,
-        "votesNumber": 1000
+        "votesNumber": 1000,
+        "logoUrl": "static/images/bird1.jpg",
+        "providerSmallLogoUrl": "static/images/stanford_small_logo.png",
+        "providerLogoUrl": "static/images/stanford-horizontal-logo.png"
       },
       {
         "name": "Data Science",
@@ -22,8 +25,10 @@
         "timings": "57 hours",
         "skills": "Python, JavaScript, TensorFlow",
         "rating": 4.7,
-        "votesNumber": 1000
-
+        "votesNumber": 1000,
+        "logoUrl": "static/images/cloud-computing-logo.jpg",
+        "providerSmallLogoUrl": "static/images/illinois-small-logo.png",
+        "providerLogoUrl": "static/images/illinois-horizontal-logo.jpg"
       },
       {
         "name": "Algorithms",
@@ -34,7 +39,10 @@
         "timings": "57 hours",
         "skills": "Python, JavaScript, TensorFlow",
         "rating": 4.7,
-        "votesNumber": 1000
+        "votesNumber": 1000,
+        "logoUrl": "static/images/AdobeStock_44161057--square.jpg",
+        "providerSmallLogoUrl": "static/images/duke-small-logo.jpg",
+        "providerLogoUrl": "static/images/stanford-horizontal-logo.png"
       },
       {
         "name": "Object Oriented Programming",
@@ -45,7 +53,10 @@
         "timings": "57 hours",
         "skills": "Python, JavaScript, TensorFlow",
         "rating": 3.2,
-        "votesNumber": 1000
+        "votesNumber": 125,
+        "logoUrl": "static/images/Career-Development.jpg",
+        "providerSmallLogoUrl": "static/images/georgia_small-logo.jpg",
+        "providerLogoUrl": "static/images/stanford-horizontal-logo.png"
       },
       {
         "name": "Deep Learning",
@@ -56,7 +67,10 @@
         "timings": "57 hours",
         "skills": "Python, JavaScript, TensorFlow",
         "rating": 4.7,
-        "votesNumber": 1000
+        "votesNumber": 1000,
+        "logoUrl": "static/images/machine-learning-logo.png",
+        "providerSmallLogoUrl": "static/images/penn_small_logo.png",
+        "providerLogoUrl": "static/images/stanford-horizontal-logo.png"
       },
       {
         "name": "Web Design",
@@ -67,7 +81,10 @@
         "timings": "57 hours",
         "skills": "Python, JavaScript, TensorFlow",
         "rating": 4.7,
-        "votesNumber": 1000
+        "votesNumber": 1000,
+        "logoUrl": "static/images/wharton-business-foundations-logo.jpg",
+        "providerSmallLogoUrl": "static/images/deep-learning-small-logo.jpg",
+        "providerLogoUrl": "static/images/stanford-horizontal-logo.png"
       },
       {
         "name": "Data Bases",
@@ -78,7 +95,10 @@
         "timings": "57 hours",
         "skills": "Python, JavaScript, TensorFlow",
         "rating": 4.7,
-        "votesNumber": 1000
+        "votesNumber": 1000,
+        "logoUrl": "static/images/iMBA_SLAM_Icon_EverydayLeadership.jpg",
+        "providerSmallLogoUrl": "static/images/yeil_small_logo.jpg",
+        "providerLogoUrl": "static/images/stanford-horizontal-logo.png"
       },
       {
         "name": "Christianity",
@@ -89,7 +109,10 @@
         "timings": "57 hours",
         "skills": "Python, JavaScript, TensorFlow",
         "rating": 4.7,
-        "votesNumber": 1000
+        "votesNumber": 1000,
+        "logoUrl": "static/images/Powerelectronics.jpg",
+        "providerSmallLogoUrl": "static/images/uci_small_logo.jpg",
+        "providerLogoUrl": "static/images/stanford-horizontal-logo.png"
       },
       {
         "name": "Social Entrepreneurship",
@@ -100,7 +123,403 @@
         "timings": "57 hours",
         "skills": "Python, JavaScript, TensorFlow",
         "rating": 4.7,
-        "votesNumber": 1000
+        "votesNumber": 1000,
+        "logoUrl": "static/images/Mining_Text_Data.jpg",
+        "providerSmallLogoUrl": "static/images/peking_small_logo.png",
+        "providerLogoUrl": "static/images/stanford-horizontal-logo.png"
+      }
+    ]
+  },
+  {
+    "name": "Trending courses in Math and Logic",
+    "courses": [
+      {
+        "name": "Machine Learning",
+        "organization": "Stanford University",
+        "type": "course",
+        "place": "100% online",
+        "level": "Beginner Level",
+        "timings": "57 hours",
+        "skills": "Python, JavaScript, TensorFlow",
+        "rating": 4.7,
+        "votesNumber": 1000,
+        "logoUrl": "static/images/bird1.jpg",
+        "providerSmallLogoUrl": "static/images/stanford_small_logo.png",
+        "providerLogoUrl": "static/images/stanford-horizontal-logo.png"
+      },
+      {
+        "name": "Data Science",
+        "organization": "Stanford University",
+        "type": "course",
+        "place": "100% online",
+        "level": "Beginner Level",
+        "timings": "57 hours",
+        "skills": "Python, JavaScript, TensorFlow",
+        "rating": 4.7,
+        "votesNumber": 1000,
+        "logoUrl": "static/images/cloud-computing-logo.jpg",
+        "providerSmallLogoUrl": "static/images/illinois-small-logo.png",
+        "providerLogoUrl": "static/images/illinois-horizontal-logo.jpg"
+      },
+      {
+        "name": "Algorithms",
+        "organization": "Stanford University",
+        "type": "course",
+        "place": "100% online",
+        "level": "Beginner Level",
+        "timings": "57 hours",
+        "skills": "Python, JavaScript, TensorFlow",
+        "rating": 4.7,
+        "votesNumber": 1000,
+        "logoUrl": "static/images/AdobeStock_44161057--square.jpg",
+        "providerSmallLogoUrl": "static/images/duke-small-logo.jpg",
+        "providerLogoUrl": "static/images/stanford-horizontal-logo.png"
+      },
+      {
+        "name": "Object Oriented Programming",
+        "organization": "Stanford University",
+        "type": "course",
+        "place": "100% online",
+        "level": "Beginner Level",
+        "timings": "57 hours",
+        "skills": "Python, JavaScript, TensorFlow",
+        "rating": 3.2,
+        "votesNumber": 125,
+        "logoUrl": "static/images/Career-Development.jpg",
+        "providerSmallLogoUrl": "static/images/georgia_small-logo.jpg",
+        "providerLogoUrl": "static/images/stanford-horizontal-logo.png"
+      },
+      {
+        "name": "Deep Learning",
+        "organization": "Stanford University",
+        "type": "specialization",
+        "place": "100% online",
+        "level": "Beginner Level",
+        "timings": "57 hours",
+        "skills": "Python, JavaScript, TensorFlow",
+        "rating": 4.7,
+        "votesNumber": 1000,
+        "logoUrl": "static/images/machine-learning-logo.png",
+        "providerSmallLogoUrl": "static/images/penn_small_logo.png",
+        "providerLogoUrl": "static/images/stanford-horizontal-logo.png"
+      },
+      {
+        "name": "Web Design",
+        "organization": "Stanford University",
+        "type": "course",
+        "place": "100% online",
+        "level": "Beginner Level",
+        "timings": "57 hours",
+        "skills": "Python, JavaScript, TensorFlow",
+        "rating": 4.7,
+        "votesNumber": 1000,
+        "logoUrl": "static/images/wharton-business-foundations-logo.jpg",
+        "providerSmallLogoUrl": "static/images/deep-learning-small-logo.jpg",
+        "providerLogoUrl": "static/images/stanford-horizontal-logo.png"
+      },
+      {
+        "name": "Data Bases",
+        "organization": "Stanford University",
+        "type": "course",
+        "place": "100% online",
+        "level": "Beginner Level",
+        "timings": "57 hours",
+        "skills": "Python, JavaScript, TensorFlow",
+        "rating": 4.7,
+        "votesNumber": 1000,
+        "logoUrl": "static/images/iMBA_SLAM_Icon_EverydayLeadership.jpg",
+        "providerSmallLogoUrl": "static/images/yeil_small_logo.jpg",
+        "providerLogoUrl": "static/images/stanford-horizontal-logo.png"
+      },
+      {
+        "name": "Christianity",
+        "organization": "Stanford University",
+        "type": "course",
+        "place": "100% online",
+        "level": "Beginner Level",
+        "timings": "57 hours",
+        "skills": "Python, JavaScript, TensorFlow",
+        "rating": 4.7,
+        "votesNumber": 1000,
+        "logoUrl": "static/images/Powerelectronics.jpg",
+        "providerSmallLogoUrl": "static/images/uci_small_logo.jpg",
+        "providerLogoUrl": "static/images/stanford-horizontal-logo.png"
+      },
+      {
+        "name": "Social Entrepreneurship",
+        "organization": "Stanford University",
+        "type": "course",
+        "place": "100% online",
+        "level": "Beginner Level",
+        "timings": "57 hours",
+        "skills": "Python, JavaScript, TensorFlow",
+        "rating": 4.7,
+        "votesNumber": 1000,
+        "logoUrl": "static/images/Mining_Text_Data.jpg",
+        "providerSmallLogoUrl": "static/images/peking_small_logo.png",
+        "providerLogoUrl": "static/images/stanford-horizontal-logo.png"
+      }
+    ]
+  },
+  {
+    "name": "Trending courses in Math and Logic",
+    "courses": [
+      {
+        "name": "Machine Learning",
+        "organization": "Stanford University",
+        "type": "course",
+        "place": "100% online",
+        "level": "Beginner Level",
+        "timings": "57 hours",
+        "skills": "Python, JavaScript, TensorFlow",
+        "rating": 4.7,
+        "votesNumber": 1000,
+        "logoUrl": "static/images/bird1.jpg",
+        "providerSmallLogoUrl": "static/images/stanford_small_logo.png",
+        "providerLogoUrl": "static/images/stanford-horizontal-logo.png"
+      },
+      {
+        "name": "Data Science",
+        "organization": "Stanford University",
+        "type": "course",
+        "place": "100% online",
+        "level": "Beginner Level",
+        "timings": "57 hours",
+        "skills": "Python, JavaScript, TensorFlow",
+        "rating": 4.7,
+        "votesNumber": 1000,
+        "logoUrl": "static/images/cloud-computing-logo.jpg",
+        "providerSmallLogoUrl": "static/images/illinois-small-logo.png",
+        "providerLogoUrl": "static/images/illinois-horizontal-logo.jpg"
+      },
+      {
+        "name": "Algorithms",
+        "organization": "Stanford University",
+        "type": "course",
+        "place": "100% online",
+        "level": "Beginner Level",
+        "timings": "57 hours",
+        "skills": "Python, JavaScript, TensorFlow",
+        "rating": 4.7,
+        "votesNumber": 1000,
+        "logoUrl": "static/images/AdobeStock_44161057--square.jpg",
+        "providerSmallLogoUrl": "static/images/duke-small-logo.jpg",
+        "providerLogoUrl": "static/images/stanford-horizontal-logo.png"
+      },
+      {
+        "name": "Object Oriented Programming",
+        "organization": "Stanford University",
+        "type": "course",
+        "place": "100% online",
+        "level": "Beginner Level",
+        "timings": "57 hours",
+        "skills": "Python, JavaScript, TensorFlow",
+        "rating": 3.2,
+        "votesNumber": 125,
+        "logoUrl": "static/images/Career-Development.jpg",
+        "providerSmallLogoUrl": "static/images/georgia_small-logo.jpg",
+        "providerLogoUrl": "static/images/stanford-horizontal-logo.png"
+      },
+      {
+        "name": "Deep Learning",
+        "organization": "Stanford University",
+        "type": "specialization",
+        "place": "100% online",
+        "level": "Beginner Level",
+        "timings": "57 hours",
+        "skills": "Python, JavaScript, TensorFlow",
+        "rating": 4.7,
+        "votesNumber": 1000,
+        "logoUrl": "static/images/machine-learning-logo.png",
+        "providerSmallLogoUrl": "static/images/penn_small_logo.png",
+        "providerLogoUrl": "static/images/stanford-horizontal-logo.png"
+      },
+      {
+        "name": "Web Design",
+        "organization": "Stanford University",
+        "type": "course",
+        "place": "100% online",
+        "level": "Beginner Level",
+        "timings": "57 hours",
+        "skills": "Python, JavaScript, TensorFlow",
+        "rating": 4.7,
+        "votesNumber": 1000,
+        "logoUrl": "static/images/wharton-business-foundations-logo.jpg",
+        "providerSmallLogoUrl": "static/images/deep-learning-small-logo.jpg",
+        "providerLogoUrl": "static/images/stanford-horizontal-logo.png"
+      },
+      {
+        "name": "Data Bases",
+        "organization": "Stanford University",
+        "type": "course",
+        "place": "100% online",
+        "level": "Beginner Level",
+        "timings": "57 hours",
+        "skills": "Python, JavaScript, TensorFlow",
+        "rating": 4.7,
+        "votesNumber": 1000,
+        "logoUrl": "static/images/iMBA_SLAM_Icon_EverydayLeadership.jpg",
+        "providerSmallLogoUrl": "static/images/yeil_small_logo.jpg",
+        "providerLogoUrl": "static/images/stanford-horizontal-logo.png"
+      },
+      {
+        "name": "Christianity",
+        "organization": "Stanford University",
+        "type": "course",
+        "place": "100% online",
+        "level": "Beginner Level",
+        "timings": "57 hours",
+        "skills": "Python, JavaScript, TensorFlow",
+        "rating": 4.7,
+        "votesNumber": 1000,
+        "logoUrl": "static/images/Powerelectronics.jpg",
+        "providerSmallLogoUrl": "static/images/uci_small_logo.jpg",
+        "providerLogoUrl": "static/images/stanford-horizontal-logo.png"
+      },
+      {
+        "name": "Social Entrepreneurship",
+        "organization": "Stanford University",
+        "type": "course",
+        "place": "100% online",
+        "level": "Beginner Level",
+        "timings": "57 hours",
+        "skills": "Python, JavaScript, TensorFlow",
+        "rating": 4.7,
+        "votesNumber": 1000,
+        "logoUrl": "static/images/Mining_Text_Data.jpg",
+        "providerSmallLogoUrl": "static/images/peking_small_logo.png",
+        "providerLogoUrl": "static/images/stanford-horizontal-logo.png"
+      }
+    ]
+  },
+  {
+    "name": "Trending courses in Math and Logic",
+    "courses": [
+      {
+        "name": "Machine Learning",
+        "organization": "Stanford University",
+        "type": "course",
+        "place": "100% online",
+        "level": "Beginner Level",
+        "timings": "57 hours",
+        "skills": "Python, JavaScript, TensorFlow",
+        "rating": 4.7,
+        "votesNumber": 1000,
+        "logoUrl": "static/images/bird1.jpg",
+        "providerSmallLogoUrl": "static/images/stanford_small_logo.png",
+        "providerLogoUrl": "static/images/stanford-horizontal-logo.png"
+      },
+      {
+        "name": "Data Science",
+        "organization": "Stanford University",
+        "type": "course",
+        "place": "100% online",
+        "level": "Beginner Level",
+        "timings": "57 hours",
+        "skills": "Python, JavaScript, TensorFlow",
+        "rating": 4.7,
+        "votesNumber": 1000,
+        "logoUrl": "static/images/cloud-computing-logo.jpg",
+        "providerSmallLogoUrl": "static/images/illinois-small-logo.png",
+        "providerLogoUrl": "static/images/illinois-horizontal-logo.jpg"
+      },
+      {
+        "name": "Algorithms",
+        "organization": "Stanford University",
+        "type": "course",
+        "place": "100% online",
+        "level": "Beginner Level",
+        "timings": "57 hours",
+        "skills": "Python, JavaScript, TensorFlow",
+        "rating": 4.7,
+        "votesNumber": 1000,
+        "logoUrl": "static/images/AdobeStock_44161057--square.jpg",
+        "providerSmallLogoUrl": "static/images/duke-small-logo.jpg",
+        "providerLogoUrl": "static/images/stanford-horizontal-logo.png"
+      },
+      {
+        "name": "Object Oriented Programming",
+        "organization": "Stanford University",
+        "type": "course",
+        "place": "100% online",
+        "level": "Beginner Level",
+        "timings": "57 hours",
+        "skills": "Python, JavaScript, TensorFlow",
+        "rating": 3.2,
+        "votesNumber": 125,
+        "logoUrl": "static/images/Career-Development.jpg",
+        "providerSmallLogoUrl": "static/images/georgia_small-logo.jpg",
+        "providerLogoUrl": "static/images/stanford-horizontal-logo.png"
+      },
+      {
+        "name": "Deep Learning",
+        "organization": "Stanford University",
+        "type": "specialization",
+        "place": "100% online",
+        "level": "Beginner Level",
+        "timings": "57 hours",
+        "skills": "Python, JavaScript, TensorFlow",
+        "rating": 4.7,
+        "votesNumber": 1000,
+        "logoUrl": "static/images/machine-learning-logo.png",
+        "providerSmallLogoUrl": "static/images/penn_small_logo.png",
+        "providerLogoUrl": "static/images/stanford-horizontal-logo.png"
+      },
+      {
+        "name": "Web Design",
+        "organization": "Stanford University",
+        "type": "course",
+        "place": "100% online",
+        "level": "Beginner Level",
+        "timings": "57 hours",
+        "skills": "Python, JavaScript, TensorFlow",
+        "rating": 4.7,
+        "votesNumber": 1000,
+        "logoUrl": "static/images/wharton-business-foundations-logo.jpg",
+        "providerSmallLogoUrl": "static/images/deep-learning-small-logo.jpg",
+        "providerLogoUrl": "static/images/stanford-horizontal-logo.png"
+      },
+      {
+        "name": "Data Bases",
+        "organization": "Stanford University",
+        "type": "course",
+        "place": "100% online",
+        "level": "Beginner Level",
+        "timings": "57 hours",
+        "skills": "Python, JavaScript, TensorFlow",
+        "rating": 4.7,
+        "votesNumber": 1000,
+        "logoUrl": "static/images/iMBA_SLAM_Icon_EverydayLeadership.jpg",
+        "providerSmallLogoUrl": "static/images/yeil_small_logo.jpg",
+        "providerLogoUrl": "static/images/stanford-horizontal-logo.png"
+      },
+      {
+        "name": "Christianity",
+        "organization": "Stanford University",
+        "type": "course",
+        "place": "100% online",
+        "level": "Beginner Level",
+        "timings": "57 hours",
+        "skills": "Python, JavaScript, TensorFlow",
+        "rating": 4.7,
+        "votesNumber": 1000,
+        "logoUrl": "static/images/Powerelectronics.jpg",
+        "providerSmallLogoUrl": "static/images/uci_small_logo.jpg",
+        "providerLogoUrl": "static/images/stanford-horizontal-logo.png"
+      },
+      {
+        "name": "Social Entrepreneurship",
+        "organization": "Stanford University",
+        "type": "course",
+        "place": "100% online",
+        "level": "Beginner Level",
+        "timings": "57 hours",
+        "skills": "Python, JavaScript, TensorFlow",
+        "rating": 4.7,
+        "votesNumber": 1000,
+        "logoUrl": "static/images/Mining_Text_Data.jpg",
+        "providerSmallLogoUrl": "static/images/peking_small_logo.png",
+        "providerLogoUrl": "static/images/stanford-horizontal-logo.png"
       }
     ]
   }

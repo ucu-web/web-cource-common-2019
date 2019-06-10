@@ -1,4 +1,4 @@
-@logo-height: 130px;
+@logo-height: 132px;
 
 .course {
   position: relative;
@@ -6,11 +6,11 @@
   min-width: 270px;
   max-width: 270px;
   padding-top: @logo-height;
-  background-image: url(../images/machine-learning-logo.png);
   background-size: 100% @logo-height;
   background-color: white;
   background-repeat: no-repeat;
   box-shadow: 0 1px 6px rgba(31, 31, 31, 0.12), 0 1px 4px rgba(31, 31, 31, 0.12);
+  object-fit: cover;
   text-decoration: none;
   user-select: none;
 
@@ -22,6 +22,7 @@
     margin-top: 50px;
     padding: 0.75rem 1.5rem;
     -webkit-user-drag: none;
+    user-select: none;
   }
 
   &__name {
@@ -30,6 +31,7 @@
     font-size: 1.25rem;
     font-weight: normal;
     color: black;
+    user-select: none;
   }
 
   &__provider {
@@ -37,6 +39,7 @@
     font-size: 1rem;
     font-weight: 500;
     color: hsla(0, 0%, 47%, .75);
+    user-select: none;
   }
 
   &__type {

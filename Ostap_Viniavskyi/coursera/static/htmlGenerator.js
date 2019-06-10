@@ -1,37 +1,48 @@
 export const generateCourse = data => {
   const container = document.createElement("article");
   container.className = "course carousel__course";
+  container.style.backgroundImage = 'url(' + data.logoUrl + ')';
   container.innerHTML = `
     <a class="course__course-info" href="#">
         <h3 class="course__name">${data.name}</h3>
         <span class="course__provider">${data.organization}</span>
         <h4 class="course__type">${data.type}</h4>
         <span class="course__provider-logo-container">
-          <img class="course__provider-logo" src="./static/images/stanford_small_logo.png" alt="Course organizer logo">
+          <img class="course__provider-logo" alt="Course organizer logo">
         </span>
     </a>
     `;
+  const providerLogo = container.querySelector('.course__provider-logo');
+  providerLogo.src = data.providerSmallLogoUrl;
   return container;
 };
 
 export const generateCarousel = data => {
   const container = document.createElement("section");
-  container.className = "carousel layout__carousel";
+  container.className = "carousel Grid__row";
   container.innerHTML = `
-    <h2 class="carousel__header">${data.name}</h2>
-    <button class="carousel__swap-button carousel__swap-button_left"></button>
-    <div class="carousel__courses-wrapper">
-      <div class="carousel__courses-movable-wrapper"></div>
+    <div class="Grid__row">
+      <h2 class="Grid__cell_14 Grid__cell_push-1">${data.name}</h2>
     </div>
-    <button class="carousel__swap-button carousel__swap-button_right"></button>
-    <nav class="carousel__navigation"></nav>
+    <div class="Grid__row">
+      <button class="carousel__swap-button carousel__swap-button_left Grid__cell_1"></button>
+      <div class="carousel__courses-wrapper Grid__cell_14">
+        <div class="carousel__courses-movable-wrapper not-selectable"></div>
+      </div>
+      <button class="carousel__swap-button carousel__swap-button_right Grid__cell_1"></button>
+    </div>
+    <div class="Grid__row Grid__row--centered-content">
+      <nav class="carousel__navigation "></nav>
+    </div>
+    
+    
     `;
   return container;
 };
 
 export const generateCourseDetails = data => {
   const container = document.createElement("article");
-  container.className = "course-details";
+  container.className = "course-details not-selectable";
   container.innerHTML = `
     <div class="course-details__provider-logo"></div>
     <h3 class="course-details__name">${data.name}</h3>
@@ -77,6 +88,9 @@ export const generateCourseDetails = data => {
       rating--;
     });
   }
+
+  const imageContainer = container.querySelector('.course-details__provider-logo');
+  imageContainer.style.backgroundImage = 'url(' + data.providerLogoUrl + ')';
 
   return container;
 };

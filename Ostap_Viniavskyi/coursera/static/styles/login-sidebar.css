@@ -1,0 +1,37 @@
+.login-sidebar {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #ffffff;
+  z-index: 2000;
+  transition: transform 1s;
+}
+.login-sidebar__link {
+  display: flex;
+  padding: 0 1rem ;
+  height: 4rem;
+  font-size: 1.1rem;
+  text-decoration: none;
+  align-items: center;
+  justify-content: flex-start;
+  color: black;
+}
+.login-sidebar__link_bordered {
+  border-bottom: 1px solid #d9d9d9;
+}
+.login-sidebar__link_register {
+  margin: 1.5rem 1rem;
+  background-color: #2a73cc;
+  color: white;
+  font-weight: 600;
+  justify-content: center;
+}
+.login-sidebar__link_login {
+  margin: 1.5rem 1rem;
+  background-color: white;
+  color: #2a73cc;
+  font-weight: 600;
+  border: 1px solid #2a73cc;
+  justify-content: center;
+}
+/*# sourceMappingURL=login-sidebar.css.map */

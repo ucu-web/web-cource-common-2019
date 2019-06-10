@@ -3,6 +3,8 @@
   padding: 1rem 0 2.5rem;
   background-color: white;
   z-index: 500;
+  position: relative;
+  top: 1.5rem;
 }
 .explore-navigation__topic-links {
   margin: 0 1rem 1.5em;
@@ -12,7 +14,9 @@
   display: block;
   text-decoration: none;
   color: #000;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-align: left;
   padding: 0.3rem;
   background-image: url("../images/arrow-right.svg");
   background-size: 0.6rem;

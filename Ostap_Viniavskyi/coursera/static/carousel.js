@@ -1,20 +1,31 @@
 import { delegateEvent } from "./helpers";
 import { generateCarousel } from "./htmlGenerator";
 import { Course } from "./course";
+import {
+  getVisibleCoursesNumber,
+  getIndexOfFirstCourseOnPage,
+  getCourseMargin,
+  calculateOffset
+} from "./carouselHelpers";
+
+import {
+  createNavigationButtons,
+  removeNavigationButtons
+} from "./navigationButtons";
 
 const courseWidth = 270;
-const courseMinMargin = 10;
+const courseMinDistance = 10;
 
 export class Carousel {
   constructor(container, data) {
     this.container = container;
     this.data = data;
-    this.size = this.data.courses.length;
+    this.coursesNumber = this.data.courses.length;
     this.currentPage = 0;
-    this.currentX = 0;
-    this.viewSize = 4;
+    this.carouselCoordinate = 0;
+    this.visibleCoursesNumber = 0;
     this.courses = [];
-    this.render();
+    this.createCarousel();
     this.initHandlers();
   }
 
@@ -25,10 +36,10 @@ export class Carousel {
       ".carousel__courses-movable-wrapper"
     );
     this.createCourses();
-    this.setCoursesMarginsAndViewSize();
+    this.resize();
   }
 
-  render() {
+  createCarousel() {
     this.createCarouselElement();
     this.createNavigationButtonsBasedOnPagesNumber();
   }
@@ -39,101 +50,159 @@ export class Carousel {
     );
   }
 
-  getCourseMarginAndViewSize() {
-    const coursesContainerWidth = this.coursesContainer.getBoundingClientRect()
-      .width;
-    const viewSize = Math.max(
-      1,
-      Math.floor(
-        (coursesContainerWidth + courseMinMargin) /
-          (courseWidth + courseMinMargin)
-      )
+  getCourseMarginAndVisibleCoursesNumber() {
+    const containerWidth = this.coursesContainer.getBoundingClientRect().width;
+    const visibleCoursesNumber = getVisibleCoursesNumber(
+      courseWidth,
+      courseMinDistance,
+      containerWidth
     );
-    if (viewSize === 1) {
-      return {
-        courseMargin: coursesContainerWidth - viewSize * courseWidth,
-        viewSize
-      };
-    }
+
     return {
-      courseMargin:
-        (coursesContainerWidth - viewSize * courseWidth) / (viewSize - 1),
-      viewSize
+      courseMargin: getCourseMargin(
+        courseWidth,
+        visibleCoursesNumber,
+        containerWidth
+      ),
+      visibleCoursesNumber
     };
   }
 
-  setCoursesMarginsAndViewSize() {
-    const { courseMargin, viewSize } = this.getCourseMarginAndViewSize();
-    const prevFirstCourseIndex = this.getFirstCourseOnCurrentPageIndex();
+  resize() {
+    const {
+      courseMargin,
+      visibleCoursesNumber
+    } = this.getCourseMarginAndVisibleCoursesNumber();
 
-    this.viewSize = viewSize;
-    if (this.viewSize === 1) {
-      this.courses.forEach(course => {
-        course.courseElement.style.margin = "0 " + courseMargin / 2 + "px";
-      });
-    } else {
-      this.courses.forEach(course => {
-        course.courseElement.style.margin = null;
-        course.courseElement.style.marginRight = courseMargin + "px";
-      });
-    }
+    const prevFirstCourseIndex = getIndexOfFirstCourseOnPage(
+      this.currentPage,
+      this.visibleCoursesNumber,
+      this.coursesNumber
+    );
 
-    this.oneCourseScrollWidth = courseWidth + courseMargin;
-    this.pagesNumber = Math.ceil(this.size / this.viewSize);
-    this.currentPage = Math.floor(prevFirstCourseIndex / this.viewSize);
+    this.visibleCoursesNumber = visibleCoursesNumber;
+    this.courses.forEach(course => course.setMargin(courseMargin));
 
-    const currentFirstCourseIndex = this.getFirstCourseOnCurrentPageIndex();
-    this.currentX = -this.oneCourseScrollWidth * currentFirstCourseIndex;
+    this.singleCourseOffset = courseWidth + courseMargin * 2;
+    this.pagesNumber = Math.ceil(
+      this.coursesNumber / this.visibleCoursesNumber
+    );
 
-    this.translateCoursesContainer(this.currentX, 0);
+    const nextPage = Math.floor(
+      prevFirstCourseIndex / this.visibleCoursesNumber
+    );
+    this.showSlidingButton(nextPage);
+    this.currentPage = nextPage;
+    this.hideSlidingButtons();
+
+    const newFirstCourseIndex = getIndexOfFirstCourseOnPage(
+      this.currentPage,
+      this.visibleCoursesNumber,
+      this.coursesNumber
+    );
+
+    this.translateCoursesContainer(
+      -this.singleCourseOffset * newFirstCourseIndex,
+      0
+    );
   }
 
   translateCoursesContainer(targetPosition, duration) {
+    // translate container to currentPosition
     this.coursesContainer.style.transitionDuration = duration + "s";
     this.coursesContainer.style.transform =
       "translateX(" + targetPosition + "px)";
-  }
-
-  getFirstCourseOnCurrentPageIndex() {
-    return (this.currentPage + 1) * this.viewSize <= this.size
-      ? this.currentPage * this.viewSize
-      : this.size - this.viewSize;
+    // remember current position
+    this.carouselCoordinate = targetPosition;
   }
 
   showNextPage(direction) {
-    const currentFirstCourseIndex = this.getFirstCourseOnCurrentPageIndex();
+    this.showSlidingButton(this.currentPage + direction);
+    const currentFirstCourseIndex = getIndexOfFirstCourseOnPage(
+      this.currentPage,
+      this.visibleCoursesNumber,
+      this.coursesNumber
+    );
     this.currentPage += direction;
-    const nextFirstCourseIndex = this.getFirstCourseOnCurrentPageIndex();
-    const offset =
-      (nextFirstCourseIndex - currentFirstCourseIndex) *
-      this.oneCourseScrollWidth;
-    this.translateCoursesContainer(this.currentX - offset, 1);
-    this.currentX -= offset;
-    this.removeNavigationButtons();
-    this.createNavigationButtonsBasedOnPagesNumber();
+    const nextFirstCourseIndex = getIndexOfFirstCourseOnPage(
+      this.currentPage,
+      this.visibleCoursesNumber,
+      this.coursesNumber
+    );
+    const offset = calculateOffset(
+      currentFirstCourseIndex,
+      nextFirstCourseIndex,
+      this.singleCourseOffset
+    );
+    this.translateCoursesContainer(this.carouselCoordinate - offset, 1);
+    this.updateNavigationButtons();
+    this.hideSlidingButtons();
+  }
+
+  hideSlidingButtons() {
+    let button;
+    if (this.currentPage === 0) {
+      button = this.carouselElement.querySelector(
+        ".carousel__swap-button_left"
+      );
+      const coursesOuterContainer = this.carouselElement.querySelector(
+        ".carousel__courses-wrapper"
+      );
+      coursesOuterContainer.classList.add("Grid__cell_push-1");
+    } else if (this.currentPage === this.getPagesNumber() - 1) {
+      button = this.carouselElement.querySelector(
+        ".carousel__swap-button_right"
+      );
+    } else {
+      return;
+    }
+    button.style.display = "none";
+  }
+
+  showSlidingButton(nextPage) {
+    let button;
+    if (this.currentPage === 0 && nextPage > this.currentPage) {
+      button = this.carouselElement.querySelector(
+        ".carousel__swap-button_left"
+      );
+      const coursesOuterContainer = this.carouselElement.querySelector(
+        ".carousel__courses-wrapper"
+      );
+      coursesOuterContainer.classList.remove("Grid__cell_push-1");
+    } else if (
+      this.currentPage === this.getPagesNumber() - 1 &&
+      nextPage < this.currentPage
+    ) {
+      button = this.carouselElement.querySelector(
+        ".carousel__swap-button_right"
+      );
+    } else {
+      return;
+    }
+    button.style.display = null;
   }
 
   removeNavigationButtons() {
     const buttonContainer = this.carouselElement.querySelector(
       ".carousel__navigation"
     );
-    while (buttonContainer.lastChild) {
-      buttonContainer.removeChild(buttonContainer.lastChild);
-    }
+    removeNavigationButtons(buttonContainer);
   }
 
   createNavigationButtonsBasedOnPagesNumber() {
     const buttonContainer = this.carouselElement.querySelector(
       ".carousel__navigation"
     );
-    for (let i = 0; i < this.pagesNumber; i++) {
-      const button = document.createElement("button");
-      button.className = "carousel__navigation-button";
-      buttonContainer.appendChild(button);
-    }
-    buttonContainer.childNodes[this.currentPage].classList.add(
-      "carousel__navigation-button_active"
+    createNavigationButtons(
+      this.pagesNumber,
+      this.currentPage,
+      buttonContainer
     );
+  }
+
+  updateNavigationButtons() {
+    this.removeNavigationButtons();
+    this.createNavigationButtonsBasedOnPagesNumber();
   }
 
   spinRight() {
@@ -149,7 +218,7 @@ export class Carousel {
   }
 
   getPagesNumber() {
-    return Math.ceil(this.size / this.viewSize);
+    return Math.ceil(this.coursesNumber / this.visibleCoursesNumber);
   }
 
   initHandlers() {
@@ -171,39 +240,42 @@ export class Carousel {
       }
     );
 
-    delegateEvent(
-      this.carouselElement,
-      ".carousel__course",
-      "mousedown",
-      event => {
-        const startPointXCoordinate = event.clientX;
-        const threshold = 20;
-        const unsubscribe = delegateEvent(
-          this.carouselElement,
-          ".carousel__courses-movable-wrapper",
-          "mousemove",
-          event => {
-            if (Math.abs(event.clientX - startPointXCoordinate) > threshold) {
-              Math.sign(event.clientX - startPointXCoordinate) < 0
-                ? this.spinRight()
-                : this.spinLeft();
-              unsubscribe();
-            }
-          },
-          true
-        );
-      },
-      true
-    );
-
     this.addResizeHandler();
+    this.addMouseBehaviour();
+  }
+
+  addMouseBehaviour() {
+    this.startPointXCoordinate = 0;
+    this.locked = false;
+    this.threshold = 20;
+
+    this.coursesContainer.addEventListener("mousemove", event => {
+      if (this.locked) {
+        if (
+          Math.abs(event.clientX - this.startPointXCoordinate) > this.threshold
+        ) {
+          Math.sign(event.clientX - this.startPointXCoordinate) < 0
+            ? this.spinRight()
+            : this.spinLeft();
+          this.locked = false;
+        }
+      }
+    });
+
+    this.coursesContainer.addEventListener("mousedown", ev => {
+      this.locked = true;
+      this.startPointXCoordinate = ev.clientX;
+    });
+
+    this.coursesContainer.addEventListener("mouseup", () => {
+      this.locked = false;
+    });
   }
 
   addResizeHandler() {
     window.addEventListener("resize", () => {
-      this.setCoursesMarginsAndViewSize();
-      this.removeNavigationButtons();
-      this.createNavigationButtonsBasedOnPagesNumber();
+      this.resize();
+      this.updateNavigationButtons();
     });
   }
 }

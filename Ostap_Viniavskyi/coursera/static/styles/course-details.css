@@ -4,10 +4,12 @@
   background-color: #ffffff;
   box-shadow: 0 3px 10px rgba(31, 31, 31, 0.16), 0 3px 10px rgba(31, 31, 31, 0.23);
   z-index: 500;
+  position: fixed;
 }
 .course-details__provider-logo {
   height: 3rem;
-  background: url("../images/stanford-horizontal-logo.png") no-repeat 0.5rem center;
+  background-repeat: no-repeat;
+  background-position: 0.5rem center;
   margin-bottom: 0.7rem;
 }
 .course-details__name {

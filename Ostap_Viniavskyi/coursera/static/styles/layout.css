@@ -3,16 +3,4 @@
   top: 0;
   z-index: 1000;
 }
-.layout__carousel {
-  margin: 1rem auto 1rem;
-  width: 95%;
-}
-.layout__offers {
-  margin: 1rem auto 1rem;
-  width: 95%;
-}
-.layout__feedback {
-  margin: 4rem auto 4rem;
-  width: 95%;
-}
 /*# sourceMappingURL=layout.css.map */
