@@ -1,3 +1,3 @@
-import { TetrisGame } from "./tetris";
+import Tetris from "./Tetris";
 
-const tetris = new TetrisGame(document.querySelector(".tetris"));
+new Tetris(document.querySelector(".tetris"));

@@ -9,5 +9,10 @@ module.exports = {
         filename: "bundle.js"
     },
     module: {
+    },
+    devServer: {
+        index:"./index.html",
+        compress: true,
+        port: 9000
     }
 };
