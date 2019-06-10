@@ -1,7 +1,6 @@
 import {drawCircle} from "./drawCircle.js"
 import {connectPoints} from "./connectPoints"
 import {drawBezierCurve} from "./drawBezierCurve"
-import {drawTangents} from "./drawTangents"
 import {select, mouse} from "d3"
 
 let div = select("body").append("div").attr("class", "bezierCurves");
@@ -26,7 +25,6 @@ function createBezierCurves(div) {
 
             div.call(connectPoints, points)
                 .call(drawBezierCurve, points, time)
-                .call(drawTangents, points, time);
         });
 
     svg.append("g").attr("class", "tangents");
@@ -34,8 +32,7 @@ function createBezierCurves(div) {
     div.append("div").attr("class", "xForm").style("font-size", 14);
     div.append("div").attr("class", "yForm").style("font-size", 14);
 
-    var tLabel = svg
-        .append("text")
+    svg.append("text")
         .attr("class", "timeLabel")
         .attr("x", w - padding)
         .attr("y", h - padding)
