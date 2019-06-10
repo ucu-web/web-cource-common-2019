@@ -11,28 +11,31 @@ export function drawCircles(svg, points = []) {
 
     svg.selectAll(".bezier-field__point").remove();
 
-    for (let p = 0; p < points.length; p++) {
-        let point = svg.append("g").attr("class", "bezier-field__point point");
+    let svg_points = svg
+        .selectAll(".bezier-field__point")
+        .data(points)
+        .enter()
+        .append("g")
+        .attr("class", "bezier-field__point");
 
-        dragHandler(point);
+    svg_points.append("circle")
+        .attr("class", "point__circle")
+        .attr("cx", d => d[0])
+        .attr("cy", d => d[1]);
 
-        point.append("circle")
-            .attr("class", "point__circle")
-            .attr("cx", points[p][0])
-            .attr("cy", points[p][1]);
+    svg_points.append("text")
+        .attr("class", "point__number")
+        .attr("x", d => d[0] + 10)
+        .attr("y", d => d[1])
+        .text((d, i) => "P" + (i + 1));
 
-        point.append("text")
-            .attr("class", "point__number")
-            .attr("x", points[p][0] + 10)
-            .attr("y", points[p][1])
-            .text("P" + (p + 1));
+    svg_points.append("text")
+        .attr("class", "point__coordinates")
+        .attr("x", d => d[0] + 10)
+        .attr("y", d => d[1] + 15)
+        .style("font-size", 10)
+        .text( d => "(" + d + ")");
 
-        point.append("text")
-            .attr("class", "point__coordinates")
-            .attr("x", points[p][0] + 10)
-            .attr("y", points[p][1] + 15)
-            .style("font-size", 10)
-            .text("(" + points[p] + ")");
-    }
+    dragHandler(svg_points);
 }
 
