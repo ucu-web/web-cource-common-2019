@@ -1,0 +1,77 @@
+
+@media screen and (max-width: 1000px) {
+  .stats-and-remainders{
+    &__wrapper{
+      flex-direction: column;
+    }
+    &__header{
+      text-align: center;
+    }
+  }
+  .course-content-regular{
+    max-height: 300px;
+  }
+  .course-big-block{
+    margin-right: 0 ;
+    &__wrapper{
+      flex-direction: column;
+    }
+  }
+  .stats-block{
+    padding-top: 50px;
+    text-align: center;
+    width: 100%;
+  }
+  .course-cart{
+    width: 100% !important;
+  }
+  .nav-bar{
+    &__headers-content{
+      display: none;
+    }
+    &__headers-logo{
+      display: none;
+      &-small{
+        display: block ;
+      }
+    }
+    &__profile-user{
+      max-width: 50px ;
+    }
+    &__form{
+      flex: 1;
+    }
+    &__navigation{
+      flex: 1;
+    }
+    &__input{
+      width: 100% ;
+    }
+    &__feadback-button{
+      display: none ;
+    }
+  }
+  .profile__choice-panel{
+    display: none ;
+  }
+  .course-list-cart__time_script{
+    display: none ;
+  }
+  .publications{
+    &__header{
+      text-align: center;
+      flex-direction: column;
+
+    }
+    &__button{
+      margin-top: 10px;
+    }
+  }
+  .input-block__label{
+    flex-basis: 70px ;
+  }
+  .profile__tab-load-file-wrapper{
+    display: none ;
+  }
+
+}

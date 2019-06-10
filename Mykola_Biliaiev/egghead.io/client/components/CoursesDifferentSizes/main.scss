@@ -1,0 +1,43 @@
+.courses-differ-sizes {
+  background-color: #141618;
+  color: #fff;
+  padding-top: 4rem;
+  padding-bottom: 10rem;
+
+  &__heading{
+    font-weight: 400;
+    text-align: center;
+    font-size: 2.25rem;
+    padding: 3rem 0;
+  }
+  &__wrapper {
+    max-width: 83.75rem;
+    margin: auto;
+    box-sizing: border-box;
+  }
+
+  &__double-cart-wrapper {
+    display: flex;
+    height: 500px;
+    justify-content: space-between;
+    flex-direction: column;
+
+    &-inline {
+      display: inline-block;
+      padding: 1rem 1rem;
+      box-sizing: border-box;
+      vertical-align: top;
+      width: 25%;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .courses-differ-sizes__double-cart-wrapper-inline{
+    width: 100%;
+  }
+  .courses-differ-sizes__wrapper{
+    max-width: none;
+    padding: 0;
+  }
+}

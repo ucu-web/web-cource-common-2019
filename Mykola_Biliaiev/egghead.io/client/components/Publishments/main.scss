@@ -1,0 +1,46 @@
+.publications {
+  background-color: #f4f7f9;
+  &__wrapper {
+    padding: 4rem 1rem 2rem;
+    box-sizing: border-box;
+    max-width: 83.75rem;
+    margin: auto;
+  }
+  &__list{
+    max-width: 83.75rem;
+    margin: auto;
+  }
+  &__header-label {
+    display: flex;
+    flex-direction: column;
+  }
+  &__header-label-title {
+    color: #141618;
+    font-size: 2.25rem;
+    padding-bottom: 10px;
+    font-weight: 400;
+  }
+  &__header-label-sub-title {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 1rem;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__button {
+    padding: 16px 24px;
+    border: 1px #316aff;
+    background-color: #316aff;
+    color: #fff;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.875rem;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+}

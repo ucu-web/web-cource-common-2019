@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --watch",
-    "start": "webpack;node ./backend/node_express/server.js"
+    "watch": "webpack --watch",
+    "populate": "node server/helpers/populate.js",
+    "server": "node ./server/server.js",
+    "start": "concurrently --kill-others \"npm run watch\" \"npm run server\""
   },
   "keywords": [],
   "author": "",
@@ -22,13 +24,21 @@
     "webpack-dev-server": "^3.3.1"
   },
   "dependencies": {
+    "bcrypt": "^3.0.6",
     "body-parser": "^1.19.0",
+    "concurrently": "^4.1.0",
+    "crypto": "^1.0.1",
+    "dotenv": "^8.0.0",
     "express": "^4.16.4",
     "express-jwt": "^5.3.1",
+    "faker": "^4.1.0",
     "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^2.2.0",
     "mongodb": "^3.2.6",
     "mongoose": "^5.5.12",
     "mysql": "^2.17.1",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
     "pug": "^2.0.3"
   }
 }
