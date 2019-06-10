@@ -1,0 +1,123 @@
+.Post {
+    border-radius: 8px;
+    position: absolute;
+    width: 275px;
+}
+
+.Post:hover {
+    background-color: #efefef;
+    cursor: zoom-in;
+}
+
+.Post:hover .Post__form, .Post:hover .Link__container {
+    display: flex;
+}
+
+.Post__image_container {
+    filter: none;
+    -webkit-filter: brightness(100%);
+    max-width: 93%;
+    padding-left: 9px;
+    padding-top: 7px;
+}
+
+.Post__form {
+    width: 90%;
+    background-color: transparent;
+    display: none;
+    position: absolute;
+    top: 1em;
+    left: 6.5%;
+    height: 2.6em;
+    text-align: center;
+}
+
+.Post__button_select {
+    width: 70%;
+    height: 100%;
+    border-radius: 8px 0 0 8px;
+    color: #333;
+    background-color: #fff;
+}
+
+.Post__button_select:hover, .Post__button_save:hover, .Footer__button:hover {
+    filter: brightness(90%);
+}
+
+.Post__button_save {
+    border-radius: 0 8px 8px 0;
+    width: 30%;
+    color: #fff;
+    background-color: #e60023;
+}
+
+.Post__image {
+    border-radius: 8px;
+    background: #F1F1FA;
+    width: 256px;
+    display: flex;
+    border: 0;
+}
+
+.Post__image_container:hover .Post__image {
+    filter: none;
+    -webkit-filter: brightness(85%);
+}
+
+.Post__title {
+    padding-left: 1em;
+
+}
+
+
+.Post__title_container {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    min-height: 2.5em;
+    align-items: center;
+}
+
+
+.Post__link {
+    color: #fff;
+    fill: #fff;
+    background-color: rgba(51, 51, 51, .8);
+    padding: .5em;
+
+}
+
+.Post__link:hover {
+    background-color: #333;
+}
+
+.Post__link__svg {
+    height: 1em;
+}
+
+.Post__link-container {
+    display: none;
+    width: 87%;
+    position: absolute;
+    bottom: 1em;
+    left: 1.1em;
+    height: 2em;
+    justify-content: space-between;
+}
+
+.Post__button_more-info {
+    height: 1.5em;
+    width: 1.5em;
+    background-color: transparent;
+    background-image: url(../images/icons/dots.svg);
+}
+
+.Post__button_more-info:hover {
+    filter: brightness(80%);
+    background-color: rgba(0, 0, 0, .06);
+}
+.Post__button_more-info:focus{
+    outline: none;
+    box-shadow:0 0 0 4px rgba(0, 132, 255, .5);
+}
+

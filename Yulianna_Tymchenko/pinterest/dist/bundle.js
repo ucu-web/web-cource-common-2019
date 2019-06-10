@@ -81,96 +81,96 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./static/index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./src/styles/button.css":
-/*!*********************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./src/styles/button.css ***!
-  \*********************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js!./static/styles/button.css":
+/*!************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./static/styles/button.css ***!
+  \************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \".Button {\\r\\n    display: flex;\\r\\n    align-items: center;\\r\\n    border-radius: 999px;\\r\\n    border: none;\\r\\n}\\r\\n\\r\\n\\r\\n\\r\\n.Button__svg {\\r\\n    height: 24px;\\r\\n    fill: #8e8e8e;\\r\\n}\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/styles/button.css?./node_modules/css-loader/dist/cjs.js");
+eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \".Button {\\r\\n    display: flex;\\r\\n    align-items: center;\\r\\n    border-radius: 999px;\\r\\n    border: none;\\r\\n}\\r\\n@media all and (max-width: 720px){\\r\\n    .Button {\\r\\n        display: flex;}\\r\\n}\\r\\n\\r\\n\\r\\n    .Button__svg {\\r\\n    height: 24px;\\r\\n    fill: #8e8e8e;\\r\\n}\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./static/styles/button.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./src/styles/common.css":
-/*!*********************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./src/styles/common.css ***!
-  \*********************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js!./static/styles/common.css":
+/*!************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./static/styles/common.css ***!
+  \************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"body {\\r\\n    margin: 0;\\r\\n    padding: 0;\\r\\n    font-weight: 700;\\r\\n    font-size: 1rem;\\r\\n    text-decoration: none;\\r\\n    letter-spacing: -.4px;\\r\\n    font-family: -apple-system, BlinkMacSystemFont, \\\"Segoe UI\\\", \\\"Roboto Oxygen-Sans\\\", Ubuntu, Cantarell, \\\"“Fira Sans”\\\", \\\"“Droid Sans”\\\", \\\"Helvetica Neue\\\", Helvetica, \\\"ヒラギノ角ゴ Pro W3\\\", \\\"Hiragino Kaku Gothic Pro\\\", メイリオ, Meiryo, \\\"ＭＳ Ｐゴシック\\\", Arial, sans-serif, \\\"Apple Color Emoji\\\", \\\"Segoe UI Emoji\\\", \\\"Segoe UI Symbol\\\";\\r\\n}\\r\\n\\r\\nh4 {\\r\\n    margin: 0;\\r\\n    padding: 0;\\r\\n}\\r\\n.Form {\\r\\n    display: flex;\\r\\n    align-items: center;\\r\\n    margin-left: 5px;\\r\\n    margin-right: 5px;\\r\\n}\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/styles/common.css?./node_modules/css-loader/dist/cjs.js");
+eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"body {\\r\\n    margin: 0;\\r\\n    padding: 0;\\r\\n    font-weight: 700;\\r\\n    font-size: 1rem;\\r\\n    text-decoration: none;\\r\\n    letter-spacing: -.4px;\\r\\n    font-family: -apple-system, BlinkMacSystemFont, \\\"Segoe UI\\\", \\\"Roboto Oxygen-Sans\\\", Ubuntu, Cantarell, \\\"“Fira Sans”\\\", \\\"“Droid Sans”\\\", \\\"Helvetica Neue\\\", Helvetica, \\\"ヒラギノ角ゴ Pro W3\\\", \\\"Hiragino Kaku Gothic Pro\\\", メイリオ, Meiryo, \\\"ＭＳ Ｐゴシック\\\", Arial, sans-serif, \\\"Apple Color Emoji\\\", \\\"Segoe UI Emoji\\\", \\\"Segoe UI Symbol\\\";\\r\\n}\\r\\n\\r\\nh4 {\\r\\n    margin: 0;\\r\\n    padding: 0;\\r\\n}\\r\\n.Form {\\r\\n    display: flex;\\r\\n    align-items: center;\\r\\n    margin-left: 5px;\\r\\n    margin-right: 5px;\\r\\n}\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./static/styles/common.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./src/styles/footer.css":
-/*!*********************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./src/styles/footer.css ***!
-  \*********************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js!./static/styles/footer.css":
+/*!************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./static/styles/footer.css ***!
+  \************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \".Footer {\\r\\n    width: 40px;\\r\\n    display: block;\\r\\n    position: fixed;\\r\\n    bottom: 0;\\r\\n    right: 37px;\\r\\n    z-index: 99;\\r\\n    cursor: pointer;\\r\\n    border-radius: 4px;\\r\\n    padding: 0;\\r\\n}\\r\\n\\r\\n.Footer__button__svg {\\r\\n    width: 1vw;\\r\\n    height: 1vw;\\r\\n    fill: #333;\\r\\n    padding: .75vw;\\r\\n}\\r\\n\\r\\n.Footer__button {\\r\\n    font-size: 11px;\\r\\n    background-color: #fff;\\r\\n    color: #333;\\r\\n    box-shadow: 0 2px 0 0 rgba(0, 0, 0, .1), 0 0 0 1px rgba(0, 0, 0, .04);\\r\\n    margin: 0 0 5px 20px;\\r\\n    padding: 1px;\\r\\n}\\r\\n\\r\\n.Footer__button_privacy {\\r\\n    font-size: 11px;\\r\\n    width: 30px;\\r\\n    text-decoration: none;\\r\\n    font-weight: lighter;\\r\\n    border-radius: 8px;\\r\\n    color: #333;\\r\\n    background-color: #fff;\\r\\n    padding: 0 5px;\\r\\n}\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/styles/footer.css?./node_modules/css-loader/dist/cjs.js");
+eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \".Footer {\\r\\n    width: 40px;\\r\\n    display: block;\\r\\n    position: fixed;\\r\\n    bottom: 0;\\r\\n    right: 37px;\\r\\n    z-index: 99;\\r\\n    cursor: pointer;\\r\\n    border-radius: 4px;\\r\\n    padding: 0;\\r\\n}\\r\\n\\r\\n.Footer__button__svg {\\r\\n    width: 1vw;\\r\\n    height: 1vw;\\r\\n    fill: #333;\\r\\n    padding: .75vw;\\r\\n}\\r\\n\\r\\n.Footer__button {\\r\\n    font-size: 11px;\\r\\n    background-color: #fff;\\r\\n    color: #333;\\r\\n    box-shadow: 0 2px 0 0 rgba(0, 0, 0, .1), 0 0 0 1px rgba(0, 0, 0, .04);\\r\\n    margin: 0 0 5px 20px;\\r\\n    padding: 1px;\\r\\n}\\r\\n\\r\\n.Footer__button_privacy {\\r\\n    font-size: 11px;\\r\\n    width: 30px;\\r\\n    text-decoration: none;\\r\\n    font-weight: lighter;\\r\\n    border-radius: 8px;\\r\\n    color: #333;\\r\\n    background-color: #fff;\\r\\n    padding: 0 5px;\\r\\n}\\r\\n\\r\\n.Footer__button_privacy_show{\\r\\ntransform: translateY(0);\\r\\ntransition-duration: .85s;\\r\\ntransition-timing-function: cubic-bezier(0.19, 1.32, 0.48, 1);\\r\\n}\\r\\n\\r\\n.Footer__button_privacy_hide {\\r\\n    transform: translateY(22px);\\r\\n    transition-duration: .85s;\\r\\n    transition-timing-function: cubic-bezier(0.19, 1.32, 0.48, 1);\\r\\n}\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./static/styles/footer.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./src/styles/header.css":
-/*!*********************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./src/styles/header.css ***!
-  \*********************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js!./static/styles/header.css":
+/*!************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./static/styles/header.css ***!
+  \************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"\\r\\n.Header__search-form {\\r\\n    border: none;\\r\\n    background-color: #efefef;\\r\\n    height: 60%;\\r\\n    border-radius: 7px;\\r\\n    width: 90%;\\r\\n}\\r\\n\\r\\n@media all and (max-width: 1367px) {\\r\\n    .Header__search-form {\\r\\n        width: 62%;\\r\\n    }\\r\\n}\\r\\n\\r\\n.Header__search-form__svg {\\r\\n    fill: #8e8e8e;\\r\\n    height: 20px;\\r\\n    padding: 10px;\\r\\n}\\r\\n\\r\\n.Header__search-form__input {\\r\\n    color: #333;\\r\\n    font-size: 1rem;\\r\\n    font-weight: 700;\\r\\n    height: 100%;\\r\\n    width: 98%;\\r\\n    background: transparent;\\r\\n    border: none;\\r\\n}\\r\\n\\r\\n.Header__nav-button {\\r\\n    background: none;\\r\\n    box-sizing: border-box;\\r\\n    height: 60%;\\r\\n    padding-left: 0.6em;\\r\\n    padding-right: 0.6em;\\r\\n}\\r\\n\\r\\n.Header__nav-link {\\r\\n    box-sizing: border-box;\\r\\n    padding: 10px;\\r\\n    color: #8e8e8e;\\r\\n}\\r\\n\\r\\n.Header__link__image {\\r\\n    height: auto;\\r\\n    max-width: 23px;\\r\\n    border-radius: 100%;\\r\\n    margin-right: 0.4em;\\r\\n}\\r\\n\\r\\n.Header__nav-link:hover {\\r\\n    background-color: #efefef;\\r\\n}\\r\\n\\r\\n.Header__nav-link_active {\\r\\n    color: #333;\\r\\n}\\r\\n\\r\\n.Header__nav-button:hover {\\r\\n    background-color: #efefef;\\r\\n}\\r\\n\\r\\n\\r\\n\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/styles/header.css?./node_modules/css-loader/dist/cjs.js");
+eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Imports\nvar urlEscape = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/url-escape.js */ \"./node_modules/css-loader/dist/runtime/url-escape.js\");\nvar ___CSS_LOADER_URL___0___ = urlEscape(__webpack_require__(/*! ../images/icons/cancel.svg */ \"./static/images/icons/cancel.svg\"));\n\n// Module\nexports.push([module.i, \".Header {\\r\\n    position: fixed;\\r\\n    z-index: 99;\\r\\n    width: 98%;\\r\\n    background: white;\\r\\n    left: 0;\\r\\n    top: 0;\\r\\n}\\r\\n\\r\\n.Header__search-form {\\r\\n    border: none;\\r\\n    background-color: #efefef;\\r\\n    height: 60%;\\r\\n    border-radius: 7px;\\r\\n    width: 90%;\\r\\n    min-width: 140px;\\r\\n\\r\\n}\\r\\n\\r\\n@media all and (max-width: 1367px) {\\r\\n    .Header__search-form {\\r\\n        width: 62%;\\r\\n    }\\r\\n}\\r\\n\\r\\n\\r\\n\\r\\n.Header__search-form__svg {\\r\\n    fill: #8e8e8e;\\r\\n    height: 20px;\\r\\n    padding: 10px 3px 10px 10px;\\r\\n}\\r\\n\\r\\n.Header__search-form__input {\\r\\n    color: #333;\\r\\n    font-size: 1rem;\\r\\n    font-weight: 700;\\r\\n    height: 100%;\\r\\n    width: 88%;\\r\\n    background: transparent;\\r\\n    border: none;\\r\\n    padding-right: 0.5em;\\r\\n}\\r\\n\\r\\n.Header__search-form__input::-webkit-search-cancel-button {\\r\\n    display: none;\\r\\n}\\r\\n\\r\\n.Header__search-form__input-reset {\\r\\n    position: relative;\\r\\n    right: 0.2em;\\r\\n    height: 1.5em;\\r\\n    visibility: visible;\\r\\n    background: transparent;\\r\\n\\r\\n}\\r\\n\\r\\n.Header__search-form__input-reset__svg {\\r\\n    width: 12px;\\r\\n    height: 12px;\\r\\n    background: url(\" + ___CSS_LOADER_URL___0___ + \") no-repeat;\\r\\n    background-size: 100%;\\r\\n    border: none;\\r\\n}\\r\\n\\r\\n\\r\\n.Header__search-form__input:focus {\\r\\n    outline: none;\\r\\n}\\r\\n\\r\\n\\r\\n.Header__nav-button {\\r\\n    background: none;\\r\\n    box-sizing: border-box;\\r\\n    height: 60%;\\r\\n    padding-left: 0.6em;\\r\\n    padding-right: 0.6em;\\r\\n}\\r\\n\\r\\n.Header__nav-button:focus, .Header__nav-link:focus {\\r\\n    outline: none;\\r\\n    box-shadow: 0 0 0 4px rgba(0, 132, 255, .5);\\r\\n}\\r\\n\\r\\n.Header__nav-link {\\r\\n    box-sizing: border-box;\\r\\n    padding: 10px;\\r\\n    color: #8e8e8e;\\r\\n}\\r\\n\\r\\n.Header__link__image {\\r\\n    height: auto;\\r\\n    max-width: 23px;\\r\\n    border-radius: 100%;\\r\\n    margin-right: 0.4em;\\r\\n}\\r\\n\\r\\n.Header__nav-link:hover {\\r\\n    background-color: #efefef;\\r\\n}\\r\\n\\r\\n.Header__search-form__input-reset:hover {\\r\\n    background: #d8d8d8;\\r\\n}\\r\\n\\r\\n\\r\\n.Header__search-form__input:placeholder-shown + .Header__search-form__input-reset {\\r\\n    visibility: hidden;\\r\\n}\\r\\n\\r\\n.Header__nav-link_active {\\r\\n    color: #333;\\r\\n}\\r\\n\\r\\n.Header__nav-button:hover {\\r\\n    background-color: #efefef;\\r\\n\\r\\n}\\r\\n\\r\\n.Header__search-form__input-reset__svg:focus {\\r\\n    outline: none;\\r\\n}\\r\\n\\r\\n@media all and (max-width: 720px){\\r\\n    .Header__nav-link-name {\\r\\n        display: none;}\\r\\n    .Header__link__image{\\r\\n        margin: 0;\\r\\n    }\\r\\n\\r\\n}\\r\\n\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./static/styles/header.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./src/styles/layout.css":
-/*!*********************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./src/styles/layout.css ***!
-  \*********************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js!./static/styles/layout.css":
+/*!************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./static/styles/layout.css ***!
+  \************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \".Layout__header {\\r\\n  padding-right: 1em;\\r\\n  padding-left: 1em;\\r\\n  display: flex;\\r\\n  height: 64px;\\r\\n  align-items: center;\\r\\n  justify-content: space-around;\\r\\n  border-bottom: 1px solid #efefef;\\r\\n}\\r\\n\\r\\n.Layout__main-block__home {\\r\\n  display: grid;\\r\\n  grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));\\r\\n  grid-gap: 10px;\\r\\n  margin: 15px 25px 10px;\\r\\n}\\r\\n\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/styles/layout.css?./node_modules/css-loader/dist/cjs.js");
+eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \".Layout__header {\\r\\n  padding-right: 1em;\\r\\n  padding-left: 1em;\\r\\n  display: flex;\\r\\n  height: 64px;\\r\\n  align-items: center;\\r\\n  justify-content: space-around;\\r\\n\\r\\n}\\r\\n\\r\\n/*.Layout__main-block__home {*/\\r\\n  /*display: grid;*/\\r\\n  /*grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));*/\\r\\n  /*grid-gap: 10px;*/\\r\\n  /*margin: 85px 25px 10px;*/\\r\\n/*}*/\\r\\n\\r\\n\\r\\n.Column{\\r\\n  display: inline-block;\\r\\n  width: 245px;\\r\\n}\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./static/styles/layout.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./src/styles/link.css":
-/*!*******************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./src/styles/link.css ***!
-  \*******************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js!./static/styles/link.css":
+/*!**********************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./static/styles/link.css ***!
+  \**********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \".Link {\\r\\n    display: flex;\\r\\n    align-items: center;\\r\\n    border-radius: 999px;\\r\\n    text-decoration: none;\\r\\n}\\r\\n\\r\\n\\r\\n\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/styles/link.css?./node_modules/css-loader/dist/cjs.js");
+eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \".Link {\\r\\n    display: flex;\\r\\n    align-items: center;\\r\\n    border-radius: 999px;\\r\\n    text-decoration: none;\\r\\n}\\r\\n\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./static/styles/link.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./src/styles/logo.css":
-/*!*******************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./src/styles/logo.css ***!
-  \*******************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js!./static/styles/logo.css":
+/*!**********************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./static/styles/logo.css ***!
+  \**********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \".Logo {\\r\\n    display: flex;\\r\\n    align-items: center;\\r\\n    cursor: pointer;\\r\\n}\\r\\n\\r\\n.Logo__link {\\r\\n    border-radius: 999px;\\r\\n    padding: 0.5em 0.5em 0.2em 0.4em;\\r\\n}\\r\\n\\r\\n.Logo__svg {\\r\\n    height: 1.75em;\\r\\n    width: 1.75em;\\r\\n    fill: #e60023;\\r\\n}\\r\\n\\r\\n.Logo__link:hover {\\r\\n    background-color: #efefef;\\r\\n}\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/styles/logo.css?./node_modules/css-loader/dist/cjs.js");
+eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \".Logo {\\r\\n    display: flex;\\r\\n    align-items: center;\\r\\n    cursor: pointer;\\r\\n}\\r\\n\\r\\n.Logo__link {\\r\\n    border-radius: 999px;\\r\\n    padding: 0.5em 0.5em 0.2em 0.4em;\\r\\n}\\r\\n\\r\\n.Logo__svg {\\r\\n    height: 1.75em;\\r\\n    width: 1.75em;\\r\\n    fill: #e60023;\\r\\n}\\r\\n\\r\\n.Logo__link:hover {\\r\\n    background-color: #efefef;\\r\\n}\\r\\n\\r\\n.Logo:focus{\\r\\n    border-radius: 999px;\\r\\n}\\r\\n\\r\\n.Logo__link:focus, .Logo:focus{\\r\\n    outline: none;\\r\\n    box-shadow:0 0 0 4px rgba(0, 132, 255, .5);\\r\\n}\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./static/styles/logo.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./src/styles/post.css":
-/*!*******************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./src/styles/post.css ***!
-  \*******************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js!./static/styles/post.css":
+/*!**********************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./static/styles/post.css ***!
+  \**********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Imports\nvar urlEscape = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/url-escape.js */ \"./node_modules/css-loader/dist/runtime/url-escape.js\");\nvar ___CSS_LOADER_URL___0___ = urlEscape(__webpack_require__(/*! ../images/icons/dots.svg */ \"./src/images/icons/dots.svg\"));\n\n// Module\nexports.push([module.i, \".Post {\\r\\n    border-radius: 15px;\\r\\n}\\r\\n\\r\\n.Post:hover {\\r\\n    background-color: #efefef;\\r\\n}\\r\\n\\r\\n.Post:hover .Post__form, .Post:hover .Link__container {\\r\\n    display: flex;\\r\\n}\\r\\n\\r\\n.Post__image_container {\\r\\n    filter: none;\\r\\n    -webkit-filter: brightness(100%);\\r\\n    max-width: 93%;\\r\\n    padding-left: 9px;\\r\\n    padding-top: 7px;\\r\\n}\\r\\n\\r\\n.Post__form {\\r\\n    width: 90%;\\r\\n    background-color: transparent;\\r\\n    display: none;\\r\\n    position: absolute;\\r\\n    top: 1em;\\r\\n    left: 6.5%;\\r\\n    height: 2.6em;\\r\\n    text-align: center;\\r\\n}\\r\\n\\r\\n.Post__button_select {\\r\\n    width: 70%;\\r\\n    height: 100%;\\r\\n    border-radius: 8px 0 0 8px;\\r\\n    color: #333;\\r\\n    background-color: #fff;\\r\\n}\\r\\n\\r\\n.Post__button_select:hover, .Post__button_save:hover, .Footer__button:hover {\\r\\n    filter: brightness(90%);\\r\\n}\\r\\n\\r\\n.Post__button_save {\\r\\n    border-radius: 0 8px 8px 0;\\r\\n    width: 30%;\\r\\n    color: #fff;\\r\\n    background-color: #e60023;\\r\\n}\\r\\n\\r\\n.Post__image {\\r\\n    width: 100%;\\r\\n    border-radius: 15px;\\r\\n}\\r\\n\\r\\n.Post__image_container:hover .Post__image {\\r\\n    filter: none;\\r\\n    -webkit-filter: brightness(85%);\\r\\n}\\r\\n\\r\\n.Post__title {\\r\\n    padding-left: 1em;\\r\\n\\r\\n}\\r\\n\\r\\n\\r\\n.Post__title_container {\\r\\n    display: flex;\\r\\n    justify-content: space-between;\\r\\n    width: 95%;\\r\\n    min-height: 2.5em;\\r\\n    align-items: center;\\r\\n}\\r\\n\\r\\n\\r\\n.Post__link {\\r\\n    color: #fff;\\r\\n    fill: #fff;\\r\\n    background-color: rgba(51, 51, 51, .8);\\r\\n    padding: .5em;\\r\\n\\r\\n}\\r\\n\\r\\n.Post__link:hover {\\r\\n    background-color: #333;\\r\\n}\\r\\n\\r\\n.Post__link__svg {\\r\\n    height: 1em;\\r\\n}\\r\\n\\r\\n.Post__link-container {\\r\\n    display: none;\\r\\n    width: 87%;\\r\\n    position: absolute;\\r\\n    bottom: 1em;\\r\\n    left: 1.1em;\\r\\n    height: 2em;\\r\\n    justify-content: space-between;\\r\\n}\\r\\n\\r\\n.Post__button_more-info {\\r\\n    height: 1.5em;\\r\\n    width: 1.5em;\\r\\n    background-color: transparent;\\r\\n    background-image: url(\" + ___CSS_LOADER_URL___0___ + \");\\r\\n}\\r\\n\\r\\n.Post__button_more-info:hover {\\r\\n    filter: brightness(80%);\\r\\n    background-color: rgba(0, 0, 0, .06);\\r\\n}\\r\\n\\r\\n\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/styles/post.css?./node_modules/css-loader/dist/cjs.js");
+eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Imports\nvar urlEscape = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/url-escape.js */ \"./node_modules/css-loader/dist/runtime/url-escape.js\");\nvar ___CSS_LOADER_URL___0___ = urlEscape(__webpack_require__(/*! ../images/icons/dots.svg */ \"./static/images/icons/dots.svg\"));\n\n// Module\nexports.push([module.i, \".Post {\\r\\n    border-radius: 8px;\\r\\n    position: absolute;\\r\\n    width: 275px;\\r\\n}\\r\\n\\r\\n.Post:hover {\\r\\n    background-color: #efefef;\\r\\n    cursor: zoom-in;\\r\\n}\\r\\n\\r\\n.Post:hover .Post__form, .Post:hover .Link__container {\\r\\n    display: flex;\\r\\n}\\r\\n\\r\\n.Post__image_container {\\r\\n    filter: none;\\r\\n    -webkit-filter: brightness(100%);\\r\\n    max-width: 93%;\\r\\n    padding-left: 9px;\\r\\n    padding-top: 7px;\\r\\n}\\r\\n\\r\\n.Post__form {\\r\\n    width: 90%;\\r\\n    background-color: transparent;\\r\\n    display: none;\\r\\n    position: absolute;\\r\\n    top: 1em;\\r\\n    left: 6.5%;\\r\\n    height: 2.6em;\\r\\n    text-align: center;\\r\\n}\\r\\n\\r\\n.Post__button_select {\\r\\n    width: 70%;\\r\\n    height: 100%;\\r\\n    border-radius: 8px 0 0 8px;\\r\\n    color: #333;\\r\\n    background-color: #fff;\\r\\n}\\r\\n\\r\\n.Post__button_select:hover, .Post__button_save:hover, .Footer__button:hover {\\r\\n    filter: brightness(90%);\\r\\n}\\r\\n\\r\\n.Post__button_save {\\r\\n    border-radius: 0 8px 8px 0;\\r\\n    width: 30%;\\r\\n    color: #fff;\\r\\n    background-color: #e60023;\\r\\n}\\r\\n\\r\\n.Post__image {\\r\\n    border-radius: 8px;\\r\\n    background: #F1F1FA;\\r\\n    width: 256px;\\r\\n    display: flex;\\r\\n    border: 0;\\r\\n}\\r\\n\\r\\n.Post__image_container:hover .Post__image {\\r\\n    filter: none;\\r\\n    -webkit-filter: brightness(85%);\\r\\n}\\r\\n\\r\\n.Post__title {\\r\\n    padding-left: 1em;\\r\\n\\r\\n}\\r\\n\\r\\n\\r\\n.Post__title_container {\\r\\n    display: flex;\\r\\n    justify-content: space-between;\\r\\n    width: 95%;\\r\\n    min-height: 2.5em;\\r\\n    align-items: center;\\r\\n}\\r\\n\\r\\n\\r\\n.Post__link {\\r\\n    color: #fff;\\r\\n    fill: #fff;\\r\\n    background-color: rgba(51, 51, 51, .8);\\r\\n    padding: .5em;\\r\\n\\r\\n}\\r\\n\\r\\n.Post__link:hover {\\r\\n    background-color: #333;\\r\\n}\\r\\n\\r\\n.Post__link__svg {\\r\\n    height: 1em;\\r\\n}\\r\\n\\r\\n.Post__link-container {\\r\\n    display: none;\\r\\n    width: 87%;\\r\\n    position: absolute;\\r\\n    bottom: 1em;\\r\\n    left: 1.1em;\\r\\n    height: 2em;\\r\\n    justify-content: space-between;\\r\\n}\\r\\n\\r\\n.Post__button_more-info {\\r\\n    height: 1.5em;\\r\\n    width: 1.5em;\\r\\n    background-color: transparent;\\r\\n    background-image: url(\" + ___CSS_LOADER_URL___0___ + \");\\r\\n}\\r\\n\\r\\n.Post__button_more-info:hover {\\r\\n    filter: brightness(80%);\\r\\n    background-color: rgba(0, 0, 0, .06);\\r\\n}\\r\\n.Post__button_more-info:focus{\\r\\n    outline: none;\\r\\n    box-shadow:0 0 0 4px rgba(0, 132, 255, .5);\\r\\n}\\r\\n\\r\\n\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./static/styles/post.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -220,126 +220,149 @@ eval("\n/**\n * When source maps are enabled, `style-loader` uses a link element
 
 /***/ }),
 
-/***/ "./src/images/icons/dots.svg":
-/*!***********************************!*\
-  !*** ./src/images/icons/dots.svg ***!
-  \***********************************/
+/***/ "./static/images/icons/cancel.svg":
+/*!****************************************!*\
+  !*** ./static/images/icons/cancel.svg ***!
+  \****************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = \"data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyAgZmlsbD0iIzhlOGU4ZSIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDMyLjA1NSAzMi4wNTUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMyLjA1NSAzMi4wNTU7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwYXRoIGQ9Ik0zLjk2OCwxMi4wNjFDMS43NzUsMTIuMDYxLDAsMTMuODM1LDAsMTYuMDI3YzAsMi4xOTIsMS43NzMsMy45NjcsMy45NjgsMy45NjdjMi4xODksMCwzLjk2Ni0xLjc3MiwzLjk2Ni0zLjk2Nw0KCQlDNy45MzQsMTMuODM1LDYuMTU3LDEyLjA2MSwzLjk2OCwxMi4wNjF6IE0xNi4yMzMsMTIuMDYxYy0yLjE4OCwwLTMuOTY4LDEuNzczLTMuOTY4LDMuOTY1YzAsMi4xOTIsMS43NzgsMy45NjcsMy45NjgsMy45NjcNCgkJczMuOTctMS43NzIsMy45Ny0zLjk2N0MyMC4yMDEsMTMuODM1LDE4LjQyMywxMi4wNjEsMTYuMjMzLDEyLjA2MXogTTI4LjA5LDEyLjA2MWMtMi4xOTIsMC0zLjk2OSwxLjc3NC0zLjk2OSwzLjk2Nw0KCQljMCwyLjE5LDEuNzc0LDMuOTY1LDMuOTY5LDMuOTY1YzIuMTg4LDAsMy45NjUtMS43NzIsMy45NjUtMy45NjVTMzAuMjc4LDEyLjA2MSwyOC4wOSwxMi4wNjF6Ii8+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==\"\n\n//# sourceURL=webpack:///./src/images/icons/dots.svg?");
+eval("module.exports = \"data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gU3ZnIFZlY3RvciBJY29ucyA6IGh0dHA6Ly93d3cub25saW5ld2ViZm9udHMuY29tL2ljb24gLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGZpbGw9IiM4ZThlOGUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTAwMCAxMDAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMDAwIDEwMDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPG1ldGFkYXRhPiBTdmcgVmVjdG9yIEljb25zIDogaHR0cDovL3d3dy5vbmxpbmV3ZWJmb250cy5jb20vaWNvbiA8L21ldGFkYXRhPg0KPGc+PHBhdGggZD0iTTk5MCw4MjYuN0w2NjMuMyw1MDAuMUw5OTAsMTczLjNMODI2LjcsOS45TDUwMCwzMzYuN0wxNzMuMyw5LjlMMTAsMTczLjNsMzI2LjcsMzI2LjhMMTAsODI2LjdsMTYzLjMsMTYzLjNMNTAwLDY2My40bDMyNi43LDMyNi43TDk5MCw4MjYuN3oiLz48L2c+DQo8L3N2Zz4=\"\n\n//# sourceURL=webpack:///./static/images/icons/cancel.svg?");
 
 /***/ }),
 
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
+/***/ "./static/images/icons/dots.svg":
+/*!**************************************!*\
+  !*** ./static/images/icons/dots.svg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyAgZmlsbD0iIzhlOGU4ZSIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDMyLjA1NSAzMi4wNTUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMyLjA1NSAzMi4wNTU7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwYXRoIGQ9Ik0zLjk2OCwxMi4wNjFDMS43NzUsMTIuMDYxLDAsMTMuODM1LDAsMTYuMDI3YzAsMi4xOTIsMS43NzMsMy45NjcsMy45NjgsMy45NjdjMi4xODksMCwzLjk2Ni0xLjc3MiwzLjk2Ni0zLjk2Nw0KCQlDNy45MzQsMTMuODM1LDYuMTU3LDEyLjA2MSwzLjk2OCwxMi4wNjF6IE0xNi4yMzMsMTIuMDYxYy0yLjE4OCwwLTMuOTY4LDEuNzczLTMuOTY4LDMuOTY1YzAsMi4xOTIsMS43NzgsMy45NjcsMy45NjgsMy45NjcNCgkJczMuOTctMS43NzIsMy45Ny0zLjk2N0MyMC4yMDEsMTMuODM1LDE4LjQyMywxMi4wNjEsMTYuMjMzLDEyLjA2MXogTTI4LjA5LDEyLjA2MWMtMi4xOTIsMC0zLjk2OSwxLjc3NC0zLjk2OSwzLjk2Nw0KCQljMCwyLjE5LDEuNzc0LDMuOTY1LDMuOTY5LDMuOTY1YzIuMTg4LDAsMy45NjUtMS43NzIsMy45NjUtMy45NjVTMzAuMjc4LDEyLjA2MSwyOC4wOSwxMi4wNjF6Ii8+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==\"\n\n//# sourceURL=webpack:///./static/images/icons/dots.svg?");
+
+/***/ }),
+
+/***/ "./static/index.js":
+/*!*************************!*\
+  !*** ./static/index.js ***!
+  \*************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_button_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/button.css */ \"./src/styles/button.css\");\n/* harmony import */ var _styles_button_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_styles_button_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _styles_common_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/common.css */ \"./src/styles/common.css\");\n/* harmony import */ var _styles_common_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_common_css__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _styles_footer_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles/footer.css */ \"./src/styles/footer.css\");\n/* harmony import */ var _styles_footer_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_footer_css__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _styles_header_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/header.css */ \"./src/styles/header.css\");\n/* harmony import */ var _styles_header_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_header_css__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _styles_link_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./styles/link.css */ \"./src/styles/link.css\");\n/* harmony import */ var _styles_link_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_styles_link_css__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _styles_layout_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./styles/layout.css */ \"./src/styles/layout.css\");\n/* harmony import */ var _styles_layout_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_styles_layout_css__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var _styles_logo_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./styles/logo.css */ \"./src/styles/logo.css\");\n/* harmony import */ var _styles_logo_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_styles_logo_css__WEBPACK_IMPORTED_MODULE_6__);\n/* harmony import */ var _styles_post_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./styles/post.css */ \"./src/styles/post.css\");\n/* harmony import */ var _styles_post_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_styles_post_css__WEBPACK_IMPORTED_MODULE_7__);\n/* harmony import */ var _postGenerator__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./postGenerator */ \"./src/postGenerator.js\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nconst renderColumns = async (containerClass, htmlGenerator, number) => {\r\n    const container = document.querySelector(containerClass);\r\n    for (let i = 0; i < number; i++) {\r\n        container.appendChild(htmlGenerator());\r\n    }\r\n};\r\n\r\nconst shuffle = (array) => {\r\n    for (let i = array.length - 1; i > 0; i--) {\r\n        const j = Math.floor(Math.random() * (i + 1));\r\n        [array[i], array[j]] = [array[j], array[i]];\r\n    }\r\n    return array;\r\n};\r\n\r\nconst renderPosts = async (containersClass, dataPath, htmlGenerator) => {\r\n    const containers = document.querySelectorAll(containersClass);\r\n    const data = await (await fetch(dataPath)).json();\r\n    containers.forEach(container => shuffle(data).map(el => container.appendChild(htmlGenerator(el))));\r\n};\r\n\r\nrenderColumns('.Layout__main-block__home', _postGenerator__WEBPACK_IMPORTED_MODULE_8__[\"generateColumn\"], 5)\r\n    .then(() => renderPosts('.Column', './src/data/posts.json', _postGenerator__WEBPACK_IMPORTED_MODULE_8__[\"generatePost\"]));\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_button_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/button.css */ \"./static/styles/button.css\");\n/* harmony import */ var _styles_button_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_styles_button_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _styles_common_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/common.css */ \"./static/styles/common.css\");\n/* harmony import */ var _styles_common_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_common_css__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _styles_footer_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles/footer.css */ \"./static/styles/footer.css\");\n/* harmony import */ var _styles_footer_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_footer_css__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _styles_header_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/header.css */ \"./static/styles/header.css\");\n/* harmony import */ var _styles_header_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_header_css__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _styles_link_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./styles/link.css */ \"./static/styles/link.css\");\n/* harmony import */ var _styles_link_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_styles_link_css__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _styles_layout_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./styles/layout.css */ \"./static/styles/layout.css\");\n/* harmony import */ var _styles_layout_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_styles_layout_css__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var _styles_logo_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./styles/logo.css */ \"./static/styles/logo.css\");\n/* harmony import */ var _styles_logo_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_styles_logo_css__WEBPACK_IMPORTED_MODULE_6__);\n/* harmony import */ var _styles_post_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./styles/post.css */ \"./static/styles/post.css\");\n/* harmony import */ var _styles_post_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_styles_post_css__WEBPACK_IMPORTED_MODULE_7__);\n/* harmony import */ var _postGenerator__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./postGenerator */ \"./static/postGenerator.js\");\n/* harmony import */ var _positioning__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./positioning */ \"./static/positioning.js\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nconst renderPosts = async (containersClass, data, htmlGenerator, number) => {\r\n    const containers = document.querySelector(containersClass);\r\n    const new_data = await (await fetch(data)).json();\r\n    for (let i = 0; i < number; i++) {\r\n        containers.appendChild(htmlGenerator(new_data[Math.floor(Math.random() * new_data.length)]));\r\n    }\r\n};\r\n\r\nrenderPosts('.Layout__main-block__home', 'posts', _postGenerator__WEBPACK_IMPORTED_MODULE_8__[\"generate\"], 40).then(_positioning__WEBPACK_IMPORTED_MODULE_9__[\"setupBlocks\"]);\r\n\r\nwindow.addEventListener('resize', _positioning__WEBPACK_IMPORTED_MODULE_9__[\"setupBlocks\"]);\r\nwindow.onscroll = () => {\r\n    let nodePosS = document.querySelector('.Layout__main-block__home').lastChild.style.top;\r\n    let nodePos = parseInt(nodePosS, 10);\r\n    let yOffset = window.pageYOffset;\r\n    let y = yOffset + window.innerHeight;\r\n\r\n    if (y >= nodePos) {\r\n        renderPosts('.Layout__main-block__home', 'posts', _postGenerator__WEBPACK_IMPORTED_MODULE_8__[\"generate\"], 20).then(_positioning__WEBPACK_IMPORTED_MODULE_9__[\"setupBlocks\"]);\r\n    }\r\n};\n\n//# sourceURL=webpack:///./static/index.js?");
 
 /***/ }),
 
-/***/ "./src/postGenerator.js":
-/*!******************************!*\
-  !*** ./src/postGenerator.js ***!
-  \******************************/
-/*! exports provided: generateColumn, generatePost */
+/***/ "./static/positioning.js":
+/*!*******************************!*\
+  !*** ./static/positioning.js ***!
+  \*******************************/
+/*! exports provided: setupBlocks */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"generateColumn\", function() { return generateColumn; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"generatePost\", function() { return generatePost; });\nconst generateColumn = () => {\r\n    const parentElement = document.createElement('div');\r\n    parentElement.className = 'Column';\r\n    return parentElement;\r\n};\r\n\r\nconst generatePost = (data) => {\r\n    const parentElement = document.createElement('article');\r\n    parentElement.className = 'Post';\r\n    parentElement.innerHTML = `<div class=\"Post__image_container\">\r\n                     <a class=\"Post__image__link\"><img src=${data.image_link} alt=\"post photo\" class=\"Post__image\"></a>\r\n                     <form class=\"Post__form\">\r\n                        <button class=\"Button Post__button_select\">Home</button>\r\n                        <button class=\"Button Post__button_save\">Save</button>\r\n                     </form>\r\n                     <div class=\"Post__link-container\">\r\n                        <a class=\"Link Post__link\" href=${data.go_to_link} aria-label=\"go to\">Some link</a>\r\n                        <a class=\"Link Post__link\" href=${data.send_link} aria-label=\"send\">\r\n                           <svg viewBox=\"0 0 24 24\" class=\"Link Post__link__svg\" aria-hidden=\"true\" aria-label=\"\" role=\"img\" id=\"send-svg\">\r\n                              <title>Send</title>\r\n                              <path d=\"M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z\"></path>\r\n                           </svg>\r\n                        </a>\r\n                     </div>\r\n                  </div>\r\n                  <div class=\"Post__title_container\">\r\n                     <h4 aria-label=\"post-title\" class=\"Post__title\">${data.title}</h4>\r\n                     <button class=\"Button Post__button_more-info\" aria-label=\"more information\"></button>\r\n                  </div>`;\r\n    return parentElement;\r\n};\n\n//# sourceURL=webpack:///./src/postGenerator.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"setupBlocks\", function() { return setupBlocks; });\nlet colCount = 0;\r\nlet colWidth = 0;\r\nlet margin = 20;\r\nlet windowWidth = 0;\r\nlet marginLeft = 0;\r\n\r\nfunction setupBlocks() {\r\n    margin = 20;\r\n    let blocks = [];\r\n    windowWidth = $(window).width();\r\n    colWidth = $('.Post').outerWidth();\r\n    colCount = Math.floor(windowWidth / (colWidth + margin));\r\n    marginLeft = (windowWidth - (colWidth + margin) * colCount) / 2;\r\n    for (let i = 0; i < colCount; i++) {\r\n        blocks.push(margin);\r\n    }\r\n    positionBlocks(blocks);\r\n}\r\n\r\nfunction positionBlocks(blocks) {\r\n    $('.Post').each(function () {\r\n        let min = Array.min(blocks);\r\n        let index = $.inArray(min, blocks);\r\n        let leftPos = margin + (index * (colWidth + margin));\r\n        $(this).css({\r\n            'left': leftPos + marginLeft + 'px',\r\n            'top': min + 66 + 'px'\r\n        });\r\n        blocks[index] = min + $(this).outerHeight() + margin;\r\n    });\r\n}\r\n\r\nArray.min = function (array) {\r\n    return Math.min.apply(Math, array);\r\n};\n\n//# sourceURL=webpack:///./static/positioning.js?");
 
 /***/ }),
 
-/***/ "./src/styles/button.css":
-/*!*******************************!*\
-  !*** ./src/styles/button.css ***!
-  \*******************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./static/postGenerator.js":
+/*!*********************************!*\
+  !*** ./static/postGenerator.js ***!
+  \*********************************/
+/*! exports provided: generate */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./button.css */ \"./node_modules/css-loader/dist/cjs.js!./src/styles/button.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./src/styles/button.css?");
-
-/***/ }),
-
-/***/ "./src/styles/common.css":
-/*!*******************************!*\
-  !*** ./src/styles/common.css ***!
-  \*******************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./common.css */ \"./node_modules/css-loader/dist/cjs.js!./src/styles/common.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./src/styles/common.css?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"generate\", function() { return generate; });\nconst generate = (data) => {\r\n    const parentElement = document.createElement('div');\r\n    let ratio = data.height / data.width;\r\n    parentElement.className = 'Post';\r\n    parentElement.innerHTML = `\r\n<div class=\"Post__image_container\">\r\n    <a class=\"Post__image__link\">\r\n        <img  class=\"Post__image lazy\"  style=\"height: ${256 * ratio}px; width: 256px\" src=\"${data.image_link}\" alt=\"\">\r\n     </a>\r\n    <form class=\"Post__form\">\r\n        <button class=\"Button Post__button_select\">Home</button>\r\n        <button class=\"Button Post__button_save\">Save</button>\r\n    </form>\r\n    <div class=\"Post__link-container\">\r\n        <a class=\"Link Post__link\" href='#' aria-label=\"go to\">Some link</a>\r\n        <a class=\"Link Post__link\" href='#' aria-label=\"send\">\r\n            <svg viewBox=\"0 0 24 24\" class=\"Link Post__link__svg\" aria-hidden=\"true\" aria-label=\"\" role=\"img\" id=\"send-svg\">\r\n                <title>Send</title>\r\n                <path d=\"M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z\"></path>\r\n            </svg>\r\n        </a>\r\n    </div>\r\n</div>\r\n<div class=\"Post__title_container\">\r\n    <h4 aria-label=\"post-title\" class=\"Post__title\">${data.title}</h4>\r\n    <button class=\"Button Post__button_more-info\" aria-label=\"more information\"></button>\r\n</div>\r\n`;\r\n    return parentElement;\r\n};\n\n//# sourceURL=webpack:///./static/postGenerator.js?");
 
 /***/ }),
 
-/***/ "./src/styles/footer.css":
-/*!*******************************!*\
-  !*** ./src/styles/footer.css ***!
-  \*******************************/
+/***/ "./static/styles/button.css":
+/*!**********************************!*\
+  !*** ./static/styles/button.css ***!
+  \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./footer.css */ \"./node_modules/css-loader/dist/cjs.js!./src/styles/footer.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./src/styles/footer.css?");
+eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./button.css */ \"./node_modules/css-loader/dist/cjs.js!./static/styles/button.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./static/styles/button.css?");
 
 /***/ }),
 
-/***/ "./src/styles/header.css":
-/*!*******************************!*\
-  !*** ./src/styles/header.css ***!
-  \*******************************/
+/***/ "./static/styles/common.css":
+/*!**********************************!*\
+  !*** ./static/styles/common.css ***!
+  \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./header.css */ \"./node_modules/css-loader/dist/cjs.js!./src/styles/header.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./src/styles/header.css?");
+eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./common.css */ \"./node_modules/css-loader/dist/cjs.js!./static/styles/common.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./static/styles/common.css?");
 
 /***/ }),
 
-/***/ "./src/styles/layout.css":
-/*!*******************************!*\
-  !*** ./src/styles/layout.css ***!
-  \*******************************/
+/***/ "./static/styles/footer.css":
+/*!**********************************!*\
+  !*** ./static/styles/footer.css ***!
+  \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./layout.css */ \"./node_modules/css-loader/dist/cjs.js!./src/styles/layout.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./src/styles/layout.css?");
+eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./footer.css */ \"./node_modules/css-loader/dist/cjs.js!./static/styles/footer.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./static/styles/footer.css?");
 
 /***/ }),
 
-/***/ "./src/styles/link.css":
-/*!*****************************!*\
-  !*** ./src/styles/link.css ***!
-  \*****************************/
+/***/ "./static/styles/header.css":
+/*!**********************************!*\
+  !*** ./static/styles/header.css ***!
+  \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./link.css */ \"./node_modules/css-loader/dist/cjs.js!./src/styles/link.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./src/styles/link.css?");
+eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./header.css */ \"./node_modules/css-loader/dist/cjs.js!./static/styles/header.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./static/styles/header.css?");
 
 /***/ }),
 
-/***/ "./src/styles/logo.css":
-/*!*****************************!*\
-  !*** ./src/styles/logo.css ***!
-  \*****************************/
+/***/ "./static/styles/layout.css":
+/*!**********************************!*\
+  !*** ./static/styles/layout.css ***!
+  \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./logo.css */ \"./node_modules/css-loader/dist/cjs.js!./src/styles/logo.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./src/styles/logo.css?");
+eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./layout.css */ \"./node_modules/css-loader/dist/cjs.js!./static/styles/layout.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./static/styles/layout.css?");
 
 /***/ }),
 
-/***/ "./src/styles/post.css":
-/*!*****************************!*\
-  !*** ./src/styles/post.css ***!
-  \*****************************/
+/***/ "./static/styles/link.css":
+/*!********************************!*\
+  !*** ./static/styles/link.css ***!
+  \********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./post.css */ \"./node_modules/css-loader/dist/cjs.js!./src/styles/post.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./src/styles/post.css?");
+eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./link.css */ \"./node_modules/css-loader/dist/cjs.js!./static/styles/link.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./static/styles/link.css?");
+
+/***/ }),
+
+/***/ "./static/styles/logo.css":
+/*!********************************!*\
+  !*** ./static/styles/logo.css ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./logo.css */ \"./node_modules/css-loader/dist/cjs.js!./static/styles/logo.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./static/styles/logo.css?");
+
+/***/ }),
+
+/***/ "./static/styles/post.css":
+/*!********************************!*\
+  !*** ./static/styles/post.css ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./post.css */ \"./node_modules/css-loader/dist/cjs.js!./static/styles/post.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./static/styles/post.css?");
 
 /***/ })
 

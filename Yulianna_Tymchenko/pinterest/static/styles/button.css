@@ -1,0 +1,23 @@
+.Button {
+    display: flex;
+    align-items: center;
+    border-radius: 999px;
+    border: none;
+}
+@media all and (max-width: 720px){
+    .Button {
+        display: flex;}
+}
+
+
+    .Button__svg {
+    height: 24px;
+    fill: #8e8e8e;
+}
+
+
+
+
+
+
+

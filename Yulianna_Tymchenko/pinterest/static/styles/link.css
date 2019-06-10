@@ -1,0 +1,6 @@
+.Link {
+    display: flex;
+    align-items: center;
+    border-radius: 999px;
+    text-decoration: none;
+}

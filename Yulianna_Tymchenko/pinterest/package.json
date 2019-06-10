@@ -6,12 +6,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx webpack",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "start": "npx webpack && cd server && node server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "buffer-image-size": "^0.6.4",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "image-downloader": "^3.4.2",
     "webpack": "^4.32.1",
     "webpack-cli": "^3.3.2"
   },

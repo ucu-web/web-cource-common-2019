@@ -1,0 +1,29 @@
+.Logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.Logo__link {
+    border-radius: 999px;
+    padding: 0.5em 0.5em 0.2em 0.4em;
+}
+
+.Logo__svg {
+    height: 1.75em;
+    width: 1.75em;
+    fill: #e60023;
+}
+
+.Logo__link:hover {
+    background-color: #efefef;
+}
+
+.Logo:focus{
+    border-radius: 999px;
+}
+
+.Logo__link:focus, .Logo:focus{
+    outline: none;
+    box-shadow:0 0 0 4px rgba(0, 132, 255, .5);
+}
