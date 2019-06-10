@@ -1,29 +1,47 @@
 import {
-  generateNewFigure,
   clearRows,
-  clear,
-  canBePlaced
-} from "./tetrisHelperFunctions";
-import { incrustBlock, rotateMatrix } from "./arrayComplexFunctions";
+  canBePlaced,
+  getRandomFigureShapeFromList
+} from "./tetrisHelpers";
+
+import { clear, rotateMatrix, insertSubArray } from "./lib";
 
 export default class Tetris {
   constructor(canvasObject, options) {
     this.options = options;
-    this.blockSize = Math.floor(options.height / options.board.length);
+    const { board, actors = [] } = options;
+
+    this.board = options.board;
+
+    actors.map((actor, index) => {
+      actor.subscribe(action => {
+        if (action === "left") this.moveLeft(index);
+        if (action === "right") this.moveRight(index);
+        if (action === "up") this.rotate(index);
+        if (action === "down") this.moveDown(index);
+      });
+    });
+
+    this.blockSize = Math.floor(options.height / board.length);
     canvasObject.width = options.width;
     canvasObject.height = options.height;
     this.canvasContext = canvasObject.getContext("2d");
-    this.keyMap = {};
-    this.board = options.board;
+
     this.figures = [
-      generateNewFigure(this.getSpawnCoordinatesForPlayer(0)),
-      generateNewFigure(this.getSpawnCoordinatesForPlayer(1))
+      {
+        shape: getRandomFigureShapeFromList(),
+        coordinates: this.getSpawnCoordinatesForPlayer(0)
+      },
+      {
+        shape: getRandomFigureShapeFromList(),
+        coordinates: this.getSpawnCoordinatesForPlayer(1)
+      }
     ];
-    this.intervalId = [
-      setInterval(() => this.moveDown(0), 500),
-      setInterval(() => this.moveDown(1), 500)
-    ];
-    this.addHandlers();
+
+    this.intervalId = setInterval(() => {
+      this.moveDown(0);
+      this.moveDown(1);
+    }, 500);
   }
 
   moveDown(playerNum) {
@@ -31,25 +49,26 @@ export default class Tetris {
     let [x, y] = currentFigure.coordinates;
 
     if (!canBePlaced(currentFigure.shape, this.board, [x, y + 1])) {
-      this.board = incrustBlock(
-        currentFigure.shape,
+      this.board = insertSubArray(
         this.board,
-        currentFigure.coordinates
+        currentFigure.coordinates,
+        currentFigure.shape
       );
       this.board = clearRows(this.board);
       if (currentFigure.coordinates[1] < 2) {
         this.endGame();
       }
 
-      this.setFigureForPlayer(
-        playerNum,
-        generateNewFigure(this.getSpawnCoordinatesForPlayer(playerNum))
-      );
+      this.setFigureForPlayer(playerNum, {
+        coordinates: this.getSpawnCoordinatesForPlayer(playerNum),
+        shape: getRandomFigureShapeFromList()
+      });
+
       return;
     }
     if (this.isCollisionFigure(currentFigure.shape, [x, y + 1])) return;
 
-    currentFigure.setCoordinates([x, y + 1]);
+    currentFigure.coordinates = [x, y + 1];
 
     this.renderBoard();
     this.renderFigures();
@@ -60,7 +79,7 @@ export default class Tetris {
     let [x, y] = currentFigure.coordinates;
     if (this.isCollisionFigure(currentFigure.shape, [x - 1, y])) return;
     if (canBePlaced(currentFigure.shape, this.board, [x - 1, y]))
-      currentFigure.setCoordinates([x - 1, y]);
+      currentFigure.coordinates = [x - 1, y];
     this.renderBoard();
     this.renderFigures();
   }
@@ -69,10 +88,11 @@ export default class Tetris {
     let [x, y] = currentFigure.coordinates;
     if (this.isCollisionFigure(currentFigure.shape, [x + 1, y])) return;
     if (canBePlaced(currentFigure.shape, this.board, [x + 1, y]))
-      currentFigure.setCoordinates([x + 1, y]);
+      currentFigure.coordinates = [x + 1, y];
     this.renderBoard();
     this.renderFigures();
   }
+
   rotate(playerNum) {
     let currentFigure = this.getPlayerFigure(playerNum);
     if (
@@ -89,13 +109,13 @@ export default class Tetris {
         currentFigure.coordinates
       )
     )
-      currentFigure.setShape(rotateMatrix(currentFigure.shape));
+      currentFigure.shape = rotateMatrix(currentFigure.shape);
     this.renderBoard();
     this.renderFigures();
   }
 
   endGame() {
-    this.intervalId.forEach(el => clearInterval(el));
+    clearInterval(this.intervalId);
     if (confirm("You loose\nReplay?")) this.restart();
   }
   restart() {
@@ -108,10 +128,10 @@ export default class Tetris {
     return (
       this.figures
         .map(figure => {
-          let tmpBoard = incrustBlock(
-            figure.shape,
+          let tmpBoard = insertSubArray(
             this.board,
-            figure.coordinates
+            figure.coordinates,
+            figure.shape
           );
           return canBePlaced(shape, tmpBoard, coordinates);
         })
@@ -169,44 +189,5 @@ export default class Tetris {
     return playerNum === 0
       ? [Math.floor(this.board[0].length / 3), 0]
       : [Math.floor(this.board[0].length - this.board[0].length / 3), 0];
-  }
-
-  addHandlers() {
-    this.usedKeys = [
-      "KeyA",
-      "KeyD",
-      "KeyW",
-      "KeyS",
-      "ArrowLeft",
-      "ArrowRight",
-      "ArrowUp",
-      "ArrowDown"
-    ];
-    document.addEventListener("keydown", ev => {
-      if (this.usedKeys.includes(ev.code)) {
-        ev.preventDefault();
-        this.keyMap[ev.code] = true;
-        this.startMainLoop();
-      }
-    });
-
-    document.addEventListener("keyup", ev => {
-      if (this.usedKeys.includes(ev.code)) {
-        ev.preventDefault();
-        this.keyMap[ev.code] = false;
-      }
-    });
-  }
-
-  startMainLoop() {
-    if (this.keyMap["KeyA"]) this.moveLeft(0);
-    if (this.keyMap["KeyD"]) this.moveRight(0);
-    if (this.keyMap["KeyW"]) this.rotate(0);
-    if (this.keyMap["KeyS"]) this.moveDown(0);
-
-    if (this.keyMap["ArrowLeft"]) this.moveLeft(1);
-    if (this.keyMap["ArrowRight"]) this.moveRight(1);
-    if (this.keyMap["ArrowUp"]) this.rotate(1);
-    if (this.keyMap["ArrowDown"]) this.moveDown(1);
   }
 }
