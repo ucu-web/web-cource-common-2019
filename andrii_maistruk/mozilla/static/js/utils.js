@@ -1,3 +1,22 @@
+export let loadPosts = (data) => {
+    Array.from(document.getElementsByClassName("main-content__article")).forEach((post, i) => {
+        setPostLink(post, data[i]["href"]);
+        setPostImage(post, data[i]["img_src"]);
+        setPostNote(post, data[i]["note"]);
+        setPostHeading(post, data[i]["heading"]);
+        setPostParagraph(post, data[i]["paragraph"]);
+    });
+};
+
+export let loadReadings = (data) => {
+    Array.from(document.getElementsByClassName("aside-pocket__post")).forEach((post, i) => {
+        setFeedPostLink(post, data[i]["href"]);
+        setFeedPostImage(post, data[i]["img_src"]);
+        setFeedPostNote(post, data[i]["note"]);
+        setFeedPostHeading(post, data[i]["heading"]);
+    })
+};
+
 let setPostLink = (post, link) => {
     post.childNodes[1].setAttribute("href", link);
 };
@@ -34,21 +53,3 @@ let setFeedPostHeading = (post, heading) => {
     post.children[0].children[2].innerHTML = heading;
 };
 
-export let loadPosts = (data) => {
-    Array.from(document.getElementsByClassName("main-content__article")).forEach((post, i) => {
-        setPostLink(post, data[i]["href"]);
-        setPostImage(post, data[i]["img_src"]);
-        setPostNote(post, data[i]["note"]);
-        setPostHeading(post, data[i]["heading"]);
-        setPostParagraph(post, data[i]["paragraph"]);
-    });
-};
-
-export let loadReadings = (data) => {
-    Array.from(document.getElementsByClassName("aside-pocket__post")).forEach((post, i) => {
-        setFeedPostLink(post, data[i]["href"]);
-        setFeedPostImage(post, data[i]["img_src"]);
-        setFeedPostNote(post, data[i]["note"]);
-        setFeedPostHeading(post, data[i]["heading"]);
-    })
-};
