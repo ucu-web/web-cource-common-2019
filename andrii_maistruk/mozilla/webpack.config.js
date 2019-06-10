@@ -1,5 +1,5 @@
 module.exports = {
-    mode: "development",
+    mode: "production",
     entry: "./static/js/build",
     output: {
         filename: "build.js",

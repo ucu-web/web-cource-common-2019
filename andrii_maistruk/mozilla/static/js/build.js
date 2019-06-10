@@ -12,5 +12,6 @@ import "../styles/footer/footer_license_terms_social.css";
 import "../styles/footer/footer_sections.css";
 import "../styles/footer/language_form.css";
 import "./get_content.js";
+
 export let show_details = require("./form.js");
 export let format_input =  require("./format_input");
