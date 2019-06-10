@@ -24,7 +24,7 @@
 }
 
 
-.Votes__arrow_up, .Votes__arrow_down {
+.Arrow-up, .Arrow-down {
     height: 24px;
     width: 24px;
     font-family: FontAwesome, serif;
@@ -33,16 +33,16 @@
     transition: background-color 0.1s ease 0s;
 }
 
-.Votes__arrow_up:hover{
+.Arrow-up:hover{
     color: #FF4500;
 }
-.Votes__arrow_down:hover {
+.Arrow-down:hover {
     color: rgb(90, 117, 204);
 }
-.Votes__arrow_up:before {
+.Arrow-up:before {
     content: "\f062";
 }
-.Votes__arrow_down:before {
+.Arrow-down:before {
     content: "\f063";
 }
 

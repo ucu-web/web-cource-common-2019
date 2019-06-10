@@ -36,15 +36,17 @@
     line-height: 21px;
 }
 
+.Text-area span::after{
+    color: rgb(129, 131, 132);
+    cursor: text;
+
+}
+
 .Text-area h2{
     font-size: 14px;
     font-weight: 400;
     line-height: 21px;
 
-}
-.Text-area__text::after{
-    color: rgb(129, 131, 132);
-    cursor: text;
 }
 
 .Write-comment__editor{

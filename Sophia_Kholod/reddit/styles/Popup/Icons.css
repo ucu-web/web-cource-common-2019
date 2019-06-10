@@ -62,10 +62,13 @@
 
 @media (max-width: 1110px) {
     .Icon_spoiler, .Icon_superscript,
-    .Icon_subscript, .Icon_strikethrough{
+    .Icon_subscript, .Icon_strikethrough,
+    .Icon_heading{
         display: none;
     }
 }
+
+
 
 @media (max-width: 965px) {
     .Icons > *{
@@ -101,3 +104,8 @@
     }
 }
 
+@media (max-width: 392px) {
+    .Icon_heading, .Icon_quote{
+        display: none;
+    }
+}

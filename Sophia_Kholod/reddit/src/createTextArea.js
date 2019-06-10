@@ -77,14 +77,14 @@ const postComment = async (postId) => {
     let commentHTML = textArea.innerHTML;
     textArea.innerHTML = `<span class="Text-area__text">What are your thoughts?</span>`;
     let commentJson = {
+        "post_id" : postId,
         "author": "AloneEcho",
-        "upvotes": 0,
         "text": commentHTML,
         "date": new Date().toISOString()
     };
 
     let allComments = document.getElementsByClassName("Comments")[0];
-    const rawResponse = await fetch('/data/comments' + postId.toString() + ".json", {
+    const rawResponse = await fetch('/data/comments', {
         method: 'POST',
         headers: {
             'Accept': 'application/json',

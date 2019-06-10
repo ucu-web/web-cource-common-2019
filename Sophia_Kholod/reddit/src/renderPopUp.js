@@ -6,10 +6,10 @@ import $ from "jquery";
 
 
 const showDropdown = (current) => {
-    console.log(current);
     let dropdown = $(".Sort__dropdown")[0];
     let dropdownDisplay = dropdown.style.display;
     dropdown.style.display = dropdownDisplay === "none" ? "flex" : "none";
+
 };
 
 const sortNew =(json1, json2) => {
@@ -20,7 +20,7 @@ const sortNew =(json1, json2) => {
     return 0;
 };
 
-const sortOld =(json1, json2) => {
+const sortOld = (json1, json2) => {
     let date1 = new Date(json1["date"]);
     let date2 = new Date(json2["date"]);
     if (date2 > date1) return -1;
@@ -34,6 +34,24 @@ const sortTop =(json1, json2) => {
     if (votes2 < votes1) return -1;
     if (votes2 > votes1) return 1;
     return 0;
+};
+
+const hidePopUp = () => {
+    let layout = $(".Layout__pop-up")[0];
+    layout.innerHTML = "";
+    layout.style.display = "none";
+    layout.style.gridRowStart = null;
+    layout.style.gridRowEnd = null;
+    layout.style.gridColumnStart = null;
+    layout.style.gridColumnEnd = null;
+
+    let lay = document.getElementsByClassName("Layout__content-wrapper")[0];
+    lay.style.position = "static";
+    lay.style.gridRowStart = "2";
+    lay.style.gridRowEnd = "3";
+    lay.style.gridColumnStart = "1";
+    lay.style.gridColumnEnd = "2";
+
 };
 
 const reorderComments = async (clicked, postId) => {
@@ -57,40 +75,62 @@ const reorderComments = async (clicked, postId) => {
 
     $(".Sort__text")[0].innerText = action;
     dropdown.style.display = "none";
-
     comments.map(comment => createComment(commentsContainer, comment));
 };
 
 
 const renderPopUp = async (postId) => {
-    document.getElementsByClassName("Layout__pop-up")[0].style.gridRowEnd = "5";
+    // document.getElementsByClassName("Layout__content-wrapper")[0].style.gridRow = null;
     document.getElementsByClassName("Layout__content-wrapper")[0].style.position = "fixed";
+    // document.getElementsByClassName("Layout__pop-up")[0].style.gridRow = "2";
+    document.getElementsByClassName("Layout__pop-up")[0].style.display = "grid";
+    let layout = $(".Layout__pop-up")[0];
+    // layout.style.display = "none";
+    layout.style.gridRowStart = "2";
+    layout.style.gridRowEnd = "3";
+    layout.style.gridColumnStart = "1";
+    layout.style.gridColumnEnd = "2";
 
-    let posts = await readJSONFromFile("../data/posts.json");
     let comments = await readJSONFromFile("../data/comments" + postId.toString() + ".json");
+    let posts = await readJSONFromFile("../data/posts.json");
 
     let post = posts.find(post => {return post["id"] === postId});
     let popUp = await createPopUp(post);
-    let layout = $(".Layout__pop-up")[0];
+    // let layout = $(".Layout__pop-up")[0];
     layout.appendChild(popUp);
 
     let commentsParent = $(".Comments")[0];
-    $(".Pop-up")[0].style.display = "grid";
+
+    popUp.style.display = "grid";
 
     comments.sort((a, b) => {return sortTop(a, b)});
     comments.map(comment => createComment(commentsParent, comment));
 
     $(".Close-button")[0].addEventListener(
-        "click", () => {
-            layout.innerHTML = "";
-            layout.style.gridRowEnd = null;
-            document.getElementsByClassName("Layout__content-wrapper")[0].style.position = "static";
-        });
+        "click", () => hidePopUp());
+
+    popUp.addEventListener(
+        "click", (event) =>{
+            if (!event.path.includes($(".Pop-up__content")[0]))
+                hidePopUp();
+        }
+    );
+
+    $(document).on('keydown', function (e) {
+        if (e.keyCode === 27) { // ESC
+            hidePopUp();
+        }
+    });
 
     let sortButton = $(".Sort__button")[0];
     sortButton.addEventListener(
-        "click", () =>{ showDropdown(sortButton.childNodes[1].value) }
+        "click", () =>{ showDropdown() }
     );
+
+    sortButton.addEventListener(
+        "focus", () =>{ showDropdown() }
+    );
+
 
     let dropdownChildren =
         $(".Sort__dropdown")[0].children;

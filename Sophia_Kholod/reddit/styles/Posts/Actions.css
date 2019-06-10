@@ -192,3 +192,9 @@
     align-items: center;
 }
 
+
+@media (max-width: 300px) {
+    .Actions__icon_comment-word{
+        display: none;
+    }
+}

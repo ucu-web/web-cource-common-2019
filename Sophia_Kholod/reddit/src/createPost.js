@@ -7,11 +7,11 @@ const Post = data => {
     let postDate = timeSince(new Date(data.date)) + " ago"; // "08.06.2019, 19:14:37"
     el.innerHTML = `
                 <div class="Votes">
-                    <button type="submit" class="Votes__arrow_up"></button>
+                    <button type="submit" class="Arrow-up"></button>
                     <p class="Votes__number">
                         ${kFormatter(parseInt(data.votes))}
                     </p>
-                    <button type="submit" class="Votes__arrow_down">
+                    <button type="submit" class="Arrow-down">
                     </button>
                 </div>
                 <div class="Post__content">
@@ -39,13 +39,13 @@ const Post = data => {
 
                     <footer class="Actions">
                         <div class="Actions__item_votes">
-                            <button type="submit" class="Votes__arrow_up"></button>
+                            <button type="submit" class="Arrow-up"></button>
                             <span>${data.votes}</span>
-                            <button type="submit" class="Votes__arrow_down"></button>
+                            <button type="submit" class="Arrow-down"></button>
                         </div>
                         <a href="" class="Actions__item">
                             <span class="Actions__icon_comment"><i class="fas fa-comment-alt"></i></span>
-                            <span>${kFormatter(parseInt(data.comments_number))} comments</span>
+                        <span>${kFormatter(parseInt(data["comments_number"]))} <span class="Actions__icon_comment-word">comments</span></span>
                         </a>
                         <button class="Actions__item_award">
                             <span class="Actions__icon_award"></span>

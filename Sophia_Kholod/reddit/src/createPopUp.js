@@ -10,11 +10,11 @@ export const createPopUp = (post) => {
     <article class="Pop-up__content">
         <header class="Pop-up__header">
             <div class="Pop-up__votes">
-                <button type="submit" class="Votes__arrow_up"></button>
+                <button type="submit" class="Arrow-up"></button>
                 <p class="Votes__number">
                     ${kFormatter(parseInt(post["votes"]))}
                 </p>
-                <button type="submit" class="Votes__arrow_down">
+                <button type="submit" class="Arrow-down">
                 </button>
             </div>
             <div class="Title">
@@ -29,11 +29,11 @@ export const createPopUp = (post) => {
 
         <article class="Pop-up__main">
             <div class="Votes">
-                <button type="submit" class="Votes__arrow_up"></button>
+                <button type="submit" class="Arrow-up"></button>
                 <p class="Votes__number">
                     ${kFormatter(parseInt(post["votes"]))}
                 </p>
-                <button type="submit" class="Votes__arrow_down">
+                <button type="submit" class="Arrow-down">
                 </button>
             </div>
             <div class="Pop-up__post-wrapper">
@@ -62,9 +62,9 @@ export const createPopUp = (post) => {
                 </a>
                 <footer class="Actions">
                     <div class="Actions__item_votes">
-                        <button type="submit" class="Votes__arrow_up"></button>
-                        <span>${post["votes"]}</span>
-                        <button type="submit" class="Votes__arrow_down"></button>
+                        <button type="submit" class="Arrow-up"></button>
+                        <span>${kFormatter(parseInt(post["votes"]))}</span>
+                        <button type="submit" class="Arrow-down"></button>
                     </div>
                     <div class="Actions__item_disabled">
                         <span class="Actions__icon_comment"><i class="fas fa-comment-alt"></i></span>
@@ -226,8 +226,8 @@ export const createComment = (parent, comment, child) => {
     let commentDate = timeSince(new Date(comment["date"])) + " ago";
     el.innerHTML = `
                 <div class="Comment__votes">
-                    <button type="submit" class="Votes__arrow_up"></button>
-                    <button type="submit" class="Votes__arrow_down"></button>
+                    <button type="submit" class="Arrow-up"></button>
+                    <button type="submit" class="Arrow-down"></button>
                     <div class="Comment__line"></div>
 
                 </div>
