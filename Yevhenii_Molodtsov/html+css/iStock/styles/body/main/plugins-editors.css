@@ -2,12 +2,14 @@
     background-color: #DCE1E1;
     /*position: absolute;*/
     width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    display: grid;
+    /*flex-flow: row wrap;*/
+    /*justify-content: center;*/
+    grid-template-columns: 1fr 1fr 1fr;
     padding-bottom: 3rem;
     padding-top: 3rem;
     margin-bottom: 3rem;
+    /*padding-left: 1rem;*/
 }
 
 .plugins-photos_brightness_70 {
@@ -19,7 +21,12 @@
     position: relative;
     max-width: 23rem;
     height: 26.5rem;
-    margin: 1rem 1%;
+    margin: 1rem 1% 1rem 1%;
+    flex-grow: 10;
+}
+
+.plugin_first-block{
+    margin: 1rem 1% 1rem 5%;
 }
 
 .plugin_first-block h3, h4, h5 {
@@ -32,14 +39,14 @@
 .plugin__h3 {
     color: white;
     font-weight: 500;
-    font-size: 2.1rem;
+    font-size: 2vw;
     top: 5rem;
 }
 
 .plugin__h4 {
     color: #FFD900;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1.5vw;
 }
 
 .plugin__h4_first {
@@ -53,7 +60,7 @@
 .plugin__h5 {
     color: white;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1.2vw;
     top: 15.2rem
 }
 
@@ -77,4 +84,40 @@
     font-weight: 300;
     font-size: 1rem;
     margin-right: 1rem;
+}
+
+.plugins-photos_girl{
+
+    height: 100%;
+}
+
+.img-wrapper_girl{
+    height: 100%;
+}
+
+@media screen and (max-width: 640px){
+    .plugins-editors{
+        display: block;
+        width: 100%;
+    }
+
+    .plugin{
+        margin: 0 5% 5% 10%;
+        align-self: center;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .plugin__h3 {
+        font-size: 3vw;
+    }
+
+    .plugin__h4 {
+        font-size: 2vw;
+    }
+
+    .plugin__h5 {
+        font-size: 1.8vw;
+    }
 }

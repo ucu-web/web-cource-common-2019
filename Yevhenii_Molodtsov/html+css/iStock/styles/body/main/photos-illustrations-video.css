@@ -14,6 +14,10 @@
     color: #02886d;
 }
 
+.plugins-photos{
+    max-width: 100%;
+}
+
 .plugins-editors a:hover .plugins-photos{
     transform: scale(1.05);
     opacity: 0.8;

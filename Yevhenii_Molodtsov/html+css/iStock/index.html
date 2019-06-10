@@ -16,7 +16,9 @@
     <link href="styles/body/footer/footer.css" rel="stylesheet" type="text/css">
     <link href="styles/style.css" rel="stylesheet" type="text/css">
 
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="styles/body/header/header.js" type="text/javascript"></script>
+
 </head>
 <body id="body">
 <header class="header">
@@ -38,7 +40,11 @@
         </ul>
     </nav>
     <a class="image-link" href="index.html">
-        <img class="image-link__logo" src="sources/istock_logo.png" alt="IStock logo">
+        <img srcset="sources/_25_percentage/istock_logo.png 750w,
+                     sources/_50_percentage/istock_logo.png 500w,
+                     sources/_75_percentage/istock_logo.png 250w"
+             class="image-link__logo" src="sources/_0_percentage/istock_logo.png"
+             alt="IStock logo">
     </a>
     <ul class="navigation navigation_normal">
         <li class="navigation__item navigation__item_right-border"><a href="#">Pricing</a></li>
@@ -48,7 +54,10 @@
                 Boards</a>
         </li>
         <li class="navigation__item navigation__item_wide"><a href="#" class="white-text">
-            <img class="navigation__person-icon" src="sources/person-icon.png" alt="person icon">
+            <img srcset="sources/_25_percentage/person-icon.png 169w,
+                     sources/_50_percentage/person-icon.png 113w,
+                     sources/_75_percentage/person-icon.png 56w"
+                 class="navigation__person-icon" src="sources/_0_percentage/person-icon.png" alt="person icon">
             Account</a>
         </li>
         <li class="navigation__item navigation__item_thin">
@@ -68,20 +77,33 @@
 </header>
     <main class="main" id="main">
         <section class="search">
-            <div class="search-bar">
+            <img srcset="sources/_25_percentage/nature.png 1440w,
+                                     sources/_50_percentage/nature.png 960w,
+                                     sources/_75_percentage/nature.png 480w"
+                 class="bg-image" src="sources/_0_percentage/nature.png" alt="background image">
+            <div class="search-bar" id="search-header">
                 <form class="search-form">
                     <button class="submit" type="submit">
-                        <img class="image_search-picture" src="sources/search.png" alt="search image">
+                        <img srcset="sources/_25_percentage/search.png 640w,
+                                     sources/_50_percentage/search.png 427w,
+                                     sources/_75_percentage/search.png 214w"
+                             class="image_search-picture" src="sources/_0_percentage/search.png" alt="search image">
                     </button>
                     <input class="search-form__search" type="search" aria-label="search images"
                            placeholder="Find the perfect stock photos, vectors and more...">
                 </form>
                 <button class="submit submit_search" type="submit">
-                    <img class="image_camera-picture" src="sources/camera.png" alt="search image">
+                    <img srcset="sources/_25_percentage/camera.png 700w,
+                                     sources/_50_percentage/camera.png 467w,
+                                     sources/_75_percentage/camera.png 233w"
+                         class="image_camera-picture" src="sources/_0_percentage/camera.png" alt="search image">
                 </button>
                 <div class="media-filter">
                     <span class="media-filter__images-span">Images</span>
-                    <img class="media-filter__arrow-down" src="sources/arrow-down.png" alt="available images">
+                    <img srcset="sources/_25_percentage/arrow-down.png 38w,
+                                     sources/_50_percentage/arrow-down.png 25w,
+                                     sources/_75_percentage/arrow-down.png 13w"
+                         class="media-filter__arrow-down" src="sources/_0_percentage/arrow-down.png" alt="available images">
                 </div>
             </div>
             <div class="search__plans-and-pricing">
@@ -98,25 +120,37 @@
                 <div class="content-wrapper">
                     <a href="#">
                         <div class="content-block">
-                            <img alt="Photos" class="content-block-img" src="sources/r1.jpg">
+                            <img srcset="sources/_25_percentage/r1.jpg 202w,
+                                     sources/_50_percentage/r1.jpg 135w,
+                                     sources/_75_percentage/r1.jpg 67w"
+                                 alt="Photos" class="content-block-img" src="sources/_0_percentage/r1.jpg">
                             <h3>Photos</h3>
                         </div>
                     </a>
                     <a href="#">
                         <div class="content-block">
-                            <img class="content-block-img" src="sources/r2.jpg" alt="Illustrations">
+                            <img srcset="sources/_25_percentage/r2.jpg 202w,
+                                     sources/_50_percentage/r2.jpg 135w,
+                                     sources/_75_percentage/r2.jpg 67w"
+                                 class="content-block-img" src="sources/_0_percentage/r2.jpg" alt="Illustrations">
                             <h3>Illustrations</h3>
                         </div>
                     </a>
                     <a href="#">
                         <div class="content-block">
-                            <img class="content-block-img" src="sources/r3.jpg" alt="Vectors">
+                            <img srcset="sources/_25_percentage/r3.jpg 202w,
+                                     sources/_50_percentage/r3.jpg 135w,
+                                     sources/_75_percentage/r3.jpg 67w"
+                                 class="content-block-img" src="sources/_0_percentage/r3.jpg" alt="Vectors">
                             <h3>Vectors</h3>
                         </div>
                     </a>
                     <a href="#">
                         <div class="content-block">
-                            <img class="content-block-img" src="sources/r4.jpg" alt="HD and 4K video">
+                            <img srcset="sources/_25_percentage/r4.jpg 202w,
+                                     sources/_50_percentage/r4.jpg 135w,
+                                     sources/_75_percentage/r4.jpg 67w"
+                                 class="content-block-img" src="sources/_0_percentage/r4.jpg" alt="HD and 4K video">
                             <h3>HD and 4K video</h3>
                         </div>
                     </a>
@@ -126,7 +160,10 @@
                     <a href="#">
                         <div class="content-themes-block">
                             <div class="img-wrapper">
-                                <img class="content-themes-img" src="sources/t1.jpg" alt="Vectors">
+                                <img srcset="sources/_25_percentage/t1.jpg 335w,
+                                            sources/_50_percentage/t1.jpg 223w,
+                                            sources/_75_percentage/t1.jpg 111w"
+                                     class="content-themes-img" src="sources/_0_percentage/t1.jpg" alt="Vectors">
                             </div>
                             <h3>Best of lifestyle</h3>
                         </div>
@@ -134,7 +171,10 @@
                     <a href="#">
                         <div class="content-themes-block">
                             <div class="img-wrapper">
-                                <img class="content-themes-img" src="sources/t2.jpg" alt="Vectors">
+                                <img srcset="sources/_25_percentage/t2.jpg 335w,
+                                            sources/_50_percentage/t2.jpg 223w,
+                                            sources/_75_percentage/t2.jpg 111w"
+                                     class="content-themes-img" src="sources/_0_percentage/t2.jpg" alt="Vectors">
                             </div>
                             <h3>Real business</h3>
                         </div>
@@ -142,7 +182,10 @@
                     <a href="#">
                         <div class="content-themes-block">
                             <div class="img-wrapper">
-                                <img class="content-themes-img" src="sources/t3.jpg" alt="Vectors">
+                                <img srcset="sources/_25_percentage/t3.jpg 335w,
+                                            sources/_50_percentage/t3.jpg 223w,
+                                            sources/_75_percentage/t3.jpg 111w"
+                                     class="content-themes-img" src="sources/_0_percentage/t3.jpg" alt="Vectors">
                             </div>
                             <h3>Natural world</h3>
                         </div>
@@ -150,7 +193,10 @@
                     <a href="#">
                         <div class="content-themes-block">
                             <div class="img-wrapper">
-                                <img class="content-themes-img" src="sources/t4.jpg" alt="Vectors">
+                                <img srcset="sources/_25_percentage/t4.jpg 335w,
+                                            sources/_50_percentage/t4.jpg 223w,
+                                            sources/_75_percentage/t4.jpg 111w"
+                                     class="content-themes-img" src="sources/_0_percentage/t4.jpg" alt="Vectors">
                             </div>
                             <h3>Animal friends</h3>
                         </div>
@@ -158,7 +204,10 @@
                     <a href="#" id="fifth-block">
                         <div class="content-themes-block">
                             <div class="img-wrapper">
-                                <img class="content-themes-img" src="sources/t5.jpg" alt="Vectors">
+                                <img srcset="sources/_25_percentage/t5.jpg 335w,
+                                            sources/_50_percentage/t5.jpg 223w,
+                                            sources/_75_percentage/t5.jpg 111w"
+                                     class="content-themes-img" src="sources/_0_percentage/t5.jpg" alt="Vectors">
                             </div>
                             <h3>Vector illustration: Illustrations we <span class="heart">❤</span></h3>
                         </div>
@@ -203,16 +252,22 @@
                         <h4 class="plugin__h4 plugin__h4_first">YOU CAN'T BE WHAT</h4>
                         <h4 class="plugin__h4 plugin__h4_second">YOU CAN'T SEE</h4>
                         <h5 class="plugin__h5">#LEANIN</h5>
-                        <div class="img-wrapper">
-                            <img alt="Photos" class="plugins-photos plugins-photos_brightness_70"
-                                 src="sources/running_girl.jpg">
+                        <div class="img-wrapper img-wrapper_girl">
+                            <img srcset="sources/_25_percentage/running_girl.jpg 276w,
+                                            sources/_50_percentage/running_girl.jpg 184w,
+                                            sources/_75_percentage/running_girl.jpg 92w"
+                                 alt="Photos" class="plugins-photos plugins-photos_brightness_70 plugins-photos_girl"
+                                 src="sources/_0_percentage/running_girl.jpg">
                         </div>
                     </article>
                 </a>
                 <a href="#">
                     <article class="plugin plugin_block">
                         <div class="img-wrapper">
-                            <img alt="Photos" class="plugins-photos" src="sources/computer_1.jpg">
+                            <img srcset="sources/_25_percentage/computer_1.jpg 276w,
+                                            sources/_50_percentage/computer_1.jpg 184w,
+                                            sources/_75_percentage/computer_1.jpg 92w"
+                                 alt="Photos" class="plugins-photos" src="sources/_0_percentage/computer_1.jpg">
                         </div>
                         <h4>Adobe plugin</h4>
                         <h6>Design faster with our new plugin for Adobe Photoshop®, Illustrator® and InDesign® CC
@@ -223,7 +278,10 @@
                 <a href="#">
                     <article class="plugin plugin_block">
                         <div class="img-wrapper">
-                            <img alt="Photos" class="plugins-photos" src="sources/computer_2.jpg">
+                            <img srcset="sources/_25_percentage/computer_2.jpg 276w,
+                                            sources/_50_percentage/computer_2.jpg 184w,
+                                            sources/_75_percentage/computer_2.jpg 92w"
+                                 alt="Photos" class="plugins-photos" src="sources/_0_percentage/computer_2.jpg">
                         </div>
                         <h4>Design like a pro with iStock Editor</h4>
                         <h6>Edit your image by cropping and resizing, adding text, uploading logos and applying
@@ -236,21 +294,30 @@
                 <div class="content-wrapper">
                     <a href="#">
                         <div class="content-block">
-                            <img alt="Photos" class="content-block-img content-block-img_width_22"
-                                 src="sources/girl_with_phone.jpg">
+                            <img srcset="sources/_25_percentage/girl_with_phone.jpg 536w,
+                                            sources/_50_percentage/girl_with_phone.jpg 356w,
+                                            sources/_75_percentage/girl_with_phone.jpg 179w"
+                                 alt="Photos" class="content-block-img content-block-img_width_22"
+                                 src="sources/_0_percentage/girl_with_phone.jpg">
                             <h3>Free photo</h3>
                         </div>
                     </a>
                     <a href="#">
                         <div class="content-block">
-                            <img class="content-block-img content-block-img_width_22" src="sources/boots_umbrellas.jpg"
+                            <img srcset="sources/_25_percentage/boots_umbrellas.jpg 536w,
+                                            sources/_50_percentage/boots_umbrellas.jpg 356w,
+                                            sources/_75_percentage/boots_umbrellas.jpg 179w"
+                                 class="content-block-img content-block-img_width_22" src="sources/_0_percentage/boots_umbrellas.jpg"
                                  alt="Illustrations">
                             <h3>Free illustration</h3>
                         </div>
                     </a>
                     <a href="#">
                         <div class="content-block">
-                            <img class="content-block-img content-block-img_width_22" src="sources/grandmas.jpg"
+                            <img srcset="sources/_25_percentage/grandmas.jpg 536w,
+                                            sources/_50_percentage/grandmas.jpg 356w,
+                                            sources/_75_percentage/grandmas.jpg 179w"
+                                 class="content-block-img content-block-img_width_22" src="sources/_0_percentage/grandmas.jpg"
                                  alt="Vectors">
                             <h3>Free video clip</h3>
                         </div>
