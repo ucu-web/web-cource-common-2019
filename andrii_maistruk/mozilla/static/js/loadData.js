@@ -1,6 +1,6 @@
 import {loadPosts, loadReadings} from "./utils.js";
 
-let loadData = () => {
+export let loadData = () => {
     fetch("http://localhost:1337/posts").then(res => res.json()).then(data => {
         loadPosts(data);
     }).catch(() => {
@@ -16,5 +16,3 @@ let loadData = () => {
         })
     });
 };
-
-loadData();

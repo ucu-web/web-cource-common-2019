@@ -27,7 +27,9 @@ import "../styles/newsletter/__form/newsletter__form.css";
 // top-navigation-bar
 import "../styles/top-navigation-bar/top-navigation-bar.css";
 // js
-import "./loadData.js";
+import {loadData} from "./loadData.js";
 
 export let showDetails = require("./form.js");
 export let formatInput = require("./formatInput.js");
+
+loadData();
