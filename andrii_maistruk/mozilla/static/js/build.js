@@ -29,5 +29,5 @@ import "../styles/top-navigation-bar/top-navigation-bar.css";
 // js
 import "./loadData.js";
 
-export let show_details = require("./form.js");
-export let format_input = require("./formatInput.js");
+export let showDetails = require("./form.js");
+export let formatInput = require("./formatInput.js");
