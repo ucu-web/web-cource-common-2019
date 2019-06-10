@@ -35,7 +35,7 @@ export function drawBezierCurve(div, points, time) {
 
 function getBezierPath(div, points) {
     let pathData = [];
-    for (let t = 0; t <= 1.001; t += .01) {
+    for (let t = 0; t <= 1.001; t += .001) {
         pathData.push(bezierCurvePoint(div, points, t));
     }
     return pathData;
