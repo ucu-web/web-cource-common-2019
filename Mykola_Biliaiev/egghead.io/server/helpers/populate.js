@@ -40,8 +40,8 @@ const generateData = async () => {
     let courses_per_user = 3;
     let lessons_per_user = 3;
     const users = await generateRandomUsers(users_amount);
-    const random_courses = await Promise.all(users.map(async (user) => await generateRandomCourse(courses_per_user, user["_id"])));
-    const random_lessons = await Promise.all(users.map(async (user) => await generateRandomLessons(lessons_per_user, user["_id"])));
+    await Promise.all(users.map(async (user) => await generateRandomCourse(courses_per_user, user["_id"])));
+    await Promise.all(users.map(async (user) => await generateRandomLessons(lessons_per_user, user["_id"])));
     process.exit()
 };
 generateData();

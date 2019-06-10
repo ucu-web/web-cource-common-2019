@@ -27,12 +27,20 @@ courses.post('/', passport.authenticate('jwt', (session = false)), async (req, r
 courses.delete('/', passport.authenticate('jwt', (session = false)), async (req, res) => {
         try {
             let course = await Course.findByIdAndRemove(req.user["_id"]);
-            res.status(202).send(course);
+            course ? res.status(202).send(course) : res.status(404).send("Id Does Not exist")
         } catch (error) {
             res.status(500).send(error);
         }
     },
 );
-
+courses.put('/', passport.authenticate('jwt', (session = false)), async (req, res) => {
+        try {
+            let course = await Course.findByIdAndUpdate(req.user["_id"], req.body);
+            course ? res.status(202).send(course) : res.status(404).send("Id Does Not exist")
+        } catch (error) {
+            res.status(500).send(error);
+        }
+    },
+);
 
 module.exports = courses;

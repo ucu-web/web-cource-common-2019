@@ -1,4 +1,4 @@
-import "./main.scss";
+import "./Registration.scss";
 import Registration from "./Registration";
 
 export default Registration;

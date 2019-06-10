@@ -7,6 +7,9 @@ const api = require("./routes/api");
 const auth = require("./routes/auth");
 const bodyParser = require("body-parser");
 const passport = require("./auth").passport;
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json');
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 const PORT = process.env.PORT||3000;
 
 app.use(passport.initialize());

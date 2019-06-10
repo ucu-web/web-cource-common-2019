@@ -34,13 +34,13 @@ class CourseBigBlock extends Component {
         this.container.innerHTML = ``;
         new CourseCart(this.container, this.data["_id"]);
         this.container.innerHTML += `
-      <div class="course-content-regular">
-          <ul class="${b("list")}">
-            ${store.state.allLessons.data
-            .filter(item => this.data.lessons.indexOf(item["_id"]))
-            .map(item => CourseBigBlock.addContent(item.name))
-            .join("")}
-            </ul>
+            <div class="course-content-regular">
+                <ul class="${b("list")}">
+                    ${store.state.allLessons.data
+                    .filter(item => this.data.lessons.indexOf(item["_id"]))
+                    .map(item => CourseBigBlock.addContent(item.name))
+                    .join("")}
+                </ul>
             </div>
 
             `

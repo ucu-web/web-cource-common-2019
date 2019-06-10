@@ -4,7 +4,6 @@ const passport = require('passport');
 const lessons = express.Router();
 
 
-
 lessons.get('/', passport.authenticate('jwt', (session = false)), async (req, res) => {
     try {
         let data = await Lesson.find().exec();
@@ -31,6 +30,15 @@ lessons.delete('/', passport.authenticate('jwt', (session = false)), async (req,
         try {
             let lesson = await Lesson.findByIdAndRemove(req.user["_id"]);
             res.status(202).send(lesson);
+        } catch (error) {
+            res.status(500).send(error);
+        }
+    },
+);
+lessons.put('/', passport.authenticate('jwt', (session = false)), async (req, res) => {
+        try {
+            let lesson = await Lesson.findByIdAndUpdate(req.user["_id"], req.body);
+            res.status(201).send(lesson);
         } catch (error) {
             res.status(500).send(error);
         }

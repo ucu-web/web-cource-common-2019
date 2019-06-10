@@ -8,7 +8,14 @@ $main-grey: #141618;
 .stats-and-remainders {
   background-color: $main-dark;
   padding: 50px 0;
-
+  &__loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    height: 500px;
+    background-color: blueviolet;
+  }
   &__header {
     padding-bottom: 15px;
     color: #f8f8f8;

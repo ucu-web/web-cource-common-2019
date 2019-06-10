@@ -13,7 +13,6 @@ export const getAllCourses = async store => {
     try {
         let endpoint = "/api/courses";
         store.dispatch(getAllCoursesStartAction, {});
-
         const response = await fetch(endpoint, {
             method: "get",
             headers: {Authorization: "bearer " + get_token()}

@@ -1,3 +1,3 @@
-import "./main.scss";
+import "./NavBar.scss";
 
 export { default } from "./NavBar";

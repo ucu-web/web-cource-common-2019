@@ -4,6 +4,7 @@ import Component from "../../helpers/lib/component";
 import store from "../../helpers/store";
 import {getAllCourses, getAllLessons} from "../../helpers/actions/api";
 import {CheckAction} from "../../helpers/CheckAction";
+import {loading} from "../Loading/Loading";
 
 const b = bem("publications");
 
@@ -24,11 +25,13 @@ class Publishments extends Component {
     }
 
     render() {
-        this.container.className = `${b()}`;
-        this.container.innerHTML = `
+        this.container.appendChild(loading());
+        if (store.state.allCourses.fetched) {
+            this.container.className = `${b()}`;
+            this.container.innerHTML = `
         <div class="${b(
-            "wrapper"
-        )}">
+                "wrapper"
+            )}">
             <div class="publications__header">
                 <div class="publications__header-label">
                     <span class="${b("header-label-title")}">
@@ -48,11 +51,12 @@ class Publishments extends Component {
         <div class="${b("list")}">
         </div>
 `;
-        let allCourses = store.state.allCourses;
-        let elem = this.container.getElementsByClassName(b("list"))[0];
-        allCourses.fetched
-            ? allCourses.data.map((item,index) => new CourseCart(elem, item["_id"], index))
-            : null;
+            let allCourses = store.state.allCourses;
+            let elem = this.container.getElementsByClassName(b("list"))[0];
+            allCourses.fetched
+                ? allCourses.data.map((item, index) => new CourseCart(elem, item["_id"], index))
+                : null;
+        }
     }
 }
 

@@ -1,2 +1,2 @@
-import "./main.scss";
+import "./StatsAndRemainders.scss";
 export { default } from "./StatsAndRemainders";

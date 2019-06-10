@@ -61,7 +61,7 @@ auth_router.post("/login", async (req, res) => {
         );
         return res.status(200).send({access_token, user});
     } catch (e) {
-        res.status(500).send(e)
+        return res.status(500).send(e)
     }
 });
 

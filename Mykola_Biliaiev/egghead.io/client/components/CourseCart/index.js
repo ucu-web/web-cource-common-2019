@@ -1,2 +1,2 @@
-import "./main.scss";
+import "./CourseCart.scss";
 export { default } from "./CourseCart";

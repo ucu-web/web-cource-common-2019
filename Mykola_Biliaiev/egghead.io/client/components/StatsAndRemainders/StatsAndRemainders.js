@@ -6,6 +6,7 @@ import CourseBigBlock from "../CourseBigBlock/CourseBigBlock";
 import {getAllCourses, getAllLessons} from "../../helpers/actions/api";
 import {CheckAction} from "../../helpers/CheckAction";
 import {getAllUsers} from "../../helpers/actions/auth";
+import loading from "../Loading/";
 
 const b = bem("stats-and-remainders");
 
@@ -16,7 +17,7 @@ export default class StatsAndRemainders extends Component {
             store
         });
         this.container = container;
-        this.container.className = b();
+
         app.appendChild(this.container);
         StatsAndRemainders.dispatchAll();
     }
@@ -31,12 +32,15 @@ export default class StatsAndRemainders extends Component {
         let lessons = store.state.allLessons;
         let data = store.state.allCourses;
         this.container.innerHTML = "";
-        if (data.fetched && lessons.fetched) {
+        this.container.appendChild(loading());
+        if (data.fetched && lessons.fetched ) {
+            this.container.innerHTML = "";
             data = data.data[0];
+            this.container.className = b();
             this.container.innerHTML += `<div class="${b(
                 "wrapper"
             )} ">
-                    <div class="course-big-block">
+                    <div class="course-big-block course-big-block--full-width">
                     <span class="${b("header")}">
                     CONTINUE WATCHING
                     </span>

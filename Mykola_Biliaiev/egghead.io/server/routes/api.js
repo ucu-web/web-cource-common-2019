@@ -5,4 +5,5 @@ const api = express.Router();
 
 api.use("/courses", courses);
 api.use("/lessons", lessons);
+
 module.exports = api;

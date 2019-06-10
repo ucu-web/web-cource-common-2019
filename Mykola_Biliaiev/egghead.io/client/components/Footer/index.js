@@ -1,3 +1,3 @@
-import "./main.scss";
+import "./Footer.scss";
 
 export {default} from "./Footer";
