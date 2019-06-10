@@ -1,11 +1,10 @@
 import {lineGenerator} from "./functions";
 import {interpolateLab} from "d3";
 
-export function drawTangents(div, points, t, pointsNumber) {
+export function drawTangents(svg, points, t, pointsNumber) {
     if (points.length === 1) return;
 
-    let svg = div.select("svg");
-    let tangents = svg.select(".tangents");
+    let tangents = svg.select(".bezier-field__tangents");
 
     if (points.length === pointsNumber) tangents.selectAll("path").remove();
     let newPoints = [];
@@ -18,9 +17,9 @@ export function drawTangents(div, points, t, pointsNumber) {
     }
 
     tangents.append("path")
-        .attr("class", "tangents")
+        .attr("class", "bezier-field__tangent")
         .attr("d", lineGenerator(newPoints))
         .attr("stroke", interpolateLab("red", "blue")((newPoints.length - 1) / (pointsNumber - 1)));
 
-    drawTangents(div, newPoints, t, pointsNumber)
+    drawTangents(svg, newPoints, t, pointsNumber)
 }

@@ -1,47 +1,44 @@
 import {lineGenerator} from "./functions";
 import {easeLinear} from "d3";
 import {drawTangents} from "./drawTangents";
-import {changeFormula} from "./changeFormula"
 
-export function drawBezierCurve(div, points, time) {
-    let svg = div.select("svg");
+export function drawBezierCurve(svg, points, time) {
+    svg.selectAll(".bezier-field__bezier-path").remove();
 
-    svg.selectAll(".bezierPath").remove();
-
-    let path = getBezierPath(div, points);
+    let path = getBezierPath(svg, points);
 
     let line = svg.append("path")
-        .attr("class", "bezierPath")
+        .attr("class", "bezier-field__bezier-path")
         .attr("d", lineGenerator(path));
 
     // point that will move
     let lineHead;
 
     if (points.length === 1) {
-        lineHead = svg.append("g").attr("class", "lineHead").append("circle")
-            .attr("class", "lineHead")
+        lineHead = svg.append("circle")
+            .attr("class", "bezier-field__moving-point")
             .attr("cx", points[0][0])
             .attr("cy", points[0][1]);
     } else {
-        lineHead = svg.select("g.lineHead").select("circle")
+        lineHead = svg.select(".bezier-field__moving-point")
     }
 
     lineHead.transition()
         .duration(time)
         .ease(easeLinear)
-        .attrTween("cx", translateAlong(div, line, "x", points, true))
-        .attrTween("cy", translateAlong(div, line, "y", points, false));
+        .attrTween("cx", translateAlong(svg, line, "x", points, true))
+        .attrTween("cy", translateAlong(svg, line, "y", points, false));
 }
 
-function getBezierPath(div, points) {
+function getBezierPath(svg, points) {
     let pathData = [];
     for (let t = 0; t <= 1.001; t += .001) {
-        pathData.push(bezierCurvePoint(div, points, t));
+        pathData.push(bezierCurvePoint(points, t));
     }
     return pathData;
 }
 
-function bezierCurvePoint(div, points, t) {
+function bezierCurvePoint(points, t) {
 
     let n = points.length - 1;
     let currentBinomialCoefficient = 1;
@@ -59,21 +56,17 @@ function bezierCurvePoint(div, points, t) {
     return [x, y];
 }
 
-function translateAlong(div, linePath, coordinate, points, tangents = true) {
+function translateAlong(svg, linePath, coordinate, points, info = true) {
     let l = linePath.node().getTotalLength();
     return function (d, i, a) {
         return function (t) {
-            if (tangents) {
-                drawTangents(div, points, t, points.length);
-                changeFormula(div, points, t);
+            if (info) {
+                drawTangents(svg, points, t, points.length);
+                svg.select(".bezier-field__animation-time").text("t=" + t);
             }
 
-            let p = linePath.node().getPointAtLength(t * l);
-            if (coordinate === "x") {
-                return p.x;
-            } else {
-                return p.y;
-            }
+            let p = bezierCurvePoint(points, t);
+            return coordinate === "x" ? p[0] : p[1];
         }
     }
 }

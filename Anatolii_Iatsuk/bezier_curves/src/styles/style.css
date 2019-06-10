@@ -8,7 +8,7 @@ path {
 
 svg {
     width: 100%;
-    height: 90%;
+    height: 100%;
 }
 
 circle {
@@ -16,30 +16,30 @@ circle {
     stroke-width: 1.5;
 }
 
-.pointCircle {
+.point__circle {
     fill: green;
     r: 7;
 }
 
-.pointsConnector {
+.bezier-field__point-connector {
     stroke: blue;
     stroke-width: 1.5;
 }
 
-.bezierPath {
+.bezier-field__bezier-path {
     stroke-width: 1.5;
     stroke: red;
 }
 
-.timeLabel {
+.bezier-field__animation-time {
     font-size: 30px;
 }
 
-.lineHead {
+.bezier-field__moving-point {
     fill: red;
     r: 4;
 }
 
-.tangents {
+.bezier-field__tangent {
     stroke-width: 1.5;
 }

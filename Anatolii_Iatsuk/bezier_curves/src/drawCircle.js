@@ -1,8 +1,8 @@
-export function drawCircle(div, points, coordinates){
-    let point = div.select("svg").append("g").attr("id", "point-" + (points.length));
+export function drawCircle(svg, points, coordinates){
+    let point = svg.append("g").attr("class", "bezier-field__point");
 
     point.append("circle")
-        .attr("class", "pointCircle")
+        .attr("class", "point__circle")
         .attr("cx", coordinates[0])
         .attr("cy", coordinates[1]);
 

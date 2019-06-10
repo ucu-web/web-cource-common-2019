@@ -1,10 +1,9 @@
 import {lineGenerator} from "./functions.js"
 
-export function connectPoints(div, points) {
-    let svg = div.select("svg");
-    svg.select(".pointsConnector").remove();
+export function connectPoints(svg, points) {
+    svg.select(".bezier-field__point-connector").remove();
 
     svg.append("path")
-        .attr("class", "pointsConnector")
+        .attr("class", "bezier-field__point-connector")
         .attr("d", lineGenerator(points));
 }

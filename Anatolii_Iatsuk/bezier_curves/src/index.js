@@ -3,16 +3,14 @@ import {connectPoints} from "./connectPoints"
 import {drawBezierCurve} from "./drawBezierCurve"
 import {select, mouse} from "d3"
 
-let div = select("body").append("div").attr("class", "bezierCurves");
+let div = select("body").append("svg").attr("class", "bezier-field");
 createBezierCurves(div);
 
-function createBezierCurves(div) {
+function createBezierCurves(svg) {
     let w = 800,
         h = 500,
         padding = 30,
         points = [];
-
-    let svg = div.append("svg").attr("class", "bezierField");
 
     svg.attr("width", w + 2 * padding).attr("height", h + 2 * padding)
         .on('click', function () {
@@ -21,19 +19,17 @@ function createBezierCurves(div) {
 
             let time = points.length * 1000;
 
-            div.call(drawCircle, points, coordinates);
+            svg.call(drawCircle, points, coordinates);
 
-            div.call(connectPoints, points)
+            svg.call(connectPoints, points)
                 .call(drawBezierCurve, points, time)
         });
 
-    svg.append("g").attr("class", "tangents");
+    svg.append("g").attr("class", "bezier-field__tangents");
 
-    div.append("div").attr("class", "xForm").style("font-size", 14);
-    div.append("div").attr("class", "yForm").style("font-size", 14);
 
     svg.append("text")
-        .attr("class", "timeLabel")
+        .attr("class", "bezier-field__animation-time")
         .attr("x", w - padding)
         .attr("y", h - padding)
         .text("t=0");
