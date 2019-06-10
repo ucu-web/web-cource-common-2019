@@ -69,7 +69,7 @@ export default class Game {
     this.enemies.forEach(enemy => {
       if (enemy.canBeInteractedWith()) {
         if (!this.doodle.dead && doCollideBottom(this.doodle, enemy, duration)) {
-          if (enemy.canBeInteractedWith()) this.doodle.jump();
+          this.doodle.jump();
           enemy.hit();
         } else if (doCollide(this.doodle, enemy)) this.doodle.dead = true;
 
