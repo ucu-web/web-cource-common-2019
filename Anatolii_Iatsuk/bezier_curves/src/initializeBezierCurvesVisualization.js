@@ -24,6 +24,7 @@ export function initializeBezierCurvesVisualization(svg, points = []) {
     for (let p = 0; p < points.length; p++) {
         drawCircle(svg, points[p], p + 1);
     }
+
     // add animation
     renderNewPoints(svg);
 

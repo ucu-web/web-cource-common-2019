@@ -1,4 +1,4 @@
-import {line, drag, event, select} from "d3"
+import {line, select} from "d3"
 import {connectPoints} from "./connectPoints";
 import {drawCurve} from "./drawCurve";
 
@@ -20,26 +20,5 @@ export function getPoints(svg) {
         points.push([select(this).attr("cx"), select(this).attr("cy")]);
     });
 
-    return points
+    return points;
 }
-
-export let dragHandler = drag()
-    .on("drag", function () {
-        let x = event.x;
-        let y = event.y;
-
-        select(this).select("circle")
-            .attr("cx", x)
-            .attr("cy", y);
-
-        select(this).select(".point__number")
-            .attr("x", x + 10)
-            .attr("y", y);
-
-        select(this).select(".point__coordinates")
-            .attr("x", x + 10)
-            .attr("y", y + 15)
-            .text("(" + [x, y] + ")");
-
-        renderNewPoints(select(".bezier-field"))
-    });
