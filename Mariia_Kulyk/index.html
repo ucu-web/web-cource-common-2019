@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles/Layout.css">
+    <link rel="stylesheet" type="text/css" href="styles/copyright.css">
+    <link rel="stylesheet" type="text/css" href="styles/recomendations.css">
+    <link rel="stylesheet" type="text/css" href="styles/trends.css">
+    <link rel="stylesheet" type="text/css" href="styles/mainbar.css">
+    <link rel="stylesheet" type="text/css" href="styles/profile.css">
+    <link rel="stylesheet" type="text/css" href="styles/new-post.css">
+    <link rel="stylesheet" type="text/css" href="styles/newsfeed.css">
+    <link rel="stylesheet" type="text/css" href="styles/post.css">
+
+</head>
+<body class="Layout">
+<header class="Layout__mainbar">
+    <div class="mainbar">
+        <nav class="mainbar__navigation">
+            <a href="" aria-label="main" class="mainbar__navigation__link mainbar__navigation__link__active">
+                <svg
+                        class="mainbar__navigation__link__icon mainbar__navigation__link__icon_active"
+                        viewBox="0 0 24 24"
+                >
+                        <path
+                                d="M22.58 7.35L12.475 1.897a1 1 0 0 0-.95 0L1.425 7.35A1.002 1.002 0 0 0 1.9 9.231c.16 0 .324-.038.475-.12l.734-.396 1.59 11.25c.216 1.214 1.31 2.062 2.66 2.062h9.282c1.35 0 2.444-.848 2.662-2.088l1.588-11.225.737.398a1 1 0 0 0 .95-1.759zM12 15.435a3.25 3.25 0 1 1 0-6.5 3.25 3.25 0 0 1 0 6.5z"
+                        />
+                </svg>
+                <span>
+                Головна
+                </span></a>
+            <a href="" aria-label="notifications" class="mainbar__navigation__link">
+                <svg class="mainbar__navigation__link__icon" viewBox="0 0 24 24">
+
+                        <path
+                                d="M21.697 16.468c-.02-.016-2.14-1.64-2.103-6.03.02-2.532-.812-4.782-2.347-6.335C15.872 2.71 14.01 1.94 12.005 1.93h-.013c-2.004.01-3.866.78-5.242 2.174-1.534 1.553-2.368 3.802-2.346 6.334.037 4.33-2.02 5.967-2.102 6.03a.75.75 0 0 0 .447 1.353h4.92c.102 2.31 1.997 4.16 4.33 4.16s4.226-1.85 4.327-4.16h4.922c.322 0 .61-.206.71-.514a.747.747 0 0 0-.263-.838zM12 20.478a2.84 2.84 0 0 1-2.828-2.658h5.656c-.1 1.48-1.323 2.66-2.828 2.66zM4.38 16.32c.74-1.132 1.548-3.028 1.524-5.896-.018-2.16.644-3.982 1.913-5.267C8.91 4.05 10.397 3.437 12 3.43c1.603.008 3.087.62 4.18 1.728 1.27 1.285 1.933 3.106 1.915 5.267-.024 2.868.785 4.765 1.525 5.896H4.38z"
+                        />
+
+                </svg>
+                <span>Сповіщення</span></a>
+            <a href="" aria-label="messages" class="mainbar__navigation__link" id="messages">
+                <svg class="mainbar__navigation__link__icon" viewBox="0 0 24 24">
+                        <path
+                                d="M19.25 3.018H4.75A2.753 2.753 0 0 0 2 5.77v12.495a2.754 2.754 0 0 0 2.75 2.753h14.5A2.754 2.754 0 0 0 22 18.265V5.77a2.753 2.753 0 0 0-2.75-2.752zm-14.5 1.5h14.5c.69 0 1.25.56 1.25 1.25v.714l-8.05 5.367a.81.81 0 0 1-.9-.002L3.5 6.482v-.714c0-.69.56-1.25 1.25-1.25zm14.5 14.998H4.75c-.69 0-1.25-.56-1.25-1.25V8.24l7.24 4.83a2.265 2.265 0 0 0 2.52.001l7.24-4.83v10.022c0 .69-.56 1.25-1.25 1.25z"
+                        />
+                </svg>
+                <span>Повідомлення</span></a>
+
+        </nav>
+
+        <img src="images/twitter.png" datatype="png" class="mainbar__logo">
+        <div class="actions">
+            <form class="actions_search"><label>
+                <input class="actions_search_input" type="search" placeholder="Пошук у Твіттері">
+            </label>
+                <button class="actions__search__button">
+                    <svg
+                            class="actions__search__button__icon"
+                            aria-hidden="true"
+                            focusable="false"
+                            data-prefix="fal"
+                            data-icon="search"
+                            role="img"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"
+                    >
+                        <path
+                                fill="currentColor"
+                                d="M508.5 481.6l-129-129c-2.3-2.3-5.3-3.5-8.5-3.5h-10.3C395 312 416 262.5 416 208 416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c54.5 0 104-21 141.1-55.2V371c0 3.2 1.3 6.2 3.5 8.5l129 129c4.7 4.7 12.3 4.7 17 0l9.9-9.9c4.7-4.7 4.7-12.3 0-17zM208 384c-97.3 0-176-78.7-176-176S110.7 32 208 32s176 78.7 176 176-78.7 176-176 176z"
+                                class=""
+                        />
+                    </svg>
+                </button>
+            </form>
+            <button class="avatar actions__button"><img class="avatar actions__button__avatar"
+                                                        src="images/user_profile_image.jpg"
+                                                        alt="Марія Кулик"
+                                                        title="Профіль та налаштування"><a href=""></a></button>
+            <button class="twit_button"><span>Твітнути</span></button>
+        </div>
+    </div>
+</header>
+<div class="Layout_left-wrapper">
+    <aside class="profile general_style">
+        <a href=""><img src="images/user_profile_title.jpg" alt="cover_img" class="profile__cover"></a>
+        <a href=""><img class="profile__avatar avatar" src="images/user_profile_image.jpg"></a>
+        <div class="profile__name">
+            <a href=""><span class="profile__username">Марія Кулик</span></a>
+            <a href=""><span class="profile__nick">@mary_kulyk</span></a>
+        </div>
+        <div>
+            <a href="" title="1 твіт" class="profile__statistics"><span
+                    class="profile__statistics__title">Твіти</span><span
+                    class="profile__statistics__counter">1</span></a>
+            <a href="" title="30 людей" class="profile__statistics"><span
+                    class="profile__statistics__title">Читає</span><span
+                    class="profile__statistics__counter">30</span></a>
+            <a href="" title="1 твіт" class="profile__statistics"><span class="profile__statistics__title">Читачі</span><span
+                    class="profile__statistics__counter">4</span></a>
+        </div>
+    </aside>
+
+    <aside class="trends general_style">
+        <h3 class="Layout_trends_title">Тренди для вас</h3>
+        <span>· </span>
+        <a href="" class="Layout_trends_refresh">Змінити</a>
+        <ul class="Layout_trends_list">
+            <li><a href="" class="Layout_trends_trend"><span class="Layout__trends__topic">#Valentines</span><span
+                    class="Layout__trends__counter">Твітів: 58,1 тис.</span></a></li>
+            <li><a href="" class="Layout_trends_trend"><span class="Layout__trends__topic">#Valentines</span><span
+                    class="Layout__trends__counter">Твітів: 58,1 тис.</span></a></li>
+            <li><a href="" class="Layout_trends_trend"><span class="Layout__trends__topic">#Valentines</span><span
+                    class="Layout__trends__counter">Твітів: 58,1 тис.</span></a></li>
+            <li><a href="" class="Layout_trends_trend"><span class="Layout__trends__topic">#Valentines</span><span
+                    class="Layout__trends__counter">Твітів: 58,1 тис.</span></a></li>
+            <li><a href="" class="Layout_trends_trend"><span class="Layout__trends__topic">#Valentines</span><span
+                    class="Layout__trends__counter">Твітів: 58,1 тис.</span></a></li>
+            <li><a href="" class="Layout_trends_trend"><span class="Layout__trends__topic">#Valentines</span><span
+                    class="Layout__trends__counter">Твітів: 58,1 тис.</span></a></li>
+            <li><a href="" class="Layout_trends_trend"><span class="Layout__trends__topic">#Valentines</span><span
+                    class="Layout__trends__counter">Твітів: 58,1 тис.</span></a></li>
+            <li><a href="" class="Layout_trends_trend"><span class="Layout__trends__topic">#Valentines</span><span
+                    class="Layout__trends__counter">Твітів: 58,1 тис.</span></a></li>
+            <li><a href="" class="Layout_trends_trend"><span class="Layout__trends__topic">#Valentines</span><span
+                    class="Layout__trends__counter">Твітів: 58,1 тис.</span></a></li>
+            <li><a href="" class="Layout_trends_trend"><span class="Layout__trends__topic">#Valentines</span><span
+                    class="Layout__trends__counter">Твітів: 58,1 тис.</span></a></li>
+            <li><a href="" class="Layout_trends_trend"><span class="Layout__trends__topic">#Valentines</span><span
+                    class="Layout__trends__counter">Твітів: 58,1 тис.</span></a></li>
+        </ul>
+    </aside>
+</div>
+<main class="maincontent">
+    <section>
+        <form class="tweet-create">
+            <img src="images/user_profile_image.jpg" class="avatar tweet-create__avatar" style="float: left">
+            <label>
+                <input type="search" value="Що відбувається?" class="tweet-create__input">
+            </label>
+            <button type="file" class="tweet-create__gallery-button">
+                <svg class="tweet-create__gallery-button-icon" viewBox="0 0 24 24">
+                        <path
+                                d="M19.75 2H4.25C3.01 2 2 3.01 2 4.25v15.5C2 20.99 3.01 22 4.25 22h15.5c1.24 0 2.25-1.01 2.25-2.25V4.25C22 3.01 20.99 2 19.75 2zM4.25 3.5h15.5c.413 0 .75.337.75.75v9.676l-3.858-3.858a.75.75 0 0 0-.53-.22h-.003a.74.74 0 0 0-.532.224l-4.317 4.384-1.813-1.806a.75.75 0 0 0-.53-.22c-.193-.03-.395.08-.535.227L3.5 17.642V4.25c0-.413.337-.75.75-.75zm-.744 16.28l5.418-5.534 6.282 6.254H4.25a.75.75 0 0 1-.744-.72zm16.244.72h-2.42l-5.007-4.987 3.792-3.85 4.385 4.384v3.703c0 .413-.337.75-.75.75z"
+                        ></path>
+                        <circle cx="8.868" cy="8.309" r="1.542"></circle>
+                </svg>
+            </button>
+        </form>
+        <form>
+            <button class="new-tweets__button">Переглянути нові твіти</button>
+        </form>
+    </section>
+
+
+    <article class="post general_style">
+        <header>
+            <a href=""><img src="images/default_profile_image.png" class="avatar post__avatar"> </a>
+            <a href="">               <span class="post__nickname"
+            ><b class="post__username">Anastasia</b
+            >@nfdv</span></a>
+            <span>· </span>
+            <a href="">
+                <time datetime="2019-01-6T15:10:18+02:00" class="post__date">3 хв</time>
+            </a>
+            <button name="arrow" class="post__options"></button>
+        </header>
+        <span class="post__text">ТSanta Maria della Pace church in Rome, Italy</span>
+        <img src="images/post_image.jpg" class="post__image">
+        <footer class="post_bottom">
+            <button title="Відповісти"></button>
+            <button title="Ретвітнути"></button>
+            <button title="Вподобати"></button>
+            <button title="Приватне повідомлення"></button>
+        </footer>
+    </article>
+
+    <article class="post general_style">
+        <header>
+            <a href=""><img src="images/default_profile_image.png" class="avatar post__avatar"> </a>
+            <a href="">               <span class="post__nickname"
+            ><b class="post__username">Anastasia</b
+            >@nfdv</span></a>
+            <span>· </span>
+            <a href="">
+                <time datetime="2019-01-6T15:10:18+02:00" class="post__date">3 хв</time>
+            </a>
+            <button name="arrow" class="post__options"></button>
+        </header>
+        <span class="post__text">ТSanta Maria della Pace church in Rome, Italy</span>
+        <img src="images/post_image.jpg" class="post__image">
+        <footer class="post_bottom">
+            <button title="Відповісти"></button>
+            <button title="Ретвітнути"></button>
+            <button title="Вподобати"></button>
+            <button title="Приватне повідомлення"></button>
+        </footer>
+    </article>
+</main>
+
+<div class="Layout__right-wrapper">
+    <aside class="recommendations general_style">
+        <h3 class="recomendations__title">Рекомендовані</h3>
+        <span>· </span>
+        <button class="recomendations__update">Оновити</button>
+        <span>· </span>
+        <a href="" class="recomendations__all">Переглянути все</a>
+        <article class="recommendation">
+            <button class="recommendation__remove">
+                <svg
+                        class="recommendation__remove__icon"
+                        width="64"
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="64"
+                        viewBox="0 0 64 64"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        enable-background="new 0 0 64 64"
+                >
+                    <g>
+                        <path
+                                fill="#1D1D1B"
+                                d="M28.941,31.786L0.613,60.114c-0.787,0.787-0.787,2.062,0,2.849c0.393,0.394,0.909,0.59,1.424,0.59   c0.516,0,1.031-0.196,1.424-0.59l28.541-28.541l28.541,28.541c0.394,0.394,0.909,0.59,1.424,0.59c0.515,0,1.031-0.196,1.424-0.59   c0.787-0.787,0.787-2.062,0-2.849L35.064,31.786L63.41,3.438c0.787-0.787,0.787-2.062,0-2.849c-0.787-0.786-2.062-0.786-2.848,0   L32.003,29.15L3.441,0.59c-0.787-0.786-2.061-0.786-2.848,0c-0.787,0.787-0.787,2.062,0,2.849L28.941,31.786z"
+                        />
+                    </g>
+                </svg>
+            </button>
+            <a href=""><img src="images/recomendations_user_image.jpg" class="avatar recommendation__avatar">
+                <span class="recommendation__nickname"
+                ><b class="recommendation__username">Anastasia</b
+                >@nfdv</span>
+            </a>
+            <button class="recommendation_follow-button">Читати</button>
+        </article>
+        <article class="recommendation">
+            <button class="recommendation__remove">
+                <svg
+                        class="recommendation__remove__icon"
+                        width="64"
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="64"
+                        viewBox="0 0 64 64"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        enable-background="new 0 0 64 64"
+                >
+                    <g>
+                        <path
+                                fill="#1D1D1B"
+                                d="M28.941,31.786L0.613,60.114c-0.787,0.787-0.787,2.062,0,2.849c0.393,0.394,0.909,0.59,1.424,0.59   c0.516,0,1.031-0.196,1.424-0.59l28.541-28.541l28.541,28.541c0.394,0.394,0.909,0.59,1.424,0.59c0.515,0,1.031-0.196,1.424-0.59   c0.787-0.787,0.787-2.062,0-2.849L35.064,31.786L63.41,3.438c0.787-0.787,0.787-2.062,0-2.849c-0.787-0.786-2.062-0.786-2.848,0   L32.003,29.15L3.441,0.59c-0.787-0.786-2.061-0.786-2.848,0c-0.787,0.787-0.787,2.062,0,2.849L28.941,31.786z"
+                        />
+                    </g>
+                </svg>
+            </button>
+            <a href=""><img src="images/recomendations_user_image.jpg" class="avatar recommendation__avatar">
+                <span class="recommendation__nickname"
+                ><b class="recommendation__username">Anastasia</b
+                >@nfdv</span>
+            </a>
+            <button class="recommendation_follow-button">Читати</button>
+        </article>
+        <article class="recommendation">
+            <button class="recommendation__remove">
+                <svg
+                        class="recommendation__remove__icon"
+                        width="64"
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="64"
+                        viewBox="0 0 64 64"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        enable-background="new 0 0 64 64"
+                >
+                    <g>
+                        <path
+                                fill="#1D1D1B"
+                                d="M28.941,31.786L0.613,60.114c-0.787,0.787-0.787,2.062,0,2.849c0.393,0.394,0.909,0.59,1.424,0.59   c0.516,0,1.031-0.196,1.424-0.59l28.541-28.541l28.541,28.541c0.394,0.394,0.909,0.59,1.424,0.59c0.515,0,1.031-0.196,1.424-0.59   c0.787-0.787,0.787-2.062,0-2.849L35.064,31.786L63.41,3.438c0.787-0.787,0.787-2.062,0-2.849c-0.787-0.786-2.062-0.786-2.848,0   L32.003,29.15L3.441,0.59c-0.787-0.786-2.061-0.786-2.848,0c-0.787,0.787-0.787,2.062,0,2.849L28.941,31.786z"
+                        />
+                    </g>
+                </svg>
+            </button>
+            <a href=""><img src="images/recomendations_user_image.jpg" class="avatar recommendation__avatar">
+                <span class="recommendation__nickname"
+                ><b class="recommendation__username">Anastasia</b
+                >@nfdv</span>
+            </a>
+            <button class="recommendation_follow-button">Читати</button>
+        </article>
+        <span class="recommendations_find-friends">Знайдіть своїх друзів</span>
+    </aside>
+
+
+    <footer class="main_footer general_style">
+        <ul class="copyright">
+            <li class="copyright__text">© 2019 Твіттер</li>
+            <li class="copyright__text"><a href="" class="copyright__text">Твіттер</a></li>
+            <li class="copyright__text"><a href="" class="copyright__text">Про нас</a></li>
+            <li class="copyright__text"><a href="" class="copyright__text">Довідковий
+                центр</a>
+            </li>
+            <li class="copyright__text"><a href="" class="copyright__text">Умови</a></li>
+            <li class="copyright__text"><a href="" class="copyright__text">Політика
+                конфіденційності</a></li>
+            <li class="copyright__text"><a href="" class="copyright__text">Файли cookie</a>
+            </li>
+            <li class="copyright__text"><a href="" class="copyright__text">Рекламна
+                інформація</a>
+            </li>
+            <li class="copyright__text"><a href="" class="copyright__text">Бренд</a></li>
+            <li class="copyright__text"><a href="" class="copyright__text">Блог</a></li>
+            <li class="copyright__text"><a href="" class="copyright__text">Статус</a></li>
+            <li class="copyright__text"><a href="" class="copyright__text">Додатки</a></li>
+            <li class="copyright__text"><a href="" class="copyright__text">Вакансії</a></li>
+            <li class="copyright__text"><a href="" class="copyright__text">Marketing</a></li>
+            <li class="copyright__text"><a href="" class="copyright__text">Компанії</a></li>
+            <li class="copyright__text"><a href="" class="copyright__text">Розробники</a></li>
+
+        </ul>
+        <a href="" class="copyright__commercial">Рекламуйте у Твіттері</a>
+    </footer>
+</div>
+</body>
+</html><!DOCTYPE html>

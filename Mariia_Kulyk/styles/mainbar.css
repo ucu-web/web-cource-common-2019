@@ -1,0 +1,117 @@
+.actions_search{
+    position: relative;
+}
+
+.actions_search_input{
+    width:100%;
+    padding: 8px 37px 9px 15px;
+    box-sizing: border-box;
+    border-radius: 21px;
+    border: 1px solid #e6ecf0;
+    height: 32px;
+
+    font-size: 12px;
+    color: #14171a;
+    background-color: #f5f8fa;
+    line-height: 16px;
+}
+
+.mainbar__navigation{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.mainbar__navigation__link{
+    font-size: 13px;
+    font-weight: bold;
+    color: #66757f;
+    display:flex;
+    align-items: center;
+    padding: 0 14px 0 4px;
+    height: 100%;
+}
+
+.mainbar__logo{
+    max-height: 2em;
+    max-width: 2em;
+}
+
+
+.mainbar__navigation__link__icon{
+    height: 21px;
+    width: 21px;
+    margin-left: 10px;
+    margin-right: 3px;
+    fill: #66757f;
+}
+
+.mainbar__navigation__link__icon_active{
+    fill: #1c94e0;
+}
+
+.mainbar__navigation__link__active{
+    color: #1c94e0;
+    border-bottom: 2px solid #1c94e0;
+}
+
+.mainbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 46px;
+    margin: 0 auto;
+    max-width: 1190px;
+}
+
+.twit_button{
+    flex-grow: 0;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+    padding: 6px 16px;
+    text-align: center;
+
+    border-radius: 100px;
+    background-color: #4AB3F4;
+    border-color: transparent;
+    color: white;
+}
+
+.actions__button{
+    background: transparent;
+}
+.actions__button__avatar{
+    width: 32px;
+    height: 32px;
+    align-self: center;
+    justify-self: center;
+}
+
+.actions__search__button{
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    border-radius: 21px;
+    height: 26px;
+    width: 26px;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    cursor: pointer;
+}
+
+
+.actions__search__button__icon{
+    height: 18px;
+    width: 18px;
+    color: #66757f;
+}
+
+.actions{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}

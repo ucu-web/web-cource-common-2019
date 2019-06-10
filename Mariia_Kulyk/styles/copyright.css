@@ -1,0 +1,20 @@
+.copyright__text{
+    display: inline-block;
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-size: 12px;
+    color: #657786;
+}
+
+.copyright{
+    padding: 10px;
+    border-bottom: 1px solid;
+    border-color: #e6ecf0;
+    margin: 0;
+}
+
+.copyright__commercial{
+    font-size: 12px;
+    color: #1DA1F2;
+    margin: 15px;
+    display: block;
+}

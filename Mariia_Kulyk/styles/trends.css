@@ -1,0 +1,41 @@
+.Layout__trends__topic{
+    display: block;
+    color: #1DA1F2;
+    font-weight: bold;
+    font-size: 14px;
+
+}
+.Layout__trends__counter{
+    display:block;
+    color: #657786;
+    font-size: 12px;
+}
+
+.Layout_trends_trend{
+    display: block;
+    padding: 5px;
+
+}
+
+.Layout_trends_title{
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+
+}
+
+.Layout_trends_refresh{
+    color: #1DA1F2;
+    font-size: 12px;
+}
+
+.Layout_trends_list{
+    padding: 0;
+    margin-top: 10px;
+}
+
+.trends{
+    padding: 15px;
+}

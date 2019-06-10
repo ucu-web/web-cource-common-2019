@@ -1,0 +1,61 @@
+.maincontent{
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.new-tweets__button{
+    width: 100%;
+    background-color: #f5f8fa;
+    border: transparent;
+    border-bottom: 1px solid #e6ecf0;
+    border-top: 1px solid #e6ecf0;
+    font-size: 14px;
+    color: #1DA1F2;
+    padding: 10px 1px;
+}
+
+
+.tweet-create {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    background-color: #E8F5FD;
+    overflow: auto;
+}
+
+.tweet-create__input{
+    border: 1px solid #c6e7fb;
+    border-radius: 8px;
+    font-size: 14px;
+    height: 36px;
+    margin-left: 10px;
+    color: #0097dd;
+    width: 490px;
+    padding-left: 8px;
+}
+
+.tweet-create__gallery-button {
+    bottom: 2px;
+    position: relative;
+    right: 15px;
+    margin: 0 0 0 -20px;
+    padding: 0;
+    background: #ffffff;
+    border: none;
+    width: 20px;
+    height: 20px;
+}
+
+.tweet-create__gallery-button-icon{
+    fill:#1c94e0;
+}
+
+.tweet-create__avatar{
+    width: 32px;
+    height: 32px;
+}
+
+.tweet-create{
+    padding: 10px 12px;
+}
+

@@ -1,0 +1,93 @@
+.recomendations__update{
+    display: inline-block;
+    background-color: transparent;
+    box-shadow: none;
+    border: 0;
+    color: #1c94e0;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.recomendations__all{
+    display: inline-block;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 1;
+    color: #1c94e0;
+    margin: 0;
+}
+.recomendations__title{
+    display: inline-block;
+    margin: 0;
+}
+.recommendations{
+    padding: 15px;
+}
+
+.recommendation{
+    border-bottom: 1px solid #e6ecf0;
+    padding-bottom: 8px;
+    min-height: 48px;
+    margin-top: 10px;
+}
+
+.recommendation_follow-button{
+    flex-grow: 0;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 4px 12px;
+    margin: 5px;
+
+    border-radius: 100px;
+    background-color: white;
+    border:1px solid #1DA1F2;
+    color: #1DA1F2;
+}
+
+.recommendation__remove{
+    float: right;
+    background: transparent;
+    border: 0;
+}
+
+.recommendation__remove__icon{
+    height: 6px;
+    width: 6px;
+    fill: #ccd6dd;
+}
+
+.recommendation__avatar{
+    float: left;
+}
+
+.recommendation__username{
+    color: #14171a;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin:5px;
+}
+
+.recommendation__nickname{
+    font-size: 14px;
+    color: #657786;
+    margin: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: normal;
+}
+
+.recommendations_find-friends{
+    font-size: 12px;
+    color: #1DA1F2;
+    margin: 15px;
+    display: block;
+}

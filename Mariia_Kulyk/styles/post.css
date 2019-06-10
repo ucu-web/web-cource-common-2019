@@ -1,0 +1,59 @@
+.post__username{
+    color: #14171a;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin:5px;
+
+}
+
+.post__nickname{
+    font-size: 14px;
+    color: #657786;
+    margin: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: normal;
+}
+
+.post{
+    padding: 15px;
+}
+
+.post__options{
+    float: right;
+}
+
+.post__date{
+    font-size: 14px;
+    color: #657786;
+    margin: 5px;
+}
+
+.post__text{
+    margin: 5px;
+}
+
+
+.post__image{
+    max-height: 506px;
+    max-width: 506px;
+    margin-left: 56px;
+    border-radius: 12px;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    vertical-align: top;
+    width: 100%;
+}
+
+.post__avatar{
+    float: left;
+    margin: 3px;
+}
+
+.post_bottom {
+    display: inline-block;
+}
