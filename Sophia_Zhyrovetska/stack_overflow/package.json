@@ -5,15 +5,19 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx webpack --watch"
+    "webpack-watch": "npx webpack --watch",
+    "server-watch": "npx nodemon ./server/app.js",
+    "start": "concurrently \"npm run webpack-watch\" \"npm run server-watch\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "concurrently": "^4.1.0",
     "css-loader": "^2.1.1",
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
+    "nodemon": "^1.19.1",
     "style-loader": "^0.23.1",
     "webpack": "^4.30.0",
     "webpack-cli": "^3.3.0"
