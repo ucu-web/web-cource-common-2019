@@ -1,4 +1,4 @@
-export const friendsRepository = (user, repository) => {
+export const friendsRepositoryModel = (repository) => {
     const rootEl = document.createElement("article");
     rootEl.className = "News News--underscored";
 
@@ -8,7 +8,7 @@ export const friendsRepository = (user, repository) => {
                 </a>
                 <div class="News__content">
                     <p class="News__post-info">
-                        <a class="News__post-info-link" href="#">${user.login}</a> created a repository
+                        <a class="News__post-info-link" href="#">${repository.userName}</a> created a repository
                         <a class="News__post-info-link" href="#">${repository.name}</a>
                         <time class="News__post-time" datetime="10-01-2019">${repository.creationTime}</time>
                     </p>
@@ -39,7 +39,7 @@ export const friendsRepository = (user, repository) => {
 
 const getRandomColor = () => ["blue", "yellow", "orange"][(Math.random() * 3) ^ 0];
 
-export const recommendedRepository = (repository) => {
+export const recommendedRepositoryModel = (repository) => {
     const rootEl = document.createElement("div");
     rootEl.className = "Sidebar__block";
 

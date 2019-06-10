@@ -1,6 +1,6 @@
 [
   {
-    "name": "dannywillems/Makefiles",
+    "name": "Makefiles",
     "description": "List of makefiles for different projects",
     "creationTime": "24 days ago",
     "updateTime": "Jan 18",
@@ -10,7 +10,7 @@
     "id": 1
   },
   {
-    "name": "olekscode/NgramModel",
+    "name": "NgramModel",
     "description": "Ngram language model implemented in Pharo",
     "creationTime": "on 12 Jan",
     "updateTime": "Jan 21",
@@ -20,7 +20,7 @@
     "id": 2
   },
   {
-    "name": "olekscode/CodeTokenizer",
+    "name": "CodeTokenizer",
     "description": "Source code and identifier name tokenizer for Pharo",
     "creationTime": "on 10 Jan",
     "updateTime": "Jan 11",
@@ -30,7 +30,7 @@
     "id": 3
   },
   {
-    "name": "PolyMathOrg/project-proposals",
+    "name": "PolyMathOrg",
     "description": "Project proposals and idea list for PolyMath community",
     "creationTime": "on 27 Dec 2018",
     "updateTime": "Dec 27",
@@ -50,13 +50,33 @@
     "id": 5
   },
   {
-    "name": "Politeck LABA",
-    "description": "Last laba",
+    "name": "prettier",
+    "description": "Prettier is an opinionated code formatter",
     "creationTime": "on 27 Dec 2018",
     "updateTime": "Dec 27",
-    "language": "Java",
-    "stars": "1",
+    "language": "Go",
+    "stars": "959",
     "userId": 3,
     "id": 6
+  },
+  {
+    "name": "symfony",
+    "description": "The Symfony PHP framework",
+    "creationTime": "on 27 Dec 2018",
+    "updateTime": "Dec 27",
+    "language": "CSS",
+    "stars": "1310",
+    "userId": 3,
+    "id": 7
+  },
+  {
+    "name": "tesseract",
+    "description": "Tesseract Open Source OCR Engine (main repository)",
+    "creationTime": "on 27 Dec 2018",
+    "updateTime": "Dec 27",
+    "language": "Go",
+    "stars": "1470",
+    "userId": 3,
+    "id": 8
   }
 ]

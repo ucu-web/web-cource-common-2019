@@ -24,8 +24,8 @@ const mapOnForeignKeys = async (data, foreignKey, onKey, path) => {
     let res = [];
 
     for (let i = 0; i < data.length; ++i) {
-        const current = await getFirst(path, e => e[onKey] === data[i][foreignKey]);
-        if (current) res.push(current);
+        const current = await getAll(path, e => e[onKey] === data[i][foreignKey]);
+        if (current) res = res.concat(current);
     }
 
     return res;
