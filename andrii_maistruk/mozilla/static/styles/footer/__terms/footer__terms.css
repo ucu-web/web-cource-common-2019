@@ -1,0 +1,16 @@
+.footer__terms {
+    width: auto;
+    list-style: none;
+    display: inline-block;
+}
+
+.footer__terms-item {
+    padding: 0 24px 16px 0;
+    display: inline-block;
+}
+
+.footer__terms-link {
+    color: #fff;
+    font-weight: 400;
+    text-decoration: underline;
+}

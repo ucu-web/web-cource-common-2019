@@ -1,0 +1,19 @@
+.footer__license {
+    width: auto;
+    float: left;
+    margin-bottom: 32px;
+}
+
+.footer__license-link {
+    color: #fff;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.footer__license::after {
+    clear: both;
+    content: '';
+    display: block;
+    height: 0;
+    visibility: hidden;
+}

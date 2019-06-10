@@ -27,28 +27,3 @@
     padding: 8px 0;
     text-align: left;
 }
-
-.footer__list {
-    margin: 0 0 32px 0;
-}
-
-.footer__list-item {
-    margin-top: 0;
-    list-style-type: none;
-    padding: 4px 0;
-}
-
-
-.footer__list-item:hover  {
-    text-decoration: underline white;
-}
-
-.footer__list-item:first-child {
-    margin-top: 0;
-}
-
-.footer__link {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 400;
-}

@@ -1,17 +1,33 @@
-import "../styles/top_navigation_bar/top_navigation_bar.css";
-import "../styles/main_content/main_content_header.css";
-import "../styles/main_content/main_content_article.css";
-import "../styles/main_content/main_content_billboard.css";
-import "../styles/main_content/aside-pocket.css";
-import "../styles/common/common_style.css";
-import "../styles/main_content/newsletter.css";
-import "../styles/main_content/newsletter_form.css";
-import "../styles/main_content/call-out.css";
-import "../styles/footer/footer_primary_secondary.css";
-import "../styles/footer/footer_license_terms_social.css";
-import "../styles/footer/footer_sections.css";
-import "../styles/footer/language_form.css";
-import "./get_content.js";
+// aside-pocket
+import "../styles/aside-pocket/aside-pocket.css";
+// billboard
+import "../styles/billboard/billboard.css";
+// call-out
+import "../styles/call-out/call-out.css";
+import "../styles/call-out/__link/call-out__link.css";
+import "../styles/call-out/__paragraph/call-out__paragraph.css";
+// common css
+import "../styles/common/common.css";
+// footer css
+import "../styles/footer/__form/footer__form.css";
+import "../styles/footer/__license/footer__license.css";
+import "../styles/footer/__link/footer__link.css";
+import "../styles/footer/__list/footer__list.css";
+import "../styles/footer/__primary/footer__primary.css";
+import "../styles/footer/__secondary/footer__secondary.css";
+import "../styles/footer/__sections/footer__sections.css";
+import "../styles/footer/__social/footer__social.css";
+import "../styles/footer/__terms/footer__terms.css";
+//  main-content
+import "../styles/main-content/__article/main-content__article.css";
+import "../styles/main-content/__header-section/main-content__header-section.css";
+// newsletter
+import "../styles/newsletter/newsletter.css";
+import "../styles/newsletter/__form/newsletter__form.css";
+// top-navigation-bar
+import "../styles/top-navigation-bar/top-navigation-bar.css";
+// js
+import "./loadData.js";
 
 export let show_details = require("./form.js");
-export let format_input =  require("./format_input");
+export let format_input = require("./formatInput.js");
