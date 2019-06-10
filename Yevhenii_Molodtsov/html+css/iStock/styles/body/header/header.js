@@ -51,21 +51,23 @@ $(window).scroll(function(){
         document.getElementById("search-header").style.width = "";
         document.getElementById("search-header").style.top = "";
     }
-    else if ($(window).scrollTop() >= 75 && $(window).scrollTop() <= 550) {
+
+else if ($(window).scrollTop() >= 75 && $(window).scrollTop() <= 550) {
         document.getElementById("search-header").classList.add('search-bar');
         document.getElementById("search-header").classList.remove('fixed-header');
         document.getElementById("search-header").style.position = "fixed";
         document.getElementById("search-header").style.width = "79%";
         if($(window).scrollTop() <= 535)
-            document.getElementById("search-header").style.top = (265 - ($(window).scrollTop() / 2)).toString() + "px";
+            document.getElementById("search-header").style.top = (262 - ($(window).scrollTop() / 2)).toString() + "px";
         else {
             document.getElementById("search-header").style.top = "0";
         }
     }
     else if ($(window).scrollTop() > 550) {
+        document.getElementById("search-header").style.top = "0";
         document.getElementById("search-header").classList.remove('search-bar');
-        document.getElementById("search-header").style.width = "100%";
         document.getElementById("search-header").classList.add('fixed-header');
+        document.getElementById("search-header").style.width = "100%";
         document.getElementById("search-header").style.transition = "all 0.45s ease-out 0s, z-index 0s linear 0.01s";
     }
 });

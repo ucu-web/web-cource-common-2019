@@ -20,6 +20,7 @@
 
 .search-bar{
     display: flex;
+    /*margin: 0 auto 7rem auto;*/
     margin: 0 7rem 7rem 7rem;
     height: 4.2rem;
     background-color: white;
