@@ -20,7 +20,6 @@ class ToDoTask {
         this.deleteTaskButton.className = 'todolist__task_deletion';
 
         this.onTaskDeletionPubSub = new PubSub();
-        // this.onTaskDeletion(this._deleteSelf.bind(this));
     }
 
     onTaskDeletion(callback) {
@@ -36,10 +35,8 @@ class ToDoTask {
         this.taskInfo.innerText = this.task;
     }
 
-    _deleteSelf(container) {
-        console.log('container', container);
-        console.log('this.taskElement', this.taskElement);
-        container.removeChild(this.taskElement);
+    getValue() {
+        return this.task;
     }
 
     render(container) {

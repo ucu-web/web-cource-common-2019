@@ -8,15 +8,15 @@ class ToDoList {
         this.container = container;
         this.tasksValues = tasks;
         this.tasks = {};
+
+        // If there are already stored tasks, convert them to ToDoTask objects
         for (const year in tasks) {
             if (!tasks.hasOwnProperty(year)) continue;
             for (const month in tasks[year]) {
                 if (!tasks[year].hasOwnProperty(month)) continue;
                 for (const day in tasks[year][month]) {
                     if (!tasks[year][month].hasOwnProperty(day)) continue;
-                    this.tasks[year] = this.tasks[year] || {};
-                    this.tasks[year][month] = this.tasks[year][month] || {};
-                    this.tasks[year][month][day] = this.tasks[year][month][day] || [];
+                    this.initDay(this.tasks, {year, month, day});
                     tasks[year][month][day].forEach(task => {
                         const newTask = new ToDoTask(task);
                         newTask.onTaskDeletion(() => this.removeTask(newTask));
@@ -25,6 +25,7 @@ class ToDoList {
                 }
             }
         }
+        console.log('end loop');
 
         this.selectAll = CreateInput('checkbox', 'todolist');
         this.selectAll.hidden = true;
@@ -41,28 +42,23 @@ class ToDoList {
         this.render(new Date());
     }
 
+    initDay(tasks, {year, month, day}) {
+        tasks[year] = tasks[year] || {};
+        tasks[year][month] = tasks[year][month] || {};
+        tasks[year][month][day] = tasks[year][month][day] || [];
+    }
+
     createInput() {
         this.taskInput = document.createElement('input');
         this.taskInput.className = 'todolist__input';
     }
 
-    _getTasksForDay(tasksList) {
-        let tasks = tasksList[this.currentDate.getFullYear()];
-        if (typeof tasks === "undefined") return;
-        tasks = tasks[this.currentDate.getMonth() + 1];
-        if (typeof tasks === "undefined") return;
-        tasks = tasks[this.currentDate.getDate()];
-        if (typeof tasks === "undefined") return;
-        return tasks;
-    }
 
     getTaskList(tasks) {
         const year = this.currentDate.getFullYear();
         const month = this.currentDate.getMonth() + 1;
         const day = this.currentDate.getDate();
-        tasks[year] = tasks[year] || {};
-        tasks[year][month] = tasks[year][month] || {};
-        tasks[year][month][day] = this._getTasksForDay(tasks) || [];
+        this.initDay(tasks, {year, month, day});
         return tasks[year][month][day];
     }
 
@@ -76,15 +72,21 @@ class ToDoList {
         return newTask;
     }
 
-    removeTask(task) {
-        let taskList = this.getTaskList(this.tasks);
-        const i = taskList.indexOf(task);
-
+    _removeTaskFromList(task, tasks) {
         const year = this.currentDate.getFullYear();
         const month = this.currentDate.getMonth() + 1;
         const day = this.currentDate.getDate();
-        if (i !== -1)
-            this.tasks[year][month][day] = taskList.filter(el => i !== taskList.indexOf(el));
+
+        let taskList = this.getTaskList(tasks);
+        const taskIndex = taskList.indexOf(task);
+        if (taskIndex !== -1)
+            tasks[year][month][day] = taskList.filter(el => taskIndex !== taskList.indexOf(el));
+
+    }
+
+    removeTask(task) {
+        this._removeTaskFromList(task, this.tasks);
+        this._removeTaskFromList(task.getValue(), this.tasksValues);
         this.newTask = undefined;
         this.render(this.currentDate);
     }
@@ -93,7 +95,7 @@ class ToDoList {
         let taskList = document.createElement("ul");
         taskList.className = 'todolist__tasks';
 
-        let tasks = this._getTasksForDay(this.tasks);
+        let tasks = this.getTaskList(this.tasks);
         if (typeof tasks !== "undefined")
             tasks.forEach(task => task.render(taskList));
 
@@ -155,6 +157,7 @@ class ToDoList {
         currentDate.innerHTML = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
         currentDate.style.width = '90px';
         currentDate.style.margin = 'auto';
+
         this.container.innerHTML = '';
         this.container.appendChild(currentDate);
         this.container.appendChild(this.todoList);

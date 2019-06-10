@@ -6,7 +6,6 @@ xhr.open('GET', 'db', false);
 xhr.send();
 
 const calendar = new Calendar(document.body.getElementsByTagName("section")[0]);
-// console.log('RESPONSE', typeof JSON.parse(JSON.parse(xhr.responseText)), JSON.parse(JSON.parse(xhr.responseText)));
 const toDoList = new ToDoList(document.body.getElementsByTagName("section")[1], JSON.parse(JSON.parse(xhr.responseText)));
 
 calendar.onDaySelect(day => {

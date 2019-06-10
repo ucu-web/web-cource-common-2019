@@ -6,7 +6,7 @@ function FileManager(filename) {
     this.upToDate = false;
 
     const writeFile = () => {
-        fs.writeFile(this.filepath, this.fileData, (err) => {
+        fs.writeFile(this.filepath, JSON.stringify(this.fileData), (err) => {
             if (err) throw err;
             console.log('The file has been saved!');
         });
