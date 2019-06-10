@@ -1,7 +1,7 @@
 import {drawCircle} from "./drawCircle.js"
 import {connectPoints} from "./connectPoints"
 import {drawBezierCurve} from "./drawBezierCurve"
-import {select, mouse} from "d3"
+import {select, mouse, selectAll} from "d3"
 
 let div = select("body").append("svg").attr("class", "bezier-field");
 createBezierCurves(div);
@@ -17,12 +17,9 @@ function createBezierCurves(svg) {
             let coordinates = mouse(this);
             points.push([+coordinates[0], +coordinates[1]])
 
-            let time = points.length * 1000;
-
             svg.call(drawCircle, points, coordinates);
 
-            svg.call(connectPoints, points)
-                .call(drawBezierCurve, points, time)
+            render(svg);
         });
 
     svg.append("g").attr("class", "bezier-field__tangents");
@@ -33,4 +30,17 @@ function createBezierCurves(svg) {
         .attr("x", w - padding)
         .attr("y", h - padding)
         .text("t=0");
+}
+
+export function render(svg, time = 1000) {
+    let points = [];
+
+    selectAll(".bezier-field__point").select("circle").each(function (d, i) {
+        points.push([select(this).attr("cx"), select(this).attr("cy")]);
+    });
+
+    time = time * points.length;
+
+    svg.call(connectPoints, points)
+        .call(drawBezierCurve, points, time);
 }
