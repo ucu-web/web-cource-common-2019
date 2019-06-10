@@ -5,10 +5,8 @@
   "main": "src/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "webpack -w",
-    "start": "webpack-dev-server --open",
-    "start-node": "node dist/js/calendar.back.js",
-    "start-node-watcher": "supervisor dist/js/calendar.back.js",
+    "start": "node dist/js/calendar.back.js",
+    "start-watcher": "supervisor dist/js/calendar.back.js",
     "build-front": "webpack --config ./webpack.front.config.js",
     "build-back": "webpack --config ./webpack.back.config.js",
     "build-front-watcher": "webpack --config ./webpack.front.config.js -w",
