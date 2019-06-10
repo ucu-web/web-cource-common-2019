@@ -57,7 +57,7 @@ export class Doodle {
     const handleKeyDown = ({ key }) => {
       const direction = directionMap[key] || 0;
 
-      if (Math.sign(this.accelerationX) !== Math.sign(direction)) {
+      if (direction && Math.sign(this.accelerationX) !== Math.sign(direction)) {
         this.velocityX = direction * 0.2;
         this.accelerationX = direction * 0.0003;
       }
