@@ -2,7 +2,9 @@ import {lineGenerator} from "./functions";
 import {easeLinear} from "d3";
 import {drawTangents} from "./drawTangents";
 
-export function drawBezierCurve(svg, points, time) {
+export function drawCurve(svg, points, time) {
+     if (points.length < 3) return;
+
     svg.selectAll(".bezier-field__bezier-path").remove();
 
     let path = getBezierPath(svg, points);
@@ -12,16 +14,7 @@ export function drawBezierCurve(svg, points, time) {
         .attr("d", lineGenerator(path));
 
     // point that will move
-    let lineHead;
-
-    if (points.length === 1) {
-        lineHead = svg.append("circle")
-            .attr("class", "bezier-field__moving-point")
-            .attr("cx", points[0][0])
-            .attr("cy", points[0][1]);
-    } else {
-        lineHead = svg.select(".bezier-field__moving-point")
-    }
+    let lineHead = svg.select(".bezier-field__moving-point").attr("cx", points[0][0]).attr("cy", points[0][1]);;
 
     lineHead.transition()
         .duration(time)
@@ -57,9 +50,9 @@ function bezierCurvePoint(points, t) {
 }
 
 function translateAlong(svg, linePath, coordinate, points, info = true) {
-    let l = linePath.node().getTotalLength();
-    return function (d, i, a) {
+    return function () {
         return function (t) {
+            // draw tangents and print time
             if (info) {
                 drawTangents(svg, points, t, points.length);
                 svg.select(".bezier-field__animation-time").text("t=" + t);

@@ -1,6 +1,6 @@
 import {dragHandler} from "./functions";
 
-export function drawCircle(svg, points, coordinates){
+export function drawCircle(svg, coordinates, number){
     let point = svg.append("g").attr("class", "bezier-field__point");
     dragHandler(point);
 
@@ -13,7 +13,7 @@ export function drawCircle(svg, points, coordinates){
         .attr("class", "point__number")
         .attr("x", coordinates[0] + 10)
         .attr("y", coordinates[1])
-        .text("P" + points.length);
+        .text("P" + number);
 
     point.append("text")
         .attr("class", "point__coordinates")

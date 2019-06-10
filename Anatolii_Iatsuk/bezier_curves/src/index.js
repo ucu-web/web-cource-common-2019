@@ -1,46 +1,8 @@
-import {drawCircle} from "./drawCircle.js"
-import {connectPoints} from "./connectPoints"
-import {drawBezierCurve} from "./drawBezierCurve"
-import {select, mouse, selectAll} from "d3"
-
-let div = select("body").append("svg").attr("class", "bezier-field");
-createBezierCurves(div);
-
-function createBezierCurves(svg) {
-    let w = 800,
-        h = 500,
-        padding = 30,
-        points = [];
-
-    svg.attr("width", w + 2 * padding).attr("height", h + 2 * padding)
-        .on('click', function () {
-            let coordinates = mouse(this);
-            points.push([+coordinates[0], +coordinates[1]])
-
-            svg.call(drawCircle, points, coordinates);
-
-            render(svg);
-        });
-
-    svg.append("g").attr("class", "bezier-field__tangents");
+import {select} from "d3"
+import {initializeBezierCurvesVisualization} from "./initializeBezierCurvesVisualization";
 
 
-    svg.append("text")
-        .attr("class", "bezier-field__animation-time")
-        .attr("x", w - padding)
-        .attr("y", h - padding)
-        .text("t=0");
-}
+let default_points = [[50, 50], [50, 400], [400, 400], [400, 50], [200, 200]];
+let svg = select("body").append("svg").attr("class", "bezier-field");
 
-export function render(svg, time = 1000) {
-    let points = [];
-
-    selectAll(".bezier-field__point").select("circle").each(function (d, i) {
-        points.push([select(this).attr("cx"), select(this).attr("cy")]);
-    });
-
-    time = time * points.length;
-
-    svg.call(connectPoints, points)
-        .call(drawBezierCurve, points, time);
-}
+initializeBezierCurvesVisualization(svg, default_points);

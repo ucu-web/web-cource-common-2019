@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "d3": "^5.9.2",
+    "prettier": "^1.18.2",
     "webpack": "^4.33.0"
   },
   "devDependencies": {
