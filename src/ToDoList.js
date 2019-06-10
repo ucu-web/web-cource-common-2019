@@ -4,7 +4,7 @@ import CheckBoxHelper from './CheckBoxHelper'
 import {CreateForm, CreateInput, ConfigureForm, AssembleForm} from './FormHelper'
 
 class ToDoList {
-    constructor(container, tasks={}) {
+    constructor(container, tasks = {}) {
         this.container = container;
         this.tasksValues = tasks;
         this.tasks = {};
@@ -26,7 +26,6 @@ class ToDoList {
                 }
             }
         }
-        console.log('end loop');
 
         this.selectAll = CreateInput('checkbox', 'todolist');
         this.selectAll.hidden = true;
@@ -40,7 +39,7 @@ class ToDoList {
 
         // ConfigureForm(this.form);
         this.configureForm(this.form);
-        this.render(new Date());
+        // this.render(new Date());
     }
 
     initDay(tasks, {year, month, day}) {
@@ -136,26 +135,30 @@ class ToDoList {
 
     configureForm(form) {
         form.addEventListener('submit', (e) => this.commitTaskViaSubmit(this.taskInput, e));
-        form.addEventListener('reset', () => {if (typeof this.newTask !== "undefined") this.newTask.publishTaskDeletion()});
+        form.addEventListener('reset', () => {
+            if (typeof this.newTask !== "undefined") this.newTask.publishTaskDeletion()
+        });
     }
 
     render(date) {
         this.currentDate = date;
-        let tasksList = this.renderTasks();
 
         this.createInput();
-        this.configureInput(tasksList);
 
         AssembleForm(this.form, [this.taskInput, this.submit, this.cancel]);
         this.todoList.innerHTML = '';
 
-        this.todoList.appendChild(this.form);
-        if (tasksList.childNodes.length > 0)
-            this.todoList.appendChild(this.selectAll);
-        this.todoList.appendChild(tasksList);
-
         let currentDate = document.createElement('div');
-        currentDate.innerHTML = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
+
+        if (typeof date !== "undefined") {
+            let tasksList = this.renderTasks();
+            this.configureInput(tasksList);
+            this.todoList.appendChild(this.form);
+            if (tasksList.childNodes.length > 0)
+                this.todoList.appendChild(this.selectAll);
+            this.todoList.appendChild(tasksList);
+            currentDate.innerHTML = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
+        }
         currentDate.style.width = '90px';
         currentDate.style.margin = 'auto';
 

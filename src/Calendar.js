@@ -16,6 +16,7 @@ class Calendar {
     this.onChangeMonthPubSub = new PubSub();
     this.onDaySelectPubSub = new PubSub();
     this.onDaySelect(this.changeActiveDay.bind(this));
+    this.history = true;
   }
 
   onChangeMonth(callbackFn) {
@@ -30,9 +31,10 @@ class Calendar {
     return week
       .map(
         day => {
-          let dayHTML = document.createElement('div');
+          let dayHTML = document.createElement('a');
           dayHTML.innerHTML = day || "";
           if (dayHTML.innerHTML === "") { dayHTML.className = 'disabled'; return dayHTML.outerHTML; }
+          dayHTML.href = `${this.date.getFullYear()}-${this.date.getMonth() + 1}-${day}`;
           dayHTML.className = "calendar__day";
           dayHTML.dataset.day = day;
           dayHTML.tabIndex = 0;
@@ -69,9 +71,12 @@ class Calendar {
 
   initHandlers() {
     delegateEvent(this.container, ".calendar__day", "click", ev => {
+      ev.preventDefault();
       const date = new Date(this.date);
       date.setDate(ev.target.dataset.day);
       this.onDaySelectPubSub.publish(date, ev);
+      if (this.history) history.pushState({}, ev.target.href, ev.target.href);
+      this.history = true;
     });
 
     delegateEvent(this.container, ".calendar__day", "keydown", ev => {

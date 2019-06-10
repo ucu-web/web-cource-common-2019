@@ -8,9 +8,12 @@
   text-align: center;
   cursor: pointer;
   padding: 5px 2px;
+  text-decoration: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  color: #000;
+  overflow: hidden;
 }
 .calendar__button {
   padding: 5px 10px;
@@ -21,9 +24,10 @@
 .calendar__button:hover, .calendar__day:hover {
   background: #E0F2F1;
 }
-.calendar__button:active .calendar__day:hover {
+.calendar__button:active .calendar__day:active {
   background: #B2DFDB;
   outline: none;
+  color: #000;
 }
 [active], [active]:hover {
   background: #B2DFDB;
