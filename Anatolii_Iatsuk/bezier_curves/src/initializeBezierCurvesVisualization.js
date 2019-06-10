@@ -1,6 +1,7 @@
 import {mouse} from "d3"
-import {drawCircle} from "./drawCircle";
-import {renderNewPoints} from "./functions";
+import {drawCircles} from "./drawCircles";
+import {connectPoints} from "./connectPoints";
+import {drawCurve} from "./drawCurve";
 
 
 export function initializeBezierCurvesVisualization(svg, points = []) {
@@ -20,21 +21,21 @@ export function initializeBezierCurvesVisualization(svg, points = []) {
         .attr("cx", points ? points[0][0]: 0)
         .attr("cy", points ? points[0][1]: 0);
 
-    // add default points
-    for (let p = 0; p < points.length; p++) {
-        drawCircle(svg, points[p], p + 1);
-    }
-
-    // add animation
-    renderNewPoints(svg);
 
     // add handler for new point
     svg.on('click', function () {
         let coordinates = mouse(this);
         points.push(coordinates)
-
-        drawCircle(svg, coordinates, points.length);
-        renderNewPoints(svg)
+        render(svg, points)
     });
+
+    render(svg, points);
 }
 
+export function render(svg, points) {
+    let time = 1000 * points.length;
+
+    svg.call(drawCircles, points)
+        .call(connectPoints, points)
+        .call(drawCurve, points, time);
+}
