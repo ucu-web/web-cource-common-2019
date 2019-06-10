@@ -9,6 +9,7 @@ class ToDoList {
         this.tasksValues = tasks;
         this.tasks = {};
 
+        console.log('tasks', typeof tasks, tasks);
         // If there are already stored tasks, convert them to ToDoTask objects
         for (const year in tasks) {
             if (!tasks.hasOwnProperty(year)) continue;

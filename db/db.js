@@ -6,7 +6,7 @@ function FileManager(filename) {
     this.upToDate = false;
 
     const writeFile = () => {
-        fs.writeFile(this.filepath, JSON.stringify(this.fileData), (err) => {
+        fs.writeFile(this.filepath, this.fileData, (err) => {
             if (err) throw err;
             console.log('The file has been saved!');
         });
@@ -33,12 +33,13 @@ function FileManager(filename) {
             }
         });
         this.upToDate = true;
+        console.log('typeof', typeof this.fileData);
         return JSON.stringify(this.fileData);
     };
 
     this.dump = (data) => {
         console.log('file to dump', typeof data, data);
-        this.fileData = JSON.stringify(data);
+        this.fileData = data;
         writeFile();
         this.upToDate = false;
     };
