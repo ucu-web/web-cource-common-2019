@@ -25,14 +25,12 @@ app.get('/db', (req, res, next) => {
 });
 
 app.post('/db', (req, res, next) => {
-   // console.log(req);
    res.end('got it!', req.body);
    dbFile.dump(req.body);
 });
 
 app.get("/*", (req, res, next) => {
     if (req.url === '/') {
-        // res.setHeader();
     } else {
         res.sendFile('/dist/index.html', {root: '.'});
     }
