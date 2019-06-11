@@ -7,3 +7,26 @@
     margin: 0 auto;
     max-width: 75rem;
 }
+
+.credits-subscribe{
+    text-align: center;
+    background-color: black;
+    min-height: 6rem;
+}
+
+.credits-subscribe__text{
+    display: inline-block;
+    font: 1.6rem iStock Maquette, Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    color: #DCE1E1;
+    margin-top: 2.2rem;
+}
+
+.credits-subscribe__text a{
+    color: #02a388;
+}
+
+.credits-subscribe__text a:hover{
+    cursor: pointer;
+    color: #02886d;
+}

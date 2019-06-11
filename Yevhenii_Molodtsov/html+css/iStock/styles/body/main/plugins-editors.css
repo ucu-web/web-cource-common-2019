@@ -30,7 +30,7 @@
 }
 
 .plugin_first-block h3, h4, h5 {
-    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-family: iStock Maquette, Helvetica, Arial, sans-serif;
     position: absolute;
     left: 2.1rem;
     z-index: 100;
@@ -38,7 +38,7 @@
 
 .plugin__h3 {
     color: white;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 2vw;
     top: 5rem;
 }
@@ -65,7 +65,7 @@
 }
 
 .plugin_block h4, h6{
-    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-family: iStock Maquette, Helvetica, Arial, sans-serif;
     position: relative;
     display: inline-block;
     left: 1rem;
@@ -87,7 +87,6 @@
 }
 
 .plugins-photos_girl{
-
     height: 100%;
 }
 
