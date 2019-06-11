@@ -7,16 +7,3 @@
   justify-content: space-around;
 
 }
-
-/*.Layout__main-block__home {*/
-  /*display: grid;*/
-  /*grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));*/
-  /*grid-gap: 10px;*/
-  /*margin: 85px 25px 10px;*/
-/*}*/
-
-
-.Column{
-  display: inline-block;
-  width: 245px;
-}

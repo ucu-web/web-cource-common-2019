@@ -17,16 +17,37 @@ const renderPosts = async (containersClass, data, htmlGenerator, number) => {
     }
 };
 
-renderPosts('.Layout__main-block__home', 'posts', generate, 40).then(setupBlocks);
 
+renderPosts('.Layout__main-block__home', 'posts', generate, 40).then(setupBlocks);
+let nodesArray = [];
 window.addEventListener('resize', setupBlocks);
 window.onscroll = () => {
-    let nodePosS = document.querySelector('.Layout__main-block__home').lastChild.style.top;
+    let nodePosS = document.querySelector('.Layout__main-block__home').lastElementChild.style.top;
     let nodePos = parseInt(nodePosS, 10);
     let yOffset = window.pageYOffset;
     let y = yOffset + window.innerHeight;
+    let container = document.querySelector('.Layout__main-block__home');
+    let childNodes = Array.from(container.children);
+    let firstChild = container.firstElementChild;
 
-    if (y >= nodePos) {
-        renderPosts('.Layout__main-block__home', 'posts', generate, 20).then(setupBlocks);
+// childNodes.forEach((el)=>{
+//     // console.log(el.getBoundingClientRect().top);
+//     if (el.getBoundingClientRect().top<-1000){
+//         nodesArray.push(el);
+//         el.remove();
+//     }
+// });
+//
+//
+//
+//     if (firstChild.getBoundingClientRect().top === 500){
+//         container.append(nodesArray.reverse()[0]);
+//         nodesArray.reverse().pop();
+//     }
+
+
+
+    if (y >= nodePos-500) {
+        renderPosts('.Layout__main-block__home', 'posts', generate, 5).then(setupBlocks);
     }
 };

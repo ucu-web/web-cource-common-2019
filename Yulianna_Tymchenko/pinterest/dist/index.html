@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pinterest</title>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link rel="icon" href="static/images/icons/pinterest.ico">
+</head>
+<body>
+<div class="Layout">
+    <header class="Layout__header Header">
+        <div class="Logo" tabindex="1">
+            <h1 hidden aria-label="logo-title"> Pinterest</h1>
+            <a class="Logo__link" aria-label="logo" href="/">
+                <svg viewBox="0 0 24 24" aria-hidden="true" aria-label="logo-svg" role="img" class="Logo__svg">
+                    <path d="M0 12c0 5.123 3.211 9.497 7.73 11.218-.11-.937-.227-2.482.025-3.566.217-.932 1.401-5.938 1.401-5.938s-.357-.715-.357-1.774c0-1.66.962-2.9 2.161-2.9 1.02 0 1.512.765 1.512 1.682 0 1.025-.653 2.557-.99 3.978-.281 1.189.597 2.159 1.769 2.159 2.123 0 3.756-2.239 3.756-5.471 0-2.861-2.056-4.86-4.991-4.86-3.398 0-5.393 2.549-5.393 5.184 0 1.027.395 2.127.889 2.726a.36.36 0 0 1 .083.343c-.091.378-.293 1.189-.332 1.355-.053.218-.173.265-.4.159-1.492-.694-2.424-2.875-2.424-4.627 0-3.769 2.737-7.229 7.892-7.229 4.144 0 7.365 2.953 7.365 6.899 0 4.117-2.595 7.431-6.199 7.431-1.211 0-2.348-.63-2.738-1.373 0 0-.599 2.282-.744 2.84-.282 1.084-1.064 2.456-1.549 3.235C9.584 23.815 10.77 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12"></path>
+                </svg>
+            </a>
+        </div>
+        <form class="Header__search-form Form">
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="Form Header__search-form__svg" aria-label="search-svg"
+                 role="img">
+
+                <path d="M10 16c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6m13.12 2.88l-4.26-4.26A9.842 9.842 0 0 0 20 10c0-5.52-4.48-10-10-10S0 4.48 0 10s4.48 10 10 10c1.67 0 3.24-.41 4.62-1.14l4.26 4.26a3 3 0 0 0 4.24 0 3 3 0 0 0 0-4.24"></path>
+            </svg>
+            <input type="search" placeholder="Search" name="Search-input" class="Form Header__search-form__input">
+            <button class="Button Header__search-form__input-reset"><input type="reset"
+                                                                           class="Header__search-form__input-reset__svg"
+                                                                           value=""></button>
+        </form>
+        <a href="/" aria-label="link-main-page" class="Link Header__nav-link Header__nav-link_active"
+           onclick="setBorder(this)">Home</a>
+        <a href="/" aria-label="link-following" class="Link Header__nav-link" onclick="setBorder(this)">Following</a>
+        <a href="/" aria-label="link-profile" class="Link Header__nav-link" onclick="setBorder(this)"><img
+                src="static/images/user_photo.jpg" alt="profile-photo" class="Header__link__image"> <span
+                class="Header__nav-link-name">Julia</span></a>
+        <button aria-label="messages" class="Button Header__nav-button">
+            <svg viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img" class="Button__svg">
+                <path d="M18 12.5a1.5 1.5 0 1 1 .001-3.001A1.5 1.5 0 0 1 18 12.5m-6 0a1.5 1.5 0 1 1 .001-3.001A1.5 1.5 0 0 1 12 12.5m-6 0a1.5 1.5 0 1 1 .001-3.001A1.5 1.5 0 0 1 6 12.5M12 0C5.925 0 1 4.925 1 11c0 2.653.94 5.086 2.504 6.986L2 24l5.336-3.049A10.93 10.93 0 0 0 12 22c6.075 0 11-4.925 11-11S18.075 0 12 0"></path>
+            </svg>
+        </button>
+        <button aria-label="notifications" class="Button Header__nav-button">
+            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="Button__svg">
+                <path d="M8 16c-1.12 0-2.03-.9-2.03-2h4.06c0 1.1-.91 2-2.03 2zm4.72-6.92c1.02.95 1.74 2.19 2.03 3.59H1.25c.29-1.4 1.01-2.64 2.02-3.59V4.67C3.27 2.09 5.39 0 8 0c2.61 0 4.72 2.09 4.72 4.67v4.41z"></path>
+            </svg>
+        </button>
+        <button aria-label="settings and more options" class="Button Header__nav-button">
+            <svg viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img" class="Button__svg">
+                <path d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z"></path>
+            </svg>
+        </button>
+    </header>
+    <main class="Layout__main-block__home">
+    </main>
+</div>
+<footer class="Footer">
+    <button class="Button Footer__button" aria-label="Add">
+        <svg class="Footer__button__svg" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img">
+            <path d="M22 10h-8V2a2 2 0 0 0-4 0v8H2a2 2 0 0 0 0 4h8v8a2 2 0 0 0 4 0v-8h8a2 2 0 0 0 0-4"></path>
+        </svg>
+    </button>
+    <button class="Button Footer__button" aria-label="Q&A">
+        <svg class="Footer__button__svg" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img">
+            <path d="M14.34 21.2c0 1.57-1.19 2.8-2.78 2.8-1.58 0-2.77-1.23-2.77-2.8 0-1.57 1.19-2.8 2.77-2.8 1.59 0 2.78 1.23 2.78 2.8m-2.53-10.88c1.41-1.23 3.3-2.05 3.3-3.87 0-1.45-1.24-2.36-2.95-2.36-2.12 0-3.52 1.48-3.55 3.43H3.75C3.88 3.3 6.96 0 12.34 0c4.86 0 7.91 2.52 7.91 6.32 0 2.36-1.09 3.81-2.3 4.78-1.68 1.33-2.84 1.89-3.49 2.61-.5.57-.62 1.04-.65 1.95H9.45c0-2.64.65-3.9 2.36-5.34"></path>
+        </svg>
+    </button>
+    <a href="#" aria-label="Privacy" class="Button  Footer__button Footer__button_privacy">Privacy</a>
+</footer>
+<script src="bundle.js"></script>
+<script src="static/styles.js"></script>
+</body>
+</html>
