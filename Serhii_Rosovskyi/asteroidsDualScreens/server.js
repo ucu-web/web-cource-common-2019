@@ -9,5 +9,7 @@ app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
 });
 
-app.listen(3000);
-console.log("Server running at http://127.0.0.1:3000/");
+let port_number = 3000;
+
+app.listen(port_number);
+process.stdout.write("Server is running.\nGo to http://localhost:" + port_number + ".\n");
