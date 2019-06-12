@@ -1,19 +1,19 @@
 #Visualization {
-    font-size: 0;
-    margin: auto;
-    width: 500px;
-    height: 500px;
-    border: 3px solid #091E42;
-    border-radius: 5px ;
+  font-size: 0;
+  margin: auto;
+  width: 500px;
+  height: 500px;
+  border: 3px solid #091E42;
+  border-radius: 5px;
   text-align: center;
 }
 
 #canvas {
   &__wrapper {
     text-align: center;
+    margin: auto;
   }
 
-  margin: auto;
   border: 3px solid #091e42;
   border-radius: 5px;
 }
@@ -24,6 +24,31 @@
   display: inline-block;
   padding: 0;
   margin: 0;
+}
+
+.button-wrapper {
+  text-align: center;
+}
+
+.render-button {
+  margin: auto;
+  color: #FFF;
+  display: inline-block;
+  font-weight: 500;
+  background-color: #0052CC;
+  border: 1px solid #0052CC;
+  height: 40px;
+  width: 100px;
+  line-height: 38px;
+  padding: 0 16px;
+  border-radius: 3px;
+}
+
+.render-button:hover {
+  cursor: pointer;
+  background: #0047B3;
+  border-color: #0047B3;
+  transition: all 250ms;
 }
 
 h1 {
