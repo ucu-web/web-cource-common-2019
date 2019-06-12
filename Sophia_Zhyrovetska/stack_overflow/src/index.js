@@ -3,11 +3,12 @@ import { FeaturedTagsBlock } from "./components/FeaturedTagsBlock";
 import HotNetworkQuestions from "./components/HotNetworkQuestions";
 import BlogBlock from "./components/BlogBlock";
 import { render } from "./helpers/library";
-import { initQuestionsTypesHandlers } from "./js/filterQuestions";
+import {initQuestionsTypesHandlers, switchFilter} from "./js/filterQuestions";
 import { editTagsBlock } from "./js/editTagsBlock";
 
-const savedQuestions = sessionStorage.getItem(".Questions-list");
-const savedButtonGroupState = sessionStorage.getItem("buttonGroup");
+const savedQuestions = localStorage.getItem(".Questions-list");
+const savedButtonGroupState = localStorage.getItem("buttonGroup");
+const currentUserID = 1;
 if (savedQuestions && savedButtonGroupState) {
   document.querySelector(".Questions-list").innerHTML = savedQuestions;
   document.getElementsByClassName(
@@ -24,7 +25,7 @@ if (savedQuestions && savedButtonGroupState) {
 render(
   document,
   ".Featured-tags-block__content--watched",
-  "api/users/1/watched_tags",
+  "api/users/"+ currentUserID + "/watched_tags",
   FeaturedTagsBlock
 ).catch(err => console.log(err));
 render(
@@ -36,7 +37,7 @@ render(
 render(
   document,
   ".Hot-network-questions__list",
-  "/api/hot_network_questions",
+  "/api/questions/?hot=true",
   HotNetworkQuestions
 ).catch(err => console.log(err));
 render(document, ".Blog-block", "/api/blog", BlogBlock).catch(err =>
@@ -46,5 +47,10 @@ initQuestionsTypesHandlers();
 const watchedTags = document.querySelectorAll(".Featured-tags-block")[0];
 const ignoredTags = document.querySelectorAll(".Featured-tags-block")[1];
 
-editTagsBlock(watchedTags, "watched", "/api/users/1");
-editTagsBlock(ignoredTags, "ignored", "/api/users/1");
+editTagsBlock(watchedTags, "watched", "/api/users/" + currentUserID);
+editTagsBlock(ignoredTags, "ignored", "/api/users/" + currentUserID);
+
+window.onpopstate = function(event) {
+  let buttonName = JSON.stringify(event.state);
+  switchFilter(buttonName.substring(1, buttonName.length-1));
+};
