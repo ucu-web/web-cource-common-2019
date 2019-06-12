@@ -1,18 +1,19 @@
 import UserInfo from "./components/UserInfo/UserInfo";
-import { initUsersHandlers } from "./js/filterUsers";
+import {initUsersHandlers, switchUserFilter} from "./js/filterUsers";
+import {switchFilter} from "./js/filterQuestions";
 const render = async (containerClass, path, htmlElementGenerator) => {
   const container = document.querySelector(containerClass);
   const data = await (await fetch(path)).json();
 
   data.map(element => container.appendChild(htmlElementGenerator(element)));
-  sessionStorage.setItem(
+  localStorage.setItem(
     containerClass,
     document.querySelector(containerClass).innerHTML
   );
 };
 
-const savedUsers = sessionStorage.getItem(".Users-list");
-const savedButtonGroupState = sessionStorage.getItem("buttonGroupUsers");
+const savedUsers = localStorage.getItem(".Users-list");
+const savedButtonGroupState = localStorage.getItem("buttonGroupUsers");
 if (savedUsers && savedButtonGroupState) {
   document.querySelector(".Users-list").innerHTML = savedUsers;
   document.getElementsByClassName(
@@ -25,3 +26,7 @@ if (savedUsers && savedButtonGroupState) {
     .classList.add("Button-group__button--current");
 }
 initUsersHandlers();
+window.onpopstate = function(event) {
+  let buttonName = JSON.stringify(event.state);
+  switchUserFilter(buttonName.substring(1, buttonName.length-1));
+};
