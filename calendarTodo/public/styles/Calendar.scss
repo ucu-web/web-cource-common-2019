@@ -1,0 +1,13 @@
+@import 'config';
+
+.Calendar {
+  width: $calendarWidth;
+  min-height: $calendarHeight;
+  height: auto;
+  display: flex;
+  font-family: Roboto, sans-serif;
+
+  @media only screen and (max-width: 1000px) {
+    display: block;
+  }
+}

@@ -1,0 +1,43 @@
+.Todo__title {
+  font-family: Roboto, sans-serif;
+  font-size: 40px;
+}
+.Todo__list {
+  text-align: left;
+  list-style-type: none;
+  margin-bottom: 50px;
+  max-height: 250px;
+  overflow: scroll;
+}
+.Todo__item {
+  margin: 5px 0;
+}
+.Todo__item:before {
+  content: "-";
+  margin-right: 15px;
+}
+.Todo__form {
+  padding: 0 40px;
+}
+.Todo__input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background: transparent;
+  border: 3px solid #fff;
+  margin-bottom: 50px;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 3px;
+}
+.Todo__input::placeholder {
+  color: #fff;
+}
+.Todo__input:focus {
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+  outline: none;
+}
+
+/*# sourceMappingURL=Todo.css.map */

@@ -5,6 +5,7 @@
   background: url("assets/images/bg.png") no-repeat;
   background-size: cover;
   overflow: hidden;
+  text-align: center;
 }
 
 #bird {
@@ -22,6 +23,16 @@
   bottom: 0;
   background: url("assets/images/fg.png") no-repeat;
   background-size: cover;
+}
+
+#score {
+  color: white;
+  display: block;
+  position: relative;
+  margin-top: 425px;
+  z-index: 1;
+  font-family: Arial, sans-serif;
+  font-size: 60px;
 }
 
 .pipe {

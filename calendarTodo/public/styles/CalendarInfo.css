@@ -1,0 +1,32 @@
+.CalendarInfo {
+  width: 500px;
+  height: auto;
+  background: #e74c3c;
+  color: #fff;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 100px 20px 0 20px;
+}
+@media only screen and (max-width: 1000px) {
+  .CalendarInfo {
+    width: 100%;
+    height: auto;
+  }
+}
+.CalendarInfo__date, .CalendarInfo__month, .CalendarInfo__weekday {
+  margin: 0;
+}
+.CalendarInfo__date {
+  font-size: 100px;
+}
+.CalendarInfo__month {
+  font-size: 40px;
+}
+.CalendarInfo__weekday {
+  font-size: 40px;
+}
+.CalendarInfo__Todo {
+  margin-top: 200px;
+}
+
+/*# sourceMappingURL=CalendarInfo.css.map */

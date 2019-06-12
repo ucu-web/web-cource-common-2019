@@ -1,3 +1,5 @@
+@import "../config";
+
 .button {
   border-radius: 50%;
   cursor: pointer;
@@ -8,6 +10,12 @@
   &__image {
     fill: #1da1f2;
     height: 2em;
+  }
+
+  &__text {
+    color: $color-gray;
+    font-size: 15px;
+    font-weight: 400;
   }
 
   &:hover {

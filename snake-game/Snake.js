@@ -1,5 +1,5 @@
 class Snake {
-    constructor(ctx, x, y, snakeSize, canvasSize) {
+    constructor(ctx, x, y, snakeSize, canvasWidth, canvasHeight) {
         this.context = ctx;
         this.x = x;
         this.y = y;
@@ -9,19 +9,19 @@ class Snake {
         this.score = 1;
         this.width = snakeSize;
         this.height = snakeSize;
-        this.canvasSize = canvasSize;
+        this.canvasWidth = canvasWidth;
+        this.canvasHeight = canvasHeight;
         this.verDirection = 0;
         this.horDirection = 1;
     }
 
-    isDead() {
-        const isDead = this.snake.find( ([x, y]) => this.x === x && this.y === y ? true : false)
+    isDead(otherSnake) {
+        const isDead = this.snake.find(([x, y]) => this.x === x && this.y === y) || otherSnake.snake.find(([x, y]) => this.x === x && this.y === y);
         if (isDead) {
             this.snake = [];
             this.score = 1;
-            return  true
+            return true
         }
-
         return false
     }
 
@@ -30,6 +30,9 @@ class Snake {
             food.isEaten = true;
             this.score++;
             this.snake.push([this.x, this.y]);
+            return true;
+        } else {
+            return false;
         }
     }
 
@@ -47,23 +50,43 @@ class Snake {
         this.prevX = this.x;
         this.prevY = this.y;
 
-        this.x = (this.x + (this.width * this.horDirection)) % this.canvasSize;
-        this.y = (this.y + (this.height * this.verDirection)) % this.canvasSize;
-
-        if (this.x < 0) {
-            this.x = this.canvasSize;
-        }
-
-        if (this.y < 0) {
-            this.y = this.canvasSize;
-        }
-
         if (this.snake.length > 0) {
             for (let i = this.snake.length - 1; i > 0; i--) {
-                this.snake[i] = this.snake[i-1];
+                this.snake[i] = this.snake[i - 1];
             }
             this.snake[0] = [this.prevX, this.prevY];
         }
+        //
+        // if (this.x < 0) {
+        //     this.x = this.canvasWidth;
+        // }
+        //
+        // if (this.y < 0) {
+        //     this.y = this.canvasHeight;
+        // }
+    }
+
+    update2() {
+        this.prevX = this.x;
+        this.prevY = this.y;
+
+        if (this.snake.length > 0) {
+            for (let i = this.snake.length - 1; i > 0; i--) {
+                this.snake[i] = this.snake[i - 1];
+            }
+            this.snake[0] = [this.prevX, this.prevY];
+        }
+
+        if (this.x < 0) {
+            this.x = this.canvasWidth;
+        }
+
+        if (this.y < 0) {
+            this.y = this.canvasHeight;
+        }
+
+        this.x = (this.x + (this.width * this.horDirection)) % this.canvasWidth;
+        this.y = (this.y + (this.height * this.verDirection)) % this.canvasHeight;
     }
 
     render() {
@@ -71,10 +94,13 @@ class Snake {
         this.context.fillStyle = "rgb(244, 95, 66)";
         this.context.fillRect(this.x, this.y, this.width, this.height);
         this.context.strokeRect(this.x, this.y, this.width, this.height);
-        for (let i = 0; i < this.snake.length; i++) {
-            this.context.fillRect(this.snake[i][0], this.snake[i][1], this.width, this.height);
-            this.context.strokeRect(this.snake[i][0], this.snake[i][1], this.width, this.height);
-        }
+
+        this.snake.map(
+            ([x, y]) => {
+                this.context.fillRect(x, y, this.width, this.height)
+                this.context.strokeRect(x, y, this.width, this.height)
+            }
+        )
     }
 }
 

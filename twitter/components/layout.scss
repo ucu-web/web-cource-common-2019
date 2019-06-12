@@ -1,0 +1,180 @@
+@import "../components/config";
+@import "button/button";
+
+body {
+  margin: 0;
+  background: rgb(230, 236, 240);
+  font-family: $font-family;
+}
+
+.header {
+  height: 53px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  background: #fff;
+
+  &__wrapper {
+    width: 980px;
+    height: inherit;
+    margin: auto;
+  }
+}
+
+.main {
+  width: 980px;
+  padding: 0 10px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.primary-column {
+  width: 600px;
+  background: #fff;
+
+  &__create-post {
+    width: 100%;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    border-bottom: 1px solid rgb(230, 236, 240);
+  }
+}
+
+.post {
+  border-bottom: 1px solid rgb(230, 236, 240);
+  padding: 15px 10px;
+
+  &__retweeted {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+  &__retweeted-picture {
+    width: 13px;
+    height: 13px;
+    margin: 0 10px 0 35px;
+  }
+
+  &__retweeted-link {
+    color: $color-gray;
+    font-size: 13px;
+    font-weight: 400;
+    text-decoration: none;
+  }
+
+  &__retweeted-link:hover {
+    text-decoration: underline;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__sidebar {
+    width: 49px;
+  }
+
+  &__sidebar-profile-image {
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+  }
+
+  &__content {
+    width: 521px;
+  }
+
+  &__header {
+
+  }
+
+  &__profile-link {
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  &__profile-link:hover &__profile-link--main {
+    text-decoration: underline;
+  }
+
+  &__profile-link--main {
+    color: #000;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  &__profile-link--secondary {
+    color: $color-gray;
+    font-weight: 400;
+    text-decoration: none;
+  }
+
+  &__profile-verified {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: baseline;
+  }
+
+  &__text {
+    font-size: 15px;
+    font-weight: 400;
+    margin: 2px 0;
+  }
+
+  &__info {
+
+  }
+
+  &__image {
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 14px;
+    margin: 10px 0;
+    border: 1px solid rgb(204, 214, 221);
+  }
+
+  &__image-caption {
+    font-size: 15px;
+    color: $color-gray;
+    font-weight: 400;
+  }
+}
+
+.column-header {
+  border-bottom: 1px solid rgb(230, 236, 240);
+  padding: 8px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__title {
+    margin: 0;
+    max-width: 500px;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    //font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+  }
+
+  &__button {
+    width: 37px;
+    height: 37px;
+  }
+}
+
+.sidebar-column {
+  width: 360px;
+  height: 100px;
+  background: #fff;
+}

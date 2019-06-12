@@ -1,0 +1,36 @@
+@import "config";
+
+.CalendarInfo {
+  width: 500px;
+  height: auto;
+  background: #e74c3c;
+  color: #fff;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 100px 20px 0 20px;
+
+  @media only screen and (max-width: 1000px) {
+    width: 100%;
+    height: auto;
+  }
+
+  &__date, &__month, &__weekday {
+    margin: 0;
+  }
+
+  &__date {
+    font-size: 100px;
+  }
+
+  &__month {
+    font-size: 40px;
+  }
+
+  &__weekday {
+    font-size: 40px;
+  }
+
+  &__Todo {
+    margin-top: 200px;
+  }
+}

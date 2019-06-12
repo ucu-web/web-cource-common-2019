@@ -1,0 +1,14 @@
+.Calendar {
+  width: 100vw;
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  font-family: Roboto, sans-serif;
+}
+@media only screen and (max-width: 1000px) {
+  .Calendar {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=Calendar.css.map */
