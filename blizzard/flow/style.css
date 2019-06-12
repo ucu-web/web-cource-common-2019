@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    background-color: #002650;
+}
+
+.top {
+    background-image: url(../img/bg/genji-overwatch.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 660px;
+    position: relative;
+}
+
+nav {
+    display: inline-block;
+    width: 100%;
+}
+
+.nav-wrapper {
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-bar {
+    height: 2rem;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 10px;
+}
+
+.main-menu-wrapper {
+    display: inherit;
+    position: absolute;
+    left: 10%;
+}
+
+.manage-menu-wrapper {
+    display: inherit;
+    position: absolute;
+    right: 10%;
+}
+
+.learn-more {
+    position: absolute;
+    bottom: 10%;
+    left: 15%;
+}
+
+button.nav-bar {
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+}
+
+.nav-bar:hover {
+    color: #ffffff;
+}
+
+body > footer {
+    height: 525px;
+}
+
+.footer-info {
+    width: 600px;
+    position: relative;
+    top: 20%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-link {
+    text-decoration: none;
+}
+
+.legal-link {
+    display: inline-block;
+}
+
+.language-button {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.copyright {
+    display: block;
+    color: rgba(255, 255, 255, .3);
+    margin: 20px 0 10px 0;
+}
+
+.footer-link {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.footer-info {
+    font-family: sans-serif;
+}
+
+.footer-info, .footer-links, .footer-link, .language-button {
+    color: rgba(255, 255, 255, .7);
+}
+
+.language-button {
+    margin: 20px 0;
+}
+
+.language-button:hover, .footer-link:hover {
+    color: white;
+}

@@ -1,0 +1,301 @@
+section {
+    position: relative;
+}
+
+.games {
+    background-color: cornflowerblue;
+}
+
+section > header {
+    display: block;
+    padding: 40px 0 10px 0;
+}
+
+.games > header {
+    background-color: #2e4fed;
+}
+
+.section-header {
+    display: inline-block;
+    width: auto;
+    text-decoration: none;
+    font-family: Calibri, sans-serif;
+    color: #00aeff;
+    position: relative;
+    left: 10%;
+    padding: 10px 0;
+}
+
+.main-word {
+    color: #ffffff;
+}
+
+.view-all {
+    color: inherit;
+}
+
+.section-header:hover {
+    color: white;
+}
+
+.upper {
+    margin: 10px;
+    display: inline;
+}
+
+.down {
+    position: relative;
+    left: 10%;
+    width: 80%;
+    display: block;
+    margin-left: 10px;
+    font-family: Calibri, sans-serif;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.games-main {
+    position: relative;
+    left: 10%;
+    width: 80%;
+    /*right: 10%;*/
+    overflow: hidden;
+}
+
+.games-main > figure {
+    display: inline-block;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.main-word {
+    font-size: 2.5rem;
+    font-weight: 100;
+}
+
+.game {
+    width: 167px;
+    height: 200px;
+}
+
+.game > figcaption {
+    position: relative;
+    width: inherit;
+    height: inherit;
+    border: solid 1px #00aeff;
+    background-color: rgba(0, 0, 0, 0.85);
+    opacity: 0;
+}
+
+.game > figcaption:hover {
+    opacity: 1;
+}
+
+.explore, .shop-play {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 15% 10% 0 10%;
+    text-align: center;
+}
+
+.shop-play {
+    margin-top: 45%;
+    text-decoration: none;
+    color: white;
+    font-family: Calibri, sans-serif;
+}
+
+.blue-button {
+    font-family: Arial, sans-serif;
+    background-color: #0e86ca;
+    border: solid 1px #00aeff;
+    color: white;
+    padding: 0.65em 2.5em;
+    text-decoration: none;
+}
+
+.blue-button:hover {
+    background-color: #00aeff;
+}
+
+#OverWatch {
+    background: url(../img/logo/tracy-overwatch.jpg) no-repeat center;
+    background-size: cover;
+}
+
+#WarCraft {
+    background: url(../img/logo/warcraft.png) no-repeat center;
+    background-size: cover;
+    /*object-fit: fill;*/
+}
+
+#Hearthstone {
+    background: url(../img/logo/hearthstone.png) no-repeat center;
+    background-size: cover;
+}
+
+#HOTS {
+    background: url(../img/logo/hots.png) no-repeat center;
+    background-size: cover;
+}
+
+#WCR {
+    background: url(../img/logo/warcraft_reforged.jpg) no-repeat center;
+    background-size: cover;
+}
+
+#Diablo {
+    background: url(../img/logo/diablo_immortal.jpg) no-repeat center;
+    background-size: cover;
+}
+
+#StarCraft2 {
+    background: url(../img/logo/starcraft2_zerk.jpg) no-repeat center;
+    background-size: cover;
+}
+
+#StarCraft {
+    background: url(../img/logo/starcraft_remastered.jpg) no-repeat center;
+    background-size: cover;
+}
+
+#Diablo3 {
+    background: url(../img/logo/diablo-3.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.games-footer {
+    text-align: center;
+    background-color: #2e4fed;
+    padding: 20px 0;
+}
+
+.label, .app-link {
+    display: inline;
+}
+
+.app {
+    text-decoration: none;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    color: #00aeff;
+    margin: 0 1.5rem;
+}
+
+.app:hover {
+    color: white;
+}
+
+.label {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.app-link {
+    color: inherit;
+    font-weight: 100;
+}
+
+.stories > header, .stories > footer {
+    background-color: #4a69bd;
+}
+
+.stories-main {
+    position: relative;
+    left: 10%;
+    text-align: center;
+    width: 80%;
+}
+
+.story {
+    display: inline-block;
+    height: 410px;
+    width: 470px;
+    background-color: rgba(0, 174, 255, .1);
+    border: solid 1px rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    margin: 20px 10px 40px 10px;
+}
+
+.story:hover {
+    border: solid 1px #00aeff;
+    background-color: rgba(100, 211, 255, .1);
+}
+
+.story-desc {
+    font-family: Calibri, sans-serif;
+}
+
+.story-desc > h4 {
+    color: rgba(255, 255, 255, .5);
+    font-weight: 500;
+}
+
+.story-desc > h3 {
+    color: white;
+}
+
+.story > figure {
+    position: relative;
+    margin: 0;
+    top: 0;
+    height: 235px;
+}
+
+.story-desc {
+    position: relative;
+    top: 270px;
+    left: 25px;
+    text-align: left;
+}
+
+.story-desc > h4, .story-desc > h3 {
+    margin: 0;
+    padding: 2px;
+}
+
+#message {
+    background: url(../img/stories/bilz_enter.jpg) no-repeat center;
+    background-size: cover;
+}
+
+#new-year {
+    background: url(../img/stories/ovewrwatch_new_year.jpg) no-repeat center;
+    background-size: cover;
+}
+
+#deepmind {
+    background: url(../img/stories/deepmind_starcraft.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.create-worlds {
+    height: 400px;
+    background-color: coral;
+}
+
+.explore-careers {
+    position: inherit;
+    top: 25%;
+    height: 60%;
+    left: 10%;
+    width: 50%;
+    padding: 10px;
+}
+
+.explore-careers > h2, .explore-careers > h3 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    color: white;
+    margin: 20px 0;
+}
+
+.explore-careers > h3 {
+    margin-bottom: 40px;
+    font-size: 1.4rem;
+}
+
+.explore-careers > h2 {
+    font-size: 2.5rem;
+}

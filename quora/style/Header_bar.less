@@ -1,0 +1,111 @@
+.Header-bar {
+  background: #ffffff;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  width: 1002px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__logo {
+    background-image: url(//qsf.fs.quoracdn.net/-3-images.logo.wordmark_default.svg-26-bfa6b94bc0d6af2e.svg);
+    display: block;
+    width: 80px;
+    min-width: 80px;
+    height: 50px;
+    background-size: 80px 23px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-left: 8px;
+  }
+
+  &__control-panel {
+    display: flex;
+    //align-items: baseline;
+  }
+
+  &__control-item {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-self: center;
+    height: 50px;
+    color: #666;
+    text-decoration: none;
+    padding: 0 14px;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 2px solid transparent;
+    border-left: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  &__control-icon, &__control-text {
+    align-self: center;
+  }
+
+  &__control-icon {
+    fill: #666666;
+  }
+
+  &__control-text {
+    padding-left: 3px;
+  }
+
+  &__control-item_current {
+    color: #b92b27;
+    border-bottom: 2px solid #b92b27;
+  }
+
+  &__control-icon_current {
+    fill: #b92b27;
+  }
+
+  &__search-form {
+    padding: 12px 8px 11px 0;
+  }
+
+  &__search-box {
+    padding: 3px 8px 3px 26px;
+    border: 1px solid #e2e2e2;
+    border-radius: 4px;
+    background: url(//qsf.fs.quoracdn.net/-3-images.new_grid.QuoraSearch.png-26-86c32b1ac26e4161.png) no-repeat 8px center;
+    background-size: 13px;
+    font-size: 15px;
+    line-height: 1.4;
+    width: 224px;
+
+    &::placeholder {
+      color: #949494;
+    }
+  }
+
+  &__profile-menu {
+    background-image: url("https://qph.fs.quoracdn.net/main-thumb-657518643-50-iducpqpwislidpjlmabdzqpvvsajawyp.jpeg");
+    height: 26px;
+    width: 26px;
+    border: 0;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: 26px 26px;
+    align-self: center;
+    cursor: pointer;
+  }
+
+  &__add-question-button {
+    border: 0;
+    border-radius: 3px;
+    padding: 4px 8px 5px 8px;
+    background: #b92b27;
+    color: #ffffff;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+    height: 28px;
+    align-self: center;
+    margin-left: 8px;
+  }
+}

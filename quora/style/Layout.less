@@ -1,0 +1,48 @@
+.Layout {
+  background: #fafafa;
+  display: grid;
+  grid-template:
+                "header header header header header" 53px
+                ". side-bar main aside ." auto
+                / auto 142px 614px 184px auto;
+  column-gap: 42px;
+  row-gap: 30px;
+
+  &__header {
+    background: #ffffff;
+    grid-area: header;
+    width: 100%;
+    position: fixed;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 3px 2px -2px rgba(200,200,200,0.2)
+  }
+
+  &__side-bar {
+    grid-area: side-bar;
+  }
+
+  &__main-block {
+    grid-area: main;
+  }
+
+  &__advice-block {
+    grid-area: aside;
+    width: 172px;
+    border-radius: 3px;
+    border: 1px solid #e2e2e2;
+    background-color: #ffffff;
+    height: 390px;
+
+    &_small {
+      height: 177px;
+    }
+  }
+
+  &__story {
+    background: #ffffff;
+    border-radius: 4px;
+    border: 1px solid #efefef;
+    border-bottom: 1px solid #e2e2e2;
+    margin-bottom: 8px;
+  }
+}

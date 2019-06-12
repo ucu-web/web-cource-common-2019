@@ -1,0 +1,40 @@
+.Checklist {
+  font-weight: 400;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  line-height: 1.4;
+  color: #333;
+  font-size: 13px;
+
+  &__check-icon {
+    width: 14px;
+    height: 13px;
+    padding-top: 6px;
+
+    &_unchecked {
+      opacity: .2;
+    }
+  }
+
+  &__item {
+    width: 138px;
+    padding: 8px 16px;
+    display: flex;
+    margin: 0;
+  }
+
+  &__text {
+    display: block;
+    margin: 0 0 0 8px;
+  }
+
+  &__item_checked {
+    text-decoration: line-through;
+    color: #949494;
+  }
+
+  &__item_link-style {
+    color: #2b6dad;
+    text-decoration: none;
+  }
+
+}
