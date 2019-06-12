@@ -1,0 +1,89 @@
+@import "../definitions.less";
+
+@blue: #78b5da;
+@darkblue: #245c78;
+@black: #262626;
+@top-height: 3rem;
+
+.main-control {
+  background-color: white;
+  &__container {
+    .centered();
+    margin: 1rem auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 0.9rem;
+  }
+  &__contact-list {
+    height: @top-height;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    flex-grow: 2;
+  }
+  &__contact {
+    height: @top-height / 2;
+    text-align: right;
+    margin: 0 0.4rem;
+  }
+  &__contact-link {
+    color: @darkblue;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  &__logo {
+    height: @top-height;
+  }
+  &__local-nav {
+    width: 100%;
+    margin: 0.75rem auto;
+    display: flex;
+    justify-content: space-between;
+    &-link {
+      color: @black;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  &__settings {
+    display: flex;
+  }
+  &__cart, &__lang {
+    background-color: @blue;
+    height: @top-height;
+    width: @top-height;
+    border: 0.1rem solid @blue;
+    line-height: @top-height;
+  }
+  &__lang {
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    &_state_active {
+      display: block;
+    }
+    &_state_inactive{
+      display: none;
+    }
+  }
+  &__cart {
+    margin-left: 0.1rem;
+    background: @blue url(https://booking.uz.gov.ua/i/img/ic-header-cart.svg) center/1.5rem no-repeat;
+    &:hover {
+      background-color: white;
+      background-image: url(https://booking.uz.gov.ua/i/img/ic-header-cart-h.svg);
+    }
+  }
+  &__global-nav {
+    width: calc(100% - 10.1rem);
+  }
+  &__auth {
+    width: 10rem;
+  }
+}

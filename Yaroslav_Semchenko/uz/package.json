@@ -1,0 +1,12 @@
+{
+  "name": "uz",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "less": "^3.9.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.33.0",
+    "webpack-cli": "^3.3.3"
+  }
+}

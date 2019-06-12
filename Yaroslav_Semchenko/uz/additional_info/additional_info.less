@@ -1,0 +1,21 @@
+@import "../definitions.less";
+
+@text: #434343;
+
+.additional-info {
+  &__container {
+    .centered();
+    display: flex;
+    font-size: 0.8rem;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: @text;
+    height: 4rem;
+  }
+  &__payment-type , &__social, &__app{
+    height: 1.5rem;
+  }
+  &__text {
+    margin: 0.4rem 0;
+  }
+}

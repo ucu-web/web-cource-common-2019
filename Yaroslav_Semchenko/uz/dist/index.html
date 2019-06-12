@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Онлайн резервування та придбання квиткiв - Укрзалізниця</title>
+
+    <link rel="stylesheet" href="../main-control/main-control.css">
+    <link rel="stylesheet" href="../global-menu/global-menu.css">
+    <link rel="stylesheet" href="../authorization/authorization.css">
+    <link rel="stylesheet" href="../train-search/train-search.css">
+    <link rel="stylesheet" href="../additional_info/additional_info.css">
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <header class="main-control">
+        <div class="main-control__container">
+            <img class="main-control__logo" alt="Укрзалізниця" src="https://booking.uz.gov.ua/i/img/logo-uz-new.svg"/>
+            <div class="main-control__contact-list"></div>
+            <div class="main-control__settings">
+                <div class="main-control__languages"></div>
+                <div class="main-control__cart"><a href="cart.html"></a></div>
+            </div>
+            <nav class="main-control__local-nav"></nav>
+            <nav class="main-control__global-nav"></nav>
+            <div class="main-control__auth"></div>
+        </div>
+    </header>
+    <main class="train-search">
+        <section class="train-search__popular">
+            <header class="train-search__label">
+                Подорожуй популярними напрямками
+            </header>
+            <main class="train-search__popular-list">
+
+            </main>
+        </section>
+        <form class="train-search__form">
+        </form>
+        <button class="train-search__button">Пошук поїздів на <span class="train-search__date-display"></span></button>
+        <table class="train-search__list">
+            <tr>
+                <th>№ поїзда</th>
+                <th>Звідки / Куди</th>
+                <th>Дата</th>
+                <th>Відправлення<br>Прибуття</th>
+                <th>Тривалість</th>
+                <th>Вільних місць</th>
+            </tr>
+        </table>
+        <section class="train-search__error">
+
+        </section>
+        <aside class="train-search__info info-bar">
+
+        </aside>
+    </main>
+    <footer class="additional-info">
+        <div class="additional-info__container">
+            <div class="additional-info__text">2012-2019 Всі права захищені</div>
+            <div class="additional-info__apps">
+                <img alt="Завантажити з App Store" class="additional-info__app" src="https://booking.uz.gov.ua/i/img/appstore.png"/>
+                <img alt="Завантажити з Google Play" class="additional-info__app" src="https://booking.uz.gov.ua/i/img/android.png" />
+            </div>
+            <div class="additional-info__text">До оплати приймаються:</div>
+            <div class="additional-info__payments">
+                <img alt="Visa" class="additional-info__payment-type" src="https://booking.uz.gov.ua/i/img/visa.svg"/>
+                <img alt="Visa Electron" class="additional-info__payment-type" src="https://booking.uz.gov.ua/i/img/visa-electron.svg"/>
+                <img alt="Mastercard" class="additional-info__payment-type" src="https://booking.uz.gov.ua/i/img/mastercard.svg"/>
+                <img alt="Maestro" class="additional-info__payment-type" src="https://booking.uz.gov.ua/i/img/maestro.svg"/>
+                <img alt="ПРОСТІР" class="additional-info__payment-type" src="https://booking.uz.gov.ua/i/img/prostir-uk.svg"/>
+            </div>
+            <div class="additional-info__text">Стежте за нами:</div>
+            <div class="additional-info__social-list">
+                <img alt="Facebook" class="additional-info__social" src="https://booking.uz.gov.ua/i/img/facebook.svg"/>
+                <img alt="YouTube" class="additional-info__social" src="https://booking.uz.gov.ua/i/img/youtube.svg"/>
+            </div>
+        </div>
+    </footer>
+    <script src="./main.js"></script>
+</body>
+</html>

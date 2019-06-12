@@ -1,0 +1,27 @@
+.centered {
+  width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+.additional-info__container {
+  width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  display: flex;
+  font-size: 0.8rem;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: #434343;
+  height: 4rem;
+}
+.additional-info__payment-type,
+.additional-info__social,
+.additional-info__app {
+  height: 1.5rem;
+}
+.additional-info__text {
+  margin: 0.4rem 0;
+}
+/*# sourceMappingURL=additional_info.css.map */
