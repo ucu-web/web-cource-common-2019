@@ -1,0 +1,23 @@
+@import "../config.css";
+
+header {
+  height: $header-height;
+  background-color: #24292e;
+  margin-bottom: 24px;
+}
+
+main {
+  max-width: $main-width;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 230px 730px;
+  column-gap: 20px;
+}
+
+aside {
+  width: $aside-width;
+}
+
+article {
+  width: $article-width;
+}

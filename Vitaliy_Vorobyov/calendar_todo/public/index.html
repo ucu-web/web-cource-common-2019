@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Calendar</title>
+  <style>
+    body {
+      margin: 0;
+    }
+  </style>
+  <link rel="stylesheet" href="styles/Calendar.css">
+  <link rel="stylesheet" href="styles/CalendarInfo.css">
+  <link rel="stylesheet" href="styles/CalendarApp.css">
+  <link rel="stylesheet" href="styles/Todo.css">
+</head>
+<body>
+<div class="Calendar">
+  <div class="CalendarInfo Calendar__CalendarInfo">
+    <h1 class="CalendarInfo__date" aria-label="Date"></h1>
+    <h2 class="CalendarInfo__month" aria-label="Month"></h2>
+    <h2 class="CalendarInfo__weekday" aria-label="Weekday"></h2>
+    <div class="Todo CalendarInfo__Todo">
+      <h1 class="Todo__title">Todo:</h1>
+      <ul class="Todo__list">
+      </ul>
+      <form class="Todo__form" action="">
+        <input class="Todo__input" type="text" placeholder="Add task">
+      </form>
+    </div>
+  </div>
+  <div class="CalendarApp Calendar__CalendarApp">
+    <table class="CalendarApp__calendar">
+      <thead>
+      <tr>
+        <th class="CalendarApp__dateMonth" colspan="7"></th>
+      </tr>
+      </thead>
+      <tbody class="CalendarApp__calendarTable"></tbody>
+    </table>
+    <form action="">
+      <a class="CalendarApp__prevButton">Prev Month</a>
+      <a class="CalendarApp__nextButton">Next Month</a>
+    </form>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

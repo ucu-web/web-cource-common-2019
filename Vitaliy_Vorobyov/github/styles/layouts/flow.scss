@@ -1,0 +1,27 @@
+@import "../config.css";
+
+header {
+  height: $header-height;
+  background-color: #24292e;
+  margin-bottom: 24px;
+}
+
+main {
+  max-width: $main-width;
+  margin: auto;
+  font-size: 0;
+}
+
+aside {
+  width: $aside-width;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 20px;
+  font-size: 1rem;
+}
+
+article {
+  width: $article-width;
+  display: inline-block;
+  font-size: 1rem;
+}

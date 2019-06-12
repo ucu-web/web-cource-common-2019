@@ -1,0 +1,22 @@
+@import "../config.css";
+
+header {
+  height: $header-height;
+  background-color: #24292e;
+  margin-bottom: 24px;
+}
+
+main {
+  max-width: $main-width;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+aside {
+  width: $aside-width;
+}
+
+article {
+  width: $article-width;
+}
