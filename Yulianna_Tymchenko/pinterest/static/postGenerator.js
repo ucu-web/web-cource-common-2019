@@ -1,7 +1,8 @@
-export const generate = (data) => {
+export const generate = (data, temp) => {
     const parentElement = document.createElement('div');
     let ratio = data.height / data.width;
-    parentElement.className = 'Post';
+    parentElement.classList.add('Post', 'temp');
+    // parentElement.className = 'Post';
     parentElement.innerHTML = `
 <div class="Post__image_container">
     <a class="Post__image__link">
