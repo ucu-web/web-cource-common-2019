@@ -6,11 +6,13 @@ let marginLeft = 0;
 let prevBlocks = [];
 
 export function setupBlocks() {
-    margin = 20;
+    margin = 15;
     let blocks = [];
     windowWidth = $(window).width();
     colWidth = $('.Post').outerWidth();
     colCount = Math.floor(windowWidth / (colWidth + margin));
+    if (colCount===1)
+        colCount++
     marginLeft = (windowWidth - (colWidth + margin) * colCount) / 2;
     for (let i = 0; i < colCount; i++) {
         blocks.push(margin);
@@ -34,7 +36,6 @@ export function positionBlocks( selector, blocks) {
         }
 
     });
-
     prevBlocks = blocks;
 
 }

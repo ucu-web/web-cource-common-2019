@@ -26,7 +26,6 @@ window.onscroll = () => {
     let nodePosS = document.querySelector('.Layout__main-block__home').lastElementChild.style.top;
     let nodePos = parseInt(nodePosS, 10);
     let yOffset = window.pageYOffset;
-    console.log(yOffset);
     let y = yOffset + window.innerHeight;
     let container = document.querySelector('.Layout__main-block__home');
     let childNodes = Array.from(container.children);
@@ -40,7 +39,7 @@ window.onscroll = () => {
     });
     let theScroll = yOffset;
     if (theScroll < lastScrollTop) {
-        if ( firstChild.getBoundingClientRect().top > 0) {
+        if ( firstChild.getBoundingClientRect().top > -100) {
             nodesArray.slice(nodesArray.length - 1).map(el => container.insertBefore(el, firstChild));
             nodesArray.pop()
         }

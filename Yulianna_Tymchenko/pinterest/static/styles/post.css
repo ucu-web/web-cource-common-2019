@@ -1,7 +1,7 @@
 .Post {
     border-radius: 8px;
     position: absolute;
-    width: 275px;
+    width: 236px;
 }
 
 .Post:hover {
@@ -54,7 +54,7 @@
 .Post__image {
     border-radius: 8px;
     background: #F1F1FA;
-    width: 256px;
+    width: 236px;
     display: flex;
     border: 0;
 }

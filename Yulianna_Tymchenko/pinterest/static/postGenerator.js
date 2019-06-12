@@ -1,12 +1,11 @@
-export const generate = (data, temp) => {
-    const parentElement = document.createElement('div');
+export const generate = (data) => {
+    const container = document.createElement('div');
     let ratio = data.height / data.width;
-    parentElement.classList.add('Post', 'temp');
-    // parentElement.className = 'Post';
-    parentElement.innerHTML = `
+    container.classList.add('Post', 'temp');
+    container.innerHTML = `
 <div class="Post__image_container">
     <a class="Post__image__link">
-        <img  class="Post__image lazy"  style="height: ${256 * ratio}px; width: 256px" src="${data.image_link}" alt="">
+        <img  class="Post__image lazy"  style="height: ${219 * ratio}px; width: 219px" src="${data.image_link}" alt="">
      </a>
     <form class="Post__form">
         <button class="Button Post__button_select">Home</button>
@@ -27,5 +26,5 @@ export const generate = (data, temp) => {
     <button class="Button Post__button_more-info" aria-label="more information"></button>
 </div>
 `;
-    return parentElement;
+    return container;
 };
