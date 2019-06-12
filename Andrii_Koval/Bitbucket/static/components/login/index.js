@@ -1,3 +1,3 @@
 import "./login.less"
 
-export {loginForm} from "./Login";
+export {default} from "./Login";

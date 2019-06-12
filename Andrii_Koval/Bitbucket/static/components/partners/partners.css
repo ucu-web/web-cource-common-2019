@@ -6,7 +6,6 @@
 .Partners__heading {
   width: 50%;
   text-align: center;
-  float: left;
   margin-left: 25%;
   font-size: 2.25rem;
   line-height: 1.3;
@@ -16,5 +15,21 @@
   text-align: center;
   width: 100%;
   padding: 16px;
+  box-sizing: border-box;
+}
+.Partners__image-mobile {
+  display: none;
+}
+@media (max-width: 800px) {
+  .Partners__image-desktop {
+    display: none;
+  }
+  .Partners__image-mobile {
+    display: inline;
+    width: 500px;
+  }
+  .Partners__heading {
+    font-size: 1.5rem;
+  }
 }
 /*# sourceMappingURL=partners.css.map */

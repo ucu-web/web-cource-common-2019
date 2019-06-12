@@ -17,16 +17,16 @@
 }
 .Pricing__container {
   max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
   display: flex;
   flex-wrap: wrap;
+  margin: auto;
 }
 .Pricing__container-remarks {
   text-align: center;
   width: 100%;
   padding: 16px;
   float: left;
+  box-sizing: border-box;
 }
 .Pricing__container-wrapper {
   display: flex;
@@ -111,25 +111,24 @@
 .Pricing__list {
   padding-left: 0;
 }
-.Pricing__get-started-btn {
-  color: #FFF;
-  display: inline-block;
-  font-weight: 500;
-  background-color: #0052CC;
-  border: 1px solid #0052CC;
-  height: 40px;
-  line-height: 38px;
-  padding: 0 16px;
-  border-radius: 3px;
-  margin-bottom: 16px;
-}
-.Pricing__get-started-btn :hover {
-  background: #0047B3;
-  border-color: #0047B3;
-  transition: all 250ms;
-}
 .Pricing__btn-container {
   text-align: center;
   margin-top: 15px;
+}
+@media (max-width: 800px) {
+  .Pricing__container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .Pricing__container-wrapper {
+    width: 66.6%;
+  }
+  .Pricing__title {
+    margin: 0;
+  }
+  .Pricing__title-text {
+    font-size: 1.5rem;
+  }
 }
 /*# sourceMappingURL=pricing.css.map */

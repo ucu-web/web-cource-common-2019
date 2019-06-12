@@ -8,6 +8,7 @@ const PORT = 3000;
 app.use(bodyParser.json());
 app.use(express.static(path.resolve(__dirname, "../dist")));
 app.use(express.static(path.resolve(__dirname, "../static")));
+app.use(express.static(path.resolve(__dirname, "../static/data")));
 
 app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "../index.html"))

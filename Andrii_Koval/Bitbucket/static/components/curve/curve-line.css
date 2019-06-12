@@ -1,3 +1,12 @@
+.Layout__curve-three-img {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  background-color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 64px;
+}
 .Curve {
   display: block;
   background-color: #F4F5F7;
@@ -7,13 +16,13 @@
 }
 .Curve__image {
   margin-bottom: 16px;
-  vertical-align: bottom;
 }
 .Curve__one-block {
   width: 33.3333%;
   float: left;
   text-align: center;
   padding: 16px;
+  box-sizing: border-box;
 }
 .Curve__heading {
   font-size: 1.5rem;
@@ -24,5 +33,18 @@
 .Curve__main-content {
   color: #253858;
   line-height: 24px;
+}
+@media (max-width: 800px) {
+  .Layout__curve-three-img {
+    justify-content: center;
+  }
+  .Curve__one-block {
+    width: 50%;
+  }
+}
+@media (max-width: 550px) {
+  .Curve__one-block {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=curve-line.css.map */

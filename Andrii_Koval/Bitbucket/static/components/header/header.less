@@ -1,33 +1,46 @@
+.Layout {
+  &__header {
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    height: 70px;
+    background: #ffffff;
+  }
+}
+
 .Header {
-  display: flex;
-  justify-content: space-between;
-  width: 1200px;
+  max-width: 1200px;
   height: 100%;
-  align-items: center;
+  margin: auto;
+
+  &__svg-log {
+    display: block;
+    box-sizing: border-box;
+  }
 
   &__nav-bar {
-    display: flex;
-    justify-content: center;
-    margin: 0 15px;
+    margin: 5px 15px;
+    flex-grow: 2;
 
     &-wrapper {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      box-sizing: border-box;
       padding: 0 16px;
       position: relative;
+      width: 100%;
     }
 
     &-link {
+      float: left;
       font-size: 1.125rem;
       margin: 0 15px;
       padding-bottom: 15px;
       padding-top: 26px;
-      border-bottom: 3px solid transparent;
 
       &-log-in {
-        margin-right: 0;
-        margin-left: 455px;
+        float: right;
       }
     }
 
@@ -56,5 +69,30 @@
     background: #EBECF0;
     transition: all 250ms;
     color: #0052CC;
+  }
+}
+
+@media (max-width: 1000px) {
+  .Header {
+    &__nav-bar-link {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .Header {
+    &__nav-bar {
+      display: none;
+
+      &-wrapper {
+        height: 100%;
+      }
+    }
+
+    &__get-started-button {
+      font-size: .9rem;
+      height: 27px;
+    }
   }
 }

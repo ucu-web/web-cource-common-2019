@@ -6,7 +6,6 @@
   &__heading {
     width: 50%;
     text-align: center;
-    float: left;
     margin-left: 25%;
     font-size: 2.25rem;
     line-height: 1.3;
@@ -17,5 +16,29 @@
     text-align: center;
     width: 100%;
     padding: 16px;
+    box-sizing: border-box;
+
+    &-mobile {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .Partners {
+    &__image {
+      &-desktop {
+        display: none;
+      }
+
+      &-mobile {
+        display: inline;
+        width: 500px;
+      }
+    }
+
+    &__heading {
+      font-size: 1.5rem;
+    }
   }
 }

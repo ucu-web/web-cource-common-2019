@@ -7,6 +7,10 @@
 .Feature__image {
   width: 66.6%;
   padding: 0 16px;
+  box-sizing: border-box;
+}
+.Feature__image-mobile {
+  display: none;
 }
 .Feature__text {
   width: 33.3%;
@@ -29,5 +33,30 @@
   font-size: 1.25rem;
   line-height: 1.4;
   color: #42526E;
+}
+@media (max-width: 1000px) {
+  .Feature {
+    flex-direction: column;
+  }
+  .Feature:nth-child(2) {
+    flex-direction: column-reverse;
+  }
+  .Feature__image {
+    width: 100%;
+  }
+  .Feature__text {
+    width: 100%;
+  }
+}
+@media (max-width: 750px) {
+  .Feature__image-desktop {
+    display: none;
+  }
+  .Feature__image-mobile {
+    display: inline;
+  }
+  .Feature__main-heading {
+    font-size: 1.5rem;
+  }
 }
 /*# sourceMappingURL=feature.css.map */

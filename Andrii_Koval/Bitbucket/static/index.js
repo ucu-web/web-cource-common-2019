@@ -1,21 +1,28 @@
-import './styles/beginner-resources.less'
 import './styles/common.css'
-import './styles/curve-line.less'
-import './styles/feature.less'
 import './styles/fonts.css'
-import './styles/header.less'
-import './styles/horizontal-line.css'
-import './styles/integrations.less'
-import './styles/intro.less'
-import './styles/layout.less'
-import './styles/partners.less'
-import './styles/pricing.less'
-import {loginForm} from './components/login/Login'
+import loginForm from './components/login/'
+import renderBegRes from './components/beginner-resources'
+import renderCurve from './components/curve'
+import renderFeature from './components/feature'
+import renderHeader from './components/header'
+import renderIntegration from './components/integration'
+import renderIntroduction from './components/introduction'
+import renderPartners from './components/partners'
+import renderPricing from './components/pricing'
+
 
 const path_name = window.location.pathname;
-const app = document.getElementsByTagName("body");
+const appBody = document.getElementsByTagName("body")[0];
+appBody.appendChild(renderHeader());
+appBody.appendChild(renderIntroduction());
+appBody.appendChild(renderCurve());
+renderFeature(appBody, "/featureData.json");
+appBody.appendChild(renderBegRes());
+appBody.appendChild(renderIntegration());
+appBody.appendChild(renderPartners());
+appBody.appendChild(renderPricing());
 
-if (path_name === "login") {
-    app.innerHTML = "";
-    app.appendChild(loginForm())
+if (path_name === "/login") {
+    appBody.innerHTML = "";
+    appBody.appendChild(loginForm())
 }

@@ -1,0 +1,68 @@
+[
+  [
+    {
+      "type": "image",
+      "data": {
+        "desktop": {
+          "src": "/images/04_CodeCollaboration.png"
+        },
+        "mobile": {
+          "src": "/images/01_CodeCollaboration_Mobile.png"
+        },
+        "alt": "Code Collaboration icon"
+      }
+    },
+    {
+      "type": "text",
+      "data": {
+        "title": "Code Collaboration",
+        "subtitle": "Build quality software with code review",
+        "mainContent": "Approve code review more efficiently with pull requests. Create a merge checklist with designated approvers and hold discussions right in the source code with inline comments."
+      }
+    }
+  ],
+  [
+    {
+      "type": "text",
+      "data": {
+        "title": "Continuous Delivery",
+        "subtitle": "Deploy often with built-in continuous delivery",
+        "mainContent": "Bitbucket Pipelines with Deployments lets you build, test and deploy with integrated CI/CD. Benefit from configuration as code and fast feedback loops."
+      }
+    },
+    {
+      "type": "image",
+      "data": {
+        "desktop": {
+          "src": "/images/06_ContinuousDelivery.png"
+        },
+        "mobile": {
+          "src": "/images/02_ContinuousDelivery_Mobile.png"
+        },
+        "alt": "Continuous Delivery icon"
+      }
+    }
+  ],
+  [
+    {
+      "type": "image",
+      "data": {
+        "desktop": {
+          "src": "/images/05_Security.png"
+        },
+        "mobile": {
+          "src": "/images/03_Security_Mobile.png"
+        },
+        "alt": "Security icon"
+      }
+    },
+    {
+      "type": "text",
+      "data": {
+        "title": "Security icon",
+        "subtitle": "Secure your workflow",
+        "mainContent": "Know your code is secure in the Cloud with IP whitelisting and required 2-step verification. Restrict access to certain users, and control their actions with branch permissions and merge checks for quality code."
+      }
+    }
+  ]
+]

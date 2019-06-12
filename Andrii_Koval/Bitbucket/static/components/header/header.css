@@ -1,32 +1,41 @@
+.Layout__header {
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  height: 70px;
+  background: #ffffff;
+}
 .Header {
-  display: flex;
-  justify-content: space-between;
-  width: 1200px;
+  max-width: 1200px;
   height: 100%;
-  align-items: center;
+  margin: auto;
+}
+.Header__svg-log {
+  display: block;
+  box-sizing: border-box;
 }
 .Header__nav-bar {
-  display: flex;
-  justify-content: center;
-  margin: 0 15px;
+  margin: 5px 15px;
+  flex-grow: 2;
 }
 .Header__nav-bar-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
   padding: 0 16px;
   position: relative;
+  width: 100%;
 }
 .Header__nav-bar-link {
+  float: left;
   font-size: 1.125rem;
   margin: 0 15px;
   padding-bottom: 15px;
   padding-top: 26px;
-  border-bottom: 3px solid transparent;
 }
 .Header__nav-bar-link-log-in {
-  margin-right: 0;
-  margin-left: 455px;
+  float: right;
 }
 .Header__nav-bar-link:hover {
   color: #0065FF;
@@ -49,5 +58,22 @@
   background: #EBECF0;
   transition: all 250ms;
   color: #0052CC;
+}
+@media (max-width: 1000px) {
+  .Header__nav-bar-link {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 750px) {
+  .Header__nav-bar {
+    display: none;
+  }
+  .Header__nav-bar-wrapper {
+    height: 100%;
+  }
+  .Header__get-started-button {
+    font-size: 0.9rem;
+    height: 27px;
+  }
 }
 /*# sourceMappingURL=header.css.map */

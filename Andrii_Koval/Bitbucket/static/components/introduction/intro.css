@@ -1,3 +1,8 @@
+.Layout__intro {
+  background-color: #F4F5F7;
+  overflow: hidden;
+  margin: 0 auto;
+}
 .Intro {
   padding: 16px;
   text-align: center;
@@ -8,7 +13,7 @@
 .Intro__heading {
   font-size: 2.75rem;
   margin-bottom: 16px;
-  line-height: 1.181818;
+  line-height: 1.18;
   color: #253858;
   font-weight: 500;
 }
@@ -42,5 +47,12 @@
   background: #0047B3;
   border-color: #0047B3;
   transition: all 250ms;
+}
+@media (max-width: 750px) {
+  .Intro__heading {
+    font-size: 2rem;
+    line-height: 1.25;
+    margin-bottom: 14px;
+  }
 }
 /*# sourceMappingURL=intro.css.map */

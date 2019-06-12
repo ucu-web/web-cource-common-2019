@@ -1,6 +1,6 @@
 .Integration {
   background: #F4F5F7;
-  padding-top: 96px;
+  padding-top: 32px;
   padding-bottom: 64px;
 }
 .Integration__heading {
@@ -20,17 +20,11 @@
   color: #42526E;
   margin-bottom: 16px;
 }
-.Integration__features {
+.Integration__feature {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   margin: 0 auto;
   max-width: 1200px;
-}
-.Integration__feature-block {
-  padding: 16px;
-  width: 33.3%;
-  float: left;
-  text-align: left;
 }
 .Integration__feature-heading {
   font-size: 1.5rem;
@@ -42,5 +36,13 @@
 .Integration__feature-content {
   font-weight: 400;
   line-height: 24px;
+}
+@media (max-width: 800px) {
+  .Integration__feature {
+    justify-content: center;
+  }
+  .Integration__heading-main {
+    font-size: 1.5rem;
+  }
 }
 /*# sourceMappingURL=integrations.css.map */

@@ -7,6 +7,11 @@
   &__image {
     width: 66.6%;
     padding: 0 16px;
+    box-sizing: border-box;
+
+    &-mobile {
+      display: none;
+    }
   }
 
   &__text {
@@ -33,5 +38,41 @@
     font-size: 1.25rem;
     line-height: 1.4;
     color: #42526E;
+  }
+}
+
+@media (max-width: 1000px) {
+  .Feature {
+    flex-direction: column;
+
+    &:nth-child(2) {
+      flex-direction: column-reverse;
+    }
+
+    &__image {
+      width: 100%;
+    }
+
+    &__text {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .Feature {
+    &__image {
+      &-desktop {
+        display: none;
+      }
+
+      &-mobile {
+        display: inline;
+      }
+    }
+
+    &__main-heading {
+      font-size: 1.5rem;
+    }
   }
 }

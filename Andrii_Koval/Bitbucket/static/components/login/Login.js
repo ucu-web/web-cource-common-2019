@@ -1,8 +1,9 @@
-export const loginForm = () => {
+const loginForm = () => {
     const container = document.createElement('div');
-    container.className = "Login";
+    container.className = "Login__wrapper";
     container.innerHTML =
-        `<header class="Login__header">
+        `<div class="Login">
+        <header class="Login__header">
             <span class="Login__logo">
                 <svg viewBox="0 0 190 32" xmlns="http://www.w3.org/2000/svg" focusable="false" aria-hidden="true">
             <defs>
@@ -45,7 +46,7 @@ export const loginForm = () => {
                 <button class="Login__box-google-btn"
                         type="button"><img
                         src="https://aid-frontend.prod.atl-paas.net/atlassian-id/front-end/4.3.6/static/media/google-logo.c21ca9d1.svg"
-                        alt="" style="height: 18px; margin-right: 8px; vertical-align: middle; width: 18px;">
+                        alt="" style="height: 18px; margin-right: 8px; vertical-align: middle; width: 18px; margin-bottom: 0;">
                     <span>Log in with Google</span>
                 </button>
             </div>
@@ -60,6 +61,8 @@ export const loginForm = () => {
                 </div>
             </form>
         </div>
-    </div>`;
+    </div>
+</div>`;
     return container;
 };
+export default loginForm;

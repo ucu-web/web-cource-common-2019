@@ -19,16 +19,17 @@
 
   &__container {
     max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
     display: flex;
     flex-wrap: wrap;
+    margin: auto;
+
 
     &-remarks {
       text-align: center;
       width: 100%;
       padding: 16px;
       float: left;
+      box-sizing: border-box;
     }
 
     &-wrapper {
@@ -130,28 +131,31 @@
     padding-left: 0;
   }
 
-  &__get-started-btn {
-    color: #FFF;
-    display: inline-block;
-    font-weight: 500;
-    background-color: #0052CC;
-    border: 1px solid #0052CC;
-    height: 40px;
-    line-height: 38px;
-    padding: 0 16px;
-    border-radius: 3px;
-    margin-bottom: 16px;
-  }
-
-  &__get-started-btn :hover {
-    background: #0047B3;
-    border-color: #0047B3;
-    transition: all 250ms;
-  }
-
   &__btn-container {
     text-align: center;
     margin-top: 15px;
+  }
+}
+
+@media (max-width: 800px) {
+  .Pricing {
+    &__container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &-wrapper {
+        width: 66.6%;
+      }
+    }
+
+    &__title {
+      margin: 0;
+
+      &-text {
+        font-size: 1.5rem;
+      }
+    }
   }
 }
 
