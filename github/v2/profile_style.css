@@ -1,0 +1,547 @@
+body {
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#main-header {
+    height: 60px;
+    background-color: #24292e;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+}
+
+#main-header > div {
+    display: flex;
+    align-items: center;
+}
+
+#main-header > div > a {
+    margin-right: 13px;
+}
+
+#main-header > div > a:before {
+    content: "";
+    width: 32px;
+    height: 32px;
+    display: block;
+    background: url("images/GitHubIcon.svg") no-repeat;
+    margin-top: -4px;
+}
+
+#main-header > div form input {
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    background-color: hsla(0,0%,100%,.125);
+
+    padding: 0 8px;
+
+    color: #cdcdcd;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+#main-header > div form {
+    width: 300px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+#main-header > div form img {
+    margin-left: -25px;
+    height: 18px;
+}
+
+.main-nav {
+    margin-left: 16px;
+    margin-top: 3px;
+}
+
+.main-nav a {
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    margin-right: 12px;
+}
+
+.main-nav a:hover {
+    color: hsla(0,0%,100%,.75);
+}
+
+.secondary-nav {
+    width: 116px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.secondary-nav a::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: block;
+    margin-top: -1px;
+    background: url("images/bell.svg") no-repeat;
+}
+
+.plus-button {
+    width: 17px;
+    height: 17px;
+    margin-top: 3px;
+    margin-right: 7px;
+    background: url("images/plus.svg") no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+.plus-button::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    display: block;
+    margin-left: 18px;
+    position: relative;
+    cursor: pointer;
+    background: url("images/dropdown.svg");
+}
+
+.profile-button {
+    width: 20px;
+    height: 20px;
+    margin-top: 4px;
+    border-radius: 3px;
+    margin-right: 4px;
+    background: url("images/avatar.jpg") no-repeat;
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+}
+
+.profile-button::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    display: block;
+    margin-left: 24px;
+    position: relative;
+    cursor: pointer;
+    background: url("images/dropdown.svg")
+}
+
+main {
+    width: 980px;
+    height: auto;
+    margin: 24px auto auto;
+}
+
+main aside {
+    width: 229px;
+    height: auto;
+    display: inline-block;
+    float: left;
+}
+
+main aside > img:nth-child(1) {
+    height: 229px;
+    width: 227px;
+    border-radius: 3px 3px 0 0;
+    border: 1px solid #e1e4e8;
+    border-bottom: 0;
+}
+
+#avatar-footer {
+    width: 227px;
+    height: 49px;
+    margin-top: -6px;
+    border-bottom: 1px solid #e1e4e8;
+    border-radius: 0 0 3px 3px;
+    border-left: 1px solid #e1e4e8;
+    border-right: 1px solid #e1e4e8;
+}
+
+#avatar-footer div {
+    border-radius: 50%;
+    display: flex;
+    background-color: #FFF;
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    margin-top: -14px;
+    margin-left: 15px;
+}
+
+#avatar-footer div img {
+    width: 18px;
+    height: 18px;
+}
+
+#avatar-footer a {
+    color: #24292e;
+    position: absolute;
+    font-size: 12px;
+    margin-top: 24px;
+    margin-left: 12px;
+    text-decoration: none;
+}
+
+#avatar-footer a:hover {
+    color: cornflowerblue;
+}
+
+aside > h1 {
+    margin-top: 16px;
+    color: #24292e;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+aside > h2 {
+    color: #6a737d;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+aside > hr {
+    margin-top: 16px;
+    margin-bottom: 18px;
+    border: 0;
+    height: 1px;
+    background: #ddd;
+}
+
+.star {
+    width: 14px;
+    height: 16px;
+    display: inline-block;
+}
+
+.pro {
+    margin-left: 12px;
+    color: #FFF;
+    box-shadow: inset 0 -1px 0 rgba(27,31,35,.12);
+    border-radius: 2px;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    padding: 3px 4px;
+    background-color: #6f42c1;
+}
+
+aside > p {
+    margin: 15px 0 23px 0;
+    color: #24292e;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+aside > address:before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: block;
+    background: url("images/geo.svg") no-repeat;
+    float: left;
+    position: relative;
+    visibility: visible;
+}
+
+aside > address {
+    color: #24292e;
+    font-size: 14px;
+    font-style: normal;
+}
+
+aside > a {
+    text-decoration: none;
+    color: cornflowerblue;
+    display: block;
+}
+
+.mail:before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: block;
+    background: url("images/mail.svg") no-repeat;
+    float: left;
+    position: relative;
+    visibility: visible;
+}
+
+.contact {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 160px;
+    height: 1.2em;
+    white-space: nowrap;
+}
+
+.contact:before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: block;
+    background: url("images/contact.svg") no-repeat;
+    float: left;
+    position: relative;
+    visibility: visible;
+}
+
+aside > button {
+    width: 229px;
+    height: 28px;
+    border: 1px solid #bbb;
+    background-color: #eff3f6;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: 12px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.main-content {
+    width: 727px;
+    height: auto;
+    float: right;
+}
+
+.main-content > header {
+    width: 727px;
+    height: 55px;
+    border-bottom: 1px solid #d1d5da;
+    box-sizing: border-box;
+    background-color: #FFF;
+    z-index: 1;
+    position: sticky;
+    top: 0;
+}
+
+.main-content > header > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-content > header > div a {
+    height: 55px;
+    text-decoration: none;
+    color: #6a737d;
+    font-size: 14px;
+    padding: 18px 8px;
+    margin-right: 16px;
+    box-sizing: border-box;
+    border-bottom: 2px solid transparent;
+}
+
+.main-content > header > div a:hover {
+    border-bottom-color: #d1d5da;
+}
+
+.main-content > header > div a span {
+    background-color: rgba(27,31,35,.08);
+    border-radius: 20px;
+    color: #586069;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    padding: 2px 5px;
+}
+
+.main-content > header > div a:nth-child(1) {
+    border-bottom-color: #e36209;
+    color: #24292e;
+    font-weight: 600;
+}
+
+.pinned-repositories {
+    width: 727px;
+    height: 374px;
+    margin-top: 24px;
+}
+
+.pinned-repositories h2 {
+    width: 500px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #6a737d;
+    float: left;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.pinned-repositories button {
+    border: none;
+    background: none;
+    color: #586069;
+    float: right;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-top: 4px;
+}
+
+.pinned-repositories button:hover {
+    color: #0366d6;
+    cursor: pointer;
+}
+
+.pinned-repositories article {
+    width: 325px;
+    height: 64px;
+    border: 1px solid #e1e4e8;
+    display: inline-block;
+    position: relative;
+    border-radius: 3px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.pinned-repositories article:nth-child(2n) {
+    float: right;
+}
+
+.pinned-repositories article a {
+    color: #0366d6;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.pinned-repositories article a:hover {
+    text-decoration: underline;
+}
+
+.pinned-repositories article a::before {
+    width: 8px;
+    height: 16px;
+    content: "";
+    display: block;
+    float: left;
+    padding: 1px 8px 0 0;
+    margin-top: 3px;
+    background: url("images/menu.svg") no-repeat;
+    cursor: grabbing;
+}
+
+.pinned-repositories article p {
+    margin-top: 26px;
+    font-size: 12px;
+    color: #586069;
+}
+
+.pinned-repositories article p::before {
+    content: "";
+    display: block;
+    float: left;
+    width: 12px;
+    height: 12px;
+    margin-top: 1px;
+    margin-right: 4px;
+    border-radius: 50%;
+}
+
+.main-content > section article p::before {
+    background-color: #3572A5;
+}
+
+.contributions {
+    width: 727px;
+    height: auto;
+    margin-top: 24px;
+}
+
+.contributions > section {
+    width: 605.833px;
+}
+
+.contributions > section h2 {
+    font-weight: 400;
+    font-size: 16px;
+    color: #24292e;
+    margin-bottom: 8px;
+    line-height: 1.5;
+    display: inline-block;
+}
+
+.contributions > section button {
+    border: none;
+    background: none;
+    color: #586069;
+    float: right;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-top: 4px;
+}
+
+.contributions > section button::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    display: block;
+    margin-left: 4px;
+    margin-top: 5px;
+    position: relative;
+    cursor: pointer;
+    float: right;
+    background: url("images/dropdown.svg");
+}
+
+.contributions > section button:hover {
+    color: #0366d6;
+}
+
+.contributions-table {
+    width: 100%;
+    height: 122.5px;
+    padding: 8px 0;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border: 1px solid #d1d5da;
+}
+
+.contributions-activity {
+    width: 100%;
+    height: 157px;
+    padding: 16px 0;
+    border-left: 1px solid #d1d5da;
+    border-right: 1px solid #d1d5da;
+    border-bottom: 1px solid #d1d5da;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    margin-bottom: 32px;
+}
+
+/*footer {*/
+    /*width: 100%;*/
+    /*height: 115px;*/
+    /*display: flex;*/
+    /*justify-content: center;*/
+/*}*/
+
+/*footer::before {*/
+    /*content: "";*/
+    /*position: absolute;*/
+    /*width: 900px;*/
+    /*border: 1px solid rgb(88, 96, 105);*/
+/*}*/
+
+/*footer a {*/
+    /*color: rgb(88, 96, 105);*/
+/*}*/
+
+/*footer a:hover {*/
+
+/*}*/

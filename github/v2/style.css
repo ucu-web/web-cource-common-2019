@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#main-header {
+     width: 100%;
+     height: 60px;
+     background-color: #24292e;
+     display: flex;
+     align-items: center;
+    justify-content: space-between;
+     padding: 0 16px;
+     box-sizing: border-box;
+ }
+
+#main-header > div {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+#main-header > div > a {
+    margin-right: 13px;
+}
+
+#main-header > div > a:before {
+    content: "";
+    width: 32px;
+    height: 32px;
+    display: block;
+    background: url("images/GitHubIcon.svg") no-repeat;
+    float: left;
+    margin-top: -4px;
+    visibility: visible;
+}
+
+#main-header > div form input {
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    background-color: hsla(0,0%,100%,.125);
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;;
+    padding: 0 8px;
+    box-sizing: border-box;
+    color: #cdcdcd;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+#main-header > div form {
+    width: 300px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+#main-header > div form img {
+    margin-left: -25px;
+    height: 18px;
+}
+
+.main-nav {
+    margin-left: 16px;
+    margin-top: 3px;
+}
+
+.main-nav a {
+    color: #FFF;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    margin-right: 12px;
+}
+
+.main-nav a:hover {
+    color: hsla(0,0%,100%,.75);
+}
+
+.secondary-nav {
+    width: 116px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.secondary-nav a::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: block;
+    margin-top: -1px;
+    background: url("images/bell.svg") no-repeat;
+}
+
+.plus-button {
+    width: 17px;
+    height: 17px;
+    margin-top: 3px;
+    margin-right: 7px;
+    background: url("images/plus.svg") no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+.plus-button::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    display: block;
+    margin-left: 18px;
+    position: relative;
+    cursor: pointer;
+    background: url("images/dropdown.svg");
+}
+
+.profile-button {
+    width: 20px;
+    height: 20px;
+    margin-top: 4px;
+    border-radius: 3px;
+    margin-right: 4px;
+    background: url("images/avatar.jpg") no-repeat;
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+}
+
+.profile-button::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    display: block;
+    margin-left: 24px;
+    position: relative;
+    cursor: pointer;
+    background: url("images/dropdown.svg")
+}
