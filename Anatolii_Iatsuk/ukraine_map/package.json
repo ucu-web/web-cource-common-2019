@@ -1,0 +1,24 @@
+{
+  "name": "Ukraine_map",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "preprocess": "node preprocessing/preprocessing.js",
+    "build": "npx webpack",
+    "watch": "webpack --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "d3": "^5.9.2",
+    "d3-queue": "^3.0.7",
+    "webpack": "^4.33.0",
+    "xlsx-style": "^0.8.13"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.4"
+  }
+}
