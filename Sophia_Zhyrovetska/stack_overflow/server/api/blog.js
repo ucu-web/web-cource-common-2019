@@ -17,8 +17,7 @@ questionRouter.get("/", async (req, res) => {
     try {
         res.json(await getJson(pathToJsonFile));
     } catch (error) {
-        res.statusCode = 500;
-        res.send("Internal server error");
+            res.status(500).json({ status: 500, errorMessage: 'Internal server error' });
     }
 });
 
@@ -34,8 +33,7 @@ questionRouter.get("/:id", async (req, res) => {
             res.send("No such item");
         }
     } catch (error) {
-        res.statusCode = 500;
-        res.send("Internal server error");
+            res.status(500).json({ status: 500, errorMessage: 'Internal server error' });
     }
 });
 
@@ -48,8 +46,7 @@ questionRouter.post("/", async (req, res) => {
         await fs.writeFile(pathToJsonFile, JSON.stringify(items));
         res.json(req.body);
     } catch (error) {
-        res.statusCode = 500;
-        res.send("Internal server error");
+            res.status(500).json({ status: 500, errorMessage: 'Internal server error' });
     }
 });
 
@@ -70,8 +67,8 @@ questionRouter.put("/", async (req, res) => {
             res.send("No such item");
         }
     } catch (error) {
-        res.statusCode = 500;
-        res.send("Internal server error");
+            res.status(500).json({ status: 500, errorMessage: 'Internal server error' });
+
     }
 });
 
@@ -86,12 +83,10 @@ questionRouter.delete("/:id", async (req, res) => {
             await fs.writeFile(pathToJsonFile, JSON.stringify(filteredItems));
             res.send("Item deleted");
         } else {
-            res.statusCode = 404;
-            res.send("No such item");
+            res.status(200).json({ status: 200, message: 'Blog section deleted' })
         }
     } catch (error) {
-        res.statusCode = 500;
-        res.send("Internal server error");
+            res.status(500).json({ status: 500, errorMessage: 'Internal server error' });
     }
 });
 
