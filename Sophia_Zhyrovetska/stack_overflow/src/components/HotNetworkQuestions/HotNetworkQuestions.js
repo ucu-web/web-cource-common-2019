@@ -8,7 +8,7 @@ const HotNetworkQuestions = data => {
 
   rootEl.innerHTML = `
       <div
-              class="Favicon Favicon--${data.icon} ${b("icon")}"
+              class="Favicon Favicon--codegolf ${b("icon")}"
               title="The Workplace Stack Exchange"
       ></div>
       <a
