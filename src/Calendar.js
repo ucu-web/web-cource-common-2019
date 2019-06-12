@@ -39,7 +39,6 @@ class Calendar {
           dayHTML.dataset.day = day;
           dayHTML.tabIndex = 0;
           return dayHTML.outerHTML;
-          // return `<div class = "calendar__day" data-day="${day}" >${day || ""}</div>`
         }
       )
       .join("");

@@ -5,11 +5,11 @@ import {getDateFromCurrentUrl} from './lib'
 const xhr = new XMLHttpRequest();
 xhr.open('GET', 'db', false);
 xhr.send();
+const section = document.getElementsByTagName("section");
+const calendar = new Calendar(section[0]);
+const toDoList = new ToDoList(section[1], JSON.parse(xhr.responseText));
 
-const calendar = new Calendar(document.body.getElementsByTagName("section")[0]);
-const toDoList = new ToDoList(document.body.getElementsByTagName("section")[1], JSON.parse(xhr.responseText));
-
-const saveCnanges = () => {
+const saveChanges = () => {
     xhr.open('POST', 'db', false);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(JSON.stringify(toDoList.backup()));
@@ -20,7 +20,7 @@ const renderPage = (date) => {
     calendar.goToDate(date);
     const day = document.querySelector(`.calendar__day[href='${window.location.pathname.slice(1)}']`);
     day.click();
-    saveCnanges();
+    saveChanges();
 };
 
 const date = getDateFromCurrentUrl();
@@ -28,17 +28,17 @@ if (typeof date !== "undefined") renderPage(date);
 
 calendar.onChangeMonth(() => {
     toDoList.render();
-    saveCnanges();
+    saveChanges();
 });
 
 calendar.onDaySelect(day => {
     toDoList.render(new Date(day));
-    saveCnanges();
+    saveChanges();
 });
 
 window.addEventListener('beforeunload', (e) => {
     e.preventDefault();
-    saveCnanges();
+    saveChanges();
 });
 
 window.addEventListener('popstate', () => {
@@ -46,5 +46,5 @@ window.addEventListener('popstate', () => {
     if (typeof date === "undefined") return;
     calendar.history = false;
     renderPage(date);
-    saveCnanges();
+    saveChanges();
 });

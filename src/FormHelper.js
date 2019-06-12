@@ -4,16 +4,13 @@ export function CreateForm(name) {
 
     return taskForm;
 }
-export function CreateInput(type, parentName, value='') {
+
+export function CreateInput(type, parentName, value = '') {
     let inputElement = document.createElement('input');
     inputElement.className = parentName + '__' + value.toLowerCase();
     inputElement.type = type;
     inputElement.value = value;
     return inputElement;
-}
-
-export function ConfigureForm(form) {
-
 }
 
 export function AssembleForm(form, elements = []) {

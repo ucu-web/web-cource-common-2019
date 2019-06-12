@@ -1,8 +1,7 @@
 import '../style/todolist.css'
 import ToDoTask from "./ToDoTask";
-import CheckBoxHelper from './CheckBoxHelper'
-import {CreateForm, CreateInput, ConfigureForm, AssembleForm} from './FormHelper'
-import {getDayTasks, initDay, refreshTodoContainer, stringsToTodoTasks} from "./ToDoHelper";
+import {CreateForm, CreateInput, AssembleForm} from './FormHelper'
+import {getDayTasks, refreshTodoContainer, stringsToTodoTasks} from "./ToDoHelper";
 import {getYearMonthDay} from "./lib";
 
 class ToDoList {
@@ -13,9 +12,6 @@ class ToDoList {
 
         // If there are already stored tasks, convert them to ToDoTask objects
         stringsToTodoTasks(tasks, this.tasks, this.removeTask.bind(this));
-
-        this.selectAll = CreateInput('checkbox', 'todolist');
-        this.selectAll.hidden = true;
 
         this.todoList = document.createElement('div');
         this.todoList.className = 'todolist';
@@ -34,7 +30,6 @@ class ToDoList {
 
     addTask(task, tasksList) {
         let taskList = getDayTasks(this.tasks, this.currentDate);
-
         let newTask = new ToDoTask(task);
         taskList.push(newTask);
         newTask.render(tasksList);
@@ -47,8 +42,7 @@ class ToDoList {
 
         let taskList = getDayTasks(tasks, this.currentDate);
         const taskIndex = taskList.indexOf(task);
-        if (taskIndex !== -1)
-            tasks[year][month][day] = taskList.filter(el => taskIndex !== taskList.indexOf(el));
+        if (taskIndex !== -1) tasks[year][month][day] = taskList.filter(el => taskIndex !== taskList.indexOf(el));
 
     }
 
@@ -64,13 +58,11 @@ class ToDoList {
         taskList.className = 'todolist__tasks';
 
         let tasks = getDayTasks(this.tasks, this.currentDate);
-        if (typeof tasks !== "undefined")
-            tasks.forEach(task => task.render(taskList));
+        if (typeof tasks !== "undefined") tasks.forEach(task => task.render(taskList));
 
         let listChild = taskList.childNodes;
         let tasksCheckboxes = [];
         listChild.forEach(elem => tasksCheckboxes.push(elem.querySelector('input[type="checkbox"]')));
-        new CheckBoxHelper(this.selectAll, tasksCheckboxes);
         return taskList;
     }
 
@@ -101,9 +93,7 @@ class ToDoList {
 
     configureForm(form) {
         form.addEventListener('submit', (e) => this.commitTaskViaSubmit(this.taskInput, e));
-        form.addEventListener('reset', () => {
-            if (typeof this.newTask !== "undefined") this.newTask.publishTaskDeletion()
-        });
+        form.addEventListener('reset', () => (typeof this.newTask !== "undefined") ? this.newTask.publishTaskDeletion() : null);
     }
 
     render(date) {

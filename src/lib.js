@@ -4,13 +4,8 @@ export const getNumberOfDaysInMonth = date => {
 };
 
 export const delegateEvent = (node, cssPath, eventName, callbackFn) => {
-    const evHandler = ev => {
-        if (ev.target.matches(cssPath)) {
-            callbackFn.call(ev.target, ev);
-        }
-    };
+    const evHandler = ev => ev.target.matches(cssPath)? callbackFn.call(ev.target, ev):null;
     node.addEventListener(eventName, evHandler);
-
     return () => node.removeEventListener(eventName, evHandler);
 };
 

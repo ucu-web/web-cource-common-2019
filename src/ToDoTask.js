@@ -43,7 +43,6 @@ class ToDoTask {
         this.taskInfo.innerText = this.task;
         this.deleteTaskButton.innerHTML = '+';
         this.deleteTaskButton.addEventListener('click', () => this.publishTaskDeletion());
-
         this.taskElement.appendChild(this.taskCheckBox);
         this.taskElement.appendChild(this.taskInfo);
         this.taskElement.appendChild(this.deleteTaskButton);
