@@ -13,103 +13,139 @@ const buttonsSelectors = [
   ".Button-group__button--week",
   ".Button-group__button--month"
 ];
+
+const switchFilter = (buttonName) =>{
+    if (buttonName === "interesting") {
+      render(
+          document,
+          ".Questions-list",
+          "/api/questions",
+          QuestionPost,
+          true
+      ).catch(err => console.log(err));
+      buttonGroupChangeState(
+          nav,
+          ".Button-group__button--interesting",
+          buttonsSelectors,
+          "Button-group__button--current"
+      );
+      localStorage.setItem("buttonGroup", nav.innerHTML);
+
+    }
+
+    if (buttonName === "featured") {
+        console.log("hello");
+      render(
+          document,
+          ".Questions-list",
+          "/api/questions",
+          QuestionPost,
+          true,
+          element => {
+            return element.featured > 0;
+          }
+      ).catch(err => console.log(err));
+      buttonGroupChangeState(
+          nav,
+          ".Button-group__button--featured",
+          buttonsSelectors,
+          "Button-group__button--current"
+      );
+      localStorage.setItem("buttonGroup", nav.innerHTML);
+
+    }
+
+    if (buttonName === "hot") {
+      render(
+          document,
+          ".Questions-list",
+          "api/questions",
+          QuestionPost,
+          true,
+          element => {
+            return isDateCloseToCurrent(element, 2) && element.views > 100;
+          }
+      ).catch(err => console.log(err));
+      buttonGroupChangeState(
+          nav,
+          ".Button-group__button--hot",
+          buttonsSelectors,
+          "Button-group__button--current"
+      );
+      localStorage.setItem("buttonGroup", nav.innerHTML);
+
+    }
+    if (buttonName === "week") {
+      render(
+          document,
+          ".Questions-list",
+          "/api/questions",
+          QuestionPost,
+          true,
+          element => {
+            return isDateCloseToCurrent(element, 6) && element.views > 100;
+          }
+      ).catch(err => console.log(err));
+      buttonGroupChangeState(
+          nav,
+          ".Button-group__button--week",
+          buttonsSelectors,
+          "Button-group__button--current"
+      );
+
+      localStorage.setItem("buttonGroup", nav.innerHTML);
+    }
+    if (buttonName === "month") {
+      render(
+          document,
+          ".Questions-list",
+          "/api/questions",
+          QuestionPost,
+          true,
+          element => {
+            return isDateCloseToCurrent(element, 30) && element.views > 100;
+          }
+      ).catch(err => console.log(err));
+      buttonGroupChangeState(
+          nav,
+          ".Button-group__button--month",
+          buttonsSelectors,
+          "Button-group__button--current"
+      );
+
+      localStorage.setItem("buttonGroup", nav.innerHTML);
+    }
+};
+
 const initQuestionsTypesHandlers = () => {
   nav.addEventListener("click", ev => {
+      let buttonName;
     if (ev.target.matches(".Button-group__button--interesting")) {
-      render(
-        document,
-        ".Questions-list",
-        "/api/questions",
-        QuestionPost,
-        true
-      ).catch(err => console.log(err));
-      buttonGroupChangeState(
-        nav,
-        ".Button-group__button--interesting",
-        buttonsSelectors,
-        "Button-group__button--current"
-      );
-      sessionStorage.setItem("buttonGroup", nav.innerHTML);
+        buttonName = "interesting";
+      switchFilter(buttonName);
+        history.pushState(buttonName,buttonName,buttonName);
     }
-
     if (ev.target.matches(".Button-group__button--featured")) {
-      render(
-        document,
-        ".Questions-list",
-        "/api/questions",
-        QuestionPost,
-        true,
-        element => {
-          return element.featured > 0;
-        }
-      ).catch(err => console.log(err));
-      buttonGroupChangeState(
-        nav,
-        ".Button-group__button--featured",
-        buttonsSelectors,
-        "Button-group__button--current"
-      );
-      sessionStorage.setItem("buttonGroup", nav.innerHTML);
+        buttonName = "featured";
+        switchFilter(buttonName);
+        history.pushState(buttonName,buttonName,buttonName);
     }
-
     if (ev.target.matches(".Button-group__button--hot")) {
-      render(
-        document,
-        ".Questions-list",
-        "/api/questions",
-        QuestionPost,
-        true,
-        element => {
-          return isDateCloseToCurrent(element, 2) && element.views > 100;
-        }
-      ).catch(err => console.log(err));
-      buttonGroupChangeState(
-        nav,
-        ".Button-group__button--hot",
-        buttonsSelectors,
-        "Button-group__button--current"
-      );
-      sessionStorage.setItem("buttonGroup", nav.innerHTML);
+        buttonName = "hot";
+        switchFilter(buttonName);
+        history.pushState(buttonName,buttonName,buttonName);
     }
     if (ev.target.matches(".Button-group__button--week")) {
-      render(
-        document,
-        ".Questions-list",
-        "/api/questions",
-        QuestionPost,
-        true,
-        element => {
-          return isDateCloseToCurrent(element, 6) && element.views > 100;
-        }
-      ).catch(err => console.log(err));
-      buttonGroupChangeState(
-        nav,
-        ".Button-group__button--week",
-        buttonsSelectors,
-        "Button-group__button--current"
-      );
-      sessionStorage.setItem("buttonGroup", nav.innerHTML);
+        buttonName = "week";
+        switchFilter(buttonName);
+        history.pushState(buttonName,buttonName,buttonName);
     }
     if (ev.target.matches(".Button-group__button--month")) {
-      render(
-        document,
-        ".Questions-list",
-        "/api/questions",
-        QuestionPost,
-        true,
-        element => {
-          return isDateCloseToCurrent(element, 30) && element.views > 100;
-        }
-      ).catch(err => console.log(err));
-      buttonGroupChangeState(
-        nav,
-        ".Button-group__button--month",
-        buttonsSelectors,
-        "Button-group__button--current"
-      );
-      sessionStorage.setItem("buttonGroup", nav.innerHTML);
+        buttonName = "month";
+        switchFilter(buttonName);
+        history.pushState(buttonName,buttonName,buttonName);
     }
   });
 };
 
-export { initQuestionsTypesHandlers };
+export { initQuestionsTypesHandlers, switchFilter };
