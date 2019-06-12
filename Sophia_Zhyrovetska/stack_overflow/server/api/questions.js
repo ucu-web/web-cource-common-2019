@@ -13,9 +13,18 @@ const pathToJsonFile =  path.resolve(
     "../../src/components/QuestionPost/data.json"
 );
 
-questionRouter.get("/", async (req, res) => {
+questionRouter.get('/', async (req, res)=> {
   try {
-    res.json(await getJson(pathToJsonFile));
+    let questions = await getJson(pathToJsonFile);
+    let params = req.query;
+    Object.entries(params).forEach(entry => {
+      let key = entry[0];
+      let value = entry[1];
+      value === 'true'? value = true: value;
+      value === 'false'? value = false: value;
+      questions = questions.filter((el)=>{return el[key] == value})
+    });
+    res.json(questions);
   } catch (error) {
     res.statusCode = 500;
     res.send("Internal server error");
@@ -23,21 +32,22 @@ questionRouter.get("/", async (req, res) => {
 });
 
 questionRouter.get("/:id", async (req, res) => {
-      try {
-        const allItems = await getJson(pathToJsonFile);
-        const item = getItemById(allItems, req.params["id"]);
+  try {
+    const allItems = await getJson(pathToJsonFile);
+    const item = getItemById(allItems, req.params["id"]);
 
-        if (item) {
-          res.json(item);
-        } else {
-          res.statusCode = 404;
-          res.send("No such item");
-        }
-      } catch (error) {
-        res.statusCode = 500;
-        res.send("Internal server error");
-      }
-    });
+    if (item) {
+      res.json(item);
+    } else {
+      res.statusCode = 404;
+      res.send("No such item");
+    }
+  } catch (error) {
+    res.statusCode = 500;
+    res.send("Internal server error");
+  }
+});
+
 
 questionRouter.post("/", async (req, res) => {
   try {
@@ -94,5 +104,6 @@ questionRouter.delete("/:id", async (req, res) => {
     res.send("Internal server error");
   }
 });
+
 
 module.exports = questionRouter;
