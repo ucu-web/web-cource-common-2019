@@ -6,6 +6,7 @@ const getTagValue = tagNode => {
 
 const deleteTag = (node, containerClass, htmlElementGenerator, userURL, isWatchedTags) => {
   delegateEvent(node, ".Tag__delete-tag", "click", async ev => {
+    node.querySelector(containerClass).removeChild(ev.target.parentNode);
     ev.preventDefault();
     const value = getTagValue(ev.target.parentNode);
     const data = await (await fetch(userURL)).json();
@@ -28,7 +29,7 @@ const deleteTag = (node, containerClass, htmlElementGenerator, userURL, isWatche
     })
         .then(response => response.json())
         .then(obj =>
-            node.querySelector(containerClass).removeChild(ev.target.parentNode)
+            console.log(obj)
         );
   })
 };
