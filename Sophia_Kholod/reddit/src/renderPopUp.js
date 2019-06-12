@@ -80,12 +80,9 @@ const reorderComments = async (clicked, postId) => {
 
 
 const renderPopUp = async (postId) => {
-    // document.getElementsByClassName("Layout__content-wrapper")[0].style.gridRow = null;
     document.getElementsByClassName("Layout__content-wrapper")[0].style.position = "fixed";
-    // document.getElementsByClassName("Layout__pop-up")[0].style.gridRow = "2";
     document.getElementsByClassName("Layout__pop-up")[0].style.display = "grid";
     let layout = $(".Layout__pop-up")[0];
-    // layout.style.display = "none";
     layout.style.gridRowStart = "2";
     layout.style.gridRowEnd = "3";
     layout.style.gridColumnStart = "1";
@@ -93,10 +90,8 @@ const renderPopUp = async (postId) => {
 
     let comments = await readJSONFromFile("../data/comments" + postId.toString() + ".json");
     let posts = await readJSONFromFile("../data/posts.json");
-
     let post = posts.find(post => {return post["id"] === postId});
     let popUp = await createPopUp(post);
-    // let layout = $(".Layout__pop-up")[0];
     layout.appendChild(popUp);
 
     let commentsParent = $(".Comments")[0];
@@ -111,7 +106,7 @@ const renderPopUp = async (postId) => {
 
     popUp.addEventListener(
         "click", (event) =>{
-            if (!event.path.includes($(".Pop-up__content")[0]))
+            if (event.target.className === "Pop-up")
                 hidePopUp();
         }
     );
