@@ -1,7 +1,7 @@
 import { renderLastElement } from "../helpers/library";
 const sanitizeHtml = require("sanitize-html");
 
-const submitTag = (
+const addTag = (
   parentNode,
   containerClass,
   htmlElementGenerator,
@@ -49,4 +49,4 @@ const submitTag = (
     form.reset();
   });
 };
-export { submitTag };
+export { addTag };
