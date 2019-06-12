@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #EEE;
+}
+
+
+.main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.block {
+    width: 850px;
+    border: 1px red solid;
+    text-align: center;
+    padding: 12px 12px 0 12px;
+}
