@@ -26,29 +26,32 @@ window.onscroll = () => {
     let nodePosS = document.querySelector('.Layout__main-block__home').lastElementChild.style.top;
     let nodePos = parseInt(nodePosS, 10);
     let yOffset = window.pageYOffset;
+    console.log(yOffset);
     let y = yOffset + window.innerHeight;
     let container = document.querySelector('.Layout__main-block__home');
     let childNodes = Array.from(container.children);
     let firstChild = container.firstElementChild;
 
     childNodes.forEach((el) => {
-        // console.log(el.getBoundingClientRect().top);
         if (el.getBoundingClientRect().top < -1500) {
             nodesArray.push(el);
-            console.log(el);
-            console.log(nodesArray);
             el.remove();
         }
     });
-let theScroll  = yOffset;
-if (theScroll< lastScrollTop){
-if (firstChild.getBoundingClientRect().top < 100  && firstChild.getBoundingClientRect().top > 0 ){
-    nodesArray.slice(nodesArray.length - 1).map( el => container.insertBefore(el, firstChild));
-    nodesArray.pop()
-}
-}
-    lastScrollTop = theScroll;
+    let theScroll = yOffset;
+    if (theScroll < lastScrollTop) {
+        if ( firstChild.getBoundingClientRect().top > 0) {
+            nodesArray.slice(nodesArray.length - 1).map(el => container.insertBefore(el, firstChild));
+            nodesArray.pop()
+        }
+    }
+    if(yOffset===0  && nodesArray.length!==0){
+        nodesArray.map(el => container.insertBefore(el, firstChild));
+        for (let i=0; i< nodesArray.length; i++)
+        nodesArray.pop()
+    }
 
+    lastScrollTop = theScroll;
     if (y >= nodePos - 500) {
         renderPosts('.Layout__main-block__home', 'posts', generate, 5).then(() => {
             positionBlocks('.temp')
