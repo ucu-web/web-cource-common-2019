@@ -1,6 +1,6 @@
 import BEM from "../helpers/BEM";
 import PubSub from "pubsub-js";
-import { submitTag } from "./submitTag";
+import { addTag } from "./addTag";
 import { FeaturedTagsBlockDeleteVisible } from "../components/FeaturedTagsBlock";
 import { deleteTag } from "./deleteTag";
 import { delegateEvent } from "../helpers/library";
@@ -23,7 +23,7 @@ const editTagsBlock = (node, TOPIC, userURL) => {
                   <button type="submit" class="Primary-button Primary-button--blue Primary-button--overlap">Add</button>`;
     node.appendChild(form);
 
-    submitTag(
+    addTag(
       node,
       "." + b("content"),
       FeaturedTagsBlockDeleteVisible,
