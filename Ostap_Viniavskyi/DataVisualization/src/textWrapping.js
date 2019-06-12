@@ -30,7 +30,7 @@ export const wrapText = (text, width, parent, innerRadius) => {
             line = [],
             x = getX(parent),
             y = getY(parent),
-            dy = 0.8,
+            dy = 12,
             tspan = parent.text(null).append("tspan").attr("x", x).attr("y", y);
         while (word = words.pop()) {
             line.push(word);
@@ -39,7 +39,7 @@ export const wrapText = (text, width, parent, innerRadius) => {
                 line.pop();
                 tspan.text(line.join(" "));
                 line = [word];
-                tspan = parent.append("tspan").attr("x", x).attr("y", y).attr("dy", dy + "rem").text(word);
+                tspan = parent.append("tspan").attr("x", x).attr("y", y).attr("dy", dy + "px").text(word);
             }
         }
     } else {
