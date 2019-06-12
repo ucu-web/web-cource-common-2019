@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.3" orientation="orthogonal" renderorder="left-up" width="5" height="1" tilewidth="70" tileheight="70" infinite="0" nextlayerid="13" nextobjectid="1">
+ <tileset firstgid="1" source="tank_animations.tsx"/>
+ <layer id="1" name="up_to_right" width="5" height="1" visible="0">
+  <data encoding="csv">
+1,2,3,4,5
+</data>
+ </layer>
+ <layer id="2" name="up_to_left" width="5" height="1" visible="0">
+  <data encoding="csv">
+6,7,8,9,10
+</data>
+ </layer>
+ <layer id="3" name="down_to_right" width="5" height="1" visible="0">
+  <data encoding="csv">
+11,12,13,14,15
+</data>
+ </layer>
+ <layer id="4" name="down_to_left" width="5" height="1" visible="0">
+  <data encoding="csv">
+16,17,18,19,20
+</data>
+ </layer>
+ <layer id="5" name="left_to_up" width="5" height="1" visible="0">
+  <data encoding="csv">
+21,22,23,24,25
+</data>
+ </layer>
+ <layer id="6" name="right_to_up" width="5" height="1" visible="0">
+  <data encoding="csv">
+26,27,28,29,30
+</data>
+ </layer>
+ <layer id="7" name="left_to_down" width="5" height="1" visible="0">
+  <data encoding="csv">
+31,32,33,34,35
+</data>
+ </layer>
+ <layer id="8" name="right_to_down" width="5" height="1" visible="0">
+  <data encoding="csv">
+36,37,38,39,40
+</data>
+ </layer>
+ <layer id="9" name="up_to_down" width="5" height="1" visible="0">
+  <data encoding="csv">
+41,42,0,0,0
+</data>
+ </layer>
+ <layer id="10" name="down_to_up" width="5" height="1" visible="0">
+  <data encoding="csv">
+46,47,0,0,0
+</data>
+ </layer>
+ <layer id="11" name="right_to_left" width="5" height="1" visible="0">
+  <data encoding="csv">
+51,52,0,0,0
+</data>
+ </layer>
+ <layer id="12" name="left_to_right" width="5" height="1">
+  <data encoding="csv">
+56,57,0,0,0
+</data>
+ </layer>
+</map>

@@ -1,0 +1,8 @@
+.field {
+    background: #515151;
+    height: 900px;
+    width: 900px;
+    position: absolute;
+    top: calc(50% - 450px);
+    left: calc(50% - 450px);
+}
