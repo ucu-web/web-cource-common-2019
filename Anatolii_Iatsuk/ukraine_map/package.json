@@ -21,6 +21,7 @@
     "xlsx-style": "^0.8.13"
   },
   "devDependencies": {
+    "prettier": "1.18.2",
     "webpack-cli": "^3.3.4"
   }
 }
