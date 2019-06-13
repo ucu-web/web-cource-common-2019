@@ -1,0 +1,1131 @@
+[
+  {
+    "name": "Physics",
+    "laureates": [
+      {
+        "year": 1906,
+        "fullName": "Joseph John Thomson",
+        "sex": "Male",
+        "organization": "Cambridge"
+      },
+      {
+        "year": 1907,
+        "fullName": "Albert Abraham Michelson",
+        "sex": "Male",
+        "organization": "Chicago University"
+      },
+      {
+        "year": 1923,
+        "fullName": "Robert Andrews Millikan",
+        "sex": "Male",
+        "organization": "Caltech"
+      },
+      {
+        "year": 1927,
+        "fullName": "Arthur Holly Compton",
+        "sex": "Male",
+        "organization": "Chicago University"
+      },
+      {
+        "year": 1927,
+        "fullName": "Charles Thomson Rees Wilson",
+        "sex": "Male",
+        "organization": "Cambridge"
+      },
+      {
+        "year": 1933,
+        "fullName": "Paul Adrien Maurice Dirac",
+        "sex": "Male",
+        "organization": "Cambridge"
+      },
+      {
+        "year": 1936,
+        "fullName": "Carl David Anderson",
+        "sex": "Male",
+        "organization": "Caltech"
+      },
+      {
+        "year": 1939,
+        "fullName": "Ernest Orlando Lawrence",
+        "sex": "Male",
+        "organization": "University of California"
+      },
+      {
+        "year": 1944,
+        "fullName": "Isidor Isaac Rabi",
+        "sex": "Male",
+        "organization": "Columbia University"
+      },
+      {
+        "year": 1945,
+        "fullName": "Wolfgang Pauli",
+        "sex": "Male",
+        "organization": "Princeton University"
+      },
+      {
+        "year": 1946,
+        "fullName": "Percy Williams Bridgman",
+        "sex": "Male",
+        "organization": "Harvard"
+      },
+      {
+        "year": 1952,
+        "fullName": "Felix Bloch",
+        "sex": "Male",
+        "organization": "Stanford University"
+      },
+      {
+        "year": 1952,
+        "fullName": "Edward Mills Purcell",
+        "sex": "Male",
+        "organization": "Harvard"
+      },
+      {
+        "year": 1955,
+        "fullName": "Willis Eugene Lamb",
+        "sex": "Male",
+        "organization": "Stanford University"
+      },
+      {
+        "year": 1955,
+        "fullName": "Polykarp Kusch",
+        "sex": "Male",
+        "organization": "Columbia University"
+      },
+      {
+        "year": 1957,
+        "fullName": "Tsung-Dao (T.D.) Lee",
+        "sex": "Male",
+        "organization": "Columbia University"
+      },
+      {
+        "year": 1959,
+        "fullName": "Emilio Gino Segr\u00e8",
+        "sex": "Male",
+        "organization": "University of California"
+      },
+      {
+        "year": 1959,
+        "fullName": "Owen Chamberlain",
+        "sex": "Male",
+        "organization": "University of California"
+      },
+      {
+        "year": 1960,
+        "fullName": "Donald Arthur Glaser",
+        "sex": "Male",
+        "organization": "University of California"
+      },
+      {
+        "year": 1961,
+        "fullName": "Robert Hofstadter",
+        "sex": "Male",
+        "organization": "Stanford University"
+      },
+      {
+        "year": 1963,
+        "fullName": "Eugene Paul Wigner",
+        "sex": "Male",
+        "organization": "Princeton University"
+      },
+      {
+        "year": 1963,
+        "fullName": "Maria Goeppert Mayer",
+        "sex": "Female",
+        "organization": "University of California"
+      },
+      {
+        "year": 1964,
+        "fullName": "Charles Hard Townes",
+        "sex": "Male",
+        "organization": "MIT"
+      },
+      {
+        "year": 1965,
+        "fullName": "Julian Schwinger",
+        "sex": "Male",
+        "organization": "Harvard"
+      },
+      {
+        "year": 1965,
+        "fullName": "Richard P. Feynman",
+        "sex": "Male",
+        "organization": "Caltech"
+      },
+      {
+        "year": 1968,
+        "fullName": "Luis Walter Alvarez",
+        "sex": "Male",
+        "organization": "University of California"
+      },
+      {
+        "year": 1969,
+        "fullName": "Murray Gell-Mann",
+        "sex": "Male",
+        "organization": "Caltech"
+      },
+      {
+        "year": 1973,
+        "fullName": "Brian David Josephson",
+        "sex": "Male",
+        "organization": "Cambridge"
+      },
+      {
+        "year": 1974,
+        "fullName": "Sir Martin Ryle",
+        "sex": "Male",
+        "organization": "Cambridge"
+      },
+      {
+        "year": 1974,
+        "fullName": "Antony Hewish",
+        "sex": "Male",
+        "organization": "Cambridge"
+      },
+      {
+        "year": 1975,
+        "fullName": "Leo James Rainwater",
+        "sex": "Male",
+        "organization": "Columbia University"
+      },
+      {
+        "year": 1976,
+        "fullName": "Samuel Chao Chung Ting",
+        "sex": "Male",
+        "organization": "MIT"
+      },
+      {
+        "year": 1977,
+        "fullName": "Sir Nevill Francis Mott",
+        "sex": "Male",
+        "organization": "Cambridge"
+      },
+      {
+        "year": 1977,
+        "fullName": "John Hasbrouck van Vleck",
+        "sex": "Male",
+        "organization": "Harvard"
+      },
+      {
+        "year": 1979,
+        "fullName": "Steven Weinberg",
+        "sex": "Male",
+        "organization": "Harvard"
+      },
+      {
+        "year": 1980,
+        "fullName": "James Watson Cronin",
+        "sex": "Male",
+        "organization": "Chicago University"
+      },
+      {
+        "year": 1980,
+        "fullName": "Val Logsdon Fitch",
+        "sex": "Male",
+        "organization": "Princeton University"
+      },
+      {
+        "year": 1981,
+        "fullName": "Nicolaas Bloembergen",
+        "sex": "Male",
+        "organization": "Harvard"
+      },
+      {
+        "year": 1981,
+        "fullName": "Arthur Leonard Schawlow",
+        "sex": "Male",
+        "organization": "Stanford University"
+      },
+      {
+        "year": 1983,
+        "fullName": "Subramanyan Chandrasekhar",
+        "sex": "Male",
+        "organization": "Chicago University"
+      },
+      {
+        "year": 1983,
+        "fullName": "William Alfred Fowler",
+        "sex": "Male",
+        "organization": "Caltech"
+      },
+      {
+        "year": 1989,
+        "fullName": "Norman F. Ramsey",
+        "sex": "Male",
+        "organization": "Harvard"
+      },
+      {
+        "year": 1990,
+        "fullName": "Jerome I. Friedman",
+        "sex": "Male",
+        "organization": "MIT"
+      },
+      {
+        "year": 1990,
+        "fullName": "Henry W. Kendall",
+        "sex": "Male",
+        "organization": "MIT"
+      },
+      {
+        "year": 1990,
+        "fullName": "Richard E. Taylor",
+        "sex": "Male",
+        "organization": "Stanford University"
+      },
+      {
+        "year": 1993,
+        "fullName": "Russell A. Hulse",
+        "sex": "Male",
+        "organization": "Princeton University"
+      },
+      {
+        "year": 1993,
+        "fullName": "Joseph H. Taylor Jr.",
+        "sex": "Male",
+        "organization": "Princeton University"
+      },
+      {
+        "year": 1994,
+        "fullName": "Clifford G. Shull",
+        "sex": "Male",
+        "organization": "MIT"
+      },
+      {
+        "year": 1995,
+        "fullName": "Martin L. Perl",
+        "sex": "Male",
+        "organization": "Stanford University"
+      },
+      {
+        "year": 1995,
+        "fullName": "Frederick Reines",
+        "sex": "Male",
+        "organization": "University of California"
+      },
+      {
+        "year": 1996,
+        "fullName": "Douglas D. Osheroff",
+        "sex": "Male",
+        "organization": "Stanford University"
+      },
+      {
+        "year": 1997,
+        "fullName": "Steven Chu",
+        "sex": "Male",
+        "organization": "Stanford University"
+      },
+      {
+        "year": 1998,
+        "fullName": "Robert B. Laughlin",
+        "sex": "Male",
+        "organization": "Stanford University"
+      },
+      {
+        "year": 1998,
+        "fullName": "Horst L. St\u00f6rmer",
+        "sex": "Male",
+        "organization": "Columbia University"
+      },
+      {
+        "year": 1998,
+        "fullName": "Daniel C. Tsui",
+        "sex": "Male",
+        "organization": "Princeton University"
+      },
+      {
+        "year": 2000,
+        "fullName": "Herbert Kroemer",
+        "sex": "Male",
+        "organization": "University of California"
+      },
+      {
+        "year": 2001,
+        "fullName": "Wolfgang Ketterle",
+        "sex": "Male",
+        "organization": "MIT"
+      },
+      {
+        "year": 2004,
+        "fullName": "H. David Politzer",
+        "sex": "Male",
+        "organization": "Caltech"
+      },
+      {
+        "year": 2004,
+        "fullName": "Frank Wilczek",
+        "sex": "Male",
+        "organization": "MIT"
+      },
+      {
+        "year": 2005,
+        "fullName": "Roy J. Glauber",
+        "sex": "Male",
+        "organization": "Harvard"
+      },
+      {
+        "year": 2006,
+        "fullName": "George F. Smoot",
+        "sex": "Male",
+        "organization": "University of California"
+      },
+      {
+        "year": 2014,
+        "fullName": "Shuji Nakamura",
+        "sex": "Male",
+        "organization": "University of California"
+      },
+      {
+        "year": 2016,
+        "fullName": "F. Duncan M. Haldane",
+        "sex": "Male",
+        "organization": "Princeton University"
+      }
+    ]
+  },
+  {
+    "name": "Chemistry",
+    "laureates": [
+      {
+        "year": 1914,
+        "fullName": "Theodore William Richards",
+        "sex": "Male",
+        "organization": "Harvard"
+      },
+      {
+        "year": 1922,
+        "fullName": "Francis William Aston",
+        "sex": "Male",
+        "organization": "Cambridge"
+      },
+      {
+        "year": 1934,
+        "fullName": "Harold Clayton Urey",
+        "sex": "Male",
+        "organization": "Columbia University"
+      },
+      {
+        "year": 1949,
+        "fullName": "William Francis Giauque",
+        "sex": "Male",
+        "organization": "University of California"
+      },
+      {
+        "year": 1951,
+        "fullName": "Edwin Mattison McMillan",
+        "sex": "Male",
+        "organization": "University of California"
+      },
+      {
+        "year": 1951,
+        "fullName": "Glenn Theodore Seaborg",
+        "sex": "Male",
+        "organization": "University of California"
+      },
+      {
+        "year": 1954,
+        "fullName": "Linus Carl Pauling",
+        "sex": "Male",
+        "organization": "Caltech"
+      },
+      {
+        "year": 1957,
+        "fullName": "Lord (Alexander R.) Todd",
+        "sex": "Male",
+        "organization": "Cambridge"
+      },
+      {
+        "year": 1958,
+        "fullName": "Frederick Sanger",
+        "sex": "Male",
+        "organization": "Cambridge"
+      },
+      {
+        "year": 1960,
+        "fullName": "Willard Frank Libby",
+        "sex": "Male",
+        "organization": "University of California"
+      },
+      {
+        "year": 1961,
+        "fullName": "Melvin Calvin",
+        "sex": "Male",
+        "organization": "University of California"
+      },
+      {
+        "year": 1965,
+        "fullName": "Robert Burns Woodward",
+        "sex": "Male",
+        "organization": "Harvard"
+      },
+      {
+        "year": 1966,
+        "fullName": "Robert S. Mulliken",
+        "sex": "Male",
+        "organization": "Chicago University"
+      },
+      {
+        "year": 1972,
+        "fullName": "Stanford Moore",
+        "sex": "Male",
+        "organization": "Rockefeller University"
+      },
+      {
+        "year": 1972,
+        "fullName": "William H. Stein",
+        "sex": "Male",
+        "organization": "Rockefeller University"
+      },
+      {
+        "year": 1974,
+        "fullName": "Paul J. Flory",
+        "sex": "Male",
+        "organization": "Stanford University"
+      },
+      {
+        "year": 1976,
+        "fullName": "William N. Lipscomb",
+        "sex": "Male",
+        "organization": "Harvard"
+      },
+      {
+        "year": 1980,
+        "fullName": "Paul Berg",
+        "sex": "Male",
+        "organization": "Stanford University"
+      },
+      {
+        "year": 1983,
+        "fullName": "Henry Taube",
+        "sex": "Male",
+        "organization": "Stanford University"
+      },
+      {
+        "year": 1984,
+        "fullName": "Robert Bruce Merrifield",
+        "sex": "Male",
+        "organization": "Rockefeller University"
+      },
+      {
+        "year": 1986,
+        "fullName": "Dudley R. Herschbach",
+        "sex": "Male",
+        "organization": "Harvard"
+      },
+      {
+        "year": 1986,
+        "fullName": "Yuan T. Lee",
+        "sex": "Male",
+        "organization": "University of California"
+      },
+      {
+        "year": 1987,
+        "fullName": "Donald J. Cram",
+        "sex": "Male",
+        "organization": "University of California"
+      },
+      {
+        "year": 1990,
+        "fullName": "Elias James Corey",
+        "sex": "Male",
+        "organization": "Harvard"
+      },
+      {
+        "year": 1992,
+        "fullName": "Rudolph A. Marcus",
+        "sex": "Male",
+        "organization": "Caltech"
+      },
+      {
+        "year": 1995,
+        "fullName": "Mario J. Molina",
+        "sex": "Male",
+        "organization": "MIT"
+      },
+      {
+        "year": 1995,
+        "fullName": "F. Sherwood Rowland",
+        "sex": "Male",
+        "organization": "University of California"
+      },
+      {
+        "year": 1997,
+        "fullName": "Paul D. Boyer",
+        "sex": "Male",
+        "organization": "University of California"
+      },
+      {
+        "year": 1998,
+        "fullName": "Walter Kohn",
+        "sex": "Male",
+        "organization": "University of California"
+      },
+      {
+        "year": 1999,
+        "fullName": "Ahmed H. Zewail",
+        "sex": "Male",
+        "organization": "Caltech"
+      },
+      {
+        "year": 2000,
+        "fullName": "Alan J. Heeger",
+        "sex": "Male",
+        "organization": "University of California"
+      },
+      {
+        "year": 2003,
+        "fullName": "Roderick MacKinnon",
+        "sex": "Male",
+        "organization": "Rockefeller University"
+      },
+      {
+        "year": 2004,
+        "fullName": "Irwin Rose",
+        "sex": "Male",
+        "organization": "University of California"
+      },
+      {
+        "year": 2005,
+        "fullName": "Robert H. Grubbs",
+        "sex": "Male",
+        "organization": "Caltech"
+      },
+      {
+        "year": 2005,
+        "fullName": "Richard R. Schrock",
+        "sex": "Male",
+        "organization": "MIT"
+      },
+      {
+        "year": 2006,
+        "fullName": "Roger D. Kornberg",
+        "sex": "Male",
+        "organization": "Stanford University"
+      },
+      {
+        "year": 2008,
+        "fullName": "Martin Chalfie",
+        "sex": "Male",
+        "organization": "Columbia University"
+      },
+      {
+        "year": 2008,
+        "fullName": "Roger Y. Tsien",
+        "sex": "Male",
+        "organization": "University of California"
+      },
+      {
+        "year": 2014,
+        "fullName": "William E. Moerner",
+        "sex": "Male",
+        "organization": "Stanford University"
+      }
+    ]
+  },
+  {
+    "name": "Medicine",
+    "laureates": [
+      {
+        "year": 1929,
+        "fullName": "Sir Frederick Gowland Hopkins",
+        "sex": "Male",
+        "organization": "Cambridge"
+      },
+      {
+        "year": 1932,
+        "fullName": "Edgar Douglas Adrian",
+        "sex": "Male",
+        "organization": "Cambridge"
+      },
+      {
+        "year": 1933,
+        "fullName": "Thomas Hunt Morgan",
+        "sex": "Male",
+        "organization": "Caltech"
+      },
+      {
+        "year": 1934,
+        "fullName": "George Richards Minot",
+        "sex": "Male",
+        "organization": "Harvard"
+      },
+      {
+        "year": 1934,
+        "fullName": "William Parry Murphy",
+        "sex": "Male",
+        "organization": "Harvard"
+      },
+      {
+        "year": 1956,
+        "fullName": "Dickinson W. Richards",
+        "sex": "Male",
+        "organization": "Columbia University"
+      },
+      {
+        "year": 1958,
+        "fullName": "George Wells Beadle",
+        "sex": "Male",
+        "organization": "Caltech"
+      },
+      {
+        "year": 1959,
+        "fullName": "Arthur Kornberg",
+        "sex": "Male",
+        "organization": "Stanford University"
+      },
+      {
+        "year": 1961,
+        "fullName": "Georg von B\u00e9k\u00e9sy",
+        "sex": "Male",
+        "organization": "Harvard"
+      },
+      {
+        "year": 1962,
+        "fullName": "James Dewey Watson",
+        "sex": "Male",
+        "organization": "Harvard"
+      },
+      {
+        "year": 1963,
+        "fullName": "Alan Lloyd Hodgkin",
+        "sex": "Male",
+        "organization": "Cambridge"
+      },
+      {
+        "year": 1964,
+        "fullName": "Konrad Bloch",
+        "sex": "Male",
+        "organization": "Harvard"
+      },
+      {
+        "year": 1966,
+        "fullName": "Peyton Rous",
+        "sex": "Male",
+        "organization": "Rockefeller University"
+      },
+      {
+        "year": 1967,
+        "fullName": "Haldan Keffer Hartline",
+        "sex": "Male",
+        "organization": "Rockefeller University"
+      },
+      {
+        "year": 1967,
+        "fullName": "George Wald",
+        "sex": "Male",
+        "organization": "Harvard"
+      },
+      {
+        "year": 1969,
+        "fullName": "Max Delbr\u00fcck",
+        "sex": "Male",
+        "organization": "Caltech"
+      },
+      {
+        "year": 1969,
+        "fullName": "Salvador E. Luria",
+        "sex": "Male",
+        "organization": "MIT"
+      },
+      {
+        "year": 1972,
+        "fullName": "Gerald M. Edelman",
+        "sex": "Male",
+        "organization": "Rockefeller University"
+      },
+      {
+        "year": 1974,
+        "fullName": "Christian de Duve",
+        "sex": "Male",
+        "organization": "Rockefeller University"
+      },
+      {
+        "year": 1975,
+        "fullName": "David Baltimore",
+        "sex": "Male",
+        "organization": "MIT"
+      },
+      {
+        "year": 1981,
+        "fullName": "Roger W. Sperry",
+        "sex": "Male",
+        "organization": "Caltech"
+      },
+      {
+        "year": 1987,
+        "fullName": "Susumu Tonegawa",
+        "sex": "Male",
+        "organization": "MIT"
+      },
+      {
+        "year": 1995,
+        "fullName": "Edward B. Lewis",
+        "sex": "Male",
+        "organization": "Caltech"
+      },
+      {
+        "year": 1995,
+        "fullName": "Eric F. Wieschaus",
+        "sex": "Male",
+        "organization": "Princeton University"
+      },
+      {
+        "year": 1999,
+        "fullName": "G\u00fcnter Blobel",
+        "sex": "Male",
+        "organization": "Rockefeller University"
+      },
+      {
+        "year": 2000,
+        "fullName": "Paul Greengard",
+        "sex": "Male",
+        "organization": "Rockefeller University"
+      },
+      {
+        "year": 2000,
+        "fullName": "Eric R. Kandel",
+        "sex": "Male",
+        "organization": "Columbia University"
+      },
+      {
+        "year": 2002,
+        "fullName": "H. Robert Horvitz",
+        "sex": "Male",
+        "organization": "MIT"
+      },
+      {
+        "year": 2004,
+        "fullName": "Richard Axel",
+        "sex": "Male",
+        "organization": "Columbia University"
+      },
+      {
+        "year": 2009,
+        "fullName": "Elizabeth H. Blackburn",
+        "sex": "Female",
+        "organization": "University of California"
+      },
+      {
+        "year": 2010,
+        "fullName": "Robert G. Edwards",
+        "sex": "Male",
+        "organization": "Cambridge"
+      },
+      {
+        "year": 2011,
+        "fullName": "Ralph M. Steinman",
+        "sex": "Male",
+        "organization": "Rockefeller University"
+      },
+      {
+        "year": 2013,
+        "fullName": "Randy W. Schekman",
+        "sex": "Male",
+        "organization": "University of California"
+      },
+      {
+        "year": 2013,
+        "fullName": "Thomas C. S\u00fcdhof",
+        "sex": "Male",
+        "organization": "Stanford University"
+      }
+    ]
+  },
+  {
+    "name": "Peace",
+    "laureates": [
+      {
+        "year": 1931,
+        "fullName": "Nicholas Murray Butler",
+        "sex": "Male",
+        "organization": "Columbia University"
+      },
+      {
+        "year": 1950,
+        "fullName": "Ralph Bunche",
+        "sex": "Male",
+        "organization": "Harvard"
+      },
+      {
+        "year": 1962,
+        "fullName": "Linus Carl Pauling",
+        "sex": "Male",
+        "organization": "Caltech"
+      }
+    ]
+  },
+  {
+    "name": "Economics",
+    "laureates": [
+      {
+        "year": 1970,
+        "fullName": "Paul A. Samuelson",
+        "sex": "Male",
+        "organization": "MIT"
+      },
+      {
+        "year": 1971,
+        "fullName": "Simon Kuznets",
+        "sex": "Male",
+        "organization": "Harvard"
+      },
+      {
+        "year": 1972,
+        "fullName": "Kenneth J. Arrow",
+        "sex": "Male",
+        "organization": "Harvard"
+      },
+      {
+        "year": 1973,
+        "fullName": "Wassily Leontief",
+        "sex": "Male",
+        "organization": "Harvard"
+      },
+      {
+        "year": 1976,
+        "fullName": "Milton Friedman",
+        "sex": "Male",
+        "organization": "Chicago University"
+      },
+      {
+        "year": 1977,
+        "fullName": "James E. Meade",
+        "sex": "Male",
+        "organization": "Cambridge"
+      },
+      {
+        "year": 1979,
+        "fullName": "Theodore W. Schultz",
+        "sex": "Male",
+        "organization": "Chicago University"
+      },
+      {
+        "year": 1979,
+        "fullName": "Sir Arthur Lewis",
+        "sex": "Male",
+        "organization": "Princeton University"
+      },
+      {
+        "year": 1982,
+        "fullName": "George J. Stigler",
+        "sex": "Male",
+        "organization": "Chicago University"
+      },
+      {
+        "year": 1983,
+        "fullName": "Gerard Debreu",
+        "sex": "Male",
+        "organization": "University of California"
+      },
+      {
+        "year": 1984,
+        "fullName": "Richard Stone",
+        "sex": "Male",
+        "organization": "Cambridge"
+      },
+      {
+        "year": 1985,
+        "fullName": "Franco Modigliani",
+        "sex": "Male",
+        "organization": "MIT"
+      },
+      {
+        "year": 1987,
+        "fullName": "Robert M. Solow",
+        "sex": "Male",
+        "organization": "MIT"
+      },
+      {
+        "year": 1990,
+        "fullName": "Merton H. Miller",
+        "sex": "Male",
+        "organization": "Chicago University"
+      },
+      {
+        "year": 1990,
+        "fullName": "William F. Sharpe",
+        "sex": "Male",
+        "organization": "Stanford University"
+      },
+      {
+        "year": 1991,
+        "fullName": "Ronald H. Coase",
+        "sex": "Male",
+        "organization": "Chicago University"
+      },
+      {
+        "year": 1992,
+        "fullName": "Gary S. Becker",
+        "sex": "Male",
+        "organization": "Chicago University"
+      },
+      {
+        "year": 1993,
+        "fullName": "Robert W. Fogel",
+        "sex": "Male",
+        "organization": "Chicago University"
+      },
+      {
+        "year": 1994,
+        "fullName": "John C. Harsanyi",
+        "sex": "Male",
+        "organization": "University of California"
+      },
+      {
+        "year": 1994,
+        "fullName": "John F. Nash Jr.",
+        "sex": "Male",
+        "organization": "Princeton University"
+      },
+      {
+        "year": 1995,
+        "fullName": "Robert E. Lucas Jr.",
+        "sex": "Male",
+        "organization": "Chicago University"
+      },
+      {
+        "year": 1996,
+        "fullName": "James A. Mirrlees",
+        "sex": "Male",
+        "organization": "Cambridge"
+      },
+      {
+        "year": 1996,
+        "fullName": "William Vickrey",
+        "sex": "Male",
+        "organization": "Columbia University"
+      },
+      {
+        "year": 1997,
+        "fullName": "Robert C. Merton",
+        "sex": "Male",
+        "organization": "Harvard"
+      },
+      {
+        "year": 1999,
+        "fullName": "Robert A. Mundell",
+        "sex": "Male",
+        "organization": "Columbia University"
+      },
+      {
+        "year": 2000,
+        "fullName": "James J. Heckman",
+        "sex": "Male",
+        "organization": "Chicago University"
+      },
+      {
+        "year": 2000,
+        "fullName": "Daniel L. McFadden",
+        "sex": "Male",
+        "organization": "University of California"
+      },
+      {
+        "year": 2001,
+        "fullName": "George A. Akerlof",
+        "sex": "Male",
+        "organization": "University of California"
+      },
+      {
+        "year": 2001,
+        "fullName": "A. Michael Spence",
+        "sex": "Male",
+        "organization": "Stanford University"
+      },
+      {
+        "year": 2001,
+        "fullName": "Joseph E. Stiglitz",
+        "sex": "Male",
+        "organization": "Columbia University"
+      },
+      {
+        "year": 2002,
+        "fullName": "Daniel Kahneman",
+        "sex": "Male",
+        "organization": "Princeton University"
+      },
+      {
+        "year": 2003,
+        "fullName": "Clive W.J. Granger",
+        "sex": "Male",
+        "organization": "University of California"
+      },
+      {
+        "year": 2006,
+        "fullName": "Edmund S. Phelps",
+        "sex": "Male",
+        "organization": "Columbia University"
+      },
+      {
+        "year": 2007,
+        "fullName": "Roger B. Myerson",
+        "sex": "Male",
+        "organization": "Chicago University"
+      },
+      {
+        "year": 2008,
+        "fullName": "Paul Krugman",
+        "sex": "Male",
+        "organization": "Princeton University"
+      },
+      {
+        "year": 2009,
+        "fullName": "Oliver E. Williamson",
+        "sex": "Male",
+        "organization": "University of California"
+      },
+      {
+        "year": 2010,
+        "fullName": "Peter A. Diamond",
+        "sex": "Male",
+        "organization": "MIT"
+      },
+      {
+        "year": 2011,
+        "fullName": "Christopher A. Sims",
+        "sex": "Male",
+        "organization": "Princeton University"
+      },
+      {
+        "year": 2012,
+        "fullName": "Alvin E. Roth",
+        "sex": "Male",
+        "organization": "Harvard"
+      },
+      {
+        "year": 2012,
+        "fullName": "Lloyd S. Shapley",
+        "sex": "Male",
+        "organization": "University of California"
+      },
+      {
+        "year": 2013,
+        "fullName": "Eugene F. Fama",
+        "sex": "Male",
+        "organization": "Chicago University"
+      },
+      {
+        "year": 2013,
+        "fullName": "Lars Peter Hansen",
+        "sex": "Male",
+        "organization": "Chicago University"
+      },
+      {
+        "year": 2015,
+        "fullName": "Angus Deaton",
+        "sex": "Male",
+        "organization": "Princeton University"
+      },
+      {
+        "year": 2016,
+        "fullName": "Oliver Hart",
+        "sex": "Male",
+        "organization": "Harvard"
+      },
+      {
+        "year": 2016,
+        "fullName": "Bengt Holmstr\u00f6m",
+        "sex": "Male",
+        "organization": "MIT"
+      }
+    ]
+  }
+]
