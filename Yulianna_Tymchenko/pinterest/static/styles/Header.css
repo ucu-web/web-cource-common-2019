@@ -45,10 +45,6 @@
 @media all and (max-width: 720px){
     .Header__nav-link-name {
         display: none;}
-    .Link__image{
-        margin: 0;
-    }
-
 }
 
 @media all and (min-width: 980px){
