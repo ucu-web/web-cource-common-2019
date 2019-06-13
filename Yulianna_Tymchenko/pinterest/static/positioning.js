@@ -12,7 +12,7 @@ export function setupBlocks() {
     colWidth = $('.Post').outerWidth();
     colCount = Math.floor(windowWidth / (colWidth + margin));
     if (colCount===1)
-        colCount++
+        colCount++;
     marginLeft = (windowWidth - (colWidth + margin) * colCount) / 2;
     for (let i = 0; i < colCount; i++) {
         blocks.push(margin);

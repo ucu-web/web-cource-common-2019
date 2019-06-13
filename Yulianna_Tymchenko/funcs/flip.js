@@ -1,0 +1,1 @@
+const flip = func => (first, second, ...tail)=> func(second, first,...tail);

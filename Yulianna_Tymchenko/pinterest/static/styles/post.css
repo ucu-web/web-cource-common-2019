@@ -54,12 +54,11 @@
 .Post__image {
     border-radius: 8px;
     background: #F1F1FA;
-    width: 236px;
     display: flex;
     border: 0;
 }
 
-.Post__image_container:hover .Post__image {
+.Post__image_container:hover .Post__image{
     filter: none;
     -webkit-filter: brightness(85%);
 }
@@ -91,7 +90,7 @@
     background-color: #333;
 }
 
-.Post__link__svg {
+.Link__post-svg {
     height: 1em;
 }
 
