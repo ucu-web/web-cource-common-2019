@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "webpack-dev-server",
     "preprocess": "node preprocessing/preprocessing.js",
     "build": "npx webpack",
     "watch": "webpack --watch",
@@ -13,11 +14,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cyrillic-to-translit-js": "^2.2.0",
     "d3": "^5.9.2",
-    "d3-queue": "^3.0.7",
+    "serve": "^11.0.1",
     "topojson": "^3.0.2",
     "webpack": "^4.33.0",
+    "webpack-dev-server": "^3.7.1",
     "xlsx-style": "^0.8.13"
   },
   "devDependencies": {

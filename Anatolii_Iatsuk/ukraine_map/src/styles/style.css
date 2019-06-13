@@ -7,31 +7,32 @@ body {
   height: 100%;
 }
 
-svg.map {
+.visualization-container {
+  margin: auto;
+  height: 100%;
+}
+
+.visualization-container__map {
   z-index: 1;
   position: fixed;
   top: 80px;
   left: 0;
   width: 100%;
+  preserveaspectratio: "xMidYMid";
 }
 
-h1 {
+.visualization-container__title {
   text-align: center;
 }
 
-.container {
-  margin: auto;
-  height: 100%;
-}
-
-form {
+.visualization-container__feature-type-input {
   z-index: 2;
   position: fixed;
   top: 0;
   left: 10px;
 }
 
-.legend {
+.visualization-container__legend {
   position: fixed;
   bottom: 20px;
   left: 20px;

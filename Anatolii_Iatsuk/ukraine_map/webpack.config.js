@@ -5,7 +5,8 @@ module.exports = {
     entry: "./src/index.js",
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: "bundle.js"
+        filename: "bundle.js",
+        publicPath: "/dist"
     },
     node: {
         fs: 'empty'
@@ -21,5 +22,16 @@ module.exports = {
                 use: ["url-loader"]
             }
         ]
+    },
+
+    devServer: {
+        // The url part for webpack result
+        publicPath: "/dist",
+        // The root folder for static files
+        contentBase: path.resolve(__dirname),
+        // Live-reloading: true
+        watchContentBase: true,
+        compress: true,
+        port: 5000
     }
 };

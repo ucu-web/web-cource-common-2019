@@ -1,4 +1,4 @@
-let a = {
+const сyrillicToLatin = {
   й: "i",
   ц: "ts",
   у: "u",
@@ -31,17 +31,13 @@ let a = {
   ї: "ii",
   б: "b",
   ю: "ui",
-  "!": "",
-  "'": ""
 };
 
 function transliterate(word) {
   if (!word) return "";
   return word
     .split("")
-    .map(function(char) {
-      return a[char];
-    })
+    .map(char => сyrillicToLatin[char])
     .join("");
 }
 

@@ -4,12 +4,12 @@ let transliterate = require("./transliterate");
 
 preprocess_excel("./data/ngo_2019_04_01.xlsx", "./data/data.json");
 
-function preprocess_excel(input_path, output_path) {
-  let table = XLSX.readFile(input_path);
-  let districtFeatures = {};
+function preprocess_excel(inputPath, outputPath) {
+  let table = XLSX.readFile(inputPath);
+  let districtsFeatures = {};
 
   let sheetNames = table.SheetNames.filter(
-    name => !["ЗАГАЛЬНА ІНФОРМАЦІЯ"].includes(name)
+    name => name !== "ЗАГАЛЬНА ІНФОРМАЦІЯ"
   );
 
   for (let sheetNumber = 0; sheetNumber < sheetNames.length; sheetNumber++) {
@@ -28,58 +28,62 @@ function preprocess_excel(input_path, output_path) {
       }
       if (!row[0] || !/^\d+$/.test(row[0])) continue;
 
-      let region = transliterate.transliterate(
+      let districtName = transliterate.transliterate(
         row[1].split(" ")[0].toLowerCase()
       );
 
-      if (region in districtFeatures) {
-        districtFeatures[region].push(row);
+      if (districtName in districtsFeatures) {
+        districtsFeatures[districtName].push(row);
       } else {
-        districtFeatures[region] = [row];
+        districtsFeatures[districtName] = [row];
       }
     }
   }
 
-  for (let districtName in districtFeatures) {
+  // calculate features of district by it subunits
+  for (let districtName in districtsFeatures) {
+    // average features of district
     let price = 0;
     let population = 0;
     let area = 0;
+    // numbers of correct values
     let correctNumberArea = 0;
     let correctNumberPrice = 0;
     let correctNumberPopulation = 0;
 
-    districtFeatures[districtName].forEach(d => {
-      if (/^-?\d+(?:[.,]\d*?)?$/.test(d[5])) {
+    districtsFeatures[districtName].forEach(subDistrictFeatures => {
+      // check if feature is correct and the add it to final
+      if (/^-?\d+(?:[.,]\d*?)?$/.test(subDistrictFeatures[5])) {
         correctNumberPrice += 1;
-        price += d[5];
+        price += subDistrictFeatures[5];
       }
-      if (/^\d+$/.test(d[3])) {
+      if (/^\d+$/.test(subDistrictFeatures[3])) {
         correctNumberPopulation += 1;
-        population += d[3];
+        population += subDistrictFeatures[3];
       }
 
-      if (/^-?\d+(?:[.,]\d*?)?$/.test(d[2])) {
+      if (/^-?\d+(?:[.,]\d*?)?$/.test(subDistrictFeatures[2])) {
         correctNumberArea += 1;
-        area += d[2];
+        area += subDistrictFeatures[2];
       }
     });
 
+    // calculate average features for district
     price = correctNumberPrice ? price / correctNumberPrice : undefined;
     population = correctNumberPopulation ? population : undefined;
     area = correctNumberArea ? area : undefined;
-    let name = districtFeatures[districtName][0][1].toLowerCase();
-    name = name.charAt(0).toUpperCase() + name.slice(1);
-
-    if (population < 500) {
-      console.log(districtFeatures[districtName]);
-      throw Error;
-    }
     let density = population / area;
 
-    districtFeatures[districtName] = [name, price, population, density];
+    // create name in ukrainian for printing
+    let name = districtsFeatures[districtName][0][1].toLowerCase();
+    name = name.charAt(0).toUpperCase() + name.slice(1);
+
+    // update information for district
+    districtsFeatures[districtName] = [name, price, population, density];
   }
 
-  fs.writeFile(output_path, JSON.stringify(districtFeatures), function(err) {
+  // write preprocessed data to file
+  fs.writeFile(outputPath, JSON.stringify(districtsFeatures), function(err) {
     if (err) throw err;
     console.log("complete");
   });

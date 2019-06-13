@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <head>
-    <link rel="stylesheet" href="../src/styles/style.css" type="text/css">
+    <link rel="stylesheet" href="src/styles/style.css" type="text/css">
 </head>
 <body>
 
-<div class="container">
-    <h1>Статистика України</h1>
-    <form>
+<div class="visualization-container">
+    <h1 class = "visualization-container__title">Статистика України</h1>
+    <form class = "visualization-container__feature-type-input">
         <p>
             <input type="radio" id="population" value="population" name="map-feature">
             <label for="population">Населення</label>
@@ -23,5 +23,5 @@
     </form>
 </div>
 
-<script src="bundle.js"></script>
+<script src="dist/bundle.js"></script>
 </body>
