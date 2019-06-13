@@ -1,46 +1,51 @@
 let d3 = require("d3");
 
 
-export function render(svg, json, column = 1, default_massage = "") {
-    svg.selectAll("path[id^=p]").attr("fill", "gray");
-    svg.selectAll("path").selectAll("title").remove();
+export function renderFeaturesOnMap(rootElement, districtFeatures, featureColumn = 1, defaultAlertMessage = "") {
+    rootElement.selectAll("path").attr("fill", "gray");
+    rootElement.selectAll("path").selectAll("title").remove();
 
     let min = 100000, max = 0;
 
-    for (let code in json) {
-        if (!json[code][column]) continue;
-        min = Math.min(json[code][column], min);
-        max = Math.max(json[code][column], max);
+    for (let code in districtFeatures) {
+        if (!districtFeatures[code][featureColumn]) continue;
+        min = Math.min(districtFeatures[code][featureColumn], min);
+        max = Math.max(districtFeatures[code][featureColumn], max);
     }
     console.log(min, max);
 
 
-    for (let code in json) {
-        let color = Math.log(json[code][column] - min) / Math.log(max - min);
-        if (column === 2) color = Math.log((json[code][column] - min) / 10000) / Math.log((max - min) / 10000);
+    for (let districtName in districtFeatures) {
+
+        let districtPathElement = getElementByName(rootElement, districtName);
+        if (!districtPathElement) continue;
+
+        let color = Math.log(districtFeatures[districtName][featureColumn] - min) / Math.log(max - min);
+        if (featureColumn === 2) color = Math.log((districtFeatures[districtName][featureColumn] - min) / 10000) / Math.log((max - min) / 10000);
 
         if (!isFinite(color)) color = 0;
 
-        svg.select("#p" + code)
+        districtPathElement
             .attr("fill", d3.interpolateLab("green", "red")(color))
-            .attr("value", json[code][column])
+            .attr("value", districtFeatures[districtName][featureColumn])
             .on('click', function () {
-                let message = default_massage + d3.select(this).select("title").text() + ": ";
-                alert(message + d3.select(this).attr("value"))
+                alert(defaultAlertMessage[0] + d3.select(this).select("title").text() + ": "
+                    + d3.select(this).attr("value") + defaultAlertMessage[1])
             })
-            .append("title").text(json[code][0])
+            .append("title").text(districtFeatures[districtName][0])
+
     }
 
     // Add legend
-    let w = 320, h = 50;
+    let width = 320, height = 50;
 
     d3.select("svg.legend").remove();
 
-    let key = d3.select("body")
+    let key = d3.select(".container")
         .append("svg")
         .attr("class", "legend")
-        .attr("width", w)
-        .attr("height", h);
+        .attr("width", width)
+        .attr("height", height + 50);
 
     let legend = key.append("defs")
         .append("svg:linearGradient")
@@ -50,7 +55,6 @@ export function render(svg, json, column = 1, default_massage = "") {
         .attr("x2", "100%")
         .attr("y2", "100%")
         .attr("spreadMethod", "pad");
-
 
     legend.append("stop")
         .attr("offset", "0%")
@@ -64,7 +68,7 @@ export function render(svg, json, column = 1, default_massage = "") {
 
     key.append("rect")
         .attr("width", 300)
-        .attr("height", h - 30)
+        .attr("height", height - 30)
         .style("fill", "url(#gradient)")
         .attr("transform", "translate(0,10)");
 
@@ -79,4 +83,27 @@ export function render(svg, json, column = 1, default_massage = "") {
     key.append("g")
         .attr("transform", "translate(0,30)")
         .call(yAxis);
+
+    key.append("text")
+        .attr("transform", "translate(0,70)")
+        .text(defaultAlertMessage[1])
+        .attr("x", "50%")
+        .attr("text-anchor", "middle");
+}
+
+
+function getElementByName(rootElement, districtName) {
+    let pathElement = rootElement.select("path#" + districtName);
+
+    if (pathElement.empty()) pathElement = rootElement.select("path#" + districtName + "ska");
+
+    if (pathElement.empty()){
+        let i = 1;
+
+        do {
+            pathElement = rootElement.select("path[id^=" + districtName.slice(0, districtName.length - i) + "]");
+            i++;
+        } while (pathElement.empty() && i < districtName.length);
+    }
+    return (!pathElement.empty()) ? pathElement : undefined;
 }

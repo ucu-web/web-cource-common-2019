@@ -13,8 +13,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cyrillic-to-translit-js": "^2.2.0",
     "d3": "^5.9.2",
     "d3-queue": "^3.0.7",
+    "topojson": "^3.0.2",
     "webpack": "^4.33.0",
     "xlsx-style": "^0.8.13"
   },
