@@ -36,7 +36,7 @@ const validation = (req, res, next) => {
 };
 
 postRouter.post("/", validation, async (req, res) => {
-    // try {
+    try {
         const {filename, image} = await download.image({"url": req.body["url"], "dest": pathToImages});
         const {width, height} = sizeOf(image);
         const newImage = await Jimp.read(image);
@@ -59,9 +59,9 @@ postRouter.post("/", validation, async (req, res) => {
 
         await fs.writeFile(pathToPosts, JSON.stringify(posts));
         res.json(post);
-    // } catch (e) {
-    //     res.status(422).json({"error-message": e.message});
-    // }
+    } catch (e) {
+        res.status(422).json({"error-message": e.message});
+    }
 });
 
 module.exports = postRouter;
