@@ -57,7 +57,7 @@ export function renderFeaturesOnMap(
       districtTitle.text(
         districtFeatures[districtName][0] +
           ", " +
-          (+districtFeatures[districtName][featureColumn]).toFixed(0) +
+          parseFloat(districtFeatures[districtName][featureColumn]).toFixed(0) +
           defaultAlertMessage[1]
       );
     } else {
