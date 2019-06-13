@@ -25,70 +25,81 @@ export function renderFeaturesOnMap(rootElement, districtFeatures, featureColumn
 
         if (!isFinite(color)) color = 0;
 
-        districtPathElement
+        let districtTitle = districtPathElement
             .attr("fill", d3.interpolateLab("green", "red")(color))
             .attr("value", districtFeatures[districtName][featureColumn])
-            .on('click', function () {
-                alert(defaultAlertMessage[0] + d3.select(this).select("title").text() + ": "
-                    + d3.select(this).attr("value") + defaultAlertMessage[1])
+            .on('mouseover', function (d, i) {
+                d3.select(this).transition()
+                    .duration('50')
+                    .attr('opacity', '.6');
             })
-            .append("title").text(districtFeatures[districtName][0])
+            .on('mouseout', function (d, i) {
+                d3.select(this).transition()
+                    .duration('50')
+                    .attr('opacity', '1');
+            })
+            .append("title");
+        if (districtFeatures[districtName][featureColumn]) {
+            districtTitle.text(districtFeatures[districtName][0] + ", " + districtFeatures[districtName][featureColumn].toFixed(0) + defaultAlertMessage[1]);
+        } else {
+            districtTitle.text(districtFeatures[districtName][0]);
+        }
 
+
+        // Add legend
+        let width = 320, height = 50;
+
+        d3.select("svg.legend").remove();
+
+        let key = d3.select(".container")
+            .append("svg")
+            .attr("class", "legend")
+            .attr("width", width)
+            .attr("height", height + 50);
+
+        let legend = key.append("defs")
+            .append("svg:linearGradient")
+            .attr("id", "gradient")
+            .attr("x1", "0%")
+            .attr("y1", "100%")
+            .attr("x2", "100%")
+            .attr("y2", "100%")
+            .attr("spreadMethod", "pad");
+
+        legend.append("stop")
+            .attr("offset", "0%")
+            .attr("stop-color", "green")
+            .attr("stop-opacity", 1);
+
+        legend.append("stop")
+            .attr("offset", "100%")
+            .attr("stop-color", "red")
+            .attr("stop-opacity", 1);
+
+        key.append("rect")
+            .attr("width", 300)
+            .attr("height", height - 30)
+            .style("fill", "url(#gradient)")
+            .attr("transform", "translate(0,10)");
+
+        let y = d3.scaleLinear()
+            .range([0, 300])
+            .domain([min, max]);
+
+        let yAxis = d3.axisBottom()
+            .scale(y)
+            .ticks(5);
+
+        key.append("g")
+            .attr("transform", "translate(0,30)")
+            .call(yAxis);
+
+        key.append("text")
+            .attr("transform", "translate(0,70)")
+            .text(defaultAlertMessage[1])
+            .attr("x", "50%")
+            .attr("text-anchor", "middle");
     }
-
-    // Add legend
-    let width = 320, height = 50;
-
-    d3.select("svg.legend").remove();
-
-    let key = d3.select(".container")
-        .append("svg")
-        .attr("class", "legend")
-        .attr("width", width)
-        .attr("height", height + 50);
-
-    let legend = key.append("defs")
-        .append("svg:linearGradient")
-        .attr("id", "gradient")
-        .attr("x1", "0%")
-        .attr("y1", "100%")
-        .attr("x2", "100%")
-        .attr("y2", "100%")
-        .attr("spreadMethod", "pad");
-
-    legend.append("stop")
-        .attr("offset", "0%")
-        .attr("stop-color", "green")
-        .attr("stop-opacity", 1);
-
-    legend.append("stop")
-        .attr("offset", "100%")
-        .attr("stop-color", "red")
-        .attr("stop-opacity", 1);
-
-    key.append("rect")
-        .attr("width", 300)
-        .attr("height", height - 30)
-        .style("fill", "url(#gradient)")
-        .attr("transform", "translate(0,10)");
-
-    let y = d3.scaleLinear()
-        .range([0, 300])
-        .domain([min, max]);
-
-    let yAxis = d3.axisBottom()
-        .scale(y)
-        .ticks(5);
-
-    key.append("g")
-        .attr("transform", "translate(0,30)")
-        .call(yAxis);
-
-    key.append("text")
-        .attr("transform", "translate(0,70)")
-        .text(defaultAlertMessage[1])
-        .attr("x", "50%")
-        .attr("text-anchor", "middle");
 }
 
 
@@ -97,9 +108,8 @@ function getElementByName(rootElement, districtName) {
 
     if (pathElement.empty()) pathElement = rootElement.select("path#" + districtName + "ska");
 
-    if (pathElement.empty()){
+    if (pathElement.empty()) {
         let i = 1;
-
         do {
             pathElement = rootElement.select("path[id^=" + districtName.slice(0, districtName.length - i) + "]");
             i++;
