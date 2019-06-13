@@ -1,0 +1,59 @@
+.Header {
+    position: fixed;
+    z-index: 99;
+    width: 98%;
+    background: white;
+    left: 0;
+    top: 0;
+}
+
+.Header__nav-button {
+    background: none;
+    box-sizing: border-box;
+    height: 60%;
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+}
+
+.Header__nav-button:focus, .Header__nav-link:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 132, 255, .5);
+}
+
+.Header__nav-link {
+    box-sizing: border-box;
+    padding: 10px;
+    color: #8e8e8e;
+}
+
+
+.Header__nav-link:hover {
+    background-color: #efefef;
+}
+
+.Header__nav-link_active {
+    color: #333;
+}
+
+.Header__nav-button:hover {
+    background-color: #efefef;
+
+}
+
+
+
+@media all and (max-width: 720px){
+    .Header__nav-link-name {
+        display: none;}
+    .Link__image{
+        margin: 0;
+    }
+
+}
+
+@media all and (min-width: 980px){
+    .Header__on-small{
+        display: none;
+    }
+}
+

@@ -1,10 +1,10 @@
-let x = document.querySelector(".Header__search-form__input");
-x.addEventListener("focus", onFocus, true);
-x.addEventListener("blur", onBlur, true);
+let searchForm = document.querySelector(".Search-form__input");
+searchForm.addEventListener("focus", onFocus, true);
+searchForm.addEventListener("blur", onBlur, true);
 
 
 function onFocus() {
-    document.querySelector(".Header__search-form").style = "box-shadow:0 0 0 4px rgba(0, 132, 255, .5)";
+    document.querySelector(".Search-form").style = "box-shadow:0 0 0 4px rgba(0, 132, 255, .5)";
 }
 
 function setBorder(element) {
@@ -13,7 +13,7 @@ function setBorder(element) {
 }
 
 function onBlur() {
-    document.querySelector(".Header__search-form").style = "box-shadow:none";
+    document.querySelector(".Search-form").style = "box-shadow:none";
 }
 
 

@@ -1,1 +1,0 @@
-const pipe = () => (...fnc) => val => reduce((value, fn)=> fn(value), val, fnc.reverse);

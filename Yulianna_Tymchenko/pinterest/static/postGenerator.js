@@ -1,15 +1,28 @@
-export const generate = (data) => {
-    const container = document.createElement('div');
-    let ratio = data.height / data.width;
-    container.classList.add('Post', 'temp');
+var cloudinary = require("cloudinary-core");
+
+const width = 220;
+let cl = new cloudinary.Cloudinary({
+    cloud_name: "ppinterest",
+    api_key: "976639956262745",
+    api_secret: "lESNBY6s2h6EIw9k0hTgQFYgTDI"
+});
+
+
+export const generate = data => {
+    const container = document.createElement("div");
+    container.classList.add("Post", "temp");
     container.innerHTML = `
 <div class="Post__image_container">
     <a class="Post__image">
-        <img  class="Image"  style="height: ${data.small_height}px; width: 219px" src="${data.small_image_link}" alt="">
+        ${cl.imageTag('pinterest/images/' + data.image_name, {
+        width: width,
+        height: width * data.ratio,
+        crop: "scale"
+    }).toHtml()}
      </a>
     <form class="Post__form">
-        <button class="Button Post__button_select">Home</button>
-        <button class="Button Post__button_save">Save</button>
+        <button class="Button Post__button_select" onclick="{return false}">Home</button>
+        <button class="Button Post__button_save" onclick="{return false}">Save</button>
     </form>
     <div class="Post__link-container">
         <a class="Link Post__link" href='#' aria-label="go to">Some link</a>
@@ -22,7 +35,7 @@ export const generate = (data) => {
     </div>
 </div>
 <div class="Post__title_container">
-    <h4 aria-label="post-title" class="Post__title">${data.title}</h4>
+    <h5 aria-label="post-title" class="Post__title">${data.title}</h5>
     <button class="Button Post__button_more-info" aria-label="more information"></button>
 </div>
 `;

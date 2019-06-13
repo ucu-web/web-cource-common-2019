@@ -23,7 +23,7 @@ export function setupBlocks() {
 export function positionBlocks( selector, blocks) {
     blocks = blocks || prevBlocks;
     $(selector).each(function () {
-        let min = Array.min(blocks);
+        let min = Math.min(...blocks);
         let index = $.inArray(min, blocks);
         let leftPos = margin + (index * (colWidth + margin));
         $(this).css({
@@ -37,9 +37,7 @@ export function positionBlocks( selector, blocks) {
 
     });
     prevBlocks = blocks;
-
 }
 
-Array.min = function (array) {
-    return Math.min.apply(Math, array);
-};
+
+

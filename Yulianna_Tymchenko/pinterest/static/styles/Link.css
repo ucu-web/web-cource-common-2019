@@ -1,0 +1,25 @@
+.Link {
+    display: flex;
+    align-items: center;
+    border-radius: 999px;
+    text-decoration: none;
+}
+
+.Link__image {
+    height: auto;
+    max-width: 23px;
+    border-radius: 100%;
+    margin-right: 0.4em;
+}
+
+@media all and (max-width: 980px) {
+    .Header__nav-link_home {
+        display: none;
+    }
+}
+
+@media all and (max-width: 720px) {
+    .Link__image {
+        margin: 0;
+    }
+}
