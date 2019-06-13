@@ -40,7 +40,7 @@ export function renderFeaturesOnMap(rootElement, districtFeatures, featureColumn
             })
             .append("title");
         if (districtFeatures[districtName][featureColumn]) {
-            districtTitle.text(districtFeatures[districtName][0] + ", " + districtFeatures[districtName][featureColumn].toFixed(0) + defaultAlertMessage[1]);
+            districtTitle.text(districtFeatures[districtName][0] + ", " + (+districtFeatures[districtName][featureColumn]).toFixed(0) + defaultAlertMessage[1]);
         } else {
             districtTitle.text(districtFeatures[districtName][0]);
         }
