@@ -1,9 +1,0 @@
-.calendar {
-  width: calc(7 * 50px);
-  margin: auto;
-}
-.calendar__day {
-  width: 50px;
-  display: inline-block;
-  text-align: center;
-}

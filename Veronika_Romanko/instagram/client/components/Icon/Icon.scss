@@ -1,0 +1,72 @@
+.icon {
+  height: 24px;
+  width: 24px;
+  float: left;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-image: url("/images/icons.png");
+  color: #003569;
+
+  &--logo {
+    background-position: -52px -234px;
+  }
+
+  &--logo-text {
+    background-position: -94px -72px;
+    height: 29px;
+    width: 103px;
+    border-radius: 0;
+  }
+
+  &--explore {
+    background-position: -130px -286px;
+    border-radius: 0;
+  }
+
+
+  &--hart {
+    background-position: -52px -260px;
+    border-radius: 0;
+  }
+
+  &--profile {
+    border-radius: 0;
+    background-position: -271px -182px;
+  }
+
+  &--margin {
+    margin-left: 30px;
+  }
+
+  &--dots{
+    background-position: -297px -208px;
+    border-radius: 0;
+  }
+
+  &--coment{
+    background-position: -239px -202px;
+    border-radius: 0;
+  }
+
+  &--share{
+    background-position: -323px -52px;
+    border-radius: 0;
+  }
+
+  &--save{
+    background-position: -234px -286px;
+    border-radius: 0;
+  }
+
+
+}
+
+.button{
+  &--dots-wrapper{
+    min-height: 40px;
+    min-width: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,50 @@
+.nav-bar {
+  background: #fff;
+  border-bottom: 1px solid rgba(0,0,0,.0975);
+  &__wrapper{
+    height: 77px;
+    margin: auto;
+    padding: 10px 5px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+
+  }
+  &__search{
+    height: 28px;
+    min-width: 125px;
+    width: 215px;
+
+    &-input{
+      font-size: 16px;
+
+      border: solid 1px #dbdbdb;
+      border-radius: 3px;
+      outline: 0;
+      padding: 3px 10px 3px 26px;
+      z-index: 2;
+
+      box-sizing: border-box;
+      height: 100%;
+      width: 100%;
+
+      background: #fafafa;
+      color: #999;
+      cursor: text;
+      font-weight: 300;
+    }
+  }
+
+  &__logo{
+    display: flex;
+  }
+  &__line{
+    background-color: #262626;
+    height: 28px;
+    margin: 0 16px;
+    width: 1px;
+  }
+}
+
