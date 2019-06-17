@@ -1,3 +1,172 @@
 .footer {
+  color: white;
+  padding-top: 8%;
+  background-color: #1c1f1f;
+  min-height: 24rem;
+  position: relative;
+  font: 1em iStock Maquette, Helvetica, Arial, sans-serif;
+}
 
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+}
+
+.footer-logo {
+  height: 50px;
+  width: 108px;
+  cursor: pointer;
+  padding-bottom: 2rem;
+}
+
+.footer hr {
+  border: 0;
+  position: absolute;
+  bottom: 5rem;
+  text-align: center;
+  width: 90%;
+  margin-left: 3rem;
+  border-top: solid black 1px;
+  border-bottom: solid #353838 1px;
+}
+
+.citation {
+  position: absolute;
+  bottom: 2rem;
+  text-align: center;
+  width: 100%;
+  color: #a8b2b1;
+  font-size: 0.9rem;
+}
+
+.footer__local {
+  display: inline-block;
+  width: 20%;
+}
+
+.change-language {
+  display: block;
+}
+
+.change-country {
+  display: block;
+}
+
+.footer__company {
+  display: inline-block;
+}
+
+.footer__learn-more {
+  display: inline-block;
+}
+
+.footer__support {
+  display: inline-block;
+}
+
+.footer__widgets {
+  display: inline-block;
+  align-content: center;
+}
+
+.social-media {
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+  border: 2px solid #353838;
+  background-size: 52px 52px;
+  background-position: center;
+  cursor: pointer;
+}
+
+.footer-ul {
+  list-style-type: none;
+}
+
+.footer-ul li {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  outline: none;
+  text-decoration: none;
+  margin-top: 0.4rem;
+}
+
+.footer-ul li:hover {
+  color: #02886d;
+}
+
+.footer-h3 {
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
+  line-height: 24px;
+}
+
+.social-media_inst {
+  background-image: url("../../../sources/_0_percentage/icon_instagram.svg");
+}
+
+.social-media_face {
+  background-image: url("../../../sources/_0_percentage/icon_facebook.svg");
+}
+
+.social-media_twit {
+  background-image: url("../../../sources/_0_percentage/icon_twitter.svg");
+}
+
+.market {
+  width: 128px;
+  height: 42px;
+  border-radius: 7px;
+  border: 2px solid #353838;
+  background-size: 110%;
+  background-position: center;
+  cursor: pointer;
+  display: block;
+  margin: 0.5rem 0 0 1rem;
+}
+
+.market_apple {
+  margin-top: 2rem;
+  background-image: url("../../../sources/_0_percentage/appstore.svg");
+}
+
+.market_vedro {
+  background-image: url("../../../sources/_0_percentage/googlepay.svg");
+}
+
+.button-footer {
+  width: 100%;
+  background-color: transparent;
+  min-height: 2.5rem;
+  margin-bottom: 0.8rem;
+  border: 1px solid gray;
+  border-radius: 7px;
+  cursor: pointer;
+  text-align: left;
+  padding-left: 0.5rem;
+  color: #a8b2b1;
+  font-size: 0.875rem;
+  line-height: 18px;
+}
+
+.button-footer:hover {
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+.usa-pic {
+  width: 30px;
+  height: 19px;
+  float: left;
+}
+
+.usa-text {
+  margin-left: 1rem;
+}
+
+.button-footer__arrow {
+  margin-left: 10rem;
+  margin-top: 0.1rem;
 }

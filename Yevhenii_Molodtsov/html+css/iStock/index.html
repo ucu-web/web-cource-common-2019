@@ -1,355 +1,623 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
 
     <title>Stock photos, royalty-free images</title>
-    <link href="styles/css-reset.css" rel="stylesheet" type="text/css">
-    <link href="styles/body/body.css" rel="stylesheet" type="text/css">
-    <link href="styles/body/main/main.css" rel="stylesheet" type="text/css">
-    <link href="styles/body/header/header.css" rel="stylesheet" type="text/css">
-    <link href="styles/body/main/main.css" rel="stylesheet" type="text/css">
-    <link href="styles/body/main/search.css" rel="stylesheet" type="text/css">
-    <link href="styles/body/main/navigation.css" rel="stylesheet" type="text/css">
-    <link href="styles/body/main/plugins-editors.css" rel="stylesheet" type="text/css">
-    <link href="styles/body/main/photos-illustrations-video.css" rel="stylesheet" type="text/css">
-    <link href="styles/body/footer/footer.css" rel="stylesheet" type="text/css">
-    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link href="styles/css-reset.css" rel="stylesheet" type="text/css" />
+    <link href="styles/body/body.css" rel="stylesheet" type="text/css" />
+    <link href="styles/body/main/main.css" rel="stylesheet" type="text/css" />
+    <link
+      href="styles/body/header/header.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="styles/body/main/main.css" rel="stylesheet" type="text/css" />
+    <link href="styles/body/main/search.css" rel="stylesheet" type="text/css" />
+    <link
+      href="styles/body/main/navigation.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="styles/body/main/plugins-editors.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="styles/body/main/photos-illustrations-video.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="styles/body/footer/footer.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="styles/style.css" rel="stylesheet" type="text/css" />
 
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="styles/body/header/header.js" type="text/javascript"></script>
     <script src="styles/body/main/search.js" type="text/javascript"></script>
-
-</head>
-<body id="body" class="body">
-<header class="header">
-    <nav class="header__navigation header__navigation_thin" id="navigation_bar_thin">
-        <button onclick="navigation_bar_open()" id="navigation_open" class="burger"></button>
+    <script src="styles/body/footer/footer.js" type="text/javascript"></script>
+  </head>
+  <body id="body" class="body">
+    <header class="header">
+      <nav
+        class="header__navigation header__navigation_thin"
+        id="navigation_bar_thin"
+      >
+        <button
+          onclick="navigation_bar_open()"
+          id="navigation_open"
+          class="burger"
+        ></button>
         <ul class="navigation" id="nav_hidden">
-            <li class="navigation__item navigation__item_vertical"><a href="#">Photos </a></li>
-            <li class="navigation__item navigation__item_vertical"><a href="#">Illustrations</a></li>
-            <li class="navigation__item navigation__item_vertical"><a href="#">Video </a></li>
-            <li class="navigation__item navigation__item_vertical"><a href="#">Audio </a></li>
+          <li class="navigation__item navigation__item_vertical">
+            <a href="#">Photos </a>
+          </li>
+          <li class="navigation__item navigation__item_vertical">
+            <a href="#">Illustrations</a>
+          </li>
+          <li class="navigation__item navigation__item_vertical">
+            <a href="#">Video </a>
+          </li>
+          <li class="navigation__item navigation__item_vertical">
+            <a href="#">Audio </a>
+          </li>
         </ul>
-    </nav>
-    <nav class="header__navigation header__navigation_wide">
+      </nav>
+      <nav class="header__navigation header__navigation_wide">
         <ul class="navigation">
-            <li class="navigation__item"><a href="#">Photos </a></li>
-            <li class="navigation__item"><a href="#">Illustrations</a></li>
-            <li class="navigation__item"><a href="#">Video </a></li>
-            <li class="navigation__item"><a href="#">Audio </a></li>
+          <li class="navigation__item"><a href="#">Photos </a></li>
+          <li class="navigation__item"><a href="#">Illustrations</a></li>
+          <li class="navigation__item"><a href="#">Video </a></li>
+          <li class="navigation__item"><a href="#">Audio </a></li>
         </ul>
-    </nav>
-    <a class="image-link" href="index.html">
-        <img srcset="sources/_25_percentage/istock_logo.png 750w,
-                     sources/_50_percentage/istock_logo.png 500w,
-                     sources/_75_percentage/istock_logo.png 250w"
-             class="image-link__logo" src="sources/_0_percentage/istock_logo.png"
-             alt="IStock logo">
-    </a>
-    <ul class="navigation navigation_normal">
-        <li class="navigation__item navigation__item_right-border"><a href="#">Pricing</a></li>
+      </nav>
+      <a class="image-link" href="index.html">
+        <img
+          srcset="
+            sources/_25_percentage/istock_logo.png 750w,
+            sources/_50_percentage/istock_logo.png 500w,
+            sources/_75_percentage/istock_logo.png 250w
+          "
+          class="image-link__logo"
+          src="sources/_0_percentage/istock_logo.png"
+          alt="IStock logo"
+        />
+      </a>
+      <ul class="navigation navigation_normal">
+        <li class="navigation__item navigation__item_right-border">
+          <a href="#">Pricing</a>
+        </li>
         <li class="navigation__item">
-            <a href="#" class="white-text">
-                <div class="navigation__boards-icon"></div>
-                Boards</a>
+          <a href="#" class="white-text">
+            <div class="navigation__boards-icon"></div>
+            Boards</a
+          >
         </li>
-        <li class="navigation__item navigation__item_wide"><a href="#" class="white-text">
-            <img srcset="sources/_25_percentage/person-icon.png 169w,
-                     sources/_50_percentage/person-icon.png 113w,
-                     sources/_75_percentage/person-icon.png 56w"
-                 class="navigation__person-icon" src="sources/_0_percentage/person-icon.png" alt="person icon">
-            Account</a>
+        <li class="navigation__item navigation__item_wide">
+          <a href="#" class="white-text">
+            <img
+              srcset="
+                sources/_25_percentage/person-icon.png 169w,
+                sources/_50_percentage/person-icon.png 113w,
+                sources/_75_percentage/person-icon.png  56w
+              "
+              class="navigation__person-icon"
+              src="sources/_0_percentage/person-icon.png"
+              alt="person icon"
+            />
+            Account</a
+          >
         </li>
         <li class="navigation__item navigation__item_thin">
-            <button class="open-profile" onclick="my_profile_open()"></button>
+          <button class="open-profile" onclick="my_profile_open()"></button>
         </li>
-    </ul>
-    <ul class="navigation" id="left_nav_hidden">
-        <li class="navigation__item navigation__item_vertical"><a href="#">Your design </a></li>
-        <li class="navigation__item navigation__item_vertical"><a href="#">Your account</a></li>
-        <li class="navigation__item navigation__item_vertical"><a href="#">Sign out </a></li>
-    </ul>
-    <ul class="navigation navigation_super-thin">
+      </ul>
+      <ul class="navigation" id="left_nav_hidden">
+        <li class="navigation__item navigation__item_vertical">
+          <a href="#">Your design </a>
+        </li>
+        <li class="navigation__item navigation__item_vertical">
+          <a href="#">Your account</a>
+        </li>
+        <li class="navigation__item navigation__item_vertical">
+          <a href="#">Sign out </a>
+        </li>
+      </ul>
+      <ul class="navigation navigation_super-thin">
         <li class="navigation__item navigation__item_thin">
-            <button class="open-profile" onclick="my_profile_open()"></button>
+          <button class="open-profile" onclick="my_profile_open()"></button>
         </li>
-    </ul>
-</header>
-<main class="main" id="main">
-    <section class="search">
-        <img srcset="sources/_25_percentage/nature.png 1440w,
-                                     sources/_50_percentage/nature.png 960w,
-                                     sources/_75_percentage/nature.png 480w"
-             class="bg-image" src="sources/_0_percentage/nature.png" alt="background image">
+      </ul>
+    </header>
+    <main class="main" id="main">
+      <section class="search">
+        <img
+          srcset="
+            sources/_25_percentage/nature.png 1440w,
+            sources/_50_percentage/nature.png  960w,
+            sources/_75_percentage/nature.png  480w
+          "
+          class="bg-image"
+          src="sources/_0_percentage/nature.png"
+          alt="background image"
+        />
         <div class="search-bar" id="search-header">
-            <form class="search-form">
-                <button class="submit" type="submit">
-                    <img srcset="sources/_25_percentage/search.png 640w,
-                                     sources/_50_percentage/search.png 427w,
-                                     sources/_75_percentage/search.png 214w"
-                         class="image_search-picture" src="sources/_0_percentage/search.png" alt="search image">
-                </button>
-                <input class="search-form__search" type="search" aria-label="search images"
-                       placeholder="Find the perfect stock photos, vectors and more...">
-            </form>
-            <button class="submit submit_search" type="submit">
-                <img srcset="sources/_25_percentage/camera.png 700w,
-                                     sources/_50_percentage/camera.png 467w,
-                                     sources/_75_percentage/camera.png 233w"
-                     class="image_camera-picture" src="sources/_0_percentage/camera.png" alt="search image">
+          <form class="search-form">
+            <button class="submit" type="submit">
+              <img
+                srcset="
+                  sources/_25_percentage/search.png 640w,
+                  sources/_50_percentage/search.png 427w,
+                  sources/_75_percentage/search.png 214w
+                "
+                class="image_search-picture"
+                src="sources/_0_percentage/search.png"
+                alt="search image"
+              />
             </button>
-            <div class="media-filter">
-                <span class="media-filter__images-span">Images</span>
-                <img srcset="sources/_25_percentage/arrow-down.png 38w,
-                                     sources/_50_percentage/arrow-down.png 25w,
-                                     sources/_75_percentage/arrow-down.png 13w"
-                     class="media-filter__arrow-down" src="sources/_0_percentage/arrow-down.png" alt="available images">
-            </div>
+            <input
+              class="search-form__search"
+              type="search"
+              aria-label="search images"
+              placeholder="Find the perfect stock photos, vectors and more..."
+            />
+          </form>
+          <button class="submit submit_search" type="submit">
+            <img
+              srcset="
+                sources/_25_percentage/camera.png 700w,
+                sources/_50_percentage/camera.png 467w,
+                sources/_75_percentage/camera.png 233w
+              "
+              class="image_camera-picture"
+              src="sources/_0_percentage/camera.png"
+              alt="search image"
+            />
+          </button>
+          <div class="media-filter">
+            <span class="media-filter__images-span">Images</span>
+            <img
+              srcset="
+                sources/_25_percentage/arrow-down.png 38w,
+                sources/_50_percentage/arrow-down.png 25w,
+                sources/_75_percentage/arrow-down.png 13w
+              "
+              class="media-filter__arrow-down"
+              src="sources/_0_percentage/arrow-down.png"
+              alt="available images"
+            />
+          </div>
         </div>
         <div class="search__plans-and-pricing">
-                <span class="plans-and-pricing">
-                    Save with flexible plans to suit every budget.
-                    <a href="#">View plans and pricing</a>
-                </span>
+          <span class="plans-and-pricing">
+            Save with flexible plans to suit every budget.
+            <a href="#">View plans and pricing</a>
+          </span>
         </div>
-    </section>
-    <div class="main-page-content">
+      </section>
+      <div class="main-page-content">
         <section class="content">
-            <span class="content-span-1">Less searching. More finding.</span>
-            <span class="content-span-2">Discover royalty-free images, illustrations and videos that will make you stand out.</span>
-            <div class="content-wrapper">
-                <a href="#">
-                    <div class="content-block">
-                        <img srcset="sources/_25_percentage/r1.jpg 202w,
-                                     sources/_50_percentage/r1.jpg 135w,
-                                     sources/_75_percentage/r1.jpg 67w"
-                             alt="Photos" class="content-block-img" src="sources/_0_percentage/r1.jpg">
-                        <h3>Photos</h3>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="content-block">
-                        <img srcset="sources/_25_percentage/r2.jpg 202w,
-                                     sources/_50_percentage/r2.jpg 135w,
-                                     sources/_75_percentage/r2.jpg 67w"
-                             class="content-block-img" src="sources/_0_percentage/r2.jpg" alt="Illustrations">
-                        <h3>Illustrations</h3>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="content-block">
-                        <img srcset="sources/_25_percentage/r3.jpg 202w,
-                                     sources/_50_percentage/r3.jpg 135w,
-                                     sources/_75_percentage/r3.jpg 67w"
-                             class="content-block-img" src="sources/_0_percentage/r3.jpg" alt="Vectors">
-                        <h3>Vectors</h3>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="content-block">
-                        <img srcset="sources/_25_percentage/r4.jpg 202w,
-                                     sources/_50_percentage/r4.jpg 135w,
-                                     sources/_75_percentage/r4.jpg 67w"
-                             class="content-block-img" src="sources/_0_percentage/r4.jpg" alt="HD and 4K video">
-                        <h3>HD and 4K video</h3>
-                    </div>
-                </a>
-            </div>
-            <span class="content-span-2">Your idea deserves the right image. Your budget deserves a break.</span>
-            <div class="content-themes">
-                <a href="#">
-                    <div class="content-themes-block">
-                        <div class="img-wrapper">
-                            <img srcset="sources/_25_percentage/t1.jpg 335w,
-                                            sources/_50_percentage/t1.jpg 223w,
-                                            sources/_75_percentage/t1.jpg 111w"
-                                 class="content-themes-img" src="sources/_0_percentage/t1.jpg" alt="Vectors">
-                        </div>
-                        <h3>Best of lifestyle</h3>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="content-themes-block">
-                        <div class="img-wrapper">
-                            <img srcset="sources/_25_percentage/t2.jpg 335w,
-                                            sources/_50_percentage/t2.jpg 223w,
-                                            sources/_75_percentage/t2.jpg 111w"
-                                 class="content-themes-img" src="sources/_0_percentage/t2.jpg" alt="Vectors">
-                        </div>
-                        <h3>Real business</h3>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="content-themes-block">
-                        <div class="img-wrapper">
-                            <img srcset="sources/_25_percentage/t3.jpg 335w,
-                                            sources/_50_percentage/t3.jpg 223w,
-                                            sources/_75_percentage/t3.jpg 111w"
-                                 class="content-themes-img" src="sources/_0_percentage/t3.jpg" alt="Vectors">
-                        </div>
-                        <h3>Natural world</h3>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="content-themes-block">
-                        <div class="img-wrapper">
-                            <img srcset="sources/_25_percentage/t4.jpg 335w,
-                                            sources/_50_percentage/t4.jpg 223w,
-                                            sources/_75_percentage/t4.jpg 111w"
-                                 class="content-themes-img" src="sources/_0_percentage/t4.jpg" alt="Vectors">
-                        </div>
-                        <h3>Animal friends</h3>
-                    </div>
-                </a>
-                <a href="#" id="fifth-block">
-                    <div class="content-themes-block">
-                        <div class="img-wrapper">
-                            <img srcset="sources/_25_percentage/t5.jpg 335w,
-                                            sources/_50_percentage/t5.jpg 223w,
-                                            sources/_75_percentage/t5.jpg 111w"
-                                 class="content-themes-img" src="sources/_0_percentage/t5.jpg" alt="Vectors">
-                        </div>
-                        <h3>Vector illustration: Illustrations we <span class="heart">❤</span></h3>
-                    </div>
-                </a>
-            </div>
+          <span class="content-span-1">Less searching. More finding.</span>
+          <span class="content-span-2"
+            >Discover royalty-free images, illustrations and videos that will
+            make you stand out.</span
+          >
+          <div class="content-wrapper">
+            <a href="#">
+              <div class="content-block">
+                <img
+                  srcset="
+                    sources/_25_percentage/r1.jpg 202w,
+                    sources/_50_percentage/r1.jpg 135w,
+                    sources/_75_percentage/r1.jpg  67w
+                  "
+                  alt="Photos"
+                  class="content-block-img"
+                  src="sources/_0_percentage/r1.jpg"
+                />
+                <h3>Photos</h3>
+              </div>
+            </a>
+            <a href="#">
+              <div class="content-block">
+                <img
+                  srcset="
+                    sources/_25_percentage/r2.jpg 202w,
+                    sources/_50_percentage/r2.jpg 135w,
+                    sources/_75_percentage/r2.jpg  67w
+                  "
+                  class="content-block-img"
+                  src="sources/_0_percentage/r2.jpg"
+                  alt="Illustrations"
+                />
+                <h3>Illustrations</h3>
+              </div>
+            </a>
+            <a href="#">
+              <div class="content-block">
+                <img
+                  srcset="
+                    sources/_25_percentage/r3.jpg 202w,
+                    sources/_50_percentage/r3.jpg 135w,
+                    sources/_75_percentage/r3.jpg  67w
+                  "
+                  class="content-block-img"
+                  src="sources/_0_percentage/r3.jpg"
+                  alt="Vectors"
+                />
+                <h3>Vectors</h3>
+              </div>
+            </a>
+            <a href="#">
+              <div class="content-block">
+                <img
+                  srcset="
+                    sources/_25_percentage/r4.jpg 202w,
+                    sources/_50_percentage/r4.jpg 135w,
+                    sources/_75_percentage/r4.jpg  67w
+                  "
+                  class="content-block-img"
+                  src="sources/_0_percentage/r4.jpg"
+                  alt="HD and 4K video"
+                />
+                <h3>HD and 4K video</h3>
+              </div>
+            </a>
+          </div>
+          <span class="content-span-2"
+            >Your idea deserves the right image. Your budget deserves a
+            break.</span
+          >
+          <div class="content-themes">
+            <a href="#">
+              <div class="content-themes-block">
+                <div class="img-wrapper">
+                  <img
+                    srcset="
+                      sources/_25_percentage/t1.jpg 335w,
+                      sources/_50_percentage/t1.jpg 223w,
+                      sources/_75_percentage/t1.jpg 111w
+                    "
+                    class="content-themes-img"
+                    src="sources/_0_percentage/t1.jpg"
+                    alt="Vectors"
+                  />
+                </div>
+                <h3>Best of lifestyle</h3>
+              </div>
+            </a>
+            <a href="#">
+              <div class="content-themes-block">
+                <div class="img-wrapper">
+                  <img
+                    srcset="
+                      sources/_25_percentage/t2.jpg 335w,
+                      sources/_50_percentage/t2.jpg 223w,
+                      sources/_75_percentage/t2.jpg 111w
+                    "
+                    class="content-themes-img"
+                    src="sources/_0_percentage/t2.jpg"
+                    alt="Vectors"
+                  />
+                </div>
+                <h3>Real business</h3>
+              </div>
+            </a>
+            <a href="#">
+              <div class="content-themes-block">
+                <div class="img-wrapper">
+                  <img
+                    srcset="
+                      sources/_25_percentage/t3.jpg 335w,
+                      sources/_50_percentage/t3.jpg 223w,
+                      sources/_75_percentage/t3.jpg 111w
+                    "
+                    class="content-themes-img"
+                    src="sources/_0_percentage/t3.jpg"
+                    alt="Vectors"
+                  />
+                </div>
+                <h3>Natural world</h3>
+              </div>
+            </a>
+            <a href="#">
+              <div class="content-themes-block">
+                <div class="img-wrapper">
+                  <img
+                    srcset="
+                      sources/_25_percentage/t4.jpg 335w,
+                      sources/_50_percentage/t4.jpg 223w,
+                      sources/_75_percentage/t4.jpg 111w
+                    "
+                    class="content-themes-img"
+                    src="sources/_0_percentage/t4.jpg"
+                    alt="Vectors"
+                  />
+                </div>
+                <h3>Animal friends</h3>
+              </div>
+            </a>
+            <a href="#" id="fifth-block">
+              <div class="content-themes-block">
+                <div class="img-wrapper">
+                  <img
+                    srcset="
+                      sources/_25_percentage/t5.jpg 335w,
+                      sources/_50_percentage/t5.jpg 223w,
+                      sources/_75_percentage/t5.jpg 111w
+                    "
+                    class="content-themes-img"
+                    src="sources/_0_percentage/t5.jpg"
+                    alt="Vectors"
+                  />
+                </div>
+                <h3>
+                  Vector illustration: Illustrations we
+                  <span class="heart">❤</span>
+                </h3>
+              </div>
+            </a>
+          </div>
         </section>
         <span class="content-span-2">Browse all categories</span>
         <nav class="main-nav">
-            <ul class="main-nav__column">
-                <li class="main-nav__element"><a href="#">Nature and landscapes </a></li>
-                <li class="main-nav__element"><a href="#">Jobs and careers </a></li>
-                <li class="main-nav__element"><a href="#">Pets and animals </a></li>
-                <li class="main-nav__element"><a href="#">Business and finance </a></li>
-                <li class="main-nav__element"><a href="#">Science and technology </a></li>
-            </ul>
-            <ul class="main-nav__column">
-                <li class="main-nav__element"><a href="#">Education </a></li>
-                <li class="main-nav__element"><a href="#">Family </a></li>
-                <li class="main-nav__element"><a href="#">Healthcare and medicine </a></li>
-                <li class="main-nav__element"><a href="#">Food and drink </a></li>
-                <li class="main-nav__element"><a href="#">Seasonal and holiday </a></li>
-            </ul>
-            <ul class="main-nav__column">
-                <li class="main-nav__element"><a href="#">Special occasions </a></li>
-                <li class="main-nav__element"><a href="#">Fitness and wellness </a></li>
-                <li class="main-nav__element"><a href="#">Fashion and beauty </a></li>
-                <li class="main-nav__element"><a href="#">Sports and recreation </a></li>
-                <li class="main-nav__element"><a href="#">Moods and feelings </a></li>
-            </ul>
-            <ul class="main-nav__column">
-                <li class="main-nav__element"><a href="#">Travel destinations </a></li>
-                <li class="main-nav__element"><a href="#">Architecture </a></li>
-                <li class="main-nav__element"><a href="#">Transportation videos </a></li>
-                <li class="main-nav__element"><a href="#">Adventure videos </a></li>
-                <li class="main-nav__element"><a href="#">4k videos </a></li>
-            </ul>
+          <ul class="main-nav__column">
+            <li class="main-nav__element">
+              <a href="#">Nature and landscapes </a>
+            </li>
+            <li class="main-nav__element"><a href="#">Jobs and careers </a></li>
+            <li class="main-nav__element"><a href="#">Pets and animals </a></li>
+            <li class="main-nav__element">
+              <a href="#">Business and finance </a>
+            </li>
+            <li class="main-nav__element">
+              <a href="#">Science and technology </a>
+            </li>
+          </ul>
+          <ul class="main-nav__column">
+            <li class="main-nav__element"><a href="#">Education </a></li>
+            <li class="main-nav__element"><a href="#">Family </a></li>
+            <li class="main-nav__element">
+              <a href="#">Healthcare and medicine </a>
+            </li>
+            <li class="main-nav__element"><a href="#">Food and drink </a></li>
+            <li class="main-nav__element">
+              <a href="#">Seasonal and holiday </a>
+            </li>
+          </ul>
+          <ul class="main-nav__column">
+            <li class="main-nav__element">
+              <a href="#">Special occasions </a>
+            </li>
+            <li class="main-nav__element">
+              <a href="#">Fitness and wellness </a>
+            </li>
+            <li class="main-nav__element">
+              <a href="#">Fashion and beauty </a>
+            </li>
+            <li class="main-nav__element">
+              <a href="#">Sports and recreation </a>
+            </li>
+            <li class="main-nav__element">
+              <a href="#">Moods and feelings </a>
+            </li>
+          </ul>
+          <ul class="main-nav__column">
+            <li class="main-nav__element">
+              <a href="#">Travel destinations </a>
+            </li>
+            <li class="main-nav__element"><a href="#">Architecture </a></li>
+            <li class="main-nav__element">
+              <a href="#">Transportation videos </a>
+            </li>
+            <li class="main-nav__element"><a href="#">Adventure videos </a></li>
+            <li class="main-nav__element"><a href="#">4k videos </a></li>
+          </ul>
         </nav>
         <section class="plugins-editors">
-            <a href="#">
-                <article class="plugin plugin_first-block">
-                    <h3 class="plugin__h3">THE LEAN IN COLLECTION</h3>
-                    <h4 class="plugin__h4 plugin__h4_first">YOU CAN'T BE WHAT</h4>
-                    <h4 class="plugin__h4 plugin__h4_second">YOU CAN'T SEE</h4>
-                    <h5 class="plugin__h5">#LEANIN</h5>
-                    <div class="img-wrapper img-wrapper_girl">
-                        <img srcset="sources/_25_percentage/running_girl.jpg 276w,
-                                            sources/_50_percentage/running_girl.jpg 184w,
-                                            sources/_75_percentage/running_girl.jpg 92w"
-                             alt="Photos" class="plugins-photos plugins-photos_brightness_70 plugins-photos_girl"
-                             src="sources/_0_percentage/running_girl.jpg">
-                    </div>
-                </article>
-            </a>
-            <a href="#">
-                <article class="plugin plugin_block">
-                    <div class="img-wrapper">
-                        <img srcset="sources/_25_percentage/computer_1.jpg 276w,
-                                            sources/_50_percentage/computer_1.jpg 184w,
-                                            sources/_75_percentage/computer_1.jpg 92w"
-                             alt="Photos" class="plugins-photos" src="sources/_0_percentage/computer_1.jpg">
-                    </div>
-                    <h4>Adobe plugin</h4>
-                    <h6>Design faster with our new plugin for Adobe Photoshop®, Illustrator® and InDesign® CC
-                        2015.</h6>
-                </article>
-            </a>
+          <a href="#">
+            <article class="plugin plugin_first-block">
+              <h3 class="plugin__h3">THE LEAN IN COLLECTION</h3>
+              <h4 class="plugin__h4 plugin__h4_first">YOU CAN'T BE WHAT</h4>
+              <h4 class="plugin__h4 plugin__h4_second">YOU CAN'T SEE</h4>
+              <h5 class="plugin__h5">#LEANIN</h5>
+              <div class="img-wrapper img-wrapper_girl">
+                <img
+                  srcset="
+                    sources/_25_percentage/running_girl.jpg 276w,
+                    sources/_50_percentage/running_girl.jpg 184w,
+                    sources/_75_percentage/running_girl.jpg  92w
+                  "
+                  alt="Photos"
+                  class="plugins-photos plugins-photos_brightness_70 plugins-photos_girl"
+                  src="sources/_0_percentage/running_girl.jpg"
+                />
+              </div>
+            </article>
+          </a>
+          <a href="#">
+            <article class="plugin plugin_block">
+              <div class="img-wrapper">
+                <img
+                  srcset="
+                    sources/_25_percentage/computer_1.jpg 276w,
+                    sources/_50_percentage/computer_1.jpg 184w,
+                    sources/_75_percentage/computer_1.jpg  92w
+                  "
+                  alt="Photos"
+                  class="plugins-photos"
+                  src="sources/_0_percentage/computer_1.jpg"
+                />
+              </div>
+              <h4>Adobe plugin</h4>
+              <h6>
+                Design faster with our new plugin for Adobe Photoshop®,
+                Illustrator® and InDesign® CC 2015.
+              </h6>
+            </article>
+          </a>
 
-            <a href="#">
-                <article class="plugin plugin_block">
-                    <div class="img-wrapper">
-                        <img srcset="sources/_25_percentage/computer_2.jpg 276w,
-                                            sources/_50_percentage/computer_2.jpg 184w,
-                                            sources/_75_percentage/computer_2.jpg 92w"
-                             alt="Photos" class="plugins-photos" src="sources/_0_percentage/computer_2.jpg">
-                    </div>
-                    <h4>Design like a pro with iStock Editor</h4>
-                    <h6>Edit your image by cropping and resizing, adding text, uploading logos and applying
-                        filters.</h6>
-                </article>
-            </a>
+          <a href="#">
+            <article class="plugin plugin_block">
+              <div class="img-wrapper">
+                <img
+                  srcset="
+                    sources/_25_percentage/computer_2.jpg 276w,
+                    sources/_50_percentage/computer_2.jpg 184w,
+                    sources/_75_percentage/computer_2.jpg  92w
+                  "
+                  alt="Photos"
+                  class="plugins-photos"
+                  src="sources/_0_percentage/computer_2.jpg"
+                />
+              </div>
+              <h4>Design like a pro with iStock Editor</h4>
+              <h6>
+                Edit your image by cropping and resizing, adding text, uploading
+                logos and applying filters.
+              </h6>
+            </article>
+          </a>
         </section>
         <section class="photos-illustrations-video">
-            <span class="content-span-2"><a href="#">Join iStock</a> for free stock files every week</span>
-            <div class="content-wrapper">
-                <a href="#">
-                    <div class="content-block">
-                        <img srcset="sources/_25_percentage/girl_with_phone.jpg 536w,
-                                            sources/_50_percentage/girl_with_phone.jpg 356w,
-                                            sources/_75_percentage/girl_with_phone.jpg 179w"
-                             alt="Photos" class="content-block-img content-block-img_width_22"
-                             src="sources/_0_percentage/girl_with_phone.jpg">
-                        <h3>Free photo</h3>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="content-block">
-                        <img srcset="sources/_25_percentage/boots_umbrellas.jpg 536w,
-                                            sources/_50_percentage/boots_umbrellas.jpg 356w,
-                                            sources/_75_percentage/boots_umbrellas.jpg 179w"
-                             class="content-block-img content-block-img_width_22"
-                             src="sources/_0_percentage/boots_umbrellas.jpg"
-                             alt="Illustrations">
-                        <h3>Free illustration</h3>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="content-block">
-                        <img srcset="sources/_25_percentage/grandmas.jpg 536w,
-                                            sources/_50_percentage/grandmas.jpg 356w,
-                                            sources/_75_percentage/grandmas.jpg 179w"
-                             class="content-block-img content-block-img_width_22"
-                             src="sources/_0_percentage/grandmas.jpg"
-                             alt="Vectors">
-                        <h3>Free video clip</h3>
-                    </div>
-                </a>
-            </div>
+          <span class="content-span-2"
+            ><a href="#">Join iStock</a> for free stock files every week</span
+          >
+          <div class="content-wrapper">
+            <a href="#">
+              <div class="content-block">
+                <img
+                  srcset="
+                    sources/_25_percentage/girl_with_phone.jpg 536w,
+                    sources/_50_percentage/girl_with_phone.jpg 356w,
+                    sources/_75_percentage/girl_with_phone.jpg 179w
+                  "
+                  alt="Photos"
+                  class="content-block-img content-block-img_width_22"
+                  src="sources/_0_percentage/girl_with_phone.jpg"
+                />
+                <h3>Free photo</h3>
+              </div>
+            </a>
+            <a href="#">
+              <div class="content-block">
+                <img
+                  srcset="
+                    sources/_25_percentage/boots_umbrellas.jpg 536w,
+                    sources/_50_percentage/boots_umbrellas.jpg 356w,
+                    sources/_75_percentage/boots_umbrellas.jpg 179w
+                  "
+                  class="content-block-img content-block-img_width_22"
+                  src="sources/_0_percentage/boots_umbrellas.jpg"
+                  alt="Illustrations"
+                />
+                <h3>Free illustration</h3>
+              </div>
+            </a>
+            <a href="#">
+              <div class="content-block">
+                <img
+                  srcset="
+                    sources/_25_percentage/grandmas.jpg 536w,
+                    sources/_50_percentage/grandmas.jpg 356w,
+                    sources/_75_percentage/grandmas.jpg 179w
+                  "
+                  class="content-block-img content-block-img_width_22"
+                  src="sources/_0_percentage/grandmas.jpg"
+                  alt="Vectors"
+                />
+                <h3>Free video clip</h3>
+              </div>
+            </a>
+          </div>
         </section>
+      </div>
+    </main>
+    <div class="credits-subscribe">
+      <span class="credits-subscribe__text">
+        Incredible stock. Flexible pricing.
+        <a>Buy credits or subscribe today</a>.
+      </span>
     </div>
-</main>
-<div class="credits-subscribe">
-    <span class="credits-subscribe__text">
-        Incredible stock. Flexible pricing. <a>Buy credits or subscribe today</a>.
-    </span>
-</div>
-<footer class="footer">
-    <div class="footer__local">
-        <img srcset="sources/_25_percentage/istock_logo.png 750w,
-                     sources/_50_percentage/istock_logo.png 500w,
-                     sources/_75_percentage/istock_logo.png 250w"
-             src="sources/_0_percentage/istock_logo.png" alt="logo"
-        class="image-link__logo">
-        <button class="change-language"></button>
-        <button class="change-country"></button>
-    </div>
-    <div class="footer__learn-more">
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer__local">
+          <img
+            alt="iStock logo"
+            class="footer-logo"
+            src="sources/_0_percentage/footer-logo.png"
+          />
+          <button class="button-footer">
+            English
+            <img
+              class="button-footer__arrow"
+              src="sources/_0_percentage/next_arrow_default.svg"
+              alt="arrow picture"
+            />
+          </button>
+          <button class="button-footer">
+            <img
+              class="usa-pic"
+              src="sources/_0_percentage/usa.png"
+              alt="usa picture"
+            />
+            <span class="usa-text">United States</span>
+          </button>
+        </div>
+        <div class="footer__learn-more">
+          <h3 class="footer-h3">Learn more</h3>
+          <ul class="footer-ul">
+            <li>Plans and pricing</li>
+            <li>iStock promo codes</li>
+            <li>Tips and tricks</li>
+            <li>Partners</li>
+            <li>Plugins and apps</li>
+            <li>License information</li>
+            <li>Legal / Privacy</li>
+          </ul>
+        </div>
+        <div class="footer__company">
+          <h3 class="footer-h3">Company</h3>
+          <ul class="footer-ul">
+            <li>About us</li>
+            <li>Press</li>
+            <li>Careers</li>
+            <li>Affiliates</li>
+            <li>Sell stock</li>
+          </ul>
+        </div>
+        <div class="footer__support">
+          <h3 class="footer-h3">Support</h3>
+          <ul class="footer-ul">
+            <li>1 866 478 6251</li>
+            <li>Contact us</li>
+            <li>FAQ</li>
+            <li>Site map</li>
+          </ul>
+        </div>
+        <div class="footer__widgets">
+          <div class="social-media-section">
+            <button class="social-media social-media_inst"></button>
+            <button class="social-media social-media_twit"></button>
+            <button class="social-media social-media_face"></button>
+          </div>
+          <div class="markets-section">
+            <button class="market market_apple"></button>
+            <button class="market market_vedro"></button>
+          </div>
+        </div>
+      </div>
 
-    </div>
-    <div class="footer__company"></div>
-    <div class="footer__support"></div>
-    <div class="footer__widgets"></div>
-</footer>
-</body>
+      <hr />
+
+      <span class="citation">
+        © 2019 iStockphoto LP. The iStock design is a trademark of iStockphoto
+        LP.
+      </span>
+    </footer>
+  </body>
 </html>
