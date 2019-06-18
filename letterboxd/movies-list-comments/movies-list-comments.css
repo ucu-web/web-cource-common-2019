@@ -1,0 +1,10 @@
+.movies-list-comments__bell-icon{
+    background-position: -1480px -260px;
+    left: auto;
+    right: 0;
+    top: -1px;
+}
+.movies-list-comments__user-info-and-comment, .movies-list-comments__header{
+    display: flex;
+    align-items: start;
+}

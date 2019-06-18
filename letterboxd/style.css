@@ -1,0 +1,171 @@
+.body{
+    padding-right:230px;
+    padding-left:230px;
+    width: 950px;
+}
+
+.main-body{
+    display:flex;
+    padding-top: 265px;
+    margin: 0 auto;
+}
+
+.main-body section, aside{
+    margin-right: 10px;
+}
+
+.avatar-icon {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.icon-from-file{
+    display: block;
+    background:url("icons/all-icons-on-page.svg")no-repeat;
+    background-size: 800px 1000px;
+}
+
+.footer_navigation__facebook-link{
+
+}
+
+.green-button{
+    color:green;
+}
+
+
+.icon32{
+    width: 16px;
+    height: 16px;
+}
+
+@font-face{
+    font-family:Graphik-Light-Web;
+    src:url(//s.ltrbxd.com/fonts/Graphik-Light-Web.eot);
+    src:url(//s.ltrbxd.com/fonts/Graphik-Light-Web.eot#iefix) format("embedded-opentype"),
+    url(//s.ltrbxd.com/fonts/Graphik-Light-Web.woff) format("woff");
+    font-weight:400;
+    font-style:normal
+}
+
+@font-face{
+    font-family:Graphik-Regular-Web;
+    src:url(//s.ltrbxd.com/fonts/Graphik-Regular-Web.eot);
+    src:url(//s.ltrbxd.com/fonts/Graphik-Regular-Web.eot#iefix) format("embedded-opentype"),
+    url(//s.ltrbxd.com/fonts/Graphik-Regular-Web.woff) format("woff");
+    font-weight:400;
+    font-style:normal
+}
+
+@font-face{
+    font-family:Graphik-Regular-Web;
+    src:url(//s.ltrbxd.com/fonts/Graphik-RegularItalic-Web.eot);
+    src:url(//s.ltrbxd.com/fonts/Graphik-RegularItalic-Web.eot#iefix) format("embedded-opentype"),
+    url(//s.ltrbxd.com/fonts/Graphik-RegularItalic-Web.woff) format("woff");
+    font-weight:400;
+    font-style:italic}
+
+
+@font-face{
+    font-family:Graphik-Semibold-Web;
+    src:url(//s.ltrbxd.com/fonts/Graphik-Semibold-Web.eot);
+    src:url(//s.ltrbxd.com/fonts/Graphik-Semibold-Web.eot#iefix) format("embedded-opentype"),
+    url(//s.ltrbxd.com/fonts/Graphik-Semibold-Web.woff) format("woff");
+    font-weight:400;
+    font-style:normal
+}
+@font-face{
+    font-family:Graphik-Semibold-Web;
+    src:url(//s.ltrbxd.com/fonts/Graphik-SemiboldItalic-Web.eot);
+    src:url(//s.ltrbxd.com/fonts/Graphik-SemiboldItalic-Web.eot#iefix) format("embedded-opentype"),
+    url(//s.ltrbxd.com/fonts/Graphik-SemiboldItalic-Web.woff) format("woff");
+    font-weight:400;
+    font-style:italic}
+
+@font-face{font-family:TiemposHeadlineWeb-Bold;src:url(//s.ltrbxd.com/fonts/TiemposHeadlineWeb-Bold.eot);src:url(//s.ltrbxd.com/fonts/TiemposHeadlineWeb-Bold.eot#iefix) format("embedded-opentype"),
+url(//s.ltrbxd.com/fonts/TiemposHeadlineWeb-Bold.woff2) format("woff2"),url(//s.ltrbxd.com/fonts/TiemposHeadlineWeb-Bold.woff) format("woff");font-weight:400;font-style:normal}
+@font-face{font-family:TiemposHeadlineWeb-Bold;src:url(//s.ltrbxd.com/fonts/TiemposHeadlineWeb-BoldItalic.eot);src:url(//s.ltrbxd.com/fonts/TiemposHeadlineWeb-BoldItalic.eot#iefix)
+format("embedded-opentype"),url(//s.ltrbxd.com/fonts/TiemposHeadlineWeb-BoldItalic.woff2) format("woff2"),url(//s.ltrbxd.com/fonts/TiemposHeadlineWeb-BoldItalic.woff) format("woff");
+    font-weight:400;font-style:italic}
+@font-face{font-family:TiemposTextWeb-Regular;src:url(//s.ltrbxd.com/fonts/TiemposTextWeb-Regular.eot);src:url(//s.ltrbxd.com/fonts/TiemposTextWeb-Regular.eot#iefix) format("embedded-opentype")
+,url(//s.ltrbxd.com/fonts/TiemposTextWeb-Regular.woff2) format("woff2"),url(//s.ltrbxd.com/fonts/TiemposTextWeb-Regular.woff) format("woff");font-weight:400;font-style:normal}
+@font-face{font-family:TiemposTextWeb-Regular;src:url(//s.ltrbxd.com/fonts/TiemposTextWeb-RegularItalic.eot);src:url(//s.ltrbxd.com/fonts/TiemposTextWeb-RegularItalic.eot#iefix)
+format("embedded-opentype"),url(//s.ltrbxd.com/fonts/TiemposTextWeb-RegularItalic.woff2) format("woff2"),url(//s.ltrbxd.com/fonts/TiemposTextWeb-RegularItalic.woff) format("woff");
+    font-weight:400;font-style:italic}
+@font-face{font-family:TiemposTextWeb-Semibold;src:url(//s.ltrbxd.com/fonts/TiemposTextWeb-Semibold.eot);src:url(//s.ltrbxd.com/fonts/TiemposTextWeb-Semibold.eot#iefix)
+format("embedded-opentype"),url(//s.ltrbxd.com/fonts/TiemposTextWeb-Semibold.woff2) format("woff2"),url(//s.ltrbxd.com/fonts/TiemposTextWeb-Semibold.woff) format("woff");
+    font-weight:400;font-style:normal}
+@font-face{font-family:TiemposTextWeb-Semibold;src:url(//s.ltrbxd.com/fonts/TiemposTextWeb-SemiboldItalic.eot);src:url(//s.ltrbxd.com/fonts/TiemposTextWeb-SemiboldItalic.eot#iefix)
+format("embedded-opentype"),url(//s.ltrbxd.com/fonts/TiemposTextWeb-SemiboldItalic.woff2) format("woff2"),url(//s.ltrbxd.com/fonts/TiemposTextWeb-SemiboldItalic.woff)
+format("woff");font-weight:400;font-style:italic}
+
+
+body {
+    font-family: Graphik-Regular-Web;
+    background-color: black;
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: initial;
+    background-position: center -23px;
+    background-size: 1170px 405px;
+    /*color: ghostwhite;*/
+}
+
+h1{
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: white;
+}
+
+p,a,h2 {
+    color: aliceblue;
+    font-size: 12px;
+    /*letter-spacing: 2px;*/
+}
+:not(.footer-navigation__info-links) {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    /*margin: 0;*/
+    /*padding: 0;*/
+    overflow: hidden;
+}
+
+li p, button {
+    /*display: inline-block;*/
+    text-decoration: none;
+    /*padding: 14px 16px;*/
+}
+
+li button:hover, .dropdown-menu:hover button {
+
+}
+
+li.dropdown-menu {
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+
+}
+
+.dropdown-content li {
+    display: block ;
+}
+
+.dropdown-menu:hover .dropdown-content{
+    display: block;
+}
+
+img {
+    border-radius: 8px;
+    border: 1px solid white;
+}
+.block-report-button{
+    background-position: -590px -50px;
+}

@@ -1,0 +1,11 @@
+
+.footer-navigation{
+    display: flex;
+}
+
+.footer-navigation a{
+    display: block;
+    padding: 7px;
+    font-family: Graphik-Semibold-Web;
+    font-size: 16px;
+}

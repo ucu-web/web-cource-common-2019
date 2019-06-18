@@ -1,0 +1,139 @@
+.right-aside-menu{
+    float:right;
+    width: 230px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    display: block;
+}
+
+.right-aside-menu__likes, .pro-button, .share-button{
+}
+
+.right-aside-menu__likes{
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    color: #bcd;
+    background-color: #456;
+    margin-bottom: 1px;
+    padding: .61rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-aside-menu__likes button {
+    display: flex;
+    border: none;
+    background-color: inherit;
+    color: inherit;
+}
+
+.right-aside-menu__liked-icon{
+    background-position: -630px -90px;
+
+}
+
+.right-aside-menu__likes span, .right-aside-menu__likes a{
+    display: block;
+    margin-left: 5px;
+    color: inherit;
+}
+
+.right-aside-menu__like-icon {
+    background-position: -630px -70px;
+}
+
+.right-aside-menu__clone-icon {
+    background-position: -490px -70px;
+}
+
+.pro-span{
+    background-color: #ee7000;
+    border-radius: 2px;
+    padding: 2px 4px;
+    font-size: 80%;
+}
+
+.pro-button, .share-button{
+    background-color: #456;
+    text-align: center;
+    margin-bottom: .5px;
+    padding: 0 0;
+    /*box-sizing: border-box;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pro-button p, .pro-button i, .pro-button a{
+    display: block;
+    padding-right: 4px;
+    color: #bcd;
+}
+
+.share-button{
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+#right-aside-menu__share-link{
+    font-size: 112%;
+    background-color: #2c3440;
+    color: #89a;
+    padding: 3px 4px 3px 2px;
+}
+
+#right-aside-menu__share-link_onclick{
+
+}
+
+.right-aside-menu__hidden{
+    display: none;
+    font-size: 10px;
+    padding: .09rem 0;
+}
+
+.share-button-text{
+    color:#bcd;
+}
+
+.share-button:hover .right-aside-menu__hidden{
+    display: flex;
+}
+
+.share-button:hover .share-button-text{
+    display: none;
+}
+
+.twitter-icon{
+    width: 24px;
+    height: 16px;
+    background-position: -460px -150px;
+}
+.facebook-icon{
+    background-position: -490px -150px;
+    height: 16px;
+    width: 16px;
+}
+
+.right-aside-menu__progress{
+    font-family: Graphik-Light-Web,sans-serif;
+    border: 1px solid #303840;;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.right-side-menu__watched{
+    padding-left: 10px;
+    /*color: #9ab;*/
+    font-family: Graphik-Regular-Web,sans-serif;
+}
+
+.right-aside-menu__percentage{
+    /*color: #9ab;*/
+    font-size: 36px;
+}

@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main-header/main-header.css">
+    <link rel="stylesheet" href="right-aside-menu/right-aside-menu.css">
+    <link rel="stylesheet" href="movies-list-info/movies-list-info.css">
+    <link rel="stylesheet" href="movies-list-posters/movies-list-posters.css">
+    <link rel="stylesheet" href="movies-list-comments/movies-list-comments.css">
+    <link rel="stylesheet" href="main-footer/main-footer.css">
+    <link rel="shortcut icon" type="image/x-icon" href="icons/favicon.ico" />
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="movies-list-info/movies-list-info.js"></script>
+    <script src="right-aside-menu/right-aside-menu.js"></script>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Letterboxd • Social film discovery.</title>
+</head>
+<body class="body">
+    <header class="main-header">
+        <h1 class="main-header__logo-holder">
+            <a href="https://letterboxd.com" class="main-header__logo icon-from-file"></a>
+        </h1>
+        <nav class="main-header__main-menu">
+                <span class="main-header__main-menu-links">
+                    <div class="main-header__dropdown-menu">
+                        <nav class="main-header__drop-button">
+                            <span class="main-header__drop-button">
+                            <!--<ul class="main_header__profile-menu_dropdown">-->
+                                <span class="main-header__profile-menu_dropdown-items"><img src="images/background.jpg" alt="hungrynagini" class="avatar-icon"></span>
+                                <span class="main-header__profile-menu_dropdown-items"><b>HUNGRYNAGINI</b></span>
+                                <span class="main-header__profile-menu_dropdown-items"><i class="main-header__arrow-down-icon icon-from-file"></i></span>
+                            </span>
+                            <!--</ul>-->
+                        </nav>
+                        <ul class="main-header__dropdown-content">
+                            <li><a href="http://letterboxd.com/" >Home</a></li>
+                            <li><a href="http://letterboxd.com/hungrynagini" >Profile</a></li>
+                            <li><a href="http://letterboxd.com/films">Films</a></li>
+                            <li><a href="http://letterboxd.com/films/diary" >Diary</a></li>
+                            <li><a href="http://letterboxd.com/films/reviews">Reviews</a></li>
+                            <li><a href="http://letterboxd.com/watchlist" >Watchlist</a></li>
+                            <li><a href="http://letterboxd.com/lists" >Lists</a></li>
+                            <li><a href="http://letterboxd.com/likes" >Likes</a></li>
+                            <li><a href="http://letterboxd.com/tags" >Tags</a></li>
+                            <li><a href="http://letterboxd.com/following" >Network</a></li>
+                            <li><a href="http://letterboxd.com/settings" >Settings</a></li>
+                            <li><a href="http://letterboxd.com/#" >Sign out</a></li>
+                        </ul>
+                    </div>
+                </span>
+                <span class="main-header__main-menu-links"><a href="https://letteboxd.com/activity"><b>ACTIVITY</b></a></span>
+                <span class="main-header__main-menu-links"><a href="https://letteboxd.com/films"><b>FILMS</b></a></span>
+                <span class="main-header__main-menu-links"><a href="https://letteboxd.com/lists"><b>LISTS</b></a></span>
+                <span class="main-header__main-menu-links"><a href="https://letteboxd.com/people"><b>PEOPLE</b></a></span>
+                <span class="main-header__main-menu-links">
+                    <form class="main-header__search-form" action="https://search" method="get">
+                        <input class="main-header__search-icon icon-from-file" type="submit" value=""
+                               name="Search" id="frm_submit"/>
+                    </form>
+                    <!--<button>-->
+                    <!--</button>-->
+                </span>
+               <span class="main-header__log-button"><button><b>
+                   +LOG</b>
+               </button>
+                   <button>
+                    <i class="main-header__arrow-down-icon icon-from-file"></i>
+                </button></span>
+                <!--<ul>-->
+                    <!--<li><a href="http://letterboxd.com/list/new" class="main-header__dropdown-link">Start a new list</a></li>-->
+                    <!--<li><a href="http://letterboxd.com/user/find-friends" class="main-header__dropdown-link">Find your friends</a></li>-->
+                <!--</ul>-->
+        </nav>
+        <br>
+    </header>
+    <div class="main-body">
+        <section class="movies-list-info">
+            <header class="list-navigation">
+                <div class="list-navigation__author">
+                <a href="https://letterboxd.com"><img class="avatar-icon" src="images/background.jpg" alt="Dave Vis"></a>
+                <p > List by
+                    <a class="list_navigation__author-link" href="http://">
+                        <b>Dave Vis</b></a><a href="http://"><span class="list-navigation__patron">PATRON</span></a>
+                </p>
+                </div>
+                <section class="list-navigation__menu">
+                    <p id="timestamp_on-hover">Updated 3 days ago</p>
+                    <nav class="list-navigation__categories">
+                        <!--<li>-->
+                            <div class="list-navigation__dropdown-menu">
+                                <span class="list-navigation__button">DECADE </span>
+                                <i class="list-navigation__arrow-down icon-from-file"></i>
+                                <span class="list-navigation__dropdown-content">
+                                    <p>All</p>
+                                    <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/decade/2020s">2020s</a>
+                                    <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/decade/2010s">2010s</a>
+                                    <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/decade/2000s">2000s</a>
+                                    <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/decade/1990s">1990s</a>
+                                    <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/decade/1980s">1980s</a>
+                                    <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/decade/">1970s</a>
+                                    <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/decade/">1960s</a>
+                                    <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/decade/">1950s</a>
+                                    <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/decade/">1940s</a>
+                                    <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/decade/">1930s</a>
+                                    <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/decade/">1920s</a>
+                                    <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/decade/">1910s</a>
+                                    <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/decade/">1900s</a>
+                                    <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/decade/">1890s</a>
+                                    <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/decade/">1880s</a>
+                                    <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/decade/">1870s</a>
+                                </span>
+                            </div>
+                        <!--</li>-->
+                        <div class="list-navigation__dropdown-menu">
+                            <span class="list-navigation__button">GENRE</span>
+                            <i class="list-navigation__arrow-down icon-from-file"></i>
+                            <span class="list-navigation__dropdown-content">
+                                <p>All</p>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/genre/">Action</a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/genre/">Adventure</a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/genre/">Animation</a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/genre/">Comedy</a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/genre/">Crime</a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/genre/">Documentary</a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/genre/">Drama</a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/genre/">Family</a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/genre/">Fantasy</a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/genre/">History</a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/genre/">Horror</a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/genre/">Music</a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/genre/">Mystery</a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/genre/">Romance</a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/genre/">Science Fiction</a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/genre/">Thriller</a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/genre/">TV Movie</a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/genre/">War</a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/genre/">Western</a>
+                            </span>
+                        </div>
+                        <div class="list-navigation__dropdown-menu">
+                            <span class="list-navigation__button">SERVICE</span>
+                            <i class="list-navigation__arrow-down icon-from-file"></i>
+                            <span class="list-navigation__dropdown-content">
+                                <p>All Films </p>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/on/">Amazon</a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/on/">Prime Video</a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/on/">ITunes</a>
+                                More Services<a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/pro">PRO</a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/pro">Prime Video (subscription)</a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/pro">Best Buy</a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/pro">CinemaNow</a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/pro">Crackle</a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/pro">DirecTV</a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/pro">DirecTV Cinema</a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/pro">EPIX</a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/pro">Fandango</a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/pro">FandangoNOW</a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/pro">Fandor</a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/pro">Filmstruck</a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/pro">Filmstruck+Criterion</a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/pro"></a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/pro"></a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/pro"></a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/pro"></a>
+                            </span>
+                        </div>
+                        <div class="list-navigation__dropdown-menu">
+                            <span class="non-clickable">Sort by </span>
+                            <span class="list-navigation__button"> LIST ORDER</span>
+                            <div class="list-navigation__dropdown-content">
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/by/">List Order</a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/by/">When Added</a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/by/">Film Name</a>
+                                <p>Release Date</p>
+                                    <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/by/">Newest First</a>
+                                    <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/by/">Oldest First</a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/by/"></a>
+                                <p>Your Rating     </p>
+                                    <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/by/">Highest First</a>
+                                    <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/by/">Lowest First</a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/by/"></a>
+                                <p>Letterboxd's Rating      </p>
+                                    <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/by/">Highest First</a>
+                                    <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/by/">Lowest First</a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/by/"></a>
+                                <p>Average Rating   </p>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/by/">Highest First</a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/by/">Lowest First</a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/by/"></a>
+                                <p>Film Length </p>
+                                 <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/by/">Shortest First</a>
+                                 <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/by/">Longest First</a>
+                                <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/by/">Film Popularity</a>
+                            </div>
+                        </div>
+                        <section class="list-navigation__dropdown-menu">
+                            <span class="list-navigation__button"> <i class="closed-eye-icon icon-from-file grid-list-eye"></i>
+                                <i class="list-navigation__arrow-down icon-from-file"></i></span>
+                            <span class="list-navigation__dropdown-content">
+                                <a  href="#" >Show all</a>
+                                <a  href="#" >Fade watched films</a>
+                                Filters
+                                <a href="https://letterboxd.com/">Show watched films</a>
+                                <a href="https://letterboxd.com/">Hide watched films</a>
+                                <a href="https://letterboxd.com/">Hide short films</a>
+                                <a href="https://letterboxd.com/">Hide unreleased films</a>
+                                <a href="https://letterboxd.com/">In your watchlist</a>
+                                <a href="https://letterboxd.com/">Not in your watchlist</a>
+                                <a href="https://letterboxd.com/">Remove filters</a>
+                            </span>
+                        </section>
+                            <a href="https://letterboxd.com" class="list-navigation__button icon-from-file active-grid grid-list-eye">
+                                <span class="tooltip">Grid view</span>
+                            </a>
+                            <a href="https://letterboxd.com" class="list-navigation__button icon-from-file non-active-list grid-list-eye">
+                                <span class="tooltip">List view</span>
+                            </a>
+                    </nav>
+                </section>
+            </header>
+            <h2 class="list-name"><b>Official Top 250 Narrative Feature Films</b></h2>
+            <p class="info-text">Letterboxd's Top 250 movies, based on the average weighted rating of all Letterboxd users. I removed all
+                stand-up specials, concert films, documentaries, shorts, 'collection listings' and other 'rarities', so only
+                feature length narrative movies are listed here. </p>
+            <p class="info-text">
+                To avoid any discussions about documentary or not, Letterboxd genre classifications are used to remove them.
+                <br>
+                My friend <a class="info-text" href="">Jack Moulton</a> made a list of <a class="info-text" href="">
+                Letterboxd Top 100 documentaries</a> though,
+                go check it out! </p>
+            <p class="info-text">
+                A few statistics...
+            </p>
+            <p class="info-text">
+                The oldest movie on the list is Charlie Chaplin's The Kid, released in 1921. The most popular decades in the
+                list are the 1950's and 1960's, both with 39 entries. A complete overview:<br>
+                1920's - 7 entries <br>
+                1930's - 5 entries <br>
+                1940's - 17 entries<br>
+                1950's - 39 entries<br>
+                1960's - 39 entries<br>
+                1970's - 31 entries<br>
+                1980's - 27 entries<br>
+                1990's - 32 entries<br>
+                2000's - 25 entries<br>
+                2010's - 28 entries<br>
+            </p>
+            <p class="info-text">
+                Akira Kurosawa and Ingmar Bergman seem to be Letterboxd's most popular directors, both having 8 entries in the
+                list, of which 4 in top 100.                                                                           <br>
+                All popular directors:                                                                                 <br>
+                8 entries - Ingmar Bergman, Akira Kurosawa                                                             <br>
+                6 entries - Andrei Tarkovsky, Billy Wilder, Stanley Kubrick                                            <br>
+                4 entries - Martin Scorsese, Alfred Hitchcock, Francis Ford Coppola, Masaki Kobayashi, Charlie Chaplin,
+                Satyajit Ray, Steven Spielberg, Yasujiro Ozu                                                           <br>
+            </p>
+            <p class="info-text">
+                Fun fact:<br>
+                Highest ranked movies in IMDb's top 250 that are absent in the Letterboxd list: Forrest Gump (12), The Matrix
+                (19), The Usual Suspects (29), The Green Mile (31) and Interstellar (32).
+            </p>
+            <p class="info-text">
+                Latest update:<br>
+                May 28, 2019
+            </p>
+            <button class="block-report-button icon-from-file icon32"></button>
+                        <button>Block this member</button>
+                        <button>Report this list</button>
+        <section class="movies-list-posters">
+                <a href="http://"><img src="images/incredibles.jpg" alt="poster of The Favorite: two women standing, one
+                sitting surrounded by three rabbits" width="207" height="292"></a>
+                    <p class="movies-list-posters__name-year_on-hover">The incredibles(2001)</p>
+                    <button class="seen"></button>
+                    <button class="liked"></button>
+                    <button class="three-dots">...</button>
+                    <nav>
+                            <button class="movies-list-posters__star-rating"></button>
+                            <button class="movies-list-posters__log">Log or review film</button>
+                            <button class="movies-list-posters__add-to-watch">Add to watchlist</button>
+                            <button class="movies-list-posters__add-to-list">Add to a list</button>
+                        <a href="http://">Show in lists</a>
+                       <a href="http://">Reviews and info</a>
+                        <a href="http://amazon"><i class='icon-from-file movies-list-posters__amazon-icon'></i></a>
+                            <a href="http://apple"><i class='icon-from-file movies-list-posters__apple-icon'></i></a>
+                    </nav>
+            <nav class="movies-list-posters__bottom-nav">
+                <ul>
+                    <li><a href=""></a>1</li>
+                    <li><a href=""></a>2</li>
+                    <li><a href=""></a>3</li>
+                    <li><a class="movies-list-posters__link-button" href=""></a>Next</li>
+                </ul>
+            </nav>
+        </section>
+        <section class="movies-list-comments">
+            <header class="movies-list-comments__header">
+            <p>1909 comments</p>
+                <p>Newest 10/</p>
+                <button class="movies-list-comments__button">show all</button>
+                <button class='movies-list-comments__bell-button'><i class="movies-list-comments__bell-icon icon-from-file icon16"></i>Enable notifications for this thread </button>
+            </header>
+            <article class="movies-list-comments__user-info-and-comment">
+            <img src="images/background.jpg" alt="Andrew" class="movies-list-comments__avatar avatar-icon">
+                <p class="movies-list-comments__name"><b>Andrew C</b></p>
+                <p class="movies-list-comments__timestamp">
+                    <time datetime="06.06.2019">
+                        yesterday</time>
+                </p>
+                <button class="block-report-button icon-from-file icon32"></button>
+                <span>
+                        <button>Block this member</button>
+                        <button>Report this comment</button>
+                </span>
+                <p class="movies-list-comments__comment">
+                    Still on the list at 249!!
+                    <br><br>
+                    Endgame hanging on too, let's see how much longer...
+                </p>
+            </article>
+            <form action="http://letterboxd" method="post">
+                <label class="movies-list-comments__comment-field">
+                    <textarea rows="5" cols="60"></textarea>
+                </label>
+                <button class="movies-list-comments__button">Show supported HTML</button>
+                <input class="movies-list-comments__post-button" type = "submit" value = "POST" />
+            </form>
+        </section>
+        </section>
+        <aside class="right-aside-menu">
+            <section class="right-aside-menu__actions-menu">
+                <span class="right-aside-menu__likes">
+                    <button id="right-aside-menu__like-button" class="right-aside-menu__like-button" onclick="myFunction()">
+                        <i class="right-aside-menu__like-icon icon-from-file icon32"></i>
+                        <!--<i class="right-aside-menu__liked-icon icon-from-file icon32"></i>-->
+                        <span>Like this list?</span>
+                    </button>
+                    <a href="https://letterboxd.com/crew/list/2019-oscars-all-nominated-films/likes/">12,320</a>
+                </span>
+                <span class="pro-button">
+                        <i class="right-aside-menu__clone-icon icon-from-file icon32"></i>
+                    <p> Go </p>
+                        <a href="https://letterboxd.com/pro/"><span class="pro-span">PRO</span>
+                            </a>
+                        <p>to clone this list</p>
+                </span>
+                <span class="share-button">
+                    <p class="share-button-text">Share</p>
+                    <span class="right-aside-menu__hidden">
+                            <span id="right-aside-menu__share-link">https://boxd.it/8HjM</span>
+                            <a href=""><i class="twitter-icon icon-from-file"></i></a>
+                            <a href=""><i class="facebook-icon icon-from-file"></i></a>
+                    </span>
+                </span>
+            </section>
+            <section class="right-aside-menu__progress">
+                <p><span class="right-side-menu__watched">You've watched</span><br>
+                    <span class="right-side-menu__watched">41 of 250</span></p>
+                <p><span class="right-aside-menu__percentage">16</span></p>
+                <p><span class="right-aside-menu__percent-sign">%</span></p>
+            </section>
+            <section class="right-aside-menu__tags">
+                <h2 class="right-aside-menu__heading">TAGGED</h2>
+                    <a href="https://letterboxd.com/visdave34/tag/letterboxd/lists/">letterboxd</a>
+                    <a href="https://letterboxd.com/visdave34/tag/top-250/lists/">top 250</a>
+                    <a href="https://letterboxd.com/visdave34/tag/feature-length/lists/">feature length</a>
+                    <a href="https://letterboxd.com/visdave34/tag/movies/lists/">movies</a>
+                    <a href="https://letterboxd.com/visdave34/tag/updated/lists/">updated</a>
+                    <a href="https://letterboxd.com/visdave34/tag/weekly/lists/">weekly</a>
+                    <a href="https://letterboxd.com/visdave34/tag/official/lists/">official</a>
+                    <a href="https://letterboxd.com/visdave34/tag/narrative/lists/">narrative</a>
+            </section>
+        </aside>
+    </div>
+    <footer class="main-footer">
+        <nav class="footer-navigation">
+                <a href="http://"><b>About</b></a>
+                <a href="http://"><b>News</b></a>
+                <a href="http://"><b>Pro</b></a>
+                <a href="http://"><b>Apps</b></a>
+                <a href="http://"><b>Year in Review</b></a>
+                <a href="http://"><b>Gift Guide</b></a>
+                <a href="http://"><b>Help</b></a>
+                <a href="http://"><b>Feedback</b></a>
+                <a href="http://"><b>Terms</b></a>
+                <a href="http://"><b>API</b></a>
+                <a href="http://"><b>Contact</b></a>
+                <a class="footer_navigation__twitter-link icon-from-file" href="http://"></a>
+                <a class="footer_navigation__facebook-link icon-from-file" href="http://"></a>
+                <a class="footer_navigation__instagram-link icon-from-file" href="http://"></a>
+        </nav>
+        <p>© Letterboxd Limited. Made by <a class="footer-navigation__info-links" href="">fans</a> in Auckland, New Zealand.
+            <a class="footer-navigation__info-links" href="">Film data</a> from <a href="">TMDb</a>.
+            <a class="footer-navigation__info-links" href="">Mobile site</a>.</p>
+    </footer>
+</body>
+</html>

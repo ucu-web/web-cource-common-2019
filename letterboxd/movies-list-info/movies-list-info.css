@@ -1,0 +1,183 @@
+.movies-list-info{
+    width: 670px;
+}
+
+.list-navigation__menu{
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-color: #456;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list-navigation__menu li, p{
+    display: block;
+}
+
+.non-clickable{
+    float: left;
+    padding-right: 6px;
+    color:#678;
+    font-size: 0.655rem;
+    letter-spacing: 0.05em;
+}
+
+.list-navigation__button{
+    color:#678;
+    font-size: 0.755rem;
+    letter-spacing: 0.05em;
+    cursor: default;
+    float: left;
+}
+
+.list-navigation__author{
+    display: flex;
+    align-items: center;
+}
+
+.list_navigation__author-link{
+    font-family: Graphik-Semibold-Web,sans-serif;
+}
+
+.list-navigation__dropdown-menu, .main-header__dropdown-menu{
+    display: flex;
+    align-items: center;
+}
+
+.list-navigation__dropdown-content, .main-header__dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.list-navigation__dropdown-content p, .main-header__dropdown-content a, .main-header__dropdown-content p, .list-navigation__dropdown-content a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.list-navigation__dropdown-menu:hover .list-navigation__dropdown-content, .main-header__dropdown-menu:hover .main-header__dropdown-content{
+    display: block;
+}
+
+.list-navigation__author a, p{
+    font-weight: 400;
+    color: #9ab;
+    padding-right: 10px;
+    /*padding-left: 15px;*/
+}
+
+
+.list-name{
+    font-size: 22px;
+    font-family: Graphik-Semibold-Web,sans-serif;
+}
+
+.info-text{
+    font-size: 16px;
+    line-height: 150%;
+    font-family: TiemposTextWeb-Regular,Georgia,serif;
+}
+
+.list-navigation__patron{
+    background-color: #209cd4;
+    border-radius: 3px;
+    color: white;
+    font-size: 10px;
+    padding: 3px 3px .5px;
+}
+
+#timestamp_on-hover{
+    text-decoration: none;
+    font-size: 12px;
+    color: #678;
+    margin: 0 0;
+}
+
+.list-navigation__arrow-down{
+    float: left;
+    /*padding-left: -20px;*/
+    margin-top: 2px;
+    background-position: -370px -100px;
+    width: 10px;
+    height: 10px;
+}
+
+/*.list-navigation__arrow-down:hover{*/
+    /*background-position: -740px -220px;*/
+    /*width: 20px;*/
+    /*height: 20px;*/
+/*}*/
+
+.list-navigation__categories{
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    margin: 4.6px 0;
+}
+
+.list-navigation__categories li{
+    display: block;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.closed-eye-icon, .open-eye-icon{
+    width: 17px;
+    height: 16px;
+}
+.closed-eye-icon{
+    float: left;
+    background-position: -240px -350px;
+}
+.open-eye-icon{
+    float: left;
+    background-position: -260px -350px;
+}
+
+.active-grid{
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+    background-position: -360px -515px;
+}
+
+.non-active-list {
+    background-position: -385px -475px;
+    width: 20px;
+    height: 20px;
+}
+.non-active-list:hover{
+    background-position: -385px -495px;
+    width: 20px;
+    height: 20px;
+}
+
+
+.grid-list-eye{
+    cursor:pointer;
+    position: relative;
+}
+
+.tooltip{
+    visibility: hidden;
+    width: 75px;
+    background-color: white;
+    color: black;
+    top:100%;
+    right:100%;
+    margin-right: -75px;
+    position: absolute;
+    z-index: 1;
+    font-size: 8px;
+    letter-spacing: 0;
+}
+
+.non-active-list:hover .tooltip, .active-grid:hover .tooltip{
+    visibility: visible;
+}
