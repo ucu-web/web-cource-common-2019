@@ -1,0 +1,56 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', "Helvetica Neue", Arial;
+}
+.bot-header{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 6rem;
+}
+.bot-header__div-border{
+    margin-right: 5rem;
+    height: 100%;
+    border-bottom: 3px solid transparent;
+    align-items: center;
+}
+.bot-header__logo_img{
+    max-height: 5rem;
+}
+.header_red-line{
+    margin-top: 0;
+    background-color: red;
+    height: 0.2rem;
+}
+.bot-header__div-border:hover{
+    border-bottom: 3px solid red;
+}
+.bot-header__txt{
+    color: #6D6D70;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 2.1rem;
+}
+.no-decoration{
+    text-decoration: none;
+}
+.social-medias{
+    display: flex;
+    justify-content: flex-end;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin-right: 5rem;
+}
+.social-media__blue-icons{
+    color: #3266B7;
+    margin-right: 0.5rem;
+}
+.bot-header__no_hover:hover{
+    border-bottom: 3px solid transparent;
+}
+.bot-header__logo{
+    margin-top: 1em;
+}

@@ -1,0 +1,48 @@
+.main{
+    width: 80%;
+    margin: auto;
+}
+.main__articles-bordered{
+    border: 1px grey solid;
+}
+.main__articles{
+    margin-top: 4rem;
+    display: grid;
+    justify-items: center;
+    justify-content: space-evenly;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(3,25%);
+    grid-column-gap: 3rem;
+    grid-row-gap: 3rem;
+}
+.template_img{
+    max-height: 50%;
+    max-width: 50%;
+    margin-top: 1rem;
+}
+.template_terminovo-txt{
+    display: block;
+    background-color: red;
+    transform:rotate(270deg);
+    position: relative;
+    right: 3.5rem;
+    width: 6rem;
+    margin: 0;
+}
+.template__small-icons{
+    padding: 0 0.6rem;
+}
+.template__text-block{
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: 1px solid black;
+}
+.template__status{
+    padding: 0.6rem;
+    margin: 0;
+}
+.template__blood-drop{
+    padding: 0 0.1rem;
+}

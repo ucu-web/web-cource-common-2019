@@ -1,0 +1,33 @@
+.top-header {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #E8E8E8;
+    -webkit-box-shadow:0 1px 1px #D3D3D3;
+    -moz-box-shadow:0 1px 1px #D3D3D3;
+    box-shadow:0 1px 1px #D3D3D3;
+    height: 2.2rem;
+}
+.top-header__ul{
+    list-style: none;
+    margin: 0 15rem 0 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+.top-header__dotted:before {
+    content: '\ffed';
+    margin-right: 0.5rem;
+}
+.top-header__sign-in, .top-header__sign-up{
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+    height: 100%;
+}
+.top-header__dotted{
+    color: #6D6E70;
+    font-size: 0.8rem;
+}
+.top-header__links{
+    text-decoration: none;
+}

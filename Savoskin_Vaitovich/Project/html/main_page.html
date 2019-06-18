@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/shared/bot-header_and_social-medias.css">
+    <link rel="stylesheet" href="../css/shared/top-header.css">
+    <link rel="stylesheet" href="../css/main_page/main-page__main.css">
+    <link rel="stylesheet" href="../css/shared/footer.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../img/blood.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+          crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" defer></script>
+    <script src="../js/articles_loading.js" defer></script>
+    <script src="../js/jquery.loadTemplate.js" defer></script>
+    <title>Blood Donation Resource</title>
+</head>
+<body>
+    <header class="top-header">
+        <ul class="top-header__ul">
+            <li class="top-header__sign-in">
+                <a href="#" class="top-header__links">
+                    <p class="top-header__dotted">Sign in</p>
+                </a>
+            </li>
+            <li class="top-header__sign-up">
+                <a href="#" class="top-header__links">
+                    <p class="top-header__dotted">Sign up</p>
+                </a>
+            </li>
+        </ul>
+    </header>
+    <header class="bot-header">
+        <div class="bot-header__logo bot-header__div-border  bot-header__no_hover">
+            <a href="main_page.html" class="no-decoration">
+                <img src="../img/blood-logo.jpg" alt="logo" class="bot-header__logo_img">
+            </a>
+        </div>
+        <div class="bot-header__div-border ">
+            <a href="main_page.html" class="no-decoration">
+            <p class="bot-header__txt">Home</p>
+            </a>
+        </div>
+        <div class="bot-header__div-border">
+            <a href="blood_donation.html" class="no-decoration">
+            <p class="bot-header__txt">Donate Blood</p>
+            </a>
+        </div>
+        <div class="bot-header__div-border">
+            <a href="know_more.html" class="no-decoration">
+                <p class="bot-header__txt">Know more</p>
+            </a>
+        </div>
+    </header>
+    <hr class="header_red-line">
+    <div class="social-medias">
+        <a href="#">
+        <i class="fab fa-twitter-square fa-2x social-media__blue-icons"></i>
+        </a>
+        <a href="#">
+        <i class="fab fa-facebook-square fa-2x social-media__blue-icons"></i>
+        </a>
+        <a href="#">
+        <i class="fas fa-envelope-square fa-2x social-media__blue-icons"></i>
+        </a>
+        <a href="#">
+        <i class="fas fa-money-bill-alt fa-2x social-media__blue-icons"></i>
+        </a>
+    </div>
+    <main class="main" id="main">
+        <div class="main_upper_text">
+            <h1>They need your help</h1>
+            <p>Recipients</p>
+        </div>
+        <div class="main__articles">
+            <article id="main_first_a" class="main__articles-bordered">
+            </article>
+            <article id="main_second_a" class="main__articles-bordered">
+            </article>
+            <article id="main_third_a" class="main__articles-bordered">
+            </article>
+            <article id="main_fourth_a" class="main__articles-bordered">
+            </article>
+            <article id="main_fifth_a" class="main__articles-bordered">
+            </article>
+            <article id="main_sixth_a" class="main__articles-bordered">
+            </article>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__left-info">
+            <p class="footer__inline_text">This project was create to make blood
+                donations in Ukraine easier</p>
+            <p class="footer__inline_text">2019</p>
+            <p class="footer__inline_text">© TOB"VS_SV"</p>
+        </div>
+        <div class="footer__right-info">
+            <a href="#">
+                <p class="footer__inline_text">Contact Us</p>
+            </a>
+            <a href="#">
+                <p class="footer__inline_text">blooddonation.ukr</p>
+            </a>
+        </div>
+    </footer>
+    <script id="template" type="text/html">
+        <div class="top_photo-name">
+            <h4 class="template_terminovo-txt">TERMINOVO!</h4>
+            <img data-src="picture" alt="#" src="#" class="template_img">
+            <p data-content="name" class="template_name"></p>
+            <div class="template__text-block">
+                <i class="fas fa-heart heart template__small-icons"></i>
+                <p data-content="illness"></p>
+            </div>
+        </div>
+        <div class="bot_descriptions">
+            <p data-content="status" class="template__status template__text-block"></p>
+            <div class="template__text-block">
+                <i class="far fa-calendar-alt template__small-icons"></i>
+                <p data-content="age" class="template__inline-block"></p>
+            </div>
+            <div class="template__text-block">
+                <img src="../img/blood-drop.svg" alt="#" class="template__blood-drop">
+                <p data-content="blood_type" class="template__inline-block"></p>
+            </div>
+            <div class="template__text-block">
+                <i class="fas fa-map-marker-alt template__small-icons"></i>
+                <p data-content="where" class="template__inline-block"></p>
+            </div>
+        </div>
+    </script>
+</body>
+</html>
