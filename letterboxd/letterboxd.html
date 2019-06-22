@@ -12,76 +12,70 @@
     <meta charset="UTF-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="movies-list-info/movies-list-info.js"></script>
+    <script src="main-header/main-header.js"></script>
     <script src="right-aside-menu/right-aside-menu.js"></script>
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Letterboxd • Social film discovery.</title>
+    <title>Official Top 250 Narrative Feature Films, a list of films by Dave Vis • Letterboxd</title>
 </head>
-<body class="body">
+<body>
     <header class="main-header">
-        <h1 class="main-header__logo-holder">
-            <a href="https://letterboxd.com" class="main-header__logo icon-from-file"></a>
-        </h1>
+        <a href="https://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/" class="main-header__logo icon-from-file"></a>
         <nav class="main-header__main-menu">
-                <span class="main-header__main-menu-links">
-                    <div class="main-header__dropdown-menu">
-                        <nav class="main-header__drop-button">
-                            <span class="main-header__drop-button">
-                            <!--<ul class="main_header__profile-menu_dropdown">-->
-                                <span class="main-header__profile-menu_dropdown-items"><img src="images/background.jpg" alt="hungrynagini" class="avatar-icon"></span>
-                                <span class="main-header__profile-menu_dropdown-items"><b>HUNGRYNAGINI</b></span>
-                                <span class="main-header__profile-menu_dropdown-items"><i class="main-header__arrow-down-icon icon-from-file"></i></span>
-                            </span>
-                            <!--</ul>-->
-                        </nav>
-                        <ul class="main-header__dropdown-content">
-                            <li><a href="http://letterboxd.com/" >Home</a></li>
-                            <li><a href="http://letterboxd.com/hungrynagini" >Profile</a></li>
-                            <li><a href="http://letterboxd.com/films">Films</a></li>
-                            <li><a href="http://letterboxd.com/films/diary" >Diary</a></li>
-                            <li><a href="http://letterboxd.com/films/reviews">Reviews</a></li>
-                            <li><a href="http://letterboxd.com/watchlist" >Watchlist</a></li>
-                            <li><a href="http://letterboxd.com/lists" >Lists</a></li>
-                            <li><a href="http://letterboxd.com/likes" >Likes</a></li>
-                            <li><a href="http://letterboxd.com/tags" >Tags</a></li>
-                            <li><a href="http://letterboxd.com/following" >Network</a></li>
-                            <li><a href="http://letterboxd.com/settings" >Settings</a></li>
-                            <li><a href="http://letterboxd.com/#" >Sign out</a></li>
-                        </ul>
-                    </div>
+                <span class="main-header__main-menu-elements">
+                    <span class="main-header__dropdown-menu">
+                        <span class="main-header__dropdown-trigger">
+                            <span class="main-header__trigger-items "><img src="images/background.jpg" alt="hungrynagini" class="avatar-icon"></span>
+                            <span class="main-header__trigger-items main-header__text-style">HUNGRYNAGINI</span>
+                            <span class="main-header__trigger-items"><i class="main-header__arrow-down-icon icon-from-file"></i></span>
+                        </span>
+                        <span class="main-header__dropdown-content">
+                            <a class="main-header__dropdown-border" href="http://letterboxd.com/" >Home</a>
+                            <a href="http://letterboxd.com/hungrynagini" >Profile</a>
+                            <a href="http://letterboxd.com/films">Films</a>
+                            <a href="http://letterboxd.com/films/diary" >Diary</a>
+                            <a href="http://letterboxd.com/films/reviews">Reviews</a>
+                            <a href="http://letterboxd.com/watchlist" >Watchlist</a>
+                            <a href="http://letterboxd.com/lists" >Lists</a>
+                            <a href="http://letterboxd.com/likes" >Likes</a>
+                            <a href="http://letterboxd.com/tags" >Tags</a>
+                            <a href="http://letterboxd.com/following" >Network</a>
+                            <a class="main-header__dropdown-border" href="http://letterboxd.com/settings" >Settings</a>
+                            <a href="http://letterboxd.com/#" >Sign out</a>
+                        </span>
+                    </span>
                 </span>
-                <span class="main-header__main-menu-links"><a href="https://letteboxd.com/activity"><b>ACTIVITY</b></a></span>
-                <span class="main-header__main-menu-links"><a href="https://letteboxd.com/films"><b>FILMS</b></a></span>
-                <span class="main-header__main-menu-links"><a href="https://letteboxd.com/lists"><b>LISTS</b></a></span>
-                <span class="main-header__main-menu-links"><a href="https://letteboxd.com/people"><b>PEOPLE</b></a></span>
-                <span class="main-header__main-menu-links">
-                    <form class="main-header__search-form" action="https://search" method="get">
-                        <input class="main-header__search-icon icon-from-file" type="submit" value=""
-                               name="Search" id="frm_submit"/>
-                    </form>
-                    <!--<button>-->
-                    <!--</button>-->
-                </span>
-               <span class="main-header__log-button"><button><b>
-                   +LOG</b>
-               </button>
-                   <button>
-                    <i class="main-header__arrow-down-icon icon-from-file"></i>
-                </button></span>
-                <!--<ul>-->
-                    <!--<li><a href="http://letterboxd.com/list/new" class="main-header__dropdown-link">Start a new list</a></li>-->
-                    <!--<li><a href="http://letterboxd.com/user/find-friends" class="main-header__dropdown-link">Find your friends</a></li>-->
-                <!--</ul>-->
+                <a class="main-header__main-menu-elements main-header__text-style" href="https://letteboxd.com/activity">ACTIVITY</a>
+                <a class="main-header__main-menu-elements main-header__text-style" href="https://letteboxd.com/films">FILMS</a>
+                <a class="main-header__main-menu-elements main-header__text-style" href="https://letteboxd.com/lists">LISTS</a>
+                <a class="main-header__main-menu-elements main-header__text-style" href="https://letteboxd.com/people">PEOPLE</a>
+                <a class="main-header__main-menu-elements">
+                    <button class="main-header__search-button main-header__search-icon icon-from-file">
+                    </button>
+                </a>
+                <form class="main-header__main-menu-elements hidden-element main-header__search-form" action="https://search" method="get">
+                    <label class="hidden-element" for="frm_submit">Search</label>
+                    <input type="text" value=""
+                           name="Search" id="frm_submit"/><span class="main-header__submit-search">
+                    <input class="main-header__submit-search-icon icon-from-file" type="submit" value="">
+                        </span>
+                </form>
+               <button class=" log main-header__log-button">
+               <span style="font-size: 21px;">+</span><span>LOG</span>
+               </button><button class=" arrow main-header__arrow-button"><i class="main-header__arrow-down-icon icon-from-file"></i></button>
+               <span class="main-header__main-menu-elements hidden-element" id="main_header__log">
+                   <a href="http://letterboxd.com/list/new" class="main-header__dropdown-link">Start a new list...</a>
+                   <a href="http://letterboxd.com/user/find-friends" class="main-header__dropdown-link">Find your friends</a>
+               </span>
         </nav>
-        <br>
     </header>
     <div class="main-body">
         <section class="movies-list-info">
             <header class="list-navigation">
                 <div class="list-navigation__author">
                 <a href="https://letterboxd.com"><img class="avatar-icon" src="images/background.jpg" alt="Dave Vis"></a>
-                <p > List by
+                <p> List by
                     <a class="list_navigation__author-link" href="http://">
                         <b>Dave Vis</b></a><a href="http://"><span class="list-navigation__patron">PATRON</span></a>
                 </p>
@@ -94,7 +88,7 @@
                                 <span class="list-navigation__button">DECADE </span>
                                 <i class="list-navigation__arrow-down icon-from-file"></i>
                                 <span class="list-navigation__dropdown-content">
-                                    <p>All</p>
+                                    <a href="">All</a>
                                     <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/decade/2020s">2020s</a>
                                     <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/decade/2010s">2010s</a>
                                     <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/decade/2000s">2000s</a>
@@ -168,8 +162,9 @@
                             </span>
                         </div>
                         <div class="list-navigation__dropdown-menu">
-                            <span class="non-clickable">Sort by </span>
+                            <span class="list-navigation__sort-by">Sort by </span>
                             <span class="list-navigation__button"> LIST ORDER</span>
+                            <i class="list-navigation__arrow-down icon-from-file"></i>
                             <div class="list-navigation__dropdown-content">
                                 <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/by/">List Order</a>
                                 <a href="http://letterboxd.com/visdave34/list/official-top-250-narrative-feature-films/by/">When Added</a>
@@ -332,22 +327,21 @@
         <aside class="right-aside-menu">
             <section class="right-aside-menu__actions-menu">
                 <span class="right-aside-menu__likes">
-                    <button id="right-aside-menu__like-button" class="right-aside-menu__like-button" onclick="myFunction()">
-                        <i class="right-aside-menu__like-icon icon-from-file icon32"></i>
-                        <!--<i class="right-aside-menu__liked-icon icon-from-file icon32"></i>-->
-                        <span>Like this list?</span>
+                    <button class="right-aside-menu__like-button">
+                        <i class="right-aside-menu__like-icon icon-from-file icon32" id="right-aside-menu__like"></i>
+                        <span class="right-aside-menu__like-text">Like this list?</span>
                     </button>
                     <a href="https://letterboxd.com/crew/list/2019-oscars-all-nominated-films/likes/">12,320</a>
                 </span>
                 <span class="pro-button">
                         <i class="right-aside-menu__clone-icon icon-from-file icon32"></i>
-                    <p> Go </p>
+                    <span> Go </span>
                         <a href="https://letterboxd.com/pro/"><span class="pro-span">PRO</span>
                             </a>
-                        <p>to clone this list</p>
+                        <span>to clone this list</span>
                 </span>
                 <span class="share-button">
-                    <p class="share-button-text">Share</p>
+                    <span class="share-button-text">Share</span>
                     <span class="right-aside-menu__hidden">
                             <span id="right-aside-menu__share-link">https://boxd.it/8HjM</span>
                             <a href=""><i class="twitter-icon icon-from-file"></i></a>

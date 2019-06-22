@@ -16,8 +16,8 @@
     border-top-right-radius: 4px;
     color: #bcd;
     background-color: #456;
-    margin-bottom: 1px;
-    padding: .61rem 0;
+    margin-bottom: .7px;
+    padding: .58rem 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,7 +32,10 @@
 
 .right-aside-menu__liked-icon{
     background-position: -630px -90px;
+}
 
+.right-aside-menu__liked-text{
+    content:"You liked this list";
 }
 
 .right-aside-menu__likes span, .right-aside-menu__likes a{
@@ -59,15 +62,15 @@
 .pro-button, .share-button{
     background-color: #456;
     text-align: center;
-    margin-bottom: .5px;
-    padding: 0 0;
+    margin-bottom: .7px;
+    padding: .58rem 0;
     /*box-sizing: border-box;*/
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.pro-button p, .pro-button i, .pro-button a{
+.pro-button span, .pro-button i, .pro-button a{
     display: block;
     padding-right: 4px;
     color: #bcd;
@@ -123,8 +126,12 @@
     border: 1px solid #303840;;
     border-radius: 3px;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: space-between;
+}
+
+.right-aside-menu__progress p{
+    padding-right: 0;
 }
 
 .right-side-menu__watched{
@@ -135,5 +142,7 @@
 
 .right-aside-menu__percentage{
     /*color: #9ab;*/
+    line-height: 0.79em;
     font-size: 36px;
+    padding-left: 59px;
 }
