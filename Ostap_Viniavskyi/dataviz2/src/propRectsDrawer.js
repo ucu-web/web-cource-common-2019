@@ -1,13 +1,11 @@
 import { map } from "d3";
+import {plotSizes, sourcesFill, targetsFill } from "./config";
 
 export const drawNodesProportionsRects = (
   svgContainer,
   sourceTargetRelationData,
   sourcesRectsDescriptions,
-  targetsRectsDescriptions,
-  plotSizes,
-  sourcesFill,
-  targetsFill
+  targetsRectsDescriptions
 ) => {
   const nodesVerticalOffsetRatios = map();
   svgContainer

@@ -1,15 +1,9 @@
-import { select, scaleOrdinal, schemeSet1, schemeSet2, map, event } from "d3";
-import { getCubicBezierCurve } from "./curvesGenerator";
-import { drawNodesProportionsRects } from "./generateNodesProportionsRects";
+import { select, map, event } from "d3";
+import { getLinkPath } from "./curvesGenerator";
+import { drawNodesProportionsRects } from "./propRectsDrawer";
+import { plotSizes, margin, sourcesFill, targetsFill } from "./config";
 
 export const createSankeyPlot = (container, sourceTargetRelationData) => {
-  const plotSizes = {
-    svgWidth: 800,
-    svgHeight: 600,
-    width: 30
-  };
-  const margin = { top: 0, right: 250, bottom: 0, left: 30};
-
   const svgContainer = select(container)
     .append("svg")
     .classed("plot", true)
@@ -17,29 +11,25 @@ export const createSankeyPlot = (container, sourceTargetRelationData) => {
     .attr("height", plotSizes.svgHeight)
     .attr("width", plotSizes.svgWidth + margin.left + margin.right)
     .attr("viewBox", [
-      -margin.right + 2 *  margin.left,
       0,
-      plotSizes.svgWidth  + 2 * margin.right,
+      0,
+      plotSizes.svgWidth + margin.right + margin.left,
       plotSizes.svgHeight
-    ]);
+    ])
+    .attr("preserveAspectRatio", "xMidYMin meet");
 
   svgContainer
-      .append("defs")
-      .append("style")
-      .attr("font-family", "Arial")
-
-  const sourcesFill = scaleOrdinal(schemeSet1),
-    targetsFill = scaleOrdinal(schemeSet2);
+    .append("defs")
+    .append("style")
+    .attr("font-family", "Arial");
 
   const sourcesRectsDescription = generateRectanglesDescription(
       sourceTargetRelationData.sourcesProp,
-      plotSizes,
       margin.left,
       sourcesFill
     ),
     targetsRectsDescription = generateRectanglesDescription(
       sourceTargetRelationData.targetsProp,
-      plotSizes,
       plotSizes.svgWidth + margin.left - plotSizes.width,
       targetsFill
     );
@@ -48,47 +38,33 @@ export const createSankeyPlot = (container, sourceTargetRelationData) => {
     renderLinks,
     sourceTargetRelationData,
     sourcesRectsDescription,
-    targetsRectsDescription,
-    plotSizes,
-    sourcesFill,
-    targetsFill
+    targetsRectsDescription
   );
 
   const sourceRectsGroup = drawNodes(
     svgContainer,
     sourcesRectsDescription,
-    "plot__source-node-group",
-    plotSizes
+    "plot__source-node-group"
   );
 
-  sourceRectsGroup.call(addNodesTitles, false, plotSizes, margin);
+  sourceRectsGroup.call(addNodesTitles, false);
 
   const targetRectsGroup = drawNodes(
     svgContainer,
     targetsRectsDescription,
-
-    "plot__target-node-group",
-    plotSizes
+    "plot__target-node-group"
   );
 
-  targetRectsGroup.call(addNodesTitles, true, plotSizes, margin);
+  targetRectsGroup.call(addNodesTitles, true);
   svgContainer.call(
     drawNodesProportionsRects,
     sourceTargetRelationData,
     sourcesRectsDescription,
-    targetsRectsDescription,
-    plotSizes,
-    sourcesFill,
-    targetsFill
+    targetsRectsDescription
   );
 };
 
-const generateRectanglesDescription = (
-  proportions,
-  plotSizes,
-  xOffset,
-  fill
-) => {
+const generateRectanglesDescription = (proportions, xOffset, fill) => {
   let currentVerticalOffset = 0;
   const rectsDescription = [];
   proportions.forEach((d, i) => {
@@ -104,7 +80,7 @@ const generateRectanglesDescription = (
   return rectsDescription;
 };
 
-const drawNodes = (svgContainer, rectsInfo, className, plotSizes) => {
+const drawNodes = (svgContainer, rectsInfo, className) => {
   const rectGroup = svgContainer
     .selectAll("rect." + className)
     .data(rectsInfo)
@@ -121,36 +97,33 @@ const drawNodes = (svgContainer, rectsInfo, className, plotSizes) => {
   return rectGroup;
 };
 
-const addNodesTitles = (context, isTarget, plotSizes, margin) => {
-  const modifierClass = "plot__title_" +  (isTarget ? "target" : "source");
+const addNodesTitles = (context, isTarget) => {
+  const modifierClass = "plot__title_" + (isTarget ? "target" : "source");
   context
     .append("text")
     .classed("plot__title noselect " + modifierClass, true)
-    .attr("x", d => d.x + getTextHorizontalOffset(plotSizes, margin, isTarget))
+    .attr(
+      "x",
+      d =>
+        d.x +
+        (isTarget
+          ? plotSizes.width + plotSizes.textMargin
+          : -plotSizes.textMargin)
+    )
     .attr("y", d => d.y + d.height / 2)
 
     .text(d => d.name);
 };
 
-const getTextHorizontalOffset = (plotSizes, margin, isTargetTitle) =>
-  isTargetTitle ? plotSizes.width + 20 : -margin.left;
-
-const getLinksHorizontalPosition = (
-  rectInfo,
-  verticalOffsetRatio,
-  linkWidth
-) => {
-  return rectInfo.y + verticalOffsetRatio * rectInfo.height + linkWidth / 2;
+const getLinksHorizontalPosition = (rectInfo, verticalOffsetRatio) => {
+  return rectInfo.y + verticalOffsetRatio * rectInfo.height;
 };
 
 const renderLinks = (
   container,
   data,
   sourcesDescription,
-  targetsDescription,
-  plotSizes,
-  sourcesFill,
-  targetsFill
+  targetsDescription
 ) => {
   const nodesVerticalOffsetRatios = map();
   let currentHovered = null;
@@ -169,35 +142,24 @@ const renderLinks = (
         plotSizes
       )
     )
-    .call(colorateLinks, data, sourcesFill, targetsFill, sourcesDescription)
+    .call(colorateLinks, data, sourcesFill, targetsFill)
     .call(addClickBehaviour, currentHovered);
 };
 
 const addClickBehaviour = (links, currentHovered) => {
   links.on("mouseover", () => {
     if (currentHovered) {
-      currentHovered.style.strokeOpacity = "0.4";
+      currentHovered.style.fillOpacity = "0.4";
     }
     currentHovered = event.target;
-    currentHovered.style.strokeOpacity = "1";
+    currentHovered.style.fillOpacity = "1";
   });
 };
 
-const colorateLinks = (
-  links,
-  data,
-  sourcesFill,
-  targetsFill,
-  sourcesDescription
-) => {
+const colorateLinks = (links, data, sourcesFill, targetsFill) => {
   links
-    .attr("fill", "transparent")
     .call(createLinkGradient, data, sourcesFill, targetsFill)
-    .attr("stroke-width", d => {
-      const sourceRect = sourcesDescription.filter(i => i.name === d.source)[0];
-      return sourceRect.height * d.proportion;
-    })
-    .attr("stroke-opacity", 0.5);
+    .attr("fill-opacity", 0.5);
 };
 
 const createLinkGradient = (links, data, sourcesFill, targetsFill) => {
@@ -222,7 +184,7 @@ const createLinkGradient = (links, data, sourcesFill, targetsFill) => {
       this.parentNode.appendChild(gradient);
     })
     .attr(
-      "stroke",
+      "fill",
       d =>
         `url(#${data.sourceNameToIndex.get(d.source) +
           "_" +
@@ -244,22 +206,36 @@ const getLinksPath = (
   const sourceRect = sourcesDescription.filter(i => i.name === link.source)[0];
   const targetRect = targetsDescription.filter(i => i.name === link.target)[0];
   const linkWidth = sourceRect.height * link.proportion;
-  const path = getCubicBezierCurve(
+  const path = getLinkPath(
     {
-      x: sourceRect.x + (5 * plotSizes.width) / 8,
+      x: sourceRect.x + plotSizes.width,
       y: getLinksHorizontalPosition(
         sourceRect,
-        nodesVerticalOffsetRatios.get(link.source),
-        linkWidth
+        nodesVerticalOffsetRatios.get(link.source)
       )
     },
     {
-      x: targetRect.x + plotSizes.width / 8,
+      x: sourceRect.x + plotSizes.width,
+      y:
+        getLinksHorizontalPosition(
+          sourceRect,
+          nodesVerticalOffsetRatios.get(link.source)
+        ) + linkWidth
+    },
+    {
+      x: targetRect.x,
       y: getLinksHorizontalPosition(
         targetRect,
-        nodesVerticalOffsetRatios.get(link.target),
-        linkWidth
+        nodesVerticalOffsetRatios.get(link.target)
       )
+    },
+    {
+      x: targetRect.x,
+      y:
+        getLinksHorizontalPosition(
+          targetRect,
+          nodesVerticalOffsetRatios.get(link.target)
+        ) + linkWidth
     }
   );
   nodesVerticalOffsetRatios.set(

@@ -3,13 +3,13 @@
     width: 100%;
     box-sizing: border-box;
     margin: 1rem auto;
-    preserveAspectRatio: "xMidYMin scale",
 }
 
 .plot__title {
     font-family: monospace;
     font-weight: 600;
-    font-size: large;
+    font-size: 1.2rem;
+    alignment-baseline: middle;
     letter-spacing: -.4px;
     fill: #333;
 }

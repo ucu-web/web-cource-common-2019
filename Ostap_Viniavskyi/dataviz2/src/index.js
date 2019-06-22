@@ -9,4 +9,4 @@ const app = async () => {
   createSankeyPlot(container, data);
 };
 
-app().catch(e => console.log(e));
+app();
