@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>W3C</title>
+</head>
+<body>
+
+<h1>HTML 5.2</h1>
+
+<h2>
+    W3C Recommendation,
+    <time datetime="14-12-2017">14 December 2017</time>
+</h2>
+
+<dl>
+    <dt><strong>This version:</strong></dt>
+    <dd><a href="https://www.w3.org/TR/2017/REC-html52-20171214/">
+        https://www.w3.org/TR/2017/REC-html52-20171214/</a></dd>
+
+    <dt><strong>Latest published version: </strong></dt>
+    <dd><a href="https://www.w3.org/TR/html52/">https://www.w3.org/TR/html52/</a></dd>
+
+    <dt><strong>Latest published version of HTML: </strong></dt>
+    <dd><a href="https://www.w3.org/TR/html/">https://www.w3.org/TR/html/</a></dd>
+
+    <dt><strong>Previous version: </strong></dt>
+    <dd><a href="https://www.w3.org/TR/2017/PR-html52-20171102/">
+        https://www.w3.org/TR/2017/PR-html52-20171102/</a></dd>
+
+    <dt><strong>Editor's Draft: </strong></dt>
+    <dd><a href="https://w3c.github.io/html/">https://w3c.github.io/html/</a></dd>
+
+    <dt><strong>Editors: </strong></dt>
+    <dd>
+        <a href="mailto:faulkner@paciellogroup.com">Steve Faulkner </a>
+        <span>(The Paciello Group)</span>
+    </dd>
+    <dd>
+        <a href="mailto:arronei@microsoft.com">Arron Eicholz </a>
+        <span>(Microsoft)</span>
+    </dd>
+    <dd>
+        <a href="mailto:travil@microsoft.com">Travis Leithead </a>
+        <span>(Microsoft)</span>
+    </dd>
+    <dd>
+        <a href="mailto:adanilo@google.com">Alex Danilo </a>
+        <span>(Google)</span>
+    </dd>
+    <dd>
+        <a href="mailto:sangwhan@iki.fi">Sangwhan Moon</a>
+        <span>(Invited Expert)</span>
+    </dd>
+
+    <dt><strong>Former Editors:</strong></dt>
+    <dd>
+        <a href="mailto:Erika.Doyle@microsoft.com">Erika Doyle Navara</a>
+        <span>(Microsoft)</span>
+    </dd>
+    <dd>
+        <a href="mailto:hober@apple.com">Theresa O'Connor</a>
+        <span>(Apple Inc.)</span>
+    </dd>
+    <dd>
+        <a href="https://berjon.com/">Robin Berjon</a>
+        <span>W3C</span>
+    </dd>
+
+    <dt><strong>Test Suite:</strong></dt>
+    <dd><a href="https://w3c-test.org/html/">https://w3c-test.org/html/</a></dd>
+
+    <dt><strong>Implementation Report:</strong></dt>
+    <dd><a href="https://w3c.github.io/test-results/html52/implementation-report.html">
+        https://w3c.github.io/test-results/html52/implementation-report.html</a>
+    </dd>
+
+    <dt><strong>Participate:</strong></dt>
+    <dd>
+        <a href="https://github.com/w3c/html/issues/new">File an issue</a>
+        <span>(<a href="https://github.com/w3c/html/issues">open issues</a>)</span>
+    </dd>
+
+    <dt><strong>Others:</strong></dt>
+    <dd><a href="https://www.w3.org/TR/html52/single-page.html">Single page version</a></dd>
+</dl>
+
+<p>
+    <a href="https://github.com/w3c/html/labels/errata"><strong>Errata</strong></a>
+    for this document are recorded as Github issues.
+</p>
+<p>
+    The English version of this specification is the only normative version. Non-normative
+    <a href="https://www.w3.org/Consortium/Translation/">translations</a> may also be available.
+</p>
+
+<div>
+    <em>
+        <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>© 2017
+        <a href="http://www.w3.org/">W3C</a>
+        ® (
+        <a href="http://www.csail.mit.edu/">MIT</a>,
+        <a href="http://www.ercim.eu/">ERCIM</a>,
+        <a href="http://www.keio.ac.jp/">Keio</a>,
+        <a href="http://ev.buaa.edu.cn/">Beihang</a>). W3C
+        <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+        <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and
+        <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.
+    </em>
+</div>
+
+<h2>Abstract</h2>
+<p>
+    This specification defines the 5th major version, second minor revision of the core language of the
+    World Wide Web: the Hypertext Markup Language (HTML). In this version, new features continue to be introduced
+    to help Web application authors, new elements continue to be introduced based on research into prevailing
+    authoring practices, and special attention continues to be given to defining clear conformance criteria for
+    user agents in an effort to improve interoperability.
+</p>
+
+<h2>Status of this document</h2>
+<p>
+    <em>This section describes the status of this document at the time of its publication. Other documents may
+        supersede this document. A list of current W3C publications and the latest revision of this technical report
+        can be found in the
+        <a href="https://www.w3.org/TR/">W3C technical reports index</a>
+        at https://www.w3.org/TR/.</em>
+</p>
+
+<p>
+    This document was published by the
+    <a href="https://www.w3.org/WebPlatform/WG/">Web Platform Working Group</a>
+    as a W3C Recommendation for HTML 5.2 that would obsolete the
+    <a href="https://www.w3.org/TR/html51/">HTML 5.1 Recommendation</a>.
+</p>
+
+<p>
+    All interested parties are invited to provide implementation and bug reports and other comments
+    through the Working Group's
+    <a href="https://github.com/w3c/html/issues">Issue tracker</a>. These will generally be considered
+    in the development of HTML 5.3.
+</p>
+
+<p>
+    The
+    <a href="https://w3c.github.io/test-results/html52/implementation-report.html">implementation report</a>
+    produced for this version demonstrates that in almost every case changes are matched by interoperable
+    implementation.
+</p>
+
+<p>
+    This document has been reviewed by W3C Members, by software developers, and by other W3C groups and interested
+    parties, and is endorsed by the Director as a W3C Recommendation. It is a stable document and may be used as
+    reference material or cited from another document. W3C's role in making the Recommendation is to draw attention to
+    the specification and to promote its widespread deployment. This enhances the functionality and interoperability of
+    the Web.
+</p>
+
+<p>
+    This document was produced by a group operating under the
+    <a href="https://www.w3.org/Consortium/Patent-Policy/">W3C Patent Policy</a>. W3C maintains a
+    <a href="https://www.w3.org/2004/01/pp-impl/83482/status">public list of any patent disclosures</a>
+    made in connection with the deliverables of the group; that page also
+    includes instructions for disclosing a patent. An individual who has actual knowledge of a patent
+    which the individual believes contains
+    <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
+    must disclose the information in accordance with
+    <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the W3C Patent Policy</a>.
+</p>
+
+<p>
+    This document is governed by the
+    <a href="https://www.w3.org/2017/Process-20170301/">1 March 2017 W3C Process Document</a>.
+</p>
+<nav class="bradcamp">
+    <a href="#">Table of contents</a> -
+    <a href="#">2. Common infrastructure</a> →
+</nav>
+
+<h3>Table of contents</h3>
+
+<header>
+    <nav>
+        <div>
+            <ol>
+                <li><a href="#"><strong>Introduction</strong></a></li>
+
+                <li><a href="#">Background</a></li>
+
+                <li><a href="#">Audience</a></li>
+
+                <li><a href="#">Scope</a></li>
+
+                <li><a href="#">History</a></li>
+
+                <li><a href="#">Design notes</a>
+                    <ol>
+                        <li><a href="#">Serializability of script execution</a></li>
+                        <li><a href="#">Compliance with other specifications</a></li>
+                        <li><a href="#">Extensibility</a></li>
+                    </ol>
+                </li>
+
+                <li><a href="#">HTML vs XML Syntax</a></li>
+                <li>
+                    <a href="#">Structure of this specification</a>
+                    <ol>
+                        <a href="#">How to read specification</a>
+                        <li>Typographic conventions</li>
+                    </ol>
+                </li>
+
+                <li>Privacy concerns</li>
+                <li>
+                    <a href="#">A quick introduction to HTML</a>
+                    <ol>
+                        <li><a href="#">Writing secure applications with HTML</a></li>
+                        <li><a href="#">Common pitfalls to avoid when using the scripting APIs </a></li>
+                        <li><a href="#">How to catch mistakes when writing HTML: validators and conformance
+                            checkers </a></li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="#">Conformance requirements for authors</a>
+                    <ol>
+                        <li><a href="#">Presentational markup</a></li>
+                        <li><a href="#">Syntax errors</a></li>
+                        <li><a href="#">Restrictions on content models and on attribute values </a></li>
+                    </ol>
+                </li>
+                <li><a href="#">Suggested reading</a></li>
+            </ol>
+        </div>
+    </nav>
+</header>
+
+<section>
+    <h2>1. Intoduction</h2>
+    <div>
+        <h3>1.1 Background</h3>
+        <p>
+            <em>This section is non-normative.</em>
+        </p>
+
+        <p>
+            HTML is the World Wide Web’s core markup language. Originally, HTML was primarily designed as a language for
+            semantically describing scientific documents. Its general design, however, has enabled it to be adapted,
+            over
+            the subsequent years, to describe a number of other types of documents and even applications.
+        </p>
+    </div>
+
+    <div>
+        <h3>1.2 Audience</h3>
+        <p>
+            <em>This section is non-normative.</em>
+        </p>
+
+        <p>
+            HTML is the World Wide Web’s core markup language. Originally, HTML was primarily designed as a language for
+            semantically describing scientific documents. Its general design, however, has enabled it to be adapted,
+            over the subsequent years, to describe a number of other types of documents and even applications.
+        </p>
+    </div>
+
+    <div>
+        <h3>1.4 Scope</h3>
+        <p>
+            <em>This section is non-normative.</em>
+        </p>
+
+        <p>
+            This specification is limited to providing a semantic-level markup language and associated semantic-level
+            scripting APIs for authoring accessible pages on the Web ranging from static documents to dynamic
+            applications.
+        </p>
+
+        <p>
+            The scope of this specification does not include providing mechanisms for media-specific customization of
+            presentation (although default rendering rules for Web browsers are included at the end of this
+            specification, and several mechanisms for hooking into CSS are provided as part of the language).
+        </p>
+
+        <p>
+            The scope of this specification is not to describe an entire operating system. In particular, hardware
+            configuration software, image manipulation tools, and applications that users would be expected to use with
+            high-end workstations on a daily basis are out of scope. In terms of applications, this specification is
+            targeted specifically at applications that would be expected to be used by users on an occasional basis, or
+            regularly but from disparate locations, with low CPU requirements. Examples of such applications include
+            online purchasing systems, searching systems, games (especially multiplayer online games), public telephone
+            books or address books, communications software (e-mail clients, instant messaging clients, discussion
+            software), document editing software, etc.
+        </p>
+    </div>
+
+    <div>
+        <h3>1.4 History</h3>
+        <p>
+            <em>This section is non-normative.</em>
+        </p>
+
+        <p>
+            For its first five years (1990-1995), HTML went through a number of revisions and experienced a number of extensions, primarily hosted first at CERN, and then at the IETF.
+        </p>
+
+        <p>
+            With the creation of the W3C, HTML’s development changed venue again. A first abortive attempt at extending HTML in 1995 known as HTML 3.0 then made way to a more pragmatic approach known as HTML 3.2, which was completed in 1997. HTML 4.01 quickly followed later that same year.
+        </p>
+
+
+        <p>
+            The following year, the W3C membership decided to stop evolving HTML and instead begin work on an XML-based equivalent, called XHTML. This effort started with a reformulation of HTML 4.01 in XML, known as XHTML 1.0, which added no new features except the new serialization, and which was completed in 2000. After XHTML 1.0, the W3C’s focus turned to making it easier for other working groups to extend XHTML, under the banner of XHTML Modularization. In parallel with this, the W3C also worked on a new language that was not compatible with the earlier HTML and XHTML languages, calling it XHTML 2.0.
+        </p>
+
+
+        <p>
+            Around the time that HTML’s evolution was stopped in 1998, parts of the API for HTML developed by browser vendors were specified and published under the name DOM Level 1 (in 1998) and DOM Level 2 Core and DOM Level 2 HTML (starting in 2000 and culminating in 2003). These efforts then petered out, with some DOM Level 3 specifications published in 2004 but the working group being closed before all the Level 3 drafts were completed.
+        </p>
+
+
+        <p>
+            In 2003, the publication of XForms, a technology which was positioned as the next generation of Web forms, sparked a renewed interest in evolving HTML itself, rather than finding replacements for it. This interest was borne from the realization that XML’s deployment as a Web technology was limited to entirely new technologies (like RSS and later Atom), rather than as a replacement for existing deployed technologies (like HTML).
+        </p>
+
+
+        <p>
+            A proof of concept to show that it was possible to extend HTML 4.01’s forms to provide many of the features that XForms 1.0 introduced, without requiring browsers to implement rendering engines that were incompatible with existing HTML Web pages, was the first result of this renewed interest. At this early stage, while the draft was already publicly available, and input was already being solicited from all sources, the specification was only under Opera Software’s copyright.
+        </p>
+
+
+        <p>
+            The idea that HTML’s evolution should be reopened was tested at a W3C workshop in 2004, where some of the principles that underlie the HTML work (described below), as well as the aforementioned early draft proposal covering just forms-related features, were presented to the W3C jointly by Mozilla and Opera. The proposal was rejected on the grounds that the proposal conflicted with the previously chosen direction for the Web’s evolution; the W3C staff and membership voted to continue developing XML-based replacements instead.
+        </p>
+
+
+        <p>
+            Shortly thereafter, Apple, Mozilla, and Opera jointly announced their intent to continue working on the effort under the umbrella of a new venue called the WHATWG. A public mailing list was created, and the draft was moved to the WHATWG site. The copyright was subsequently amended to be jointly owned by all three vendors, and to allow reuse of the specification.
+        </p>
+
+
+        <p>
+            The WHATWG was based on several core principles, in particular that technologies need to be backwards compatible, that specifications and implementations need to match even if this means changing the specification rather than the implementations, and that specifications need to be detailed enough that implementations can achieve complete interoperability without reverse-engineering each other.
+        </p>
+
+
+        <p>
+            The latter requirement in particular required that the scope of the HTML specification include what had previously been specified in three separate documents: HTML 4.01, XHTML 1.1, and DOM Level 2 HTML. It also meant including significantly more detail than had previously been considered the norm.
+        </p>
+
+        <p>
+            In 2006, the W3C indicated an interest to participate in the development of HTML 5.0 after all, and in 2007 formed a working group chartered to work with the WHATWG on the development of the HTML specification. Apple, Mozilla, and Opera allowed the W3C to publish the specification under the W3C copyright, while keeping a version with the less restrictive license on the WHATWG site.
+        </p>
+
+        <p>
+            For a number of years, both groups then worked together under the same editor: Ian Hickson. In 2011, the groups came to the conclusion that they had different goals: the W3C wanted to draw a line in the sand for features for a HTML 5.0 Recommendation, while the WHATWG wanted to continue working on a Living Standard for HTML, continuously maintaining the specification and adding new features. In mid 2012, a new editing team was introduced at the W3C to take care of creating a HTML 5.0 Recommendation and prepare a Working Draft for the next HTML version.
+        </p>
+
+        <p>
+            Since then, the W3C Web Platform WG has been cherry picking patches from the WHATWG that resolved bugs registered on the W3C HTML specification or more accurately represented implemented reality in user agents. At time of publication of this document, patches from the
+            <a href="https://whatwg.org/specs/web-apps/current-work/#">WHATWG HTML specification </a>
+            have been merged until January 12, 2016. The W3C HTML editors have also added patches that resulted from discussions and decisions made by the W3C Web Platform WG as well a bug fixes from bugs not shared by the WHATWG.
+        </p>
+
+        <p>
+            A separate document is published to document the differences between the HTML specified in this document and the language described in the HTML 4.01 specification.
+            <a href="https://www.w3.org/TR/html52/references.html#biblio-html5-diff">[HTML5-DIFF]</a>
+        </p>
+
+    </div>
+
+</section>
+
+<nav class="bradcamp">
+    <a href="#">Table of contents</a> -
+    <a href="#">2. Common infrastructure</a> →
+</nav>
+
+</body>
+</html>
