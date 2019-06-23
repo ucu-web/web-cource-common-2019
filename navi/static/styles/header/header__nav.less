@@ -1,0 +1,184 @@
+.bg {
+    background: url("../../images/logos/all_logos.png");
+    display: inline-block;
+    background-repeat: no-repeat;
+}
+
+.header__nav {
+    height: 60px;
+    position: relative;
+}
+
+.navigation {
+    background: #333640;
+    text-align: center;
+    cursor: pointer;
+    height: 60px;
+    position: relative;
+    z-index: 1010;
+    width: 1200px;
+    box-sizing: border-box;
+    font-size: 0;
+}
+
+.navigation > .navigation__item:first-child {
+    width: 174px;
+}
+
+.navigation > .navigation__item {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    box-sizing: border-box;
+    padding: 21px 0 0;
+    text-align: center;
+    width: 171px;
+    height: 60px;
+}
+
+.navigation > .navigation__item .navigation__item__header > a {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.navigation > .navigation__item .navigation__item__header > a:hover {
+    color: #fff200;
+}
+
+.navigation__item {
+
+    &:hover {
+        background: #24262c;
+        color: #fff200;
+    }
+
+    &__header {
+        display: inline-block;
+        font: 16px/18px Proxima Nova,sans-serif;
+        font-weight: bold;
+        color: #fff;
+        text-transform: uppercase;
+        position: relative;
+        text-align: left;
+        letter-spacing: 0.5px;
+        margin-left: 20px;
+    }
+
+    &__header:hover {
+        color: #fff200;
+    }
+
+    &_news &__header:before {
+        .bg();
+        background-position: -6611px 0;
+        width: 35px;
+        height: 50px;
+        left: -20px;
+        top: -18px;
+    }
+
+    &_watch &__header:before {
+        .bg();
+        background-position: -6752px 0;
+        width: 53px;
+        height: 40px;
+        top: -13px;
+        left: -30px;
+    }
+
+    &_coverage &__header:before {
+        .bg();
+        background-position: -6907px 0;
+        width: 48px;
+        height: 42px;
+        top: -15px;
+        left: -25px;
+    }
+
+    &_store &__header:before {
+        .bg();
+        background-position: -7566px 0;
+        width: 44px;
+        height: 48px;
+        top: -15px;
+        left: -25px;
+    }
+
+    &_team &__header:before {
+        .bg();
+        background-position: -7292px 0;
+        width: 51px;
+        height: 44px;
+        left: -30px;
+        top: -15px;
+    }
+
+    &_club &__header:before {
+        .bg();
+        background-position: -7433px 0;
+        width: 35px;
+        height: 47px;
+        left: -25px;
+        top: -15px;
+    }
+
+    &_community &__header:before {
+        .bg();
+        background-position: -7051px 0;
+        width: 41px;
+        height: 45px;
+        left: -25px;
+        top: -15px;
+    }
+
+    &__category {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #24262c;
+        text-align: center;
+        padding: 15px 0;
+        box-sizing: border-box;
+    }
+
+    &__category_item {
+        text-align: center;
+    }
+
+    &__category_item a {
+        display: block;
+        color: #838796;
+        cursor: pointer;
+        font: 15px/18px Proxima Nova,sans-serif;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 12px 0;
+        transition: all 0.2s ease 0s;
+    }
+}
+
+.navigation > .navigation__item .navigation__item__header:before {
+    content: '';
+    position: absolute;
+    opacity: 0.5;
+    transition: all 0.2s ease 0s;
+    transform: scale(0.7);
+}
+
+.navigation > .navigation__item .navigation__item__header > span {
+    position: relative;
+}
+
+.navigation > .navigation__item .navigation__item__header > span:after {
+    content: '';
+    .bg();
+    background-position: -255px 0;
+    width: 6px;
+    height: 4px;
+    vertical-align: top;
+    margin: 7px 0 0 3px;
+}

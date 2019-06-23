@@ -1,0 +1,207 @@
+.main-news {
+    position: relative;
+
+    &:before {
+        content: '';
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+        content: '';
+        display: table;
+    }
+
+    &__wrapper {
+        display: block;
+        position: relative;
+        float: right;
+        width: 903px;
+        height: 416px;
+        color: #fff;
+    }
+
+    &__item {
+        opacity: 0;
+        display: block;
+        position: absolute;
+        width: 903px;
+        height: 416px;
+        text-align: center;
+        overflow: hidden;
+        z-index: 100;
+    }
+
+    &__item:after {
+        display: block;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all 0.3s linear 0s;
+    }
+
+    &__item_mid {
+        vertical-align: middle;
+        height: 100%;
+    }
+
+    &__item_mid:before {
+        display: inline-block;
+        content: '';
+        width: 1px;
+        visibility: hidden;
+        vertical-align: middle;
+        height: 100%;
+    }
+
+    &__item_bg {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: all 0.3s linear 0s;
+    }
+
+    &__item_bg-1 {
+        background-image: url("../../images/bg/main-news-1.jpg");
+    }
+
+    &__item_bg-2 {
+        background-image: url("../../images/bg/main-news-2.jpg");
+    }
+
+    &__item_bg-3 {
+        background-image: url("../../images/bg/main-news-3.jpg");
+    }
+
+    &__item_bg-4 {
+        background-image: url("../../images/bg/main-news-4.jpg");
+    }
+
+    &__item_bg-5 {
+        background-image: url("../../images/bg/main-news-5.jpg");
+    }
+
+    &__item__header-wrapper {
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        width: 520px;
+        vertical-align: middle;
+    }
+
+    &__item__header {
+        display: block;
+        font: 36px/38px Proxima Nova,sans-serif;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+
+    &__spots {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        margin-left: -100px;
+        width: 200px;
+        height: 14px;
+        z-index: 1001;
+        text-align: center;
+    }
+
+    &__spots > li {
+        display: inline-block;
+        width: 10px;
+        height: 4px;
+        margin: 0 3px;
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    &__prev {
+        left: 25px;
+    }
+
+    &__next {
+        right: 25px;
+    }
+
+    &__prev, &__next {
+        display: block;
+         margin-top: -20px;
+        height: 40px;
+        width: 40px;
+        opacity: 0.4;
+        position: absolute;
+        top: 50%;
+        cursor: pointer;
+        z-index: 1001;
+        transition: all 0.3s linear 0s;
+    }
+
+    &__prev:before {
+        content: '';
+        transform: rotate(-45deg);
+        left: 10px;
+        top: 0;
+        width: 25px;
+        z-index: 1;
+        box-shadow: 2px 0 5px 0 #8f8e8e;
+    }
+
+    &__prev:after {
+        content: '';
+        transform: rotate(50deg);
+        top: 19px;
+        left: 10px;
+        box-shadow: 1px 0 4px 1px #9f9e9e;
+    }
+
+    &__next:before {
+        content: '';
+        transform: rotate(-135deg);
+        top: 0;
+        left: 10px;
+        width: 25px;
+        z-index: 1;
+    }
+
+    &__next:after {
+        content: '';
+        transform: rotate(130deg);
+        top: 19px;
+        left: 10px;
+        box-shadow: 1px 0 4px 1px #9f9e9e;
+    }
+
+    &__prev:hover, &__next:hover {
+        opacity: 0.8;
+    }
+
+    &__prev:before, &__prev:after, &__next:before, &__next:after {
+        background-color: #fff;
+        width: 30px;
+        height: 6px;
+        position: absolute;
+    }
+}
+
+.block-left {
+    float: left;
+    width: 903px;
+}
+
+.main-news .news-active {
+    opacity: 1;
+    display: block;
+}
+
+.main-news .spot-active {
+    background-color: #fff200;
+}

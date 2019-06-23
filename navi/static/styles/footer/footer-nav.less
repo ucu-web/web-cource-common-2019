@@ -1,0 +1,106 @@
+.bg {
+    background: url("../../images/logos/all_logos.png");
+    display: inline-block;
+    background-repeat: no-repeat;
+}
+
+.footer-nav {
+    padding: 20px 0 0;
+
+    &__navigation {
+        text-align: center;
+        cursor: pointer;
+        height: 60px;
+        position: relative;
+        z-index: 1010;
+        width: 1200px;
+        box-sizing: border-box;
+        font-size: 0;
+    }
+
+    &__navigation .navigation__item:hover {
+        background-color: #292c36;
+        color: #fff;
+        cursor: default;
+    }
+
+    &__navigation .navigation__item__header:hover {
+        color: #fff;
+        cursor: default;
+    }
+
+    &__navigation > .navigation__item:first-child {
+        width: 174px;
+    }
+
+    &__navigation > .navigation__item {
+        display: inline-block;
+        position: relative;
+        vertical-align: top;
+        box-sizing: border-box;
+        padding: 21px 0 0;
+        text-align: center;
+        width: 171px;
+        height: 60px;
+    }
+
+    &__navigation > .navigation__item .navigation__item__header > a {
+        position: relative;
+        text-decoration: none;
+        color: #fff;
+        cursor: default;
+    }
+
+    &__navigation > .navigation__item .navigation__item__header:before {
+        content: '';
+        position: absolute;
+        opacity: 0.5;
+        transition: all 0.2s ease 0s;
+        transform: scale(0.7);
+    }
+
+    &__navigation > .navigation__item .navigation__item__header > span {
+        position: relative;
+    }
+
+    &__navigation > .navigation__item .navigation__item__header > span:after {
+        content: '';
+        .bg();
+        background-position: -255px 0;
+        width: 6px;
+        height: 4px;
+        vertical-align: top;
+        margin: 7px 0 0 3px;
+    }
+
+    &__navigation .navigation__item__cat {
+        display: block;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #292c36;
+        text-align: center;
+        padding: 15px 0;
+        box-sizing: border-box;
+    }
+
+    &__navigation .navigation__item__cat_item {
+        text-align: center;
+    }
+
+    &__navigation .navigation__item__cat_item a {
+        display: block;
+        color: #838796;
+        cursor: default;
+        font: 15px/18px Proxima Nova,sans-serif;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 12px 0;
+        transition: all 0.2s ease 0s;
+    }
+
+    &__navigation .navigation__item__cat_item .no-cat {
+        height: 18px;
+    }
+}
