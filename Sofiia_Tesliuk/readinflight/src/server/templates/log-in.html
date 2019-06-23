@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Log in</title>
+    <link rel="stylesheet" href="/variables.css">
+    <link rel="stylesheet" href="/log-option.css">
+    <link rel="stylesheet" href="/input-form.css">
+</head>
+<body>
+<main>
+    <section class="input-form_window log-option_window">
+        <form class="input-form log-option_form log-in_form" action="/submit_log-in_data" method="POST">
+            <p class="input-form_name log-option_name">Log in</p>
+            <input class="input-form_input-field log-option_input" name="email"      type="text"      placeholder="email" aria-label="user-email"/>
+            <input class="input-form_input-field log-option_input" name="password"  type="password"  placeholder="password"  aria-label="password" />
+            <p class="input-form_error-text">some error</p>
+            <button class="input-form_submit-button" type="submit">Log in</button>
+        </form>
+    </section>
+</main>
+</body>
+</html>

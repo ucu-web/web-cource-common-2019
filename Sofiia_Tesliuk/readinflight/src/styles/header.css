@@ -1,0 +1,91 @@
+.header{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    height: 4em;
+    background-color: var(--cadet-grey);
+}
+
+.header__logo{
+    height: 2em;
+    text-align: center;
+    margin: 1.7em 3% 1em 3%;
+    color: var(--dark-grey);
+}
+
+.header__search-form{
+    height: 1.2em;
+    width: 40%;
+    margin: 0 1em 0 0;
+}
+
+.search-form__input-field{
+    height: 100%;
+    width: 100%;
+    border: 1px solid hsla(0, 0%, 85.5%, 0.75);
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+
+.header__login_navigation{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: 3%;
+    width: 12em;
+}
+
+.header__login-link{
+    color: var(--dark-grey);
+    text-decoration: none;
+}
+
+.header__login-link_sing-up{
+    padding: 0.5em;
+    margin-left: 0.5em;
+    width: 1.2em;
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+}
+
+.header__profile_navigation{
+    display: flex;
+    margin-left: auto;
+    margin-right: 8%;
+    width: 12em;
+}
+
+.header__profile-menu-tab{
+    margin: 0 0.3em 0 0.4em;
+    text-decoration: none;
+}
+
+.header__profile-menu-tab_icon{
+    object-fit: cover;
+    height: 2em;
+    width: 2em;
+}
+
+.header__profile-menu_person-profile{
+    border: 1px var(--grey);
+}
+
+.header__profile-menu_button{
+    padding: 0.1em 0.1em 0.1em 0.1em;
+    border: 0;
+    background: var(--cadet-grey);
+    display: flex;
+}
+
+.header__profile-menu-tab_triangle{
+    height: 100%;
+    font-size: 1.5rem;
+    margin-left: 0.1em;
+}
+
+.header__profile-menu-button_icon{
+    font-size: 1rem;
+    height: 2em;
+    width: 2em;
+}

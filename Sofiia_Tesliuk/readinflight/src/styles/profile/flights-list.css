@@ -1,0 +1,78 @@
+.flights-list{
+    margin: 2em 10% 0 10%;
+    border-top: 2px solid var(--platinum);
+}
+
+.flight__item{
+    display: flex;
+    background: var(--mint);
+    padding: 1em 5% 1em 5%;
+    border-radius: 10px;
+    margin: 0.5em 1em 0.5em 1em;
+}
+
+.flights-item__destination{
+    width: 30%;
+    border-right: 1px solid var(--platinum);
+    padding: 0 1em 0 1em;
+}
+
+.flights-item__date{
+    width: 30%;
+    margin: 0 1em 0 1em;
+}
+
+.flights-item__book{
+    display: flex;
+    width: 40%;
+    border-left: 1px solid var(--platinum);
+    padding: 0 1em 0 1em;
+}
+
+.flights-item__item-label{
+    color: var(--grey);
+    font-size: 1rem;
+}
+
+.flights-item__item_info{
+    display: flex;
+
+}
+
+.flights-item__book_picture{
+    object-fit: cover;
+    height: 7em;
+    width: 5em;
+}
+
+.flights-item__item_info{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--dark-grey);
+    margin-left: 1em;
+}
+
+.flights-item__destination-city{
+    margin: 1em 0.2em 1em 0;
+}
+
+.flights-item__destination-direction{
+    margin: 1em 0.2em 1em 0;
+
+}
+
+.flights-item__date_item{
+    margin: 1em 0.2em 1em 0;
+}
+
+.flights-item__book_full-name{
+    margin: 1em 1em 1em 0;
+}
+
+.flights-item__book_author{
+    font-weight: normal;
+}
+
+.flights-item__book_full-name-item{
+    margin: 0 0 0 0;
+}

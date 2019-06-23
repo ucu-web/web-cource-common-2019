@@ -1,0 +1,25 @@
+.banner_section{
+    display: flex;
+    margin: 1em 1.2em 1em 1.2em;
+    align-items: center;
+}
+
+.banner_section__image{
+    height: 20em;
+    width: 60%;
+}
+
+.banner_section__phrase{
+    height: 20em;
+    background: var(--mint);
+    border-bottom-right-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    text-align: center;
+    margin: 0 0 0 0;
+}
+
+.banner_section__phrase_text{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--grey);
+}

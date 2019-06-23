@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile_Name</title>
+    <link rel="stylesheet" href="/variables.css">
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/header.css">
+    <link rel="stylesheet" href="/footer.css">
+    <link rel="stylesheet" href="/profile/profile-info.css">
+    <link rel="stylesheet" href="/profile/flights-list.css">
+</head>
+<body>
+<main>
+<header class="header layout__header">
+    <h1 class="header__logo" href="#" aria-label="start-page-link">ReadInFlight</h1>
+    <form
+            class="search-form header__search-form"
+            action="/search"
+            method="get"
+            aria-label="Search form"
+    >
+        <input
+                class="search-form__input-field"
+                type="text"
+                name="search"
+                placeholder="Search"
+        />
+    </form>
+    <nav class="header__profile_navigation" aria-label="profile-menu">
+        <button class="header__profile-menu-tab header__profile-menu_add-flights-button header__profile-menu_button" aria-label="add-flight-button">
+            <img class="header__profile-menu-button_icon" src="/icons/add.png" alt="plus-sign">
+        </button>
+        <a href="#" class="header__profile-menu-tab header__profile-menu_person-profile" aria-label="person-profile button">
+            <img class="header__profile-menu-tab_icon" src="/jb_profile-photo.jpg" alt="profile picture">
+        </a>
+        <a href="#" class="header__profile-menu-tab header__profile-menu_news-feed" aria-label="news-feed button">
+            <img class="header__profile-menu-tab_icon" src="/icons/server.png" alt="news-feed icon">
+        </a>
+        <div class="header__profile-menu-tab header__profile-menu_settings-button header__profile-menu_button" aria-label="settings button">
+            <img class="header__profile-menu-button_icon" src="/icons/settings.png" alt="settings icon">
+            <span class="header__profile-menu-tab_triangle">▾</span>
+        </div>
+    </nav>
+</header>
+
+<section class="profile-info layout_profile-info">
+    <img class="profile-info__profile-picture" src="/jb_profile-photo.jpg" alt="profile picture">
+    <section class="profile-info__main-info">
+        <p class="profile-info__person-name">Jessica Brown</p>
+        <div class="profile-info__flights-and-books-info">
+            <div class="profile-info__flights-and-books_item profile-info__flights-info">
+                <p class="profile-info__flights-and-books_item-number profile-info__flights-number">7</p>
+                <p class="profile-info__flights-and-books_item-name profile-info__flights-name">Flights</p>
+            </div>
+            <div class="profile-info__flights-and-books_item profile-info__books-info">
+                <p class="profile-info__flights-and-books_item-number profile-info__books-number">6</p>
+                <p class="profile-info__flights-and-books_item-name profile-info__books-name">Books</p>
+            </div>
+        </div>
+        <article class="profile-info__bio">Hi! I’m Jessica. In real life I’m a top-level programmer.
+            But in weekends I prefer to travel and became lost in books.</article>
+        <button class="profile-info__follow-button">Follow</button>
+    </section>
+</section>
+
+    <section class="flights-list layout_flights-list">
+        <div class="flight__item">
+            <section class="flights-list__item_component flights-item__destination">
+                <label class="flights-item__item-label flights-item__date_label">Destination:</label>
+                <div class="flights-item__item_info flights-item__date_info">
+                    <p class="flights-item__destination-city flights-item__destination_from">Munich</p>
+                    <span class="flights-item__destination-direction">--></span>
+                    <p class="flights-item__destination-city flights-item__destination_to">Lviv</p>
+                </div>
+            </section>
+
+            <section class="flights-list__item_component flights-item__date">
+                <label class="flights-item__item-label flights-item__date_label">Date:</label>
+                <div class="flights-item__item_info flights-item__date_info">
+                    <p class="flights-item__date_item flights-item__date_day">22</p>
+                    <p class="flights-item__date_item flights-item__date_month">April</p>
+                    <p class="flights-item__date_item flights-item__date_year">2019</p>
+                </div>
+            </section>
+
+            <section class="flights-list__item_component flights-item__book">
+                <div class="flights-item__book_text-info">
+                    <label class="flights-item__item-label flights-item__book_label">Book:</label>
+                    <div class="flights-item__item_info flights-item__book_info">
+                        <div class="flights-item__book_full-name">
+                            <p class="flights-item__book_full-name-item flights-item__book_author">Cal Newport</p>
+                            <p class="flights-item__book_full-name-item flights-item__book_name">Deep work</p>
+                        </div>
+                    </div>
+                </div>
+                <img class="flights-item__book_picture" src="/book_deep_work.jpg" alt="book-cover">
+            </section>
+        </div>
+    </section>
+
+    <footer class="footer layout_footer">
+        <p class="footer_text">© 2019 ReadInFlight.</p>
+    </footer>
+</main>
+</body>
+</html>

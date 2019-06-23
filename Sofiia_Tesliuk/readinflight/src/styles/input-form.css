@@ -1,0 +1,44 @@
+.input-form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: "Helvetica Neue", serif;
+    padding: 1em 2em 1em 2em;
+    margin: 1em 2em 1em 2em;
+    align-items: center;
+}
+
+.input-form_name{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--grey);
+    border-bottom: 2px solid var(--platinum);
+    margin: 0.3em 0 0.3em 0;
+    padding: 0 35% 0.2em 35%;
+
+}
+
+.input-form_input-field{
+    width: 15em;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 0;
+    text-align: center;
+    margin: 0.3em 0.3em 0.3em 0.3em;
+}
+
+.input-form_error-text{
+    display: none;
+    font-size: 0.8rem;
+    color: red;
+}
+
+.input-form_submit-button{
+    width: 7em;
+    font-size: 1.2rem;
+    background: var(--cadet-grey);
+    border-radius: 5px;
+    border: 0;
+    margin: 0.5em 0.3em 0.3em 0.3em;
+    padding: 0.1em 0.3em 0.1em 0.3em;
+}

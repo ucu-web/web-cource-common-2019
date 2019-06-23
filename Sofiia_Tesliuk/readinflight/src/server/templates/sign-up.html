@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="/variables.css">
+    <link rel="stylesheet" href="/log-option.css">
+    <link rel="stylesheet" href="/input-form.css">
+</head>
+<body>
+<section class="input-form_window log-option_window">
+    <form class="input-form log-option_form sign-up_form" action="/submit_sign-up_data" method="POST">
+        <p class="input-form_name log-option_name">Sign up</p>
+        <input class="input-form_input-field log-option_input" name="email"      type="text"      placeholder="email" aria-label="user-email"/>
+        <input class="input-form_input-field log-option_input" name="first-name"      type="text"      placeholder="first name" aria-label="first-name"/>
+        <input class="input-form_input-field log-option_input" name="last-name"      type="text"      placeholder="last name" aria-label="last-name"/>
+        <input class="input-form_input-field log-option_input" name="password_1"  type="password_1"  placeholder="password"  aria-label="password-1" />
+        <input class="input-form_input-field log-option_input" name="password_2"  type="password_2"  placeholder="repeat password"  aria-label="password-2" />
+        <p class="input-form_error-text">some error</p>
+        <button class="input-form_submit-button" type="submit">Sign up</button>
+    </form>
+</section>
+</body>
+</html>

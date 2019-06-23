@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "email": "jb@gmail.com",
+    "password": "123",
+    "first_name": "Jessica",
+    "last_name": "Brown",
+    "city_id": 1,
+    "profile_image_src": "jb_profile-photo.jpg"
+  },
+  {
+    "id": 2,
+    "email": "st@gmail.com",
+    "password": "456",
+    "first_name": "Sofiia",
+    "last_name": "Tesliuk",
+    "city_id": 9,
+    "profile_image_src": "jb_profile-photo.jpg"
+  }
+]

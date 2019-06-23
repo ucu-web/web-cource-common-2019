@@ -1,0 +1,86 @@
+.profile-info{
+    display: flex;
+    margin-top: 3em;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.profile-info__main-info{
+    text-align: center;
+}
+
+.profile-info__profile-picture{
+    border: 2px solid var(--platinum);
+    border-radius: 50%;
+    object-fit: cover;
+    height: 15em;
+    width: 15em;
+    margin-right: 2em;
+    margin-left: 2em;
+}
+
+.profile-info__person-name{
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0.3em 1em 0.3em 1em;
+    border-bottom: 1px solid var(--platinum);
+    text-align: center;
+}
+
+.profile-info__flights-and-books-info{
+    align-items: center;
+    display: flex;
+    font-size: 1.5rem;
+}
+
+.profile-info__flights-and-books_item{
+    display: flex;
+    width: 50%;
+}
+
+.profile-info__flights-info{
+    padding-right: 1em;
+    margin: 0 0 0 auto;
+}
+
+.profile-info__books-info{
+    padding-left: 1em;
+    margin: 0 auto 0 0;
+}
+
+.profile-info__flights-and-books_item-number{
+    font-weight: bold;
+}
+
+.profile-info__flights-number{
+    margin: 0 0.25em 0 auto;
+}
+
+.profile-info__books-number {
+    margin: 0 0.25em 0 0;
+}
+
+.profile-info__flights-name{
+    margin: 0 0 0 0;
+}
+
+.profile-info__books-name{
+    margin: 0 auto 0 0;
+}
+
+.profile-info__bio{
+    text-align: center;
+    margin: 1em 10% 1em 10%;
+    color: var(--grey);
+}
+
+.profile-info__follow-button{
+    width: 10em;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 0;
+    margin: 0.3em 35% 0.3em 35%;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    background: var(--cadet-green);
+}
