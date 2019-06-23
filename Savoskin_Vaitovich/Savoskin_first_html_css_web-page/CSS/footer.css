@@ -1,0 +1,41 @@
+footer{
+    background-color: #737373;
+}
+.content{
+    margin: 0 13%;
+    width: 80%;
+    color: white;
+}
+.content a{
+    color: white;
+    text-decoration: none;
+}
+.content div{
+    margin-top: 1%;
+    display: inline-block;
+    margin-right: 7%;
+    vertical-align: top;
+}
+footer .small_display{
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+footer .lower_header{
+    margin: 20px auto;
+    width: 15%;
+}
+footer .lower_header .buttons{
+    margin: 0;
+}
+footer .copyrights{
+    color: white;
+}
+footer .copyrights a{
+    color: white;
+    text-decoration: none;
+}
+footer .copyrights *{
+    display: inline-block;
+    margin: 10px 20px 40px 10%;
+}

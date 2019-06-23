@@ -1,0 +1,31 @@
+.main{
+    width: 75%;
+    margin: 15px auto 0 auto;
+}
+.main_header h1{
+    padding-top:3%;
+    font-size: 22px;
+    color: #023673;
+}
+.main_header .timeline{
+    margin-top: 20px;
+    background-color: transparent;
+    padding: 10px 15px;
+    border: 1px solid #dddd;
+}
+.main_header .courses{
+    background-color: #920000;
+    padding: 10px 15px;
+    border: 1px solid #dddd;
+    border-radius: 3px;
+    position: relative;
+    right:5px;
+    color: white;
+}
+.main_header button:hover{
+    background-color: #023673;
+    cursor: pointer;
+}
+.main_header .timeline:hover{
+    color: white;
+}

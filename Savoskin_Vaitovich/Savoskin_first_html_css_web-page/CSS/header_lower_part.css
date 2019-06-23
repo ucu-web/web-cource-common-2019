@@ -1,0 +1,19 @@
+.lower_header img{
+    height: 92px;
+    margin-top: 5px;
+    margin-left: calc(11% + 6px);
+    margin-bottom: 20px;
+}
+.lower_header .buttons{
+    display: inline-block;
+    margin-left:60%;
+    vertical-align: top;
+    position: relative;
+    right: 5%;
+    margin-top: 30px;
+}
+.lower_header .buttons div {
+    display: inline-block;
+    color: white;
+    padding: 0 4px;
+}

@@ -1,0 +1,31 @@
+.main_buttons{
+    border-top: 1px solid #CCCCCC;
+    height: 70px;
+}
+.main_buttons button{
+    background-color: #CCCCCC;
+    color:white;
+    border: 1px solid #dddd;
+    padding:11px;
+    border-radius: 3px;
+}
+.main_buttons .in_progres{
+    margin-left: 40%;
+    margin-top: 17px;
+    background-color: #979797;
+}
+.main_buttons button:hover{
+    background-color: #3C7E9E;
+    cursor: pointer;
+}
+.main_buttons .future{
+    position: relative;
+    right: 6px;
+}
+.main_buttons .past{
+    position: relative;
+    right: 10px;
+}
+.main_header .timeline:hover{
+    color: white;
+}

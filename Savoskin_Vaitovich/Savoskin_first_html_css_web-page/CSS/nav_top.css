@@ -1,0 +1,53 @@
+nav{
+    height: 34px;
+    position: sticky;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+}
+ul li{
+    display: inline-block;
+    height: 40px;
+    padding: 0 20px;
+}
+ul li a{
+    text-decoration: none;
+    color: #464646;
+    text-align: center;
+    line-height: 40px;
+    font-size: 15px;
+}
+ul li button{
+    border: transparent;
+    background-color: transparent;
+}
+ul li:hover{
+    background-color: lightgray;
+    cursor: pointer;
+}
+ul:first-child{
+    padding-left: 10%;
+}
+ul .space1{
+    position: relative;
+    left: 10%;
+}
+ul li.customize{
+    display: block;
+    position: absolute;
+    right:10%;
+}
+ul .customize:hover, ul .customize button:hover{
+    cursor: pointer;
+}
+ul .customize:hover
+{
+    background-color: white;
+}
+ul .customize button{
+    background-color: #3C7E9E;
+    color:white;
+    border-radius: 3px;
+    height: 30px;
+}

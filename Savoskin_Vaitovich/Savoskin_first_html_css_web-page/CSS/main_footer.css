@@ -1,0 +1,37 @@
+.main_footer ul{
+    margin-top: 40px;
+    padding: 0;
+    margin-bottom: 40px;
+}
+.main_footer .soon{
+    border-bottom: none;
+    font-size: 30px;
+    margin-bottom: 15px;
+    position: relative;
+    right:25px;
+}
+.main_footer li{
+    display: block;
+    padding: 0;
+    border-bottom: 1px solid #C1C1C1;
+    height: auto;
+    color: #023673;
+}
+.main_footer li span{
+    margin-left: 10px;
+}
+.main_footer ul li:hover{
+    background-color: transparent;
+    cursor: auto;
+}
+.main_footer ul li .data{
+    position: relative;
+    display: block;
+    text-align: left;
+    line-height: 2px;
+    bottom: 3px;
+    margin-bottom: 7px;
+}
+.main_footer .last{
+    margin-top: 10px;
+}

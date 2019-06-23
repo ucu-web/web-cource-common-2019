@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+header{
+    background-color: #920000;
+}
+.right_buttons span{
+    font-size: 15px;
+}
+.upper_header{
+    height: 28.6px;
+}
+.right_buttons {
+    color: white;
+    size: 5px;
+    position: absolute;
+    right: 13%;
+}
+.right_buttons * {
+    display: inline-block;
+    padding-right: 10px;
+    padding-top: 5px;
+}
+header button{
+    background-color: transparent;
+    border: transparent;
+}
+header button i{
+    color:white;
+}
+header .name, header .me i, header .me{
+    padding-right: 0;
+}

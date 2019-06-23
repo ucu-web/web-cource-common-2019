@@ -1,0 +1,32 @@
+.main_courses_lower_buttons{
+    margin: 25px 0;
+    height: 30px;
+}
+.main_courses_lower_buttons ul{
+    padding: 0;
+    width: 20%;
+    margin: 0 auto;
+    height: 100%;
+}
+.main_courses_lower_buttons li {
+    height: 100%;
+    float: left;
+    padding: 0;
+}
+.main_courses_lower_buttons button:hover{
+    cursor: pointer;
+}
+.main_courses_lower_buttons button{
+    color: #023673;
+    height: 100%;
+    border: 1px solid #DDDDDD;
+    padding: 5px 10px;
+}
+.bordered{
+    border-radius: 3px;
+}
+.lower_hr{
+    margin: 0;
+    border: 0;
+    border-bottom: 3px solid #BEBEBE;
+}

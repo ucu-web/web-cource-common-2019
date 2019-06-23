@@ -1,0 +1,54 @@
+.city-blocks__lisbon {
+    background-color: #28779E;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.city-blocks__paris {
+    background-color: #289E9E;
+}
+
+.city-blocks__belgrade {
+    background-color: #774F77;
+}
+
+.city-blocks__moscow {
+    background-color: #973737;
+}
+
+.city-blocks__tel-aviv {
+    background-color: #AF5039;
+}
+
+.city-blocks__cair {
+    background-color: #C69E4F;
+}
+
+.city-blocks__new-york {
+    background-color: #779E77;
+}
+
+.city-blocks__new-dehli {
+    background-color: #4F7777;
+}
+
+.city-blocks__san-francisco {
+    background-color: #9E4F77;
+    grid-column: 2 / 4;
+}
+
+.city-blocks__tokyo {
+    background-color: #28774F;
+}
+
+.city-blocks__sydney {
+    background-color: #4F4F77;
+    grid-column: 1 / 5;
+}
+
+.city-blocks__sydney .sydney__txt{
+    margin: 1rem 35% 0.5rem 45%;
+}
+.city-blocks__sydney .temperature{
+    margin: 0 0 0 45%
+}

@@ -1,0 +1,38 @@
+hr{
+    margin: 36px 0 20px 0;
+    display: block;
+    height: 3px;
+    border: 0;
+    border-top: 3px solid #920000;
+}
+.announcement{
+    font-size: 0;
+}
+.announcement .red_ann{
+    margin-left: 11%;
+    background-color: #920000;
+    padding: 10px 15px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+.announcement .grey_ann{
+    background-color: #EEEEEE;
+    padding: 10px 0;
+    font-size: 16px;
+}
+.announcement .grey_ann i{
+    padding-left: 30%;
+    padding-right: 1%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.grey_ann span span{
+    font-weight: bold;
+}
+.grey_ann > span {
+    padding-left: 1%;
+}
+.grey_ann a{
+    text-decoration: none;
+}

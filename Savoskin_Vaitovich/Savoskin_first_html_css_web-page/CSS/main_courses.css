@@ -1,0 +1,52 @@
+.main_courses{
+    width: 95%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 250px;
+    grid-auto-rows: 250px;
+    grid-gap: 10px;
+}
+.main_courses article:not(.nothing):not(.upper){
+    border: 1px solid #CCCCCC;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.main_courses article.oop, .main_courses article.kkp{
+    border: 1px solid #CCCCCC;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.upper {
+    margin-bottom: -20px;
+}
+.big_image{
+    width: calc(100% - 14px);
+    height: 50%;
+    margin: 7px 7px 0 7px;
+}
+.desc{
+    color: grey;
+    width: 100%;
+    margin-top: 2%;
+}
+.desc a {
+    display: inline-block;
+    margin-left: 27%;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #023673;
+    position: relative;
+    bottom:25px;
+}
+.desc i{
+    display: inline-block;
+    margin-left: 3%;
+}
+.lil_image{
+    width: calc(100% - 12px);
+    height: 55%;
+    margin: 6px 6px 0 6px;
+}
