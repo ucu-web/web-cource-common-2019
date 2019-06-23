@@ -1,0 +1,37 @@
+#stripe {
+    background-color: white;
+    height: 30px;
+    text-align: center;
+}
+
+.selected {
+    color: white;
+    background-color: steelblue;
+}
+
+button {
+    color: steelblue;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    height: 100%;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: inherit;
+    transition: all 0.3s;
+    outline: none;
+}
+
+button:hover {
+    color: white;
+    background-color: steelblue;
+}
+
+#message {
+    font-family: "Avenir", serif;
+    font-size: inherit;
+    font-weight: 500;
+    color: steelblue;
+    display: inline-block;
+    width: 20%;
+}

@@ -1,0 +1,14 @@
+h1 {
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+    line-height: 1.1;
+    color: white;
+    background-color: steelblue;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+#colorDisplay {
+    font-size: 200%;
+}
