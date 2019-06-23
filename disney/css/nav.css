@@ -1,0 +1,234 @@
+.nav-container {
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    width: 100%;
+    font-family: sans-serif;
+    padding: 0 24px;
+}
+
+.nav-container_mobile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 60;
+    display: none;
+    background: linear-gradient(0deg,#43a4c5,#4cd8b0);
+    padding: 0 16px;
+}
+
+.nav__items_mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 38px;
+}
+
+.nav__item_mobile {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    text-align: center;
+    line-height: 56px;
+}
+
+.nav__item_mobile:after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100px;
+    background: #fff;
+    margin: 16px auto;
+}
+
+.nav__item_mobile:last-of-type:after {
+    content: '';
+    display: none;
+}
+
+.nav__inner {
+    max-width: 1080px;
+    position: relative;
+    width: 100%;
+}
+
+.nav-container:before, .nav-container_mobile-overlay:before {
+    content: "";
+    position: absolute;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg,#ffc029,#4cd8b0) #ffc029;
+}
+
+.nav-container:hover {
+    background: #fff;
+}
+
+.nav-container_white {
+    background: #fff;
+}
+
+.nav-container_hidden {
+    top: -88px;
+}
+
+.nav__side {
+    padding: 0 8px;
+}
+
+.nav__logo {
+    padding: 18px 60px 14px;
+}
+
+.nav__logo-img {
+    height: 56px;
+    filter: invert(1);
+}
+
+.nav-container:hover .nav__logo-img, .nav-container_white .nav__logo-img {
+    filter: invert(0);
+}
+
+.nav__button {
+    background: none;
+    border: 0;
+    position: absolute;
+    color: #fff;
+}
+
+.nav__menu-button {
+    display: none;
+    left: 0;
+    text-transform: uppercase;
+    font-size: 12px;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.nav__menu-button_open {
+    border: 2px solid #fff;
+}
+
+.nav__menu-button_close {
+    filter: invert(1);
+    transform: scale(1.3);
+}
+
+
+.nav-container:hover .nav__menu-button, .nav-container_white .nav__menu-button {
+    color: #474543;
+    border-color: #474543;
+}
+
+.nav__search-button {
+    right: 0;
+    filter: invert(1);
+}
+
+.nav-container:hover .nav__search-button, .nav-container_white .nav__search-button {
+    filter: invert(0);
+}
+
+.nav__search-button_icon {
+    transform: scale(.583) rotateZ(90deg);
+}
+
+.nav__item_link {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 0 9px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.nav__item_link:hover:after {
+    width: 100%;
+}
+
+.nav__item_link::after {
+    background: linear-gradient(90deg,#ffc029,#4cd8b0) #ffc029;
+    content: "";
+    display: block;
+    height: 2px;
+    margin: 10px auto 0;
+    width: 0;
+    transition: all .2s ease-in-out;
+}
+
+.nav-container:hover .nav__item_link, .nav-container_white .nav__item_link {
+    color: #111;
+}
+
+.nav__item_dropdown {
+    opacity: 0;
+    color: transparent;
+    background: #fff;
+    position: absolute;
+    height: 0;
+    box-sizing: padding-box;
+    padding: 0;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+.nav__item:hover > .nav__item_dropdown {
+    opacity: 1;
+    height: auto;
+    width: 266px;
+    padding: 30px 0 8px;
+}
+
+.nav__item_dropdown_link {
+    padding: 0 25px 0 20px;
+}
+
+@media screen and (max-width: 1024px) {
+    .nav-container {
+        padding: 0 16px;
+    }
+
+    div.nav__side {
+        display: none;
+    }
+
+    .nav__menu-button {
+        display: block;
+    }
+
+    .nav__search-button_icon {
+        margin-top: 6px;
+        transform: scale(1.3) rotateZ(90deg);
+    }
+
+    .nav-container:hover {
+        background: none;
+    }
+
+    .nav-container:hover .nav__logo-img {
+        filter: invert(1);
+    }
+
+    .nav-container:hover .nav__search-button {
+        filter: invert(1);
+    }
+
+    .nav-container:hover .nav__menu-button {
+        color: #fff;
+        border-color: #fff;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav__item_mobile {
+        font-size: 22px;
+        line-height: 34px;
+    }
+}

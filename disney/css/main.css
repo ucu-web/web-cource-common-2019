@@ -1,0 +1,286 @@
+* {
+    transition: all .3s ease-in-out;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.centered-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.with-gradient:after {
+    background: linear-gradient(90deg,#ffc029,#4cd8b0) #ffc029;
+    content: "";
+    display: block;
+    position: absolute;
+}
+
+.gradient_bottom:after {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+}
+
+.gradient_left:after {
+    bottom: 0;
+    top: 0;
+    left: 0;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    width: 3px;
+}
+
+.gradient_right:after {
+    bottom: 0;
+    top: 0;
+    right: 0;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 3px;
+}
+
+
+.banner {
+    background: url("../img/banner.jpg") center/cover no-repeat;
+    position: relative;
+    z-index: 1;
+    height: 500px;
+}
+
+.banner__text {
+    font-size: 3.75rem;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+}
+
+@media screen and (min-width: 1024px) {
+    .banner {
+        height: 600px;
+    }
+}
+
+
+.stock-details iframe {
+    height: 26px;
+}
+
+.stock-details {
+    padding: 30px 15px;
+    cursor: pointer;
+}
+
+.stock-details__item {
+    padding-right: 16px;
+}
+
+.stock-details__item:last-of-type {
+    padding-right: 0;
+}
+
+.stock-details__text {
+    display: flex;
+    flex-direction: column;
+    color: #999;
+}
+
+.stock-details__text_big {
+    font-size: 14px;
+}
+
+.stock-details__text_small {
+    font-size: 10px;
+}
+
+.stock-details__price {
+    color: #4a4a4a;
+    font-size: 24px;
+}
+
+.stock-details__price-changes {
+    color: #43a4c5;
+    font-size: 24px;
+}
+
+.stock-details__view-button {
+    border: 2px solid #4cd8b0;
+    color: #4cd8b0;
+    border-radius: 5px;
+    padding: 2px 10px;
+    text-transform: uppercase;
+}
+
+
+.content {
+    background: #fcf8ee;
+}
+
+.recent-news {
+    padding: 64px 0;
+}
+
+.recent-news__title {
+    font-size: 50px;
+    text-transform: uppercase;
+    position: relative;
+    margin: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+.recent-news__title:after {
+    width: 110px;
+    margin: auto;
+}
+
+.recent-news__inner {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1080px;
+    margin: auto;
+    color: #474543;
+    flex-wrap: wrap;
+}
+
+.side-element {
+    width: 25%;
+    padding: 0 8px;
+}
+
+.middle-element {
+    width: 50%;
+    padding: 60px 54px;
+}
+
+.recent-news__item {
+    cursor: pointer;
+}
+
+.recent-news__item_top, .recent-news__item_bottom, .recent-news__item_middle {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.recent-news__item_middle {
+    background: #fff;
+    margin-bottom: 32px;
+}
+
+.recent-news__item_top:after, .recent-news__item_bottom:after {
+    display: none;
+}
+
+.recent-news__item_top:after, .recent-news__item_bottom:after, .recent-news__item_middle:after {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.recent-news__item_image {
+    background: url('https://www.thewaltdisneycompany.com/wp-content/uploads/2019/06/FROZEN-2_ONLINE-USE_IceCastleLongShot-165.0-002_frame33_Revised_FINAL-350x232.jpg') center/cover no-repeat;
+    height: 11vw;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.recent-news__image_big {
+    height: 22vw;
+}
+
+.recent-news__item_date {
+    margin: 24px 0 7px;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.recent-news__item_text {
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.recent-news__item_middle .recent-news__item_text {
+    font-size: 32px;
+    line-height: 43px;
+}
+
+.navigation-item {
+    max-width: 1080px;
+    margin: auto;
+    position: relative;
+    display: flex;
+    color: #474543;
+    padding: 40px 0;
+}
+
+.navigation-item__image {
+    position: relative;
+    width: 960px;
+    height: 540px;
+    background: center/cover no-repeat;
+    background-image: url("https://www.thewaltdisneycompany.com/wp-content/uploads/About-Featured-960x540.jpg");
+}
+
+.navigation-text_left {
+    justify-content: flex-end;
+}
+
+.navigation-item__info {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    width: 355px;
+    border-radius: 5px;
+    padding: 32px;
+}
+
+.navigation-text_right .navigation-item__info {
+    right: 0;
+}
+
+.navigation-text_left .navigation-item__info {
+    left: 0;
+}
+
+.navigation-item__info_title {
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+}
+
+.navigation-item__info_text {
+    margin-top: 8px;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.button {
+    padding: 11px;
+    transition: all .3s ease-in-out;
+    color: #474543;
+    display: inline-block;
+    border: 0;
+}
+
+.navigation-item__info_button {
+    width: 100%;
+    background-color: #dcf9f1;
+    margin-top: 24px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.navigation-item__info_button:hover {
+    color: #fff;
+    background-color: #4cd8b0;
+}
