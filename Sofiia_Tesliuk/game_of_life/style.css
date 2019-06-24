@@ -11,3 +11,11 @@
     margin: 0;
     padding: 0;
 }
+
+.field__cell_alive{
+    background: blue;
+}
+
+.field__cell_dead{
+    background: white;
+}
