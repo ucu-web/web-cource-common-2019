@@ -1,0 +1,25 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.game {
+
+}
+
+.field {
+    margin: auto;
+}
+
+.field__square {
+    background-color: #fff;
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+
+.field__square--alive {
+    background-color: black;
+}
