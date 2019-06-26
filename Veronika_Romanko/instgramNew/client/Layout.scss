@@ -1,0 +1,29 @@
+body,html,ul,li{
+  margin: 0;
+  padding: 0;
+}
+
+
+body{
+  background: #fafafa;
+}
+.Layout{
+  &__header{
+    margin: auto;
+  }
+  &__main {
+    padding-top: 55px;
+    margin: auto;
+    max-width: 935px;
+    display: flex;
+  }
+  &__content{
+    //flex: 4;
+    width: 616px;
+    margin-right: 40px;
+  }
+  &__aside{
+    //flex: 2;
+    width: 293px;
+  }
+}

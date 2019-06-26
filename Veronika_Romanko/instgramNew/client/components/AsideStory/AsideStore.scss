@@ -1,0 +1,54 @@
+.story{
+  margin-top: 10px;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  &__header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem 0.6rem 1rem;
+    &-title{
+      color: #999;
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 500;
+
+    }
+    &-subtitle{
+      a{
+        text-decoration: none;
+        font-size: 12px;
+        color: #262626;
+        font-weight: 600;
+      }
+    }
+  }
+  &__profiles{
+    height: 200px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  &__wrapper{
+    background: #fff;
+    //padding: 0.75rem 0.75rem 0  0.75rem ;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #e6e6e6;
+  }
+
+  &__mini-profile{
+    margin-bottom: 5px;
+  }
+
+  .mini-profile__content-sub-title{
+    visibility: hidden;
+    position: relative;
+  }
+
+  .mini-profile__content-sub-title:after {
+    content: "30 хв тому";
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+  }
+}

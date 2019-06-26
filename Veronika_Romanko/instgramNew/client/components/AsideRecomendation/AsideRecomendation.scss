@@ -1,0 +1,70 @@
+.recomendation{
+  margin-top: 12px;
+  margin-bottom: 12px;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  &__header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem 0.6rem 1rem;
+    &-title{
+      color: #999;
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 500;
+
+    }
+    &-subtitle{
+      a{
+        text-decoration: none;
+        color: #262626;
+        font-size: 12px;
+        font-weight: 600;
+      }
+    }
+  }
+  &__profiles{}
+  &__wrapper{
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #e6e6e6;
+  }
+
+  &__item{
+    padding: 8px 16px;
+  }
+
+  &__mini-profile{
+    margin-bottom: 5px;
+  }
+
+  &__mini-profile .mini-profile__icon-wrapper{
+    border: none;
+  }
+
+  &__sub-button{
+    border: 0;
+    color: #3897f0;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height: 18px;
+    padding-left: 90px;
+    //pointer-events: none;
+  }
+  .mini-profile__content-sub-title{
+    visibility: hidden;
+    position: relative;
+  }
+
+  .mini-profile__content-sub-title:after {
+    content: "Стежить за вами";
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+  }
+}
+
