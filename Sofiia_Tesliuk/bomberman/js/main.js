@@ -9,6 +9,24 @@ class Marks{
   }
 }
 
+class Compositor {
+    constructor() {
+        this.layers = [];
+    }
+
+    draw(context) {
+        this.layers.forEach(layer => {
+            layer(context);
+        });
+    }
+}
+
+function createSpriteLayer(sprite, pos) {
+    return function drawSpriteLayer(context) {
+        sprite.draw('idle', context, pos.x, pos.y);
+    };
+}
+
 class SpriteSheet {
     constructor(image, w = 16, h = 16) {
         this.image = image;
@@ -25,8 +43,8 @@ class SpriteSheet {
             .getContext('2d')
             .drawImage(
                 this.image,
-                this.width * x,
-                this.height * y,
+                x,
+                y,
                 this.width,
                 this.height,
                 0,
@@ -34,6 +52,15 @@ class SpriteSheet {
                 this.width,
                 this.height);
         this.tiles.set(name, buffer);
+    }
+
+    defineTile(name, x, y) {
+    this.define(
+        name,
+        x * this.width,
+        y * this.height,
+        this.width,
+        this.height);
     }
 
     draw(name, context, x, y) {
@@ -124,10 +151,6 @@ class Field{
   }
 }
 
-
-const canvas = document.getElementById("screen");
-const context = canvas.getContext("2d");
-
 function drawBackground(background, context, sprites, height, width) {
   for (var y = 0; y < height; y++){
     for (var x = 0; x < width; x++){
@@ -136,14 +159,87 @@ function drawBackground(background, context, sprites, height, width) {
   }
 }
 
+class Player{
+  constructor(x, y){
+    this.x = x;
+    this.y = y;
+    this.bombPower = 2;
+    this.speed = 0.2;
+    this.direction = 0;
+  }
+
+  actualX(){
+    return Math.round(this.x);
+  }
+
+  actualY(){
+    return Math.round(this.y);
+  }
+
+  move(direction, field){
+      if (direction == 'up') this.y -= this.speed
+      else if (direction == 'down') this.y += this.speed
+      else if (direction == 'right') this.x += this.speed
+      else if (direction == 'left') this.x -= this.speed;
+  }
+}
+
+class Bomb{
+  constructor(x, y, lifetime, power){
+    this.timeLeft = lifetime;
+    this.x = x;
+    this.y = y;
+  }
+
+  nextTimeline(players, field){
+    this.timeLeft -= 1;
+    if (this.timeLeft == 0) this.fire(players, field);
+  }
+
+  fire(players, field){
+
+  }
+}
+
+
+const canvas = document.getElementById("screen");
+const context = canvas.getContext("2d");
+
+marks = new Marks();
+var field = new Field(20, 20);
+
+var player1 = new Player(1, 1);
+var player2 = new Player(19, 19);
+
+document.addEventListener('keydown', (e) => {
+  if (e.code === "ArrowUp")        player1.move('up', field.field)
+  else if (e.code === "ArrowDown") player1.move('down', field.field)
+  else if (e.code === 'ArrowLeft') player1.move('left', field.field)
+  else if (e.code === 'ArrowRight') player1.move('right', field.field)
+});
+
+document.addEventListener('keyup', (e) => {
+  if (e.code === "ArrowUp")        player1.move('up', field.field)
+  else if (e.code === "ArrowDown") player1.move('down', field.field)
+  else if (e.code === 'ArrowLeft') player1.move('left', field.field)
+  else if (e.code === 'ArrowRight') player1.move('right', field.field)
+});
+
 loadImage("img/tileset.png")
 .then(image => {
-    marks = new Marks();
     const sprites = new SpriteSheet(image);
-    sprites.define(marks.destructive, 0, 0);
-    sprites.define(marks.empty, 3, 23);
-    sprites.define(marks.undestructive, 1, 0);
-    var field = new Field(20, 20);
-    drawBackground(field.field, context, sprites, 20, 20);
+    sprites.defineTile(marks.destructive, 0, 0);
+    sprites.defineTile(marks.empty, 3, 23);
+    sprites.defineTile(marks.undestructive, 1, 0);
+    sprites.defineTile(marks.player1, 4, 21);
+
+
+    function update() {
+        drawBackground(field.field, context, sprites, 20, 20);
+        sprites.drawTile(marks.player1, context, player1.x, player1.y);
+        requestAnimationFrame(update);
+    }
+
+    update();
+
 });
-;
