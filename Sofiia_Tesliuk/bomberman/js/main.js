@@ -145,7 +145,8 @@ function drawBackground(background, context, sprites, height, width) {
 }
 
 class Player{
-  constructor(x, y){
+  constructor(name, x, y){
+    this.name = name;
     this.x = x;
     this.y = y;
     this.bombPower = 1;
@@ -259,8 +260,8 @@ marks = new Marks();
 var field = new Field(backgroundHeight, backgroundWidth);
 var bombs = new Array();
 
-var player1 = new Player(1, 1);
-var player2 = new Player(backgroundWidth - 2, backgroundHeight - 2);
+var player1 = new Player('player1', 1, 1);
+var player2 = new Player('player2', backgroundWidth - 2, backgroundHeight - 2);
 var players = [player1, player2];
 
 document.addEventListener('keydown', (e) => {
@@ -282,19 +283,24 @@ loadImage("img/tileset.png")
     sprites.defineTile(marks.destructive, 0, 0);
     sprites.defineTile(marks.empty, 3, 23);
     sprites.defineTile(marks.undestructive, 1, 0);
-    sprites.defineTile(marks.player1, 4, 21);
-    sprites.defineTile(marks.player2, 4, 27);
+    sprites.defineTile(player1.name, 4, 21);
+    sprites.defineTile(player2.name, 4, 27);
     sprites.defineTile(marks.bomb, 16, 18);
     sprites.defineTile(marks.fire, 3, 24);
 
     function update() {
-        bombs = bombs.filter((el) => !el.checkState(players, field.field, marks));
+        bombs = bombs.filter(el => !el.checkState(players, field.field, marks));
         drawBackground(field.field, context, sprites, backgroundHeight, backgroundWidth);
-        sprites.drawTile(marks.player1, context, player1.x, player1.y);
-        sprites.drawTile(marks.player2, context, player2.x, player2.y);
+        players = players.filter(player => player.alive);
+        players.forEach(player => sprites.drawTile(player.name, context, player.x, player.y));
         bombs.forEach(bomb => sprites.drawTile(marks.bomb, context, bomb.x, bomb.y));
-        if (!player1.alive || !player2.alive){
-          // end game
+        if (players.length == 1){
+          document.getElementById("end_game_label").innerHTML = `You won, ${players[0].name}!`;
+          return;
+        } else if (players.length == 0){
+          document.getElementById("end_game_label").innerHTML = 'Game over!';
+          players.forEach(player => sprites.drawTile(marks.empty, context, player.x, player.y));
+          return;
         }
         requestAnimationFrame(update);
     }
