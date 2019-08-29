@@ -1,3 +1,14 @@
+function loadImage(url) {
+    return new Promise(resolve => {
+        const image = new Image();
+        image.addEventListener('load', () => {
+            resolve(image);
+        });
+        image.src = url;
+    });
+}
+
+
 class Marks{
   constructor(){
     this.player1 = 'player1';
@@ -6,26 +17,10 @@ class Marks{
     this.empty = 'empty';
     this.destructive = 'destructive';
     this.undestructive = 'undestructive';
+    this.fire = 'fire';
   }
 }
 
-class Compositor {
-    constructor() {
-        this.layers = [];
-    }
-
-    draw(context) {
-        this.layers.forEach(layer => {
-            layer(context);
-        });
-    }
-}
-
-function createSpriteLayer(sprite, pos) {
-    return function drawSpriteLayer(context) {
-        sprite.draw('idle', context, pos.x, pos.y);
-    };
-}
 
 class SpriteSheet {
     constructor(image, w = 16, h = 16) {
@@ -71,16 +66,6 @@ class SpriteSheet {
     drawTile(name, context, x, y) {
         this.draw(name, context, x * this.width, y * this.height);
     }
-}
-
-function loadImage(url) {
-    return new Promise(resolve => {
-        const image = new Image();
-        image.addEventListener('load', () => {
-            resolve(image);
-        });
-        image.src = url;
-    });
 }
 
 class Field{
@@ -163,41 +148,103 @@ class Player{
   constructor(x, y){
     this.x = x;
     this.y = y;
-    this.bombPower = 2;
-    this.speed = 0.2;
-    this.direction = 0;
+    this.bombPower = 1;
+    this.speed = 0.15;
+    this.error = 2 * this.speed;
+    this.alive = true;
   }
 
-  actualX(){
-    return Math.round(this.x);
+  actualX(){ return Math.round(this.x);}
+
+  actualY(){ return Math.round(this.y);}
+
+  move(marks, direction, field){
+    // Can move vertically
+    if ((Math.abs(this.x - this.actualX()) <= this.error) && ((direction == 'up') || (direction == 'down'))){
+      this.x = this.actualX();
+      if ((direction == 'up') && (field[Math.floor(this.y)][this.actualX()] == marks.empty)) this.y -= this.speed
+      else if ((direction == 'down') && (field[Math.ceil(this.y)][this.actualX()] == marks.empty)) this.y += this.speed
+    }
+    // Can move horizontally
+    if ((Math.abs(this.y - this.actualY()) <= this.error) && ((direction == 'right') || (direction == 'left'))){
+      this.y = this.actualY();
+      if ((direction == 'right') && (field[this.actualY()][Math.ceil(this.x)] == marks.empty)) this.x += this.speed
+      else if ((direction == 'left') && (field[this.actualY()][Math.floor(this.x)] == marks.empty)) this.x -= this.speed;
+    }
   }
 
-  actualY(){
-    return Math.round(this.y);
-  }
-
-  move(direction, field){
-      if (direction == 'up') this.y -= this.speed
-      else if (direction == 'down') this.y += this.speed
-      else if (direction == 'right') this.x += this.speed
-      else if (direction == 'left') this.x -= this.speed;
+  placeBomb(){
+    return new Bomb(this.actualX(), this.actualY(), this.bombPower);
   }
 }
 
 class Bomb{
-  constructor(x, y, lifetime, power){
-    this.timeLeft = lifetime;
+  constructor(x, y, power){
+    this.timeLeft = 300;
     this.x = x;
     this.y = y;
+    this.power = power;
   }
 
-  nextTimeline(players, field){
+  checkState(players, field, marks){
     this.timeLeft -= 1;
-    if (this.timeLeft == 0) this.fire(players, field);
+    if (this.timeLeft == 50) this._fire(players, field, marks)
+    else if (this.timeLeft == 0){
+      this._cleanFire(field, marks);
+      return true;
+    };
+    return false;
   }
 
-  fire(players, field){
+  _burnCell(x, y, players, field, marks){
+      players.forEach(player => {if ((player.actualX() == x) && (player.actualY() == y)) player.alive = false});
+      if (field[y][x] != marks.empty){
+        if (field[y][x] == marks.destructive) field[y][x] = marks.fire;
+        return true;
+      }
+      field[y][x] = marks.fire;
+      return false;
 
+  }
+
+  _fire(players, field, marks){
+    this._burnCell(this.x, this.y, players, field, marks);
+    for (let i = 1; i <= this.power; i++){
+      if (this._burnCell(this.x + i, this.y, players, field, marks)) break;
+    }
+    for (let i = 1; i <= this.power; i++){
+      if (this._burnCell(this.x - i, this.y, players, field, marks)) break;
+    }
+    for (let i = 1; i <= this.power; i++){
+      if (this._burnCell(this.x, this.y + i, players, field, marks)) break;
+    }
+    for (let i = 1; i <= this.power; i++){
+      if (this._burnCell(this.x, this.y - i, players, field, marks)) break;
+    }
+  }
+
+  _cleanFire(field, marks){
+    field[this.y][this.x] = marks.empty;
+    let i = 1;
+    while (field[this.y][this.x + i] == marks.fire){
+      field[this.y][this.x + i] = marks.empty;
+      i++;
+    }
+    i = 1;
+    while (field[this.y][this.x - i] == marks.fire){
+      field[this.y][this.x - i] = marks.empty;
+      i++;
+    }
+    i = 1;
+    while (field[this.y + i][this.x] == marks.fire){
+      field[this.y + i][this.x] = marks.empty;
+      i++;
+    }
+    i = 1;
+    while (field[this.y - i][this.x] == marks.fire){
+      field[this.y - i][this.x] = marks.empty;
+      i++;
+    }
   }
 }
 
@@ -205,24 +252,28 @@ class Bomb{
 const canvas = document.getElementById("screen");
 const context = canvas.getContext("2d");
 
+var backgroundHeight = 20;
+var backgroundWidth = 30;
+
 marks = new Marks();
-var field = new Field(20, 20);
+var field = new Field(backgroundHeight, backgroundWidth);
+var bombs = new Array();
 
 var player1 = new Player(1, 1);
-var player2 = new Player(19, 19);
+var player2 = new Player(backgroundWidth - 2, backgroundHeight - 2);
+var players = [player1, player2];
 
 document.addEventListener('keydown', (e) => {
-  if (e.code === "ArrowUp")        player1.move('up', field.field)
-  else if (e.code === "ArrowDown") player1.move('down', field.field)
-  else if (e.code === 'ArrowLeft') player1.move('left', field.field)
-  else if (e.code === 'ArrowRight') player1.move('right', field.field)
-});
-
-document.addEventListener('keyup', (e) => {
-  if (e.code === "ArrowUp")        player1.move('up', field.field)
-  else if (e.code === "ArrowDown") player1.move('down', field.field)
-  else if (e.code === 'ArrowLeft') player1.move('left', field.field)
-  else if (e.code === 'ArrowRight') player1.move('right', field.field)
+  if (e.code === "ArrowUp")        player2.move(marks, 'up', field.field)
+  else if (e.code === "ArrowDown") player2.move(marks, 'down', field.field)
+  else if (e.code === 'ArrowLeft') player2.move(marks, 'left', field.field)
+  else if (e.code === 'ArrowRight') player2.move(marks, 'right', field.field)
+  else if (e.code === 'ShiftRight') bombs.push(player2.placeBomb())
+  else if (e.code === 'KeyW') player1.move(marks, 'up', field.field)
+  else if (e.code === 'KeyS') player1.move(marks, 'down', field.field)
+  else if (e.code === 'KeyA') player1.move(marks, 'left', field.field)
+  else if (e.code === 'KeyD') player1.move(marks, 'right', field.field)
+  else if (e.code === 'ShiftLeft') bombs.push(player1.placeBomb())
 });
 
 loadImage("img/tileset.png")
@@ -232,14 +283,20 @@ loadImage("img/tileset.png")
     sprites.defineTile(marks.empty, 3, 23);
     sprites.defineTile(marks.undestructive, 1, 0);
     sprites.defineTile(marks.player1, 4, 21);
-
+    sprites.defineTile(marks.player2, 4, 27);
+    sprites.defineTile(marks.bomb, 16, 18);
+    sprites.defineTile(marks.fire, 3, 24);
 
     function update() {
-        drawBackground(field.field, context, sprites, 20, 20);
+        bombs = bombs.filter((el) => !el.checkState(players, field.field, marks));
+        drawBackground(field.field, context, sprites, backgroundHeight, backgroundWidth);
         sprites.drawTile(marks.player1, context, player1.x, player1.y);
+        sprites.drawTile(marks.player2, context, player2.x, player2.y);
+        bombs.forEach(bomb => sprites.drawTile(marks.bomb, context, bomb.x, bomb.y));
+        if (!player1.alive || !player2.alive){
+          // end game
+        }
         requestAnimationFrame(update);
     }
-
     update();
-
 });

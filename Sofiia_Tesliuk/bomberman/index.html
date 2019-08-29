@@ -3,10 +3,29 @@
   <head>
     <meta charset="utf-8">
     <title>Bomberman</title>
+    <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
-    <h1>Bomberman</h1>
-    <canvas id="screen" width="640" height="640"></canvas>
+    <h1>BOMBERMAN</h1>
+    <section class="main-game">
+      <canvas id="screen" width="484" height="320"></canvas>
+      <aside>
+        <div class="instructions instructions_player2">
+          W - up </br>
+          S - down </br>
+          A - left </br>
+          D - right </br>
+          ShiftLeft - place bomb </br>
+        </div>
+        <div class="instructions instructions_player1">
+            ArrowUp - up </br>
+            ArrowDown - down </br>
+            ArrowLeft - left </br>
+            ArrowRight - right </br>
+            ShiftRight - place bomb </br>
+        </div>
+      </aside>
+    </section>
     <script src="js/main.js"></script>
   </body>
 </html>
